@@ -1,0 +1,73 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+
+.ant-table-fixed-left  .ant-table-row.level-1 td:first-child {
+  padding-left: 0;
+}
+.ant-table-fixed-left  .ant-table-row.level-2 td:first-child {
+  padding-left: 15px;
+}
+.ant-table-fixed-left  .ant-table-row.level-3 td:first-child {
+  padding-left: 30px;
+}
+.ant-table-fixed-left  .ant-table-row.level-4 td:first-child {
+  padding-left: 45px;
+}
+.ant-table-fixed-left  .ant-table-row.level-5 td:first-child {
+  padding-left: 60px;
+}
+.ant-table-fixed-left  .ant-table-row.level-6 td:first-child {
+  padding-left: 75px;
+}
+
+
+.ant-table-fixed-left .ant-table-row.type-header,
+.ant-table-content .ant-table-row.type-header {
+  background-color: rgb(230, 241, 255);
+  text-decoration: underline;
+}
+.ant-table-fixed-left .ant-table-row.level-1.type-header,
+.ant-table-content .ant-table-row.level-1.type-header {
+  font-weight: bold;
+  text-decoration: none;
+  background-color:#00BFFF;
+}
+
+
+.ant-table-wrapper.showClassRow .type-itemInClass {
+  display: none;
+}
+/* .ant-table-wrapper.hideClassRow .type-classRow {
+  display: none;
+} */
+
+.flowsheet-table .ant-table-tbody > tr > td {
+  padding: 8px;
+}
