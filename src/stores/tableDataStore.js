@@ -1,6 +1,7 @@
 import React from 'react';
 import { observable, action, computed } from 'mobx';
-import { Sparklines, SparklinesLine } from 'react-sparklines';
+import { Sparklines, SparklinesLine, SparklinesReferenceLine } from 'react-sparklines';
+import SparkLine from '../components/sparkLine';
 import fhirStore from './fhirDataStore';
 //import template from './templateDataStore';
 
@@ -45,6 +46,26 @@ class TableDataStore {
     this.scrollBufferSize = bufferSize;
   }
 
+  // NormalRange = (props) =>  ({
+  //   const range = props.range;
+  //   if (range.min && range.max) {
+  //     return 
+  //     <React.Fragment>
+  //       <SparklinesReferenceLine type="custom" value={range.max} /><SparklinesReferenceLine type="custom" value={range.min} />
+  //       </React.Fragment>
+  //   }
+  //   else if (range.min) {
+  //     return <SparklinesReferenceLine type="custom" value={range.min} />
+  //   }
+  //   else if (range.max) {
+  //     return <SparklinesReferenceLine type="custom" value={range.max} />
+  //   }
+  //   else {
+  //     return null;
+  //   }
+    
+  // })
+
 
   getColumnHeaders() {
 
@@ -56,7 +77,8 @@ class TableDataStore {
       width: 250,  
       fixed: 'left',
       render: (text, record) => (
-        <span>{record.T}</span>
+        <span>{ String.fromCharCode(160).repeat((parseInt(record.L)-1)*2) + record.T}
+        </span>
       )
     }
     // sparkline 
@@ -67,9 +89,7 @@ class TableDataStore {
       width: 120,
       //fixed: 'left',
       render: (text, record) => (
-        <Sparklines data={record.sparklineData}  width={100} height={20} margin={1}>
-          <SparklinesLine />
-        </Sparklines>      
+        <SparkLine record={record}></SparkLine>
       ),
     }
 
@@ -141,6 +161,10 @@ class TableDataStore {
       let code = this._getCode(item);
       let date = this._getDate(item);
       let value = this._getValue(item);
+      let interpretationCode = this._getInterpretation(item);
+      let displayValue = interpretationCode && interpretationCode !== 'N' ? value + ' *' + interpretationCode : value;
+
+      let range = this._getReferenceRange(item);
 
       for(let j=0; j<this.templateTree.length; j++) {
         let node = this.templateTree[j];
@@ -150,8 +174,19 @@ class TableDataStore {
         if (node.C === code) {
           node.sparklineData.push(value);
           node.hasData = true;
-          node[date] = value;
+          node[date] = displayValue;
           this.dateList.set(date);
+
+          if(range && Array.isArray(range)) {
+            if (range[0].low) {
+              node.low = range[0].low.value;
+            }
+            if (range[0].high) {
+              node.high = range[0].high.value;  
+            }
+            
+          }
+    
         }
       }
     }
@@ -189,6 +224,42 @@ class TableDataStore {
     return ret;
   }
 
+  // "interpretation": {
+  //   "coding": [
+  //     {
+  //       "system": "http://hl7.org/fhir/v2/0078",
+  //       "code": "N",
+  //       "display": "Normal"
+  //     }
+  //   ]
+  // },
+  _getInterpretation(entry) {
+    let ret;
+    let resource = entry.resource;
+    if (resource && resource.interpretation && resource.interpretation.coding[0]) {
+      ret = resource.interpretation.coding[0].code;
+    }
+    return ret;
+  }
+
+  // "referenceRange": [
+  //   {
+  //     "low": {
+  //       "value": 800,
+  //       "unit": "mL",
+  //       "code": "mL"
+  //     },
+  //     "high": {
+  //       "value": 2000,
+  //       "unit": "mL",
+  //       "code": "mL"
+  //     },
+  //     "text": "800 to 2000"
+  //   }
+  // ]
+  _getReferenceRange(entry) {
+    return entry.resource && entry.resource.referenceRange ? entry.resource.referenceRange : null;
+  }
 
   _processTemplate() {
     let levelStatus = [];

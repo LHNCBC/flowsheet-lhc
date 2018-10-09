@@ -31,7 +31,7 @@ class App extends Component {
 
   loadData() {
 
-    let patientId = "pat-98";
+    let patientId ="pat-88616";// "pat-98"; 
     let that = this;
 
     tableDataStore.setTemplate(temp);

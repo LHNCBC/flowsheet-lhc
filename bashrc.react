@@ -9,7 +9,7 @@
 # Use the globally installed node and its modules
 NODE_DIR=node-v8.9.3-linux-x64
 # Set path
-PATH=/depot/packages/${NODE_DIR}/bin:/usr/local/bin:/usr/bin:/usr/sbin:/sbin:/etc
+PATH=/depot/packages/${NODE_DIR}/bin:/usr/local/git/bin:/usr/local/bin:/usr/bin:/usr/sbin:/sbin:/etc
 
 # Add node_modules/.bin to the path. We can find that from `npm bin`, but that
 # takes a second or two, and slows things down.
