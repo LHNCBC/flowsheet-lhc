@@ -1,5 +1,5 @@
 import React from 'react';
-import { observable, action, computed } from 'mobx';
+//import { observable, action, computed } from 'mobx';
 import { Sparklines, SparklinesLine, SparklinesReferenceLine } from 'react-sparklines';
 import SparkLine from '../components/sparkLine';
 import fhirStore from './fhirDataStore';
@@ -12,10 +12,10 @@ const PRELOAD_PAGE_NUM = 2;
 const SCROLL_BUFFER_SIZE = 40; // the buffer size before right scrolling to the right end of the a scroll bar, when a new data query is sent to the server to request next page's data
 
 class TableDataStore {
-  @observable columnNum = COLUMN_NUM;
-  @observable columnSize = COLUMN_SIZE;
-  @observable preloadPageNum = PRELOAD_PAGE_NUM;
-  @observable scrollBufferSize = SCROLL_BUFFER_SIZE;
+  columnNum = COLUMN_NUM;
+  columnSize = COLUMN_SIZE;
+  preloadPageNum = PRELOAD_PAGE_NUM;
+  scrollBufferSize = SCROLL_BUFFER_SIZE;
 
   template = null;
   templateTree = [];
@@ -30,19 +30,19 @@ class TableDataStore {
     
   }
 
-  @action setColumnNum(colNum) {
+  setColumnNum(colNum) {
     this.columnNum = colNum;
   }
 
-  @action setColumnSize(colSize) {
+  setColumnSize(colSize) {
     this.columnSize = colSize;
   }
 
-  @action setPreloadPageNum(pageNum) {
+  setPreloadPageNum(pageNum) {
     this.preloadPageNum = pageNum;
   }
 
-  @action setScrollBufferSize(bufferSize) {
+  setScrollBufferSize(bufferSize) {
     this.scrollBufferSize = bufferSize;
   }
 
@@ -97,7 +97,7 @@ class TableDataStore {
     let restCols = [];
     for (var date of this.dateList.keys()) {
       restCols.push({
-        title: date,
+        title: this._formatDate(date),
         dataIndex: date, 
         key: date, 
         width: 100,
@@ -115,6 +115,16 @@ class TableDataStore {
     return [col1, col2,...restCols];
   }
 
+  _formatDate(date) {
+    let formatted = '';
+    if (date) {
+      let dateObj = new Date(date);
+      // formatted = dateObj.toDateString() + " " + dateObj.toLocaleTimeString();
+      formatted = dateObj.toLocaleString();
+    }
+
+    return formatted;
+  }
 
   getFirstPageData(patientId) {
     let that = this;

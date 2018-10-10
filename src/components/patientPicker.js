@@ -14,20 +14,25 @@ class PatientPicker extends React.Component {
     super(props);
     this.state = {
       dataSource: [],
-      selected: ''      
+      selected: this.props.selectedPatient ? this.props.selectedPatient.id : null,
+      selectedPatient: this.props.selectedPatient      
     };
 
-    // this.handleSearch = this.handleSearch.bind(this);
-    // this.onSelect = this.OnSelect.bind(this);
-    // this.renderOption = this.renderOption.bind(this);
   }
 
 
-  onSelect = value => {
-    console.log("onSelect", value);
-    // this.setState({
-    //   selected: value
-    // });
+  onSelect = (value, item) => {
+    // console.log("onSelect", value);
+
+    let that = this;
+    //value is patient.id
+    let selectedPatient = that.state.dataSource.find((patient) => {return patient.id === value});
+    that.setState({
+      selected: value,
+      selectedPatient: selectedPatient
+    });
+
+    that.props.setSelectedPatient(selectedPatient);
   }
   
   

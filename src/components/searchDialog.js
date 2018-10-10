@@ -7,12 +7,31 @@ import { Modal, Button  } from 'antd';
 import PatientPicker from './patientPicker';
 
 class searchDialog extends React.Component {
-  state = { visible: false }
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      visible: false,
+      selectedPatient: this.props.currentPatient      
+    };
+
+  }
 
   showModal = () => {
     this.setState({
-      visible: true,
+      visible: true
     });
+  }
+
+  setSelectedPatient = (patient) => {
+    this.setState({
+      selectedPatient: patient
+    })
+  }
+
+  handleOK = () => {
+    this.props.onOK(this.state.selectedPatient);
+    this.hideModal();
   }
 
   hideModal = () => {
@@ -21,19 +40,26 @@ class searchDialog extends React.Component {
     });
   }
 
+  patientButtonLabel() {
+    return this.props.currentPatient ? this.props.currentPatient.name  : "Search Patient";
+  }
+
+
   render() {
+    let label = this.patientButtonLabel();
+    
     return (
       <div>
-        <Button type="primary" onClick={this.showModal}>Search Patient</Button>
+        <Button type="primary" icon='user' onClick={this.showModal}>{label}</Button>
         <Modal
           title="Patient Picker"
           visible={this.state.visible}
-          onOk={this.hideModal}
+          onOk={this.handleOK}
           onCancel={this.hideModal}
           okText="Ok"
           cancelText="Cancel"
         >
-          <PatientPicker />
+          <PatientPicker selectedPatient={this.state.selectedPatient} setSelectedPatient={(patient)=>this.setSelectedPatient(patient)}/>
         </Modal>
       </div>
     );

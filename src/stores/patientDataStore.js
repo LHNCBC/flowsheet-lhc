@@ -1,9 +1,9 @@
-import { observable, action, computed } from 'mobx';
+//import { observable, action, computed } from 'mobx';
 
 class PatientDataStore {
-  @observable patient;
+  patient;
 
-  @action setPatient(patientResource) {
+  setPatient(patientResource) {
     this.patient = patientResource;
   }
   
