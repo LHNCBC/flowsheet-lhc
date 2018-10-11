@@ -18,21 +18,21 @@ class PatientPicker extends React.Component {
       selectedPatient: this.props.selectedPatient      
     };
 
+    this.onSelect = this.onSelect.bind(this);
+    // this.handleSearch = this.handleSearch.bind(this);
   }
-
 
   onSelect = (value, item) => {
     // console.log("onSelect", value);
 
-    let that = this;
     //value is patient.id
-    let selectedPatient = that.state.dataSource.find((patient) => {return patient.id === value});
-    that.setState({
+    let selectedPatient = this.state.dataSource.find((patient) => {return patient.id === value});
+    this.setState({
       selected: value,
       selectedPatient: selectedPatient
     });
 
-    that.props.setSelectedPatient(selectedPatient);
+    this.props.setSelectedPatient(selectedPatient);
   }
   
   
@@ -52,8 +52,11 @@ class PatientPicker extends React.Component {
         <span className="item-property">
           DoB: <strong>{item.dob}</strong>
         </span>
-        <span className="item-property">
+        {/* <span className="item-property">
           Phone: <strong>{item.phone}</strong>
+        </span> */}
+        <span className="item-property">
+          Deceased Date & Time: <strong>{item.resource.deceasedDateTime}</strong>
         </span>
       </div>
         

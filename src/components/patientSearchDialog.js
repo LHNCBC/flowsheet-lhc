@@ -6,13 +6,13 @@ import 'antd/dist/antd.css';
 import { Modal, Button  } from 'antd';
 import PatientPicker from './patientPicker';
 
-class searchDialog extends React.Component {
+class PatientSearchDialog extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
       visible: false,
-      selectedPatient: this.props.currentPatient      
+      selectedPatient: this.props.selectedPatient      
     };
 
   }
@@ -27,6 +27,7 @@ class searchDialog extends React.Component {
     this.setState({
       selectedPatient: patient
     })
+    console.log(patient);
   }
 
   handleOK = () => {
@@ -41,7 +42,8 @@ class searchDialog extends React.Component {
   }
 
   patientButtonLabel() {
-    return this.props.currentPatient ? this.props.currentPatient.name  : "Search Patient";
+    // return this.props.selectedPatient ? this.props.selectedPatient.name  : "Search Patient";
+    return this.props.selectedPatient ? "" : "Search Patient";
   }
 
 
@@ -50,7 +52,7 @@ class searchDialog extends React.Component {
     
     return (
       <div>
-        <Button type="primary" icon='user' onClick={this.showModal}>{label}</Button>
+        <Button type="primary" icon='user' size="large" onClick={this.showModal}>{label}</Button>
         <Modal
           title="Patient Picker"
           visible={this.state.visible}
@@ -66,6 +68,6 @@ class searchDialog extends React.Component {
   }
 }
 
-export default searchDialog;
+export default PatientSearchDialog;
 
           

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.css';
 import 'antd/dist/antd.css';
-import { Table, Layout, Row, Col, Input } from 'antd';
+import { Table, Layout, Row, Col, Button, Switch } from 'antd';
 //import { Sparklines, SparklinesLine } from 'react-sparklines';
 //import rafSchedule from 'raf-schd';
 //import { FlowSheetData } from './FlowsheetData.js';
@@ -13,7 +13,9 @@ import temp from './stores/hirarchy';
 import fhirDataStore from './stores/fhirDataStore';
 
 
-import SearchDialog from './components/searchDialog';
+import PatientSearchDialog from './components/patientSearchDialog';
+import TemplatePicker from './components/templatePicker';
+import RangePicker from './components/rangePicker';
 import tableDataStore from './stores/tableDataStore';
 
 import LHCImage from './lhncbc.jpg';
@@ -32,23 +34,38 @@ class App extends Component {
       patient: null,
       showUnit: false,
       expandEqClass: true,
-      currentPatient: null,
-      appTitle: "Flowsheet FHIR App"
+      selectedPatient: null,
+      appTitle: "Flowsheet FHIR App",
+      selectedTemplate: null,
+      selectedRange: null
     };
   }
 
-  handleOK(patient) {
+  setSelectedPatient(patient) {
     if (patient) {
       this.setState({
-        currentPatient: patient
+        selectedPatient: patient
       })  
     }
   }
 
+  setSelectedTemplate = (temp) => {
+    console.log(temp);
+    this.setState({
+      selectedTemplate: temp
+    })
+  }
+
+  setSelectedRange = (range) => {
+    console.log(range);
+    this.setState({
+      selectedRange: range
+    })
+  }
 
   loadData() {
 
-    let patientId = this.state.currentPatient ? this.state.currentPatient.id : ""; // "pat-88616";// "pat-98"; 
+    let patientId = this.state.selectedPatient ? this.state.selectedPatient.id : ""; // "pat-88616";// "pat-98"; 
     let that = this;
 
     tableDataStore.setTemplate(temp);
@@ -137,11 +154,21 @@ class App extends Component {
     console.log(tableDataStore.templateTree);
   }
 
+  onUnitSwitchChange(checked) {
+
+  }
+
+  onEqClassSwitchChange(checked) {
+
+  }
 
   render() {
-    let gender = this.state.currentPatient ? this.state.currentPatient.gender : "";
-    let dob = this.state.currentPatient ? this.state.currentPatient.dob : "";
-    let phone = this.state.currentPatient ? this.state.currentPatient.phone: "";
+    let name = this.state.selectedPatient ? this.state.selectedPatient.name : "";
+    let gender = this.state.selectedPatient ? this.state.selectedPatient.gender : "";
+    let dob = this.state.selectedPatient ? this.state.selectedPatient.dob : "";
+    let phone = this.state.selectedPatient ? this.state.selectedPatient.phone: "";
+    let deceased = this.state.selectedPatient ? this.state.selectedPatient.resource.deceasedDateTime : "";
+    
     return (
       <div>
         
@@ -157,23 +184,44 @@ class App extends Component {
               </a>
             </div>
           </div>
-        {/* <Layout>
-          <Content> */}
-            <SearchDialog currentPatient={this.state.currentPatient} onOK={(patient) => this.handleOK(patient)}/>
-            {/* <TemplateOptions></TemplateOptions> */}
-            {/* // antd table */}
-            
-            <Row>
-              <Col span={6}>Gender: {gender}</Col>
-              <Col span={6}>DoB: {dob}</Col>
-              <Col span={6}>Phone #: {phone}</Col>
-              <Col span={6}></Col>
+          <div id='options'>
+            <Row type="flex" justify="start" className="lf-row">
+              <Col >
+                <PatientSearchDialog selectedPatient={this.state.selectedPatient} onOK={(patient) => this.setSelectedPatient(patient)}/>
+              </Col>
+              <Col className="lf-patient" span={20}>
+                <Row className="lf-patient-name" >{name}</Row>
+                <Row className="lf-patient-info">
+                  <Col xs={24} sm={12} md={6} lg={6} xl={6}>Gender: {gender}</Col>
+                  <Col xs={24} sm={12} md={6} lg={6} xl={6}>DoB: {dob}</Col>
+                  {/* <Col xs={24} sm={12} md={6} lg={6} xl={6}>Phone #: {phone}</Col> */}
+                  <Col xs={24} sm={12} md={6} lg={6} xl={6}>Deceased: {deceased}</Col>
+                  <Col xs={24} sm={12} md={6} lg={6} xl={6}></Col>
+                </Row>
+              </Col>
             </Row>
-            <Row>
-              <Col span={6}>Checkbox: hide/show eq. clasess</Col>
-              <Col span={6}>Checkbox: hide/show units</Col>
+            <Row type="flex" className="lf-row">
+              <Col xs={24} sm={12} md={6} lg={6} xl={6}>
+                <TemplatePicker selectedTemplate={this.state.selectedTemplate} setSelectedTemplate={(temp) => this.setSelectedTemplate(temp)}/>
+              </Col>
+              <Col xs={24} sm={12} md={6} lg={6} xl={6}>
+                <RangePicker selectedRange={this.state.selectedRange} setSelectedRange={(range) => this.setSelectedRange(range)}/>
+              </Col>
+              <Col xs={24} sm={12} md={6} lg={6} xl={6}>
+                <Row className="lf-switch-row">
+                  <Switch checkedChildren="Show Units" unCheckedChildren="Hide Units" defaultChecked onChange={this.onUnitSwitchChange}/>
+                </Row>
+                <Row className="lf-switch-row">
+                  <Switch checkedChildren="Expand Equivalence Classes" unCheckedChildren="Collapse Equivalence Classes" defaultChecked onChange={this.onEqClassSwitchChange}/>
+                </Row>                
+              </Col>
+              <Col xs={24} sm={12} md={6} lg={6} xl={6}>
+                <Button type="primary" disabled={!this.state.selectedPatient} onClick={() => this.loadData()}>Reload Data</Button>  
+              </Col>
             </Row>
-            <div><span>{this.state.isLoading ? "Loading ..." : ""}</span></div>
+          </div>
+          <div id="data-table">
+            {/* <div><span>{this.state.isLoading ? "Loading ..." : ""}</span></div> */}
             
             <Table className={this.state.tableClass}
             columns={this.state.flowsheetColumns} 
@@ -183,21 +231,18 @@ class App extends Component {
             pagination={false} 
             defaultExpandAllRows={true}
             />
-            {/* <Pagination current={this.state.current} onChange={this.onChange} total={50}/> */}
-            <button disabled={!this.state.currentPatient} onClick={() => this.loadData()}>Reload Data</button>
-            {/* <button onClick={() => this.appendData()}>Load More Data</button> */}
-            <button onClick={() => this.toggleClassRows()}>Expand/Collapse Class Rows</button>
-            {/* <button onClick={() => this.testFhirServer()}>Get Data from FHIR Server</button>
+            {/* <button onClick={() => this.appendData()}>Load More Data</button>
+            <button onClick={() => this.testFhirServer()}>Get Data from FHIR Server</button>
             <button onClick={() => this.getNextPageData()}>Get Next Page Data</button> */}
 
-            <button onClick={() => this.pickTemplate()}>Pick a Template</button>
-
-          {/* </Content> */}
-          {/* <Footer> */}
+            {/* <button disabled={!this.state.selectedPatient} onClick={() => this.loadData()}>Reload Data</button>
+            <button onClick={() => this.toggleClassRows()}>Expand/Collapse Class Rows</button>
+            <button onClick={() => this.pickTemplate()}>Pick a Template</button> */}
+          </div>
+          <div id="footer">
             <div><span>Number of Columns: {this.state.flowsheetColumns ? this.state.flowsheetColumns.length : 0 }</span></div>
             <div><span>Number of Rows: {this.state.flowsheetData ? this.state.flowsheetData.length : 0 }</span></div>
-          {/* </Footer>
-        </Layout> */}
+          </div>
 
         
         
