@@ -8,7 +8,8 @@ import { Table, Layout, Row, Col, Button, Switch } from 'antd';
 //import { FlowSheetData } from './FlowsheetData.js';
 
 //import temp from './stores/singleTree';
-import temp from './stores/hirarchy';
+//import temp from './stores/hirarchy';
+import temp from './stores/h2.json';
 
 import fhirDataStore from './stores/fhirDataStore';
 
@@ -37,8 +38,13 @@ class App extends Component {
       selectedPatient: null,
       appTitle: "Flowsheet FHIR App",
       selectedTemplate: null,
-      selectedRange: null
+      selectedRange: null,
+      moreData: false
     };
+
+    this.loadData = this.loadData.bind(this);
+    this.loadMoreData = this.loadMoreData.bind(this);
+    this.appendData = this.appendData.bind(this);
   }
 
   setSelectedPatient(patient) {
@@ -73,7 +79,8 @@ class App extends Component {
     tableDataStore.getFirstPageData(patientId)
       .then(function(data) {
         that.setState({
-          flowsheetData: data,
+          flowsheetData: data.tableData,
+          moreData: data.moreData,
           flowsheetColumns: tableDataStore.getColumnHeaders()         
         })    
         console.log(data);
@@ -89,7 +96,8 @@ class App extends Component {
     tableDataStore.getNextPageData()
       .then(function(data) {
         that.setState({
-          flowsheetData: data,
+          flowsheetData: data.tableData,
+          moreData: data.moreData,
           flowsheetColumns: tableDataStore.getColumnHeaders()         
         })    
         console.log(data);
@@ -189,9 +197,10 @@ class App extends Component {
               <Col >
                 <PatientSearchDialog selectedPatient={this.state.selectedPatient} onOK={(patient) => this.setSelectedPatient(patient)}/>
               </Col>
-              <Col className="lf-patient" span={20}>
-                <Row className="lf-patient-name" >{name}</Row>
-                <Row className="lf-patient-info">
+              { this.state.selectedPatient &&
+              <Col className="lf-patient-info" span={20}>
+                <Row>
+                  <Col xs={24} sm={12} md={6} lg={6} xl={6} className="lf-patient-name" >{name}</Col>
                   <Col xs={24} sm={12} md={6} lg={6} xl={6}>Gender: {gender}</Col>
                   <Col xs={24} sm={12} md={6} lg={6} xl={6}>DoB: {dob}</Col>
                   {/* <Col xs={24} sm={12} md={6} lg={6} xl={6}>Phone #: {phone}</Col> */}
@@ -199,6 +208,7 @@ class App extends Component {
                   <Col xs={24} sm={12} md={6} lg={6} xl={6}></Col>
                 </Row>
               </Col>
+              }
             </Row>
             <Row type="flex" className="lf-row">
               <Col xs={24} sm={12} md={6} lg={6} xl={6}>
@@ -216,10 +226,25 @@ class App extends Component {
                 </Row>                
               </Col>
               <Col xs={24} sm={12} md={6} lg={6} xl={6}>
-                <Button type="primary" disabled={!this.state.selectedPatient} onClick={() => this.loadData()}>Reload Data</Button>  
+                <Button className='lf-button' type="primary" disabled={!this.state.selectedPatient} onClick={() => this.loadData()}>Reload Data</Button>  
+                <Button className='lf-button' type="primary" disabled={!this.state.moreData} onClick={() => this.appendData()}>Load More Data</Button>
               </Col>
             </Row>
           </div>
+          <Row className='lf-data-info lf-row'>
+            <Col xs={24} sm={12} md={6} lg={6} xl={6}>
+              Displayed Resources: { tableDataStore.retrievedNumOfRes }
+            </Col>
+            <Col xs={24} sm={12} md={6} lg={6} xl={6}>
+              Total Resources: { tableDataStore.availableNumOfRes }
+            </Col>
+            <Col xs={24} sm={12} md={6} lg={6} xl={6}>
+              Columns: {this.state.flowsheetColumns ? this.state.flowsheetColumns.length : 0 }
+            </Col>
+            <Col xs={24} sm={12} md={6} lg={6} xl={6}>
+              Rows: {this.state.flowsheetData ? this.state.flowsheetData.length : 0 }
+            </Col>
+          </Row>
           <div id="data-table">
             {/* <div><span>{this.state.isLoading ? "Loading ..." : ""}</span></div> */}
             
@@ -240,8 +265,6 @@ class App extends Component {
             <button onClick={() => this.pickTemplate()}>Pick a Template</button> */}
           </div>
           <div id="footer">
-            <div><span>Number of Columns: {this.state.flowsheetColumns ? this.state.flowsheetColumns.length : 0 }</span></div>
-            <div><span>Number of Rows: {this.state.flowsheetData ? this.state.flowsheetData.length : 0 }</span></div>
           </div>
 
         

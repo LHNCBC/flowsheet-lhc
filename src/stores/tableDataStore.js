@@ -5,9 +5,10 @@ import SparkLine from '../components/sparkLine';
 import fhirStore from './fhirDataStore';
 //import template from './templateDataStore';
 
+import moment from 'moment';
 
 const COLUMN_NUM = 30;
-const COLUMN_SIZE = 100;
+const COLUMN_SIZE = 120;
 const PRELOAD_PAGE_NUM = 2;
 const SCROLL_BUFFER_SIZE = 40; // the buffer size before right scrolling to the right end of the a scroll bar, when a new data query is sent to the server to request next page's data
 
@@ -23,6 +24,9 @@ class TableDataStore {
   tableData = [];
   tableColumns = [];
   dateList = new Map();
+  moreData = false;
+  retrievedNumOfRes = 0;
+  availableNumOfRes = 0;
   
   setTemplate(template) {
     this.template = template;
@@ -97,7 +101,7 @@ class TableDataStore {
     let restCols = [];
     for (var date of this.dateList.keys()) {
       restCols.push({
-        title: this._formatDate(date),
+        title: (filters, sortOrder) => <div><div>{this._formatDate(date).date}</div><div>{this._formatDate(date).time}</div></div>,
         dataIndex: date, 
         key: date, 
         width: 100,
@@ -119,8 +123,17 @@ class TableDataStore {
     let formatted = '';
     if (date) {
       let dateObj = new Date(date);
-      // formatted = dateObj.toDateString() + " " + dateObj.toLocaleTimeString();
-      formatted = dateObj.toLocaleString();
+      formatted = moment(dateObj).format("MM/DD/YYYY, HH:mm:ss");
+      // formatted = dateObj.getMonth() + '/' +
+      //             dateObj.getDate() + '/' +
+      //             dateObj.getFullYear() + 1 +'<br>'+
+      //             dateObj.getHours() + ':' +
+      //             dateObj.getMinutes() + ':' +
+      //             dateObj.getSeconds();
+      formatted = {
+        date: moment(dateObj).format("MM/DD/YYYY"),
+        time: moment(dateObj).format("HH:mm:ss")
+      }
     }
 
     return formatted;
@@ -136,8 +149,12 @@ class TableDataStore {
         //console.log(that.templateTree);
         let tableData = that._exportTableData();
         that.tableData = tableData;
-        return tableData
+        that.moreData = fhirStore.moreData;
+        that.retrievedNumOfRes = fhirStore.resourceRetrieved;
+        that.availableNumOfRes = fhirStore.resourceAvailable;
+        return {tableData: tableData, moreData: that.moreData}
         //console.log(that.tableData)
+        
       })
       .catch(function(error) {
         console.log(error);
@@ -155,7 +172,10 @@ class TableDataStore {
         //console.log(that.templateTree);
         let tableData = that._exportTableData();
         that.tableData = tableData;
-        return tableData
+        that.moreData = fhirStore.moreData;
+        that.retrievedNumOfRes += fhirStore.resourceRetrieved;
+        that.availableNumOfRes = fhirStore.resourceAvailable;
+        return {tableData: tableData, moreData: that.moreData}
         //console.log(that.tableData)
       })
       .catch(function(error) {
@@ -171,8 +191,13 @@ class TableDataStore {
       let code = this._getCode(item);
       let date = this._getDate(item);
       let value = this._getValue(item);
+      let unit = this._getUnit(item);
       let interpretationCode = this._getInterpretation(item);
       let displayValue = interpretationCode && interpretationCode !== 'N' ? value + ' *' + interpretationCode : value;
+
+      let valueWithUnit = unit && unit.code ? value + ' ' + unit.code : value;
+      let displayValueWithUnit = interpretationCode && interpretationCode !== 'N' ? valueWithUnit + ' *' + interpretationCode : valueWithUnit;
+      let cellData = {value: displayValue, valueWithUnit: displayValueWithUnit};
 
       let range = this._getReferenceRange(item);
 
@@ -184,7 +209,7 @@ class TableDataStore {
         if (node.C === code) {
           node.sparklineData.push(value);
           node.hasData = true;
-          node[date] = displayValue;
+          node[date] = displayValueWithUnit;
           this.dateList.set(date);
 
           if(range && Array.isArray(range)) {
@@ -230,6 +255,18 @@ class TableDataStore {
     let resource = entry.resource;
     if (resource && resource.valueQuantity) {
       ret = resource.valueQuantity.value;
+    }
+    return ret;
+  }
+
+  _getUnit(entry) {
+    let ret;
+    let resource = entry.resource;
+    if (resource && resource.valueQuantity) {
+      ret = { unit: resource.valueQuantity.unit,
+              code: resource.valueQuantity.code,
+              system: resource.valueQuantity.system
+      };
     }
     return ret;
   }

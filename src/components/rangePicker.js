@@ -12,11 +12,11 @@ class RangePicker extends React.Component {
     super(props);
 
     let list = [
-      {name: 'By Time', file: ''},
-      {name: 'By Day', file: ''},
-      {name: 'By Week', file: ''},
-      {name: 'By Month', file: ''},
-      {name: 'By Year', file: ''}
+      {name: 'All', file: ''},
+      {name: 'One Per Day', file: ''},
+      {name: 'One Per Week', file: ''},
+      {name: 'One Per Month', file: ''},
+      {name: 'One Per Year', file: ''}
   ];
 
     // set default value

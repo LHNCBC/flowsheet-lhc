@@ -52,7 +52,7 @@ class PatientSearchDialog extends React.Component {
     
     return (
       <div>
-        <Button type="primary" icon='user' size="large" onClick={this.showModal}>{label}</Button>
+        <Button type="primary" icon='user' onClick={this.showModal}>{label}</Button>
         <Modal
           title="Patient Picker"
           visible={this.state.visible}
