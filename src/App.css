@@ -28,50 +28,6 @@
 }
 
 
-/* .ant-table-fixed-left  .ant-table-row.level-1 td:first-child {
-  padding-left: 0;
-}
-.ant-table-fixed-left  .ant-table-row.level-2 td:first-child {
-  padding-left: 8px;
-}
-.ant-table-fixed-left  .ant-table-row.level-3 td:first-child {
-  padding-left: 16px;
-}
-.ant-table-fixed-left  .ant-table-row.level-4 td:first-child {
-  padding-left: 24px;
-}
-.ant-table-fixed-left  .ant-table-row.level-5 td:first-child {
-  padding-left: 32px;
-}
-.ant-table-fixed-left  .ant-table-row.level-6 td:first-child {
-  padding-left: 40px;
-} */
-
-
-.ant-table-fixed-left .ant-table-row.type-header,
-.ant-table-content .ant-table-row.type-header {
-  background-color: rgb(230, 241, 255);
-  /* text-decoration: underline; */
-}
-.ant-table-fixed-left .ant-table-row.level-1.type-header,
-.ant-table-content .ant-table-row.level-1.type-header {
-  font-weight: bold;
-  text-decoration: none;
-  background-color:#00BFFF;
-}
-
-
-.ant-table-wrapper.showClassRow .type-itemInClass {
-  display: none;
-}
-/* .ant-table-wrapper.hideClassRow .type-classRow {
-  display: none;
-} */
-
-.flowsheet-table .ant-table-tbody > tr > td {
-  padding: 2px;
-  font-size: 16px;
-}
 
 #header {
   position: relative;
@@ -122,4 +78,52 @@
 }
 .lf-button {
   margin: 0 2px;
+}
+/* .lf-item-name {
+
+} */
+
+/* .ant-table-fixed-left  .ant-table-row.level-1 td:first-child {
+  padding-left: 0;
+}
+.ant-table-fixed-left  .ant-table-row.level-2 td:first-child {
+  padding-left: 8px;
+}
+.ant-table-fixed-left  .ant-table-row.level-3 td:first-child {
+  padding-left: 16px;
+}
+.ant-table-fixed-left  .ant-table-row.level-4 td:first-child {
+  padding-left: 24px;
+}
+.ant-table-fixed-left  .ant-table-row.level-5 td:first-child {
+  padding-left: 32px;
+}
+.ant-table-fixed-left  .ant-table-row.level-6 td:first-child {
+  padding-left: 40px;
+} */
+
+
+.ant-table-fixed-left .ant-table-row.type-header,
+.ant-table-content .ant-table-row.type-header {
+  background-color: rgb(230, 241, 255);
+}
+.ant-table-fixed-left .ant-table-row.level-1.type-header,
+.ant-table-content .ant-table-row.level-1.type-header {
+  font-weight: bold;
+  text-decoration: none;
+  background-color:#00BFFF;
+}
+
+
+.ant-table-wrapper.showClassRow .type-itemInClass {
+  display: none;
+}
+/* .ant-table-wrapper.hideClassRow .type-classRow {
+  display: none;
+} */
+
+.flowsheet-table .ant-table-tbody > tr > td,
+.flowsheet-table .ant-table-thead > tr > th  {
+  padding: 2px;
+  font-size: 16px;
 }

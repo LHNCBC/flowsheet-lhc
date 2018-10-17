@@ -8,8 +8,8 @@ import { Table, Layout, Row, Col, Button, Switch } from 'antd';
 //import { FlowSheetData } from './FlowsheetData.js';
 
 //import temp from './stores/singleTree';
-//import temp from './stores/hirarchy';
-import temp from './stores/h2.json';
+//import temp from './stores/h1';
+import temp from './stores/h2';
 
 import fhirDataStore from './stores/fhirDataStore';
 
@@ -33,7 +33,7 @@ class App extends Component {
       isLoading: false,
       tableClass: "flowsheet-table",
       patient: null,
-      showUnit: false,
+      showUnit: true,
       expandEqClass: true,
       selectedPatient: null,
       appTitle: "Flowsheet FHIR App",
@@ -45,6 +45,8 @@ class App extends Component {
     this.loadData = this.loadData.bind(this);
     this.loadMoreData = this.loadMoreData.bind(this);
     this.appendData = this.appendData.bind(this);
+    this.onUnitSwitchChange = this.onUnitSwitchChange.bind(this);
+
   }
 
   setSelectedPatient(patient) {
@@ -81,9 +83,10 @@ class App extends Component {
         that.setState({
           flowsheetData: data.tableData,
           moreData: data.moreData,
-          flowsheetColumns: tableDataStore.getColumnHeaders()         
+          flowsheetColumns: tableDataStore.getColumnHeaders(that.state.showUnit)         
         })    
         console.log(data);
+        console.log(that.state.flowsheetColumns);
       })
       .catch(function(error) {
         console.log(error);
@@ -98,7 +101,7 @@ class App extends Component {
         that.setState({
           flowsheetData: data.tableData,
           moreData: data.moreData,
-          flowsheetColumns: tableDataStore.getColumnHeaders()         
+          flowsheetColumns: tableDataStore.getColumnHeaders(that.state.showUnit)         
         })    
         console.log(data);
       })
@@ -144,15 +147,15 @@ class App extends Component {
   }
 
   componentDidMount() {
-    var tableContent = document.querySelector('.ant-table-scroll > .ant-table-body')
-    tableContent.addEventListener('scroll', (event) => {
-      this.handleScroll(event);      
-    })
+    // var tableContent = document.querySelector('.ant-table-scroll > .ant-table-body')
+    // tableContent.addEventListener('scroll', (event) => {
+    //   this.handleScroll(event);      
+    // })
   }
 
   componentWillUnmount() {
-    // Cancel any pending updates since we're unmounting.
-    this.scheduleUpdate.cancel();
+    // // Cancel any pending updates since we're unmounting.
+    // this.scheduleUpdate.cancel();
   }
 
 
@@ -163,6 +166,12 @@ class App extends Component {
   }
 
   onUnitSwitchChange(checked) {
+    console.log(checked);
+
+    this.setState({
+      showUnit: checked,
+      flowsheetColumns: tableDataStore.getColumnHeaders(checked)  
+    })
 
   }
 
@@ -252,7 +261,7 @@ class App extends Component {
             columns={this.state.flowsheetColumns} 
             dataSource={this.state.flowsheetData} 
             rowClassName={(record, index) => 'level-' + record.L + ' type-' + (record.isHeader ? 'header' : 'data') }
-            scroll={{ x: this.state.unitWidth * (this.state.flowsheetColumns ? this.state.flowsheetColumns.length : 1200), y:800}}
+            scroll={{ x: tableDataStore.tableWidth , y:800}}
             pagination={false} 
             defaultExpandAllRows={true}
             />
