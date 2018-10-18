@@ -22,8 +22,12 @@ class TemplateDataStore {
   dateList = new Map();
 
   setTemplate(template) {
+    //console.log(template)
     this.template = template;
     this.templateTree = this.preProcessTemplate();
+    //console.log(this.templateTree)
+    this.addEquivlaneClassRow();
+    //console.log(this.templateTree)
 
   }
 
@@ -102,6 +106,57 @@ class TemplateDataStore {
     return newTemplate;
 
   }
+
+  /**
+   * Add a row for equivalence class before the rows that have more than one rows with the same equivalence class
+   */
+  addEquivlaneClassRow() {
+    let eqClassList = [], codeList = [], loincList = [];
+    let repeats = 1;    
+    let eqClass = '';
+    // loop through the items in the template starting from the end
+    for (let i = this.templateTree.length-1; i >= 0; i--) {
+      let item = this.templateTree[i];
+      // repeating eq class
+      if (item.C && item.C == eqClass ) {
+        repeats +=1;
+        // insert at the beginning of the list
+        codeList.unshift(item.D);
+        loincList.unshift(item.E);
+      }
+      // new eq class
+      else {
+        // found previous repeating eq class
+        if (repeats > 1) {
+          let preItem = this.templateTree[i+1];
+          let eqClassRow = Object.assign({}, preItem);
+          eqClassRow.isEqClassRow = true; 
+          eqClassRow.codeList = codeList;
+          eqClassRow.loincList = loincList;
+          eqClassRow.G = eqClass;
+          eqClassRow.B = eqClass;
+          eqClassRow.key = eqClassRow.key + '_EQ';
+          eqClassRow.commonUCUM = ''; // ?
+          eqClassList.push(
+            { index: i+1, 
+              row: eqClassRow
+            }
+          )
+        }
+        repeats = 1;
+        codeList = [item.D];
+        loincList = [item.E];
+      }
+      eqClass = item.C;
+    }
+
+    //console.log(eqClassList)
+    // insert the eq class row
+    for(let i=0; i < eqClassList.length; i++) {
+      this.templateTree.splice(eqClassList[i].index, 0, eqClassList[i].row);
+    }
+  }
+
 
   /**
    * Reprocess the hierachy after user data is loaded.
@@ -193,7 +248,22 @@ class TemplateDataStore {
         if (!node.sparklineData) {
           node.sparklineData = [];
         }
-        if (node.E === code) {
+        if (node.isEqClassRow) {
+          for (let k=0; k<node.loincList.length; k++) {
+            if (node.loincList[k] === code) {
+              node.hasData = true;
+              this.dateList.set(date);
+              if (!node[date]) {
+                node[date] = cellData;
+              }
+              else {
+                node[date].value = node[date].value + "; " + cellData.value;
+                node[date].valueWithUnit = node[date].valueWithUnit + "; " + cellData.valueWithUnit;
+              }
+            }
+          }
+        }
+        else if (node.E === code) {
           node.sparklineData.push(value);
           node.hasData = true;
           node[date] = cellData;

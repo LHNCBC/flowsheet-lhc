@@ -114,6 +114,10 @@
   text-decoration: none;
   background-color:#00BFFF;
 }
+.ant-table-fixed-left .ant-table-row.type-eq-class,
+.ant-table-content .ant-table-row.type-eq-class {
+  background-color: rgb(162, 185, 215);
+}
 
 
 .ant-table-wrapper.showClassRow .type-itemInClass {

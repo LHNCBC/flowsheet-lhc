@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button, Switch } from 'antd';
 //import { observable, action, computed } from 'mobx';
 import { Sparklines, SparklinesLine, SparklinesReferenceLine } from 'react-sparklines';
 import SparkLine from '../components/sparkLine';
@@ -42,8 +43,12 @@ class TableDataStore {
       fixed: 'left',
       className: 'lf-item-name',
       render: (text, record) => (
-        <span>{ String.fromCharCode(160).repeat((parseInt(record.A)-1)*2) + this._getDisplayName(record) +"|"+ record.A}
+        <span>
+          <span>{ String.fromCharCode(160).repeat((parseInt(record.A)-1)*2) } </span>
+          {record.isEqClassRow && <Button  shape="circle" icon="right" size="small"/>}
+          <span>{this._getDisplayName(record)}</span>
         </span>
+        
       )
     }
     // sparkline 
@@ -106,8 +111,11 @@ class TableDataStore {
         console.log(data);
         templateStore.filterDataByTemplate(data);
         templateStore.postProcessTemplateTree();
+
+        console.log(templateStore.templateTree);
         that.dateList = templateStore.dateList;
         let tableData = templateStore.exportTableData();
+        console.log(tableData);
         that.tableData = tableData;
         that.moreData = fhirStore.moreData;
         that.retrievedNumOfRes = fhirStore.resourceRetrieved;

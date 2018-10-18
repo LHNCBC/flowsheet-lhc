@@ -180,9 +180,7 @@ class App extends Component {
 
 
   pickTemplate() {
-    console.log(temp)
     tableDataStore.setTemplate(temp);
-    console.log(tableDataStore.templateTree);
   }
 
   onUnitSwitchChange(checked) {
@@ -281,7 +279,7 @@ class App extends Component {
           <Table className={this.state.tableClass}
           columns={this.state.flowsheetColumns} 
           dataSource={this.state.flowsheetData} 
-          rowClassName={(record, index) => 'level-' + record.L + ' type-' + (record.isHeader ? 'header' : 'data') }
+          rowClassName={(record, index) => 'level-' + record.L + ' type-' + (record.isHeader ? 'header' : record.isEqClassRow ? 'eq-class' : 'data') }
           scroll={{ x: tableDataStore.tableWidth , y: this.state.tableHeight}}
           pagination={false} 
           defaultExpandAllRows={true}
@@ -291,8 +289,8 @@ class App extends Component {
           <button onClick={() => this.getNextPageData()}>Get Next Page Data</button> */}
 
           {/* <button disabled={!this.state.selectedPatient} onClick={() => this.loadData()}>Reload Data</button>
-          <button onClick={() => this.toggleClassRows()}>Expand/Collapse Class Rows</button>
-          <button onClick={() => this.pickTemplate()}>Pick a Template</button> */}
+          <button onClick={() => this.toggleClassRows()}>Expand/Collapse Class Rows</button> */}
+          {/* <button onClick={() => this.pickTemplate()}>Pick a Template</button>  */}
         </div>
         <div id="lf-app-footer">
         </div>
