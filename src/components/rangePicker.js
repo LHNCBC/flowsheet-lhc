@@ -44,7 +44,7 @@ class RangePicker extends React.Component {
       selectedRange: selectedRange
     });
 
-    this.props.setselectedRange(selectedRange);
+    this.props.setSelectedRange(selectedRange);
   }
   
   handleBlur() {

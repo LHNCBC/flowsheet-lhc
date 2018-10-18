@@ -29,7 +29,7 @@
 
 
 
-#header {
+#lf-header {
   position: relative;
   font-size: 12px;
   font-family: 'Droid Sans',Arial,Helvetica,sans-serif;
@@ -50,7 +50,7 @@
 #siteNameBox {
   margin-top: 2.2em;
 }
-#header a {
+#lf-header a {
   color: #1E4193;
   text-decoration: none;
 }
@@ -58,7 +58,8 @@
   font-size: 300%;
 }
 
-#options, #data-table {
+#lf-options, 
+#lf-data-table {
   border-top: 2px solid #0BACB6;
   border-bottom: 2px solid #17b4e3;
 }
@@ -126,4 +127,8 @@
 .flowsheet-table .ant-table-thead > tr > th  {
   padding: 2px;
   font-size: 16px;
+}
+
+.lf-bold {
+  font-weight: bold;
 }

@@ -26,6 +26,7 @@ const { Header, Footer, Sider, Content } = Layout;
 class App extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
       flowsheetData : null,
       flowsheetColumns: null,
@@ -39,13 +40,19 @@ class App extends Component {
       appTitle: "Flowsheet FHIR App",
       selectedTemplate: null,
       selectedRange: null,
-      moreData: false
+      moreData: false,
+      tableHeight: window.innerHeight
+
     };
 
     this.loadData = this.loadData.bind(this);
     this.loadMoreData = this.loadMoreData.bind(this);
     this.appendData = this.appendData.bind(this);
     this.onUnitSwitchChange = this.onUnitSwitchChange.bind(this);
+    this.handleResize = this.handleResize.bind(this);
+    // this.setSelectedPatient = this.setSelectedPatient.bind(this);
+    // this.setSelectedTemplate = this.setSelectedTemplate.bind(this);
+    // this.setSelectedRange = this.setSelectedRange.bind(this);
 
   }
 
@@ -76,7 +83,10 @@ class App extends Component {
     let patientId = this.state.selectedPatient ? this.state.selectedPatient.id : ""; // "pat-88616";// "pat-98"; 
     let that = this;
 
+    this.handleResize();
+
     tableDataStore.setTemplate(temp);
+
 
     tableDataStore.getFirstPageData(patientId)
       .then(function(data) {
@@ -151,11 +161,21 @@ class App extends Component {
     // tableContent.addEventListener('scroll', (event) => {
     //   this.handleScroll(event);      
     // })
+    window.addEventListener('resize', this.handleResize);
   }
 
   componentWillUnmount() {
     // // Cancel any pending updates since we're unmounting.
     // this.scheduleUpdate.cancel();
+    window.removeEventListener('resize', this.handleResize);
+  }
+
+  handleResize(e) {
+      let headerHeight = document.querySelector('#lf-app-header').clientHeight
+      let footerHeight = document.querySelector('#lf-app-footer').clientHeight
+      this.setState({
+        tableHeight: window.innerHeight - headerHeight - footerHeight - 65 // not sure why there is a gap of 65px
+      })
   }
 
 
@@ -188,8 +208,8 @@ class App extends Component {
     
     return (
       <div>
-        
-          <div id="header">
+        <div id="lf-app-header">
+          <div id="lf-header">
             <a href="http://lhncbc.nlm.nih.gov" title="Lister Hill National Center for Biomedical Communications (LHNCBC)" id="logo">
               <img src={LHCImage} alt="Lister Hill National Center for Biomedical Communications (LHNCBC)"></img>
             </a>
@@ -201,7 +221,7 @@ class App extends Component {
               </a>
             </div>
           </div>
-          <div id='options'>
+          <div id='lf-options'>
             <Row type="flex" justify="start" className="lf-row">
               <Col >
                 <PatientSearchDialog selectedPatient={this.state.selectedPatient} onOK={(patient) => this.setSelectedPatient(patient)}/>
@@ -210,11 +230,11 @@ class App extends Component {
               <Col className="lf-patient-info" span={20}>
                 <Row>
                   <Col xs={24} sm={12} md={6} lg={6} xl={6} className="lf-patient-name" >{name}</Col>
-                  <Col xs={24} sm={12} md={6} lg={6} xl={6}>Gender: {gender}</Col>
-                  <Col xs={24} sm={12} md={6} lg={6} xl={6}>DoB: {dob}</Col>
+                  <Col xs={24} sm={12} md={6} lg={6} xl={6}>Gender: <span className="lf-bold">{gender}</span></Col>
+                  <Col xs={24} sm={12} md={6} lg={6} xl={6}>DoB: <span className="lf-bold">{dob}</span></Col>
                   {/* <Col xs={24} sm={12} md={6} lg={6} xl={6}>Phone #: {phone}</Col> */}
-                  <Col xs={24} sm={12} md={6} lg={6} xl={6}>Deceased: {deceased}</Col>
-                  <Col xs={24} sm={12} md={6} lg={6} xl={6}></Col>
+                  <Col xs={24} sm={12} md={6} lg={6} xl={6}>Deceased: <span className="lf-bold">{deceased}</span></Col>
+                  <Col xs={24} sm={12} md={6} lg={6} xl={6}></Col>close
                 </Row>
               </Col>
               }
@@ -240,44 +260,42 @@ class App extends Component {
               </Col>
             </Row>
           </div>
-          <Row className='lf-data-info lf-row'>
+          <Row id="lf-status" className='lf-data-info lf-row'>
             <Col xs={24} sm={12} md={6} lg={6} xl={6}>
-              Displayed Resources: { tableDataStore.retrievedNumOfRes }
+              Displayed Resources: <span className="lf-bold">{ tableDataStore.retrievedNumOfRes }</span>
             </Col>
             <Col xs={24} sm={12} md={6} lg={6} xl={6}>
-              Total Resources: { tableDataStore.availableNumOfRes }
+              Total Resources: <span className="lf-bold">{ tableDataStore.availableNumOfRes }</span>
             </Col>
             <Col xs={24} sm={12} md={6} lg={6} xl={6}>
-              Columns: {this.state.flowsheetColumns ? this.state.flowsheetColumns.length : 0 }
+              Columns: <span className="lf-bold">{this.state.flowsheetColumns ? this.state.flowsheetColumns.length : 0 }</span>
             </Col>
             <Col xs={24} sm={12} md={6} lg={6} xl={6}>
-              Rows: {this.state.flowsheetData ? this.state.flowsheetData.length : 0 }
+              Rows: <span className="lf-bold">{this.state.flowsheetData ? this.state.flowsheetData.length : 0 }</span>
             </Col>
           </Row>
-          <div id="data-table">
-            {/* <div><span>{this.state.isLoading ? "Loading ..." : ""}</span></div> */}
-            
-            <Table className={this.state.tableClass}
-            columns={this.state.flowsheetColumns} 
-            dataSource={this.state.flowsheetData} 
-            rowClassName={(record, index) => 'level-' + record.L + ' type-' + (record.isHeader ? 'header' : 'data') }
-            scroll={{ x: tableDataStore.tableWidth , y:800}}
-            pagination={false} 
-            defaultExpandAllRows={true}
-            />
-            {/* <button onClick={() => this.appendData()}>Load More Data</button>
-            <button onClick={() => this.testFhirServer()}>Get Data from FHIR Server</button>
-            <button onClick={() => this.getNextPageData()}>Get Next Page Data</button> */}
+        </div>
+        <div id="lf-data-table">
+          {/* <div><span>{this.state.isLoading ? "Loading ..." : ""}</span></div> */}
+          
+          <Table className={this.state.tableClass}
+          columns={this.state.flowsheetColumns} 
+          dataSource={this.state.flowsheetData} 
+          rowClassName={(record, index) => 'level-' + record.L + ' type-' + (record.isHeader ? 'header' : 'data') }
+          scroll={{ x: tableDataStore.tableWidth , y: this.state.tableHeight}}
+          pagination={false} 
+          defaultExpandAllRows={true}
+          />
+          {/* <button onClick={() => this.appendData()}>Load More Data</button>
+          <button onClick={() => this.testFhirServer()}>Get Data from FHIR Server</button>
+          <button onClick={() => this.getNextPageData()}>Get Next Page Data</button> */}
 
-            {/* <button disabled={!this.state.selectedPatient} onClick={() => this.loadData()}>Reload Data</button>
-            <button onClick={() => this.toggleClassRows()}>Expand/Collapse Class Rows</button>
-            <button onClick={() => this.pickTemplate()}>Pick a Template</button> */}
-          </div>
-          <div id="footer">
-          </div>
-
-        
-        
+          {/* <button disabled={!this.state.selectedPatient} onClick={() => this.loadData()}>Reload Data</button>
+          <button onClick={() => this.toggleClassRows()}>Expand/Collapse Class Rows</button>
+          <button onClick={() => this.pickTemplate()}>Pick a Template</button> */}
+        </div>
+        <div id="lf-app-footer">
+        </div>
       </div>
     );
   }
