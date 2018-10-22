@@ -7641,7 +7641,7 @@ export default [
             "D": 44,
             "E": "2951-2",
             "F": "Sodium [Moles/volume] in Serum or Plasma",
-            "G": "Sodium molar conc",
+            "G": "Sodium molar conc 2",
             "H": "mmol/L",
             "I": "136-145",
             "J": 145,

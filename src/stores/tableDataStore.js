@@ -32,7 +32,7 @@ class TableDataStore {
     templateStore.setTemplate(temp);    
   }
 
-  getColumnHeaders(withUnit) {
+  getColumnHeaders(showUnit) {
 
     // test name columns
     let col1 = {
@@ -68,7 +68,7 @@ class TableDataStore {
     for (var date of this.dateList.keys()) {
       restCols.push({
         title: <div><div>{this._formatDate(date).date}</div><div>{this._formatDate(date).time}</div></div>,
-        dataIndex: withUnit ? date + '.valueWithUnit' : date + '.value', 
+        dataIndex: showUnit ? date + '.valueWithUnit' : date + '.value', 
         key: date, 
         width: this.COLUMN_SIZE
       })

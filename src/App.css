@@ -136,3 +136,10 @@
 .lf-bold {
   font-weight: bold;
 }
+
+.type-eq-class.hide-eq-class {
+  display: none;
+}
+.hide-eq-class-item {
+  display: none;
+}

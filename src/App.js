@@ -35,7 +35,7 @@ class App extends Component {
       tableClass: "flowsheet-table",
       patient: null,
       showUnit: true,
-      expandEqClass: true,
+      showEqClass: true,
       selectedPatient: null,
       appTitle: "Flowsheet FHIR App",
       selectedTemplate: null,
@@ -49,6 +49,7 @@ class App extends Component {
     this.loadMoreData = this.loadMoreData.bind(this);
     this.appendData = this.appendData.bind(this);
     this.onUnitSwitchChange = this.onUnitSwitchChange.bind(this);
+    this.onEqClassSwitchChange = this.onEqClassSwitchChange.bind(this);
     this.handleResize = this.handleResize.bind(this);
     // this.setSelectedPatient = this.setSelectedPatient.bind(this);
     // this.setSelectedTemplate = this.setSelectedTemplate.bind(this);
@@ -194,7 +195,46 @@ class App extends Component {
   }
 
   onEqClassSwitchChange(checked) {
+    console.log(checked);
 
+    this.setState({
+      showEqClass: checked,
+      flowsheetColumns: tableDataStore.getColumnHeaders(this.state.showUnit, checked)
+    })
+
+  }
+
+  getRowClass(record, index) {
+    
+
+    // header, eq-class or data row
+    let className = 'type-' + (record.isHeader ? 'header' : record.isEqClassRow ? 'eq-class' : 'data')
+
+    // level
+    if (record.L) {
+      className += ' level-' + record.L
+    }
+
+    // show/hide eq-class row
+    if (record.isEqClassRow) {
+      if (this.state.showEqClass) {
+        className += ' show-eq-class'
+      }
+      else {
+        className += ' hide-eq-class'
+      }
+    }
+    else if (record.isItemInEqClass) {
+      if (this.state.showEqClass) {        
+        className += ' hide-eq-class-item'
+      }
+      else {
+        className += ' show-eq-class-item'
+      }
+    }
+
+    return className;
+    
   }
 
   render() {
@@ -279,7 +319,7 @@ class App extends Component {
           <Table className={this.state.tableClass}
           columns={this.state.flowsheetColumns} 
           dataSource={this.state.flowsheetData} 
-          rowClassName={(record, index) => 'level-' + record.L + ' type-' + (record.isHeader ? 'header' : record.isEqClassRow ? 'eq-class' : 'data') }
+          rowClassName={(record, index) => this.getRowClass(record, index)}
           scroll={{ x: tableDataStore.tableWidth , y: this.state.tableHeight}}
           pagination={false} 
           defaultExpandAllRows={true}

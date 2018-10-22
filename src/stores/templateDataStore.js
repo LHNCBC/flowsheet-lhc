@@ -142,7 +142,13 @@ class TemplateDataStore {
               row: eqClassRow
             }
           )
+          // add flags to the items that belong to this equivalence class
+          for (let j=0; j<codeList.length; j++) {
+            this.templateTree[i+1+j].isItemInEqClass = true;
+          }
         }
+
+        // reset variables
         repeats = 1;
         codeList = [item.D];
         loincList = [item.E];
@@ -239,7 +245,6 @@ class TemplateDataStore {
 
       let valueWithUnit = unit && unit.code ? value + ' ' + unit.code : value;
       let displayValueWithUnit = interpretationCode && interpretationCode !== 'N' ? valueWithUnit + ' *' + interpretationCode : valueWithUnit;
-      let cellData = {value: displayValue, valueWithUnit: displayValueWithUnit};
 
       let range = this._getReferenceRange(item);
 
@@ -254,11 +259,11 @@ class TemplateDataStore {
               node.hasData = true;
               this.dateList.set(date);
               if (!node[date]) {
-                node[date] = cellData;
+                node[date] = {value: displayValue, valueWithUnit: displayValueWithUnit};
               }
               else {
-                node[date].value = node[date].value + "; " + cellData.value;
-                node[date].valueWithUnit = node[date].valueWithUnit + "; " + cellData.valueWithUnit;
+                node[date].value = node[date].value + "; " + displayValue;
+                node[date].valueWithUnit = node[date].valueWithUnit + "; " + displayValueWithUnit;
               }
             }
           }
@@ -266,7 +271,7 @@ class TemplateDataStore {
         else if (node.E === code) {
           node.sparklineData.push(value);
           node.hasData = true;
-          node[date] = cellData;
+          node[date] = {value: displayValue, valueWithUnit: displayValueWithUnit};
           this.dateList.set(date);
 
           if(range && Array.isArray(range)) {
