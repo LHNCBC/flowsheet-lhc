@@ -9,14 +9,14 @@ import { Table, Layout, Row, Col, Button, Switch } from 'antd';
 
 //import temp from './stores/singleTree';
 //import temp from './stores/h1';
-import temp from './stores/h2';
+import temp from './stores/h3';
 
 import fhirDataStore from './stores/fhirDataStore';
 
 
 import PatientSearchDialog from './components/patientSearchDialog';
 import TemplatePicker from './components/templatePicker';
-import RangePicker from './components/rangePicker';
+import ZoomLevelPicker from './components/zoomLevelPicker';
 import tableDataStore from './stores/tableDataStore';
 
 import LHCImage from './lhncbc.jpg';
@@ -35,11 +35,11 @@ class App extends Component {
       tableClass: "flowsheet-table",
       patient: null,
       showUnit: true,
+      zoomLevel: 'date',
       showEqClass: true,
       selectedPatient: null,
       appTitle: "Flowsheet FHIR App",
       selectedTemplate: null,
-      selectedRange: null,
       moreData: false,
       tableHeight: window.innerHeight
 
@@ -53,7 +53,7 @@ class App extends Component {
     this.handleResize = this.handleResize.bind(this);
     // this.setSelectedPatient = this.setSelectedPatient.bind(this);
     // this.setSelectedTemplate = this.setSelectedTemplate.bind(this);
-    // this.setSelectedRange = this.setSelectedRange.bind(this);
+    // this.setZoomLevel = this.setZoomLevel.bind(this);
 
   }
 
@@ -72,11 +72,18 @@ class App extends Component {
     })
   }
 
-  setSelectedRange = (range) => {
-    console.log(range);
+  setZoomLevel = (level) => {
+    console.log(level);
     this.setState({
-      selectedRange: range
+      zoomLevel: level
     })
+
+    if (this.state.flowsheetData) {
+      this.setState({
+        flowsheetColumns: tableDataStore.getColumnHeaders(this.state.showUnit, level)
+      })  
+    }
+
   }
 
   loadData() {
@@ -94,7 +101,7 @@ class App extends Component {
         that.setState({
           flowsheetData: data.tableData,
           moreData: data.moreData,
-          flowsheetColumns: tableDataStore.getColumnHeaders(that.state.showUnit)         
+          flowsheetColumns: tableDataStore.getColumnHeaders(that.state.showUnit, that.state.zoomLevel)         
         })    
         console.log(data);
         console.log(that.state.flowsheetColumns);
@@ -112,7 +119,7 @@ class App extends Component {
         that.setState({
           flowsheetData: data.tableData,
           moreData: data.moreData,
-          flowsheetColumns: tableDataStore.getColumnHeaders(that.state.showUnit)         
+          flowsheetColumns: tableDataStore.getColumnHeaders(that.state.showUnit, that.state.zoomLevel)         
         })    
         console.log(data);
       })
@@ -189,7 +196,7 @@ class App extends Component {
 
     this.setState({
       showUnit: checked,
-      flowsheetColumns: tableDataStore.getColumnHeaders(checked)  
+      flowsheetColumns: tableDataStore.getColumnHeaders(checked, this.state.zoomLevel)  
     })
 
   }
@@ -199,7 +206,7 @@ class App extends Component {
 
     this.setState({
       showEqClass: checked,
-      flowsheetColumns: tableDataStore.getColumnHeaders(this.state.showUnit, checked)
+      flowsheetColumns: tableDataStore.getColumnHeaders(this.state.showUnit, this.state.zoomLevel)
     })
 
   }
@@ -272,7 +279,7 @@ class App extends Component {
                   <Col xs={24} sm={12} md={6} lg={6} xl={6}>DoB: <span className="lf-bold">{dob}</span></Col>
                   {/* <Col xs={24} sm={12} md={6} lg={6} xl={6}>Phone #: {phone}</Col> */}
                   <Col xs={24} sm={12} md={6} lg={6} xl={6}>Deceased: <span className="lf-bold">{deceased}</span></Col>
-                  <Col xs={24} sm={12} md={6} lg={6} xl={6}></Col>close
+                  <Col xs={24} sm={12} md={6} lg={6} xl={6}></Col>
                 </Row>
               </Col>
               }
@@ -282,7 +289,7 @@ class App extends Component {
                 <TemplatePicker selectedTemplate={this.state.selectedTemplate} setSelectedTemplate={(temp) => this.setSelectedTemplate(temp)}/>
               </Col>
               <Col xs={24} sm={12} md={6} lg={6} xl={6}>
-                <RangePicker selectedRange={this.state.selectedRange} setSelectedRange={(range) => this.setSelectedRange(range)}/>
+                <ZoomLevelPicker zoomLevel={this.state.zoomLevel} setZoomLevel={(level) => this.setZoomLevel(level)}/>
               </Col>
               <Col xs={24} sm={12} md={6} lg={6} xl={6}>
                 <Row className="lf-switch-row">

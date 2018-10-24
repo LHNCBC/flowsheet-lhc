@@ -1,4 +1,7 @@
-
+import React from 'react';
+import moment from 'moment';
+import dcopy from 'deep-copy';
+ 
 class TemplateDataStore {
 
   // {
@@ -19,16 +22,48 @@ class TemplateDataStore {
 
   template = null;
   templateTree = [];
+  tsList = new Map();  
   dateList = new Map();
+  dayList = new Map();
+  weekList = new Map();
+  monthList = new Map();
+  yearList = new Map();
+  zoomLevel = ['day', 'week', 'month', 'quarter', 'year', 'date'];
 
   setTemplate(template) {
+    this.tsList = new Map();
+    this.dateList = new Map();
+    this.dayList = new Map();
+    this.weekList = new Map();
+    this.monthList = new Map();
+    this.quarterList = new Map();
+    this.yearList = new Map();
+
     //console.log(template)
-    this.template = template;
-    this.templateTree = this.preProcessTemplate();
+    this.template = dcopy(template);
+    this.templateTree = this._preProcessTemplate();
     //console.log(this.templateTree)
     this.addEquivlaneClassRow();
     //console.log(this.templateTree)
 
+  }
+
+
+  getTableData(fhirData) {
+
+    this._filterDataByTemplate(fhirData);
+    this._addAggregatedData();
+    this._postProcessTemplateTree();
+    let tableData = this._exportTableData();
+    let columnInfo = {
+      date: this.dateList,
+      day: this.dayList,
+      week: this.weekList,
+      month: this.monthList,
+      quarter: this.quarterList,
+      year: this.yearList
+    }
+    return [tableData, columnInfo]
   }
 
   /**
@@ -36,7 +71,7 @@ class TemplateDataStore {
    * Group header items do not have to have the code.
    * This is done before the user data is loaded.
    */
-  preProcessTemplate() {
+  _preProcessTemplate() {
     let levelStatus = [];
     let start = this.template.length - 1;
 
@@ -168,7 +203,7 @@ class TemplateDataStore {
    * Reprocess the hierachy after user data is loaded.
    * to remove items that have no user data while keeping the hierachy structure.
    */
-  postProcessTemplateTree() {
+  _postProcessTemplateTree() {
     let levelStatus = [];
     let start = this.templateTree.length - 1;
 
@@ -231,22 +266,18 @@ class TemplateDataStore {
    * Filter user data with the hierachy.
    * @param {*} newData user data from FHIR server.
    */
-  filterDataByTemplate(newData) {
+  _filterDataByTemplate(newData) {
     let list = newData.entry;
     
-    for(let i=0; i<list.length; i++) {
+    for(let i=0; i<list.length; i++) {    
       let item = list[i];
       let code = this._getCode(item);
       let date = this._getDate(item);
       let value = this._getValue(item);
       let unit = this._getUnit(item);
       let interpretationCode = this._getInterpretation(item);
-      let displayValue = interpretationCode && interpretationCode !== 'N' ? value + ' *' + interpretationCode : value;
 
-      let valueWithUnit = unit && unit.code ? value + ' ' + unit.code : value;
-      let displayValueWithUnit = interpretationCode && interpretationCode !== 'N' ? valueWithUnit + ' *' + interpretationCode : valueWithUnit;
-
-      let range = this._getReferenceRange(item);
+//      let range = this._getReferenceRange(item);
 
       for(let j=0; j<this.templateTree.length; j++) {
         let node = this.templateTree[j];
@@ -257,13 +288,15 @@ class TemplateDataStore {
           for (let k=0; k<node.loincList.length; k++) {
             if (node.loincList[k] === code) {
               node.hasData = true;
-              this.dateList.set(date);
-              if (!node[date]) {
-                node[date] = {value: displayValue, valueWithUnit: displayValueWithUnit};
+              this.tsList.set(date);
+              if (!node.data) {
+                node.data = {};
+              }
+              if (!node.data[date]) {
+                node.data[date] = [{value: value, unit: unit, normalFlag: interpretationCode}];
               }
               else {
-                node[date].value = node[date].value + "; " + displayValue;
-                node[date].valueWithUnit = node[date].valueWithUnit + "; " + displayValueWithUnit;
+                node.data[date].push({value: value, unit: unit, normalFlag: interpretationCode});
               }
             }
           }
@@ -271,19 +304,126 @@ class TemplateDataStore {
         else if (node.E === code) {
           node.sparklineData.push(value);
           node.hasData = true;
-          node[date] = {value: displayValue, valueWithUnit: displayValueWithUnit};
-          this.dateList.set(date);
+          if (!node.data) {
+            node.data = {};
+          }
+          node.data[date] = {value: value, unit: unit, normalFlag: interpretationCode};
+          this.tsList.set(date);
 
-          if(range && Array.isArray(range)) {
-            if (range[0].low) {
-              node.low = range[0].low.value;
-            }
-            if (range[0].high) {
-              node.high = range[0].high.value;  
-            }            
-          }    
+          // if(range && Array.isArray(range)) {
+          //   if (range[0].low) {
+          //     node.low = range[0].low.value;
+          //   }
+          //   if (range[0].high) {
+          //     node.high = range[0].high.value;  
+          //   }            
+          // }    
         }
       }
+    }
+  }
+
+
+  // TODO: 
+  _getAverageValue(itemValue) {
+    let totalValue;
+    if (Array.isArray(itemValue)) {
+      itemValue.forEach((itemVal) => {totalValue += itemVal;})
+      let val = totalValue / itemValue.length;
+    }
+  }
+
+  // TODO: use ucum js lib
+  _convertToUnit(itemValue, toUnit) {
+    return itemValue;
+  }
+
+  _getDisplayValue(itemValue) {
+    let displayValue = [], displayValueWithUnit = [];
+
+    if (Array.isArray(itemValue)) {
+      itemValue.forEach((val) => {
+        let displayVal = val.interpretationCode && val.interpretationCode !== 'N' ? val.value + ' *' + val.interpretationCode : val.value;
+        let valWithUnit = val.unit && val.unit.code ? val.value + ' ' + val.unit.code : val.value;
+        let displayValWithUnit = val.interpretationCode && val.interpretationCode !== 'N' ? valWithUnit + ' *' + val.interpretationCode : valWithUnit;
+        displayValue.push(displayVal);
+        displayValueWithUnit.push(displayValWithUnit);
+      })
+    }
+    else {
+      let val = itemValue;
+      let displayVal = val.interpretationCode && val.interpretationCode !== 'N' ? val.value + ' *' + val.interpretationCode : val.value;
+      let valWithUnit = val.unit && val.unit.code ? val.value + ' ' + val.unit.code : val.value;
+      let displayValWithUnit = val.interpretationCode && val.interpretationCode !== 'N' ? valWithUnit + ' *' + val.interpretationCode : valWithUnit;
+      displayValue.push(displayVal);
+      displayValueWithUnit.push(displayValWithUnit);
+
+    }
+    return  {value: displayValue.join('; '), valueWithUnit: displayValueWithUnit.join('; ')}
+  }
+
+  _setNodeAggregatedData(node) {
+
+    let dateArray = Object.keys(node.data);//.reverse();  
+    for (var date of dateArray) {
+      //console.log(date);
+      let dateObj = new Date(date);
+      let mntDate  = moment(dateObj);
+      let itemValue = node.data[date];
+      let dateKey, columnLabel;
+      this.zoomLevel.forEach((type) => {
+        switch (type) {
+          case 'day':
+            columnLabel = mntDate.format("YYYY-MM-DD");
+            dateKey = 'day_' + columnLabel;
+            this.dayList.set(dateKey, columnLabel);        
+            break;
+          case 'week':
+            columnLabel = 'Week ' + mntDate.weeks() + ', ' + mntDate.year();
+            dateKey = 'week_' + mntDate.year() + '-' + mntDate.weeks();
+            this.weekList.set(dateKey, columnLabel);
+            break;
+          case 'month':
+            columnLabel =  mntDate.format("YYYY-MM")
+            dateKey = 'month_' + columnLabel;
+            this.monthList.set(dateKey, columnLabel);
+            break;
+          case 'quarter':
+            columnLabel = 'Quarter ' + mntDate.quarters() + ', ' + mntDate.year();
+            dateKey = 'quarter_' + mntDate.year() + '-' + mntDate.quarters();
+            this.quarterList.set(dateKey, columnLabel);
+            break;
+          case 'year':
+            columnLabel = mntDate.year();
+            dateKey = 'year_' + columnLabel;
+            this.yearList.set(dateKey, columnLabel);
+            break;
+          case 'date':
+          default: 
+            columnLabel = <div><div>{mntDate.format("YYYY-MM-DD")}</div><div>{mntDate.format("HH:mm:ss")}</div></div>;
+            dateKey = 'date_' + date;
+            this.dateList.set(dateKey, columnLabel);
+        }  
+        node[dateKey] = this._getDisplayValue(itemValue);  
+      })
+    }
+
+    // sort data by the keys in reverse order, in dateList, dayList, weekList and etc, so that columns are display with the most recent date first.
+    // TODO
+
+  }
+
+
+  /**
+   * create aggregated data on day, week, month and year level, after the data is loaded and process on date (timestamp)
+   */
+  _addAggregatedData() {
+    for(let j=0; j<this.templateTree.length; j++) {
+      let node = this.templateTree[j];
+      if (node.hasData) {
+        this._setNodeAggregatedData(node)
+      }
+      
     }
 
   }
@@ -291,7 +431,7 @@ class TemplateDataStore {
   /**
    * Export the filtered user data
    */
-  exportTableData() {
+  _exportTableData() {
     return this.templateTree.filter(node => node.hasData);
   }
 
@@ -314,6 +454,37 @@ class TemplateDataStore {
     return ret;
   }
 
+  _formatDate(date, type) {
+    let dateObj = new Date(date);
+    let mntDate  = moment(dateObj);
+      
+    let dateKey, columnLabel;
+    switch (type) {
+      case 'day':
+        columnLabel = mntDate.format("YYYY-MM-DD");
+        dateKey = 'day.' + columnLabel;
+        break;
+      case 'week':
+        columnLabel = mntDate.weeks();
+        dateKey = 'week.' + columnLabel
+        break;
+      case 'month':
+        columnLabel =  mntDate.format("YYYY-MM")
+        dateKey = 'month.' + columnLabel;
+        break;
+      case 'year':
+        columnLabel = mntDate.year();
+        dateKey = 'year.' + columnLabel;
+        break;
+      case 'date':
+      default: 
+        columnLabel = <div><div>mntDate.format("YYYY-MM-DD")</div><div>mntDate.format("HH:mm:ss")</div></div>;
+        dateKey = 'date.' + date;
+    }
+
+    return {dateKey, columnLabel};
+
+  }
   _getValue(entry) {
     let ret;
     let resource = entry.resource;

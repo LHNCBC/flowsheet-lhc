@@ -19,10 +19,8 @@ class TableDataStore {
 
   tableWidth = this.COLUMN_NUM * this.COLUMN_SIZE;
 
-  // template = null;
-  // templateTree = [];
   tableData = [];
-  tableColumns = [];
+  tableColumnInfo = new Map();
   dateList = new Map();
   moreData = false;
   retrievedNumOfRes = 0;
@@ -32,7 +30,7 @@ class TableDataStore {
     templateStore.setTemplate(temp);    
   }
 
-  getColumnHeaders(showUnit) {
+  getColumnHeaders(showUnit, zoomLevel) {
 
     // test name columns
     let col1 = {
@@ -44,9 +42,9 @@ class TableDataStore {
       className: 'lf-item-name',
       render: (text, record) => (
         <span>
-          <span>{ String.fromCharCode(160).repeat((parseInt(record.A)-1)*2) } </span>
-          {record.isEqClassRow && <Button  shape="circle" icon="right" size="small"/>}
+          <span>{ String.fromCharCode(160).repeat((parseInt(record.A)-1)*2) } </span>          
           <span>{this._getDisplayName(record)}</span>
+          {record.isEqClassRow && String.fromCharCode(9428)}  {/* e with a circle */}
         </span>
         
       )
@@ -65,23 +63,52 @@ class TableDataStore {
 
     // data columns
     let restCols = [];
-    for (var date of this.dateList.keys()) {
-      restCols.push({
-        title: <div><div>{this._formatDate(date).date}</div><div>{this._formatDate(date).time}</div></div>,
-        dataIndex: showUnit ? date + '.valueWithUnit' : date + '.value', 
-        key: date, 
-        width: this.COLUMN_SIZE
-      })
+    let columnList = this.tableColumnInfo[zoomLevel];
+    if (columnList) {
+      for (let [dateKey, columnLabel] of columnList) {
+        restCols.push({
+          title: columnLabel,
+          dataIndex: showUnit ? dateKey + '.valueWithUnit' : dateKey + '.value', 
+          key: dateKey, 
+          width: this.COLUMN_SIZE
+        })
+  
+      }  
+    }
 
+    var spaceCol = {
+      title: '', 
+      dataIndex: '', 
+      key: 'space', 
+      
     }
 
     this.tableWidth = restCols.length * this.COLUMN_SIZE + this.CHART_COLUMN_SIZE + this.NAME_COLUMN_SIZE;
 
-    return [col1, col2,...restCols];
+    return [col1, col2,...restCols, spaceCol];
   }
 
   _getDisplayName(item) {
-    return item.G ? item.G : item.B ? item.B : item.F ? item.F : "";
+    //if there is a LOINC number
+    //   LOINC_DISPLAY > SHORT_NAME > LONG_COMMON_NAME > RI NAME
+    //else
+    //   RI NAME
+    let name = '';
+    if (item.E) {
+      name = item.G ? item.G : item.N ? item.N : item.F ? item.F : item.B ? item.B : '';
+    }
+    else {
+      name = item.B ? item.B : '';
+    }
+
+    return name;
+    // return item.E ?  //LOINC
+    //           item.G ? item.G : //LOINC_DISPLAY
+    //                    item.N ? item.N : //SHORT_NAME
+    //                             item.F ? item.F : //LONG_COMMON_NAME
+    //                                      item.B ? item.B : "" // RI NAME
+    //        :
+    //        item.B ? item.B : "" // RI NAME
   }
 
   _formatDate(date) {
@@ -109,13 +136,10 @@ class TableDataStore {
     return fhirStore.getAllObservationByPatientId(patientId)
       .then(function(data) {
         console.log(data);
-        templateStore.filterDataByTemplate(data);
-        templateStore.postProcessTemplateTree();
-
-        console.log(templateStore.templateTree);
-        that.dateList = templateStore.dateList;
-        let tableData = templateStore.exportTableData();
+        let [tableData, columnInfo] = templateStore.getTableData(data)
         console.log(tableData);
+        that.dateList = templateStore.dateList;
+        that.tableColumnInfo = columnInfo;
         that.tableData = tableData;
         that.moreData = fhirStore.moreData;
         that.retrievedNumOfRes = fhirStore.resourceRetrieved;
@@ -134,10 +158,10 @@ class TableDataStore {
     return fhirStore.getNextPageData()
       .then(function(data) {
         console.log(data);
-        templateStore.filterDataByTemplate(data);
-        templateStore.postProcessTemplateTree();
+        let [tableData, columnInfo] = templateStore.getTableData(data)
+        console.log(tableData);
         that.dateList = templateStore.dateList;
-        let tableData = templateStore.exportTableData();
+        that.tableColumnInfo = columnInfo;
         that.tableData = tableData;
         that.moreData = fhirStore.moreData;
         that.retrievedNumOfRes += fhirStore.resourceRetrieved;

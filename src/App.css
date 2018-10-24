@@ -116,13 +116,13 @@
 }
 .ant-table-fixed-left .ant-table-row.type-eq-class,
 .ant-table-content .ant-table-row.type-eq-class {
-  background-color: rgb(162, 185, 215);
+  /* background-color: rgb(162, 185, 215); */
 }
 
 
-.ant-table-wrapper.showClassRow .type-itemInClass {
+/* .ant-table-wrapper.showClassRow .type-itemInClass {
   display: none;
-}
+} */
 /* .ant-table-wrapper.hideClassRow .type-classRow {
   display: none;
 } */
