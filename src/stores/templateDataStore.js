@@ -42,9 +42,9 @@ class TemplateDataStore {
     //console.log(template)
     this.template = dcopy(template);
     this.templateTree = this._preProcessTemplate();
-    //console.log(this.templateTree)
+    console.log(this.templateTree)
     this.addEquivlaneClassRow();
-    //console.log(this.templateTree)
+    console.log(this.templateTree)
 
   }
 
@@ -79,8 +79,7 @@ class TemplateDataStore {
 
     // initial setup of the levelStatus
     let lastLevel = this.template[start].A;
-    let i = 1,
-      n = parseInt(lastLevel);
+    let i = 1, n = parseInt(lastLevel);
     while (i <= n) {
       let status = {};
       status[i + ''] = false;
@@ -91,35 +90,38 @@ class TemplateDataStore {
     // loop through the items in the template starting from the end
     for (let i = start; i >= 0; i--) {
       //console.log(levelStatus);
-
       let item = this.template[i];
+
+      let itemLevel = item.A, 
+          itemCode = item.O === "RI" ? item.D : item.E;
+
       // same level
-      if (item.A === lastLevel) {
-        if (item.E !== "") {
+      if (itemLevel === lastLevel) {
+        if (itemCode !== "") {
           levelStatus[levelStatus.length - 1][lastLevel] = true;
           item.keep = true;
         }
       }
-      // upper level (item.A === lastLevel - 1)
-      else if (item.A < lastLevel) {
+      // upper level (itemLevel === lastLevel - 1)
+      else if (itemLevel < lastLevel) {
         // at least a lower level item is kept
         if (levelStatus[levelStatus.length - 1][lastLevel]) {
           item.keep = true;
           item.isHeader = true;
-          levelStatus[levelStatus.length - 2][item.A] = true;
-        } else if (item.E != "") {
+          levelStatus[levelStatus.length - 2][itemLevel] = true;
+        } else if (itemCode != "") {
           // do we need to keep a group header who has code but all its children are not kept?
           //item.isHeader = true;
         }
         // remove the previous level info
         levelStatus.pop();
-        lastLevel = item.A;
+        lastLevel = itemLevel;
       }
-      // lower level (item.A === lastLevel + n, where n >= 1)
+      // lower level (itemLevel === lastLevel + n, where n >= 1)
       else {
         // initial setup of the levelStatus of the new branch
         let i = parseInt(lastLevel) + 1,
-          n = parseInt(item.A);
+          n = parseInt(itemLevel);
         while (i <= n) {
           let status = {};
           status[i + ''] = false;
@@ -127,11 +129,11 @@ class TemplateDataStore {
           i++;
         }
 
-        if (item.E !== "") {
+        if (itemCode !== "") {
           item.keep = true;
-          levelStatus[levelStatus.length - 1][item.A] = true;
+          levelStatus[levelStatus.length - 1][itemLevel] = true;
         }
-        lastLevel = item.A;
+        lastLevel = itemLevel;
       }
     }
 
@@ -148,18 +150,22 @@ class TemplateDataStore {
    * Add a row for equivalence class before the rows that have more than one rows with the same equivalence class
    */
   addEquivlaneClassRow() {
-    let eqClassList = [], codeList = [], loincList = [];
+    let eqClassList = [], codeList = [];// loincList = [];
     let repeats = 1;    
     let eqClass = '';
     // loop through the items in the template starting from the end
     for (let i = this.templateTree.length-1; i >= 0; i--) {
       let item = this.templateTree[i];
+      let itemLevel = item.A, 
+          itemEqClass = item.C,
+          itemCode = item.O === "RI" ? item.D : item.E;
+
       // repeating eq class
-      if (item.C && item.C == eqClass ) {
+      if (itemEqClass && itemEqClass == eqClass ) {
         repeats +=1;
         // insert at the beginning of the list
-        codeList.unshift(item.D);
-        loincList.unshift(item.E);
+        codeList.unshift(itemCode);
+       // loincList.unshift(item.E);
       }
       // new eq class
       else {
@@ -169,7 +175,7 @@ class TemplateDataStore {
           let eqClassRow = Object.assign({}, preItem);
           eqClassRow.isEqClassRow = true; 
           eqClassRow.codeList = codeList;
-          eqClassRow.loincList = loincList;
+          //eqClassRow.loincList = loincList;
           eqClassRow.G = eqClass;
           eqClassRow.B = eqClass;
           eqClassRow.key = eqClassRow.key + '_EQ';
@@ -187,10 +193,10 @@ class TemplateDataStore {
 
         // reset variables
         repeats = 1;
-        codeList = [item.D];
-        loincList = [item.E];
+        codeList = [itemCode];
+        //loincList = [item.E];
       }
-      eqClass = item.C;
+      eqClass = itemEqClass;
     }
 
     //console.log(eqClassList)
@@ -225,29 +231,32 @@ class TemplateDataStore {
       //console.log(levelStatus);
 
       let item = this.templateTree[i];
+      let itemLevel = item.A, 
+          itemCode = item.O === "RI" ? item.D : item.E;
+
       // same level
-      if (item.A === lastLevel) {
+      if (itemLevel === lastLevel) {
         if (item.hasData) {
           levelStatus[levelStatus.length - 1][lastLevel] = true;
         }
       }
-      // upper level (item.A === lastLevel - 1)
-      else if (item.A < lastLevel) {
+      // upper level (itemLevel === lastLevel - 1)
+      else if (itemLevel < lastLevel) {
         // at least a lower level item is kept
         if (levelStatus[levelStatus.length - 1][lastLevel]) {
           item.hasData = true;
           item.isSectionHeader = true;
-          levelStatus[levelStatus.length - 2][item.A] = true;
+          levelStatus[levelStatus.length - 2][itemLevel] = true;
         }
         // remove the previous level info
         levelStatus.pop();
-        lastLevel = item.A;
+        lastLevel = itemLevel;
       }
-      // lower level (item.A === lastLevel + n, where n >= 1)
+      // lower level (itemLevel === lastLevel + n, where n >= 1)
       else {
         // initial setup of the levelStatus of the new branch
         let i = parseInt(lastLevel) + 1,
-          n = parseInt(item.A);
+          n = parseInt(itemLevel);
         while (i <= n) {
           let status = {};
           status[i + ''] = false;
@@ -256,9 +265,9 @@ class TemplateDataStore {
         }
 
         if (item.hasData) {
-          levelStatus[levelStatus.length - 1][item.A] = true;
+          levelStatus[levelStatus.length - 1][itemLevel] = true;
         }
-        lastLevel = item.A;
+        lastLevel = itemLevel;
 
       }
     }
@@ -273,23 +282,35 @@ class TemplateDataStore {
     if (list) {
       for(let i=0; i<list.length; i++) {    
         let item = list[i];
-        let code = this._getCode(item);
+        let loinc = this._getCode(item);
+        let riCode = this._getIdentifier(item);
         let date = this._getDate(item);
         let value = this._getValue(item);
         let unit = this._getUnit(item);
         let interpretationCode = this._getInterpretation(item);
-  
+          
   //      let range = this._getReferenceRange(item);
   
         for(let j=0; j<this.templateTree.length; j++) {
           let node = this.templateTree[j];
+          // use LOINC or RI CODE for the identifier of the record
+          let itemLevel = node.A, 
+              itemCode = node.O === "RI" ? node.D : node.E;
+
+          let code = node.O === 'RI' ? riCode : loinc; 
+
           if (!node.sparklineData) {
             node.sparklineData = [];
           }
           if (node.isEqClassRow) {
-            for (let k=0; k<node.loincList.length; k++) {
-              if (node.loincList[k] === code) {
+            // add a counter of how many item in the eq class has data
+            if (!node.eqClassItems) {
+              node.eqClassItems = {};
+            }
+            for (let k=0; k<node.codeList.length; k++) {
+              if (node.codeList[k] === code) {
                 node.hasData = true;
+                node.eqClassItems[code] = true; // the item has data
                 this.tsList.set(date);
                 if (!node.data) {
                   node.data = {};
@@ -474,6 +495,15 @@ class TemplateDataStore {
     let resource = entry.resource;
     if (resource && resource.code && resource.code.coding && resource.code.coding.length>0) {
       ret = resource.code.coding[0].code;
+    }
+    return ret;
+  }
+
+  _getIdentifier(entry) {
+    let ret;
+    let resource = entry.resource;
+    if (resource && resource.identifier && Array.isArray(resource.identifier) && resource.identifier[0]) {
+      ret = resource.identifier[0].value;
     }
     return ret;
   }

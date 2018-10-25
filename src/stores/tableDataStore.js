@@ -11,7 +11,7 @@ import moment from 'moment';
 
 class TableDataStore {
   COLUMN_NUM = 30;
-  COLUMN_SIZE = 120;
+  COLUMN_SIZE = 110;
   NAME_COLUMN_SIZE = 250;
   CHART_COLUMN_SIZE = 100;
   PRELOAD_PAGE_NUM = 2;
@@ -44,7 +44,7 @@ class TableDataStore {
         <span>
           <span>{ String.fromCharCode(160).repeat((parseInt(record.A)-1)*2) } </span>          
           <span>{this._getDisplayName(record)}</span>
-          {record.isEqClassRow && String.fromCharCode(9428)}  {/* e with a circle */}
+          {record.isEqClassRow && String.fromCharCode(9428) + '['+Object.keys(record.eqClassItems).length+ ']'}  {/* e with a circle */}
         </span>
         
       )
@@ -101,6 +101,8 @@ class TableDataStore {
       name = item.B ? item.B : '';
     }
 
+    // add code?
+    name = name + '(' + (item.O === 'RI' ? item.D : item.E) + ')'
     return name;
     // return item.E ?  //LOINC
     //           item.G ? item.G : //LOINC_DISPLAY
@@ -111,25 +113,6 @@ class TableDataStore {
     //        item.B ? item.B : "" // RI NAME
   }
 
-  _formatDate(date) {
-    let formatted = '';
-    if (date) {
-      let dateObj = new Date(date);
-      formatted = moment(dateObj).format("MM/DD/YYYY, HH:mm:ss");
-      // formatted = dateObj.getMonth() + '/' +
-      //             dateObj.getDate() + '/' +
-      //             dateObj.getFullYear() + 1 +'<br>'+
-      //             dateObj.getHours() + ':' +
-      //             dateObj.getMinutes() + ':' +
-      //             dateObj.getSeconds();
-      formatted = {
-        date: moment(dateObj).format("MM/DD/YYYY"),
-        time: moment(dateObj).format("HH:mm:ss")
-      }
-    }
-
-    return formatted;
-  }
 
   getFirstPageData(patientId) {
     let that = this;

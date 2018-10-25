@@ -8,8 +8,7 @@ import { Table, Layout, Row, Col, Button, Switch } from 'antd';
 //import { FlowSheetData } from './FlowsheetData.js';
 
 //import temp from './stores/singleTree';
-//import temp from './stores/h1';
-import temp from './stores/h3';
+import temp from './stores/h4';
 
 import fhirDataStore from './stores/fhirDataStore';
 
@@ -293,10 +292,10 @@ class App extends Component {
               </Col>
               <Col xs={24} sm={12} md={6} lg={6} xl={6}>
                 <Row className="lf-switch-row">
-                  <Switch checkedChildren="Show Units" unCheckedChildren="Hide Units" defaultChecked onChange={this.onUnitSwitchChange}/>
+                  <Switch checkedChildren="Units Shown" unCheckedChildren="Units Hidden" defaultChecked onChange={this.onUnitSwitchChange}/>
                 </Row>
                 <Row className="lf-switch-row">
-                  <Switch checkedChildren="Expand Equivalence Classes" unCheckedChildren="Collapse Equivalence Classes" defaultUnchecked onChange={this.onEqClassSwitchChange}/>
+                  <Switch checkedChildren="Equivalence Classes Shown" unCheckedChildren="Equivalence Classes Expanded" defaultChecked={false} onChange={this.onEqClassSwitchChange}/>
                 </Row>                
               </Col>
               <Col xs={24} sm={12} md={6} lg={6} xl={6}>
