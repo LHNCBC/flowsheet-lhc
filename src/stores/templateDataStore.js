@@ -54,6 +54,7 @@ class TemplateDataStore {
     this._filterDataByTemplate(fhirData);
     this._addAggregatedData();
     this._postProcessTemplateTree();
+    this._sortColumnHeaders();
     let tableData = this._exportTableData();
     let columnInfo = {
       date: this.dateList,
@@ -65,6 +66,7 @@ class TemplateDataStore {
     }
     return [tableData, columnInfo]
   }
+
 
   /**
    * Remove items in the hierarchy that have no code (LOINC, in E) while keeping the hierachy structure.
@@ -268,58 +270,59 @@ class TemplateDataStore {
    */
   _filterDataByTemplate(newData) {
     let list = newData.entry;
-    
-    for(let i=0; i<list.length; i++) {    
-      let item = list[i];
-      let code = this._getCode(item);
-      let date = this._getDate(item);
-      let value = this._getValue(item);
-      let unit = this._getUnit(item);
-      let interpretationCode = this._getInterpretation(item);
-
-//      let range = this._getReferenceRange(item);
-
-      for(let j=0; j<this.templateTree.length; j++) {
-        let node = this.templateTree[j];
-        if (!node.sparklineData) {
-          node.sparklineData = [];
-        }
-        if (node.isEqClassRow) {
-          for (let k=0; k<node.loincList.length; k++) {
-            if (node.loincList[k] === code) {
-              node.hasData = true;
-              this.tsList.set(date);
-              if (!node.data) {
-                node.data = {};
-              }
-              if (!node.data[date]) {
-                node.data[date] = [{value: value, unit: unit, normalFlag: interpretationCode}];
-              }
-              else {
-                node.data[date].push({value: value, unit: unit, normalFlag: interpretationCode});
+    if (list) {
+      for(let i=0; i<list.length; i++) {    
+        let item = list[i];
+        let code = this._getCode(item);
+        let date = this._getDate(item);
+        let value = this._getValue(item);
+        let unit = this._getUnit(item);
+        let interpretationCode = this._getInterpretation(item);
+  
+  //      let range = this._getReferenceRange(item);
+  
+        for(let j=0; j<this.templateTree.length; j++) {
+          let node = this.templateTree[j];
+          if (!node.sparklineData) {
+            node.sparklineData = [];
+          }
+          if (node.isEqClassRow) {
+            for (let k=0; k<node.loincList.length; k++) {
+              if (node.loincList[k] === code) {
+                node.hasData = true;
+                this.tsList.set(date);
+                if (!node.data) {
+                  node.data = {};
+                }
+                if (!node.data[date]) {
+                  node.data[date] = [{value: value, unit: unit, normalFlag: interpretationCode}];
+                }
+                else {
+                  node.data[date].push({value: value, unit: unit, normalFlag: interpretationCode});
+                }
               }
             }
           }
-        }
-        else if (node.E === code) {
-          node.sparklineData.push(value);
-          node.hasData = true;
-          if (!node.data) {
-            node.data = {};
+          else if (node.E === code) {
+            node.sparklineData.push(value);
+            node.hasData = true;
+            if (!node.data) {
+              node.data = {};
+            }
+            node.data[date] = {value: value, unit: unit, normalFlag: interpretationCode};
+            this.tsList.set(date);
+  
+            // if(range && Array.isArray(range)) {
+            //   if (range[0].low) {
+            //     node.low = range[0].low.value;
+            //   }
+            //   if (range[0].high) {
+            //     node.high = range[0].high.value;  
+            //   }            
+            // }    
           }
-          node.data[date] = {value: value, unit: unit, normalFlag: interpretationCode};
-          this.tsList.set(date);
-
-          // if(range && Array.isArray(range)) {
-          //   if (range[0].low) {
-          //     node.low = range[0].low.value;
-          //   }
-          //   if (range[0].high) {
-          //     node.high = range[0].high.value;  
-          //   }            
-          // }    
         }
-      }
+      }  
     }
   }
 
@@ -374,22 +377,33 @@ class TemplateDataStore {
       this.zoomLevel.forEach((type) => {
         switch (type) {
           case 'day':
-            columnLabel = mntDate.format("YYYY-MM-DD");
+            columnLabel = mntDate.format("YYYY/MM/DD");
             dateKey = 'day_' + columnLabel;
             this.dayList.set(dateKey, columnLabel);        
             break;
           case 'week':
-            columnLabel = 'Week ' + mntDate.weeks() + ', ' + mntDate.year();
+            // use a separate moment objct becuase startOf and endOf change the value
+            let mntDate2 = moment(dateObj);
+            let startOfWeek = mntDate2.startOf('week').format('MM/DD') 
+            let startYear = mntDate2.startOf('week').year();
+            let endOfWeek = mntDate2.endOf('week').format('MM/DD') 
+            let endYear = mntDate2.endOf('week').year();
+            if (startYear === endYear) {
+              columnLabel = startOfWeek + '--' + endOfWeek + ', ' + startYear
+            }
+            else {
+              columnLabel = startOfWeek + '/' + startYear + '--' + endOfWeek + '/' + startYear
+            }
             dateKey = 'week_' + mntDate.year() + '-' + mntDate.weeks();
             this.weekList.set(dateKey, columnLabel);
             break;
           case 'month':
-            columnLabel =  mntDate.format("YYYY-MM")
+            columnLabel =  mntDate.format("YYYY/MM")
             dateKey = 'month_' + columnLabel;
             this.monthList.set(dateKey, columnLabel);
             break;
           case 'quarter':
-            columnLabel = 'Quarter ' + mntDate.quarters() + ', ' + mntDate.year();
+            columnLabel = 'Q' + mntDate.quarters() + ', ' + mntDate.year();
             dateKey = 'quarter_' + mntDate.year() + '-' + mntDate.quarters();
             this.quarterList.set(dateKey, columnLabel);
             break;
@@ -400,19 +414,38 @@ class TemplateDataStore {
             break;
           case 'date':
           default: 
-            columnLabel = <div><div>{mntDate.format("YYYY-MM-DD")}</div><div>{mntDate.format("HH:mm:ss")}</div></div>;
+            columnLabel = <div><div>{mntDate.format("YYYY/MM/DD")}</div><div>{mntDate.format("HH:mm:ss")}</div></div>;
             dateKey = 'date_' + date;
             this.dateList.set(dateKey, columnLabel);
+        }
+        // use the most recent value
+        if (!node[dateKey]) {
+          node[dateKey] = this._getDisplayValue(itemValue);  
         }  
-        node[dateKey] = this._getDisplayValue(itemValue);  
+        
       })
     }
 
-    // sort data by the keys in reverse order, in dateList, dayList, weekList and etc, so that columns are display with the most recent date first.
     // TODO
 
   }
 
+
+  /**
+   * sort data by the keys in reverse order, in dateList, dayList, weekList and etc, so that columns are display with the most recent date first. 
+   */
+  _sortColumnHeaders() {
+
+    //console.log(this.dateList)
+    this.dateList = new Map([...this.dateList.entries()].sort((a,b)=>{return a[0] < b[0] ? 1 : -1 }));
+    this.dayList = new Map([...this.dayList.entries()].sort((a,b)=>{return a[0] < b[0] ? 1 : -1 }));
+    this.weekList = new Map([...this.weekList.entries()].sort((a,b)=>{return a[0] < b[0] ? 1 : -1 }));
+    this.monthList = new Map([...this.monthList.entries()].sort((a,b)=>{return a[0] < b[0] ? 1 : -1 }));
+    this.quarterList = new Map([...this.quarterList.entries()].sort((a,b)=>{return a[0] < b[0] ? 1 : -1 }));
+    this.yearList = new Map([...this.yearList.entries()].sort((a,b)=>{return a[0] < b[0] ? 1 : -1 }));
+    
+    console.log(this.dateList)
+  }
 
   /**
    * create aggregated data on day, week, month and year level, after the data is loaded and process on date (timestamp)
@@ -420,7 +453,7 @@ class TemplateDataStore {
   _addAggregatedData() {
     for(let j=0; j<this.templateTree.length; j++) {
       let node = this.templateTree[j];
-      if (node.hasData) {
+      if (node.hasData && node.data) {
         this._setNodeAggregatedData(node)
       }
       

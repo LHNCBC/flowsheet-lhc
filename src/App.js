@@ -36,7 +36,7 @@ class App extends Component {
       patient: null,
       showUnit: true,
       zoomLevel: 'date',
-      showEqClass: true,
+      showEqClass: false,
       selectedPatient: null,
       appTitle: "Flowsheet FHIR App",
       selectedTemplate: null,
@@ -103,7 +103,7 @@ class App extends Component {
           moreData: data.moreData,
           flowsheetColumns: tableDataStore.getColumnHeaders(that.state.showUnit, that.state.zoomLevel)         
         })    
-        console.log(data);
+        //console.log(data);
         console.log(that.state.flowsheetColumns);
       })
       .catch(function(error) {
@@ -121,7 +121,7 @@ class App extends Component {
           moreData: data.moreData,
           flowsheetColumns: tableDataStore.getColumnHeaders(that.state.showUnit, that.state.zoomLevel)         
         })    
-        console.log(data);
+        //console.log(data);
       })
       .catch(function(error) {
         console.log(error);
@@ -248,7 +248,7 @@ class App extends Component {
     let name = this.state.selectedPatient ? this.state.selectedPatient.name : "";
     let gender = this.state.selectedPatient ? this.state.selectedPatient.gender : "";
     let dob = this.state.selectedPatient ? this.state.selectedPatient.dob : "";
-    let phone = this.state.selectedPatient ? this.state.selectedPatient.phone: "";
+    let pid = this.state.selectedPatient ? this.state.selectedPatient.id: "";
     let deceased = this.state.selectedPatient ? this.state.selectedPatient.resource.deceasedDateTime : "";
     
     return (
@@ -274,12 +274,12 @@ class App extends Component {
               { this.state.selectedPatient &&
               <Col className="lf-patient-info" span={20}>
                 <Row>
-                  <Col xs={24} sm={12} md={6} lg={6} xl={6} className="lf-patient-name" >{name}</Col>
-                  <Col xs={24} sm={12} md={6} lg={6} xl={6}>Gender: <span className="lf-bold">{gender}</span></Col>
-                  <Col xs={24} sm={12} md={6} lg={6} xl={6}>DoB: <span className="lf-bold">{dob}</span></Col>
-                  {/* <Col xs={24} sm={12} md={6} lg={6} xl={6}>Phone #: {phone}</Col> */}
-                  <Col xs={24} sm={12} md={6} lg={6} xl={6}>Deceased: <span className="lf-bold">{deceased}</span></Col>
-                  <Col xs={24} sm={12} md={6} lg={6} xl={6}></Col>
+                  <Col xs={24} sm={24} md={24} lg={8} xl={8} className="lf-patient-name" >{name}</Col>
+                  <Col xs={24} sm={12} md={6} lg={4} xl={4}>ID: <span className="lf-bold">{pid}</span></Col>
+                  <Col xs={24} sm={12} md={6} lg={4} xl={4}>Gender: <span className="lf-bold">{gender}</span></Col>
+                  <Col xs={24} sm={12} md={6} lg={4} xl={4}>DoB: <span className="lf-bold">{dob}</span></Col>
+                  <Col xs={24} sm={12} md={6} lg={4} xl={4}>Deceased: <span className="lf-bold">{deceased}</span></Col>
+                  
                 </Row>
               </Col>
               }
@@ -296,7 +296,7 @@ class App extends Component {
                   <Switch checkedChildren="Show Units" unCheckedChildren="Hide Units" defaultChecked onChange={this.onUnitSwitchChange}/>
                 </Row>
                 <Row className="lf-switch-row">
-                  <Switch checkedChildren="Expand Equivalence Classes" unCheckedChildren="Collapse Equivalence Classes" defaultChecked onChange={this.onEqClassSwitchChange}/>
+                  <Switch checkedChildren="Expand Equivalence Classes" unCheckedChildren="Collapse Equivalence Classes" defaultUnchecked onChange={this.onEqClassSwitchChange}/>
                 </Row>                
               </Col>
               <Col xs={24} sm={12} md={6} lg={6} xl={6}>
@@ -313,7 +313,7 @@ class App extends Component {
               Total Resources: <span className="lf-bold">{ tableDataStore.availableNumOfRes }</span>
             </Col>
             <Col xs={24} sm={12} md={6} lg={6} xl={6}>
-              Columns: <span className="lf-bold">{this.state.flowsheetColumns ? this.state.flowsheetColumns.length : 0 }</span>
+              Columns: <span className="lf-bold">{this.state.flowsheetColumns ? this.state.flowsheetColumns.length-3 : 0 }</span>
             </Col>
             <Col xs={24} sm={12} md={6} lg={6} xl={6}>
               Rows: <span className="lf-bold">{this.state.flowsheetData ? this.state.flowsheetData.length : 0 }</span>

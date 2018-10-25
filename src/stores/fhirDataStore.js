@@ -7,12 +7,16 @@ const PAGE_SIZE = 200;
 const LHC_FHIR_SERVER = {
   name: "LHC Internal FHIR Server #2", 
   desc: "Internal FHIR server at LHC, for dev/test only", 
-  //url: "https://lforms-service-stage-rh7.nlm.nih.gov:8143/hapi-fhir-jpaserver-example/baseDstu3",  
   url: "https://lforms-service-stage-rh7.nlm.nih.gov:8243/hapi-fhir-jpaserver-example/baseDstu3",  
   auth: {
     user: 'fire',
     pass: 'happy'
   }
+  // url: "http://hapi.fhir.org/baseDstu3",
+  // auth: {
+  //   user: 'fire',
+  //   pass: 'happy'
+  // }
 }
 
 class FhirDataStore {
@@ -51,7 +55,7 @@ class FhirDataStore {
     if (this.fhirServerConfig) {
       this._fhirClient = mkFhir({
         baseUrl: this.fhirServerConfig.url,
-         auth: this.fhirServerConfig.auth
+        auth: this.fhirServerConfig.auth
       })  
     }
   };
@@ -189,7 +193,7 @@ class FhirDataStore {
     .then(function(response) {   // response.data is a searchset bundle
       //console.log(response);
       that.getNextPageUrl(response.data);
-      that.resourceRetrieved = response.data.entry.length;
+      that.resourceRetrieved = response.data.entry ? response.data.entry.length : 0;
       that.resourceAvailable = response.data.total ? response.data.total : "N/A";
       return response.data;
     })
@@ -230,7 +234,7 @@ class FhirDataStore {
       .then(function(response) {   // response.data is a searchset bundle
         //console.log(response);
         that.getNextPageUrl(response.data);
-        that.resourceAvailable += response.data.entry.length;
+        that.resourceRetrieved = response.data.entry ? response.data.entry.length : 0;
         that.resourceAvailable = response.data.total ? response.data.total : "N/A";
         return response.data;
       })

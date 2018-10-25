@@ -46,15 +46,15 @@ class PatientPicker extends React.Component {
         </span>
       </div>
       <div className="item-metadata">
+      <span className="item-property">
+          ID: <strong>{item.id}</strong>
+        </span>
         <span className="item-property">
           Gender: <strong>{item.gender}</strong>
         </span>
         <span className="item-property">
           DoB: <strong>{item.dob}</strong>
         </span>
-        {/* <span className="item-property">
-          Phone: <strong>{item.phone}</strong>
-        </span> */}
         <span className="item-property">
           Deceased Date & Time: <strong>{item.resource.deceasedDateTime}</strong>
         </span>
