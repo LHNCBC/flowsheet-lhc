@@ -217,8 +217,8 @@ class App extends Component {
     let className = 'type-' + (record.isHeader ? 'header' : record.isEqClassRow ? 'eq-class' : 'data')
 
     // level
-    if (record.L) {
-      className += ' level-' + record.L
+    if (record.A) {
+      className += ' level-' + record.A
     }
 
     // show/hide eq-class row
@@ -273,7 +273,7 @@ class App extends Component {
               { this.state.selectedPatient &&
               <Col className="lf-patient-info" span={20}>
                 <Row>
-                  <Col xs={24} sm={24} md={24} lg={8} xl={8} className="lf-patient-name" >{name}</Col>
+                  <Col xs={24} sm={24} md={24} lg={6} xl={6} className="lf-patient-name" >{name}</Col>
                   <Col xs={24} sm={12} md={6} lg={4} xl={4}>ID: <span className="lf-bold">{pid}</span></Col>
                   <Col xs={24} sm={12} md={6} lg={4} xl={4}>Gender: <span className="lf-bold">{gender}</span></Col>
                   <Col xs={24} sm={12} md={6} lg={4} xl={4}>DoB: <span className="lf-bold">{dob}</span></Col>
@@ -295,7 +295,7 @@ class App extends Component {
                   <Switch checkedChildren="Units Shown" unCheckedChildren="Units Hidden" defaultChecked onChange={this.onUnitSwitchChange}/>
                 </Row>
                 <Row className="lf-switch-row">
-                  <Switch checkedChildren="Equivalence Classes Shown" unCheckedChildren="Equivalence Classes Expanded" defaultChecked={false} onChange={this.onEqClassSwitchChange}/>
+                  <Switch checkedChildren="Equivalence Classes Collapsed" unCheckedChildren="Equivalence Classes Expanded" defaultChecked={false} onChange={this.onEqClassSwitchChange}/>
                 </Row>                
               </Col>
               <Col xs={24} sm={12} md={6} lg={6} xl={6}>

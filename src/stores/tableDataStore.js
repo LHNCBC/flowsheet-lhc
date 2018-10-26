@@ -42,7 +42,7 @@ class TableDataStore {
       className: 'lf-item-name',
       render: (text, record) => (
         <span>
-          <span>{ String.fromCharCode(160).repeat((parseInt(record.A)-1)*2) } </span>          
+          {/* <span>{ String.fromCharCode(160).repeat((parseInt(record.A)-1)*2) } </span>           */}
           <span>{this._getDisplayName(record)}</span>
           {record.isEqClassRow && String.fromCharCode(9428) + '['+Object.keys(record.eqClassItems).length+ ']'}  {/* e with a circle */}
         </span>
