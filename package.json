@@ -10,6 +10,7 @@
     "gh-pages": "^1.0.0"
   },
   "dependencies": {
+    "@lhncbc/ucum-lhc": "^2.4.1",
     "antd": "^3.10.0",
     "deep-copy": "^1.4.2",
     "eslint": "^5.0.1",

@@ -1,7 +1,8 @@
 import React from 'react';
 import moment from 'moment';
 import dcopy from 'deep-copy';
- 
+import ucum from '@lhncbc/ucum-lhc';
+
 class TemplateDataStore {
 
   // {
@@ -42,7 +43,6 @@ class TemplateDataStore {
     //console.log(template)
     this.template = dcopy(template);
     this.templateTree = this._preProcessTemplate();
-    console.log(this.templateTree)
     this.addEquivlaneClassRow();
     console.log(this.templateTree)
 
@@ -64,6 +64,8 @@ class TemplateDataStore {
       quarter: this.quarterList,
       year: this.yearList
     }
+    console.log(this.templateTree)
+
     return [tableData, columnInfo]
   }
 
@@ -89,8 +91,11 @@ class TemplateDataStore {
 
     // loop through the items in the template starting from the end
     for (let i = start; i >= 0; i--) {
+      
       //console.log(levelStatus);
       let item = this.template[i];
+      // make RI CODE a string
+      item.D = item.D + '';
 
       let itemLevel = item.A, 
           itemCode = item.O === "RI" ? item.D : item.E;
@@ -299,6 +304,12 @@ class TemplateDataStore {
 
           let code = node.O === 'RI' ? riCode : loinc; 
 
+          // if (riCode == '14343') {
+          //   console.log(riCode)
+          //   console.log(loinc)
+          //   // console.log(list[i]);
+          //   // console.log(node)
+          // }
           if (!node.sparklineData) {
             node.sparklineData = [];
           }
@@ -324,7 +335,7 @@ class TemplateDataStore {
               }
             }
           }
-          else if (node.E === code) {
+          else if (itemCode === code) {
             node.sparklineData.push(value);
             node.hasData = true;
             if (!node.data) {
@@ -348,27 +359,14 @@ class TemplateDataStore {
   }
 
 
-  // TODO: 
-  _getAverageValue(itemValue) {
-    let totalValue;
-    if (Array.isArray(itemValue)) {
-      itemValue.forEach((itemVal) => {totalValue += itemVal;})
-      let val = totalValue / itemValue.length;
-    }
-  }
-
-  // TODO: use ucum js lib
-  _convertToUnit(itemValue, toUnit) {
-    return itemValue;
-  }
-
+  
   _getDisplayValue(itemValue) {
     let displayValue = [], displayValueWithUnit = [];
 
-    if (Array.isArray(itemValue)) {
+    if (Array.isArray(itemValue)) {  // eq class row
       itemValue.forEach((val) => {
         let displayVal = val.interpretationCode && val.interpretationCode !== 'N' ? val.value + ' *' + val.interpretationCode : val.value;
-        let valWithUnit = val.unit && val.unit.code ? val.value + ' ' + val.unit.code : val.value;
+        let valWithUnit = val.unit && val.unit.unit ? val.value + ' ' + val.unit.unit : val.value;
         let displayValWithUnit = val.interpretationCode && val.interpretationCode !== 'N' ? valWithUnit + ' *' + val.interpretationCode : valWithUnit;
         displayValue.push(displayVal);
         displayValueWithUnit.push(displayValWithUnit);
@@ -377,7 +375,7 @@ class TemplateDataStore {
     else {
       let val = itemValue;
       let displayVal = val.interpretationCode && val.interpretationCode !== 'N' ? val.value + ' *' + val.interpretationCode : val.value;
-      let valWithUnit = val.unit && val.unit.code ? val.value + ' ' + val.unit.code : val.value;
+      let valWithUnit = val.unit && val.unit.unit ? val.value + ' ' + val.unit.unit : val.value;
       let displayValWithUnit = val.interpretationCode && val.interpretationCode !== 'N' ? valWithUnit + ' *' + val.interpretationCode : valWithUnit;
       displayValue.push(displayVal);
       displayValueWithUnit.push(displayValWithUnit);
@@ -385,6 +383,35 @@ class TemplateDataStore {
     }
     return  {value: displayValue.join('; '), valueWithUnit: displayValueWithUnit.join('; ')}
   }
+
+  // TODO
+  _getDisplayValueForEqClassRow(itemValues) {
+    let units = {};
+    // get the common unit
+    itemValues.forEach((val) => {
+      if (units[val.unit.code]) {
+        units[val.unit.code] += 1;
+      }
+      else {
+        units[val.unit.code] = 1;
+      }
+    })
+
+  }
+
+// TODO: 
+_getAverageValue(itemValue) {
+  let totalValue;
+  if (Array.isArray(itemValue)) {
+    itemValue.forEach((itemVal) => {totalValue += itemVal;})
+    let val = totalValue / itemValue.length;
+  }
+}
+
+// TODO: use ucum js lib
+_convertToUnit(itemValue, toUnit) {
+  return itemValue;
+}
 
   _setNodeAggregatedData(node) {
 
@@ -398,8 +425,8 @@ class TemplateDataStore {
       this.zoomLevel.forEach((type) => {
         switch (type) {
           case 'day':
-            columnLabel = mntDate.format("YYYY/MM/DD");
-            dateKey = 'day_' + columnLabel;
+            columnLabel = <div><div>{mntDate.format("YYYY")}</div><div>{mntDate.format("MM/DD")}</div></div>;
+            dateKey = 'day_' + mntDate.format("YYYY/MM/DD");
             this.dayList.set(dateKey, columnLabel);        
             break;
           case 'week':
@@ -410,10 +437,10 @@ class TemplateDataStore {
             let endOfWeek = mntDate2.endOf('week').format('MM/DD') 
             let endYear = mntDate2.endOf('week').year();
             if (startYear === endYear) {
-              columnLabel = startOfWeek + '--' + endOfWeek + ', ' + startYear
+              columnLabel =<div><div> {startOfWeek}</div><div> {'-' + endOfWeek}</div><div>{startYear}</div></div>
             }
             else {
-              columnLabel = startOfWeek + '/' + startYear + '--' + endOfWeek + '/' + startYear
+              columnLabel =<div><div> {startOfWeek + '/' + startYear}</div><div> {'-' + endOfWeek + '/' + startYear}</div></div>
             }
             dateKey = 'week_' + mntDate.year() + '-' + mntDate.weeks();
             this.weekList.set(dateKey, columnLabel);
@@ -424,18 +451,18 @@ class TemplateDataStore {
             this.monthList.set(dateKey, columnLabel);
             break;
           case 'quarter':
-            columnLabel = 'Q' + mntDate.quarters() + ', ' + mntDate.year();
+            columnLabel = mntDate.year() + ' Q' + mntDate.quarters();
             dateKey = 'quarter_' + mntDate.year() + '-' + mntDate.quarters();
             this.quarterList.set(dateKey, columnLabel);
             break;
           case 'year':
             columnLabel = mntDate.year();
-            dateKey = 'year_' + columnLabel;
+            dateKey = 'year_' + mntDate.year();
             this.yearList.set(dateKey, columnLabel);
             break;
           case 'date':
           default: 
-            columnLabel = <div><div>{mntDate.format("YYYY/MM/DD")}</div><div>{mntDate.format("HH:mm:ss")}</div></div>;
+            columnLabel = <div><div>{mntDate.format("YYYY")}</div><div>{mntDate.format("MM/DD")}</div><div>{mntDate.format("HH:mm")}</div></div>;
             dateKey = 'date_' + date;
             this.dateList.set(dateKey, columnLabel);
         }

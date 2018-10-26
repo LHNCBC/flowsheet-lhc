@@ -106,24 +106,24 @@
 
 .ant-table-fixed-left .ant-table-row.type-header,
 .ant-table-content .ant-table-row.type-header {
-  background-color: #c3e7f3;
+  background-color: #73ceed;
 }
 .ant-table-fixed-left .ant-table-row.level-1.type-header,
 .ant-table-content .ant-table-row.level-1.type-header {
   font-weight: bold;
   text-decoration: none;
-  background-color:#a3dbee;
+  background-color:#34b2dd;
 }
 .ant-table-fixed-left .ant-table-row.type-eq-class,
 .ant-table-content .ant-table-row.type-eq-class {
-  background-color: rgb(230, 241, 255);
+  background-color: rgb(176, 186, 180);
 }
 
 
-/* .ant-table-wrapper.showClassRow .type-itemInClass {
+/* .ant-table-wrapper.showClassRow.type-itemInClass {
   display: none;
-} */
-/* .ant-table-wrapper.hideClassRow .type-classRow {
+}
+.ant-table-wrapper.hideClassRow.type-classRow {
   display: none;
 } */
 

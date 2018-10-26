@@ -11,7 +11,7 @@ import moment from 'moment';
 
 class TableDataStore {
   COLUMN_NUM = 30;
-  COLUMN_SIZE = 110;
+  COLUMN_SIZE = 66;
   NAME_COLUMN_SIZE = 250;
   CHART_COLUMN_SIZE = 100;
   PRELOAD_PAGE_NUM = 2;
@@ -44,7 +44,7 @@ class TableDataStore {
         <span>
           {/* <span>{ String.fromCharCode(160).repeat((parseInt(record.A)-1)*2) } </span>           */}
           <span>{this._getDisplayName(record)}</span>
-          {record.isEqClassRow && String.fromCharCode(9428) + '['+Object.keys(record.eqClassItems).length+ ']'}  {/* e with a circle */}
+          {record.isEqClassRow && '[' + Object.keys(record.eqClassItems).length + ']'}  {/* e with a circle */} {/* String.fromCharCode(9428) */}
         </span>
         
       )
