@@ -1,7 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 import dcopy from 'deep-copy';
-import ucum from '@lhncbc/ucum-lhc';
+const ucum = require('@lhncbc/ucum-lhc');
 
 class TemplateDataStore {
 
@@ -31,6 +31,8 @@ class TemplateDataStore {
   yearList = new Map();
   zoomLevel = ['day', 'week', 'month', 'quarter', 'year', 'date'];
 
+  ucumUtils = ucum.UcumLhcUtils.getInstance();
+
   setTemplate(template) {
     this.tsList = new Map();
     this.dateList = new Map();
@@ -40,7 +42,6 @@ class TemplateDataStore {
     this.quarterList = new Map();
     this.yearList = new Map();
 
-    //console.log(template)
     this.template = dcopy(template);
     this.templateTree = this._preProcessTemplate();
     this.addEquivlaneClassRow();
@@ -92,7 +93,6 @@ class TemplateDataStore {
     // loop through the items in the template starting from the end
     for (let i = start; i >= 0; i--) {
       
-      //console.log(levelStatus);
       let item = this.template[i];
       // make RI CODE a string
       item.D = item.D + '';
@@ -204,7 +204,6 @@ class TemplateDataStore {
       eqClass = itemEqClass;
     }
 
-    //console.log(eqClassList)
     // insert the eq class row
     for(let i=0; i < eqClassList.length; i++) {
       this.templateTree.splice(eqClassList[i].index, 0, eqClassList[i].row);
@@ -233,7 +232,6 @@ class TemplateDataStore {
 
     // loop through the items in the templateTree starting from the end
     for (let i = start; i >= 0; i--) {
-      //console.log(levelStatus);
 
       let item = this.templateTree[i];
       let itemLevel = item.A, 
@@ -304,12 +302,6 @@ class TemplateDataStore {
 
           let code = node.O === 'RI' ? riCode : loinc; 
 
-          // if (riCode == '14343') {
-          //   console.log(riCode)
-          //   console.log(loinc)
-          //   // console.log(list[i]);
-          //   // console.log(node)
-          // }
           if (!node.sparklineData) {
             node.sparklineData = [];
           }
@@ -361,63 +353,79 @@ class TemplateDataStore {
 
   
   _getDisplayValue(itemValue) {
-    let displayValue = [], displayValueWithUnit = [];
 
-    if (Array.isArray(itemValue)) {  // eq class row
-      itemValue.forEach((val) => {
-        let displayVal = val.interpretationCode && val.interpretationCode !== 'N' ? val.value + ' *' + val.interpretationCode : val.value;
-        let valWithUnit = val.unit && val.unit.unit ? val.value + ' ' + val.unit.unit : val.value;
-        let displayValWithUnit = val.interpretationCode && val.interpretationCode !== 'N' ? valWithUnit + ' *' + val.interpretationCode : valWithUnit;
-        displayValue.push(displayVal);
-        displayValueWithUnit.push(displayValWithUnit);
-      })
-    }
-    else {
-      let val = itemValue;
-      let displayVal = val.interpretationCode && val.interpretationCode !== 'N' ? val.value + ' *' + val.interpretationCode : val.value;
-      let valWithUnit = val.unit && val.unit.unit ? val.value + ' ' + val.unit.unit : val.value;
-      let displayValWithUnit = val.interpretationCode && val.interpretationCode !== 'N' ? valWithUnit + ' *' + val.interpretationCode : valWithUnit;
-      displayValue.push(displayVal);
-      displayValueWithUnit.push(displayValWithUnit);
+    let unit = this._getUnitName(itemValue);
+    let displayVal = itemValue.interpretationCode && itemValue.interpretationCode !== 'N' ? itemValue.value + ' *' + itemValue.interpretationCode : itemValue.value;
+    let valWithUnit = unit ? itemValue.value + ' ' + unit : itemValue.value;
+    let displayValWithUnit = itemValue.interpretationCode && itemValue.interpretationCode !== 'N' ? valWithUnit + ' *' + itemValue.interpretationCode : valWithUnit;
 
-    }
-    return  {value: displayValue.join('; '), valueWithUnit: displayValueWithUnit.join('; ')}
+    return  {value: displayVal, valueWithUnit: displayValWithUnit}
   }
 
   // TODO
   _getDisplayValueForEqClassRow(itemValues) {
-    let units = {};
+    let units = {}, ret = {};
+    let displayValue = [], displayValueWithUnit = [];
     // get the common unit
-    itemValues.forEach((val) => {
-      if (units[val.unit.code]) {
-        units[val.unit.code] += 1;
-      }
-      else {
-        units[val.unit.code] = 1;
-      }
-    })
+    if (itemValues.length > 1 ) {
+    
+      itemValues.forEach((val) => {
+        if (units[val.unit.code]) {
+          units[val.unit.code] += 1;
+        }
+        else {
+          units[val.unit.code] = 1;
+        }
+      })
+      // find one unit that is mostly common
+      let commonUnit=Object.keys(units).reduce(function(a, b){ return units[a] > units[b] ? a : b });
+      console.log(commonUnit)
 
+      
+      itemValues.forEach((val) => {
+        if (val.unit.code === commonUnit) {
+          let dispVal = this._getDisplayValue(val);
+          displayValue.push(dispVal.displayValue);
+          displayValueWithUnit.push(dispVal.displayValueWithUnit);
+        }
+        else {
+          let result = this.ucumUtils.convertUnitTo(val.unit.code, val.value, commonUnit, false);              
+          if (result.status === 'succeeded') {
+            let unitName = result.printSymbol; //result.name;
+            let toVal = Math.round(result.toVal * 100)/100;
+
+            let displayVal = val.interpretationCode && val.interpretationCode !== 'N' ? toVal + ' *' + val.interpretationCode : toVal;
+            let valWithUnit = unitName ? toVal + ' ' + unitName : toVal;
+            let displayValWithUnit = val.interpretationCode && val.interpretationCode !== 'N' ? valWithUnit + ' *' + val.interpretationCode : valWithUnit;
+            displayValue.push(displayVal);
+            displayValueWithUnit.push(displayValWithUnit);    
+          }
+          // failed or error in unit conversion
+          else {
+            let dispVal = this._getDisplayValue(val);
+            displayValue.push(dispVal.displayValue);
+            displayValueWithUnit.push(dispVal.displayValueWithUnit);
+          }
+        }
+      })
+      ret =  {value: displayValue.join('; '), valueWithUnit: displayValueWithUnit.join('; ')}
+    }
+    else if (itemValues.length ===1) {
+      ret = this._getDisplayValue(itemValues[0])
+    }
+    else {
+      ret = {}
+    }
+
+    return ret;
   }
 
-// TODO: 
-_getAverageValue(itemValue) {
-  let totalValue;
-  if (Array.isArray(itemValue)) {
-    itemValue.forEach((itemVal) => {totalValue += itemVal;})
-    let val = totalValue / itemValue.length;
-  }
-}
-
-// TODO: use ucum js lib
-_convertToUnit(itemValue, toUnit) {
-  return itemValue;
-}
 
   _setNodeAggregatedData(node) {
 
     let dateArray = Object.keys(node.data);//.reverse();  
     for (var date of dateArray) {
-      //console.log(date);
+
       let dateObj = new Date(date);
       let mntDate  = moment(dateObj);
       let itemValue = node.data[date];
@@ -468,7 +476,13 @@ _convertToUnit(itemValue, toUnit) {
         }
         // use the most recent value
         if (!node[dateKey]) {
-          node[dateKey] = this._getDisplayValue(itemValue);  
+          if (node.isEqClassRow) {
+            node[dateKey] = this._getDisplayValueForEqClassRow(itemValue);  
+          }
+          else {
+            node[dateKey] = this._getDisplayValue(itemValue);  
+          }
+          
         }  
         
       })
@@ -484,7 +498,6 @@ _convertToUnit(itemValue, toUnit) {
    */
   _sortColumnHeaders() {
 
-    //console.log(this.dateList)
     this.dateList = new Map([...this.dateList.entries()].sort((a,b)=>{return a[0] < b[0] ? 1 : -1 }));
     this.dayList = new Map([...this.dayList.entries()].sort((a,b)=>{return a[0] < b[0] ? 1 : -1 }));
     this.weekList = new Map([...this.weekList.entries()].sort((a,b)=>{return a[0] < b[0] ? 1 : -1 }));
@@ -492,7 +505,6 @@ _convertToUnit(itemValue, toUnit) {
     this.quarterList = new Map([...this.quarterList.entries()].sort((a,b)=>{return a[0] < b[0] ? 1 : -1 }));
     this.yearList = new Map([...this.yearList.entries()].sort((a,b)=>{return a[0] < b[0] ? 1 : -1 }));
     
-    console.log(this.dateList)
   }
 
   /**
@@ -594,6 +606,20 @@ _convertToUnit(itemValue, toUnit) {
       };
     }
     return ret;
+  }
+
+  _getUnitName(value) {
+    let unit = ''
+    if (value.unit) {
+      if (value.unit.unit) {
+        unit = value.unit.unit;
+      }
+      else if (value.unit.code) {
+        unit = value.unit.code;
+      }
+    }
+
+    return unit;
   }
 
   // "interpretation": {

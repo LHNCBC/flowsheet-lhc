@@ -12,8 +12,8 @@ class TemplatePicker extends React.Component {
     super(props);
 
     let list = [
-        {name: 'LOINC Hierarchy 1', file: ''},
-        {name: 'LOINC Hierarchy 2', file: ''}
+        {name: 'LOINC Hierarchy 5', file: 'h5.js'},
+        {name: 'LOINC Hierarchy 6', file: 'h6.js'}
     ];
 
     // set default value

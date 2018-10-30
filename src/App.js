@@ -8,7 +8,7 @@ import { Table, Layout, Row, Col, Button, Switch } from 'antd';
 //import { FlowSheetData } from './FlowsheetData.js';
 
 //import temp from './stores/singleTree';
-import temp from './stores/h5';
+import template from './stores/h6';
 
 import fhirDataStore from './stores/fhirDataStore';
 
@@ -57,18 +57,29 @@ class App extends Component {
   }
 
   setSelectedPatient(patient) {
-    if (patient) {
+    // reset template
+    if (patient && (!this.state.selectedPatient || patient.id !== this.state.selectedPatient.id)) {
+      //tableDataStore.setTemplate(this.state.selectedTemplate);
       this.setState({
-        selectedPatient: patient
-      })  
+        selectedPatient: patient,
+        flowsheetData : null,
+        flowsheetColumns: null,
+        moreData: false
+        })  
     }
   }
 
   setSelectedTemplate = (temp) => {
-    console.log(temp);
-    this.setState({
-      selectedTemplate: temp
-    })
+    if (temp && (!this.state.selectedTemplate || temp.file !== this.state.selectedTemplate.file)) {
+      //tableDataStore.setTemplate(template);
+      this.setState({
+        selectedTemplate: template,
+        flowsheetData : null,
+        flowsheetColumns: null,
+        moreData: false
+      })
+    }
+
   }
 
   setZoomLevel = (level) => {
@@ -92,7 +103,7 @@ class App extends Component {
 
     this.handleResize();
 
-    tableDataStore.setTemplate(temp);
+    tableDataStore.setTemplate(template);
 
 
     tableDataStore.getFirstPageData(patientId)
@@ -181,14 +192,10 @@ class App extends Component {
       let headerHeight = document.querySelector('#lf-app-header').clientHeight
       let footerHeight = document.querySelector('#lf-app-footer').clientHeight
       this.setState({
-        tableHeight: window.innerHeight - headerHeight - footerHeight - 65 // not sure why there is a gap of 65px
+        tableHeight: window.innerHeight - headerHeight - footerHeight - 90 // not sure why there is a gap 
       })
   }
 
-
-  pickTemplate() {
-    tableDataStore.setTemplate(temp);
-  }
 
   onUnitSwitchChange(checked) {
     console.log(checked);
@@ -336,7 +343,6 @@ class App extends Component {
 
           {/* <button disabled={!this.state.selectedPatient} onClick={() => this.loadData()}>Reload Data</button>
           <button onClick={() => this.toggleClassRows()}>Expand/Collapse Class Rows</button> */}
-          {/* <button onClick={() => this.pickTemplate()}>Pick a Template</button>  */}
         </div>
         <div id="lf-app-footer">
         </div>

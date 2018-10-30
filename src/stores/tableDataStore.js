@@ -56,6 +56,7 @@ class TableDataStore {
       key: 'b', 
       width: this.CHART_COLUMN_SIZE,
       fixed: 'left',
+      className: 'lf-sparkline',
       render: (text, record) => (
         <SparkLine record={record}></SparkLine>
       ),
