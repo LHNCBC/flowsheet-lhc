@@ -1,8 +1,7 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import "antd/dist/antd.css";
 import "./patientPicker.css";
-import { Icon, Button, Input, AutoComplete } from "antd";
+import { Icon, AutoComplete } from "antd";
 import fhirStore from '../stores/fhirDataStore.js';
 
 const Option = AutoComplete.Option;

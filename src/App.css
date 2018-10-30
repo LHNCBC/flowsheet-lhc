@@ -135,7 +135,7 @@
 }
 
 .type-eq-class.hide-eq-class {
-  /* display: none; */
+  display: none;
 }
 .hide-eq-class-item {
   display: none;
@@ -144,7 +144,7 @@
 /* adjust column headers height of the fixed table. 
    for some reason, the headers in the fixed table and headers in the body table have 1px difference in height
 */
-.ant-table-thead > tr > th.lf-item-name, 
+/* .ant-table-thead > tr > th.lf-item-name, 
 .ant-table-thead > tr > th.lf-sparkline {
   border-bottom: 0px;
-}
+} */

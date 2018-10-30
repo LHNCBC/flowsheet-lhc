@@ -1,6 +1,6 @@
 import React from "react";
 import "antd/dist/antd.css";
-import { Icon, Select } from "antd";
+import { Select } from "antd";
 
 const Option = Select.Option;
 

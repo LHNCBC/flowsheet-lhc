@@ -1,6 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 import dcopy from 'deep-copy';
+
 const ucum = require('@lhncbc/ucum-lhc');
 
 class TemplateDataStore {
@@ -82,7 +83,7 @@ class TemplateDataStore {
 
     // initial setup of the levelStatus
     let lastLevel = this.template[start].A;
-    let i = 1, n = parseInt(lastLevel);
+    let i = 1, n = parseInt(lastLevel, 10);
     while (i <= n) {
       let status = {};
       status[i + ''] = false;
@@ -114,7 +115,7 @@ class TemplateDataStore {
           item.keep = true;
           item.isHeader = true;
           levelStatus[levelStatus.length - 2][itemLevel] = true;
-        } else if (itemCode != "") {
+        } else if (itemCode !== "") {
           // do we need to keep a group header who has code but all its children are not kept?
           //item.isHeader = true;
         }
@@ -125,8 +126,8 @@ class TemplateDataStore {
       // lower level (itemLevel === lastLevel + n, where n >= 1)
       else {
         // initial setup of the levelStatus of the new branch
-        let i = parseInt(lastLevel) + 1,
-          n = parseInt(itemLevel);
+        let i = parseInt(lastLevel, 10) + 1,
+          n = parseInt(itemLevel, 10);
         while (i <= n) {
           let status = {};
           status[i + ''] = false;
@@ -161,12 +162,11 @@ class TemplateDataStore {
     // loop through the items in the template starting from the end
     for (let i = this.templateTree.length-1; i >= 0; i--) {
       let item = this.templateTree[i];
-      let itemLevel = item.A, 
-          itemEqClass = item.C,
+      let itemEqClass = item.C,
           itemCode = item.O === "RI" ? item.D : item.E;
 
       // repeating eq class
-      if (itemEqClass && itemEqClass == eqClass ) {
+      if (itemEqClass && itemEqClass === eqClass ) {
         repeats +=1;
         // insert at the beginning of the list
         codeList.unshift(itemCode);
@@ -222,7 +222,7 @@ class TemplateDataStore {
     // initial setup of the levelStatus
     let lastLevel = this.templateTree[start].A;
     let i = 1,
-      n = parseInt(lastLevel);
+      n = parseInt(lastLevel, 10);
     while (i <= n) {
       let status = {};
       status[i + ''] = false;
@@ -234,8 +234,7 @@ class TemplateDataStore {
     for (let i = start; i >= 0; i--) {
 
       let item = this.templateTree[i];
-      let itemLevel = item.A, 
-          itemCode = item.O === "RI" ? item.D : item.E;
+      let itemLevel = item.A;
 
       // same level
       if (itemLevel === lastLevel) {
@@ -258,8 +257,8 @@ class TemplateDataStore {
       // lower level (itemLevel === lastLevel + n, where n >= 1)
       else {
         // initial setup of the levelStatus of the new branch
-        let i = parseInt(lastLevel) + 1,
-          n = parseInt(itemLevel);
+        let i = parseInt(lastLevel, 10) + 1,
+          n = parseInt(itemLevel, 10);
         while (i <= n) {
           let status = {};
           status[i + ''] = false;
@@ -297,8 +296,7 @@ class TemplateDataStore {
         for(let j=0; j<this.templateTree.length; j++) {
           let node = this.templateTree[j];
           // use LOINC or RI CODE for the identifier of the record
-          let itemLevel = node.A, 
-              itemCode = node.O === "RI" ? node.D : node.E;
+          let itemCode = node.O === "RI" ? node.D : node.E;
 
           let code = node.O === 'RI' ? riCode : loinc; 
 
@@ -362,60 +360,38 @@ class TemplateDataStore {
     return  {value: displayVal, valueWithUnit: displayValWithUnit}
   }
 
-  // TODO
-  _getDisplayValueForEqClassRow(itemValues) {
-    let units = {}, ret = {};
-    let displayValue = [], displayValueWithUnit = [];
-    // get the common unit
-    if (itemValues.length > 1 ) {
+  
+  _getDisplayValueForEqClassRow(commonUnit, commonUCUM, itemValues) {
     
-      itemValues.forEach((val) => {
-        if (units[val.unit.code]) {
-          units[val.unit.code] += 1;
-        }
-        else {
-          units[val.unit.code] = 1;
-        }
-      })
-      // find one unit that is mostly common
-      let commonUnit=Object.keys(units).reduce(function(a, b){ return units[a] > units[b] ? a : b });
-      console.log(commonUnit)
+    let ret = {}, displayValue = [], displayValueWithUnit = [];
+    
+    itemValues.forEach((val) => {
+      if (val.unit.code === commonUCUM) {
+        let dispVal = this._getDisplayValue(val);
+        displayValue.push(dispVal.value);
+        displayValueWithUnit.push(dispVal.valueWithUnit);
+      }
+      else {
+        let result = this.ucumUtils.convertUnitTo(val.unit.code, val.value, commonUCUM, false);              
+        if (result.status === 'succeeded') {
+          let unitName = commonUnit; // result.printSymbol; //result.name;
+          let toVal = Math.round(result.toVal * 100)/100;
 
-      
-      itemValues.forEach((val) => {
-        if (val.unit.code === commonUnit) {
+          let displayVal = val.interpretationCode && val.interpretationCode !== 'N' ? toVal + ' *' + val.interpretationCode : toVal;
+          let valWithUnit = unitName ? toVal + ' ' + unitName : toVal;
+          let displayValWithUnit = val.interpretationCode && val.interpretationCode !== 'N' ? valWithUnit + ' *' + val.interpretationCode : valWithUnit;
+          displayValue.push(displayVal);
+          displayValueWithUnit.push(displayValWithUnit);    
+        }
+        // failed or error in unit conversion
+        else {
           let dispVal = this._getDisplayValue(val);
           displayValue.push(dispVal.displayValue);
           displayValueWithUnit.push(dispVal.displayValueWithUnit);
         }
-        else {
-          let result = this.ucumUtils.convertUnitTo(val.unit.code, val.value, commonUnit, false);              
-          if (result.status === 'succeeded') {
-            let unitName = result.printSymbol; //result.name;
-            let toVal = Math.round(result.toVal * 100)/100;
-
-            let displayVal = val.interpretationCode && val.interpretationCode !== 'N' ? toVal + ' *' + val.interpretationCode : toVal;
-            let valWithUnit = unitName ? toVal + ' ' + unitName : toVal;
-            let displayValWithUnit = val.interpretationCode && val.interpretationCode !== 'N' ? valWithUnit + ' *' + val.interpretationCode : valWithUnit;
-            displayValue.push(displayVal);
-            displayValueWithUnit.push(displayValWithUnit);    
-          }
-          // failed or error in unit conversion
-          else {
-            let dispVal = this._getDisplayValue(val);
-            displayValue.push(dispVal.displayValue);
-            displayValueWithUnit.push(dispVal.displayValueWithUnit);
-          }
-        }
-      })
-      ret =  {value: displayValue.join('; '), valueWithUnit: displayValueWithUnit.join('; ')}
-    }
-    else if (itemValues.length ===1) {
-      ret = this._getDisplayValue(itemValues[0])
-    }
-    else {
-      ret = {}
-    }
+      }
+    })
+    ret =  {value: displayValue.join('; '), valueWithUnit: displayValueWithUnit.join('; ')}
 
     return ret;
   }
@@ -428,8 +404,8 @@ class TemplateDataStore {
 
       let dateObj = new Date(date);
       let mntDate  = moment(dateObj);
-      let itemValue = node.data[date];
       let dateKey, columnLabel;
+      
       this.zoomLevel.forEach((type) => {
         switch (type) {
           case 'day':
@@ -477,10 +453,10 @@ class TemplateDataStore {
         // use the most recent value
         if (!node[dateKey]) {
           if (node.isEqClassRow) {
-            node[dateKey] = this._getDisplayValueForEqClassRow(itemValue);  
+            node[dateKey] = this._getDisplayValueForEqClassRow(node.P, node.Q, node.data[date]);  
           }
           else {
-            node[dateKey] = this._getDisplayValue(itemValue);  
+            node[dateKey] = this._getDisplayValue(node.data[date]);  
           }
           
         }  

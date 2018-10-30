@@ -1,16 +1,7 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
 import './App.css';
 import 'antd/dist/antd.css';
-import { Table, Layout, Row, Col, Button, Switch } from 'antd';
-//import { Sparklines, SparklinesLine } from 'react-sparklines';
-//import rafSchedule from 'raf-schd';
-//import { FlowSheetData } from './FlowsheetData.js';
-
-//import temp from './stores/singleTree';
-import template from './stores/h6';
-
-import fhirDataStore from './stores/fhirDataStore';
+import { Table, Row, Col, Button, Switch } from 'antd';
 
 
 import PatientSearchDialog from './components/patientSearchDialog';
@@ -19,8 +10,6 @@ import ZoomLevelPicker from './components/zoomLevelPicker';
 import tableDataStore from './stores/tableDataStore';
 
 import LHCImage from './lhncbc.jpg';
-
-const { Header, Footer, Sider, Content } = Layout;
 
 class App extends Component {
   constructor(props) {
@@ -59,7 +48,6 @@ class App extends Component {
   setSelectedPatient(patient) {
     // reset template
     if (patient && (!this.state.selectedPatient || patient.id !== this.state.selectedPatient.id)) {
-      //tableDataStore.setTemplate(this.state.selectedTemplate);
       this.setState({
         selectedPatient: patient,
         flowsheetData : null,
@@ -71,9 +59,8 @@ class App extends Component {
 
   setSelectedTemplate = (temp) => {
     if (temp && (!this.state.selectedTemplate || temp.file !== this.state.selectedTemplate.file)) {
-      //tableDataStore.setTemplate(template);
       this.setState({
-        selectedTemplate: template,
+        selectedTemplate: temp,
         flowsheetData : null,
         flowsheetColumns: null,
         moreData: false
@@ -98,12 +85,12 @@ class App extends Component {
 
   loadData() {
 
-    let patientId = this.state.selectedPatient ? this.state.selectedPatient.id : ""; // "pat-88616";// "pat-98"; 
+    let patientId = this.state.selectedPatient ? this.state.selectedPatient.id : ""; 
     let that = this;
 
     this.handleResize();
 
-    tableDataStore.setTemplate(template);
+    tableDataStore.setTemplate(this.state.selectedTemplate.data);
 
 
     tableDataStore.getFirstPageData(patientId)
@@ -146,6 +133,10 @@ class App extends Component {
 
 
 
+  /**
+   * NOT USED due to performance problems
+   * @param {*} event 
+   */
   handleScroll(event) {
     // // When we receive a scroll event, schedule an update.
     // // If we receive many updates within a frame, we'll only publish the latest value.

@@ -17,8 +17,6 @@
     "fhir.js": "git://github.com/akanduru/fhir.js",
     "jshint": "^2.9.5",
     "lodash": "^4.17.11",
-    "mobx": "^5.0.3",
-    "mobx-react": "^5.2.3",
     "moment": "^2.22.2",
     "raf-schd": "^3.0.1",
     "react": "^16.5.2",

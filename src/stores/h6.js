@@ -14,7 +14,9 @@ export default [
 //   "L": "danger_high",
 //   "M": "danger_low",
 //   "N": "LOINC_SHORTNAME",
-//   "O": "Code_indicator"
+//   "O": "Code_indicator",
+// "P": "EquivalenceClass Unit(not in sheet yet)",
+// "Q": "EquivalenceClass ucum code(not in sheet yet)"
 // }, 
 {
   "A": 1,
@@ -388,7 +390,9 @@ export default [
   "E": "3137-7",
   "F": "Body height Measured",
   "N": "Body height Measured",
-  "O": "RI"
+  "O": "RI",
+  "P": "CM",
+  "Q": 'cm'
 }, {
   "A": 3,
   "B": "Height Metric",
@@ -397,7 +401,9 @@ export default [
   "E": "3137-7",
   "F": "Body height Measured",
   "N": "Body height Measured",
-  "O": "RI"
+  "O": "RI",
+  "P": "CM",
+  "Q": 'cm'
 }, {
   "A": 3,
   "B": "Weight Lbs",
@@ -406,7 +412,9 @@ export default [
   "E": "3141-9",
   "F": "Body weight Measured",
   "N": "Weight Measured",
-  "O": "RI"
+  "O": "RI",
+  "P": "KG",
+  "Q": 'kg'
 }, {
   "A": 3,
   "B": "Weight Metric",
@@ -415,7 +423,9 @@ export default [
   "E": "3141-9",
   "F": "Body weight Measured",
   "N": "Weight Measured",
-  "O": "RI"
+  "O": "RI",
+  "P": "KG",
+  "Q": 'kg'
 }, {
   "A": 3,
   "B": "Weight Auto",
@@ -428,7 +438,9 @@ export default [
   "J": 50,
   "K": 200,
   "N": "Weight Measured",
-  "O": "RI"
+  "O": "RI",
+  "P": "KG",
+  "Q": 'kg'
 }, {
   "A": 2,
   "B": "INPATIENT VITALS",

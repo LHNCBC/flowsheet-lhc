@@ -1,13 +1,7 @@
 import React from 'react';
-import { Button, Switch } from 'antd';
-//import { observable, action, computed } from 'mobx';
-import { Sparklines, SparklinesLine, SparklinesReferenceLine } from 'react-sparklines';
 import SparkLine from '../components/sparkLine';
 import fhirStore from './fhirDataStore';
 import templateStore from './templateDataStore';
-
-import moment from 'moment';
-
 
 class TableDataStore {
   COLUMN_NUM = 30;
@@ -95,15 +89,15 @@ class TableDataStore {
     //else
     //   RI NAME
     let name = '';
-    if (item.E) {
-      name = item.G ? item.G : item.N ? item.N : item.F ? item.F : item.B ? item.B : '';
+    if (item.O === 'RI') {
+      name = item.B ? item.B : '';
     }
     else {
-      name = item.B ? item.B : '';
+      name = item.G ? item.G : item.N ? item.N : item.F ? item.F : item.B ? item.B : '';
     }
 
     // add code?
-    name = name + '(' + (item.O === 'RI' ? item.D : item.E) + ')'
+    //name = name + '(' + (item.O === 'RI' ? item.D : item.E) + ')'
     return name;
     // return item.E ?  //LOINC
     //           item.G ? item.G : //LOINC_DISPLAY
