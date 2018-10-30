@@ -135,7 +135,7 @@
 }
 
 .type-eq-class.hide-eq-class {
-  display: none;
+  /* display: none; */
 }
 .hide-eq-class-item {
   display: none;

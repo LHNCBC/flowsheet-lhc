@@ -321,10 +321,10 @@ class TemplateDataStore {
                   node.data = {};
                 }
                 if (!node.data[date]) {
-                  node.data[date] = [{value: value, unit: unit, normalFlag: interpretationCode}];
+                  node.data[date] = [{value: value, unit: unit, normalFlag: interpretationCode, code: code}];
                 }
                 else {
-                  node.data[date].push({value: value, unit: unit, normalFlag: interpretationCode});
+                  node.data[date].push({value: value, unit: unit, normalFlag: interpretationCode, code: code});
                 }
               }
             }
@@ -335,7 +335,7 @@ class TemplateDataStore {
             if (!node.data) {
               node.data = {};
             }
-            node.data[date] = {value: value, unit: unit, normalFlag: interpretationCode};
+            node.data[date] = {value: value, unit: unit, normalFlag: interpretationCode, code: code};
             this.tsList.set(date);
   
             // if(range && Array.isArray(range)) {
@@ -369,6 +369,7 @@ class TemplateDataStore {
     
     let ret = {}, displayValue = [], displayValueWithUnit = [];
     
+    // check uniqueness of the dates, sometime dupliate data are available in the fhir server
     itemValues.forEach((val) => {
       if (val.unit.code === commonUCUM) {
         let dispVal = this._getDisplayValue(val);
@@ -457,6 +458,12 @@ class TemplateDataStore {
         // use the most recent value
         if (!node[dateKey]) {
           if (node.isEqClassRow) {
+            // filter duplate codes (when such data at the same timestamp are retrieved from fhir server)
+            if (Array.isArray(node.data[date])) {
+              let newMap = {};
+              node.data[date].forEach((dp) => { newMap[dp.code] = dp });
+              node.data[date] = Object.values(newMap);  
+            }
             node[dateKey] = this._getDisplayValueForEqClassRow(node.P, node.Q, node.data[date]);  
           }
           else {

@@ -282,23 +282,31 @@ class App extends Component {
               }
             </Row>
             <Row type="flex" className="lf-row">
-              <Col xs={24} sm={12} md={6} lg={6} xl={6}>
+              <Col xs={24} sm={12} md={8} lg={8} xl={8}>
                 <TemplatePicker selectedTemplate={this.state.selectedTemplate} setSelectedTemplate={(temp) => this.setSelectedTemplate(temp)}/>
               </Col>
-              <Col xs={24} sm={12} md={6} lg={6} xl={6}>
+              <Col xs={24} sm={12} md={8} lg={8} xl={8}>
+                <TemplatePicker selectedTemplate={this.state.selectedTemplate} setSelectedTemplate={(temp) => this.setSelectedTemplate(temp)}/>
+              </Col>
+              <Col xs={24} sm={12} md={8} lg={8} xl={8}>
+                <Button className='lf-button' type="primary" disabled={!this.state.selectedPatient} onClick={() => this.loadData()}>Reload Data</Button>  
+                <Button className='lf-button' type="primary" disabled={!this.state.moreData} onClick={() => this.appendData()}>Load More Data</Button>
+              </Col>
+            </Row>
+
+            <Row type="flex" className="lf-row">
+              <Col xs={24} sm={12} md={8} lg={8} xl={8}>
                 <ZoomLevelPicker zoomLevel={this.state.zoomLevel} setZoomLevel={(level) => this.setZoomLevel(level)}/>
               </Col>
-              <Col xs={24} sm={12} md={6} lg={6} xl={6}>
+              <Col xs={24} sm={12} md={8} lg={8} xl={8}>
                 <Row className="lf-switch-row">
                   <Switch checkedChildren="Units Shown" unCheckedChildren="Units Hidden" defaultChecked onChange={this.onUnitSwitchChange}/>
                 </Row>
+              </Col>
+              <Col xs={24} sm={12} md={8} lg={8} xl={8}>
                 <Row className="lf-switch-row">
                   <Switch checkedChildren="Equivalence Classes Collapsed" unCheckedChildren="Equivalence Classes Expanded" defaultChecked={false} onChange={this.onEqClassSwitchChange}/>
                 </Row>                
-              </Col>
-              <Col xs={24} sm={12} md={6} lg={6} xl={6}>
-                <Button className='lf-button' type="primary" disabled={!this.state.selectedPatient} onClick={() => this.loadData()}>Reload Data</Button>  
-                <Button className='lf-button' type="primary" disabled={!this.state.moreData} onClick={() => this.appendData()}>Load More Data</Button>
               </Col>
             </Row>
           </div>
