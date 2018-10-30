@@ -98,6 +98,10 @@ class TemplateDataStore {
       // make RI CODE a string
       item.D = item.D + '';
 
+      // reset the range
+      item.low = item.J;
+      item.high = item.K;
+
       let itemLevel = item.A, 
           itemCode = item.O === "RI" ? item.D : item.E;
 
@@ -291,7 +295,7 @@ class TemplateDataStore {
         let unit = this._getUnit(item);
         let interpretationCode = this._getInterpretation(item);
           
-  //      let range = this._getReferenceRange(item);
+        // let range = this._getReferenceRange(item);
   
         for(let j=0; j<this.templateTree.length; j++) {
           let node = this.templateTree[j];

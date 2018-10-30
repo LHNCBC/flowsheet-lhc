@@ -11,7 +11,7 @@ class SparkLine extends React.Component {
     let rangeHigh = <SparklinesReferenceLine type="custom" value={record.high} style={{ stroke: "#2991c8", strokeWidth: "1", fill: "none", strokeOpacity: .75, strokeDasharray: '2, 1' }}/>;
     let rangeLow = <SparklinesReferenceLine type="custom" value={record.low} style={{ stroke: "#d1192e", strokeWidth: "1", fill: "none", strokeOpacity: .75, strokeDasharray: '2, 1' }}/>;
 
-    if (record.high && record.low) {
+    if (record.high !== undefined && record.low !== undefined) {
       return (
         <Sparklines data={record.sparklineData}  width={100} height={16} >
           <SparklinesLine />
@@ -20,7 +20,7 @@ class SparkLine extends React.Component {
         </Sparklines>      
       )
     }
-    else if (record.high) {
+    else if (record.high !== undefined) {
       return (
         <Sparklines data={record.sparklineData}  width={100} height={16} >
           <SparklinesLine />
@@ -28,7 +28,7 @@ class SparkLine extends React.Component {
         </Sparklines>      
       )
     }
-    else if (record.low) {
+    else if (record.low !== undefined) {
       return (
         <Sparklines data={record.sparklineData}  width={100} height={16} >
           <SparklinesLine />
