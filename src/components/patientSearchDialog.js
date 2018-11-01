@@ -25,7 +25,6 @@ class PatientSearchDialog extends React.Component {
     this.setState({
       selectedPatient: patient
     })
-    console.log(patient);
   }
 
   handleOK = () => {

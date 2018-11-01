@@ -113,7 +113,7 @@ class TableDataStore {
     let that = this;
     return fhirStore.getAllObservationByPatientId(patientId)
       .then(function(data) {
-        console.log(data);
+        //console.log(data);
         let [tableData, columnInfo] = templateStore.getTableData(data)
         console.log(tableData);
         that.dateList = templateStore.dateList;
@@ -135,7 +135,7 @@ class TableDataStore {
     let that = this;
     return fhirStore.getNextPageData()
       .then(function(data) {
-        console.log(data);
+        //console.log(data);
         let [tableData, columnInfo] = templateStore.getTableData(data)
         console.log(tableData);
         that.dateList = templateStore.dateList;

@@ -68,7 +68,6 @@ class PatientPicker extends React.Component {
     let that = this;
     fhirStore.searchPatientByName(value)
       .then(function(list) {
-        console.log(list);
         that.setState({
           dataSource: list ? list : []
         });    

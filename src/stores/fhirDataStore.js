@@ -7,7 +7,7 @@ const PAGE_SIZE = 500;
 const LHC_FHIR_SERVER = {
   name: "LHC Internal FHIR Server #2", 
   desc: "Internal FHIR server at LHC, for dev/test only", 
-  url: "https://lforms-service-stage-rh7.nlm.nih.gov:8143/hapi-fhir-jpaserver-example/baseDstu3",  
+  url: "https://lforms-service-stage-rh7.nlm.nih.gov:8543/hapi-fhir-jpaserver-example/baseDstu3",  
   auth: {
     user: 'fire',
     pass: 'happy'
@@ -201,6 +201,32 @@ class FhirDataStore {
       console.log(error);
     });
   };
+
+
+  /**
+   * Get all Condition resources of a patient
+   * @param pId the current patient's ID
+   * @param pageSize optional. the number of records that should be returned in a single page
+   */
+  getAllConditionByPatientId(pId, pageSize=this.pageSize) {
+    
+    return this._fhirClient.search({
+      type: 'Condition',
+      query: {
+        subject: 'Patient/' + pId,
+        'clinical-status': 'active',
+        _sort: '-asserted-date',
+        _count: pageSize
+      }
+    })
+    .then(function(response) {   // response.data is a searchset bundle
+      return response.data;
+    })
+    .catch(function(error) {
+      console.log(error);
+    });
+  };
+
 
   getNextPageUrl(bundle) {
     if(bundle && bundle.type === "searchset" && bundle.link && bundle.link) {

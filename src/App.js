@@ -7,6 +7,7 @@ import { Table, Row, Col, Button, Switch } from 'antd';
 import PatientSearchDialog from './components/patientSearchDialog';
 import TemplatePicker from './components/templatePicker';
 import ZoomLevelPicker from './components/zoomLevelPicker';
+import ConditionListDialog from './components/conditionListDialog';
 import tableDataStore from './stores/tableDataStore';
 
 import LHCImage from './lhncbc.jpg';
@@ -70,7 +71,7 @@ class App extends Component {
   }
 
   setZoomLevel = (level) => {
-    console.log(level);
+    //console.log(level);
     this.setState({
       zoomLevel: level
     })
@@ -100,8 +101,7 @@ class App extends Component {
           moreData: data.moreData,
           flowsheetColumns: tableDataStore.getColumnHeaders(that.state.showUnit, that.state.zoomLevel)         
         })    
-        //console.log(data);
-        console.log(that.state.flowsheetColumns);
+        //console.log(that.state.flowsheetColumns);
       })
       .catch(function(error) {
         console.log(error);
@@ -127,7 +127,7 @@ class App extends Component {
   }
 
   loadMoreData() {
-    console.log("loading data")
+    //console.log("loading data")
     this.appendData()
   }
 
@@ -189,7 +189,6 @@ class App extends Component {
 
 
   onUnitSwitchChange(checked) {
-    console.log(checked);
 
     this.setState({
       showUnit: checked,
@@ -199,7 +198,6 @@ class App extends Component {
   }
 
   onEqClassSwitchChange(checked) {
-    console.log(checked);
 
     this.setState({
       showEqClass: checked,
@@ -286,11 +284,11 @@ class App extends Component {
                 <TemplatePicker selectedTemplate={this.state.selectedTemplate} setSelectedTemplate={(temp) => this.setSelectedTemplate(temp)}/>
               </Col>
               <Col xs={24} sm={12} md={8} lg={8} xl={8}>
-                <TemplatePicker selectedTemplate={this.state.selectedTemplate} setSelectedTemplate={(temp) => this.setSelectedTemplate(temp)}/>
+                <ConditionListDialog selectedPatient={this.state.selectedPatient}/>
               </Col>
               <Col xs={24} sm={12} md={8} lg={8} xl={8}>
-                <Button className='lf-button' type="primary" disabled={!this.state.selectedPatient} onClick={() => this.loadData()}>Reload Data</Button>  
-                <Button className='lf-button' type="primary" disabled={!this.state.moreData} onClick={() => this.appendData()}>Load More Data</Button>
+                <Button className='lf-button' type="primary" icon="reload" disabled={!this.state.selectedPatient} onClick={() => this.loadData()}>Reload Data</Button>  
+                <Button className='lf-button' type="primary" icon="swap" disabled={!this.state.moreData} onClick={() => this.appendData()}>Load More Data</Button>
               </Col>
             </Row>
 

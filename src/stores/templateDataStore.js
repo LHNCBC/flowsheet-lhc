@@ -46,7 +46,7 @@ class TemplateDataStore {
     this.template = dcopy(template);
     this.templateTree = this._preProcessTemplate();
     this.addEquivlaneClassRow();
-    console.log(this.templateTree)
+    //console.log(this.templateTree)
 
   }
 
@@ -66,7 +66,7 @@ class TemplateDataStore {
       quarter: this.quarterList,
       year: this.yearList
     }
-    console.log(this.templateTree)
+    //console.log(this.templateTree)
 
     return [tableData, columnInfo]
   }
@@ -369,17 +369,12 @@ class TemplateDataStore {
     
     let ret = {}, displayValue = [], displayValueWithUnit = [];
     
-    // check uniqueness of the dates, sometime dupliate data are available in the fhir server
     itemValues.forEach((val) => {
-      if (val.unit.code === commonUCUM) {
-        let dispVal = this._getDisplayValue(val);
-        displayValue.push(dispVal.value);
-        displayValueWithUnit.push(dispVal.valueWithUnit);
-      }
-      else {
+
+      if (commonUCUM && val.unit.code !== commonUCUM) {
         let result = this.ucumUtils.convertUnitTo(val.unit.code, val.value, commonUCUM, false);              
         if (result.status === 'succeeded') {
-          let unitName = commonUnit; // result.printSymbol; //result.name;
+          let unitName = commonUnit ? commonUnit : result.printSymbol;
           let toVal = Math.round(result.toVal * 100)/100;
 
           let displayVal = val.interpretationCode && val.interpretationCode !== 'N' ? toVal + ' *' + val.interpretationCode : toVal;
@@ -394,6 +389,11 @@ class TemplateDataStore {
           displayValue.push(dispVal.displayValue);
           displayValueWithUnit.push(dispVal.displayValueWithUnit);
         }
+      }
+      else {
+        let dispVal = this._getDisplayValue(val);
+        displayValue.push(dispVal.value);
+        displayValueWithUnit.push(dispVal.valueWithUnit);
       }
     })
     ret =  {value: displayValue.join('; '), valueWithUnit: displayValueWithUnit.join('; ')}
