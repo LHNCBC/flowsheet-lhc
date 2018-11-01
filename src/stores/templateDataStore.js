@@ -404,19 +404,24 @@ class TemplateDataStore {
 
   _setNodeAggregatedData(node) {
 
-    let dateArray = Object.keys(node.data);//.reverse();  
+    let dateKeyCounts = {};
+
+    let dateArray = Object.keys(node.data);
     for (var date of dateArray) {
 
       let dateObj = new Date(date);
       let mntDate  = moment(dateObj);
       let dateKey, columnLabel;
-      
+
       this.zoomLevel.forEach((type) => {
         switch (type) {
           case 'day':
             columnLabel = <div><div>{mntDate.format("YYYY")}</div><div>{mntDate.format("MM/DD")}</div></div>;
             dateKey = 'day_' + mntDate.format("YYYY/MM/DD");
             this.dayList.set(dateKey, columnLabel);        
+            if (dateKeyCounts[dateKey]) {
+              dateKeyCounts[dateKey] += 1;
+            }
             break;
           case 'week':
             // use a separate moment objct becuase startOf and endOf change the value
@@ -455,7 +460,10 @@ class TemplateDataStore {
             dateKey = 'date_' + date;
             this.dateList.set(dateKey, columnLabel);
         }
-        // use the most recent value
+        // count dateKeys
+        dateKeyCounts[dateKey] = dateKeyCounts[dateKey] ? dateKeyCounts[dateKey] + 1 : 1;            
+
+        // use the most recent value (just update once)
         if (!node[dateKey]) {
           if (node.isEqClassRow) {
             // filter duplate codes (when such data at the same timestamp are retrieved from fhir server)
@@ -464,18 +472,24 @@ class TemplateDataStore {
               node.data[date].forEach((dp) => { newMap[dp.code] = dp });
               node.data[date] = Object.values(newMap);  
             }
-            node[dateKey] = this._getDisplayValueForEqClassRow(node.P, node.Q, node.data[date]);  
+            node[dateKey] = this._getDisplayValueForEqClassRow(node.P, node.Q, node.data[date]);              
           }
           else {
             node[dateKey] = this._getDisplayValue(node.data[date]);  
-          }
-          
+          }          
         }  
         
       })
+
     }
 
-    // TODO
+    // add decorator for zoom levels that have more than one data points
+    for (let dateKey in dateKeyCounts) {
+      if (dateKeyCounts[dateKey] > 1 && !dateKey.match(/^date/)) {
+        node[dateKey].value += ' ...';
+        node[dateKey].valueWithUnit += ' ...';
+      }
+    }
 
   }
 

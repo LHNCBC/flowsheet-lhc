@@ -124,11 +124,16 @@
   display: none;
 } */
 
-.flowsheet-table .ant-table-tbody > tr > td,
-.flowsheet-table .ant-table-thead > tr > th  {
+.ant-table-fixed .ant-table-tbody > tr > td,
+.ant-table-fixed .ant-table-thead > tr > th  {
   padding: 2px;
   font-size: 16px;
 }
+/* .flowsheet-table .ant-table-tbody > tr > td,
+.flowsheet-table .ant-table-thead > tr > th  {
+  padding: 2px;
+  font-size: 16px;
+} */
 
 .lf-bold {
   font-weight: bold;
