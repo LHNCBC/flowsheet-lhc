@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import 'antd/dist/antd.css';
-import { Table, Row, Col, Button, Switch } from 'antd';
+import { Table, Row, Col, Button, Switch, Spin } from 'antd';
 
 
 import PatientSearchDialog from './components/patientSearchDialog';
@@ -35,14 +35,10 @@ class App extends Component {
     };
 
     this.loadData = this.loadData.bind(this);
-    this.loadMoreData = this.loadMoreData.bind(this);
     this.appendData = this.appendData.bind(this);
     this.onUnitSwitchChange = this.onUnitSwitchChange.bind(this);
     this.onEqClassSwitchChange = this.onEqClassSwitchChange.bind(this);
     this.handleResize = this.handleResize.bind(this);
-    // this.setSelectedPatient = this.setSelectedPatient.bind(this);
-    // this.setSelectedTemplate = this.setSelectedTemplate.bind(this);
-    // this.setZoomLevel = this.setZoomLevel.bind(this);
 
   }
 
@@ -89,10 +85,13 @@ class App extends Component {
     let patientId = this.state.selectedPatient ? this.state.selectedPatient.id : ""; 
     let that = this;
 
+    this.setState({
+      isLoading: true
+    })
+
     this.handleResize();
 
     tableDataStore.setTemplate(this.state.selectedTemplate.data);
-
 
     tableDataStore.getFirstPageData(patientId)
       .then(function(data) {
@@ -111,6 +110,10 @@ class App extends Component {
   appendData() {
     let that = this;
 
+    this.setState({
+      isLoading: true
+    })
+
     tableDataStore.getNextPageData()
       .then(function(data) {
         that.setState({
@@ -125,12 +128,6 @@ class App extends Component {
       });
 
   }
-
-  loadMoreData() {
-    //console.log("loading data")
-    this.appendData()
-  }
-
 
 
   /**
@@ -153,30 +150,39 @@ class App extends Component {
         }
         else {
           this.setState({isLoading: true})
-          this.loadMoreData(event);
+          this.appendData(event);
           this.setState({isLoading: false})    
         }
     }
   }
 
-  toggleClassRows() {
-    this.setState({
-      tableClass: this.state.tableClass === "showClassRow" ? "hideClassRow" : "showClassRow"
-    })
-  }
 
   componentDidMount() {
     // var tableContent = document.querySelector('.ant-table-scroll > .ant-table-body')
     // tableContent.addEventListener('scroll', (event) => {
     //   this.handleScroll(event);      
     // })
-    window.addEventListener('resize', this.handleResize);
+
+    console.log("did mount")
+    this.setState({
+      isLoading: false
+    })
+    //window.addEventListener('resize', this.handleResize);
+  }
+
+  componentDidUpdate() {
+    console.log("did update")
+    // if (this.state.isLoading) {
+    //   this.setState({
+    //     isLoading: false
+    //   })  
+    // }
   }
 
   componentWillUnmount() {
     // // Cancel any pending updates since we're unmounting.
     // this.scheduleUpdate.cancel();
-    window.removeEventListener('resize', this.handleResize);
+    //window.removeEventListener('resize', this.handleResize);
   }
 
   handleResize(e) {
@@ -191,6 +197,7 @@ class App extends Component {
   onUnitSwitchChange(checked) {
 
     this.setState({
+      isLoading: true,    
       showUnit: checked,
       flowsheetColumns: tableDataStore.getColumnHeaders(checked, this.state.zoomLevel)  
     })
@@ -200,6 +207,7 @@ class App extends Component {
   onEqClassSwitchChange(checked) {
 
     this.setState({
+      isLoading: true,    
       showEqClass: checked,
       flowsheetColumns: tableDataStore.getColumnHeaders(this.state.showUnit, this.state.zoomLevel)
     })
@@ -327,19 +335,18 @@ class App extends Component {
           {/* <div><span>{this.state.isLoading ? "Loading ..." : ""}</span></div> */}
           
           <Table className={this.state.tableClass}
-          columns={this.state.flowsheetColumns} 
-          dataSource={this.state.flowsheetData} 
-          rowClassName={(record, index) => this.getRowClass(record, index)}
-          scroll={{ x: tableDataStore.tableWidth , y: this.state.tableHeight}}
-          pagination={false} 
-          defaultExpandAllRows={true}
+            // loading= {this.state.isLoading}
+            columns={this.state.flowsheetColumns} 
+            dataSource={this.state.flowsheetData} 
+            rowClassName={(record, index) => this.getRowClass(record, index)}
+            scroll={{ x: tableDataStore.tableWidth , y: this.state.tableHeight}}
+            pagination={false} 
+            defaultExpandAllRows={true}
           />
           {/* <button onClick={() => this.appendData()}>Load More Data</button>
           <button onClick={() => this.testFhirServer()}>Get Data from FHIR Server</button>
           <button onClick={() => this.getNextPageData()}>Get Next Page Data</button> */}
 
-          {/* <button disabled={!this.state.selectedPatient} onClick={() => this.loadData()}>Reload Data</button>
-          <button onClick={() => this.toggleClassRows()}>Expand/Collapse Class Rows</button> */}
         </div>
         <div id="lf-app-footer">
         </div>
