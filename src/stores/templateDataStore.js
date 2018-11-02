@@ -360,7 +360,7 @@ class TemplateDataStore {
       if (item.isEqClassRow && Object.keys(item.eqClassItems).length > 0 ) {
         let itemCodes = Object.keys(item.eqClassItems);
         let k = 1;
-        while(!this.templateTree[j+k].isEqClassRow && j+k <= this.templateTree.length) {
+        while(j+k < this.templateTree.length && !this.templateTree[j+k].isEqClassRow) {
           let nextItem = this.templateTree[j+k];
           let nextCode = nextItem.O === "RI" ? nextItem.D : nextItem.E;
           itemCodes.forEach((code) => {
