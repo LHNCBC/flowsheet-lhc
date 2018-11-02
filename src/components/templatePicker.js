@@ -35,7 +35,7 @@ class TemplatePicker extends React.Component {
   }
 
   handleChange(value) {
-    console.log(`selected ${value}`);
+    //console.log(`selected ${value}`);
     
     
     let selectedTemplate = this.state.templateList.find((temp) => {return temp.name === value});
@@ -44,15 +44,7 @@ class TemplatePicker extends React.Component {
     });
 
     this.props.setSelectedTemplate(selectedTemplate);
-  }
-  
-  handleBlur() {
-    console.log('blur');
-  }
-  
-  handleFocus() {
-    console.log('focus');
-  }
+  }  
   
   render() {
       

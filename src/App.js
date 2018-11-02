@@ -262,6 +262,7 @@ class App extends Component {
     let dob = this.state.selectedPatient ? this.state.selectedPatient.dob : "";
     let pid = this.state.selectedPatient ? this.state.selectedPatient.id: "";
     let deceased = this.state.selectedPatient ? this.state.selectedPatient.resource.deceasedDateTime : "";
+    let reloadButtonLabel = this.state.flowsheetData ? "Reload Data" : "Load Data";
     
     return (
       <div>
@@ -304,7 +305,7 @@ class App extends Component {
                 <ConditionListDialog selectedPatient={this.state.selectedPatient}/>
               </Col>
               <Col xs={24} sm={12} md={8} lg={8} xl={8}>
-                <Button className='lf-button' type="primary" icon="reload" disabled={!this.state.selectedPatient} onClick={() => this.loadData()}>Load Data</Button>  
+                <Button className='lf-button' type="primary" icon="reload" disabled={!this.state.selectedPatient} onClick={() => this.loadData()}>{reloadButtonLabel}</Button>  
                 <Button className='lf-button' type="primary" icon="swap" disabled={!this.state.moreData} onClick={() => this.appendData()}>Load More Data</Button>
               </Col>
             </Row>
