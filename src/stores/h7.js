@@ -406,8 +406,8 @@ export default [
     "F": "Body height Measured",
     "N": "Body height Measured",
     "O": "RI",
-    "P": "CM",
-    "Q": 'cm'
+    "P": "INCH(S)",
+    "Q": '[in_us]'
   
   }, {
     "A": 3,
@@ -418,8 +418,8 @@ export default [
     "F": "Body height Measured",
     "N": "Body height Measured",
     "O": "RI",
-    "P": "CM",
-    "Q": 'cm'
+    "P": "INCH(S)",
+    "Q": '[in_us]'
   
   }, {
     "A": 3,

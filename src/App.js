@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import 'antd/dist/antd.css';
-import { Table, Row, Col, Button, Switch, Spin } from 'antd';
+import { Table, Row, Col, Button, Switch } from 'antd';
 
 
 import PatientSearchDialog from './components/patientSearchDialog';
@@ -23,7 +23,7 @@ class App extends Component {
       isLoading: false,
       tableClass: "flowsheet-table",
       patient: null,
-      showUnit: true,
+      showUnit: false,
       zoomLevel: 'date',
       showEqClass: false,
       selectedPatient: null,
@@ -163,7 +163,7 @@ class App extends Component {
     //   this.handleScroll(event);      
     // })
 
-    console.log("did mount")
+    //console.log("did mount")
     this.setState({
       isLoading: false
     })
@@ -171,7 +171,7 @@ class App extends Component {
   }
 
   componentDidUpdate() {
-    console.log("did update")
+    //console.log("did update")
     // if (this.state.isLoading) {
     //   this.setState({
     //     isLoading: false
@@ -233,6 +233,9 @@ class App extends Component {
       else {
         className += ' hide-eq-class'
       }
+      if (Object.keys(record.eqClassItems).length === 1) {
+        className += ' has-single-item-in-eq-class'
+      }
     }
     else if (record.isItemInEqClass) {
       if (this.state.showEqClass) {        
@@ -240,6 +243,12 @@ class App extends Component {
       }
       else {
         className += ' show-eq-class-item'
+      }
+      if (record.multipleItemsInEqClass) {
+        className += ' multiple-item-in-eq-class'
+      }
+      else {
+        className += ' single-item-in-eq-class'
       }
     }
 
@@ -306,7 +315,7 @@ class App extends Component {
               </Col>
               <Col xs={24} sm={12} md={8} lg={8} xl={8}>
                 <Row className="lf-switch-row">
-                  <Switch checkedChildren="Units Shown" unCheckedChildren="Units Hidden" defaultChecked onChange={this.onUnitSwitchChange}/>
+                  <Switch checkedChildren="Units Shown" unCheckedChildren="Units Hidden" defaultChecked={false} onChange={this.onUnitSwitchChange}/>
                 </Row>
               </Col>
               <Col xs={24} sm={12} md={8} lg={8} xl={8}>
