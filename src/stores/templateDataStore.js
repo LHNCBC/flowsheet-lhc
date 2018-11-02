@@ -380,9 +380,9 @@ class TemplateDataStore {
   _getDisplayValue(itemValue) {
 
     let unit = this._getUnitName(itemValue);
-    let displayVal = itemValue.interpretationCode && itemValue.interpretationCode !== 'N' ? itemValue.value + ' *' + itemValue.interpretationCode : itemValue.value;
+    let displayVal = itemValue.normalFlag && itemValue.normalFlag !== 'N' ? itemValue.value + ' *' + itemValue.normalFlag : itemValue.value;
     let valWithUnit = unit ? itemValue.value + ' ' + unit : itemValue.value;
-    let displayValWithUnit = itemValue.interpretationCode && itemValue.interpretationCode !== 'N' ? valWithUnit + ' *' + itemValue.interpretationCode : valWithUnit;
+    let displayValWithUnit = itemValue.normalFlag && itemValue.normalFlag !== 'N' ? valWithUnit + ' *' + itemValue.normalFlag : valWithUnit;
 
     return  {value: displayVal, valueWithUnit: displayValWithUnit}
   }
