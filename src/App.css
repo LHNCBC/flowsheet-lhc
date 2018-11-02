@@ -146,16 +146,21 @@
 .type-eq-class.has-single-item-in-eq-class {
   display: none;
 }
+
 .show-eq-class-item.multiple-item-in-eq-class {
   color: red;
 }
-.show-eq-class-item.single-item-in-eq-class {
-  /* color: blue; */
-}
-
-.hide-eq-class-item {
+.hide-eq-class-item.multiple-item-in-eq-class {
   display: none;
 }
+
+/* .show-eq-class-item.single-item-in-eq-class {
+  color: blue;
+} */
+/* .hide-eq-class-item.single-item-in-eq-class {
+  display: none;
+} */
+
 
 /* adjust column headers height of the fixed table. 
    for some reason, the headers in the fixed table and headers in the body table have 1px difference in height
