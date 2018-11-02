@@ -38,7 +38,7 @@ class ZoomLevelPicker extends React.Component {
   }
 
   handleChange(value) {
-    console.log(`selected ${value}`);
+    //console.log(`selected ${value}`);
     
     
     let level = this.state.zoomLevelList.find((level) => {return level.name === value});
@@ -49,13 +49,6 @@ class ZoomLevelPicker extends React.Component {
     this.props.setZoomLevel(level.key);
   }
   
-  handleBlur() {
-    console.log('blur');
-  }
-  
-  handleFocus() {
-    console.log('focus');
-  }
   
   render() {
     return (
