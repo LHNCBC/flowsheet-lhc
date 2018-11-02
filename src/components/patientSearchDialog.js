@@ -39,8 +39,7 @@ class PatientSearchDialog extends React.Component {
   }
 
   patientButtonLabel() {
-    // return this.props.selectedPatient ? this.props.selectedPatient.name  : "Search Patient";
-    return this.props.selectedPatient ? "" : "Search Patient";
+    return this.props.selectedPatient ? "" : "Select Patient";
   }
 
 
