@@ -485,9 +485,10 @@ class TemplateDataStore {
 
     // add decorator for zoom levels that have more than one data points
     for (let dateKey in dateKeyCounts) {
-      if (dateKeyCounts[dateKey] > 1 && !dateKey.match(/^date/)) {
+      if (dateKeyCounts[dateKey] > 1 && !node[dateKey].dotAdded && !dateKey.match(/^date/)) {
         node[dateKey].value += ' ...';
         node[dateKey].valueWithUnit += ' ...';
+        node[dateKey].dotAdded = true;
       }
     }
 
