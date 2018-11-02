@@ -11,13 +11,13 @@ class PatientDataStore {
     let name = "";
     if (patient && patient.name && patient.name.length > 0) {
       if (patient.name[0].given && patient.name[0].family) {
-        name = patient.name[0].given[0] + " " + patient.name[0].family;
+        name = patient.name[0].given.join(" ") + " " + patient.name[0].family;
       }
       else if (patient.name[0].family) {
         name = patient.name[0].family;
       }
       else if (patient.name[0].given ) {
-        name = patient.name[0].given[0];
+        name = patient.name[0].given.join(" ");
       }
     }
     return name;

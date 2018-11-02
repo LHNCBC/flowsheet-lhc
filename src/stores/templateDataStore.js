@@ -54,6 +54,7 @@ class TemplateDataStore {
   getTableData(fhirData) {
 
     this._filterDataByTemplate(fhirData);
+    this._countItemsInEqClass();
     this._addAggregatedData();
     this._postProcessTemplateTree();
     this._sortColumnHeaders();
@@ -352,14 +353,36 @@ class TemplateDataStore {
     }
   }
 
+  _countItemsInEqClass() {
+    for(let j=0; j<this.templateTree.length; j++) {
+      let item = this.templateTree[j];
+      // has items in this eq class that have values      
+      if (item.isEqClassRow && Object.keys(item.eqClassItems).length > 0 ) {
+        let itemCodes = Object.keys(item.eqClassItems);
+        let k = 1;
+        while(j+k < this.templateTree.length && !this.templateTree[j+k].isEqClassRow) {
+          let nextItem = this.templateTree[j+k];
+          let nextCode = nextItem.O === "RI" ? nextItem.D : nextItem.E;
+          itemCodes.forEach((code) => {
+            if (code === nextCode) {
+              nextItem.multipleItemsInEqClass = itemCodes.length > 1;
+            }
+          })
 
+          k++;
+        }
+
+
+      }
+    }
+  }
   
   _getDisplayValue(itemValue) {
 
     let unit = this._getUnitName(itemValue);
-    let displayVal = itemValue.interpretationCode && itemValue.interpretationCode !== 'N' ? itemValue.value + ' *' + itemValue.interpretationCode : itemValue.value;
+    let displayVal = itemValue.normalFlag && itemValue.normalFlag !== 'N' ? itemValue.value + ' *' + itemValue.normalFlag : itemValue.value;
     let valWithUnit = unit ? itemValue.value + ' ' + unit : itemValue.value;
-    let displayValWithUnit = itemValue.interpretationCode && itemValue.interpretationCode !== 'N' ? valWithUnit + ' *' + itemValue.interpretationCode : valWithUnit;
+    let displayValWithUnit = itemValue.normalFlag && itemValue.normalFlag !== 'N' ? valWithUnit + ' *' + itemValue.normalFlag : valWithUnit;
 
     return  {value: displayVal, valueWithUnit: displayValWithUnit}
   }

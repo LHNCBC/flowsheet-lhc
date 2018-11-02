@@ -2,7 +2,7 @@ import patientStore from './patientDataStore';
 
 const mkFhir = require("fhir.js");
 
-const PAGE_SIZE = 500;
+const PAGE_SIZE = 250;
 
 const LHC_FHIR_SERVER = {
   name: "LHC Internal FHIR Server #2", 

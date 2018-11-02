@@ -40,13 +40,17 @@ class ConditionListDialog extends React.Component {
       list.forEach(item => {
         conditionList.push({
           name: this._getConditionName(item),
+          code: this._getConditionCode(item),
           active: this._getConditionStatus(item),
           date: this._getConidtionAssertedDate(item)
         })  
       });      
     }
+
+    // sort by name
+    let sortedConditions = conditionList.sort((a,b) => {return a.name.toUpperCase() > b.name.toUpperCase() ? 1: -1} )
     this.setState({
-      conditionList: conditionList
+      conditionList: sortedConditions
     })
   }
 
@@ -60,16 +64,25 @@ class ConditionListDialog extends React.Component {
   //   ]
   // },
   _getConditionName(entry) {
-    let ret;
+    let ret = "";
     let resource = entry.resource;
     if (resource && resource.code && resource.code.coding && resource.code.coding.length>0) {
       ret = resource.code.coding[0].display;
     }
     return ret;
   }
+  _getConditionCode(entry) {
+    let ret = "";
+    let resource = entry.resource;
+    if (resource && resource.code && resource.code.coding && resource.code.coding.length>0) {
+      ret = resource.code.coding[0].code;
+    }
+    return ret;
+  }
+
   // "clinicalStatus": "active",
   _getConditionStatus(entry) {
-    let ret;
+    let ret = "";
     let resource = entry.resource;
     if (resource && resource.status) {
       ret = resource.status
@@ -79,7 +92,7 @@ class ConditionListDialog extends React.Component {
 
   // "assertedDate": "2138-04-22T10:44:00Z"
   _getConidtionAssertedDate(entry) {
-    let ret;
+    let ret = "";
     let resource = entry.resource;
     if (resource && resource.assertedDate) {
       ret = resource.assertedDate
@@ -123,7 +136,8 @@ class ConditionListDialog extends React.Component {
             dataSource={conditionList}
             renderItem={item => (
               <List.Item className='lf-condition-item'>
-                {item.name}
+                <div><strong>{item.name}</strong></div>
+                <div className="lf-item-code">ICD9: <strong>{item.code}</strong></div>
               </List.Item>
             )}
           />
