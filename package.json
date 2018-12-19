@@ -21,7 +21,8 @@
     "raf-schd": "^3.0.1",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
-    "react-sparklines": "^1.7.0"
+    "react-sparklines": "^1.7.0",
+    "react-window": "file:../react-window"
   },
   "scripts": {
     "start": "react-scripts start",

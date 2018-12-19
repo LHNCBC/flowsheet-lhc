@@ -3,6 +3,8 @@ import './App.css';
 import 'antd/dist/antd.css';
 import { Table, Row, Col, Button, Switch } from 'antd';
 
+import GridCell from './components/gridCell';
+import { FixedSizeGrid, VariableSizeGrid } from 'react-window';
 
 import PatientSearchDialog from './components/patientSearchDialog';
 import TemplatePicker from './components/templatePicker';
@@ -30,7 +32,8 @@ class App extends Component {
       appTitle: "Flowsheet FHIR App",
       selectedTemplate: null,
       moreData: false,
-      tableHeight: window.innerHeight
+      tableHeight: window.innerHeight,
+      tableWidth: window.innerWidth
 
     };
 
@@ -74,7 +77,7 @@ class App extends Component {
 
     if (this.state.flowsheetData) {
       this.setState({
-        flowsheetColumns: tableDataStore.getColumnHeaders(this.state.showUnit, level)
+        flowsheetColumns: tableDataStore.getColumnHeaders(level)
       })  
     }
 
@@ -85,22 +88,18 @@ class App extends Component {
     let patientId = this.state.selectedPatient ? this.state.selectedPatient.id : ""; 
     let that = this;
 
-    this.setState({
-      isLoading: true
-    })
-
     this.handleResize();
 
     tableDataStore.setTemplate(this.state.selectedTemplate.data);
 
-    tableDataStore.getFirstPageData(patientId)
+    tableDataStore.getFirstPageData(patientId, this.state.showEqClass)
       .then(function(data) {
         that.setState({
           flowsheetData: data.tableData,
           moreData: data.moreData,
-          flowsheetColumns: tableDataStore.getColumnHeaders(that.state.showUnit, that.state.zoomLevel)         
+          flowsheetColumns: tableDataStore.getColumnHeaders(that.state.zoomLevel)
         })    
-        //console.log(that.state.flowsheetColumns);
+        console.log(that.state.flowsheetColumns);
       })
       .catch(function(error) {
         console.log(error);
@@ -110,16 +109,12 @@ class App extends Component {
   appendData() {
     let that = this;
 
-    this.setState({
-      isLoading: true
-    })
-
-    tableDataStore.getNextPageData()
+    tableDataStore.getNextPageData(this.state.showEqClass)
       .then(function(data) {
         that.setState({
           flowsheetData: data.tableData,
           moreData: data.moreData,
-          flowsheetColumns: tableDataStore.getColumnHeaders(that.state.showUnit, that.state.zoomLevel)         
+          flowsheetColumns: tableDataStore.getColumnHeaders(that.state.zoomLevel)
         })    
         //console.log(data);
       })
@@ -164,9 +159,9 @@ class App extends Component {
     // })
 
     //console.log("did mount")
-    this.setState({
-      isLoading: false
-    })
+    // this.setState({
+    //   isLoading: false
+    // })
     //window.addEventListener('resize', this.handleResize);
   }
 
@@ -189,7 +184,8 @@ class App extends Component {
       let headerHeight = document.querySelector('#lf-app-header').clientHeight
       let footerHeight = document.querySelector('#lf-app-footer').clientHeight
       this.setState({
-        tableHeight: window.innerHeight - headerHeight - footerHeight - 90 // not sure why there is a gap 
+        tableHeight: window.innerHeight - headerHeight - footerHeight -20, // not sure why there is a gap
+        tableWidth: window.innerWidth -10
       })
   }
 
@@ -197,9 +193,7 @@ class App extends Component {
   onUnitSwitchChange(checked) {
 
     this.setState({
-      isLoading: true,    
       showUnit: checked,
-      flowsheetColumns: tableDataStore.getColumnHeaders(checked, this.state.zoomLevel)  
     })
 
   }
@@ -207,53 +201,19 @@ class App extends Component {
   onEqClassSwitchChange(checked) {
 
     this.setState({
-      isLoading: true,    
       showEqClass: checked,
-      flowsheetColumns: tableDataStore.getColumnHeaders(this.state.showUnit, this.state.zoomLevel)
+      flowsheetData: tableDataStore.resetData(checked),
     })
 
   }
 
-  getRowClass(record, index) {
-    
 
-    // header, eq-class or data row
-    let className = 'type-' + (record.isHeader ? 'header' : record.isEqClassRow ? 'eq-class' : 'data')
+  columnWidth(index) {
+    return index === 0 ? 300 : index === 1 ? 110 : 100;
+  }
 
-    // level
-    if (record.A) {
-      className += ' level-' + record.A
-    }
-
-    // show/hide eq-class row
-    if (record.isEqClassRow) {
-      if (this.state.showEqClass) {
-        className += ' show-eq-class'
-      }
-      else {
-        className += ' hide-eq-class'
-      }
-      if (Object.keys(record.eqClassItems).length === 1) {
-        className += ' has-single-item-in-eq-class'
-      }
-    }
-    else if (record.isItemInEqClass) {
-      if (this.state.showEqClass) {        
-        className += ' hide-eq-class-item'
-      }
-      else {
-        className += ' show-eq-class-item'
-      }
-      if (record.multipleItemsInEqClass) {
-        className += ' multiple-item-in-eq-class'
-      }
-      else {
-        className += ' single-item-in-eq-class'
-      }
-    }
-
-    return className;
-    
+  rowHeight(index) {
+    return index === 0 ? 72 : 30;
   }
 
   render() {
@@ -263,7 +223,10 @@ class App extends Component {
     let pid = this.state.selectedPatient ? this.state.selectedPatient.id: "";
     let deceased = this.state.selectedPatient ? this.state.selectedPatient.resource.deceasedDateTime : "";
     let reloadButtonLabel = this.state.flowsheetData ? "Reload Data" : "Load Data";
-    
+
+    let rowCount = this.state.flowsheetData ? this.state.flowsheetData.length : 0;
+    let colCount = this.state.flowsheetColumns ? this.state.flowsheetColumns.length : 0;
+
     return (
       <div>
         <div id="lf-app-header">
@@ -344,15 +307,35 @@ class App extends Component {
         <div id="lf-data-table">
           {/* <div><span>{this.state.isLoading ? "Loading ..." : ""}</span></div> */}
           
-          <Table className={this.state.tableClass}
-            // loading= {this.state.isLoading}
-            columns={this.state.flowsheetColumns} 
-            dataSource={this.state.flowsheetData} 
-            rowClassName={(record, index) => this.getRowClass(record, index)}
-            scroll={{ x: tableDataStore.tableWidth , y: this.state.tableHeight}}
-            pagination={false} 
-            defaultExpandAllRows={true}
-          />
+          {/*<Table className={this.state.tableClass}*/}
+            {/*// loading= {this.state.isLoading}*/}
+            {/*columns={this.state.flowsheetColumns} */}
+            {/*dataSource={this.state.flowsheetData} */}
+            {/*rowClassName={(record, index) => this.getRowClass(record, index)}*/}
+            {/*scroll={{ x: tableDataStore.tableWidth , y: this.state.tableHeight}}*/}
+            {/*pagination={false} */}
+            {/*defaultExpandAllRows={true}*/}
+          {/*/>*/}
+
+          <VariableSizeGrid
+              className={this.state.tableClass}
+              columnCount={colCount}
+              columnWidth={index => this.columnWidth(index)}
+              height={this.state.tableHeight}
+              rowCount={rowCount}
+              rowHeight={index => this.rowHeight(index)}
+              width={this.state.tableWidth}
+              stickyColumns={2}
+              stickyRows={1}
+              itemData={{
+                tableData: this.state.flowsheetData,
+                columns: this.state.flowsheetColumns,
+                showUnit: this.state.showUnit,
+                showEqClass: this.state.showEqClass}}
+          >
+            {GridCell}
+          </VariableSizeGrid>
+
           {/* <button onClick={() => this.appendData()}>Load More Data</button>
           <button onClick={() => this.testFhirServer()}>Get Data from FHIR Server</button>
           <button onClick={() => this.getNextPageData()}>Get Next Page Data</button> */}

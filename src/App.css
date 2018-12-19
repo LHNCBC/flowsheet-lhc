@@ -81,94 +81,39 @@
   margin: 0 2px;
 }
 
-.ant-table-fixed .ant-table-row.level-1 td:first-child {
-  padding-left: 0;
+.flowsheet-table .row-level-1.col-name {
+  padding-left: 2px;
 }
-.ant-table-fixed .ant-table-row.level-2 td:first-child {
-  padding-left: 8px;
+.flowsheet-table .row-level-2.col-name {
+  padding-left: 18px;
 }
-.ant-table-fixed .ant-table-row.level-3 td:first-child {
-  padding-left: 16px;
+.flowsheet-table .row-level-3.col-name {
+  padding-left: 34px;
 }
-.ant-table-fixed .ant-table-row.level-4 td:first-child {
-  padding-left: 24px;
+.flowsheet-table .row-level-4.col-name {
+  padding-left: 50px;
 }
-.ant-table-fixed .ant-table-row.level-5 td:first-child {
-  padding-left: 32px;
+.flowsheet-table .row-level-5.col-name {
+  padding-left: 66px;
 }
-.ant-table-fixed .ant-table-row.level-6 td:first-child {
-  padding-left: 40px;
+.flowsheet-table .row-level-6.col-name {
+  padding-left: 82px;
 }
 
 
-.ant-table-fixed-left .ant-table-row.type-header,
-.ant-table-content .ant-table-row.type-header {
+.flowsheet-table .row-type-header {
   background-color: #73ceed;
 }
-.ant-table-fixed-left .ant-table-row.level-1.type-header,
-.ant-table-content .ant-table-row.level-1.type-header {
+.flowsheet-table .row-level-1.row-type-header {
   font-weight: bold;
   text-decoration: none;
   background-color:#34b2dd;
 }
-.ant-table-fixed-left .ant-table-row.type-eq-class,
-.ant-table-content .ant-table-row.type-eq-class {
-  background-color: rgb(176, 186, 180);
-}
-
-
-/* .ant-table-wrapper.showClassRow.type-itemInClass {
-  display: none;
-}
-.ant-table-wrapper.hideClassRow.type-classRow {
-  display: none;
-} */
-
-.ant-table-fixed .ant-table-tbody > tr > td,
-.ant-table-fixed .ant-table-thead > tr > th  {
-  padding: 2px;
-  font-size: 16px;
-}
-/* .flowsheet-table .ant-table-tbody > tr > td,
-.flowsheet-table .ant-table-thead > tr > th  {
-  padding: 2px;
-  font-size: 16px;
-} */
 
 .lf-bold {
   font-weight: bold;
 }
 
-/* .type-eq-class.hide-eq-class {
-  display: none;
-} */
-
-.type-eq-class.has-single-item-in-eq-class {
-  display: none;
-}
-
-.show-eq-class-item.multiple-item-in-eq-class {
-  color: red;
-}
-.hide-eq-class-item.multiple-item-in-eq-class {
-  display: none;
-}
-
-/* .show-eq-class-item.single-item-in-eq-class {
-  color: blue;
-} */
-/* .hide-eq-class-item.single-item-in-eq-class {
-  display: none;
-} */
-
-
-/* adjust column headers height of the fixed table. 
-   for some reason, the headers in the fixed table and headers in the body table have 1px difference in height
-*/
-/* .ant-table-thead > tr > th.lf-item-name, 
-.ant-table-thead > tr > th.lf-sparkline {
-  border-bottom: 0px;
-} */
 
 .ant-list-item.lf-condition-item{
   border-left: 4px solid #e8e8e8;
@@ -177,3 +122,150 @@
 .ant-list-item .lf-item-code {
   font-size: 80%;
 }
+
+.flowsheet-table .GridCell {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 2px;
+  font-size: 16px;
+  border-bottom: 1px solid #e8e8e8;
+  text-align: center;
+}
+.flowsheet-table .GridCell:hover {
+  overflow: visible;
+  z-index: 12;
+}
+.flowsheet-table .StickyRowColCell {
+  padding: 2px;
+  font-size: 16px;
+  border-bottom: 1px solid #e8e8e8;
+}
+.flowsheet-table .StickyRowCell {
+  padding: 2px;
+  font-size: 16px;
+  border-bottom: 1px solid #e8e8e8;
+  text-align: center;
+}
+.flowsheet-table .StickyColCell {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 2px;
+  font-size: 16px;
+  border-bottom: 1px solid #e8e8e8;
+}
+.flowsheet-table .StickyColCell:hover {
+  overflow: visible;
+  z-index: 12;
+}
+
+.flowsheet-table .col-header {
+  font-size: 16px;
+  padding: 2px;
+  font-weight: 500;
+  color: rgba(0,0,0, 0.85);
+
+}
+
+/* styles for items in eq class */
+/* eq class row */
+.flowsheet-table .row-type-eq-class {
+  background-color: rgb(176, 186, 180);
+}
+
+/* items in eq class */
+/* single one (won't appear) */
+
+/* first item */
+/* horizontal bar*/
+.flowsheet-table .row-multiple-item-in-eq-class.first-item-in-eq-class.col-name:before {
+  content: "";
+  position: absolute;
+
+  border-top: 2px solid #2f96b4;
+  top: 14px;
+  width: 6px;
+  height: 0;
+
+}
+/* vertical bar */
+.flowsheet-table .row-multiple-item-in-eq-class.first-item-in-eq-class.col-name:after {
+  content: "";
+  position: absolute;
+
+  border-left: 2px solid #2f96b4;
+  width: 0;
+  top: 14px;
+  bottom: 0;
+}
+/* last item */
+/* horizontal line*/
+.flowsheet-table .row-multiple-item-in-eq-class.last-item-in-eq-class.col-name:before {
+  content: "";
+  position: absolute;
+
+  border-top: 2px solid #2f96b4;
+  top: 14px;
+  width: 6px;
+  height: 0;
+}
+/* vertical line */
+.flowsheet-table .row-multiple-item-in-eq-class.last-item-in-eq-class.col-name:after {
+  content: "";
+  position: absolute;
+
+  border-left: 2px solid #2f96b4;
+  width: 0;
+  top: 0;
+  bottom: 14px;
+}
+/* middle items, no horizontal bar */
+.flowsheet-table .row-multiple-item-in-eq-class.col-name:after {
+  content: "";
+  position: absolute;
+
+  border-left: 2px solid #2f96b4;
+  width: 0;
+  top: 0;
+  bottom: 0;
+}
+/* set left position of different levels*/
+.flowsheet-table .row-level-1.row-multiple-item-in-eq-class.col-name:before {
+  left: 0;
+}
+.flowsheet-table .row-level-2.row-multiple-item-in-eq-class.col-name:before {
+  left: 12px;
+}
+.flowsheet-table .row-level-3.row-multiple-item-in-eq-class.col-name:before {
+  left: 28px;
+}
+.flowsheet-table .row-level-4.row-multiple-item-in-eq-class.col-name:before {
+  left: 44px;
+}
+.flowsheet-table .row-level-5.row-multiple-item-in-eq-class.col-name:before {
+  left: 60px;
+}
+.flowsheet-table .row-level-6.row-multiple-item-in-eq-class.col-name:before {
+  left: 76px;
+}
+.flowsheet-table .row-level-1.row-multiple-item-in-eq-class.col-name:after {
+  left: 0;
+}
+.flowsheet-table .row-level-2.row-multiple-item-in-eq-class.col-name:after {
+  left: 12px;
+}
+.flowsheet-table .row-level-3.row-multiple-item-in-eq-class.col-name:after {
+  left: 28px;
+}
+.flowsheet-table .row-level-4.row-multiple-item-in-eq-class.col-name:after {
+  left: 44px;
+}
+.flowsheet-table .row-level-5.row-multiple-item-in-eq-class.col-name:after {
+  left: 60px;
+}
+.flowsheet-table .row-level-6.row-multiple-item-in-eq-class.col-name:after {
+  left: 76px;
+}
+
+/* styles for items in eq class */

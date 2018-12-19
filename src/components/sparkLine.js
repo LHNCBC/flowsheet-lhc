@@ -8,6 +8,9 @@ class SparkLine extends React.Component {
   render() {
     let record = this.props.record;
 
+    // console.log("in SparkLine")
+    // console.log(this.props.record)
+
     let rangeHigh = <SparklinesReferenceLine type="custom" value={record.high} style={{ stroke: "#2991c8", strokeWidth: "1", fill: "none", strokeOpacity: .75, strokeDasharray: '2, 1' }}/>;
     let rangeLow = <SparklinesReferenceLine type="custom" value={record.low} style={{ stroke: "#d1192e", strokeWidth: "1", fill: "none", strokeOpacity: .75, strokeDasharray: '2, 1' }}/>;
 

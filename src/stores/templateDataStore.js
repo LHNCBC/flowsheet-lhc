@@ -51,14 +51,14 @@ class TemplateDataStore {
   }
 
 
-  getTableData(fhirData) {
+  getTableData(fhirData, showEqClass) {
 
     this._filterDataByTemplate(fhirData);
     this._countItemsInEqClass();
     this._addAggregatedData();
     this._postProcessTemplateTree();
     this._sortColumnHeaders();
-    let tableData = this._exportTableData();
+    let tableData = this._exportTableData(showEqClass);
     let columnInfo = {
       date: this.dateList,
       day: this.dayList,
@@ -66,12 +66,19 @@ class TemplateDataStore {
       month: this.monthList,
       quarter: this.quarterList,
       year: this.yearList
-    }
-    //console.log(this.templateTree)
+    };
+    console.log(this.templateTree)
 
     return [tableData, columnInfo]
   }
 
+  resetTableData(showEqClass) {
+
+    let tableData = this._exportTableData(showEqClass);
+
+    console.log(tableData)
+    return tableData
+  }
 
   /**
    * Remove items in the hierarchy that have no code (LOINC, in E) while keeping the hierachy structure.
@@ -103,6 +110,9 @@ class TemplateDataStore {
       item.low = item.J;
       item.high = item.K;
 
+      // set display name
+      item.displayName = this._getDisplayName(item);
+
       let itemLevel = item.A, 
           itemCode = item.O === "RI" ? item.D : item.E;
 
@@ -118,11 +128,11 @@ class TemplateDataStore {
         // at least a lower level item is kept
         if (levelStatus[levelStatus.length - 1][lastLevel]) {
           item.keep = true;
-          item.isHeader = true;
+          item.isTempHeader = true;
           levelStatus[levelStatus.length - 2][itemLevel] = true;
         } else if (itemCode !== "") {
           // do we need to keep a group header who has code but all its children are not kept?
-          //item.isHeader = true;
+          //item.isTempHeader = true;
         }
         // remove the previous level info
         levelStatus.pop();
@@ -155,6 +165,25 @@ class TemplateDataStore {
 
     return newTemplate;
 
+  }
+
+
+  _getDisplayName(item) {
+    //if there is a LOINC number
+    //   LOINC_DISPLAY > SHORT_NAME > LONG_COMMON_NAME > RI NAME
+    //else
+    //   RI NAME
+    let name = '';
+    if (item.O === 'RI') {
+      name = item.B ? item.B : '';
+    }
+    else {
+      name = item.G ? item.G : item.N ? item.N : item.F ? item.F : item.B ? item.B : '';
+    }
+
+    // add code?
+    //name = name + '(' + (item.O === 'RI' ? item.D : item.E) + ')'
+    return name;
   }
 
   /**
@@ -194,10 +223,10 @@ class TemplateDataStore {
             { index: i+1, 
               row: eqClassRow
             }
-          )
+          );
           // add flags to the items that belong to this equivalence class
           for (let j=0; j<codeList.length; j++) {
-            this.templateTree[i+1+j].isItemInEqClass = true;
+            this.templateTree[i+1+j].isTempItemInEqClass = true;
           }
         }
 
@@ -281,7 +310,7 @@ class TemplateDataStore {
   }
 
   /**
-   * Filter user data with the hierachy.
+   * Filter user data with the hierarchy.
    * @param {*} newData user data from FHIR server.
    */
   _filterDataByTemplate(newData) {
@@ -316,7 +345,7 @@ class TemplateDataStore {
             for (let k=0; k<node.codeList.length; k++) {
               if (node.codeList[k] === code) {
                 node.hasData = true;
-                node.eqClassItems[code] = true; // the item has data
+                node.eqClassItems[code]=true; // the item has data
                 this.tsList.set(date);
                 if (!node.data) {
                   node.data = {};
@@ -359,19 +388,43 @@ class TemplateDataStore {
       // has items in this eq class that have values      
       if (item.isEqClassRow && Object.keys(item.eqClassItems).length > 0 ) {
         let itemCodes = Object.keys(item.eqClassItems);
+        if (itemCodes.length > 1) {
+          item.hasMultipleItemsInEqClass = true;
+        }
+
         let k = 1;
-        while(j+k < this.templateTree.length && !this.templateTree[j+k].isEqClassRow) {
+        let firstItemIndex=null, lastItemIndex=null;
+        let foundFirst = false;
+        while(k<=item.codeList.length && j+k < this.templateTree.length && this.templateTree[j+k].isTempItemInEqClass) {
           let nextItem = this.templateTree[j+k];
           let nextCode = nextItem.O === "RI" ? nextItem.D : nextItem.E;
+
+          // reset status
+          nextItem.firstItemInEqClass = false;
+          nextItem.lastItemInEqClass = false;
+
           itemCodes.forEach((code) => {
             if (code === nextCode) {
-              nextItem.multipleItemsInEqClass = itemCodes.length > 1;
+              nextItem.isMultipleItemsInEqClass = itemCodes.length > 1;
+              if (!foundFirst) {
+                firstItemIndex = j+k;
+                foundFirst = true;
+              }
+              lastItemIndex = j+k;
             }
-          })
-
+          });
           k++;
         }
 
+        console.log('eq row: ' + j)
+        console.log(firstItemIndex)
+        console.log(lastItemIndex)
+        if (firstItemIndex !==null) {
+          this.templateTree[firstItemIndex].firstItemInEqClass = true;
+        }
+        if (lastItemIndex !==null) {
+          this.templateTree[lastItemIndex].lastItemInEqClass = true;
+        }
 
       }
     }
@@ -390,7 +443,7 @@ class TemplateDataStore {
   
   _getDisplayValueForEqClassRow(commonUnit, commonUCUM, itemValues) {
     
-    let ret = {}, displayValue = [], displayValueWithUnit = [];
+    let ret, displayValue = [], displayValueWithUnit = [];
     
     itemValues.forEach((val) => {
 
@@ -418,7 +471,7 @@ class TemplateDataStore {
         displayValue.push(dispVal.value);
         displayValueWithUnit.push(dispVal.valueWithUnit);
       }
-    })
+    });
     ret =  {value: displayValue.join('; '), valueWithUnit: displayValueWithUnit.join('; ')}
 
     return ret;
@@ -548,9 +601,22 @@ class TemplateDataStore {
 
   /**
    * Export the filtered user data
+   * @param showEqClass show equivalent class row only, if true,
+   * or show the equivalent class row and the included individual items
+   * @returns {*[]}
+   * @private
    */
-  _exportTableData() {
-    return this.templateTree.filter(node => node.hasData);
+  _exportTableData(showEqClass) {
+    // return this.templateTree.filter(node => node.hasData &&
+    //     (showEqClass && (node.hasMultipleItemsInEqClass || !node.isEqClassRow && !node.isTempItemInEqClass) ||
+    //         !showEqClass && (node.hasMultipleItemsInEqClass || !node.isEqClassRow)
+    //     )
+    // );
+    return this.templateTree.filter(node => node.hasData &&
+        (showEqClass && (node.hasMultipleItemsInEqClass || !node.isEqClassRow && !node.isTempItemInEqClass) ||
+            !showEqClass && !node.isEqClassRow
+        )
+    );
   }
 
 
