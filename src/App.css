@@ -171,7 +171,7 @@
 /* styles for items in eq class */
 /* eq class row */
 .flowsheet-table .row-type-eq-class {
-  background-color: rgb(176, 186, 180);
+  background-color: #2f96b4; /*rgb(176, 186, 180);*/
 }
 
 /* items in eq class */
@@ -269,3 +269,11 @@
 }
 
 /* styles for items in eq class */
+
+.exp-col-button {
+  cursor: pointer;
+}
+.exp-col-button:hover {
+  ackground-color: #1890ff;
+  color: #fff;
+}

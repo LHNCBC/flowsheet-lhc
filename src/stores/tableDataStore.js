@@ -105,6 +105,10 @@ class TableDataStore {
     return templateStore.resetTableData(showEqClass)
   }
 
+  expandCollapseAHeader(itemKey) {
+    return templateStore.expandCollapseAHeader(itemKey);
+  }
+
 }
 
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import SparkLine from "./sparkLine";
-import {Sparklines, SparklinesLine} from "react-sparklines";
+import { Icon, Button } from "antd";
 
 class GridCell extends React.PureComponent {
 
@@ -64,13 +64,13 @@ class GridCell extends React.PureComponent {
   }
 
 
-  dataCell (data, columnIndex, rowIndex) {
+  dataCell(data, columnIndex, rowIndex) {
 
 
     if (!data) {
       return "Default2, should not appear"
     }
-    const { tableData, columns, showUnit } = data;
+    const { tableData, columns, showUnit, expColFunc } = data;
 
     if (!tableData) {
       return "Default2, should not appear"
@@ -87,7 +87,18 @@ class GridCell extends React.PureComponent {
     else if (rowIndex >= 1) {
       //name
       if (columnIndex === 0) {
-        return dataRow.displayName + (dataRow.isEqClassRow ? ' [' + Object.keys(dataRow.eqClassItems).length + ']' : '')
+        if (dataRow.isTempHeader) {
+          if (dataRow.sectionCollapsed) {
+            return <div><span className="exp-col-button" onClick={() => expColFunc(dataRow.key)}><Icon type="right-circle" /></span>  {dataRow.displayName} {dataRow.isEqClassRow ? ' [' + Object.keys(dataRow.eqClassItems).length + ']' : ''}</div>
+          }
+          else {
+            return <div><span className="exp-col-button" onClick={() => expColFunc(dataRow.key)}><Icon type="down-circle" /></span> {dataRow.displayName} {dataRow.isEqClassRow ? ' [' + Object.keys(dataRow.eqClassItems).length + ']' : ''}</div>
+          }
+        }
+        else {
+          return dataRow.displayName + (dataRow.isEqClassRow ? ' [' + Object.keys(dataRow.eqClassItems).length + ']' : '')
+        }
+
       }
       // spark line
       else if (columnIndex === 1) {

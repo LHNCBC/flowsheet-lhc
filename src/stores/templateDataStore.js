@@ -80,6 +80,78 @@ class TemplateDataStore {
     return tableData
   }
 
+
+  expandCollapseAHeader(itemKey) {
+    let clickedItemIndex = this.templateTree.findIndex(item => item.key === itemKey);
+
+    // not found
+    if (clickedItemIndex === -1) {
+      return false;
+    }
+
+    let clickedItem = this.templateTree[clickedItemIndex];
+    if (clickedItem.sectionCollapsed) {
+      return this.expandAHeader(clickedItem, clickedItemIndex);
+    }
+    else {
+      return this.collapseAHeader(clickedItem, clickedItemIndex)
+    }
+  }
+
+  expandAHeader(clickedItem, clickedItemIndex) {
+
+    let clickedItemLevel = clickedItem.A;
+
+    // if it's already expanded, do nothing
+    if (!clickedItem.sectionCollapsed) {
+      return false;
+    }
+    else {
+      clickedItem.sectionCollapsed = false;
+    }
+
+    // check all its decedents
+    for(let i=clickedItemIndex+1; i<this.templateTree.length && this.templateTree[i].A > clickedItemLevel; i++) {
+      let item = this.templateTree[i];
+      if (!item.sectionCollapsed) {
+        item.itemHidden = false;
+      }
+      // skip the items in this collapsed section
+      else {
+        item.itemHidden = false;
+
+        let subHeaderItemLevel = item.A;
+
+        let j=i+1; // first item in the sub section
+        while (this.templateTree[j].A > subHeaderItemLevel && j<this.templateTree.length) {
+          j++;
+        }
+        i = j-1; // move back one item (i++ runs after this) and let the main loop continue
+      }
+    }
+    return true;
+  }
+
+  collapseAHeader(clickedItem, clickedItemIndex) {
+
+    let clickedItemLevel = clickedItem.A;
+
+    // if it's already collapsed, do nothing
+    if (clickedItem.sectionCollapsed) {
+      return false;
+    }
+    else {
+      clickedItem.sectionCollapsed = true;
+    }
+
+    // check all its decedents
+    for(let i=clickedItemIndex+1; i<this.templateTree.length && this.templateTree[i].A > clickedItemLevel; i++) {
+      let item = this.templateTree[i];
+      item.itemHidden = true;
+    }
+
+    return true;
+  }
   /**
    * Remove items in the hierarchy that have no code (LOINC, in E) while keeping the hierachy structure.
    * Group header items do not have to have the code.
@@ -416,9 +488,6 @@ class TemplateDataStore {
           k++;
         }
 
-        console.log('eq row: ' + j)
-        console.log(firstItemIndex)
-        console.log(lastItemIndex)
         if (firstItemIndex !==null) {
           this.templateTree[firstItemIndex].firstItemInEqClass = true;
         }
@@ -612,7 +681,7 @@ class TemplateDataStore {
     //         !showEqClass && (node.hasMultipleItemsInEqClass || !node.isEqClassRow)
     //     )
     // );
-    return this.templateTree.filter(node => node.hasData &&
+    return this.templateTree.filter(node => node.hasData && !node.itemHidden &&
         (showEqClass && (node.hasMultipleItemsInEqClass || !node.isEqClassRow && !node.isTempItemInEqClass) ||
             !showEqClass && !node.isEqClassRow
         )

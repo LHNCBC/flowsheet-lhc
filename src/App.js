@@ -42,6 +42,7 @@ class App extends Component {
     this.onUnitSwitchChange = this.onUnitSwitchChange.bind(this);
     this.onEqClassSwitchChange = this.onEqClassSwitchChange.bind(this);
     this.handleResize = this.handleResize.bind(this);
+    this.expandCollapseAHeader = this.expandCollapseAHeader.bind(this);
 
   }
 
@@ -216,6 +217,20 @@ class App extends Component {
     return index === 0 ? 72 : 30;
   }
 
+  expandCollapseAHeader(itemKey) {
+    console.log('in app.js');
+    console.log(itemKey);
+    let changed = tableDataStore.expandCollapseAHeader(itemKey);
+    console.log(changed);
+    if (changed) {
+      this.setState({
+        flowsheetData: tableDataStore.resetData(this.state.showEqClass),
+      })
+
+    }
+  }
+
+
   render() {
     let name = this.state.selectedPatient ? this.state.selectedPatient.name : "";
     let gender = this.state.selectedPatient ? this.state.selectedPatient.gender : "";
@@ -331,7 +346,10 @@ class App extends Component {
                 tableData: this.state.flowsheetData,
                 columns: this.state.flowsheetColumns,
                 showUnit: this.state.showUnit,
-                showEqClass: this.state.showEqClass}}
+                showEqClass: this.state.showEqClass,
+                expColFunc: this.expandCollapseAHeader
+              }
+              }
           >
             {GridCell}
           </VariableSizeGrid>
