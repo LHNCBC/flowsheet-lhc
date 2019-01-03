@@ -102,12 +102,12 @@
 
 
 .flowsheet-table .row-type-header {
-  background-color: #73ceed;
+  background-color: #BADEFF;
 }
 .flowsheet-table .row-level-1.row-type-header {
   font-weight: bold;
   text-decoration: none;
-  background-color:#34b2dd;
+  background-color:#9CCFFF;
 }
 
 .lf-bold {
@@ -171,7 +171,7 @@
 /* styles for items in eq class */
 /* eq class row */
 .flowsheet-table .row-type-eq-class {
-  background-color: #2f96b4; /*rgb(176, 186, 180);*/
+  background-color: #f1efea; /*#DAEDFF; rgb(176, 186, 180);*/
 }
 
 /* items in eq class */
@@ -272,8 +272,9 @@
 
 .exp-col-button {
   cursor: pointer;
+  transition: color .3s ease-in-out,background-color .3s ease-in-out;
 }
 .exp-col-button:hover {
-  ackground-color: #1890ff;
+  background-color: #1890ff;
   color: #fff;
 }

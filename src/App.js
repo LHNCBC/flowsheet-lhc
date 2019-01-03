@@ -210,7 +210,7 @@ class App extends Component {
 
 
   columnWidth(index) {
-    return index === 0 ? 300 : index === 1 ? 110 : 100;
+    return index === 0 ? 300 : index === 1 ? 110 : 120;
   }
 
   rowHeight(index) {
