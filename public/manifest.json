@@ -1,6 +1,6 @@
 {
-  "short_name": "Flowsheet FHIR App",
-  "name": "Flowsheet FHIR App",
+  "short_name": "LHC Flowsheet On FHIR",
+  "name": "LHC Flowsheet On FHIR",
   "icons": [
     {
       "src": "lhncbc.ico",

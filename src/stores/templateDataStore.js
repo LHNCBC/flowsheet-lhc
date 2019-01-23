@@ -251,6 +251,7 @@ class TemplateDataStore {
     }
     else {
       name = item.G ? item.G : item.N ? item.N : item.F ? item.F : item.B ? item.B : '';
+      //name = item.G ? item.G : item.F ? item.F : item.B ? item.B : '';
     }
 
     // add code?
@@ -458,7 +459,7 @@ class TemplateDataStore {
     for(let j=0; j<this.templateTree.length; j++) {
       let item = this.templateTree[j];
       // has items in this eq class that have values      
-      if (item.isEqClassRow && Object.keys(item.eqClassItems).length > 0 ) {
+      if (item.isEqClassRow && item.eqClassItems && Object.keys(item.eqClassItems).length > 0 ) {
         let itemCodes = Object.keys(item.eqClassItems);
         if (itemCodes.length > 1) {
           item.hasMultipleItemsInEqClass = true;
@@ -510,29 +511,55 @@ class TemplateDataStore {
   }
 
   
-  _getDisplayValueForEqClassRow(commonUnit, commonUCUM, itemValues) {
+  _getDisplayValueForEqClassRow(commonUnit, commonUCUM, itemValues, node) {
     
     let ret, displayValue = [], displayValueWithUnit = [];
-    
+    let riCodes = ["65", "202", "12984", "22414", "1276", "256", "1274", "4053", "4038", "39", "1793", "60", "876", "877",
+                   "65z", "202z", "12984z", "22414z", "1276z", "256z", "1274z", "4053z", "4038z", "39z", "1793z", "60z", "876z", "877z"];
+
     itemValues.forEach((val) => {
 
       if (commonUCUM && val.unit.code !== commonUCUM) {
-        let result = this.ucumUtils.convertUnitTo(val.unit.code, val.value, commonUCUM, false);              
-        if (result.status === 'succeeded') {
-          let unitName = commonUnit ? commonUnit : result.printSymbol;
-          let toVal = Math.round(result.toVal * 100)/100;
+        // special handling for mass unit conversion
+        //if (node.R && riCodes.includes(node.D)) {
+        if (node.R && node.S === 'x') {
+          let result = this._msUnitConvert(node.D, val.value, val.unit.code, commonUCUM, node.R);
+          if (result && !isNaN(result)) {
+            let toVal = Math.round(result * 100) / 100;
+            let unitName = commonUnit ? commonUnit : commonUCUM;
 
-          let displayVal = val.interpretationCode && val.interpretationCode !== 'N' ? toVal + ' *' + val.interpretationCode : toVal;
-          let valWithUnit = unitName ? toVal + ' ' + unitName : toVal;
-          let displayValWithUnit = val.interpretationCode && val.interpretationCode !== 'N' ? valWithUnit + ' *' + val.interpretationCode : valWithUnit;
-          displayValue.push(displayVal);
-          displayValueWithUnit.push(displayValWithUnit);    
+            let displayVal = val.interpretationCode && val.interpretationCode !== 'N' ? toVal + ' *' + val.interpretationCode : toVal;
+            let valWithUnit = unitName ? toVal + ' ' + unitName : toVal;
+            let displayValWithUnit = val.interpretationCode && val.interpretationCode !== 'N' ? valWithUnit + ' *' + val.interpretationCode : valWithUnit;
+            displayValue.push(displayVal);
+            displayValueWithUnit.push(displayValWithUnit);
+          }
+          // failed or error in unit conversion
+          else {
+            let dispVal = this._getDisplayValue(val);
+            displayValue.push(dispVal.displayValue);
+            displayValueWithUnit.push(dispVal.displayValueWithUnit);
+          }
         }
-        // failed or error in unit conversion
+        // other units
         else {
-          let dispVal = this._getDisplayValue(val);
-          displayValue.push(dispVal.displayValue);
-          displayValueWithUnit.push(dispVal.displayValueWithUnit);
+          let result = this.ucumUtils.convertUnitTo(val.unit.code, val.value, commonUCUM, false);
+          if (result.status === 'succeeded') {
+            let unitName = commonUnit ? commonUnit : result.printSymbol;
+            let toVal = Math.round(result.toVal * 100)/100;
+
+            let displayVal = val.interpretationCode && val.interpretationCode !== 'N' ? toVal + ' *' + val.interpretationCode : toVal;
+            let valWithUnit = unitName ? toVal + ' ' + unitName : toVal;
+            let displayValWithUnit = val.interpretationCode && val.interpretationCode !== 'N' ? valWithUnit + ' *' + val.interpretationCode : valWithUnit;
+            displayValue.push(displayVal);
+            displayValueWithUnit.push(displayValWithUnit);
+          }
+          // failed or error in unit conversion
+          else {
+            let dispVal = this._getDisplayValue(val);
+            displayValue.push(dispVal.displayValue);
+            displayValueWithUnit.push(dispVal.displayValueWithUnit);
+          }
         }
       }
       else {
@@ -611,13 +638,13 @@ class TemplateDataStore {
         // use the most recent value (just update once)
         if (!node[dateKey]) {
           if (node.isEqClassRow) {
-            // filter duplate codes (when such data at the same timestamp are retrieved from fhir server)
+            // filter duplicated codes (when such data at the same timestamp are retrieved from FHIR server)
             if (Array.isArray(node.data[date])) {
               let newMap = {};
               node.data[date].forEach((dp) => { newMap[dp.code] = dp });
               node.data[date] = Object.values(newMap);  
             }
-            node[dateKey] = this._getDisplayValueForEqClassRow(node.P, node.Q, node.data[date]);              
+            node[dateKey] = this._getDisplayValueForEqClassRow(node.P, node.Q, node.data[date], node);
           }
           else {
             node[dateKey] = this._getDisplayValue(node.data[date]);  
@@ -682,7 +709,7 @@ class TemplateDataStore {
     //     )
     // );
     return this.templateTree.filter(node => node.hasData && !node.itemHidden &&
-        (showEqClass && (node.hasMultipleItemsInEqClass || !node.isEqClassRow && !node.isTempItemInEqClass) ||
+        (showEqClass && (node.hasMultipleItemsInEqClass || !node.isEqClassRow && !node.isMultipleItemsInEqClass) ||
             !showEqClass && !node.isEqClassRow
         )
     );
@@ -818,6 +845,125 @@ class TemplateDataStore {
   _getReferenceRange(entry) {
     return entry.resource && entry.resource.referenceRange ? entry.resource.referenceRange : null;
   }
+
+
+  /** temp. solution for mass unit conversion */
+
+  /**
+   * Convert from mass concentration to substance concentration
+   * @param value the amount of value to be converted from mass concentration to substance concentration
+   * @param mcUnit mass (concentration) unit, e.g., g/L, mg/dL, etc.
+   * @param scUnit substance (concentration) unit, e.g, mol/L, umol/L, etc.
+   * @param moleWeight molecular weight, decided by the specific substance.
+   */
+  _unitsConvNormFactor = { // Normalizing factor to make it g/L ==> mol/L conversion. Key="<from-unit>-<to-unit>"
+    'g/dl-mmol/l': 10000,
+    'mg/dl-mmol/l': 10,
+    'mg/dl-umol/l': 10000,
+    'g/dl-umol/l': 10000000,
+    'mmol/l-g/dl': 0.0001,
+    'mmol/l-mg/dl': 0.1,
+    'umol/l-mg/dl': 0.0001,
+    'umol/l-g/dl': 0.0000001
+
+  };
+
+  _unitsConvFunc = { // direct conversion function. Key="<service-code>-<from-unit>-<to-unit>"
+    '876-pg-fmol': (x) => x * 0.06207,  // per Clem & Wikipedia
+    '877-g/dl-mmol/l': (x) => x * 19.8 / 32, // Using the lower normal range ratio, 32 for conventional, 19.8 for SI
+    '876z-fmol-pg': (x) => x / 0.06207,
+    '877z-mmol/L-g/dL': (x) => x * 32 / 19.8
+  };
+
+  _msUnitConvert(serviceCode, value, fromUnit, toUnit, moleWeight) {
+    function getKey() { // get the factor from the above table using [<service-code>] <from-unit> <to-unit>
+      return [].slice.call(arguments).map(x=>x.trim()).join('-').toLowerCase();
+    }
+
+    value = parseFloat(value);
+    let convFunc = this._unitsConvFunc[getKey(serviceCode, fromUnit, toUnit)];
+    if(! convFunc) {
+      let convFactor = this._unitsConvNormFactor[getKey(fromUnit, toUnit)];
+      if(convFactor && moleWeight) {
+        if (toUnit.match(/mol/)) {
+          convFunc = (value, moleWeight) => (value * convFactor / moleWeight);
+        }
+        else {
+          convFunc = (value, moleWeight) => (value * convFactor * moleWeight);
+        }
+
+      }
+    }
+    if(! convFunc || isNaN(value)) {
+      throw Error(`msUnitConvert - unable convert: (${value}, ${serviceCode}, ${fromUnit}, ${toUnit}`);
+    }
+
+    return this._toPrecision(convFunc(value, moleWeight), 2, 2);
+  }
+
+  valueMC2SC(serviceCode, value, mcUnit, scUnit, moleWeight) {
+    function getKey() { // get the factor from the above table using [<service-code>] <from-unit> <to-unit>
+      return [].slice.call(arguments).map(x=>x.trim()).join('-').toLowerCase();
+    }
+
+    value = parseFloat(value);
+    let convFunc = this._unitsConvFunc[getKey(serviceCode, mcUnit, scUnit)];
+    if(! convFunc) {
+      let convFactor = this._unitsConvNormFactor[getKey(mcUnit, scUnit)];
+      if(convFactor && moleWeight) {
+        convFunc = (value, moleWeight) => (value * convFactor / moleWeight);
+      }
+    }
+    if(! convFunc || isNaN(value)) {
+      throw Error(`valueMC2SC - unable convert: (${value}, ${serviceCode}, ${mcUnit}, ${scUnit}`);
+    }
+
+    return this._toPrecision(convFunc(value, moleWeight), 2, 2);
+  }
+
+  valueSC2MC(serviceCode, value, scUnit, mcUnit, moleWeight) {
+    function getKey() { // get the factor from the above table using [<service-code>] <from-unit> <to-unit>
+      return [].slice.call(arguments).map(x=>x.trim()).join('-').toLowerCase();
+    }
+
+    value = parseFloat(value);
+    let convFunc = this._unitsConvFunc[getKey(serviceCode, scUnit, mcUnit)];
+    if(! convFunc) {
+      let convFactor = this._unitsConvNormFactor[getKey(mcUnit, scUnit)];
+      if(convFactor && moleWeight) {
+        convFunc = (value, moleWeight) => (value / convFactor * moleWeight);
+      }
+    }
+    if(! convFunc || isNaN(value)) {
+      throw Error(`valueSC2MC - unable convert: (${value}, ${serviceCode}, ${scUnit}, ${mcUnit}`);
+    }
+
+    return this._toPrecision(convFunc(value, moleWeight), 2, 2);
+  }
+
+  /**
+   * Clean up the number keeping at least numDecimal decimal digits and numSig significant digits,
+   * does not necessarily respect the classic definition of "significant figures"
+   * @param value
+   * @param numDecimal number of decimal digits, required non-zero.
+   * @param numSig number of significant digits
+   * @return {number}
+   */
+  _toPrecision(value, numDecimal, numSig) {
+    numDecimal = numDecimal? numDecimal: 1;
+    numSig = numSig? numSig: 1;
+
+    if(value <= 1) {
+      return parseFloat(value.toPrecision(Math.max(numDecimal, numSig)));
+    }
+
+    let numWhole = 0, tmpValue = value;
+    for(; tmpValue > 1; ++numWhole, tmpValue /= 10);
+
+    return parseFloat(value.toPrecision(Math.max(numDecimal + numWhole), numSig));
+  }
+
+  /** end of temp. solution for mass unit conversion */
 
 
 }

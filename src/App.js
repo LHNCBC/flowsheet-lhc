@@ -29,7 +29,7 @@ class App extends Component {
       zoomLevel: 'date',
       showEqClass: false,
       selectedPatient: null,
-      appTitle: "Flowsheet FHIR App",
+      appTitle: "LHC Flowsheet On FHIR",
       selectedTemplate: null,
       moreData: false,
       tableHeight: window.innerHeight,
@@ -163,7 +163,7 @@ class App extends Component {
     // this.setState({
     //   isLoading: false
     // })
-    //window.addEventListener('resize', this.handleResize);
+    window.addEventListener('resize', this.handleResize);
   }
 
   componentDidUpdate() {
@@ -178,12 +178,12 @@ class App extends Component {
   componentWillUnmount() {
     // // Cancel any pending updates since we're unmounting.
     // this.scheduleUpdate.cancel();
-    //window.removeEventListener('resize', this.handleResize);
+    window.removeEventListener('resize', this.handleResize);
   }
 
   handleResize(e) {
-      let headerHeight = document.querySelector('#lf-app-header').clientHeight
-      let footerHeight = document.querySelector('#lf-app-footer').clientHeight
+      let headerHeight = document.querySelector('#lf-app-header').clientHeight;
+      let footerHeight = document.querySelector('#lf-app-footer').clientHeight;
       this.setState({
         tableHeight: window.innerHeight - headerHeight - footerHeight -20, // not sure why there is a gap
         tableWidth: window.innerWidth -10

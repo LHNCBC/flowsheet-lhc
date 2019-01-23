@@ -21,12 +21,12 @@
     "raf-schd": "^3.0.1",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
-    "react-sparklines": "^1.7.0",
+    "react-sparklines": "file:../react-sparklines",
     "react-window": "file:../react-window"
   },
   "scripts": {
     "start": "react-scripts start",
-    "start2": "PORT=3006 react-scripts start",
+    "start2": "PORT=80 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"

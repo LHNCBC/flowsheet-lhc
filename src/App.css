@@ -275,6 +275,6 @@
   transition: color .3s ease-in-out,background-color .3s ease-in-out;
 }
 .exp-col-button:hover {
-  background-color: #1890ff;
+  /*background-color: #1890ff;*/
   color: #fff;
 }

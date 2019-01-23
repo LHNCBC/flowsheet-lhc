@@ -1,7 +1,7 @@
 import React from "react";
 import "antd/dist/antd.css";
 import { Select } from "antd";
-import loincTemp from '../stores/h7';
+import loincTemp from '../stores/h10';
 import cardiacTemp from '../stores/c2';
 
 const Option = Select.Option;
@@ -14,8 +14,8 @@ class TemplatePicker extends React.Component {
     super(props);
 
     let list = [
-        {name: 'LOINC Hierarchy', file: 'h7.js', data: loincTemp},
-        {name: 'Cardiac Template', file: 'c2.js', data: cardiacTemp }
+        {name: 'Complete Hierarchy', file: 'h10.js', data: loincTemp},
+        {name: 'Cardiac Hierarchy', file: 'c2.js', data: cardiacTemp }
     ];
 
     // set default value

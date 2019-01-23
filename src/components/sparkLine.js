@@ -11,38 +11,45 @@ class SparkLine extends React.Component {
     // console.log("in SparkLine")
     // console.log(this.props.record)
 
-    let rangeHigh = <SparklinesReferenceLine type="custom" value={record.high} style={{ stroke: "#2991c8", strokeWidth: "1", fill: "none", strokeOpacity: .75, strokeDasharray: '2, 1' }}/>;
+    let rangeHigh = <SparklinesReferenceLine type="custom" value={record.high} style={{ stroke: "#0858af", strokeWidth: "1", fill: "none", strokeOpacity: .75, strokeDasharray: '2, 1' }}/>;
     let rangeLow = <SparklinesReferenceLine type="custom" value={record.low} style={{ stroke: "#d1192e", strokeWidth: "1", fill: "none", strokeOpacity: .75, strokeDasharray: '2, 1' }}/>;
 
     if (record.high !== undefined && record.low !== undefined) {
+
       return (
-        <Sparklines data={record.sparklineData}  width={100} height={16} >
-          <SparklinesLine />
-          {rangeHigh}
-          {rangeLow}
-        </Sparklines>      
+          <div title={`High: ${record.high}\nLow: ${record.low}`}>
+            <Sparklines data={record.sparklineData}  width={100} height={16} >
+              <SparklinesLine style={{ fill: "none" }} />
+              {rangeHigh}
+              {rangeLow}
+            </Sparklines>
+          </div>
       )
     }
     else if (record.high !== undefined) {
       return (
-        <Sparklines data={record.sparklineData}  width={100} height={16} >
-          <SparklinesLine />
-          {rangeHigh}
-        </Sparklines>      
+          <div title={`High: ${record.high}`}>
+            <Sparklines data={record.sparklineData}  width={100} height={16} >
+              <SparklinesLine style={{ fill: "none" }} />
+              {rangeHigh}
+            </Sparklines>
+          </div>
       )
     }
     else if (record.low !== undefined) {
       return (
-        <Sparklines data={record.sparklineData}  width={100} height={16} >
-          <SparklinesLine />
-          {rangeLow}
-        </Sparklines>      
+          <div title={`Low: ${record.low}`}>
+            <Sparklines data={record.sparklineData}  width={100} height={16} >
+              <SparklinesLine style={{ fill: "none" }} />
+              {rangeLow}
+            </Sparklines>
+          </div>
       )
     }
     else {
       return (
         <Sparklines data={record.sparklineData}  width={100} height={16} >
-          <SparklinesLine />
+          <SparklinesLine style={{ fill: "none" }}/>
         </Sparklines>      
       )
     }
