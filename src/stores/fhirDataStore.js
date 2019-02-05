@@ -11,6 +11,7 @@ const LHC_FHIR_SERVER = {
 //  url: "https://lforms-service-stage-rh7.nlm.nih.gov:8243/hapi-fhir-jpaserver-example/baseDstu3",
 //  url: "https://lforms-service-stage-rh7.nlm.nih.gov:8543/hapi-fhir-jpaserver-example/baseDstu3",
 //  url: "http://hapi.fhir.org/baseDstu3",  // no auth
+  //url: "https://syntheticmass.mitre.org/fhir/"
   auth: {
     user: 'fire',
     pass: 'happy'

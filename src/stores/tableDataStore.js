@@ -26,13 +26,13 @@ class TableDataStore {
   getColumnHeaders(zoomLevel) {
 
     // test name columns
-    let col1 = {
+    let colName = {
       title: 'Name', 
       dataKey: 'name',
       key: 'name',
     };
     // spark line
-    let col2 = {
+    let colSparkline = {
       title: 'Sparkline', 
       dataIndex: 'sparklineData',
       key: 'sparklineData',
@@ -48,11 +48,10 @@ class TableDataStore {
           dataKey: dateKey,
           key: dateKey, 
         })
-  
       }  
     }
 
-    return [col1, col2,...restCols];
+    return [colName, colSparkline, ...restCols];
 
   }
 
@@ -62,7 +61,7 @@ class TableDataStore {
     return fhirStore.getAllObservationByPatientId(patientId)
       .then(function(data) {
         //console.log(data);
-        let [tableData, columnInfo] = templateStore.getTableData(data, showEqClass)
+        let [tableData, columnInfo] = templateStore.getTableData(data, showEqClass);
         console.log(tableData);
         console.log(columnInfo);
         that.dateList = templateStore.dateList;

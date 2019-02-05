@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import 'antd/dist/antd.css';
-import { Table, Row, Col, Button, Switch } from 'antd';
+import { Row, Col, Button, Switch, Collapse, Icon } from 'antd';
 
 import GridCell from './components/gridCell';
 import { FixedSizeGrid, VariableSizeGrid } from 'react-window';
@@ -13,6 +13,8 @@ import ConditionListDialog from './components/conditionListDialog';
 import tableDataStore from './stores/tableDataStore';
 
 import LHCImage from './lhncbc.jpg';
+
+const Panel = Collapse.Panel;
 
 class App extends Component {
   constructor(props) {
@@ -33,8 +35,9 @@ class App extends Component {
       selectedTemplate: null,
       moreData: false,
       tableHeight: window.innerHeight,
-      tableWidth: window.innerWidth
-
+      tableWidth: window.innerWidth,
+      showAdditionalControls: false,
+      showDebugInfo: false
     };
 
     this.loadData = this.loadData.bind(this);
@@ -43,6 +46,8 @@ class App extends Component {
     this.onEqClassSwitchChange = this.onEqClassSwitchChange.bind(this);
     this.handleResize = this.handleResize.bind(this);
     this.expandCollapseAHeader = this.expandCollapseAHeader.bind(this);
+    this.onAdditionalControlsChange = this.onAdditionalControlsChange.bind(this);
+    this.onDebugSwitchChange = this.onDebugSwitchChange.bind(this);
 
   }
 
@@ -99,7 +104,7 @@ class App extends Component {
           flowsheetData: data.tableData,
           moreData: data.moreData,
           flowsheetColumns: tableDataStore.getColumnHeaders(that.state.zoomLevel)
-        })    
+        });
         console.log(that.state.flowsheetColumns);
       })
       .catch(function(error) {
@@ -109,6 +114,10 @@ class App extends Component {
 
   appendData() {
     let that = this;
+
+    that.setState({
+      moreData: false
+    });
 
     tableDataStore.getNextPageData(this.state.showEqClass)
       .then(function(data) {
@@ -199,6 +208,12 @@ class App extends Component {
 
   }
 
+  onAdditionalControlsChange() {
+    this.setState({
+      showAdditionalControls : !this.state.showAdditionalControls
+    })
+  }
+
   onEqClassSwitchChange(checked) {
 
     this.setState({
@@ -208,6 +223,13 @@ class App extends Component {
 
   }
 
+  onDebugSwitchChange(checked) {
+
+    this.setState({
+      showDebugInfo: checked
+    })
+
+  }
 
   columnWidth(index) {
     return index === 0 ? 300 : index === 1 ? 110 : 120;
@@ -259,7 +281,7 @@ class App extends Component {
           </div>
           <div id='lf-options'>
             <Row type="flex" justify="start" className="lf-row">
-              <Col >
+              <Col>
                 <PatientSearchDialog selectedPatient={this.state.selectedPatient} onOK={(patient) => this.setSelectedPatient(patient)}/>
               </Col>
               { this.state.selectedPatient &&
@@ -270,7 +292,6 @@ class App extends Component {
                   <Col xs={24} sm={12} md={6} lg={4} xl={4}>Gender: <span className="lf-bold">{gender}</span></Col>
                   <Col xs={24} sm={12} md={6} lg={4} xl={4}>DoB: <span className="lf-bold">{dob}</span></Col>
                   <Col xs={24} sm={12} md={6} lg={4} xl={4}>Deceased: <span className="lf-bold">{deceased}</span></Col>
-                  
                 </Row>
               </Col>
               }
@@ -300,10 +321,23 @@ class App extends Component {
               <Col xs={24} sm={12} md={8} lg={8} xl={8}>
                 <Row className="lf-switch-row">
                   <Switch checkedChildren="Equivalence Classes Collapsed" unCheckedChildren="Equivalence Classes Expanded" defaultChecked={false} onChange={this.onEqClassSwitchChange}/>
-                </Row>                
+                </Row>
               </Col>
             </Row>
+
+            <Button className='lf-button' type="dashed" icon={this.state.showAdditionalControls ? "down" : "right"} onClick={() => this.onAdditionalControlsChange()}>Additional Controls</Button>
+
+            { this.state.showAdditionalControls &&
+            <Row type="flex" className="lf-row">
+              <Col xs={24} sm={12} md={8} lg={8} xl={8}>
+                <Row className="lf-switch-row">
+                  <Switch checkedChildren="Debug Info Shown" unCheckedChildren="Debug Info Hidden" defaultChecked={false} onChange={this.onDebugSwitchChange}/>
+                </Row>
+              </Col>
+            </Row>
+            }
           </div>
+
           <Row id="lf-status" className='lf-data-info lf-row'>
             <Col xs={24} sm={12} md={6} lg={6} xl={6}>
               Displayed Resources: <span className="lf-bold">{ tableDataStore.retrievedNumOfRes }</span>
@@ -318,6 +352,8 @@ class App extends Component {
               Rows: <span className="lf-bold">{this.state.flowsheetData ? this.state.flowsheetData.length : 0 }</span>
             </Col>
           </Row>
+
+
         </div>
         <div id="lf-data-table">
           {/* <div><span>{this.state.isLoading ? "Loading ..." : ""}</span></div> */}
@@ -347,6 +383,7 @@ class App extends Component {
                 columns: this.state.flowsheetColumns,
                 showUnit: this.state.showUnit,
                 showEqClass: this.state.showEqClass,
+                showDebugInfo: this.state.showDebugInfo,
                 expColFunc: this.expandCollapseAHeader
               }
               }

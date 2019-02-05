@@ -19,7 +19,9 @@ export default [
 //      "Q": "EquivalenceClass_UCUM",
 //      "R": "Molecular_weight",
 //      "S": "Convert_indicator",
-//      "T": "UNITS_RI"
+//      "T": "UNITS_RI",
+//      "U": "UNITS_DISPLAY",
+//      "V": "UCUM_EX"
 //    },
     {
       "A": 1,
@@ -38,11 +40,11 @@ export default [
     {
       "A": 3,
       "B": "Temp",
-      "C": "Temperature demo",
+      "C": "Temp F->C",
       "D": 65,
       "E": "8310-5",
       "F": "Body temperature",
-      "G": "Temp Farenheit",
+      "G": "Body Temp F",
       "H": "F",
       "I": "97.8 - 99",
       "J": 97.8,
@@ -51,16 +53,18 @@ export default [
       "O": "RI",
       "P": "Cel",
       "Q": "Cel",
-      "T": "DEG F"
+      "T": "DEG F",
+      "U": "F",
+      "V": "[degF]"
     },
     {
       "A": 3,
       "B": "Temp",
-      "C": "Temperature demo",
+      "C": "Temp F->C",
       "D": "65z",
       "E": "8310-5",
       "F": "Body temperature",
-      "G": "Temp Celcius",
+      "G": "Body Temp C",
       "H": "Cel",
       "I": "36.1 - 37.2",
       "J": 36.1,
@@ -69,15 +73,18 @@ export default [
       "O": "RI",
       "P": "Cel",
       "Q": "Cel",
-      "T": "Cel"
+      "T": "Cel",
+      "U": "C",
+      "V": "Cel"
     },
     {
       "A": 3,
       "B": "Temp Auto Axillary",
-      "C": "Temperature demo",
+      "C": "Temp F->C",
       "D": 12986,
       "E": "8328-7",
       "F": "Axillary temperature",
+      "G": "Axil temp F",
       "H": "degF",
       "I": "97 - 99",
       "J": 97,
@@ -86,16 +93,18 @@ export default [
       "O": "RI",
       "P": "Cel",
       "Q": "Cel",
-      "T": "DEG F"
+      "T": "DEG F",
+      "U": "F",
+      "V": "[degF]"
     },
     {
       "A": 3,
       "B": "Temp Auto Oral",
-      "C": "Temperature demo",
+      "C": "Temp F->C",
       "D": 12984,
       "E": "8331-1",
       "F": "Oral temperature",
-      "G": "Oral Temp Farenheit",
+      "G": "Oral temp F",
       "H": "DEG F",
       "I": "97.6 - 99",
       "J": 97.6,
@@ -106,16 +115,18 @@ export default [
       "O": "RI",
       "P": "Cel",
       "Q": "Cel",
-      "T": "DEG F"
+      "T": "DEG F",
+      "U": "F",
+      "V": "[degF]"
     },
     {
       "A": 3,
       "B": "Temp Auto Oral",
-      "C": "Temperature demo",
+      "C": "Temp F->C",
       "D": "12984z",
       "E": "8331-1",
       "F": "Oral temperature",
-      "G": "Oral Temp Celcius",
+      "G": "Oral temp C",
       "H": "Cel",
       "I": "36.4 - 37.2",
       "J": 36.4,
@@ -126,15 +137,18 @@ export default [
       "O": "RI",
       "P": "Cel",
       "Q": "Cel",
-      "T": "C"
+      "T": "C",
+      "U": "C",
+      "V": "Cel"
     },
     {
       "A": 3,
       "B": "Temp Auto Rectal",
-      "C": "Temperature demo",
+      "C": "Temp F->C",
       "D": 12985,
       "E": "8332-9",
       "F": "Rectal temperature",
+      "G": "Rectal temp F",
       "H": "degF",
       "I": "97 - 100.3",
       "J": 97,
@@ -143,15 +157,18 @@ export default [
       "O": "RI",
       "P": "Cel",
       "Q": "Cel",
-      "T": "DEG F"
+      "T": "DEG F",
+      "U": "F",
+      "V": "[degF]"
     },
     {
       "A": 3,
       "B": "Temp Auto Tympanic",
-      "C": "Temperature demo",
+      "C": "Temp F->C",
       "D": 19218,
       "E": "8333-7",
       "F": "Tympanic membrane temperature",
+      "G": "Tymp memb temp F",
       "H": "DegF",
       "I": "95.72 - 100.04",
       "J": 95.72,
@@ -160,12 +177,14 @@ export default [
       "O": "RI",
       "P": "Cel",
       "Q": "Cel",
-      "T": "DEG F"
+      "T": "DEG F",
+      "U": "F",
+      "V": "[degF]"
     },
     {
       "A": 3,
       "B": "Heart Rate",
-      "C": "Heart rate demo",
+      "C": "Heart rate merged",
       "D": 66,
       "E": "8867-4",
       "F": "Heart rate",
@@ -179,11 +198,14 @@ export default [
       "O": "RI",
       "P": "{beats}/min",
       "Q": "{beats}/min",
-      "T": "/MIN"
+      "T": "/MIN",
+      "U": "beats/min",
+      "V": "{beats}/min"
     },
     {
       "A": 3,
       "B": "Heart Rate #2",
+      "C": "Heart rate merged",
       "D": 31686,
       "E": "8867-4",
       "F": "Heart rate",
@@ -195,15 +217,18 @@ export default [
       "M": 40,
       "N": "Heart rate",
       "O": "RI",
-      "T": "/MIN"
+      "T": "/MIN",
+      "U": "beats/min",
+      "V": "{beats}/min"
     },
     {
       "A": 3,
       "B": "Pulse Recumbent",
-      "C": "Heart rate demo",
+      "C": "Heart rate merged",
       "D": 2985,
       "E": "68999-2",
       "F": "Heart rate --supine",
+      "G": "Heart rate --supine",
       "H": "/min",
       "I": "60-100",
       "J": 60,
@@ -212,15 +237,18 @@ export default [
       "O": "RI",
       "P": "{beats}/min",
       "Q": "{beats}/min",
-      "T": "/MIN"
+      "T": "/MIN",
+      "U": "beats/min",
+      "V": "{beats}/min"
     },
     {
       "A": 3,
       "B": "Pulse Apical",
-      "C": "Heart rate demo",
+      "C": "Heart rate merged",
       "D": 3972,
       "E": "8891-4",
       "F": "Heart rate Cardiac apex by palpation",
+      "G": "Heart rate Cardiac apex by palpation",
       "H": "beats/min",
       "I": "60 - 100",
       "J": 60,
@@ -229,12 +257,14 @@ export default [
       "O": "RI",
       "P": "{beats}/min",
       "Q": "{beats}/min",
-      "T": "/MIN"
+      "T": "/MIN",
+      "U": "beats/min",
+      "V": "{beats}/min"
     },
     {
       "A": 3,
       "B": "Pulse Auto",
-      "C": "Heart rate demo",
+      "C": "Heart rate merged",
       "D": 12989,
       "E": "8867-4",
       "F": "Heart rate",
@@ -248,7 +278,9 @@ export default [
       "O": "RI",
       "P": "{beats}/min",
       "Q": "{beats}/min",
-      "T": "/MIN"
+      "T": "/MIN",
+      "U": "beats/min",
+      "V": "{beats}/min"
     },
     {
       "A": 3,
@@ -256,13 +288,16 @@ export default [
       "D": 2986,
       "E": "69001-6",
       "F": "Heart rate --standing",
+      "G": "Heart rate --standing",
       "H": "/min",
       "I": "60 - 100",
       "J": 60,
       "K": 100,
       "N": "Heart rate stand",
       "O": "LN",
-      "T": "/MIN"
+      "T": "/MIN",
+      "U": "beats/min",
+      "V": "{beats}/min"
     },
     {
       "A": 3,
@@ -270,13 +305,16 @@ export default [
       "D": 2987,
       "E": "40442-6",
       "F": "Heart rate --post exercise",
+      "G": "Heart rate --post exercise",
       "H": "/min",
       "I": "<200",
       "J": 60,
       "K": 200,
       "N": "Heart rate p Exc",
       "O": "LN",
-      "T": "/MIN"
+      "T": "/MIN",
+      "U": "beats/min",
+      "V": "{beats}/min"
     },
     {
       "A": 3,
@@ -292,11 +330,14 @@ export default [
       "M": 10,
       "N": "Resp rate",
       "O": "LN",
-      "T": "/MIN"
+      "T": "/MIN",
+      "U": "breaths/min",
+      "V": "{breaths}/min"
     },
     {
       "A": 3,
       "B": "BP Systolic",
+      "C": "BP systolic merged",
       "D": 31685,
       "E": "8480-6",
       "F": "Systolic blood pressure",
@@ -308,11 +349,34 @@ export default [
       "M": 90,
       "N": "BP sys",
       "O": "LN",
-      "T": "mm Hg"
+      "T": "mm Hg",
+      "U": "mmHg",
+      "V": "mm[Hg]"
+    },
+    {
+      "A": 3,
+      "B": "BP Sys Sitting",
+      "C": "BP systolic merged",
+      "D": 68,
+      "E": "8459-0",
+      "F": "Systolic blood pressure--sitting",
+      "G": "BP sys--sitting",
+      "H": "mmHg",
+      "I": "90 - 130",
+      "J": 90,
+      "K": 130,
+      "L": 200,
+      "M": 90,
+      "N": "BP sys--sitting",
+      "O": "LN",
+      "T": "mm Hg",
+      "U": "mmHg",
+      "V": "mm[Hg]"
     },
     {
       "A": 3,
       "B": "BP Diastolic",
+      "C": "BP diastolic merged",
       "D": 31693,
       "E": "8462-4",
       "F": "Diastolic blood pressure",
@@ -324,12 +388,34 @@ export default [
       "M": 40,
       "N": "BP dias",
       "O": "LN",
-      "T": "mm Hg"
+      "T": "mm Hg",
+      "U": "mmHg",
+      "V": "mm[Hg]"
+    },
+    {
+      "A": 3,
+      "B": "BP Dias Sitting",
+      "C": "BP diastolic merged",
+      "D": 69,
+      "E": "8453-3",
+      "F": "Diastolic blood pressure--sitting",
+      "G": "BP dias--sitting",
+      "H": "mmHg",
+      "I": "60 - 85",
+      "J": 60,
+      "K": 85,
+      "L": 130,
+      "M": 40,
+      "N": "BP dias--sitting",
+      "O": "LN",
+      "T": "mm Hg",
+      "U": "mmHg",
+      "V": "mm[Hg]"
     },
     {
       "A": 3,
       "B": "Mean BP",
-      "C": "Mean Arterial Pressure demo",
+      "C": "Mean Arterial Pressure merged",
       "D": 36044,
       "E": "8478-0",
       "F": "Mean blood pressure",
@@ -341,12 +427,14 @@ export default [
       "O": "RI",
       "P": "mm[Hg]",
       "Q": "mm[Hg]",
-      "T": "mm Hg"
+      "T": "mm Hg",
+      "U": "mmHg",
+      "V": "mm[Hg]"
     },
     {
       "A": 3,
       "B": "Mean Arterial Pressure",
-      "C": "Mean Arterial Pressure demo",
+      "C": "Mean Arterial Pressure merged",
       "D": 31692,
       "E": "8478-0",
       "F": "Mean blood pressure",
@@ -358,12 +446,14 @@ export default [
       "O": "RI",
       "P": "mm[Hg]",
       "Q": "mm[Hg]",
-      "T": "mm Hg"
+      "T": "mm Hg",
+      "U": "mmHg",
+      "V": "mm[Hg]"
     },
     {
       "A": 3,
       "B": "MAP Auto",
-      "C": "Mean Arterial Pressure demo",
+      "C": "Mean Arterial Pressure merged",
       "D": 12987,
       "E": "8478-0",
       "F": "Mean blood pressure",
@@ -376,7 +466,9 @@ export default [
       "O": "RI",
       "P": "mm[Hg]",
       "Q": "mm[Hg]",
-      "T": "mm Hg"
+      "T": "mm Hg",
+      "U": "mmHg",
+      "V": "mm[Hg]"
     },
     {
       "A": 3,
@@ -384,6 +476,7 @@ export default [
       "D": 2991,
       "E": "8455-8",
       "F": "Diastolic blood pressure--supine",
+      "G": "BP dias--supine",
       "H": "mm Hg",
       "I": "60 - 85",
       "J": 60,
@@ -392,7 +485,9 @@ export default [
       "M": 40,
       "N": "BP dias--sup",
       "O": "LN",
-      "T": "mm Hg"
+      "T": "mm Hg",
+      "U": "mmHg",
+      "V": "mm[Hg]"
     },
     {
       "A": 3,
@@ -400,6 +495,7 @@ export default [
       "D": 2988,
       "E": "8461-6",
       "F": "Systolic blood pressure--supine",
+      "G": "BP sys--supine",
       "H": "mm Hg",
       "I": "90 - 130",
       "J": 90,
@@ -408,7 +504,9 @@ export default [
       "M": 90,
       "N": "BP sys--sup",
       "O": "LN",
-      "T": "mm Hg"
+      "T": "mm Hg",
+      "U": "mmHg",
+      "V": "mm[Hg]"
     },
     {
       "A": 3,
@@ -416,6 +514,7 @@ export default [
       "D": 1051,
       "E": "8460-8",
       "F": "Systolic blood pressure--standing",
+      "G": "BP sys--standing",
       "H": "mmHg",
       "I": "90 - 130",
       "J": 90,
@@ -424,7 +523,9 @@ export default [
       "M": 90,
       "N": "BP sys--stand",
       "O": "LN",
-      "T": "mm Hg"
+      "T": "mm Hg",
+      "U": "mmHg",
+      "V": "mm[Hg]"
     },
     {
       "A": 3,
@@ -432,6 +533,7 @@ export default [
       "D": 2705,
       "E": "8454-1",
       "F": "Diastolic blood pressure--standing",
+      "G": "BP dias--standing",
       "H": "mmHg",
       "I": "60 - 85",
       "J": 60,
@@ -440,39 +542,9 @@ export default [
       "M": 40,
       "N": "BP dias--stand",
       "O": "LN",
-      "T": "mm Hg"
-    },
-    {
-      "A": 3,
-      "B": "BP Sys Sitting",
-      "D": 68,
-      "E": "8459-0",
-      "F": "Systolic blood pressure--sitting",
-      "H": "mmHg",
-      "I": "90 - 130",
-      "J": 90,
-      "K": 130,
-      "L": 200,
-      "M": 90,
-      "N": "BP sys--sitting",
-      "O": "LN",
-      "T": "mm Hg"
-    },
-    {
-      "A": 3,
-      "B": "BP Dias Sitting",
-      "D": 69,
-      "E": "8453-3",
-      "F": "Diastolic blood pressure--sitting",
-      "H": "mmHg",
-      "I": "60 - 85",
-      "J": 60,
-      "K": 85,
-      "L": 130,
-      "M": 40,
-      "N": "BP dias--sitting",
-      "O": "LN",
-      "T": "mm Hg"
+      "T": "mm Hg",
+      "U": "mmHg",
+      "V": "mm[Hg]"
     },
     {
       "A": 3,
@@ -486,7 +558,9 @@ export default [
       "K": 220,
       "N": "BP sys--W exercise",
       "O": "LN",
-      "T": "mm Hg"
+      "T": "mm Hg",
+      "U": "mmHg",
+      "V": "mm[Hg]"
     },
     {
       "A": 3,
@@ -502,12 +576,14 @@ export default [
       "M": 40,
       "N": "BP dias--W exercise",
       "O": "LN",
-      "T": "mm Hg"
+      "T": "mm Hg",
+      "U": "mmHg",
+      "V": "mm[Hg]"
     },
     {
       "A": 3,
       "B": "Height(In)",
-      "C": "Height demo",
+      "C": "Height in->cm",
       "D": 497,
       "E": "3137-7",
       "F": "Body height Measured",
@@ -516,12 +592,30 @@ export default [
       "O": "RI",
       "P": "cm",
       "Q": "cm",
-      "T": "INCH(S)"
+      "T": "INCH(S)",
+      "U": "in",
+      "V": "[in_i]"
+    },
+    {
+      "A": 3,
+      "B": "Height(In)",
+      "C": "Height in->cm",
+      "D": 497,
+      "E": "3137-7",
+      "F": "Body height Measured",
+      "G": "Height cm",
+      "N": "Body height Measured",
+      "O": "RI",
+      "P": "cm",
+      "Q": "cm",
+      "T": "CM",
+      "U": "cm",
+      "V": "cm"
     },
     {
       "A": 3,
       "B": "Height Metric",
-      "C": "Height demo",
+      "C": "Height in->cm",
       "D": 3897,
       "E": "3137-7",
       "F": "Body height Measured",
@@ -530,12 +624,14 @@ export default [
       "O": "RI",
       "P": "cm",
       "Q": "cm",
-      "T": "CM"
+      "T": "CM",
+      "U": "cm",
+      "V": "cm"
     },
     {
       "A": 3,
       "B": "Weight Lbs",
-      "C": "Weight demo",
+      "C": "Weight lbs->kg",
       "D": 202,
       "E": "3141-9",
       "F": "Body weight Measured",
@@ -545,27 +641,31 @@ export default [
       "O": "RI",
       "P": "kg",
       "Q": "kg",
-      "T": "LBS"
+      "T": "LBS",
+      "U": "lbs",
+      "V": "[lb_av]"
     },
     {
       "A": 3,
       "B": "Weight Lbs",
-      "C": "Weight demo",
+      "C": "Weight lbs->kg",
       "D": "202z",
       "E": "3141-9",
       "F": "Body weight Measured",
-      "G": "Weight lbs",
+      "G": "Weight kg",
       "H": "kg",
       "N": "Weight Measured",
       "O": "RI",
       "P": "kg",
       "Q": "kg",
-      "T": "KG"
+      "T": "KG",
+      "U": "kg",
+      "V": "kg"
     },
     {
       "A": 3,
       "B": "Weight Metric",
-      "C": "Weight demo",
+      "C": "Weight lbs->kg",
       "D": 2996,
       "E": "3141-9",
       "F": "Body weight Measured",
@@ -574,21 +674,26 @@ export default [
       "O": "RI",
       "P": "kg",
       "Q": "kg",
-      "T": "KG"
+      "T": "KG",
+      "U": "kg",
+      "V": "kg"
     },
     {
       "A": 3,
       "B": "Weight Auto",
-      "C": "Weight demo",
+      "C": "Weight lbs->kg",
       "D": 14343,
       "E": "3141-9",
       "F": "Body weight Measured",
+      "G": "Weight lbs",
       "H": "pounds",
       "N": "Weight Measured",
       "O": "RI",
       "P": "kg",
       "Q": "kg",
-      "T": "LBS"
+      "T": "LBS",
+      "U": "lbs",
+      "V": "[lb_av]"
     },
     {
       "A": 2,
@@ -609,7 +714,9 @@ export default [
       "M": 75,
       "N": "SaO2 room air % BldA PulseOx",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 2,
@@ -625,7 +732,9 @@ export default [
       "F": "Output.stool [Volume]",
       "N": "Output.stool Vol",
       "O": "LN",
-      "T": "CC"
+      "T": "CC",
+      "U": "cm3",
+      "V": "cm3"
     },
     {
       "A": 3,
@@ -636,7 +745,9 @@ export default [
       "H": "mL/day",
       "N": "Fluid output urine",
       "O": "LN",
-      "T": "CC"
+      "T": "CC",
+      "U": "cm3",
+      "V": "cm3"
     },
     {
       "A": 3,
@@ -645,7 +756,8 @@ export default [
       "E": "79551-8",
       "F": "Number of stools",
       "N": "Num stools",
-      "O": "LN"
+      "O": "LN",
+      "V": "{#}"
     },
     {
       "A": 3,
@@ -661,7 +773,9 @@ export default [
       "F": "Fluid output emesis",
       "N": "Fluid output emesis",
       "O": "LN",
-      "T": "CC"
+      "T": "CC",
+      "U": "cm3",
+      "V": "cm3"
     },
     {
       "A": 3,
@@ -671,7 +785,9 @@ export default [
       "F": "Fluid output.nasogastric tube Measured",
       "N": "Fluid output NG-tube Measured",
       "O": "LN",
-      "T": "CC"
+      "T": "CC",
+      "U": "cm3",
+      "V": "cm3"
     },
     {
       "A": 3,
@@ -681,7 +797,9 @@ export default [
       "F": "Fluid output total 8 hour",
       "N": "Fluid output total 8h",
       "O": "LN",
-      "T": "CC"
+      "T": "CC",
+      "U": "mL/8hr",
+      "V": "mL/(8.h)"
     },
     {
       "A": 3,
@@ -691,7 +809,9 @@ export default [
       "F": "Stools 24 hour",
       "N": "Stools 24h nRate",
       "O": "LN",
-      "T": "CC"
+      "T": "CC",
+      "U": "/24hr",
+      "V": "{#}/(24.h)"
     },
     {
       "A": 3,
@@ -701,7 +821,9 @@ export default [
       "F": "Stools 8 hour",
       "N": "Stools 8h nRate",
       "O": "LN",
-      "T": "CC"
+      "T": "CC",
+      "U": "/8hr",
+      "V": "{#}/(8.h)"
     },
     {
       "A": 3,
@@ -711,7 +833,9 @@ export default [
       "F": "Fluid output chest tube",
       "N": "Fluid output chest tube",
       "O": "LN",
-      "T": "CC"
+      "T": "CC",
+      "U": "cm3",
+      "V": "cm3"
     },
     {
       "A": 3,
@@ -721,7 +845,9 @@ export default [
       "F": "Fluid output wound drain",
       "N": "Fluid output wound drain",
       "O": "LN",
-      "T": "CC"
+      "T": "CC",
+      "U": "cm3",
+      "V": "cm3"
     },
     {
       "A": 3,
@@ -731,7 +857,9 @@ export default [
       "F": "Fluid output total 24 hour",
       "N": "Fluid output total 24h",
       "O": "LN",
-      "T": "CC"
+      "T": "CC",
+      "U": "mL/24hr",
+      "V": "mL/(24.h)"
     },
     {
       "A": 2,
@@ -747,21 +875,27 @@ export default [
       "F": "Fluid intake intravascular 24 hour",
       "N": "Fluid intake IV 24h",
       "O": "LN",
-      "T": "CC"
+      "T": "CC",
+      "U": "mL/24hr",
+      "V": "mL/(24.h)"
     },
     {
       "A": 3,
       "B": "IN IVPB/24H",
       "D": 26855,
       "O": "RI",
-      "T": "CC"
+      "T": "CC",
+      "U": "cm3",
+      "V": "cm3"
     },
     {
       "A": 3,
       "B": "Intake IVPB Vol/8hrs",
       "D": 26635,
       "O": "RI",
-      "T": "CC"
+      "T": "CC",
+      "U": "cm3",
+      "V": "cm3"
     },
     {
       "A": 3,
@@ -771,7 +905,9 @@ export default [
       "F": "Fluid intake intravascular 8 hour",
       "N": "Fluid intake IV 8h",
       "O": "LN",
-      "T": "CC"
+      "T": "CC",
+      "U": "mL/8hr",
+      "V": "mL/(8.h)"
     },
     {
       "A": 3,
@@ -781,7 +917,9 @@ export default [
       "F": "Fluid intake oral Measured",
       "N": "Fluid intake oral Measured",
       "O": "LN",
-      "T": "CC"
+      "T": "CC",
+      "U": "cm3",
+      "V": "cm3"
     },
     {
       "A": 3,
@@ -791,7 +929,9 @@ export default [
       "F": "Fluid intake total 8 hour",
       "N": "Fluid intake total 8h",
       "O": "LN",
-      "T": "CC"
+      "T": "CC",
+      "U": "mL/8hr",
+      "V": "mL/(8.h)"
     },
     {
       "A": 3,
@@ -801,7 +941,9 @@ export default [
       "F": "Fluid intake Measured",
       "N": "Fluid intake Measured",
       "O": "LN",
-      "T": "CC"
+      "T": "CC",
+      "U": "cm3",
+      "V": "cm3"
     },
     {
       "A": 3,
@@ -811,21 +953,27 @@ export default [
       "F": "Fat intake Measured",
       "N": "Fat intake Measured",
       "O": "LN",
-      "T": "CC"
+      "T": "CC",
+      "U": "g",
+      "V": "g"
     },
     {
       "A": 3,
       "B": "Intake Vol Haf",
       "D": 19138,
       "O": "RI",
-      "T": "CC"
+      "T": "CC",
+      "U": "cm3",
+      "V": "cm3"
     },
     {
       "A": 3,
       "B": "Intake Vol IVPB",
       "D": 19137,
       "O": "RI",
-      "T": "CC"
+      "T": "CC",
+      "U": "cm3",
+      "V": "cm3"
     },
     {
       "A": 3,
@@ -835,7 +983,9 @@ export default [
       "F": "Fluid intake intravascular Measured",
       "N": "Fluid intake IV Measured",
       "O": "LN",
-      "T": "CC"
+      "T": "CC",
+      "U": "cm3",
+      "V": "cm3"
     },
     {
       "A": 3,
@@ -845,7 +995,9 @@ export default [
       "F": "Fluid intake enteral tube Measured",
       "N": "Fluid intake enteral tube Measured",
       "O": "LN",
-      "T": "CC"
+      "T": "CC",
+      "U": "cm3",
+      "V": "cm3"
     },
     {
       "A": 3,
@@ -856,7 +1008,9 @@ export default [
       "H": "mL/day",
       "N": "Fluid IO Pnl 24h",
       "O": "LN",
-      "T": "CC"
+      "T": "CC",
+      "U": "cm3",
+      "V": "cm3"
     },
     {
       "A": 3,
@@ -866,7 +1020,9 @@ export default [
       "F": "Fluid intake total 24 hour",
       "N": "Fluid intake total 24h",
       "O": "LN",
-      "T": "CC"
+      "T": "CC",
+      "U": "mL/24hr",
+      "V": "mL/(24.h)"
     },
     {
       "A": 1,
@@ -905,7 +1061,9 @@ export default [
       "O": "LN",
       "P": "%",
       "Q": "%",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -924,7 +1082,9 @@ export default [
       "P": "mmol/L",
       "Q": "mmol/L",
       "R": 44.0095,
-      "T": "mmol/L"
+      "T": "mmol/L",
+      "U": "mmol/L",
+      "V": "mmol/L"
     },
     {
       "A": 3,
@@ -944,7 +1104,9 @@ export default [
       "O": "LN",
       "P": "mmol/L",
       "Q": "mmol/L",
-      "T": "mmol/L"
+      "T": "mmol/L",
+      "U": "mmol/L",
+      "V": "mmol/L"
     },
     {
       "A": 3,
@@ -964,7 +1126,9 @@ export default [
       "O": "LN",
       "P": "mmol/L",
       "Q": "mmol/L",
-      "T": "mmol/L"
+      "T": "mmol/L",
+      "U": "mmol/L",
+      "V": "mmol/L"
     },
     {
       "A": 3,
@@ -985,7 +1149,9 @@ export default [
       "P": "mmol/L",
       "Q": "mmol/L",
       "R": 35.4535,
-      "T": "mmol/L"
+      "T": "mmol/L",
+      "U": "mmol/L",
+      "V": "mmol/L"
     },
     {
       "A": 3,
@@ -1006,7 +1172,9 @@ export default [
       "P": "mmol/L",
       "Q": "mmol/L",
       "R": 61.0174,
-      "T": "mmol/L"
+      "T": "mmol/L",
+      "U": "mmol/L",
+      "V": "mmol/L"
     },
     {
       "A": 3,
@@ -1021,7 +1189,9 @@ export default [
       "K": 16,
       "N": "Anion Gap4 SerPl-sCnc",
       "O": "LN",
-      "T": "mmol/L"
+      "T": "mmol/L",
+      "U": "mmol/L",
+      "V": "mmol/L"
     },
     {
       "A": 3,
@@ -1045,7 +1215,9 @@ export default [
       "K": 55,
       "N": "ALT Bld-cCnc",
       "O": "LN",
-      "T": "Units/L"
+      "T": "Units/L",
+      "U": "U/L",
+      "V": "U/L"
     },
     {
       "A": 3,
@@ -1060,7 +1232,9 @@ export default [
       "K": 48,
       "N": "AST RBC-cCnc",
       "O": "LN",
-      "T": "Units/L"
+      "T": "Units/L",
+      "U": "U/L",
+      "V": "U/L"
     },
     {
       "A": 3,
@@ -1075,7 +1249,9 @@ export default [
       "K": 22,
       "N": "BUN Bld-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
@@ -1093,7 +1269,9 @@ export default [
       "O": "LN",
       "P": "mg/dL",
       "Q": "mg/dL",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
@@ -1109,12 +1287,14 @@ export default [
       "N": "Creat Bld-mCnc",
       "O": "LN",
       "R": 113.1179,
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
       "B": "Glucose Bld Qn",
-      "C": "Glucose|MCnc|Intravascular-Any||Pt",
+      "C": "Glucose Bld moles->mass",
       "D": 24588,
       "E": "2339-0",
       "F": "Glucose [Mass/volume] in Blood",
@@ -1130,12 +1310,15 @@ export default [
       "P": "mg/dL",
       "Q": "mg/dL",
       "R": 180.156,
-      "T": "mg/dL"
+      "S": "x",
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
       "B": "Glucose Bld Qn (POC)",
-      "C": "Glucose Bld MSCNC demo",
+      "C": "Glucose Bld moles->mass",
       "D": 22414,
       "E": "2339-0",
       "F": "Glucose [Mass/volume] in Blood",
@@ -1151,12 +1334,15 @@ export default [
       "P": "mg/dL",
       "Q": "mg/dL",
       "R": 180.156,
-      "T": "mg/dL"
+      "S": "x",
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
       "B": "Glucose Bld Qn (POC)",
-      "C": "Glucose Bld MSCNC demo",
+      "C": "Glucose Bld moles->mass",
       "D": "22414z",
       "E": "15074-8",
       "F": "Glucose [Moles/volume] in Blood",
@@ -1171,12 +1357,14 @@ export default [
       "Q": "mg/dL",
       "R": 180.156,
       "S": "x",
-      "T": "mmol/L"
+      "T": "mmol/L",
+      "U": "mmol/L",
+      "V": "mmol/L"
     },
     {
       "A": 3,
       "B": "Glucose Bld Fingerstick",
-      "C": "Glucose|MCnc|Intravascular-Any||Pt",
+      "C": "Glucose Bld moles->mass",
       "D": 13014,
       "E": "32016-8",
       "F": "Glucose [Mass/volume] in Capillary blood",
@@ -1192,12 +1380,15 @@ export default [
       "P": "mg/dL",
       "Q": "mg/dL",
       "R": 180.156,
-      "T": "mg/dL"
+      "S": "x",
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
       "B": "Glucose Bld Qn (ISTAT)'",
-      "C": "Glucose|MCnc|Intravascular-Any||Pt",
+      "C": "Glucose Bld moles->mass",
       "D": 18991,
       "E": "2339-0",
       "F": "Glucose [Mass/volume] in Blood",
@@ -1213,12 +1404,15 @@ export default [
       "P": "mg/dL",
       "Q": "mg/dL",
       "R": 180.156,
-      "T": "mg/dL"
+      "S": "x",
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
       "B": "Glucose(ER-IS)",
-      "C": "Glucose|MCnc|Intravascular-Any||Pt",
+      "C": "Glucose Bld moles->mass",
       "D": 20029,
       "E": "2339-0",
       "F": "Glucose [Mass/volume] in Blood",
@@ -1234,7 +1428,10 @@ export default [
       "P": "mg/dL",
       "Q": "mg/dL",
       "R": 180.156,
-      "T": "mg/dL"
+      "S": "x",
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
@@ -1251,7 +1448,9 @@ export default [
       "N": "Lactate BldA-sCnc",
       "O": "LN",
       "R": 89.0705,
-      "T": "mmol/L"
+      "T": "mmol/L",
+      "U": "mmol/L",
+      "V": "mmol/L"
     },
     {
       "A": 3,
@@ -1268,7 +1467,9 @@ export default [
       "M": 3,
       "N": "Ca-I Bld-sCnc",
       "O": "LN",
-      "T": "mmol/L"
+      "T": "mmol/L",
+      "U": "mmol/L",
+      "V": "mmol/L"
     },
     {
       "A": 3,
@@ -1287,7 +1488,9 @@ export default [
       "P": "mg/dL",
       "Q": "mg/dL",
       "R": 386.6535,
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
@@ -1304,7 +1507,9 @@ export default [
       "M": 35,
       "N": "Trigl Bld-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
@@ -1322,7 +1527,9 @@ export default [
       "O": "LN",
       "P": "mg/dL",
       "Q": "mg/dL",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
@@ -1340,7 +1547,8 @@ export default [
       "O": "LN",
       "P": "{ratio}",
       "Q": "{ratio}",
-      "T": 0
+      "U": "ratio",
+      "V": "{ratio}"
     },
     {
       "A": 3,
@@ -1355,7 +1563,9 @@ export default [
       "K": 159,
       "N": "NonHDLc SerPl-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
@@ -1373,7 +1583,9 @@ export default [
       "O": "LN",
       "P": "mg/dL",
       "Q": "mg/dL",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 2,
@@ -1390,7 +1602,9 @@ export default [
       "G": "Hours after meal time",
       "N": "Hours p meal Time Patient",
       "O": "LN",
-      "T": "hr"
+      "T": "hr",
+      "U": "hr",
+      "V": "h"
     },
     {
       "A": 2,
@@ -1414,7 +1628,8 @@ export default [
       "O": "LN",
       "P": "[pH]",
       "Q": "[pH]",
-      "T": 0
+      "U": "pH",
+      "V": "[pH]"
     },
     {
       "A": 4,
@@ -1428,7 +1643,9 @@ export default [
       "J": 7.35,
       "K": 7.45,
       "N": "pH temp adj BldA",
-      "O": "LN"
+      "O": "LN",
+      "U": "pH",
+      "V": "[pH]"
     },
     {
       "A": 4,
@@ -1449,7 +1666,9 @@ export default [
       "P": "mm[Hg]",
       "Q": "mm[Hg]",
       "R": 44.0095,
-      "T": "mm Hg"
+      "T": "mm Hg",
+      "U": "mmHg",
+      "V": "mm[Hg]"
     },
     {
       "A": 4,
@@ -1466,7 +1685,9 @@ export default [
       "N": "pCO2 temp adj Bld",
       "O": "LN",
       "R": 44.0095,
-      "T": "mm Hg"
+      "T": "mm Hg",
+      "U": "mmHg",
+      "V": "mm[Hg]"
     },
     {
       "A": 4,
@@ -1485,7 +1706,9 @@ export default [
       "O": "LN",
       "P": "mm[Hg]",
       "Q": "mm[Hg]",
-      "T": "mm Hg"
+      "T": "mm Hg",
+      "U": "mmHg",
+      "V": "mm[Hg]"
     },
     {
       "A": 4,
@@ -1500,7 +1723,9 @@ export default [
       "K": 100,
       "N": "pO2 temp adj Bld",
       "O": "LN",
-      "T": "mm Hg"
+      "T": "mm Hg",
+      "U": "mmHg",
+      "V": "mm[Hg]"
     },
     {
       "A": 4,
@@ -1515,7 +1740,9 @@ export default [
       "L": 30,
       "N": "Inhaled O2 flow rate",
       "O": "LN",
-      "T": "L/MIN"
+      "T": "L/MIN",
+      "U": "L/min",
+      "V": "L/min"
     },
     {
       "A": 4,
@@ -1530,7 +1757,9 @@ export default [
       "M": 75,
       "N": "SaO2 % Bld",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -1546,7 +1775,9 @@ export default [
       "M": 75,
       "N": "O2 Ct Bld-sCnc",
       "O": "LN",
-      "T": "VOL%"
+      "T": "VOL%",
+      "U": "mol/L",
+      "V": "mol/L"
     },
     {
       "A": 4,
@@ -1565,7 +1796,9 @@ export default [
       "O": "LN",
       "P": "%",
       "Q": "%",
-      "T": "% SAT"
+      "T": "% SAT",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 3,
@@ -1590,7 +1823,8 @@ export default [
       "O": "LN",
       "P": "[pH]",
       "Q": "[pH]",
-      "T": 0
+      "U": "pH",
+      "V": "[pH]"
     },
     {
       "A": 4,
@@ -1604,7 +1838,9 @@ export default [
       "J": 7.21,
       "K": 7.29,
       "N": "pH BldCo",
-      "O": "LN"
+      "O": "LN",
+      "U": "pH",
+      "V": "[pH]"
     },
     {
       "A": 3,
@@ -1625,7 +1861,9 @@ export default [
       "L": 30,
       "N": "Gas flow.O2 setting Oxymiser",
       "O": "LN",
-      "T": "L/MIN"
+      "T": "L/MIN",
+      "U": "L/min",
+      "V": "L/min"
     },
     {
       "A": 4,
@@ -1639,7 +1877,9 @@ export default [
       "K": 50,
       "N": "O2/Inspired gas setting VFr Vent",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -1653,7 +1893,9 @@ export default [
       "K": 100,
       "N": "Inhaled O2 concentration",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -1671,7 +1913,9 @@ export default [
       "O": "LN",
       "P": "mmol/L",
       "Q": "mmol/L",
-      "T": "mmol/L"
+      "T": "mmol/L",
+      "U": "mmol/L",
+      "V": "mmol/L"
     },
     {
       "A": 4,
@@ -1685,7 +1929,9 @@ export default [
       "K": 99,
       "N": "Body temperature",
       "O": "LN",
-      "T": "DEG F"
+      "T": "DEG F",
+      "U": "F",
+      "V": "[degF]"
     },
     {
       "A": 4,
@@ -1700,7 +1946,9 @@ export default [
       "K": 2,
       "N": "MetHgb MFr Bld",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -1711,7 +1959,9 @@ export default [
       "G": "Oxyhemoglobin/Hemoglobin.total mass fraction (Bld)",
       "N": "OxyHgb MFr Bld",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 3,
@@ -1738,7 +1988,8 @@ export default [
       "O": "LN",
       "P": "[pH]",
       "Q": "[pH]",
-      "T": 0
+      "U": "pH",
+      "V": "[pH]"
     },
     {
       "A": 4,
@@ -1757,7 +2008,9 @@ export default [
       "P": "mm[Hg]",
       "Q": "mm[Hg]",
       "R": 44.0095,
-      "T": "mm Hg"
+      "T": "mm Hg",
+      "U": "mmHg",
+      "V": "mm[Hg]"
     },
     {
       "A": 4,
@@ -1775,7 +2028,9 @@ export default [
       "O": "LN",
       "P": "mm[Hg]",
       "Q": "mm[Hg]",
-      "T": "mm Hg"
+      "T": "mm Hg",
+      "U": "mmHg",
+      "V": "mm[Hg]"
     },
     {
       "A": 4,
@@ -1794,7 +2049,9 @@ export default [
       "P": "mmol/L",
       "Q": "mmol/L",
       "R": 61.0174,
-      "T": "mmol/L"
+      "T": "mmol/L",
+      "U": "mmol/L",
+      "V": "mmol/L"
     },
     {
       "A": 4,
@@ -1812,7 +2069,9 @@ export default [
       "O": "LN",
       "P": "mmol/L",
       "Q": "mmol/L",
-      "T": "mmol/L"
+      "T": "mmol/L",
+      "U": "mmol/L",
+      "V": "mmol/L"
     },
     {
       "A": 4,
@@ -1827,7 +2086,9 @@ export default [
       "K": 100,
       "N": "SaO2 % BldA",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -1845,7 +2106,9 @@ export default [
       "O": "LN",
       "P": "mm[Hg]",
       "Q": "mm[Hg]",
-      "T": "mm Hg"
+      "T": "mm Hg",
+      "U": "mmHg",
+      "V": "mm[Hg]"
     },
     {
       "A": 4,
@@ -1859,7 +2122,9 @@ export default [
       "K": 75,
       "N": "SaO2 % BldV",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 3,
@@ -1906,7 +2171,9 @@ export default [
       "K": 250,
       "N": "O2 consumption",
       "O": "LN",
-      "T": "mL/min"
+      "T": "mL/min",
+      "U": "mL/min",
+      "V": "mL/min"
     },
     {
       "A": 4,
@@ -1920,7 +2187,9 @@ export default [
       "K": 4,
       "N": "LV Cardiac index",
       "O": "LN",
-      "T": "L/MIN/M2"
+      "T": "L/MIN/M2",
+      "U": "L/(min.m2)",
+      "V": "L/(min.m2)"
     },
     {
       "A": 4,
@@ -1948,7 +2217,9 @@ export default [
       "K": 250,
       "N": "PV Res",
       "O": "LN",
-      "T": "DYNES*SEC/CM5"
+      "T": "DYNES*SEC/CM5",
+      "U": "dyn.s/cm5",
+      "V": "dyn.s/cm5"
     },
     {
       "A": 4,
@@ -1962,7 +2233,9 @@ export default [
       "K": 1400,
       "N": "SV Res",
       "O": "LN",
-      "T": "DYNES*SEC/CM5"
+      "T": "DYNES*SEC/CM5",
+      "U": "dyn.s/cm5",
+      "V": "dyn.s/cm5"
     },
     {
       "A": 4,
@@ -1972,7 +2245,9 @@ export default [
       "F": "Alveolar-arterial oxygen Partial pressure difference",
       "N": "O2 A-a PPresDiff Respiratory",
       "O": "LN",
-      "T": "mm Hg"
+      "T": "mm Hg",
+      "U": "mmHg",
+      "V": "mm[Hg]"
     },
     {
       "A": 4,
@@ -1982,7 +2257,9 @@ export default [
       "F": "Pulmonary vascular Intrapulmonary shunt",
       "N": "PV Intrapulmonary shunt",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "L/min",
+      "V": "L/min"
     },
     {
       "A": 4,
@@ -1996,7 +2273,9 @@ export default [
       "K": 30,
       "N": "O2 extraction ratio",
       "O": "LN",
-      "T": "VOL%"
+      "T": "VOL%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -2011,7 +2290,9 @@ export default [
       "M": 55,
       "N": "pO2 BldC TcO2",
       "O": "LN",
-      "T": "mL/min"
+      "T": "mL/min",
+      "U": "mmHg",
+      "V": "mm[Hg]"
     },
     {
       "A": 3,
@@ -2037,7 +2318,9 @@ export default [
       "O": "LN",
       "P": "g/dL",
       "Q": "g/dL",
-      "T": "g/dL"
+      "T": "g/dL",
+      "U": "g/dL",
+      "V": "g/dL"
     },
     {
       "A": 4,
@@ -2047,7 +2330,9 @@ export default [
       "F": "Body surface area",
       "N": "BSA",
       "O": "LN",
-      "T": "m2"
+      "T": "m2",
+      "U": "m2",
+      "V": "m2"
     },
     {
       "A": 4,
@@ -2061,7 +2346,9 @@ export default [
       "K": 12,
       "N": "CVP mean",
       "O": "LN",
-      "T": "mm Hg"
+      "T": "mm Hg",
+      "U": "mmHg",
+      "V": "mm[Hg]"
     },
     {
       "A": 4,
@@ -2075,7 +2362,9 @@ export default [
       "K": 15,
       "N": "ICP",
       "O": "LN",
-      "T": "mm Hg"
+      "T": "mm Hg",
+      "U": "mmHg",
+      "V": "mm[Hg]"
     },
     {
       "A": 4,
@@ -2090,7 +2379,9 @@ export default [
       "L": 51,
       "N": "PA BP sys",
       "O": "LN",
-      "T": "mm Hg"
+      "T": "mm Hg",
+      "U": "mmHg",
+      "V": "mm[Hg]"
     },
     {
       "A": 4,
@@ -2105,7 +2396,9 @@ export default [
       "L": 51,
       "N": "PA BP dias",
       "O": "LN",
-      "T": "mm Hg"
+      "T": "mm Hg",
+      "U": "mmHg",
+      "V": "mm[Hg]"
     },
     {
       "A": 4,
@@ -2120,7 +2413,9 @@ export default [
       "L": 21,
       "N": "PAW BP mean",
       "O": "LN",
-      "T": "mm Hg"
+      "T": "mm Hg",
+      "U": "mmHg",
+      "V": "mm[Hg]"
     },
     {
       "A": 4,
@@ -2134,7 +2429,9 @@ export default [
       "K": 7,
       "N": "LV Output",
       "O": "LN",
-      "T": "L/MIN"
+      "T": "L/MIN",
+      "U": "L/min",
+      "V": "L/min"
     },
     {
       "A": 2,
@@ -2155,7 +2452,9 @@ export default [
       "K": 0.4,
       "N": "Troponin I SerPl-mCnc",
       "O": "LN",
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 3,
@@ -2170,7 +2469,9 @@ export default [
       "K": 0.04,
       "N": "Troponin I Bld-mCnc",
       "O": "LN",
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 3,
@@ -2188,7 +2489,9 @@ export default [
       "O": "LN",
       "P": "U/L",
       "Q": "U/L",
-      "T": "Units/L"
+      "T": "Units/L",
+      "U": "U/L",
+      "V": "U/L"
     },
     {
       "A": 3,
@@ -2203,7 +2506,9 @@ export default [
       "K": 5,
       "N": "CK MB SerPl-mCnc",
       "O": "LN",
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 3,
@@ -2219,7 +2524,9 @@ export default [
       "L": 6,
       "N": "CK MB SerPl-cCnc",
       "O": "LN",
-      "T": "Units/L"
+      "T": "Units/L",
+      "U": "U/L",
+      "V": "U/L"
     },
     {
       "A": 3,
@@ -2243,7 +2550,9 @@ export default [
       "K": 6,
       "L": 6,
       "N": "CK/CK MB SerPl-cRto",
-      "O": "LN"
+      "O": "LN",
+      "U": "U/U",
+      "V": "U/U"
     },
     {
       "A": 4,
@@ -2261,7 +2570,9 @@ export default [
       "O": "LN",
       "P": "%",
       "Q": "%",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -2276,7 +2587,9 @@ export default [
       "K": 100,
       "N": "CK MM CFr SerPl",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -2291,7 +2604,9 @@ export default [
       "K": 0,
       "N": "CK BB CFr SerPl",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 3,
@@ -2312,7 +2627,9 @@ export default [
       "K": 0.7,
       "N": "CRP SerPl HS-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/L",
+      "V": "mg/L"
     },
     {
       "A": 4,
@@ -2327,7 +2644,9 @@ export default [
       "K": 0.49,
       "N": "CRP SerPl-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/L",
+      "V": "mg/L"
     },
     {
       "A": 3,
@@ -2342,7 +2661,9 @@ export default [
       "K": 99,
       "N": "BNP SerPl-mCnc",
       "O": "LN",
-      "T": "pg/mL"
+      "T": "pg/mL",
+      "U": "pg/mL",
+      "V": "pg/mL"
     },
     {
       "A": 3,
@@ -2357,7 +2678,9 @@ export default [
       "K": 72,
       "N": "Myoglobin SerPl-mCnc",
       "O": "LN",
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 2,
@@ -2374,7 +2697,9 @@ export default [
       "G": "Transferrin.carbohydrate deficient/Transferrin.total mass fraction",
       "N": "CDT/Tf MFr SerPl",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 3,
@@ -2398,7 +2723,9 @@ export default [
       "O": "LN",
       "P": "%",
       "Q": "%",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -2413,7 +2740,9 @@ export default [
       "K": 6.4,
       "N": "Hgb A1 MFr Bld",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -2431,7 +2760,9 @@ export default [
       "O": "LN",
       "P": "%",
       "Q": "%",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -2449,7 +2780,9 @@ export default [
       "O": "LN",
       "P": "%",
       "Q": "%",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 3,
@@ -2473,7 +2806,9 @@ export default [
       "M": 30,
       "N": "Glucose p fast SerPl-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 4,
@@ -2490,7 +2825,9 @@ export default [
       "M": 30,
       "N": "Glucose 1h p 50 g Glc PO SerPl-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 4,
@@ -2507,7 +2844,9 @@ export default [
       "M": 30,
       "N": "Glucose 1h p Glc SerPl-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 4,
@@ -2524,7 +2863,9 @@ export default [
       "M": 30,
       "N": "Glucose 2h p Glc SerPl-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 4,
@@ -2541,7 +2882,9 @@ export default [
       "M": 30,
       "N": "Glucose 3h p Glc SerPl-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 4,
@@ -2551,7 +2894,9 @@ export default [
       "F": "Glucose [Mass/volume] in Blood --2 hours post dose glucose",
       "G": "Glucose 2 hours p dose glucose mass conc (Bld)",
       "N": "Glucose 2h p Glc Bld-mCnc",
-      "O": "LN"
+      "O": "LN",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 4,
@@ -2568,7 +2913,9 @@ export default [
       "M": 30,
       "N": "Glucose 30M p Glc SerPl-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 4,
@@ -2583,7 +2930,9 @@ export default [
       "K": 180,
       "N": "Glucose 1.5h p Glc SerPl-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
@@ -2600,7 +2949,9 @@ export default [
       "M": 30,
       "N": "Glucose 1h p 75 g Glc PO SerPl-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
@@ -2617,7 +2968,9 @@ export default [
       "M": 30,
       "N": "Glucose 2h p 75 g Glc PO SerPl-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
@@ -2641,7 +2994,9 @@ export default [
       "K": 139,
       "N": "Glucose 2h p meal SerPl-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
@@ -2658,7 +3013,9 @@ export default [
       "M": 30,
       "N": "Glucose 4h p Glc SerPl-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
@@ -2675,7 +3032,9 @@ export default [
       "M": 30,
       "N": "Glucose 5h p Glc SerPl-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
@@ -2690,7 +3049,9 @@ export default [
       "K": 119,
       "N": "Glucose 6h p Glc SerPl-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
@@ -2705,7 +3066,9 @@ export default [
       "K": 280,
       "N": "Fructosamine SerPl-sCnc",
       "O": "LN",
-      "T": "mcmol/L"
+      "T": "mcmol/L",
+      "U": "umol/L",
+      "V": "umol/L"
     },
     {
       "A": 3,
@@ -2720,7 +3083,9 @@ export default [
       "K": 4.2,
       "N": "C peptide SerPl-mCnc",
       "O": "LN",
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 3,
@@ -2735,7 +3100,9 @@ export default [
       "K": 1.45,
       "N": "GAD65 Ab Ser-aCnc",
       "O": "LN",
-      "T": "Units/mL"
+      "T": "Units/mL",
+      "U": "arb'U/mL",
+      "V": "[arb'U]/mL"
     },
     {
       "A": 3,
@@ -2759,7 +3126,9 @@ export default [
       "K": 6.4,
       "N": "Insulin Bovine Ab Titr Ser",
       "O": "LN",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 4,
@@ -2773,7 +3142,9 @@ export default [
       "K": 0.02,
       "N": "Insulin Porcine Ab Titr Ser",
       "O": "LN",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 3,
@@ -2788,7 +3159,9 @@ export default [
       "K": 30,
       "N": "Insulin SerPl-aCnc",
       "O": "LN",
-      "T": "mcU/mL"
+      "T": "mcU/mL",
+      "U": "uIU/mL",
+      "V": "u[IU]/mL"
     },
     {
       "A": 2,
@@ -2880,7 +3253,9 @@ export default [
       "N": "3OH-Dodecanoylcarn SerPl-sCnc",
       "O": "LN",
       "R": 359.5008,
-      "T": "mcmol/L"
+      "T": "mcmol/L",
+      "U": "umol/L",
+      "V": "umol/L"
     },
     {
       "A": 4,
@@ -2895,7 +3270,9 @@ export default [
       "K": 0.1,
       "N": "3OH-Palmitoylcarn SerPl-sCnc",
       "O": "LN",
-      "T": "mcmol/L"
+      "T": "mcmol/L",
+      "U": "umol/L",
+      "V": "umol/L"
     },
     {
       "A": 4,
@@ -2910,7 +3287,9 @@ export default [
       "K": 0.2,
       "N": "3OH-Palmitoleylcarn SerPl-sCnc",
       "O": "LN",
-      "T": "mcmol/L"
+      "T": "mcmol/L",
+      "U": "umol/L",
+      "V": "umol/L"
     },
     {
       "A": 4,
@@ -2926,7 +3305,9 @@ export default [
       "N": "3OH-Linoleoylcarn SerPl-sCnc",
       "O": "LN",
       "R": 439.6285,
-      "T": "mcmol/L"
+      "T": "mcmol/L",
+      "U": "umol/L",
+      "V": "umol/L"
     },
     {
       "A": 4,
@@ -2942,7 +3323,9 @@ export default [
       "N": "3OH-Oleoylcarn SerPl-sCnc",
       "O": "LN",
       "R": 441.6444,
-      "T": "mcmol/L"
+      "T": "mcmol/L",
+      "U": "umol/L",
+      "V": "umol/L"
     },
     {
       "A": 4,
@@ -2958,7 +3341,9 @@ export default [
       "N": "3OH-Tdecanoylcarn SerPl-sCnc",
       "O": "LN",
       "R": 387.5539,
-      "T": "mcmol/L"
+      "T": "mcmol/L",
+      "U": "umol/L",
+      "V": "umol/L"
     },
     {
       "A": 4,
@@ -2974,7 +3359,9 @@ export default [
       "N": "3OH-stearoylcarn SerPl-sCnc",
       "O": "LN",
       "R": 443.6603,
-      "T": "mcmol/L"
+      "T": "mcmol/L",
+      "U": "umol/L",
+      "V": "umol/L"
     },
     {
       "A": 4,
@@ -2989,7 +3376,9 @@ export default [
       "K": 30,
       "N": "Acetylcarn SerPl-sCnc",
       "O": "LN",
-      "T": "mcmol/L"
+      "T": "mcmol/L",
+      "U": "umol/L",
+      "V": "umol/L"
     },
     {
       "A": 4,
@@ -3005,7 +3394,9 @@ export default [
       "N": "3OH-Tdecenoylcarn SerPl-sCnc",
       "O": "LN",
       "R": 385.5381,
-      "T": "mcmol/L"
+      "T": "mcmol/L",
+      "U": "umol/L",
+      "V": "umol/L"
     },
     {
       "A": 4,
@@ -3020,7 +3411,9 @@ export default [
       "K": 0.5,
       "N": "Decenoylcarn SerPl-sCnc",
       "O": "LN",
-      "T": "mcmol/L"
+      "T": "mcmol/L",
+      "U": "umol/L",
+      "V": "umol/L"
     },
     {
       "A": 4,
@@ -3035,7 +3428,9 @@ export default [
       "K": 0.6,
       "N": "Decanoylcarn SerPl-sCnc",
       "O": "LN",
-      "T": "mcmol/L"
+      "T": "mcmol/L",
+      "U": "umol/L",
+      "V": "umol/L"
     },
     {
       "A": 4,
@@ -3051,7 +3446,9 @@ export default [
       "N": "Dodecenoylcarn SerPl-sCnc",
       "O": "LN",
       "R": 341.4855,
-      "T": "mcmol/L"
+      "T": "mcmol/L",
+      "U": "umol/L",
+      "V": "umol/L"
     },
     {
       "A": 4,
@@ -3067,7 +3464,9 @@ export default [
       "N": "Dodecanoylcarn SerPl-sCnc",
       "O": "LN",
       "R": 343.5014,
-      "T": "mcmol/L"
+      "T": "mcmol/L",
+      "U": "umol/L",
+      "V": "umol/L"
     },
     {
       "A": 4,
@@ -3082,7 +3481,9 @@ export default [
       "K": 0.2,
       "N": "Glutarylcarn SerPl-sCnc",
       "O": "LN",
-      "T": "mcmol/L"
+      "T": "mcmol/L",
+      "U": "umol/L",
+      "V": "umol/L"
     },
     {
       "A": 4,
@@ -3098,7 +3499,9 @@ export default [
       "N": "Palmitoylcarn SerPl-sCnc",
       "O": "LN",
       "R": 399.6077,
-      "T": "mcmol/L"
+      "T": "mcmol/L",
+      "U": "umol/L",
+      "V": "umol/L"
     },
     {
       "A": 4,
@@ -3114,7 +3517,9 @@ export default [
       "N": "Hexanoylcarn SerPl-sCnc",
       "O": "LN",
       "R": 259.3419,
-      "T": "mcmol/L"
+      "T": "mcmol/L",
+      "U": "umol/L",
+      "V": "umol/L"
     },
     {
       "A": 4,
@@ -3129,7 +3534,9 @@ export default [
       "K": 0.2,
       "N": "Palmitoleylcarn SerPl-sCnc",
       "O": "LN",
-      "T": "mcmol/L"
+      "T": "mcmol/L",
+      "U": "umol/L",
+      "V": "umol/L"
     },
     {
       "A": 4,
@@ -3145,7 +3552,9 @@ export default [
       "N": "Isobutyrylcarn SerPl-sCnc",
       "O": "LN",
       "R": 231.2887,
-      "T": "mcmol/L"
+      "T": "mcmol/L",
+      "U": "umol/L",
+      "V": "umol/L"
     },
     {
       "A": 4,
@@ -3160,7 +3569,9 @@ export default [
       "K": 0.4,
       "N": "Isovaleryl+MeButyrylcarn SerPl-sCnc",
       "O": "LN",
-      "T": "mcmol/L"
+      "T": "mcmol/L",
+      "U": "umol/L",
+      "V": "umol/L"
     },
     {
       "A": 4,
@@ -3175,7 +3586,9 @@ export default [
       "K": 0.6,
       "N": "Octanoylcarn SerPl-sCnc",
       "O": "LN",
-      "T": "mcmol/L"
+      "T": "mcmol/L",
+      "U": "umol/L",
+      "V": "umol/L"
     },
     {
       "A": 4,
@@ -3191,7 +3604,9 @@ export default [
       "N": "Linoleoylcarn SerPl-sCnc",
       "O": "LN",
       "R": 423.6291,
-      "T": "mcmol/L"
+      "T": "mcmol/L",
+      "U": "umol/L",
+      "V": "umol/L"
     },
     {
       "A": 4,
@@ -3207,7 +3622,9 @@ export default [
       "N": "3OH-Isovalerylcarn SerPl-sCnc",
       "O": "LN",
       "R": 261.3147,
-      "T": "mcmol/L"
+      "T": "mcmol/L",
+      "U": "umol/L",
+      "V": "umol/L"
     },
     {
       "A": 4,
@@ -3222,7 +3639,9 @@ export default [
       "K": 0.8,
       "N": "Octenoylcarn SerPl-sCnc",
       "O": "LN",
-      "T": "mcmol/L"
+      "T": "mcmol/L",
+      "U": "umol/L",
+      "V": "umol/L"
     },
     {
       "A": 4,
@@ -3237,7 +3656,9 @@ export default [
       "K": 0.5,
       "N": "Oleoylcarn SerPl-sCnc",
       "O": "LN",
-      "T": "mcmol/L"
+      "T": "mcmol/L",
+      "U": "umol/L",
+      "V": "umol/L"
     },
     {
       "A": 4,
@@ -3253,7 +3674,9 @@ export default [
       "N": "Propionylcarn SerPl-sCnc",
       "O": "LN",
       "R": 217.2622,
-      "T": "mcmol/L"
+      "T": "mcmol/L",
+      "U": "umol/L",
+      "V": "umol/L"
     },
     {
       "A": 4,
@@ -3269,7 +3692,9 @@ export default [
       "N": "Stearoylcarn SerPl-sCnc",
       "O": "LN",
       "R": 427.6609,
-      "T": "mcmol/L"
+      "T": "mcmol/L",
+      "U": "umol/L",
+      "V": "umol/L"
     },
     {
       "A": 4,
@@ -3284,7 +3709,9 @@ export default [
       "K": 0.3,
       "N": "Tdecadienoylcarn SerPl-sCnc",
       "O": "LN",
-      "T": "mcmol/L"
+      "T": "mcmol/L",
+      "U": "umol/L",
+      "V": "umol/L"
     },
     {
       "A": 4,
@@ -3299,7 +3726,9 @@ export default [
       "K": 0.4,
       "N": "Tdecanoylcarn SerPl-sCnc",
       "O": "LN",
-      "T": "mcmol/L"
+      "T": "mcmol/L",
+      "U": "umol/L",
+      "V": "umol/L"
     },
     {
       "A": 4,
@@ -3314,7 +3743,9 @@ export default [
       "K": 0.4,
       "N": "Tdecenoylcarn SerPl-sCnc",
       "O": "LN",
-      "T": "mcmol/L"
+      "T": "mcmol/L",
+      "U": "umol/L",
+      "V": "umol/L"
     },
     {
       "A": 3,
@@ -3329,7 +3760,9 @@ export default [
       "K": 199,
       "N": "Apo A-I SerPl-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "g/L",
+      "V": "g/L"
     },
     {
       "A": 3,
@@ -3344,7 +3777,9 @@ export default [
       "K": 125,
       "N": "Apo B SerPl-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
@@ -3362,7 +3797,9 @@ export default [
       "O": "LN",
       "P": "umol/L",
       "Q": "umol/L",
-      "T": "mcmol/L"
+      "T": "mcmol/L",
+      "U": "umol/L",
+      "V": "umol/L"
     },
     {
       "A": 3,
@@ -3377,7 +3814,9 @@ export default [
       "K": 73,
       "N": "Carnitine SerPl-sCnc",
       "O": "LN",
-      "T": "mcmol/L"
+      "T": "mcmol/L",
+      "U": "umol/L",
+      "V": "umol/L"
     },
     {
       "A": 3,
@@ -3392,7 +3831,9 @@ export default [
       "K": 24,
       "N": "Carn esters SerPl-sCnc",
       "O": "LN",
-      "T": "mcmol/L"
+      "T": "mcmol/L",
+      "U": "umol/L",
+      "V": "umol/L"
     },
     {
       "A": 3,
@@ -3407,7 +3848,9 @@ export default [
       "K": 61,
       "N": "Carnitine Free SerPl-sCnc",
       "O": "LN",
-      "T": "mcmol/L"
+      "T": "mcmol/L",
+      "U": "umol/L",
+      "V": "umol/L"
     },
     {
       "A": 3,
@@ -3421,7 +3864,9 @@ export default [
       "J": 0.12,
       "K": 0.42,
       "N": "Carn esters/C0 SerPl-sRto",
-      "O": "LN"
+      "O": "LN",
+      "U": "ratio",
+      "V": "{Ratio}"
     },
     {
       "A": 3,
@@ -3436,7 +3881,9 @@ export default [
       "K": 0.72,
       "N": "NEFA SerPl-sCnc",
       "O": "LN",
-      "T": "mcmol/L"
+      "T": "mcmol/L",
+      "U": "mmol/L",
+      "V": "mmol/L"
     },
     {
       "A": 3,
@@ -3451,7 +3898,9 @@ export default [
       "K": 1000,
       "N": "Lipids Ser-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
@@ -3466,7 +3915,9 @@ export default [
       "K": 38,
       "N": "HDL MFr SerPl",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 3,
@@ -3481,7 +3932,9 @@ export default [
       "K": 23,
       "N": "VLDL MFr SerPl",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 3,
@@ -3496,7 +3949,9 @@ export default [
       "K": 50,
       "N": "LDL MFr SerPl",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 3,
@@ -3507,7 +3962,9 @@ export default [
       "G": "Chylomicrons/total Lipoprotein mass fraction",
       "N": "Chylo MFr SerPl",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 3,
@@ -3522,7 +3979,9 @@ export default [
       "K": 25,
       "N": "ICG 15M p dose ICG Plas-mCnc",
       "O": "LN",
-      "T": "%RETEN 2 MIN"
+      "T": "%RETEN 2 MIN",
+      "U": "mg/L",
+      "V": "mg/L"
     },
     {
       "A": 2,
@@ -3543,7 +4002,9 @@ export default [
       "K": 174,
       "N": "A1AT SerPl-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
@@ -3558,7 +4019,9 @@ export default [
       "K": 2.4,
       "N": "B2 Microglob SerPl-mCnc",
       "O": "LN",
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 3,
@@ -3582,7 +4045,9 @@ export default [
       "O": "LN",
       "P": "g/dL",
       "Q": "g/dL",
-      "T": "g/dL"
+      "T": "g/dL",
+      "U": "g/dL",
+      "V": "g/dL"
     },
     {
       "A": 4,
@@ -3600,7 +4065,9 @@ export default [
       "O": "LN",
       "P": "g/dL",
       "Q": "g/dL",
-      "T": "G/TV"
+      "T": "G/TV",
+      "U": "g/24hr",
+      "V": "g/24"
     },
     {
       "A": 4,
@@ -3618,7 +4085,9 @@ export default [
       "O": "LN",
       "P": "mg/24",
       "Q": "mg/24",
-      "T": "MG/24H"
+      "T": "MG/24H",
+      "U": "mg/24",
+      "V": "mg/24"
     },
     {
       "A": 4,
@@ -3633,7 +4102,9 @@ export default [
       "K": 4.7,
       "N": "Albumin SerPl Elph-mCnc",
       "O": "LN",
-      "T": "g/dL"
+      "T": "g/dL",
+      "U": "g/dL",
+      "V": "g/dL"
     },
     {
       "A": 4,
@@ -3648,7 +4119,9 @@ export default [
       "K": 0.32,
       "N": "Alpha1 Glob SerPl Elph-mCnc",
       "O": "LN",
-      "T": "g/dL"
+      "T": "g/dL",
+      "U": "g/dL",
+      "V": "g/dL"
     },
     {
       "A": 4,
@@ -3663,7 +4136,9 @@ export default [
       "K": 0.9,
       "N": "Alpha2 Glob SerPl Elph-mCnc",
       "O": "LN",
-      "T": "g/dL"
+      "T": "g/dL",
+      "U": "g/dL",
+      "V": "g/dL"
     },
     {
       "A": 4,
@@ -3678,7 +4153,9 @@ export default [
       "K": 293,
       "N": "A2 Macroglob SerPl-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "g/l",
+      "V": "g/l"
     },
     {
       "A": 4,
@@ -3693,7 +4170,9 @@ export default [
       "K": 1.15,
       "N": "B-Globulin SerPl Elph-mCnc",
       "O": "LN",
-      "T": "g/dL"
+      "T": "g/dL",
+      "U": "g/dL",
+      "V": "g/dL"
     },
     {
       "A": 4,
@@ -3708,7 +4187,9 @@ export default [
       "K": 1.4,
       "N": "Gamma glob SerPl Elph-mCnc",
       "O": "LN",
-      "T": "g/dL"
+      "T": "g/dL",
+      "U": "g/dL",
+      "V": "g/dL"
     },
     {
       "A": 4,
@@ -3723,7 +4204,9 @@ export default [
       "K": 0,
       "N": "Gamma glob MFr Ur Elph",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -3738,7 +4221,9 @@ export default [
       "K": 19.4,
       "N": "Kappa LC Free 24h Ur-mRate",
       "O": "LN",
-      "T": "MG/24H"
+      "T": "MG/24H",
+      "U": "mg/24hr",
+      "V": "mg/(24.h)"
     },
     {
       "A": 4,
@@ -3753,7 +4238,9 @@ export default [
       "K": 0,
       "N": "Albumin MFr Ur Elph",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -3768,7 +4255,9 @@ export default [
       "K": 0,
       "N": "Alpha1 Glob MFr Ur Elph",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -3783,7 +4272,9 @@ export default [
       "K": 0,
       "N": "Alpha2 Glob MFr Ur Elph",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -3798,7 +4289,9 @@ export default [
       "K": 0,
       "N": "B-Globulin MFr Ur Elph",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 3,
@@ -3813,7 +4306,9 @@ export default [
       "K": 1.2,
       "N": "Alpha subunit SerPl-mCnc",
       "O": "LN",
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 3,
@@ -3831,7 +4326,9 @@ export default [
       "O": "LN",
       "P": "mg/dL",
       "Q": "mg/dL",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
@@ -3847,7 +4344,9 @@ export default [
       "N": "Gastrin SerPl-mCnc",
       "O": "LN",
       "R": 1120.2869,
-      "T": "pg/mL"
+      "T": "pg/mL",
+      "U": "pg/mL",
+      "V": "pg/mL"
     },
     {
       "A": 3,
@@ -3862,7 +4361,9 @@ export default [
       "K": 21,
       "N": "Myoglobin Ur-mCnc",
       "O": "LN",
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "ug/L",
+      "V": "ug/L"
     },
     {
       "A": 3,
@@ -3877,7 +4378,9 @@ export default [
       "K": 6,
       "N": "Retinol Bind Prot SerPl-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
@@ -3892,7 +4395,9 @@ export default [
       "K": 38,
       "N": "Prealb SerPl-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "g/dL",
+      "V": "g/dL"
     },
     {
       "A": 3,
@@ -3907,7 +4412,9 @@ export default [
       "K": 60,
       "N": "VIP SerPl-mCnc",
       "O": "LN",
-      "T": "pg/mL"
+      "T": "pg/mL",
+      "U": "ng/L",
+      "V": "ng/L"
     },
     {
       "A": 2,
@@ -3928,7 +4435,9 @@ export default [
       "K": 67,
       "N": "ACE SerPl-cCnc",
       "O": "LN",
-      "T": "Units/L"
+      "T": "Units/L",
+      "U": "U/L",
+      "V": "U/L"
     },
     {
       "A": 3,
@@ -3943,7 +4452,9 @@ export default [
       "K": 2.1,
       "N": "ACP SerPl-cCnc",
       "O": "LN",
-      "T": "Units/L"
+      "T": "Units/L",
+      "U": "U/L",
+      "V": "U/L"
     },
     {
       "A": 3,
@@ -3961,7 +4472,9 @@ export default [
       "O": "LN",
       "P": "ng/mL",
       "Q": "ng/mL",
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 3,
@@ -3979,7 +4492,9 @@ export default [
       "O": "LN",
       "P": "U/L",
       "Q": "U/L",
-      "T": "Units/L"
+      "T": "Units/L",
+      "U": "U/L",
+      "V": "U/L"
     },
     {
       "A": 3,
@@ -4000,7 +4515,9 @@ export default [
       "K": 35,
       "N": "ALP heat labile SerPl HS-cCnc",
       "O": "LN",
-      "T": "mU/mL"
+      "T": "mU/mL",
+      "U": "U/L",
+      "V": "U/L"
     },
     {
       "A": 4,
@@ -4015,7 +4532,9 @@ export default [
       "K": 21,
       "N": "ALP heat stable SerPl HS-cCnc",
       "O": "LN",
-      "T": "mU/mL"
+      "T": "mU/mL",
+      "U": "U/L",
+      "V": "U/L"
     },
     {
       "A": 4,
@@ -4030,7 +4549,9 @@ export default [
       "K": 60,
       "N": "ALP Bone SerPl-cCnc",
       "O": "LN",
-      "T": "Units/L"
+      "T": "Units/L",
+      "U": "U/L",
+      "V": "U/L"
     },
     {
       "A": 4,
@@ -4045,7 +4566,9 @@ export default [
       "K": 60,
       "N": "ALP Bone CFr SerPl",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -4060,7 +4583,9 @@ export default [
       "K": 0,
       "N": "ALP Liver SerPl-cCnc",
       "O": "LN",
-      "T": "Units"
+      "T": "Units",
+      "U": "U/L",
+      "V": "U/L"
     },
     {
       "A": 4,
@@ -4075,7 +4600,9 @@ export default [
       "K": 80,
       "N": "ALP Liver CFr SerPl",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -4090,7 +4617,9 @@ export default [
       "K": 0,
       "N": "ALP Macrohepatic CFr SerPl",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -4104,7 +4633,9 @@ export default [
       "J": 0,
       "K": 0,
       "N": "ALP Plac SerPl-cCnc",
-      "O": "LN"
+      "O": "LN",
+      "U": "U/L",
+      "V": "U/L"
     },
     {
       "A": 4,
@@ -4119,7 +4650,9 @@ export default [
       "K": 10,
       "N": "ALP Intest SerPl-cCnc",
       "O": "LN",
-      "T": "Units/L"
+      "T": "Units/L",
+      "U": "U/L",
+      "V": "U/L"
     },
     {
       "A": 4,
@@ -4134,7 +4667,9 @@ export default [
       "K": 10,
       "N": "ALP Intest CFr SerPl",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -4145,7 +4680,9 @@ export default [
       "G": "ALP Other enzyme act/vol",
       "N": "ALP Other SerPl-cCnc",
       "O": "LN",
-      "T": "Units/L"
+      "T": "Units/L",
+      "U": "U/L",
+      "V": "U/L"
     },
     {
       "A": 4,
@@ -4160,7 +4697,9 @@ export default [
       "K": 400,
       "N": "ALP Iso SerPl-aCnc",
       "O": "LN",
-      "T": "Units/L"
+      "T": "Units/L",
+      "U": "arb'U/mL",
+      "V": "[arb'U]/mL"
     },
     {
       "A": 3,
@@ -4187,7 +4726,9 @@ export default [
       "O": "LN",
       "P": "U/L",
       "Q": "U/L",
-      "T": "Units/L"
+      "T": "Units/L",
+      "U": "U/L",
+      "V": "U/L"
     },
     {
       "A": 4,
@@ -4202,7 +4743,9 @@ export default [
       "K": 90,
       "N": "Amylase S SerPl-cCnc",
       "O": "LN",
-      "T": "Units/L"
+      "T": "Units/L",
+      "U": "U/L",
+      "V": "U/L"
     },
     {
       "A": 4,
@@ -4217,7 +4760,9 @@ export default [
       "K": 36,
       "N": "Amylase P SerPl-cCnc",
       "O": "LN",
-      "T": "Units/L"
+      "T": "Units/L",
+      "U": "U/L",
+      "V": "U/L"
     },
     {
       "A": 3,
@@ -4241,7 +4786,9 @@ export default [
       "O": "LN",
       "P": "U/L",
       "Q": "U/L",
-      "T": "Units/L"
+      "T": "Units/L",
+      "U": "U/L",
+      "V": "U/L"
     },
     {
       "A": 3,
@@ -4262,7 +4809,9 @@ export default [
       "K": 25,
       "N": "LDH1 CFr SerPl Elph",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -4277,7 +4826,9 @@ export default [
       "K": 41,
       "N": "LDH2 CFr SerPl Elph",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -4292,7 +4843,9 @@ export default [
       "K": 27,
       "N": "LDH3 CFr SerPl Elph",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -4307,7 +4860,9 @@ export default [
       "K": 21,
       "N": "LDH4 CFr SerPl Elph",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -4322,7 +4877,9 @@ export default [
       "K": 16,
       "N": "LDH5 CFr SerPl Elph",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 3,
@@ -4337,7 +4894,9 @@ export default [
       "K": 0,
       "N": "ALP Regan SerPl-cCnc",
       "O": "LN",
-      "T": "Units"
+      "T": "Units",
+      "U": "U",
+      "V": "U"
     },
     {
       "A": 3,
@@ -4360,7 +4919,9 @@ export default [
       "K": 13,
       "N": "Cholinesterase SerPl-cCnc",
       "O": "LN",
-      "T": "Units/mL"
+      "T": "Units/mL",
+      "U": "U/L",
+      "V": "U/L"
     },
     {
       "A": 3,
@@ -4393,7 +4954,9 @@ export default [
       "K": 88,
       "N": "ALP Liver 2 SerPl-cCnc",
       "O": "LN",
-      "T": "Units"
+      "T": "Units",
+      "U": "U/L",
+      "V": "U/L"
     },
     {
       "A": 2,
@@ -4419,7 +4982,9 @@ export default [
       "K": 80,
       "N": "Porphyrins RBC-mCnc",
       "O": "LN",
-      "T": "mcg/dL"
+      "T": "mcg/dL",
+      "U": "ug/dL",
+      "V": "ug/dL"
     },
     {
       "A": 3,
@@ -4434,7 +4999,9 @@ export default [
       "K": 2,
       "N": "Heptacarboxylate/Creat 24h Ur-sRto",
       "O": "LN",
-      "T": "MCMOL/MOL"
+      "T": "MCMOL/MOL",
+      "U": "umol/molcreat",
+      "V": "umol/mol{creat}"
     },
     {
       "A": 3,
@@ -4449,7 +5016,9 @@ export default [
       "K": 59,
       "N": "FEP Bld-mCnc",
       "O": "LN",
-      "T": "mcg/dL"
+      "T": "mcg/dL",
+      "U": "ug/dL",
+      "V": "ug/dL"
     },
     {
       "A": 3,
@@ -4465,7 +5034,9 @@ export default [
       "N": "PBG Ur-mCnc",
       "O": "LN",
       "R": 226.2292,
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 3,
@@ -4481,7 +5052,9 @@ export default [
       "N": "PBG Ur-sCnc",
       "O": "LN",
       "R": 226.2292,
-      "T": "mcmol/L"
+      "T": "mcmol/L",
+      "U": "umol/L",
+      "V": "umol/L"
     },
     {
       "A": 3,
@@ -4497,7 +5070,9 @@ export default [
       "N": "PBG 24h Ur-mRate",
       "O": "LN",
       "R": 226.2292,
-      "T": "MG/24H"
+      "T": "MG/24H",
+      "U": "mg/24hr",
+      "V": "mg/(24.h)"
     },
     {
       "A": 3,
@@ -4513,7 +5088,9 @@ export default [
       "N": "Copro/Creat 24h Ur-sRto",
       "O": "LN",
       "R": 654.7089,
-      "T": "MCMOL/MOL"
+      "T": "MCMOL/MOL",
+      "U": "mmol/molcreat",
+      "V": "mmol/mol{creat}"
     },
     {
       "A": 3,
@@ -4529,7 +5106,9 @@ export default [
       "N": "Copro 24h Ur-mRate",
       "O": "LN",
       "R": 654.7089,
-      "T": "mcg/TV"
+      "T": "mcg/TV",
+      "U": "ug/24hr",
+      "V": "ug/(24.h)"
     },
     {
       "A": 3,
@@ -4545,7 +5124,9 @@ export default [
       "N": "ZPP RBC-mCnc",
       "O": "LN",
       "R": 628.0661,
-      "T": "mcg/dL"
+      "T": "mcg/dL",
+      "U": "ug/dL",
+      "V": "ug/dL"
     },
     {
       "A": 3,
@@ -4561,7 +5142,9 @@ export default [
       "N": "Uropor 24h Ur-mRate",
       "O": "LN",
       "R": 830.7469,
-      "T": "mcg/TV"
+      "T": "mcg/TV",
+      "U": "ug/24hr",
+      "V": "ug/(24.h)"
     },
     {
       "A": 3,
@@ -4577,7 +5160,9 @@ export default [
       "N": "Uropor/Creat 24h Ur-sRto",
       "O": "LN",
       "R": 830.7469,
-      "T": "MCMOL/MOL CR"
+      "T": "MCMOL/MOL CR",
+      "U": "umol/molcreat",
+      "V": "umol/mol{creat}"
     },
     {
       "A": 3,
@@ -4595,7 +5180,9 @@ export default [
       "P": "mg/dL",
       "Q": "mg/dL",
       "R": 113.1179,
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
@@ -4614,7 +5201,9 @@ export default [
       "P": "mg/24",
       "Q": "mg/24",
       "R": 113.1179,
-      "T": "mg/day"
+      "T": "mg/day",
+      "U": "mg/24",
+      "V": "mg/24"
     },
     {
       "A": 3,
@@ -4629,7 +5218,9 @@ export default [
       "K": 0,
       "N": "Specimen vol ?Tm Ur",
       "O": "LN",
-      "T": "mL"
+      "T": "mL",
+      "U": "mL",
+      "V": "mL"
     },
     {
       "A": 3,
@@ -4640,7 +5231,9 @@ export default [
       "G": "Collection duration time (* U)",
       "N": "Collect duration Time Ur",
       "O": "LN",
-      "T": "hr"
+      "T": "hr",
+      "U": "hr",
+      "V": "h"
     },
     {
       "A": 2,
@@ -4661,7 +5254,9 @@ export default [
       "K": 24,
       "N": "AFP-TM SerPl-mCnc",
       "O": "LN",
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 3,
@@ -4679,7 +5274,9 @@ export default [
       "O": "LN",
       "P": "mU/mL",
       "Q": "mU/mL",
-      "T": "mU/mL"
+      "T": "mU/mL",
+      "U": "mU/mL",
+      "V": "mU/mL"
     },
     {
       "A": 3,
@@ -4694,7 +5291,9 @@ export default [
       "K": 3,
       "N": "B-HCG SerPl EIA 3rd IS-aCnc",
       "O": "LN",
-      "T": "mU/mL"
+      "T": "mU/mL",
+      "U": "mIU/mL",
+      "V": "m[IU]/mL"
     },
     {
       "A": 3,
@@ -4709,7 +5308,9 @@ export default [
       "K": 1.56,
       "N": "B2 Microglob tumor marker Ser-mCnc",
       "O": "LN",
-      "T": "Units/L"
+      "T": "Units/L",
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 3,
@@ -4727,7 +5328,9 @@ export default [
       "O": "LN",
       "P": "U/mL",
       "Q": "U/mL",
-      "T": "Units/mL"
+      "T": "Units/mL",
+      "U": "U/mL",
+      "V": "U/mL"
     },
     {
       "A": 3,
@@ -4742,7 +5345,9 @@ export default [
       "K": 37.7,
       "N": "Cancer Ag27-29 SerPl-aCnc",
       "O": "LN",
-      "T": "Units/mL"
+      "T": "Units/mL",
+      "U": "arb'U/mL",
+      "V": "[arb'U]/mL"
     },
     {
       "A": 3,
@@ -4757,7 +5362,9 @@ export default [
       "K": 37,
       "N": "Cancer Ag19-9 SerPl-aCnc",
       "O": "LN",
-      "T": "Units/mL"
+      "T": "Units/mL",
+      "U": "arb'U/mL",
+      "V": "[arb'U]/mL"
     },
     {
       "A": 3,
@@ -4772,7 +5379,9 @@ export default [
       "K": 31,
       "N": "Cancer Ag15-3 SerPl-aCnc",
       "O": "LN",
-      "T": "Units/mL"
+      "T": "Units/mL",
+      "U": "arb'U/mL",
+      "V": "[arb'U]/mL"
     },
     {
       "A": 3,
@@ -4787,7 +5396,9 @@ export default [
       "K": 2.5,
       "N": "CEA SerPl-mCnc",
       "O": "LN",
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 3,
@@ -4802,7 +5413,9 @@ export default [
       "K": 4,
       "N": "PSA SerPl-mCnc",
       "O": "LN",
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 3,
@@ -4817,7 +5430,9 @@ export default [
       "K": 3.5,
       "N": "Complexed PSA SerPl-mCnc",
       "O": "LN",
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 3,
@@ -4828,7 +5443,9 @@ export default [
       "G": "PSA Free mass conc",
       "N": "PSA Free SerPl-mCnc",
       "O": "LN",
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 3,
@@ -4842,7 +5459,9 @@ export default [
       "J": 25,
       "N": "PSA Free MFr SerPl",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 2,
@@ -4881,7 +5500,9 @@ export default [
       "K": 13.9,
       "N": "Hcys SerPl-sCnc",
       "O": "LN",
-      "T": "mcmol/L"
+      "T": "mcmol/L",
+      "U": "umol/L",
+      "V": "umol/L"
     },
     {
       "A": 5,
@@ -4900,7 +5521,9 @@ export default [
       "P": "umol/L",
       "Q": "umol/L",
       "R": 116.0733,
-      "T": "NMOL/L"
+      "T": "NMOL/L",
+      "U": "nmol/L",
+      "V": "nmol/L"
     },
     {
       "A": 4,
@@ -4921,7 +5544,9 @@ export default [
       "K": 26.55,
       "N": "Cystine Ur-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 5,
@@ -4936,7 +5561,9 @@ export default [
       "K": 184,
       "N": "Cystine 24h Ur-mRate",
       "O": "LN",
-      "T": "mg/day"
+      "T": "mg/day",
+      "U": "mg/24hr",
+      "V": "mg/(24.h)"
     },
     {
       "A": 5,
@@ -4947,7 +5574,9 @@ export default [
       "G": "Cystine/Creatinine Ratio (U)",
       "N": "Cystine/Creat Ur-Rto",
       "O": "LN",
-      "T": "uM/gCR"
+      "T": "uM/gCR",
+      "U": "umol/gcreat",
+      "V": "umol/g{creat}"
     },
     {
       "A": 5,
@@ -4962,7 +5591,9 @@ export default [
       "K": 60,
       "N": "Cysteine 24h Ur-mRate",
       "O": "LN",
-      "T": "MG/24H"
+      "T": "MG/24H",
+      "U": "mg/24hr",
+      "V": "mg/(24.h)"
     },
     {
       "A": 5,
@@ -4978,7 +5609,9 @@ export default [
       "N": "OH-Proline 24h Ur-mRate",
       "O": "LN",
       "R": 131.1299,
-      "T": "MG/24H"
+      "T": "MG/24H",
+      "U": "mg/24hr",
+      "V": "mg/(24.h)"
     },
     {
       "A": 5,
@@ -4993,7 +5626,9 @@ export default [
       "K": 1.2,
       "N": "OH-Proline Free 24h Ur-mRate",
       "O": "LN",
-      "T": "MG/24H"
+      "T": "MG/24H",
+      "U": "mg/24hr",
+      "V": "mg/(24.h)"
     },
     {
       "A": 5,
@@ -5011,7 +5646,9 @@ export default [
       "P": "mg/dL",
       "Q": "mg/dL",
       "R": 113.1179,
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
@@ -5065,7 +5702,9 @@ export default [
       "K": 52,
       "N": "GA--@ birth",
       "O": "LN",
-      "T": "week"
+      "T": "week",
+      "U": "wk",
+      "V": "wk"
     },
     {
       "A": 3,
@@ -5112,7 +5751,9 @@ export default [
       "K": 100,
       "N": "Sperm Motile 1h p ejac NFr Smn",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -5128,7 +5769,9 @@ export default [
       "F": "Sexual abstinence duration",
       "G": "Sexual abstinence duration time",
       "N": "Sex Abstin duration Time Patient",
-      "O": "LN"
+      "O": "LN",
+      "U": "d",
+      "V": "d"
     },
     {
       "A": 4,
@@ -5143,7 +5786,9 @@ export default [
       "K": 5,
       "N": "Specimen vol Smn",
       "O": "LN",
-      "T": "CC"
+      "T": "CC",
+      "U": "cm3",
+      "V": "cm3"
     },
     {
       "A": 4,
@@ -5153,7 +5798,9 @@ export default [
       "F": "pH of Semen",
       "G": "pH (Sem)",
       "N": "pH Smn",
-      "O": "LN"
+      "O": "LN",
+      "U": "pH",
+      "V": "[pH]"
     },
     {
       "A": 4,
@@ -5171,7 +5818,9 @@ export default [
       "O": "LN",
       "P": "10*6/mL",
       "Q": "10*6/mL",
-      "T": "MILL PER CC"
+      "T": "MILL PER CC",
+      "U": "10*6/mL",
+      "V": "10*6/mL"
     },
     {
       "A": 4,
@@ -5186,7 +5835,9 @@ export default [
       "K": 100,
       "N": "Sperm Norm NFr Smn",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -5208,7 +5859,9 @@ export default [
       "K": 10,
       "N": "Sperm Lg Oval Head NFr Smn",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 5,
@@ -5223,7 +5876,9 @@ export default [
       "K": 40,
       "N": "Sperm Immature NFr Smn",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 5,
@@ -5238,7 +5893,9 @@ export default [
       "K": 10,
       "N": "Sperm Pin Head NFr Smn",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 5,
@@ -5253,7 +5910,9 @@ export default [
       "K": 10,
       "N": "Sperm Duplicate Head NFr Smn",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 5,
@@ -5268,7 +5927,9 @@ export default [
       "K": 10,
       "N": "Sperm Duplicate Tail NFr Smn",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 3,
@@ -5296,7 +5957,9 @@ export default [
       "N": "11OH-Androst 24h Ur-mRate",
       "O": "LN",
       "R": 306.4397,
-      "T": "MG/24H"
+      "T": "MG/24H",
+      "U": "mg/24hr",
+      "V": "mg/(24.h)"
     },
     {
       "A": 4,
@@ -5312,7 +5975,9 @@ export default [
       "N": "Androst SerPl-mCnc",
       "O": "LN",
       "R": 286.4085,
-      "T": "ng/dL"
+      "T": "ng/dL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 4,
@@ -5328,7 +5993,9 @@ export default [
       "L": 135,
       "N": "SHBG SerPl-sCnc",
       "O": "LN",
-      "T": "NMOL/L"
+      "T": "NMOL/L",
+      "U": "nmol/L",
+      "V": "nmol/L"
     },
     {
       "A": 4,
@@ -5347,7 +6014,9 @@ export default [
       "P": "ng/dL",
       "Q": "ng/dL",
       "R": 288.4244,
-      "T": "ng/dL"
+      "T": "ng/dL",
+      "U": "ng/dL",
+      "V": "ng/dL"
     },
     {
       "A": 4,
@@ -5363,7 +6032,9 @@ export default [
       "N": "Testost SerPl DL<=1.0 ng/dL-mCnc",
       "O": "LN",
       "R": 288.4244,
-      "T": "ng/dL"
+      "T": "ng/dL",
+      "U": "ng/dL",
+      "V": "ng/dL"
     },
     {
       "A": 4,
@@ -5381,7 +6052,9 @@ export default [
       "O": "LN",
       "P": "pg/mL",
       "Q": "pg/mL",
-      "T": "pg/mL"
+      "T": "pg/mL",
+      "U": "pg/mL",
+      "V": "pg/mL"
     },
     {
       "A": 4,
@@ -5396,7 +6069,9 @@ export default [
       "K": 1.6,
       "N": "Testost Free SerPl DL<=1.0 ng/dL-mCnc",
       "O": "LN",
-      "T": "pg/mL"
+      "T": "pg/mL",
+      "U": "pg/mL",
+      "V": "pg/mL"
     },
     {
       "A": 4,
@@ -5411,7 +6086,9 @@ export default [
       "K": 1.7,
       "N": "Testost Free MFr SerPl",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 3,
@@ -5436,7 +6113,9 @@ export default [
       "P": "pg/mL",
       "Q": "pg/mL",
       "R": 272.382,
-      "T": "pg/mL"
+      "T": "pg/mL",
+      "U": "pg/mL",
+      "V": "pg/mL"
     },
     {
       "A": 4,
@@ -5451,7 +6130,9 @@ export default [
       "K": 0.1,
       "N": "Estriol SerPl-mCnc",
       "O": "LN",
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 4,
@@ -5466,7 +6147,9 @@ export default [
       "K": 650,
       "N": "Estrogen SerPl-mCnc",
       "O": "LN",
-      "T": "pg/mL"
+      "T": "pg/mL",
+      "U": "pg/mL",
+      "V": "pg/mL"
     },
     {
       "A": 4,
@@ -5477,7 +6160,9 @@ export default [
       "G": "Estrogen receptor molar content (Tiss)",
       "N": "ER Tiss-sCnt",
       "O": "LN",
-      "T": "FMOL/MG"
+      "T": "FMOL/MG",
+      "U": "pmol/g",
+      "V": "pmol/g"
     },
     {
       "A": 4,
@@ -5496,7 +6181,9 @@ export default [
       "P": "pg/mL",
       "Q": "pg/mL",
       "R": 270.3661,
-      "T": "pg/mL"
+      "T": "pg/mL",
+      "U": "pg/mL",
+      "V": "pg/mL"
     },
     {
       "A": 4,
@@ -5515,7 +6202,9 @@ export default [
       "P": "ng/mL",
       "Q": "ng/mL",
       "R": 314.4617,
-      "T": "ng/dL"
+      "T": "ng/dL",
+      "U": "ng/dL",
+      "V": "ng/dL"
     },
     {
       "A": 4,
@@ -5526,7 +6215,9 @@ export default [
       "G": "Progesterone receptor molar content (Tiss)",
       "N": "PR Tiss-sCnt",
       "O": "LN",
-      "T": "FMOL/MG"
+      "T": "FMOL/MG",
+      "U": "fmol/mg",
+      "V": "fmol/mg"
     },
     {
       "A": 4,
@@ -5541,7 +6232,9 @@ export default [
       "K": 100,
       "N": "Estrogen 24h Ur-mRate",
       "O": "LN",
-      "T": "MG/24H"
+      "T": "MG/24H",
+      "U": "ug/24hr",
+      "V": "ug/(24.h)"
     },
     {
       "A": 3,
@@ -5562,7 +6255,9 @@ export default [
       "K": 69,
       "N": "ACTH Plas-mCnc",
       "O": "LN",
-      "T": "pg/mL"
+      "T": "pg/mL",
+      "U": "pg/mL",
+      "V": "pg/mL"
     },
     {
       "A": 4,
@@ -5577,7 +6272,9 @@ export default [
       "K": 4.7,
       "N": "Vasopressin SerPl-mCnc",
       "O": "LN",
-      "T": "pg/mL"
+      "T": "pg/mL",
+      "U": "ng/L",
+      "V": "ng/L"
     },
     {
       "A": 4,
@@ -5592,7 +6289,9 @@ export default [
       "K": 33.4,
       "N": "FSH SerPl IRP2-aCnc",
       "O": "LN",
-      "T": "mU/mL"
+      "T": "mU/mL",
+      "U": "mIU/mL",
+      "V": "m[IU]/mL"
     },
     {
       "A": 4,
@@ -5607,7 +6306,9 @@ export default [
       "K": 3.61,
       "N": "GH BS SerPl-mCnc",
       "O": "LN",
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 4,
@@ -5625,7 +6326,9 @@ export default [
       "O": "LN",
       "P": "ng/mL",
       "Q": "ng/mL",
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 4,
@@ -5643,7 +6346,9 @@ export default [
       "O": "LN",
       "P": "ng/mL",
       "Q": "ng/mL",
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 4,
@@ -5658,7 +6363,9 @@ export default [
       "K": 5.02,
       "N": "IGF BP3 SerPl-mCnc",
       "O": "LN",
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 4,
@@ -5673,7 +6380,9 @@ export default [
       "K": 76.3,
       "N": "LH SerPl-aCnc",
       "O": "LN",
-      "T": "mU/mL"
+      "T": "mU/mL",
+      "U": "mIU/mL",
+      "V": "m[IU]/mL"
     },
     {
       "A": 4,
@@ -5690,7 +6399,9 @@ export default [
       "N": "Prolactin SerPl-mCnc",
       "O": "LN",
       "R": 2272.5661,
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 4,
@@ -5709,7 +6420,9 @@ export default [
       "P": "ng/mL",
       "Q": "ng/mL",
       "R": 2272.5661,
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 4,
@@ -5728,7 +6441,9 @@ export default [
       "P": "ng/mL",
       "Q": "ng/mL",
       "R": 2272.5661,
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 3,
@@ -5749,7 +6464,9 @@ export default [
       "K": 130,
       "N": "Catechols 24h Ur-mRate",
       "O": "LN",
-      "T": "mcg/TV"
+      "T": "mcg/TV",
+      "U": "ug/24hr",
+      "V": "ug/(24.h)"
     },
     {
       "A": 4,
@@ -5760,7 +6477,9 @@ export default [
       "G": "Catecholamines mass conc (P)",
       "N": "Catechols Plas-mCnc",
       "O": "LN",
-      "T": "pg/mL"
+      "T": "pg/mL",
+      "U": "pg/mL",
+      "V": "pg/mL"
     },
     {
       "A": 4,
@@ -5779,7 +6498,9 @@ export default [
       "P": "mcg/24",
       "Q": "mcg/24",
       "R": 153.1784,
-      "T": "mcg/24H"
+      "T": "mcg/24H",
+      "U": "mcg/24hr",
+      "V": "mcg/24"
     },
     {
       "A": 4,
@@ -5791,7 +6512,9 @@ export default [
       "N": "Dopamine SerPl-mCnc",
       "O": "LN",
       "R": 153.1784,
-      "T": "pg/mL"
+      "T": "pg/mL",
+      "U": "pg/mL",
+      "V": "pg/mL"
     },
     {
       "A": 4,
@@ -5807,7 +6530,9 @@ export default [
       "N": "Dopamine/Creat Ur",
       "O": "LN",
       "R": 153.1784,
-      "T": "MCG/GM CR"
+      "T": "MCG/GM CR",
+      "U": "ug/g",
+      "V": "ug/g{creat}"
     },
     {
       "A": 4,
@@ -5827,7 +6552,8 @@ export default [
       "P": "mcg/24",
       "Q": "mcg/24",
       "R": 183.2044,
-      "T": 0
+      "U": "mcg/24hr",
+      "V": "mcg/24"
     },
     {
       "A": 4,
@@ -5843,7 +6569,9 @@ export default [
       "N": "Epineph Plas-mCnc",
       "O": "LN",
       "R": 183.2044,
-      "T": "pg/mL"
+      "T": "pg/mL",
+      "U": "pg/mL",
+      "V": "pg/mL"
     },
     {
       "A": 4,
@@ -5855,7 +6583,9 @@ export default [
       "N": "Epineph/Creat Ur",
       "O": "LN",
       "R": 183.2044,
-      "T": "MCG/GM CR"
+      "T": "MCG/GM CR",
+      "U": "ug/g",
+      "V": "ug/g{creat}"
     },
     {
       "A": 4,
@@ -5870,7 +6600,9 @@ export default [
       "K": 15,
       "N": "HVA 24h Ur-mRate",
       "O": "LN",
-      "T": "MG/24H"
+      "T": "MG/24H",
+      "U": "mg/24hr",
+      "V": "mg/(24.h)"
     },
     {
       "A": 4,
@@ -5888,7 +6620,9 @@ export default [
       "O": "LN",
       "P": "mcg/24",
       "Q": "mcg/24",
-      "T": "mcg/TV"
+      "T": "mcg/TV",
+      "U": "mcg/24hr",
+      "V": "mcg/24"
     },
     {
       "A": 4,
@@ -5899,7 +6633,9 @@ export default [
       "G": "Metanephrine/Creatinine mass ratio (U)",
       "N": "Metaneph/Creat Ur",
       "O": "LN",
-      "T": "MCG/GM CR"
+      "T": "MCG/GM CR",
+      "U": "ug/g",
+      "V": "ug/g{creat}"
     },
     {
       "A": 4,
@@ -5910,7 +6646,9 @@ export default [
       "G": "Metanephrines mass/time (24H U)",
       "N": "MetanephS 24h Ur-mRate",
       "O": "LN",
-      "T": "mcg/24H"
+      "T": "mcg/24H",
+      "U": "ug/24hr",
+      "V": "ug/(24.h)"
     },
     {
       "A": 4,
@@ -5922,7 +6660,9 @@ export default [
       "N": "Normetanephrine/Creat Ur",
       "O": "LN",
       "R": 183.2044,
-      "T": "MCG/GM CR"
+      "T": "MCG/GM CR",
+      "U": "ug/g",
+      "V": "ug/g{creat}"
     },
     {
       "A": 4,
@@ -5938,7 +6678,9 @@ export default [
       "N": "Normetanephrine 24h Ur-mRate",
       "O": "LN",
       "R": 183.2044,
-      "T": "mcg/24H"
+      "T": "mcg/24H",
+      "U": "ug/24hr",
+      "V": "ug/(24.h)"
     },
     {
       "A": 4,
@@ -5954,7 +6696,9 @@ export default [
       "N": "Normetanephrine SerPl-sCnc",
       "O": "LN",
       "R": 183.2044,
-      "T": "NMOL/L"
+      "T": "NMOL/L",
+      "U": "nmol/L",
+      "V": "nmol/L"
     },
     {
       "A": 4,
@@ -5965,7 +6709,9 @@ export default [
       "G": "Metanephrine molar conc",
       "N": "Metaneph SerPl-sCnc",
       "O": "LN",
-      "T": "NMOL/L"
+      "T": "NMOL/L",
+      "U": "nmol/L",
+      "V": "nmol/L"
     },
     {
       "A": 4,
@@ -5977,7 +6723,9 @@ export default [
       "N": "Norepineph Plas-mCnc",
       "O": "LN",
       "R": 169.1778,
-      "T": "pg/mL"
+      "T": "pg/mL",
+      "U": "pg/mL",
+      "V": "pg/mL"
     },
     {
       "A": 4,
@@ -5997,7 +6745,9 @@ export default [
       "P": "mcg/24",
       "Q": "mcg/24",
       "R": 169.1778,
-      "T": "mcg/TV"
+      "T": "mcg/TV",
+      "U": "mcg/24hr",
+      "V": "mcg/24"
     },
     {
       "A": 4,
@@ -6009,7 +6759,9 @@ export default [
       "N": "Norepineph/Creat Ur",
       "O": "LN",
       "R": 169.1778,
-      "T": "MCG/GM CR"
+      "T": "MCG/GM CR",
+      "U": "ug/g",
+      "V": "ug/g{creat}"
     },
     {
       "A": 4,
@@ -6021,7 +6773,9 @@ export default [
       "N": "Serotonin Ser-mCnc",
       "O": "LN",
       "R": 176.2151,
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 4,
@@ -6036,7 +6790,9 @@ export default [
       "K": 7,
       "N": "VMA 24h Ur-mRate",
       "O": "LN",
-      "T": "MG/24H"
+      "T": "MG/24H",
+      "U": "mg/24hr",
+      "V": "mg/(24.h)"
     },
     {
       "A": 4,
@@ -6052,7 +6808,9 @@ export default [
       "L": 20,
       "N": "VMA/Creat Ur",
       "O": "LN",
-      "T": "MCG/MG CR"
+      "T": "MCG/MG CR",
+      "U": "ug/mg",
+      "V": "ug/mg{creat}"
     },
     {
       "A": 3,
@@ -6077,7 +6835,9 @@ export default [
       "P": "mcg/24",
       "Q": "mcg/24",
       "R": 362.4599,
-      "T": "mcg"
+      "T": "mcg",
+      "U": "mcg/24hr",
+      "V": "mcg/24"
     },
     {
       "A": 4,
@@ -6092,7 +6852,9 @@ export default [
       "K": 79,
       "N": "11DC SerPl-mCnc",
       "O": "LN",
-      "T": "mcg/dL"
+      "T": "mcg/dL",
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 4,
@@ -6107,7 +6869,9 @@ export default [
       "K": 17.6,
       "N": "17KS 24h Ur-mRate",
       "O": "LN",
-      "T": "MG/24H"
+      "T": "MG/24H",
+      "U": "ug/24hr",
+      "V": "ug/(24.h)"
     },
     {
       "A": 4,
@@ -6122,7 +6886,9 @@ export default [
       "K": 14,
       "N": "17OHP 24h Ur-mRate",
       "O": "LN",
-      "T": "MG/24H"
+      "T": "MG/24H",
+      "U": "mg/24hr",
+      "V": "mg/(24.h)"
     },
     {
       "A": 4,
@@ -6137,7 +6903,9 @@ export default [
       "K": 1870,
       "N": "17OHP SerPl-mCnc",
       "O": "LN",
-      "T": "ng/dL"
+      "T": "ng/dL",
+      "U": "ng/dL",
+      "V": "ng/dL"
     },
     {
       "A": 4,
@@ -6156,7 +6924,9 @@ export default [
       "P": "ng/dL",
       "Q": "ng/dL",
       "R": 360.444,
-      "T": "ng/dL"
+      "T": "ng/dL",
+      "U": "ng/dL",
+      "V": "ng/dL"
     },
     {
       "A": 4,
@@ -6168,7 +6938,9 @@ export default [
       "N": "Aldost 30M p chal SerPl-mCnc",
       "O": "LN",
       "R": 360.444,
-      "T": "ng/dL"
+      "T": "ng/dL",
+      "U": "ng/dL",
+      "V": "ng/dL"
     },
     {
       "A": 4,
@@ -6180,7 +6952,9 @@ export default [
       "N": "Aldost 1h p chal SerPl-mCnc",
       "O": "LN",
       "R": 360.444,
-      "T": "ng/dL"
+      "T": "ng/dL",
+      "U": "ng/dL",
+      "V": "ng/dL"
     },
     {
       "A": 4,
@@ -6191,7 +6965,9 @@ export default [
       "G": "Aldosterone/Renin Ratio (P)",
       "N": "Aldost/Renin Plas-Rto",
       "O": "LN",
-      "R": 360.444
+      "R": 360.444,
+      "U": "ratio",
+      "V": "{ratio}"
     },
     {
       "A": 4,
@@ -6207,7 +6983,9 @@ export default [
       "N": "Aldost 24h Ur-mRate",
       "O": "LN",
       "R": 360.444,
-      "T": "mcg/TV"
+      "T": "mcg/TV",
+      "U": "ug/24hr",
+      "V": "ug/(24.h)"
     },
     {
       "A": 4,
@@ -6226,7 +7004,9 @@ export default [
       "P": "mcg/dL",
       "Q": "mcg/dL",
       "R": 362.4599,
-      "T": "mcg/dL"
+      "T": "mcg/dL",
+      "U": "mcg/dL",
+      "V": "mcg/dL"
     },
     {
       "A": 4,
@@ -6245,7 +7025,9 @@ export default [
       "P": "ug/dL",
       "Q": "ug/dL",
       "R": 362.4599,
-      "T": "mcg/dL"
+      "T": "mcg/dL",
+      "U": "ug/dL",
+      "V": "ug/dL"
     },
     {
       "A": 4,
@@ -6256,7 +7038,9 @@ export default [
       "G": "Cortisol Free mass conc",
       "N": "Cortis F SerPl-mCnc",
       "O": "LN",
-      "T": "mcg/dL"
+      "T": "mcg/dL",
+      "U": "ug/dL",
+      "V": "ug/dL"
     },
     {
       "A": 4,
@@ -6267,7 +7051,9 @@ export default [
       "G": "Cortisol Free mass conc (U)",
       "N": "Cortis F Ur-mCnc",
       "O": "LN",
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ug/dL",
+      "V": "ug/dL"
     },
     {
       "A": 4,
@@ -6285,7 +7071,9 @@ export default [
       "O": "LN",
       "P": "mcg/24",
       "Q": "mcg/24",
-      "T": "mcg/TV"
+      "T": "mcg/TV",
+      "U": "mcg/24hr",
+      "V": "mcg/24"
     },
     {
       "A": 4,
@@ -6296,7 +7084,9 @@ export default [
       "G": "Cortisol Free/Creatinine mass ratio (U)",
       "N": "Cortis F/Creat Ur",
       "O": "LN",
-      "T": "MCG/GM CR"
+      "T": "MCG/GM CR",
+      "U": "ug/g",
+      "V": "ug/g{creat}"
     },
     {
       "A": 4,
@@ -6312,7 +7102,9 @@ export default [
       "N": "Cortis 24h Ur-mRate",
       "O": "LN",
       "R": 362.4599,
-      "T": "mcg/TV"
+      "T": "mcg/TV",
+      "U": "ug/24hr",
+      "V": "ug/(24.h)"
     },
     {
       "A": 4,
@@ -6328,7 +7120,9 @@ export default [
       "N": "Cortis 4 PM SerPl-mCnc",
       "O": "LN",
       "R": 362.4599,
-      "T": "mcg/dL"
+      "T": "mcg/dL",
+      "U": "ug/dL",
+      "V": "ug/dL"
     },
     {
       "A": 4,
@@ -6347,7 +7141,9 @@ export default [
       "P": "mcg/dL",
       "Q": "mcg/dL",
       "R": 362.4599,
-      "T": "mcg/dL"
+      "T": "mcg/dL",
+      "U": "mcg/dL",
+      "V": "mcg/dL"
     },
     {
       "A": 4,
@@ -6363,7 +7159,9 @@ export default [
       "N": "DHEA SerPl-mCnc",
       "O": "LN",
       "R": 288.4244,
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 4,
@@ -6382,7 +7180,9 @@ export default [
       "P": "mcg/dL",
       "Q": "mcg/dL",
       "R": 368.4876,
-      "T": "mcg/dL"
+      "T": "mcg/dL",
+      "U": "mcg/dL",
+      "V": "mcg/dL"
     },
     {
       "A": 4,
@@ -6397,7 +7197,9 @@ export default [
       "K": 35,
       "N": "Renin Plas-cCnc",
       "O": "LN",
-      "T": "NG/ML/HR"
+      "T": "NG/ML/HR",
+      "U": "ng/mL/h",
+      "V": "ng/mL/h"
     },
     {
       "A": 4,
@@ -6412,7 +7214,9 @@ export default [
       "K": 18,
       "N": "Renin Plas-mCnc",
       "O": "LN",
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/L",
+      "V": "ng/L"
     },
     {
       "A": 3,
@@ -6434,7 +7238,9 @@ export default [
       "N": "Calcit SerPl-mCnc",
       "O": "LN",
       "R": 3431.8531,
-      "T": "pg/mL"
+      "T": "pg/mL",
+      "U": "ng/L",
+      "V": "ng/L"
     },
     {
       "A": 4,
@@ -6452,7 +7258,9 @@ export default [
       "O": "LN",
       "P": "mg/dL",
       "Q": "mg/dL",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 4,
@@ -6471,7 +7279,9 @@ export default [
       "P": "mg/dL",
       "Q": "mg/dL",
       "R": 113.1179,
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 4,
@@ -6487,7 +7297,9 @@ export default [
       "N": "Osteocalcin SerPl-mCnc",
       "O": "LN",
       "R": 1589.7509,
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ug/L",
+      "V": "ug/L"
     },
     {
       "A": 4,
@@ -6506,7 +7318,9 @@ export default [
       "P": "mg/dL",
       "Q": "mg/dL",
       "R": 94.973,
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 4,
@@ -6532,7 +7346,9 @@ export default [
       "K": 1.9,
       "N": "PTH Related Prot SerPl-sCnc",
       "O": "LN",
-      "T": "pmol/L"
+      "T": "pmol/L",
+      "U": "pmol/L",
+      "V": "pmol/L"
     },
     {
       "A": 4,
@@ -6547,7 +7363,9 @@ export default [
       "K": 12,
       "N": "PTH Related Prot SerPl-mCnc",
       "O": "LN",
-      "T": "pg/mL"
+      "T": "pg/mL",
+      "U": "ng/L",
+      "V": "ng/L"
     },
     {
       "A": 4,
@@ -6562,7 +7380,9 @@ export default [
       "K": 286,
       "N": "PTH-C SerPl-mCnc",
       "O": "LN",
-      "T": "pg/mL"
+      "T": "pg/mL",
+      "U": "pg/mL",
+      "V": "pg/mL"
     },
     {
       "A": 4,
@@ -6577,7 +7397,9 @@ export default [
       "K": 72,
       "N": "PTH-Intact SerPl-mCnc",
       "O": "LN",
-      "T": "pg/mL"
+      "T": "pg/mL",
+      "U": "pg/mL",
+      "V": "pg/mL"
     },
     {
       "A": 4,
@@ -6593,7 +7415,9 @@ export default [
       "N": "25(OH)D3 SerPl-mCnc",
       "O": "LN",
       "R": 400.63706,
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 4,
@@ -6609,7 +7433,9 @@ export default [
       "N": "1,25(OH)2D3 SerPl-mCnc",
       "O": "LN",
       "R": 416.63646,
-      "T": "pg/mL"
+      "T": "pg/mL",
+      "U": "pg/mL",
+      "V": "pg/mL"
     },
     {
       "A": 3,
@@ -6633,7 +7459,9 @@ export default [
       "O": "LN",
       "P": "{titer}",
       "Q": "{titer}",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 4,
@@ -6651,7 +7479,9 @@ export default [
       "O": "LN",
       "P": "{titer}",
       "Q": "{titer}",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 4,
@@ -6666,7 +7496,9 @@ export default [
       "K": 8,
       "N": "PB Iodine SerPl-mCnc",
       "O": "LN",
-      "T": "mcg/dL"
+      "T": "mcg/dL",
+      "U": "ug/dL",
+      "V": "ug/dL"
     },
     {
       "A": 4,
@@ -6681,7 +7513,9 @@ export default [
       "O": "LN",
       "P": "{Index_val}",
       "Q": "{Index_val}",
-      "T": "mcg/dL"
+      "T": "mcg/dL",
+      "U": "Index_val",
+      "V": "{Index_val}"
     },
     {
       "A": 4,
@@ -6699,7 +7533,8 @@ export default [
       "O": "LN",
       "P": "mcg/ml",
       "Q": "mcg/ml",
-      "T": 0
+      "U": "mcg/ml",
+      "V": "mcg/ml"
     },
     {
       "A": 4,
@@ -6718,7 +7553,8 @@ export default [
       "P": "ng/dL",
       "Q": "ng/dL",
       "R": 650.9735,
-      "T": 0
+      "U": "ng/dL",
+      "V": "ng/dL"
     },
     {
       "A": 4,
@@ -6736,7 +7572,9 @@ export default [
       "O": "LN",
       "P": "pg/mL",
       "Q": "pg/mL",
-      "T": "pg/mL"
+      "T": "pg/mL",
+      "U": "pg/mL",
+      "V": "pg/mL"
     },
     {
       "A": 4,
@@ -6754,7 +7592,9 @@ export default [
       "O": "LN",
       "P": "pg/mL",
       "Q": "pg/mL",
-      "T": "pg/mL"
+      "T": "pg/mL",
+      "U": "pg/mL",
+      "V": "pg/mL"
     },
     {
       "A": 4,
@@ -6772,7 +7612,9 @@ export default [
       "O": "LN",
       "P": "%",
       "Q": "%",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -6805,7 +7647,9 @@ export default [
       "O": "LN",
       "P": "mcg/dL",
       "Q": "mcg/dL",
-      "T": "mcg/dL"
+      "T": "mcg/dL",
+      "U": "mcg/dL",
+      "V": "mcg/dL"
     },
     {
       "A": 4,
@@ -6834,7 +7678,9 @@ export default [
       "O": "LN",
       "P": "ng/dL",
       "Q": "ng/dL",
-      "T": "ng/dL"
+      "T": "ng/dL",
+      "U": "ng/dL",
+      "V": "ng/dL"
     },
     {
       "A": 4,
@@ -6845,7 +7691,9 @@ export default [
       "G": "T4 free Dialysis mass conc",
       "N": "T4 Free SerPl Dialy-mCnc",
       "O": "LN",
-      "T": "ng/dL"
+      "T": "ng/dL",
+      "U": "ng/dL",
+      "V": "ng/dL"
     },
     {
       "A": 4,
@@ -6863,7 +7711,9 @@ export default [
       "O": "LN",
       "P": "m[IU]/L",
       "Q": "m[IU]/L",
-      "T": "mcU/mL"
+      "T": "mcU/mL",
+      "U": "mcU/ml",
+      "V": "{mcU}/ml"
     },
     {
       "A": 4,
@@ -6881,7 +7731,9 @@ export default [
       "O": "LN",
       "P": "ng/mL",
       "Q": "ng/mL",
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 4,
@@ -6896,7 +7748,9 @@ export default [
       "K": 4.6,
       "N": "TSH 30M p TRH SerPl-aCnc",
       "O": "LN",
-      "T": "mcU/mL"
+      "T": "mcU/mL",
+      "U": "mIU/L",
+      "V": "m[IU]/L"
     },
     {
       "A": 4,
@@ -6911,7 +7765,9 @@ export default [
       "K": 5.5,
       "N": "TSH SerPl DL<=0.005 mIU/L-aCnc",
       "O": "LN",
-      "T": "mcU/mL"
+      "T": "mcU/mL",
+      "U": "mIU/L",
+      "V": "m[IU]/L"
     },
     {
       "A": 4,
@@ -6926,7 +7782,9 @@ export default [
       "K": 4,
       "N": "TSH BS SerPl-aCnc",
       "O": "LN",
-      "T": "mcU/mL"
+      "T": "mcU/mL",
+      "U": "mIU/L",
+      "V": "m[IU]/L"
     },
     {
       "A": 4,
@@ -6937,7 +7795,9 @@ export default [
       "G": "Thyrotropin receptor Ab Qn (S)",
       "N": "TSH Recep Ab Ser-aCnc",
       "O": "LN",
-      "T": "Units/L"
+      "T": "Units/L",
+      "U": "IU/L",
+      "V": "[IU]/L"
     },
     {
       "A": 4,
@@ -6952,7 +7812,9 @@ export default [
       "K": 39,
       "N": "T-uptake NFr SerPl",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -6970,7 +7832,9 @@ export default [
       "O": "LN",
       "P": "ng/mL",
       "Q": "ng/mL",
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 4,
@@ -6988,7 +7852,9 @@ export default [
       "O": "LN",
       "P": "[IU]/mL",
       "Q": "[IU]/mL",
-      "T": "Units/mL"
+      "T": "Units/mL",
+      "U": "IU/mL",
+      "V": "[IU]/mL"
     },
     {
       "A": 4,
@@ -6999,7 +7865,9 @@ export default [
       "G": "Thyroglobulin recovery mass fraction",
       "N": "Thyroglob Recovery MFr SerPl",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -7014,7 +7882,9 @@ export default [
       "K": 129,
       "N": "TSI Act/Nor Ser",
       "O": "LN",
-      "T": "% Basal Actv"
+      "T": "% Basal Actv",
+      "U": "%",
+      "V": "%{basal_activity}"
     },
     {
       "A": 2,
@@ -7035,7 +7905,9 @@ export default [
       "O": "LN",
       "P": "m[IU]/mL",
       "Q": "m[IU]/mL",
-      "T": "mU/mL"
+      "T": "mU/mL",
+      "U": "mIU/mL",
+      "V": "m[IU]/mL"
     },
     {
       "A": 3,
@@ -7049,6 +7921,7 @@ export default [
       "D": 17161,
       "E": "29463-7",
       "F": "Body weight",
+      "G": "Weight lbs maternal",
       "H": "pounds",
       "I": "70 - 300",
       "J": 70,
@@ -7057,7 +7930,9 @@ export default [
       "M": 70,
       "N": "Weight",
       "O": "LN",
-      "T": "LBS"
+      "T": "LBS",
+      "U": "lbs",
+      "V": "[lb_av]"
     },
     {
       "A": 4,
@@ -7072,7 +7947,9 @@ export default [
       "L": 52,
       "N": "GA",
       "O": "LN",
-      "T": "week"
+      "T": "week",
+      "U": "wk",
+      "V": "wk"
     },
     {
       "A": 4,
@@ -7091,7 +7968,9 @@ export default [
       "E": "43993-5",
       "F": "Age at delivery",
       "N": "Age at delivery",
-      "O": "LN"
+      "O": "LN",
+      "U": "a",
+      "V": "a"
     },
     {
       "A": 4,
@@ -7100,7 +7979,8 @@ export default [
       "E": "11977-6",
       "F": "[#] Parity",
       "N": "Parity",
-      "O": "LN"
+      "O": "LN",
+      "V": "{#}"
     },
     {
       "A": 4,
@@ -7109,7 +7989,8 @@ export default [
       "E": "11996-6",
       "F": "[#] Pregnancies",
       "N": "Pregnancies",
-      "O": "LN"
+      "O": "LN",
+      "V": "{#}"
     },
     {
       "A": 4,
@@ -7127,7 +8008,9 @@ export default [
       "O": "LN",
       "P": "ng/mL",
       "Q": "ng/mL",
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 4,
@@ -7148,7 +8031,9 @@ export default [
       "O": "LN",
       "P": "{M.o.M}",
       "Q": "{M.o.M}",
-      "T": "M.O.M."
+      "T": "M.O.M.",
+      "U": "M.o.M",
+      "V": "{M.o.M}"
     },
     {
       "A": 4,
@@ -7165,7 +8050,8 @@ export default [
       "O": "LN",
       "P": "{M.o.M}",
       "Q": "{M.o.M}",
-      "T": 0
+      "U": "M.o.M",
+      "V": "{M.o.M}"
     },
     {
       "A": 4,
@@ -7183,7 +8069,9 @@ export default [
       "G": "HCG.beta subunit adjusted MoM",
       "N": "B-HCG adj MoM SerPl",
       "O": "LN",
-      "T": "M.O.M."
+      "T": "M.O.M.",
+      "U": "M.o.M",
+      "V": "{M.o.M}"
     },
     {
       "A": 4,
@@ -7197,7 +8085,9 @@ export default [
       "O": "LN",
       "P": "ng/mL",
       "Q": "ng/mL",
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 4,
@@ -7208,7 +8098,9 @@ export default [
       "G": "Estriol (E3).unconjugated adjusted MoM",
       "N": "u Estriol adj MoM SerPl",
       "O": "LN",
-      "T": "M.O.M."
+      "T": "M.O.M.",
+      "U": "M.o.M",
+      "V": "{M.o.M}"
     },
     {
       "A": 4,
@@ -7218,7 +8110,9 @@ export default [
       "F": "Trisomy 21 risk [Likelihood] in Fetus",
       "G": "Trisomy 21 risk Qn (fetus)",
       "N": "Ts 21 risk Fetus",
-      "O": "LN"
+      "O": "LN",
+      "U": "risk",
+      "V": "{risk}"
     },
     {
       "A": 4,
@@ -7232,7 +8126,8 @@ export default [
       "O": "LN",
       "P": "{risk}",
       "Q": "{risk}",
-      "T": 0
+      "U": "risk",
+      "V": "{risk}"
     },
     {
       "A": 4,
@@ -7246,7 +8141,8 @@ export default [
       "O": "LN",
       "P": "{risk}",
       "Q": "{risk}",
-      "T": 0
+      "U": "risk",
+      "V": "{risk}"
     },
     {
       "A": 4,
@@ -7260,7 +8156,9 @@ export default [
       "J": 90,
       "K": 96,
       "N": "Neural tube defect risk Fetus",
-      "O": "LN"
+      "O": "LN",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -7280,7 +8178,9 @@ export default [
       "F": "Trisomy 18 risk [Likelihood] in Fetus",
       "G": "Trisomy 18 risk Qn (fetus)",
       "N": "Ts 18 risk Fetus",
-      "O": "LN"
+      "O": "LN",
+      "U": "risk",
+      "V": "{risk}"
     },
     {
       "A": 4,
@@ -7290,7 +8190,9 @@ export default [
       "F": "Fetal Trisomy 18 risk [Likelihood] Based on maternal age",
       "G": "Trisomy 18 risk Based on maternal age Qn (fetus)",
       "N": "Fet Ts 18 risk from Mat age",
-      "O": "LN"
+      "O": "LN",
+      "U": "risk",
+      "V": "{risk}"
     },
     {
       "A": 3,
@@ -7305,9 +8207,12 @@ export default [
       "D": 31260,
       "E": "8338-6",
       "F": "Body weight Measured --ante partum",
+      "G": "Weight lbs ante partum",
       "N": "Weight ante partum Measured",
       "O": "LN",
-      "T": "LBS"
+      "T": "LBS",
+      "U": "lbs",
+      "V": "[lb_av]"
     },
     {
       "A": 4,
@@ -7317,7 +8222,9 @@ export default [
       "F": "Gestational age in weeks",
       "N": "GA (weeks)",
       "O": "LN",
-      "T": "week"
+      "T": "week",
+      "U": "wk",
+      "V": "wk"
     },
     {
       "A": 4,
@@ -7327,7 +8234,9 @@ export default [
       "F": "Gestational age in days",
       "N": "GA (days)",
       "O": "LN",
-      "T": "DAYS"
+      "T": "DAYS",
+      "U": "d",
+      "V": "d"
     },
     {
       "A": 4,
@@ -7336,7 +8245,8 @@ export default [
       "E": "11878-6",
       "F": "Number of fetuses by US",
       "N": "# Fetuses US",
-      "O": "LN"
+      "O": "LN",
+      "V": "{#}"
     },
     {
       "A": 4,
@@ -7347,7 +8257,9 @@ export default [
       "G": "HCG MoM",
       "N": "HCG MoM SerPl",
       "O": "LN",
-      "T": "M.O.M."
+      "T": "M.O.M.",
+      "U": "M.o.M",
+      "V": "{M.o.M}"
     },
     {
       "A": 4,
@@ -7358,7 +8270,9 @@ export default [
       "G": "Estriol (E3).unconjugated MoM",
       "N": "u Estriol MoM SerPl",
       "O": "LN",
-      "T": "M.O.M."
+      "T": "M.O.M.",
+      "U": "M.o.M",
+      "V": "{M.o.M}"
     },
     {
       "A": 2,
@@ -7382,7 +8296,9 @@ export default [
       "O": "LN",
       "P": "U/mL",
       "Q": "U/mL",
-      "T": "Units/mL"
+      "T": "Units/mL",
+      "U": "U/mL",
+      "V": "U/mL"
     },
     {
       "A": 3,
@@ -7392,7 +8308,9 @@ export default [
       "F": "Complement C1 esterase inhibitor actual/normal in Serum or Plasma",
       "G": "Complement C1 esterase inhibitor actual/normal RelCCnc",
       "N": "C1INH Act/Nor SerPl",
-      "O": "LN"
+      "O": "LN",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 3,
@@ -7407,7 +8325,9 @@ export default [
       "K": 39,
       "N": "C1INH SerPl-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
@@ -7423,7 +8343,9 @@ export default [
       "N": "C3 SerPl-mCnc",
       "O": "LN",
       "R": 347.33875,
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
@@ -7438,7 +8360,9 @@ export default [
       "K": 38,
       "N": "C4 SerPl-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
@@ -7449,7 +8373,9 @@ export default [
       "G": "Complement total hemolytic CH50 Qn",
       "N": "CH50 SerPl-aCnc",
       "O": "LN",
-      "T": "CAE Units"
+      "T": "CAE Units",
+      "U": "arb'U/mL",
+      "V": "[arb'U]/mL"
     },
     {
       "A": 3,
@@ -7464,7 +8390,9 @@ export default [
       "K": 51,
       "N": "Comp Fact B SerPl-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 2,
@@ -7491,7 +8419,9 @@ export default [
       "K": 8,
       "N": "IgG Synth Rate Ser+CSF Calc-mRate",
       "O": "LN",
-      "T": "mg/day"
+      "T": "mg/day",
+      "U": "mg/24hr",
+      "V": "mg/(24.h)"
     },
     {
       "A": 4,
@@ -7519,7 +8449,9 @@ export default [
       "L": 10000,
       "N": "IgG Ser-aCnc",
       "O": "LN",
-      "T": "Units"
+      "T": "Units",
+      "U": "arb'U",
+      "V": "[arb'U]"
     },
     {
       "A": 5,
@@ -7537,7 +8469,9 @@ export default [
       "O": "LN",
       "P": "mg/dL",
       "Q": "mg/dL",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 4,
@@ -7558,7 +8492,9 @@ export default [
       "K": 938,
       "N": "IgG1 Ser-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 5,
@@ -7573,7 +8509,9 @@ export default [
       "K": 747,
       "N": "IgG2 Ser-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 5,
@@ -7588,7 +8526,9 @@ export default [
       "K": 23,
       "N": "IgG3 Ser-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 5,
@@ -7604,7 +8544,9 @@ export default [
       "L": 3276,
       "N": "IgG4 Ser-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 4,
@@ -7626,7 +8568,9 @@ export default [
       "L": 10000,
       "N": "IgA Ser-aCnc",
       "O": "LN",
-      "T": "Units"
+      "T": "Units",
+      "U": "arb'U",
+      "V": "[arb'U]"
     },
     {
       "A": 5,
@@ -7641,7 +8585,9 @@ export default [
       "K": 271,
       "N": "IgA SerPl-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 4,
@@ -7663,7 +8609,9 @@ export default [
       "L": 10000,
       "N": "IgM Ab.IgM SerPl-aCnc",
       "O": "LN",
-      "T": "Units"
+      "T": "Units",
+      "U": "arb'U",
+      "V": "[arb'U]"
     },
     {
       "A": 5,
@@ -7678,7 +8626,9 @@ export default [
       "K": 304,
       "N": "IgM SerPl-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 4,
@@ -7693,7 +8643,9 @@ export default [
       "K": 15,
       "N": "IgD Ser-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 4,
@@ -7711,7 +8663,9 @@ export default [
       "O": "LN",
       "P": "[IU]/L",
       "Q": "[IU]/L",
-      "T": "Units/mL"
+      "T": "Units/mL",
+      "U": "IU/L",
+      "V": "[IU]/L"
     },
     {
       "A": 4,
@@ -7737,7 +8691,9 @@ export default [
       "G": "Immunoglobulin light chains.kappa.free mass conc (U)",
       "N": "Kappa LC Free Ur-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 4,
@@ -7748,7 +8704,9 @@ export default [
       "G": "Immunoglobulin light chains.lambda.free mass conc (U)",
       "N": "Lambda LC Free Ur-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 4,
@@ -7769,7 +8727,9 @@ export default [
       "G": "Thiamine mass conc",
       "N": "Vit B1 SerPl-mCnc",
       "O": "LN",
-      "T": "mcg/dL"
+      "T": "mcg/dL",
+      "U": "ug/dL",
+      "V": "ug/dL"
     },
     {
       "A": 2,
@@ -7793,7 +8753,9 @@ export default [
       "O": "LN",
       "P": "mcg/mL",
       "Q": "mcg/mL",
-      "T": "mcg/dL"
+      "T": "mcg/dL",
+      "U": "mcg/dL",
+      "V": "mcg/dL"
     },
     {
       "A": 3,
@@ -7805,7 +8767,9 @@ export default [
       "N": "Retinyl Palmitate SerPl-mCnc",
       "O": "LN",
       "R": 524.860399999999,
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 3,
@@ -7820,7 +8784,9 @@ export default [
       "K": 280,
       "N": "Vit B1 Bld-sCnc",
       "O": "LN",
-      "T": "NMOL/L"
+      "T": "NMOL/L",
+      "U": "nmol/L",
+      "V": "nmol/L"
     },
     {
       "A": 3,
@@ -7835,7 +8801,9 @@ export default [
       "K": 4,
       "N": "Vit B1 Bld-mCnc",
       "O": "LN",
-      "T": "mcg/dL"
+      "T": "mcg/dL",
+      "U": "ug/dL",
+      "V": "ug/dL"
     },
     {
       "A": 3,
@@ -7851,7 +8819,9 @@ export default [
       "L": 178,
       "N": "Vit B1 SerPl-sCnc",
       "O": "LN",
-      "T": "NMOL/L"
+      "T": "NMOL/L",
+      "U": "nmol/L",
+      "V": "nmol/L"
     },
     {
       "A": 3,
@@ -7868,7 +8838,9 @@ export default [
       "N": "Vit B6 SerPl-mCnc",
       "O": "LN",
       "R": 169.1778,
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 3,
@@ -7883,7 +8855,9 @@ export default [
       "K": 2,
       "N": "Vit C SerPl-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
@@ -7900,7 +8874,9 @@ export default [
       "N": "A-Tocopherol Vit E SerPl-mCnc",
       "O": "LN",
       "R": 430.7061,
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 2,
@@ -7934,7 +8910,9 @@ export default [
       "N": "Carotene Ser-mCnc",
       "O": "LN",
       "R": 536.8726,
-      "T": "mcg/dL"
+      "T": "mcg/dL",
+      "U": "ug/dL",
+      "V": "ug/dL"
     },
     {
       "A": 3,
@@ -7945,7 +8923,9 @@ export default [
       "G": "Thiopurine methyltransferase enzyme act/vol (RBC)",
       "N": "TPMT RBC-cCnc",
       "O": "LN",
-      "T": "U/ML RBC"
+      "T": "U/ML RBC",
+      "U": "U/mL",
+      "V": "U/mL{RBCs}"
     },
     {
       "A": 2,
@@ -7984,7 +8964,9 @@ export default [
       "O": "LN",
       "P": "mmol/L",
       "Q": "mmol/L",
-      "T": "mmol/L"
+      "T": "mmol/L",
+      "U": "mmol/L",
+      "V": "mmol/L"
     },
     {
       "A": 4,
@@ -8002,7 +8984,9 @@ export default [
       "O": "LN",
       "P": "mmol/L",
       "Q": "mmol/L",
-      "T": "mmol/L"
+      "T": "mmol/L",
+      "U": "mmol/L",
+      "V": "mmol/L"
     },
     {
       "A": 4,
@@ -8021,7 +9005,9 @@ export default [
       "P": "mmol/L",
       "Q": "mmol/L",
       "R": 35.4535,
-      "T": "mmol/L"
+      "T": "mmol/L",
+      "U": "mmol/L",
+      "V": "mmol/L"
     },
     {
       "A": 4,
@@ -8040,7 +9026,9 @@ export default [
       "P": "mmol/L",
       "Q": "mmol/L",
       "R": 44.0095,
-      "T": "mmol/L"
+      "T": "mmol/L",
+      "U": "mmol/L",
+      "V": "mmol/L"
     },
     {
       "A": 4,
@@ -8056,13 +9044,9 @@ export default [
       "L": 25,
       "N": "Anion Gap3 SerPl-sCnc",
       "O": "LN",
-      "T": "mmol/L"
-    },
-    {
-      "A": 3,
-      "B": "BUN TESTS",
-      "D": 3966,
-      "O": "RI"
+      "T": "mmol/L",
+      "U": "mmol/L",
+      "V": "mmol/L"
     },
     {
       "A": 4,
@@ -8073,14 +9057,18 @@ export default [
       "F": "Urea nitrogen [Mass/volume] in Serum or Plasma",
       "G": "Urea nitrogen mass conc",
       "H": "mg/dL",
-      "I": "10 - 26",
-      "J": 10,
-      "K": 26,
+      "I": "7 - 20",
+      "J": 7,
+      "K": 20,
       "N": "BUN SerPl-mCnc",
       "O": "RI",
       "P": "mg/dL",
       "Q": "mg/dL",
-      "T": "mg/dL"
+      "R": 28,
+      "S": "x",
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 4,
@@ -8091,20 +9079,23 @@ export default [
       "F": "Urea nitrogen [Moles/volume] in Serum or Plasma",
       "G": "Urea nitrogen molar conc",
       "H": "mmol/L",
-      "I": "1.8 - 7.1",
-      "J": 1.8,
+      "I": "2.5 - 7.1",
+      "J": 2.5,
       "K": 7.1,
       "N": "BUN SerPl-sCnc",
       "O": "RI",
       "P": "mg/dL",
       "Q": "mg/dL",
+      "R": 28,
       "S": "x",
-      "T": "mmol/L"
+      "T": "mmol/L",
+      "U": "mmol/L",
+      "V": "mmol/L"
     },
     {
       "A": 4,
       "B": "BUN (CSH)",
-      "C": "Urea nitrogen|MCnc|Ser/Plas||Pt",
+      "C": "Urea nitrogen MSCNC demo",
       "D": 11433,
       "E": "3094-0",
       "F": "Urea nitrogen [Mass/volume] in Serum or Plasma",
@@ -8117,12 +9108,15 @@ export default [
       "O": "RI",
       "P": "mg/dL",
       "Q": "mg/dL",
-      "T": "mg/dL"
+      "S": "x",
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 4,
       "B": "BUN (SMA)",
-      "C": "Urea nitrogen|MCnc|Ser/Plas||Pt",
+      "C": "Urea nitrogen MSCNC demo",
       "D": 34,
       "E": "3094-0",
       "F": "Urea nitrogen [Mass/volume] in Serum or Plasma",
@@ -8135,18 +9129,15 @@ export default [
       "O": "RI",
       "P": "mg/dL",
       "Q": "mg/dL",
-      "T": "mg/dL"
-    },
-    {
-      "A": 3,
-      "B": "CREATININE TESTS",
-      "D": 4095,
-      "O": "RI"
+      "S": "x",
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 4,
       "B": "Creatinine Ser",
-      "C": "Creatinine|MCnc|Ser/Plas||Pt",
+      "C": "Creatinine serum moles->mass",
       "D": 6145,
       "E": "2160-0",
       "F": "Creatinine [Mass/volume] in Serum or Plasma",
@@ -8160,12 +9151,15 @@ export default [
       "P": "mg/dL",
       "Q": "mg/dL",
       "R": 113.1179,
-      "T": "mg/dL"
+      "S": "x",
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 4,
       "B": "Creatinine SerPl Qn",
-      "C": "Creatinine MSCNC demo",
+      "C": "Creatinine serum moles->mass",
       "D": 256,
       "E": "2160-0",
       "F": "Creatinine [Mass/volume] in Serum or Plasma",
@@ -8179,12 +9173,15 @@ export default [
       "P": "mg/dL",
       "Q": "mg/dL",
       "R": 113.1179,
-      "T": "mg/dL"
+      "S": "x",
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 4,
       "B": "Creatinine SerPl Qn",
-      "C": "Creatinine MSCNC demo",
+      "C": "Creatinine serum moles->mass",
       "D": "256z",
       "E": "14682-9",
       "F": "Creatinine [Moles/volume] in Serum or Plasma",
@@ -8199,12 +9196,14 @@ export default [
       "Q": "mg/dL",
       "R": 113.1179,
       "S": "x",
-      "T": "umol/l"
+      "T": "umol/l",
+      "U": "umol/l",
+      "V": "umol/l"
     },
     {
       "A": 4,
       "B": "Creatinine (CSH)",
-      "C": "Creatinine|MCnc|Ser/Plas||Pt",
+      "C": "Creatinine serum moles->mass",
       "D": 11434,
       "E": "2160-0",
       "F": "Creatinine [Mass/volume] in Serum or Plasma",
@@ -8218,12 +9217,15 @@ export default [
       "P": "mg/dL",
       "Q": "mg/dL",
       "R": 113.1179,
-      "T": "mg/dL"
+      "S": "x",
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 4,
       "B": "Creatinine (SMA)",
-      "C": "Creatinine|MCnc|Ser/Plas||Pt",
+      "C": "Creatinine serum moles->mass",
       "D": 6513,
       "E": "2160-0",
       "F": "Creatinine [Mass/volume] in Serum or Plasma",
@@ -8237,7 +9239,10 @@ export default [
       "P": "mg/dL",
       "Q": "mg/dL",
       "R": 113.1179,
-      "T": "mg/dL"
+      "S": "x",
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
@@ -8253,7 +9258,9 @@ export default [
       "M": 60,
       "N": "GFR/BSA pred.black SerPlBld MDRD-ArVRat",
       "O": "LN",
-      "T": "ml/min/1.73m2"
+      "T": "ml/min/1.73m2",
+      "U": "mL/min/1.73_m2",
+      "V": "mL/min/{1.73_m2}"
     },
     {
       "A": 3,
@@ -8269,7 +9276,9 @@ export default [
       "M": 60,
       "N": "GFR/BSA pr.non blk SerPlBld MDRD-ArV",
       "O": "LN",
-      "T": "ml/min/1.73m2"
+      "T": "ml/min/1.73m2",
+      "U": "mL/min/1.73_m2",
+      "V": "mL/min/{1.73_m2}"
     },
     {
       "A": 3,
@@ -8280,7 +9289,9 @@ export default [
       "G": "GFR/1.73 sq M.predicted MDRD vol rate/area",
       "N": "GFR/BSA.pred SerPl MDRD-ArVRat",
       "O": "LN",
-      "T": "ml/min/1.73m2"
+      "T": "ml/min/1.73m2",
+      "U": "mL/min/1.73_m2",
+      "V": "mL/min/{1.73_m2}"
     },
     {
       "A": 3,
@@ -8291,7 +9302,7 @@ export default [
     {
       "A": 4,
       "B": "Glucose SerPl Qn",
-      "C": "Glucose Serum MSCNC demo",
+      "C": "Glucose Serum moles->mass",
       "D": 1274,
       "E": "2345-7",
       "F": "Glucose [Mass/volume] in Serum or Plasma",
@@ -8305,12 +9316,15 @@ export default [
       "P": "mg/dL",
       "Q": "mg/dL",
       "R": 180.156,
-      "T": "mg/dL"
+      "S": "x",
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 4,
       "B": "Glucose SerPl Qn",
-      "C": "Glucose Serum MSCNC demo",
+      "C": "Glucose Serum moles->mass",
       "D": "1274z",
       "E": "14749-6",
       "F": "Glucose [Moles/volume] in Serum or Plasma",
@@ -8325,12 +9339,14 @@ export default [
       "Q": "mg/dL",
       "R": 180.156,
       "S": "x",
-      "T": "mmol/L"
+      "T": "mmol/L",
+      "U": "mmol/L",
+      "V": "mmol/L"
     },
     {
       "A": 4,
       "B": "Glucose (ACA)",
-      "C": "Glucose|MCnc|Ser/Plas||Pt",
+      "C": "Glucose Serum moles->mass",
       "D": 4035,
       "E": "2345-7",
       "F": "Glucose [Mass/volume] in Serum or Plasma",
@@ -8344,12 +9360,15 @@ export default [
       "P": "mg/dL",
       "Q": "mg/dL",
       "R": 180.156,
-      "T": "mg/dL"
+      "S": "x",
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 4,
       "B": "Glucose (CSH)",
-      "C": "Glucose|MCnc|Ser/Plas||Pt",
+      "C": "Glucose Serum moles->mass",
       "D": 11432,
       "E": "2345-7",
       "F": "Glucose [Mass/volume] in Serum or Plasma",
@@ -8363,12 +9382,15 @@ export default [
       "P": "mg/dL",
       "Q": "mg/dL",
       "R": 180.156,
-      "T": "mg/dL"
+      "S": "x",
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 4,
       "B": "Glu (SMA)",
-      "C": "Glucose|MCnc|Ser/Plas||Pt",
+      "C": "Glucose Serum moles->mass",
       "D": 33,
       "E": "2345-7",
       "F": "Glucose [Mass/volume] in Serum or Plasma",
@@ -8382,11 +9404,15 @@ export default [
       "P": "mg/dL",
       "Q": "mg/dL",
       "R": 180.156,
-      "T": "mg/dL"
+      "S": "x",
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 4,
       "B": "Glucose Fast SerPl Qn",
+      "C": "Glucose Serum moles->mass",
       "D": 11500,
       "E": "1558-6",
       "F": "Fasting glucose [Mass/volume] in Serum or Plasma",
@@ -8400,18 +9426,15 @@ export default [
       "N": "Glucose p fast SerPl-mCnc",
       "O": "RI",
       "R": 180.156,
-      "T": "mg/dL"
-    },
-    {
-      "A": 3,
-      "B": "CALCIUM TESTS",
-      "D": 4096,
-      "O": "RI"
+      "S": "x",
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 4,
       "B": "Calcium Ser",
-      "C": "Calcium|MCnc|Ser/Plas||Pt",
+      "C": "Calcium moles->mass",
       "D": 15346,
       "E": "17861-6",
       "F": "Calcium [Mass/volume] in Serum or Plasma",
@@ -8425,12 +9448,15 @@ export default [
       "P": "mg/dL",
       "Q": "mg/dL",
       "R": 40.078,
-      "T": "mg/dL"
+      "S": "x",
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 4,
       "B": "Calcium SerPl Qn",
-      "C": "Calcium MSCNC demo",
+      "C": "Calcium moles->mass",
       "D": 4053,
       "E": "17861-6",
       "F": "Calcium [Mass/volume] in Serum or Plasma",
@@ -8444,12 +9470,15 @@ export default [
       "P": "mg/dL",
       "Q": "mg/dL",
       "R": 40.078,
-      "T": "mg/dL"
+      "S": "x",
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 4,
       "B": "Calcium SerPl Qn",
-      "C": "Calcium MSCNC demo",
+      "C": "Calcium moles->mass",
       "D": "4053z",
       "E": "2000-8",
       "F": "Calcium [Moles/volume] in Serum or Plasma",
@@ -8464,12 +9493,14 @@ export default [
       "Q": "mg/dL",
       "R": 40.078,
       "S": "x",
-      "T": "mmol/L"
+      "T": "mmol/L",
+      "U": "mmol/L",
+      "V": "mmol/L"
     },
     {
       "A": 4,
       "B": "Calcium (CSH)",
-      "C": "Calcium|MCnc|Ser/Plas||Pt",
+      "C": "Calcium moles->mass",
       "D": 11445,
       "E": "17861-6",
       "F": "Calcium [Mass/volume] in Serum or Plasma",
@@ -8483,17 +9514,20 @@ export default [
       "P": "mg/dL",
       "Q": "mg/dL",
       "R": 40.078,
-      "T": "mg/dL"
+      "S": "x",
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 4,
       "B": "Calcium (SMA)",
-      "C": "Calcium|MCnc|Ser/Plas||Pt",
+      "C": "Calcium moles->mass",
       "D": 31,
       "E": "17861-6",
       "F": "Calcium [Mass/volume] in Serum or Plasma",
       "G": "Calcium mass conc",
-      "H": "#VALUE!",
+      "H": "mg/dL",
       "I": "8.6 - 10.2",
       "J": 8.6,
       "K": 10.2,
@@ -8502,7 +9536,10 @@ export default [
       "P": "mg/dL",
       "Q": "mg/dL",
       "R": 40.078,
-      "T": "mg/dL"
+      "S": "x",
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 4,
@@ -8519,7 +9556,9 @@ export default [
       "M": 3.1,
       "N": "Ca-I SerPl-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 4,
@@ -8534,7 +9573,9 @@ export default [
       "K": 2.64,
       "N": "Ca-I SerPl-sCnc",
       "O": "LN",
-      "T": "mmol/L"
+      "T": "mmol/L",
+      "U": "mmol/L",
+      "V": "mmol/L"
     },
     {
       "A": 4,
@@ -8545,7 +9586,9 @@ export default [
       "G": "Calcium corrected for albumin molar conc",
       "N": "Calcium Album cor SerPl-sCnc",
       "O": "LN",
-      "T": "mmol/L"
+      "T": "mmol/L",
+      "U": "mmol/L",
+      "V": "mmol/L"
     },
     {
       "A": 4,
@@ -8555,18 +9598,14 @@ export default [
       "F": "pH of Serum or Plasma",
       "G": "pH",
       "N": "pH SerPl",
-      "O": "LN"
-    },
-    {
-      "A": 3,
-      "B": "ALBUMIN TESTS",
-      "D": 7796,
-      "O": "RI"
+      "O": "LN",
+      "U": "pH",
+      "V": "[pH]"
     },
     {
       "A": 4,
       "B": "Albumin SerPl Qn",
-      "C": "Albumin MSCNC demo",
+      "C": "Albumin moles->mass",
       "D": 4038,
       "E": "1751-7",
       "F": "Albumin [Mass/volume] in Serum or Plasma",
@@ -8580,12 +9619,15 @@ export default [
       "P": "g/dL",
       "Q": "g/dL",
       "R": 66000,
-      "T": "g/dL"
+      "S": "x",
+      "T": "g/dL",
+      "U": "g/dL",
+      "V": "g/dL"
     },
     {
       "A": 4,
       "B": "Albumin SerPl Qn",
-      "C": "Albumin MSCNC demo",
+      "C": "Albumin moles->mass",
       "D": "4038z",
       "E": "54347-0",
       "F": "Albumin [Moles/volume] in Serum or Plasma",
@@ -8600,12 +9642,14 @@ export default [
       "Q": "g/dL",
       "R": 66000,
       "S": "x",
-      "T": "umol/l"
+      "T": "umol/l",
+      "U": "umol/l",
+      "V": "umol/l"
     },
     {
       "A": 4,
       "B": "Albumin Ser Neph",
-      "C": "Albumin|MCnc|Ser/Plas||Pt",
+      "C": "Albumin moles->mass",
       "D": 25166,
       "E": "1751-7",
       "F": "Albumin [Mass/volume] in Serum or Plasma",
@@ -8620,12 +9664,14 @@ export default [
       "Q": "g/dL",
       "R": 66000,
       "S": "x",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 4,
       "B": "Albumin (CSH)",
-      "C": "Albumin|MCnc|Ser/Plas||Pt",
+      "C": "Albumin moles->mass",
       "D": 11448,
       "E": "1751-7",
       "F": "Albumin [Mass/volume] in Serum or Plasma",
@@ -8639,12 +9685,15 @@ export default [
       "P": "g/dL",
       "Q": "g/dL",
       "R": 66000,
-      "T": "g/dL"
+      "S": "x",
+      "T": "g/dL",
+      "U": "g/dL",
+      "V": "g/dL"
     },
     {
       "A": 4,
       "B": "Albumin (SMA)",
-      "C": "Albumin|MCnc|Ser/Plas||Pt",
+      "C": "Albumin moles->mass",
       "D": 38,
       "E": "1751-7",
       "F": "Albumin [Mass/volume] in Serum or Plasma",
@@ -8658,7 +9707,10 @@ export default [
       "P": "g/dL",
       "Q": "g/dL",
       "R": 66000,
-      "T": "g/dL"
+      "S": "x",
+      "T": "g/dL",
+      "U": "g/dL",
+      "V": "g/dL"
     },
     {
       "A": 3,
@@ -8682,7 +9734,9 @@ export default [
       "O": "LN",
       "P": "mg/dL",
       "Q": "mg/dL",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 4,
@@ -8700,12 +9754,14 @@ export default [
       "O": "LN",
       "P": "mg/dL",
       "Q": "mg/dL",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 4,
       "B": "Bilirubin Total SerPl Qn",
-      "C": "Bilirubin|MCnc|Ser/Plas||Pt",
+      "C": "Bilirubin moles->mass",
       "D": 1275,
       "E": "1975-2",
       "F": "Bilirubin.total [Mass/volume] in Serum or Plasma",
@@ -8719,12 +9775,15 @@ export default [
       "P": "mg/dL",
       "Q": "mg/dL",
       "R": 584.6621,
-      "T": "mg/dL"
+      "S": "x",
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 4,
       "B": "Bilirubin Tot Ser",
-      "C": "Bilirubin|MCnc|Ser/Plas||Pt",
+      "C": "Bilirubin moles->mass",
       "D": 11438,
       "E": "1975-2",
       "F": "Bilirubin.total [Mass/volume] in Serum or Plasma",
@@ -8738,12 +9797,15 @@ export default [
       "P": "mg/dL",
       "Q": "mg/dL",
       "R": 584.6621,
-      "T": "mg/dL"
+      "S": "x",
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 4,
       "B": "Bilirubin SerPl Qn",
-      "C": "Bilirubin MSCNC demo",
+      "C": "Bilirubin moles->mass",
       "D": 39,
       "E": "1975-2",
       "F": "Bilirubin.total [Mass/volume] in Serum or Plasma",
@@ -8757,12 +9819,15 @@ export default [
       "P": "mg/dL",
       "Q": "mg/dL",
       "R": 584.6621,
-      "T": "mg/dL"
+      "S": "x",
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 4,
       "B": "Bilirubin SerPl Qn",
-      "C": "Bilirubin MSCNC demo",
+      "C": "Bilirubin moles->mass",
       "D": "39z",
       "E": "14631-6",
       "F": "Bilirubin.total [Moles/volume] in Serum or Plasma",
@@ -8777,12 +9842,14 @@ export default [
       "Q": "mg/dL",
       "R": 584.6621,
       "S": "x",
-      "T": "umol/l"
+      "T": "umol/l",
+      "U": "umol/l",
+      "V": "umol/l"
     },
     {
       "A": 4,
       "B": "Bilirubin SerPl Qn Calc",
-      "C": "Bilirubin|MCnc|Ser/Plas||Pt",
+      "C": "Bilirubin moles->mass",
       "D": 16459,
       "E": "1975-2",
       "F": "Bilirubin.total [Mass/volume] in Serum or Plasma",
@@ -8796,13 +9863,10 @@ export default [
       "P": "mg/dL",
       "Q": "mg/dL",
       "R": 584.6621,
-      "T": "mg/dL"
-    },
-    {
-      "A": 3,
-      "B": "ALK PHOS TESTS",
-      "D": 4937,
-      "O": "RI"
+      "S": "x",
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 4,
@@ -8820,13 +9884,9 @@ export default [
       "O": "LN",
       "P": "U/L",
       "Q": "U/L",
-      "T": "Units/L"
-    },
-    {
-      "A": 3,
-      "B": "AST TESTS",
-      "D": 5004,
-      "O": "RI"
+      "T": "Units/L",
+      "U": "U/L",
+      "V": "U/L"
     },
     {
       "A": 4,
@@ -8844,13 +9904,9 @@ export default [
       "O": "LN",
       "P": "U/L",
       "Q": "U/L",
-      "T": "Units/L"
-    },
-    {
-      "A": 3,
-      "B": "ALT TESTS",
-      "D": 26281,
-      "O": "RI"
+      "T": "Units/L",
+      "U": "U/L",
+      "V": "U/L"
     },
     {
       "A": 4,
@@ -8868,7 +9924,9 @@ export default [
       "O": "LN",
       "P": "U/L",
       "Q": "U/L",
-      "T": "Units/L"
+      "T": "Units/L",
+      "U": "U/L",
+      "V": "U/L"
     },
     {
       "A": 4,
@@ -8883,13 +9941,9 @@ export default [
       "K": 65,
       "N": "GGT SerPl-cCnc",
       "O": "LN",
-      "T": "Units/L"
-    },
-    {
-      "A": 3,
-      "B": "AMMONIA TESTS",
-      "D": 26586,
-      "O": "RI"
+      "T": "Units/L",
+      "U": "U/L",
+      "V": "U/L"
     },
     {
       "A": 4,
@@ -8905,7 +9959,9 @@ export default [
       "N": "Ammonia Plas-sCnc",
       "O": "LN",
       "R": 17.0305,
-      "T": "mcmol/L"
+      "T": "mcmol/L",
+      "U": "umol/L",
+      "V": "umol/L"
     },
     {
       "A": 4,
@@ -8921,7 +9977,9 @@ export default [
       "N": "Ammonia Ser-mCnc",
       "O": "LN",
       "R": 17.0305,
-      "T": "mcg/dL"
+      "T": "mcg/dL",
+      "U": "ug/dL",
+      "V": "ug/dL"
     },
     {
       "A": 3,
@@ -8969,7 +10027,9 @@ export default [
       "K": 3,
       "N": "B-OH-Butyr SerPl-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
@@ -8991,7 +10051,9 @@ export default [
       "N": "Lactate SerPl-sCnc",
       "O": "LN",
       "R": 89.0705,
-      "T": "mmol/L"
+      "T": "mmol/L",
+      "U": "mmol/L",
+      "V": "mmol/L"
     },
     {
       "A": 3,
@@ -9007,19 +10069,9 @@ export default [
       "N": "Pyruvate Bld-sCnc",
       "O": "LN",
       "R": 87.0547,
-      "T": "mmol/L"
-    },
-    {
-      "A": 3,
-      "B": "AMYLASE TESTS",
-      "D": 5401,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "LIPASE TESTS",
-      "D": 26587,
-      "O": "RI"
+      "T": "mmol/L",
+      "U": "mmol/L",
+      "V": "mmol/L"
     },
     {
       "A": 4,
@@ -9037,7 +10089,9 @@ export default [
       "O": "LN",
       "P": "U/L",
       "Q": "U/L",
-      "T": "Units"
+      "T": "Units",
+      "U": "U/L",
+      "V": "U/L"
     },
     {
       "A": 3,
@@ -9054,7 +10108,9 @@ export default [
       "M": 1,
       "N": "Magnesium SerPl-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
@@ -9072,7 +10128,9 @@ export default [
       "O": "LN",
       "P": "U/L",
       "Q": "U/L",
-      "T": "mU/mL"
+      "T": "mU/mL",
+      "U": "U/L",
+      "V": "U/L"
     },
     {
       "A": 3,
@@ -9089,7 +10147,9 @@ export default [
       "M": 250,
       "N": "Osmolality SerPl",
       "O": "LN",
-      "T": "mOsmol/kg"
+      "T": "mOsmol/kg",
+      "U": "mosm/kg",
+      "V": "mosm/kg"
     },
     {
       "A": 3,
@@ -9100,7 +10160,7 @@ export default [
     {
       "A": 4,
       "B": "Phosphorus SerPl Qn",
-      "C": "Phosphate MSCNC demo",
+      "C": "Phosphate moles->mass",
       "D": 1793,
       "E": "2777-1",
       "F": "Phosphate [Mass/volume] in Serum or Plasma",
@@ -9113,13 +10173,16 @@ export default [
       "O": "RI",
       "P": "mg/dL",
       "Q": "mg/dL",
-      "R": 94.973,
-      "T": "mg/dL"
+      "R": 30.974,
+      "S": "x",
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 4,
       "B": "Phosphorus SerPl Qn",
-      "C": "Phosphate MSCNC demo",
+      "C": "Phosphate moles->mass",
       "D": "1793z",
       "E": "14879-1",
       "F": "Phosphate [Moles/volume] in Serum or Plasma",
@@ -9132,14 +10195,16 @@ export default [
       "O": "RI",
       "P": "mg/dL",
       "Q": "mg/dL",
-      "R": 94.973,
+      "R": 30.974,
       "S": "x",
-      "T": "mmol/L"
+      "T": "mmol/L",
+      "U": "mmol/L",
+      "V": "mmol/L"
     },
     {
       "A": 4,
       "B": "Phos (CSH)",
-      "C": "Phosphate|MCnc|Ser/Plas||Pt",
+      "C": "Phosphate moles->mass",
       "D": 11446,
       "E": "2777-1",
       "F": "Phosphate [Mass/volume] in Serum or Plasma",
@@ -9152,13 +10217,16 @@ export default [
       "O": "RI",
       "P": "mg/dL",
       "Q": "mg/dL",
-      "R": 94.973,
-      "T": "mg/dL"
+      "R": 30.974,
+      "S": "x",
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 4,
       "B": "Phos (SMA)",
-      "C": "Phosphate|MCnc|Ser/Plas||Pt",
+      "C": "Phosphate moles->mass",
       "D": 32,
       "E": "2777-1",
       "F": "Phosphate [Mass/volume] in Serum or Plasma",
@@ -9171,8 +10239,11 @@ export default [
       "O": "RI",
       "P": "mg/dL",
       "Q": "mg/dL",
-      "R": 94.973,
-      "T": "mg/dL"
+      "R": 30.974,
+      "S": "x",
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
@@ -9193,7 +10264,9 @@ export default [
       "K": 3.3,
       "N": "Globulin Plas-mCnc",
       "O": "LN",
-      "T": "g/dL"
+      "T": "g/dL",
+      "U": "g/dL",
+      "V": "g/dL"
     },
     {
       "A": 4,
@@ -9207,7 +10280,9 @@ export default [
       "J": 1,
       "K": 2.5,
       "N": "Albumin/Glob SerPl",
-      "O": "LN"
+      "O": "LN",
+      "U": "ratio",
+      "V": "{ratio}"
     },
     {
       "A": 3,
@@ -9232,7 +10307,9 @@ export default [
       "P": "mg/dL",
       "Q": "mg/dL",
       "R": 168.1114,
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 2,
@@ -9256,7 +10333,9 @@ export default [
       "O": "LN",
       "P": "mg/dL",
       "Q": "mg/dL",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
@@ -9273,7 +10352,9 @@ export default [
       "O": "LN",
       "P": "mg/dL",
       "Q": "mg/dL",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
@@ -9288,7 +10369,9 @@ export default [
       "K": 30,
       "N": "LPa SerPl-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 2,
@@ -9346,7 +10429,9 @@ export default [
       "O": "LN",
       "P": "10*3/uL",
       "Q": "10*3/uL",
-      "T": "K/mm3"
+      "T": "K/mm3",
+      "U": "10*3/uL",
+      "V": "10*3/uL"
     },
     {
       "A": 4,
@@ -9357,7 +10442,9 @@ export default [
       "G": "WBC corrected for nucl RBC #/vol (Bld)",
       "N": "WBC nRBC cor # Bld",
       "O": "LN",
-      "T": "K/mm3"
+      "T": "K/mm3",
+      "U": "10*3/uL",
+      "V": "10*3/uL"
     },
     {
       "A": 4,
@@ -9377,7 +10464,9 @@ export default [
       "O": "LN",
       "P": "10*6/uL",
       "Q": "10*6/uL",
-      "T": "million/mm3"
+      "T": "million/mm3",
+      "U": "10*6/uL",
+      "V": "10*6/uL"
     },
     {
       "A": 4,
@@ -9395,150 +10484,167 @@ export default [
       "O": "LN",
       "P": "10*6/uL",
       "Q": "10*6/uL",
-      "T": 0
+      "U": "10*6/uL",
+      "V": "10*6/uL"
     },
     {
       "A": 4,
       "B": "Hemoglobin-Hb",
-      "C": "Hemoglobin|MCnc|Bld - Any|Method_Any",
+      "C": "Hemoglobin Bld moles->mass",
       "D": 16342,
       "E": "718-7",
       "F": "Hemoglobin [Mass/volume] in Blood",
       "G": "Hemoglobin mass conc (Bld)",
       "H": "g/dL",
-      "I": "12.0-16.0",
+      "I": "12 - 17.5",
       "J": 12,
-      "K": 16,
-      "L": 22,
-      "M": 5,
+      "K": 17.5,
       "N": "Hgb Bld-mCnc",
       "O": "RI",
       "P": "g/dL",
       "Q": "g/dL",
       "R": 64458,
-      "T": "g/dL"
+      "S": "x",
+      "T": "g/dL",
+      "U": "g/dL",
+      "V": "g/dL"
     },
     {
       "A": 4,
       "B": "Hgb Bld",
-      "C": "Hemoglobin|MCnc|Bld - Any|Method_Any",
+      "C": "Hemoglobin Bld moles->mass",
       "D": 22594,
       "E": "20509-6",
       "F": "Hemoglobin [Mass/volume] in Blood by calculation",
       "G": "Hemoglobin Calculated mass conc (Bld)",
       "H": "g/dL",
-      "I": "13 - 18",
-      "J": 13,
-      "K": 18,
+      "I": "12 - 17.5",
+      "J": 12,
+      "K": 17.5,
       "N": "Hgb Bld Calc-mCnc",
       "O": "RI",
       "P": "g/dL",
       "Q": "g/dL",
       "R": 64458,
-      "T": "g/dL"
+      "S": "x",
+      "T": "g/dL",
+      "U": "g/dL",
+      "V": "g/dL"
     },
     {
       "A": 4,
       "B": "Hgb Bld Qn (POC)",
-      "C": "Hemoglobin|MCnc|Bld - Any|Method_Any",
+      "C": "Hemoglobin Bld moles->mass",
       "D": 22410,
       "E": "20509-6",
       "F": "Hemoglobin [Mass/volume] in Blood by calculation",
       "G": "Hemoglobin Calculated mass conc (Bld)",
       "H": "g/dL",
-      "I": "13 - 18",
-      "J": 13,
-      "K": 18,
+      "I": "12 - 17.5",
+      "J": 12,
+      "K": 17.5,
       "N": "Hgb Bld Calc-mCnc",
       "O": "RI",
       "P": "g/dL",
       "Q": "g/dL",
       "R": 64458,
-      "T": "g/dL"
+      "S": "x",
+      "T": "g/dL",
+      "U": "g/dL",
+      "V": "g/dL"
     },
     {
       "A": 4,
       "B": "Hgb Bld Qn Calc (ER-IS)",
-      "C": "Hemoglobin|MCnc|Bld - Any|Method_Any",
+      "C": "Hemoglobin Bld moles->mass",
       "D": 20027,
       "E": "20509-6",
       "F": "Hemoglobin [Mass/volume] in Blood by calculation",
       "G": "Hemoglobin Calculated mass conc (Bld)",
       "H": "g/dL",
-      "I": "13 - 18",
-      "J": 13,
-      "K": 18,
+      "I": "12 - 17.5",
+      "J": 12,
+      "K": 17.5,
       "N": "Hgb Bld Calc-mCnc",
       "O": "RI",
       "P": "g/dL",
       "Q": "g/dL",
       "R": 64458,
-      "T": "g/dL"
+      "S": "x",
+      "T": "g/dL",
+      "U": "g/dL",
+      "V": "g/dL"
     },
     {
       "A": 4,
       "B": "Hgb Bld Qn (ISTAT)'",
-      "C": "Hemoglobin|MCnc|Bld - Any|Method_Any",
+      "C": "Hemoglobin Bld moles->mass",
       "D": 18992,
       "E": "20509-6",
       "F": "Hemoglobin [Mass/volume] in Blood by calculation",
       "G": "Hemoglobin Calculated mass conc (Bld)",
       "H": "g/dL",
-      "I": "13 - 18",
-      "J": 13,
-      "K": 18,
+      "I": "12 - 17.5",
+      "J": 12,
+      "K": 17.5,
       "N": "Hgb Bld Calc-mCnc",
       "O": "RI",
       "P": "g/dL",
       "Q": "g/dL",
       "R": 64458,
-      "T": "g/dL"
+      "S": "x",
+      "T": "g/dL",
+      "U": "g/dL",
+      "V": "g/dL"
     },
     {
       "A": 4,
       "B": "Hgb",
-      "C": "Hemoglobin MSCNC demo",
+      "C": "Hemoglobin Bld moles->mass",
       "D": 60,
       "E": "718-7",
       "F": "Hemoglobin [Mass/volume] in Blood",
       "G": "Hemoglobin mass conc (Bld)",
       "H": "g/dL",
-      "I": "12.0 - 17.5",
+      "I": "12 - 17.5",
       "J": 12,
-      "K": 17,
-      "L": 22,
-      "M": 5,
+      "K": 17.5,
       "N": "Hgb Bld-mCnc",
       "O": "RI",
       "P": "g/dL",
       "Q": "g/dL",
       "R": 64458,
-      "T": "g/dL"
+      "S": "x",
+      "T": "g/dL",
+      "U": "g/dL",
+      "V": "g/dL"
     },
     {
       "A": 4,
       "B": "Hgb",
-      "C": "Hemoglobin MSCNC demo",
+      "C": "Hemoglobin Bld moles->mass",
       "D": "60z",
       "E": "59260-0",
       "F": "Hemoglobin [Moles/volume] in Blood",
       "G": "Hemoglobin molar conc (bld)",
       "H": "mmol/L",
-      "I": "7.4 - 11.2",
+      "I": "7.4 - 10.86",
       "J": 7.4,
-      "K": 11.2,
+      "K": 10.86,
       "N": "Hgb Bld-sCnc",
       "O": "RI",
       "P": "g/dL",
       "Q": "g/dL",
       "R": 64458,
       "S": "x",
-      "T": "mmol/L"
+      "T": "mmol/L",
+      "U": "mmol/L",
+      "V": "mmol/L"
     },
     {
       "A": 4,
       "B": "Hematocrit-Hb",
-      "C": "Hematocrit|VFr|Bld - Any|Method_Any",
+      "C": "Hematocrit Bld",
       "D": 16344,
       "E": "4545-0",
       "F": "Hematocrit [Volume Fraction] of Blood by Centrifugation",
@@ -9553,12 +10659,14 @@ export default [
       "O": "LN",
       "P": "%",
       "Q": "%",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
       "B": "Hct",
-      "C": "Hematocrit|VFr|Bld - Any|Method_Any",
+      "C": "Hematocrit Bld",
       "D": 61,
       "E": "20570-8",
       "F": "Hematocrit [Volume Fraction] of Blood",
@@ -9571,12 +10679,14 @@ export default [
       "O": "LN",
       "P": "%",
       "Q": "%",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
       "B": "Hct Bld Qn (ISTAT)'",
-      "C": "Hematocrit|VFr|Bld - Any|Method_Any",
+      "C": "Hematocrit Bld",
       "D": 18993,
       "E": "4544-3",
       "F": "Hematocrit [Volume Fraction] of Blood by Automated count",
@@ -9591,7 +10701,9 @@ export default [
       "O": "LN",
       "P": "%",
       "Q": "%",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -9615,7 +10727,9 @@ export default [
       "O": "LN",
       "P": "fL",
       "Q": "fL",
-      "T": "fL"
+      "T": "fL",
+      "U": "fL",
+      "V": "fL"
     },
     {
       "A": 5,
@@ -9635,7 +10749,9 @@ export default [
       "O": "LN",
       "P": "fL",
       "Q": "fL",
-      "T": "fL"
+      "T": "fL",
+      "U": "fL",
+      "V": "fL"
     },
     {
       "A": 5,
@@ -9654,7 +10770,10 @@ export default [
       "O": "RI",
       "P": "pg",
       "Q": "pg",
-      "T": "pg"
+      "S": "x",
+      "T": "pg",
+      "U": "pg",
+      "V": "pg"
     },
     {
       "A": 5,
@@ -9672,12 +10791,14 @@ export default [
       "P": "pg",
       "Q": "pg",
       "S": "x",
-      "T": "fmol"
+      "T": "fmol",
+      "U": "fmol",
+      "V": "fmol"
     },
     {
       "A": 5,
       "B": "MCHC",
-      "C": "Erythrocyte mean corpuscular hemoglobin concentration MSCNC auto demo",
+      "C": "MCHC (RBC) moles->mass",
       "D": 877,
       "E": "786-4",
       "F": "MCHC [Mass/volume] by Automated count",
@@ -9691,12 +10812,15 @@ export default [
       "O": "RI",
       "P": "g/dL",
       "Q": "g/dL",
-      "T": "g/dL"
+      "S": "x",
+      "T": "g/dL",
+      "U": "g/dL",
+      "V": "g/dL"
     },
     {
       "A": 5,
       "B": "MCHC",
-      "C": "Erythrocyte mean corpuscular hemoglobin concentration MSCNC auto demo",
+      "C": "MCHC (RBC) moles->mass",
       "D": "877z",
       "E": "59467-1",
       "F": "MCHC [Moles/volume] by Automated count",
@@ -9709,12 +10833,14 @@ export default [
       "P": "g/dL",
       "Q": "g/dL",
       "S": "x",
-      "T": "mmol/L"
+      "T": "mmol/L",
+      "U": "mmol/L",
+      "V": "mmol/L"
     },
     {
       "A": 5,
       "B": "MCH-Hb",
-      "C": "Erythrocyte mean corpuscular hemoglobin|EntMass|RBC|Method_Any",
+      "C": "MCHC (RBC)",
       "D": 18119,
       "E": "28539-5",
       "F": "MCH [Entitic mass]",
@@ -9727,12 +10853,14 @@ export default [
       "O": "LN",
       "P": "pg",
       "Q": "pg",
-      "T": "pg"
+      "T": "pg",
+      "U": "pg",
+      "V": "pg"
     },
     {
       "A": 5,
       "B": "MCHC-Hb",
-      "C": "Erythrocyte mean corpuscular hemoglobin concentration|MCnc|RBC|Method_Any",
+      "C": "MCHC (RBC)",
       "D": 18120,
       "E": "28540-3",
       "F": "MCHC [Mass/volume]",
@@ -9747,7 +10875,9 @@ export default [
       "O": "LN",
       "P": "g/dL",
       "Q": "g/dL",
-      "T": "g/dL"
+      "T": "g/dL",
+      "U": "g/dL",
+      "V": "g/dL"
     },
     {
       "A": 5,
@@ -9762,7 +10892,9 @@ export default [
       "K": 14.5,
       "N": "RDW RBC-Rto",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -9782,7 +10914,9 @@ export default [
       "O": "LN",
       "P": "10*3/mm3",
       "Q": "10*3/mm3",
-      "T": "K/mm3"
+      "T": "K/mm3",
+      "U": "10*3/mm3",
+      "V": "10*3/mm3"
     },
     {
       "A": 4,
@@ -9797,7 +10931,9 @@ export default [
       "K": 10.4,
       "N": "PMV Bld",
       "O": "LN",
-      "T": "fL"
+      "T": "fL",
+      "U": "fL",
+      "V": "fL"
     },
     {
       "A": 3,
@@ -9817,7 +10953,7 @@ export default [
     {
       "A": 5,
       "B": "Granulocytes %",
-      "C": "Granulocytes/100 leukocytes|NFr|Bld - Any|Method_Any",
+      "C": "Granulocytes/100 WBCs merged",
       "D": 11899,
       "E": "19023-1",
       "F": "Granulocytes/100 leukocytes in Blood by Automated count",
@@ -9830,12 +10966,14 @@ export default [
       "O": "LN",
       "P": "%",
       "Q": "%",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 5,
       "B": "Granulocytes % Bld (CSH)",
-      "C": "Granulocytes/100 leukocytes|NFr|Bld - Any|Method_Any",
+      "C": "Granulocytes/100 WBCs merged",
       "D": 11519,
       "E": "30395-8",
       "F": "Granulocytes/100 leukocytes in Blood",
@@ -9847,12 +10985,14 @@ export default [
       "O": "LN",
       "P": "%",
       "Q": "%",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 5,
       "B": "Polys %",
-      "C": "Neutrophils/100 leukocytes|NFr|Bld - Any|Method_Any",
+      "C": "Neutrophils/100 WBCs merged",
       "D": 54,
       "E": "26511-6",
       "F": "Neutrophils/100 leukocytes in Blood",
@@ -9865,12 +11005,14 @@ export default [
       "O": "LN",
       "P": "%",
       "Q": "%",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 5,
       "B": "Neutrophils %",
-      "C": "Neutrophils/100 leukocytes|NFr|Bld - Any|Method_Any",
+      "C": "Neutrophils/100 WBCs merged",
       "D": 19167,
       "E": "770-8",
       "F": "Neutrophils/100 leukocytes in Blood by Automated count",
@@ -9883,7 +11025,9 @@ export default [
       "O": "LN",
       "P": "%",
       "Q": "%",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 5,
@@ -9898,7 +11042,9 @@ export default [
       "K": 100,
       "N": "Neuts Hyperseg/leuk NFr Bld Manual",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 5,
@@ -9912,7 +11058,9 @@ export default [
       "K": 5,
       "N": "Neuts Band/leuk NFr Bld",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 5,
@@ -9930,7 +11078,9 @@ export default [
       "O": "LN",
       "P": "%",
       "Q": "%",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 5,
@@ -9948,7 +11098,9 @@ export default [
       "O": "LN",
       "P": "%",
       "Q": "%",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 5,
@@ -9966,12 +11118,14 @@ export default [
       "O": "LN",
       "P": "%",
       "Q": "%",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 5,
       "B": "Basophils %",
-      "C": "Basophils/100 leukocytes|NFr|Bld - Any|Method_Any",
+      "C": "Basophils/100 WBCs merged",
       "D": 58,
       "E": "30180-4",
       "F": "Basophils/100 leukocytes in Blood",
@@ -9984,7 +11138,9 @@ export default [
       "O": "LN",
       "P": "%",
       "Q": "%",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 5,
@@ -9999,7 +11155,9 @@ export default [
       "K": 3,
       "N": "Variant Lymphs/leuk NFr Bld Manual",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 5,
@@ -10014,7 +11172,9 @@ export default [
       "K": 0,
       "N": "Plasma Cells/leuk NFr Bld",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 5,
@@ -10028,7 +11188,9 @@ export default [
       "K": 1,
       "N": "Metamyelocytes/leuk NFr Bld",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 5,
@@ -10042,7 +11204,9 @@ export default [
       "K": 1,
       "N": "Myelocytes/leuk NFr Bld",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 5,
@@ -10056,7 +11220,9 @@ export default [
       "K": 5,
       "N": "Promyelocytes/leuk NFr Bld",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 5,
@@ -10070,12 +11236,14 @@ export default [
       "K": 1,
       "N": "Blasts/leuk NFr Bld",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 5,
       "B": "Lymphocytes % Bld Man",
-      "C": "Lymphocytes/100 leukocytes|NFr|Bld - Any|Method_Any",
+      "C": "Lymphocytes/100 WBCs merged",
       "D": 34471,
       "E": "737-7",
       "F": "Lymphocytes/100 leukocytes in Blood by Manual count",
@@ -10087,12 +11255,14 @@ export default [
       "O": "LN",
       "P": "%",
       "Q": "%",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 5,
       "B": "Eosinophils % Bld Man",
-      "C": "Eosinophils/100 leukocytes|NFr|Bld - Any|Method_Any",
+      "C": "Eosinophils/100 WBCs merged+E707",
       "D": 34470,
       "E": "714-6",
       "F": "Eosinophils/100 leukocytes in Blood by Manual count",
@@ -10101,7 +11271,9 @@ export default [
       "O": "LN",
       "P": "%",
       "Q": "%",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 5,
@@ -10116,7 +11288,9 @@ export default [
       "K": 300,
       "N": "Eosinophil # Bld",
       "O": "LN",
-      "T": "#/mm3"
+      "T": "#/mm3",
+      "U": "10*3/uL",
+      "V": "10*3/uL"
     },
     {
       "A": 5,
@@ -10131,7 +11305,9 @@ export default [
       "K": 2.71,
       "N": "Retics #",
       "O": "LN",
-      "T": "K/mm3"
+      "T": "K/mm3",
+      "U": "10*3/uL",
+      "V": "10*3/uL"
     },
     {
       "A": 4,
@@ -10153,7 +11329,9 @@ export default [
       "K": 1,
       "N": "nRBC/100 WBC Bld-Rto",
       "O": "LN",
-      "T": "#/1 WBC"
+      "T": "#/1 WBC",
+      "U": "/100",
+      "V": "/100{WBCs}"
     },
     {
       "A": 4,
@@ -10171,7 +11349,9 @@ export default [
       "O": "LN",
       "P": "%",
       "Q": "%",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 2,
@@ -10196,7 +11376,9 @@ export default [
       "P": "mcg/dL",
       "Q": "mcg/dL",
       "R": 55.845,
-      "T": "mcg/dL"
+      "T": "mcg/dL",
+      "U": "mcg/dL",
+      "V": "mcg/dL"
     },
     {
       "A": 3,
@@ -10212,7 +11394,9 @@ export default [
       "N": "Iron Tiss-mCnt",
       "O": "LN",
       "R": 55.845,
-      "T": "MCG/GM"
+      "T": "MCG/GM",
+      "U": "ug/g",
+      "V": "ug/g"
     },
     {
       "A": 3,
@@ -10230,7 +11414,9 @@ export default [
       "O": "LN",
       "P": "mcg/dL",
       "Q": "mcg/dL",
-      "T": "mcg/dL"
+      "T": "mcg/dL",
+      "U": "mcg/dL",
+      "V": "mcg/dL"
     },
     {
       "A": 3,
@@ -10248,7 +11434,9 @@ export default [
       "O": "LN",
       "P": "%",
       "Q": "%",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 3,
@@ -10266,7 +11454,9 @@ export default [
       "O": "LN",
       "P": "ng/mL",
       "Q": "ng/mL",
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 3,
@@ -10281,7 +11471,9 @@ export default [
       "K": 200,
       "N": "Ferritin SerPl IA-mCnc",
       "O": "LN",
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 3,
@@ -10297,7 +11489,9 @@ export default [
       "L": 5000,
       "N": "Transferrin SerPl-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
@@ -10312,7 +11506,9 @@ export default [
       "K": 19,
       "N": "EPO SerPl-aCnc",
       "O": "LN",
-      "T": "mU/mL"
+      "T": "mU/mL",
+      "U": "IU/L",
+      "V": "[IU]/L"
     },
     {
       "A": 2,
@@ -10335,7 +11531,9 @@ export default [
       "O": "LN",
       "P": "ng/mL",
       "Q": "ng/mL",
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 3,
@@ -10352,11 +11550,14 @@ export default [
       "O": "LN",
       "P": "ng/mL",
       "Q": "ng/mL",
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 3,
       "B": "Vit B12 Ser Qn",
+      "C": "Vit B12 SerPl",
       "D": 23721,
       "E": "2132-9",
       "F": "Cobalamin (Vitamin B12) [Mass/volume] in Serum or Plasma",
@@ -10367,11 +11568,14 @@ export default [
       "K": 1600,
       "N": "Vit B12 SerPl-mCnc",
       "O": "LN",
-      "T": "pg/mL"
+      "T": "pg/mL",
+      "U": "pg/mL",
+      "V": "pg/mL"
     },
     {
       "A": 3,
       "B": "Vit B12 SerPl Qn RIA",
+      "C": "Vit B12 SerPl",
       "D": 654,
       "E": "1888-7",
       "F": "Aquacobalamin [Mass/volume] in Serum or Plasma",
@@ -10382,7 +11586,9 @@ export default [
       "K": 1600,
       "N": "Vit B12a SerPl-mCnc",
       "O": "LN",
-      "T": "pg/mL"
+      "T": "pg/mL",
+      "U": "pg/mL",
+      "V": "pg/mL"
     },
     {
       "A": 3,
@@ -10398,7 +11604,9 @@ export default [
       "L": 1252,
       "N": "Vit B12 USB SerPl-mCnc",
       "O": "LN",
-      "T": "pg/mL"
+      "T": "pg/mL",
+      "U": "pg/mL",
+      "V": "pg/mL"
     },
     {
       "A": 3,
@@ -10414,7 +11622,9 @@ export default [
       "L": 100,
       "N": "Vit B12 p B12+IF 24h Ur-aCnc",
       "O": "LN",
-      "T": "%EXCRETION"
+      "T": "%EXCRETION",
+      "U": "%",
+      "V": "%{excretion}"
     },
     {
       "A": 3,
@@ -10430,7 +11640,9 @@ export default [
       "L": 100,
       "N": "Vit B12 p B12 24h Ur-aCnc",
       "O": "LN",
-      "T": "%EXCRETION"
+      "T": "%EXCRETION",
+      "U": "%",
+      "V": "%{excretion}"
     },
     {
       "A": 2,
@@ -10452,7 +11664,9 @@ export default [
       "M": 1,
       "N": "G6PD RBC-cCnt",
       "O": "LN",
-      "T": "U/g Hgb"
+      "T": "U/g Hgb",
+      "U": "U/gHb",
+      "V": "U/g{Hb}"
     },
     {
       "A": 3,
@@ -10470,7 +11684,9 @@ export default [
       "O": "LN",
       "P": "mg/dL",
       "Q": "mg/dL",
-      "T": "MG% HGB BIND CAP"
+      "T": "MG% HGB BIND CAP",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
@@ -10485,7 +11701,9 @@ export default [
       "K": 10,
       "N": "Hgb Free Ser-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
@@ -10496,7 +11714,9 @@ export default [
       "G": "Free Hemoglobin mass conc (P)",
       "N": "Hgb Free Plas-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/L",
+      "V": "mg/L"
     },
     {
       "A": 3,
@@ -10505,7 +11725,9 @@ export default [
       "E": "4667-2",
       "F": "Osmotic fragility of Red Blood Cells",
       "N": "OF NFr RBC",
-      "O": "LN"
+      "O": "LN",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 3,
@@ -10526,7 +11748,9 @@ export default [
       "K": 22,
       "N": "PK RBC-cCnt",
       "O": "LN",
-      "T": "U/g Hgb"
+      "T": "U/g Hgb",
+      "U": "U/gHb",
+      "V": "U/g{Hb}"
     },
     {
       "A": 2,
@@ -10550,7 +11774,9 @@ export default [
       "O": "LN",
       "P": "%",
       "Q": "%",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 3,
@@ -10569,7 +11795,9 @@ export default [
       "O": "LN",
       "P": "%",
       "Q": "%",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 3,
@@ -10585,7 +11813,9 @@ export default [
       "L": 3767,
       "N": "Hgb A MFr Bld",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 3,
@@ -10604,7 +11834,9 @@ export default [
       "O": "LN",
       "P": "%",
       "Q": "%",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 3,
@@ -10619,7 +11851,9 @@ export default [
       "K": 0,
       "N": "Hgb S MFr Bld",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 3,
@@ -10634,7 +11868,9 @@ export default [
       "K": 0,
       "N": "Hgb C MFr Bld Elph Acid",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 3,
@@ -10652,7 +11888,9 @@ export default [
       "O": "LN",
       "P": "%",
       "Q": "%",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 3,
@@ -10667,7 +11905,9 @@ export default [
       "K": 0,
       "N": "Hgb XXX MFr Bld Elph",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 3,
@@ -10700,7 +11940,9 @@ export default [
       "O": "LN",
       "P": "%",
       "Q": "%",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 2,
@@ -10760,7 +12002,9 @@ export default [
       "O": "LN",
       "P": "mcg/mL",
       "Q": "mcg/mL",
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "mcg/mL",
+      "V": "mcg/mL"
     },
     {
       "A": 2,
@@ -10783,7 +12027,9 @@ export default [
       "G": "B lymphocytes #/vol (Bld)",
       "N": "B Lymphocytes # Bld",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "/uL",
+      "V": "/uL"
     },
     {
       "A": 4,
@@ -10794,7 +12040,9 @@ export default [
       "G": "Activated T cells lymphocytes/100 lymphocytes.small (Bld)",
       "N": "Activ T Lymphs NFr Bld",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 3,
@@ -10814,7 +12062,9 @@ export default [
       "O": "LN",
       "P": "%",
       "Q": "%",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -10825,7 +12075,9 @@ export default [
       "G": "CD33+CD34+ cells/100 cells (Bld)",
       "N": "CD33+CD34+ Cells NFr Bld",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -10840,7 +12092,9 @@ export default [
       "K": 99.52,
       "N": "CD33 Cells NFr Bld",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -10852,7 +12106,9 @@ export default [
       "H": "%",
       "N": "CD34 Cells NFr Bld",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -10864,7 +12120,9 @@ export default [
       "H": "%",
       "N": "CD11b Cells NFr Bld",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -10876,7 +12134,9 @@ export default [
       "H": "%",
       "N": "CD11c Cells NFr Bld",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -10890,7 +12150,9 @@ export default [
       "O": "LN",
       "P": "%",
       "Q": "%",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -10901,7 +12163,9 @@ export default [
       "G": "CD15 cells/100 cells (Bld)",
       "N": "CD15 Cells NFr Bld",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -10913,7 +12177,9 @@ export default [
       "H": "%",
       "N": "CD13 Cells NFr Bld",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -10925,7 +12191,9 @@ export default [
       "H": "%",
       "N": "CD22 Cells NFr Bld",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -10936,7 +12204,9 @@ export default [
       "G": "CD22+CD11c+ cells/100 cells (Bld)",
       "N": "CD22+CD11c+ Cells NFr Bld",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -10947,7 +12217,9 @@ export default [
       "G": "CD19+CD33+ cells/100 cells (Bld)",
       "N": "CD19+CD33+ Cells NFr Bld",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -10962,7 +12234,9 @@ export default [
       "K": 22.3,
       "N": "CD20 Cells NFr Bld",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -10977,7 +12251,9 @@ export default [
       "K": 22,
       "N": "CD19 Cells NFr XXX",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -10993,7 +12269,9 @@ export default [
       "L": 100,
       "N": "CD10 Cells NFr Bld",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -11003,7 +12281,9 @@ export default [
       "F": "CD10+CD20+ cells/100 cells in Blood",
       "G": "CD10+CD20+ cells/100 cells (Bld)",
       "N": "CD10+CD20+ Cells NFr Bld",
-      "O": "LN"
+      "O": "LN",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -11014,7 +12294,9 @@ export default [
       "G": "CD23 cells/100 cells (Bld)",
       "N": "CD23 Cells NFr Bld",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -11025,7 +12307,9 @@ export default [
       "G": "CD21 cells/100 cells (Bld)",
       "N": "CD21 Cells NFr Bld",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -11036,7 +12320,9 @@ export default [
       "G": "CD19+IgG+ cells/100 cells (Unsp spec)",
       "N": "CD19+IgG+ cells NFr XXX",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -11047,7 +12333,9 @@ export default [
       "G": "CD19+IgM+ cells/100 cells (Unsp spec)",
       "N": "CD19+IgM+ cells NFr XXX",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -11058,7 +12346,9 @@ export default [
       "G": "CD19+IgD+ cells/100 cells (Unsp spec)",
       "N": "CD19+IgD+ cells NFr XXX",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -11069,7 +12359,9 @@ export default [
       "G": "CD19+IgA+ cells/100 cells (Unsp spec)",
       "N": "CD19+IgA+ cells NFr XXX",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -11084,7 +12376,9 @@ export default [
       "K": 19.4,
       "N": "CD19+Kappa+ Cells NFr Bld",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -11099,7 +12393,9 @@ export default [
       "K": 26.3,
       "N": "CD19+Lambda+ Cells NFr Bld",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -11114,7 +12410,9 @@ export default [
       "K": 84,
       "N": "CD2 Cells NFr Bld",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -11129,7 +12427,9 @@ export default [
       "K": 82,
       "N": "CD3 Cells NFr Bld",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -11144,7 +12444,9 @@ export default [
       "K": 100,
       "N": "CD5 Cells NFr Bld",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -11160,7 +12462,9 @@ export default [
       "L": 100,
       "N": "CD5+CD19+ Cells NFr Bld",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -11172,7 +12476,9 @@ export default [
       "H": "%",
       "N": "CD7 Cells NFr Bld",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -11187,7 +12493,9 @@ export default [
       "K": 59,
       "N": "CD3+CD4+ Cells NFr Bld",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -11202,7 +12510,9 @@ export default [
       "K": 36,
       "N": "CD3+CD8+ Cells NFr Bld",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -11217,7 +12527,9 @@ export default [
       "K": 18,
       "N": "CD16+CD56+ Cells NFr Bld",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -11231,7 +12543,9 @@ export default [
       "J": 1,
       "K": 4,
       "N": "CD3+CD4+ Cells/CD3+CD8+ Cells Bld",
-      "O": "LN"
+      "O": "LN",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -11242,7 +12556,9 @@ export default [
       "G": "CD38 cells/100 cells (Bld)",
       "N": "CD38 Cells NFr Bld",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -11257,7 +12573,9 @@ export default [
       "K": 24,
       "N": "HLA-DR+ Cells NFr Bld",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -11271,7 +12589,9 @@ export default [
       "K": 1033,
       "N": "CD25 Cells NFr Bld",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -11282,7 +12602,9 @@ export default [
       "G": "CD41 cells/100 cells (Bld)",
       "N": "CD41 Cells NFr Bld",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -11298,7 +12620,9 @@ export default [
       "L": 100,
       "N": "CD61 Cells NFr Bld",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -11309,7 +12633,9 @@ export default [
       "G": "CD56 cells/100 cells (Bld)",
       "N": "CD56 Cells NFr Bld",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -11325,7 +12651,9 @@ export default [
       "L": 100,
       "N": "TdT Cells NFr XXX IP Stn",
       "O": "LN",
-      "T": "% Positive"
+      "T": "% Positive",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -11336,7 +12664,9 @@ export default [
       "G": "CD235a cells/100 cells (Bld)",
       "N": "CD235a Cells NFr Bld",
       "O": "LN",
-      "T": "% Positive"
+      "T": "% Positive",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -11347,7 +12677,9 @@ export default [
       "G": "CD30 cells/100 cells (Unsp spec)",
       "N": "CD30 Cells NFr XXX",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -11357,7 +12689,9 @@ export default [
       "F": "CD103 cells/100 cells in Blood",
       "G": "CD103 cells/100 cells (Bld)",
       "N": "CD103 Cells NFr Bld",
-      "O": "LN"
+      "O": "LN",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -11372,7 +12706,9 @@ export default [
       "K": 5943,
       "N": "Lymphocytes # Bld",
       "O": "LN",
-      "T": "#/mm3"
+      "T": "#/mm3",
+      "U": "10*3/uL",
+      "V": "10*3/uL"
     },
     {
       "A": 4,
@@ -11387,7 +12723,9 @@ export default [
       "K": 3868,
       "N": "CD2 Cells # Bld",
       "O": "LN",
-      "T": "#/mm3"
+      "T": "#/mm3",
+      "U": "/uL",
+      "V": "/uL"
     },
     {
       "A": 4,
@@ -11402,7 +12740,9 @@ export default [
       "K": 2300,
       "N": "CD3 Cells # Bld",
       "O": "LN",
-      "T": "#/mm3"
+      "T": "#/mm3",
+      "U": "/uL",
+      "V": "/uL"
     },
     {
       "A": 4,
@@ -11417,7 +12757,9 @@ export default [
       "K": 1400,
       "N": "CD3+CD4+ Cells # XXX",
       "O": "LN",
-      "T": "#/mm3"
+      "T": "#/mm3",
+      "U": "/uL",
+      "V": "/uL"
     },
     {
       "A": 4,
@@ -11432,7 +12774,9 @@ export default [
       "K": 1000,
       "N": "CD3+CD8+ Cells # Bld",
       "O": "LN",
-      "T": "#/mm3"
+      "T": "#/mm3",
+      "U": "/uL",
+      "V": "/uL"
     },
     {
       "A": 4,
@@ -11450,7 +12794,9 @@ export default [
       "O": "LN",
       "P": "#/mm3",
       "Q": "#/mm3",
-      "T": "#/mm3"
+      "T": "#/mm3",
+      "U": "/mm3",
+      "V": "#/mm3"
     },
     {
       "A": 4,
@@ -11465,7 +12811,9 @@ export default [
       "K": 1106,
       "N": "CD16+CD56+ Cells # Bld",
       "O": "LN",
-      "T": "#/mm3"
+      "T": "#/mm3",
+      "U": "/uL",
+      "V": "/uL"
     },
     {
       "A": 2,
@@ -11503,7 +12851,9 @@ export default [
       "O": "LN",
       "P": "{INR}",
       "Q": "{INR}",
-      "T": "INR(POC)"
+      "T": "INR(POC)",
+      "U": "INR",
+      "V": "{INR}"
     },
     {
       "A": 5,
@@ -11522,7 +12872,9 @@ export default [
       "O": "LN",
       "P": "s",
       "Q": "s",
-      "T": "sec"
+      "T": "sec",
+      "U": "s",
+      "V": "s"
     },
     {
       "A": 5,
@@ -11537,7 +12889,9 @@ export default [
       "K": 13,
       "N": "PT Cont PPP",
       "O": "LN",
-      "T": "sec"
+      "T": "sec",
+      "U": "s",
+      "V": "s"
     },
     {
       "A": 4,
@@ -11556,7 +12910,8 @@ export default [
       "O": "LN",
       "P": "{INR}",
       "Q": "{INR}",
-      "T": 0
+      "U": "INR",
+      "V": "{INR}"
     },
     {
       "A": 4,
@@ -11574,7 +12929,8 @@ export default [
       "O": "LN",
       "P": "{INR}",
       "Q": "{INR}",
-      "T": 0
+      "U": "INR",
+      "V": "{INR}"
     },
     {
       "A": 4,
@@ -11583,7 +12939,9 @@ export default [
       "E": "14979-9",
       "F": "aPTT in Platelet poor plasma by Coagulation assay",
       "N": "aPTT PPP",
-      "O": "LN"
+      "O": "LN",
+      "U": "s",
+      "V": "s"
     },
     {
       "A": 5,
@@ -11598,7 +12956,9 @@ export default [
       "K": 37,
       "N": "aPTT Cont PPP",
       "O": "LN",
-      "T": "sec"
+      "T": "sec",
+      "U": "s",
+      "V": "s"
     },
     {
       "A": 4,
@@ -11613,7 +12973,9 @@ export default [
       "K": 13.3,
       "N": "Thrombin time",
       "O": "LN",
-      "T": "sec"
+      "T": "sec",
+      "U": "s",
+      "V": "s"
     },
     {
       "A": 4,
@@ -11629,7 +12991,9 @@ export default [
       "M": 50,
       "N": "Fibrinogen PPP-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 4,
@@ -11645,7 +13009,9 @@ export default [
       "L": 3,
       "N": "Deprecated D Dimer PPP-mCnc",
       "O": "LN",
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "ug/L",
+      "V": "ug/L"
     },
     {
       "A": 4,
@@ -11664,7 +13030,9 @@ export default [
       "O": "LN",
       "P": "s",
       "Q": "s",
-      "T": "sec"
+      "T": "sec",
+      "U": "s",
+      "V": "s"
     },
     {
       "A": 3,
@@ -11685,7 +13053,9 @@ export default [
       "K": 1.4,
       "N": "Heparin PPP-aCnc",
       "O": "LN",
-      "T": "Units/mL"
+      "T": "Units/mL",
+      "U": "arb'U/mL",
+      "V": "[arb'U]/mL"
     },
     {
       "A": 4,
@@ -11696,7 +13066,9 @@ export default [
       "G": "LMW Heparin Qn (PPP)",
       "N": "LMWH PPP-aCnc",
       "O": "LN",
-      "T": "Units/mL"
+      "T": "Units/mL",
+      "U": "arb'U/mL",
+      "V": "[arb'U]/mL"
     },
     {
       "A": 4,
@@ -11711,7 +13083,9 @@ export default [
       "K": 22,
       "N": "Reptilase time",
       "O": "LN",
-      "T": "sec"
+      "T": "sec",
+      "U": "s",
+      "V": "s"
     },
     {
       "A": 4,
@@ -11724,7 +13098,9 @@ export default [
       "I": "<10.0",
       "K": 10,
       "N": "B2 Glycoprot1 IgG Ser-aCnc",
-      "O": "LN"
+      "O": "LN",
+      "U": "arb'U/mL",
+      "V": "[arb'U]/mL"
     },
     {
       "A": 4,
@@ -11734,7 +13110,9 @@ export default [
       "F": "Beta 2 glycoprotein 1 IgM Ab [Units/volume] in Serum",
       "G": "Beta 2 glycoprotein 1 IgM Qn (S)",
       "N": "B2 Glycoprot1 IgM Ser-aCnc",
-      "O": "LN"
+      "O": "LN",
+      "U": "arb'U/mL",
+      "V": "[arb'U]/mL"
     },
     {
       "A": 3,
@@ -11755,7 +13133,9 @@ export default [
       "K": 142,
       "N": "PLG Act/Nor PPP Chro",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -11770,7 +13150,9 @@ export default [
       "K": 147,
       "N": "Prot C Act/Nor PPP Chro",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -11785,7 +13167,9 @@ export default [
       "K": 153,
       "N": "Prot C Ag Act/Nor PPP IA",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -11803,7 +13187,9 @@ export default [
       "O": "LN",
       "P": "%",
       "Q": "%",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -11821,7 +13207,9 @@ export default [
       "O": "LN",
       "P": "%",
       "Q": "%",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -11836,7 +13224,9 @@ export default [
       "K": 138,
       "N": "Prot S Free Ag Act/Nor PPP IA",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -11851,7 +13241,9 @@ export default [
       "K": 120,
       "N": "AT III Act/Nor PPP Chro",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -11866,7 +13258,9 @@ export default [
       "K": 39,
       "N": "AT III Ag PPP IA-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 4,
@@ -11877,7 +13271,9 @@ export default [
       "G": "Antithrombin Ag actual/normal IA RelMCnc (PPP)",
       "N": "AT III Ag Act/Nor PPP IA",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -11891,7 +13287,8 @@ export default [
       "O": "LN",
       "P": "{ratio}",
       "Q": "{ratio}",
-      "T": 0
+      "U": "ratio",
+      "V": "{ratio}"
     },
     {
       "A": 3,
@@ -11908,7 +13305,9 @@ export default [
       "G": "Prothrombin time (PT) baseline Coag time (PPP)",
       "N": "PT BS PPP",
       "O": "LN",
-      "T": "sec"
+      "T": "sec",
+      "U": "s",
+      "V": "s"
     },
     {
       "A": 4,
@@ -11919,7 +13318,9 @@ export default [
       "G": "aPTT baseline Coag time (PPP)",
       "N": "aPTT BS PPP",
       "O": "LN",
-      "T": "sec"
+      "T": "sec",
+      "U": "s",
+      "V": "s"
     },
     {
       "A": 4,
@@ -11930,7 +13331,9 @@ export default [
       "G": "aPTT.factor substitution immediately after addition of normal plasma Coag time (PPP)",
       "N": "aPTT imm NP PPP",
       "O": "LN",
-      "T": "sec"
+      "T": "sec",
+      "U": "s",
+      "V": "s"
     },
     {
       "A": 4,
@@ -11941,7 +13344,9 @@ export default [
       "G": "aPTT.lupus sensitive Coag time (PPP)",
       "N": "Screen aPTT",
       "O": "LN",
-      "T": "sec"
+      "T": "sec",
+      "U": "s",
+      "V": "s"
     },
     {
       "A": 4,
@@ -11952,7 +13357,9 @@ export default [
       "G": "aPTT p heparin adsorption Coag time (PPP)",
       "N": "aPTT p heparin adsorption PPP",
       "O": "LN",
-      "T": "sec"
+      "T": "sec",
+      "U": "s",
+      "V": "s"
     },
     {
       "A": 4,
@@ -11963,7 +13370,9 @@ export default [
       "G": "Lupus anticoagulant neutralization platelet Coag time (PPP)",
       "N": "LA Nt Platelet PPP",
       "O": "LN",
-      "T": "sec"
+      "T": "sec",
+      "U": "s",
+      "V": "s"
     },
     {
       "A": 4,
@@ -11978,7 +13387,9 @@ export default [
       "K": 50,
       "N": "Screen dRVVT",
       "O": "LN",
-      "T": "sec"
+      "T": "sec",
+      "U": "s",
+      "V": "s"
     },
     {
       "A": 4,
@@ -11989,7 +13400,9 @@ export default [
       "G": "dRVVT factor substitution immediately after addition of normal plasma Coag time (PPP)",
       "N": "dRVVT imm NP PPP",
       "O": "LN",
-      "T": "sec"
+      "T": "sec",
+      "U": "s",
+      "V": "s"
     },
     {
       "A": 4,
@@ -12004,7 +13417,9 @@ export default [
       "K": 50,
       "N": "Confirm dRVVT",
       "O": "LN",
-      "T": "sec"
+      "T": "sec",
+      "U": "s",
+      "V": "s"
     },
     {
       "A": 4,
@@ -12025,7 +13440,9 @@ export default [
       "F": "dRVVT actual/normal (normalized LA screen)",
       "G": "dRVVT actual/normal Coag RelTime (PPP)",
       "N": "Screen dRVVT/normal",
-      "O": "LN"
+      "O": "LN",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 3,
@@ -12046,7 +13463,9 @@ export default [
       "K": 139,
       "N": "Prothrom Act/Nor PPP",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -12063,7 +13482,9 @@ export default [
       "M": 30,
       "N": "Fact V Act/Nor PPP",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -12080,7 +13501,9 @@ export default [
       "M": 30,
       "N": "Fact VII Act/Nor PPP",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -12095,7 +13518,9 @@ export default [
       "K": 195,
       "N": "Fact VIII Act/Nor PPP",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -12110,7 +13535,9 @@ export default [
       "K": 140,
       "N": "Fact IX Act/Nor PPP",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -12125,7 +13552,9 @@ export default [
       "K": 155,
       "N": "Fact X Act/Nor PPP",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -12140,7 +13569,9 @@ export default [
       "K": 135,
       "N": "Fact XI Act/Nor PPP",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -12155,7 +13586,9 @@ export default [
       "K": 150,
       "N": "Fact XII Act/Nor PPP",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -12173,7 +13606,9 @@ export default [
       "O": "LN",
       "P": "%",
       "Q": "%",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -12188,7 +13623,9 @@ export default [
       "K": 150,
       "N": "vWF Ag Act/Nor PPP IA",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -12199,7 +13636,9 @@ export default [
       "G": "VWf cleaving protease actual/normal Chromogenic method RelCCnc (PPP)",
       "N": "vWF Cp Act/Nor PPP Chro",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 2,
@@ -12220,7 +13659,9 @@ export default [
       "K": 7,
       "N": "Bleeding time Patient",
       "O": "LN",
-      "T": "min"
+      "T": "min",
+      "U": "min",
+      "V": "min"
     },
     {
       "A": 3,
@@ -12235,7 +13676,9 @@ export default [
       "K": 0.4,
       "N": "PF4 PPP-aCnc",
       "O": "LN",
-      "T": "OD"
+      "T": "OD",
+      "U": "OD_unit",
+      "V": "{OD_unit}"
     },
     {
       "A": 3,
@@ -12256,7 +13699,9 @@ export default [
       "K": 135,
       "N": "Closure Tme Coll+Epinep Bld",
       "O": "LN",
-      "T": "sec"
+      "T": "sec",
+      "U": "s",
+      "V": "s"
     },
     {
       "A": 4,
@@ -12271,7 +13716,9 @@ export default [
       "K": 135,
       "N": "Closure Tme Coll+ADP Bld",
       "O": "LN",
-      "T": "sec"
+      "T": "sec",
+      "U": "s",
+      "V": "s"
     },
     {
       "A": 2,
@@ -12288,7 +13735,9 @@ export default [
       "G": "Phosphatidylcholine IgA B2GP1 dependent MoM (S)",
       "N": "PC IgA B2GP1 dep MoM Ser",
       "O": "LN",
-      "T": "M.O.M."
+      "T": "M.O.M.",
+      "U": "M.o.M",
+      "V": "{M.o.M}"
     },
     {
       "A": 3,
@@ -12299,7 +13748,9 @@ export default [
       "G": "Phosphatidylcholine IgA B2GP1 independent MoM (S)",
       "N": "PC IgA B2GP1 indep MoM Ser",
       "O": "LN",
-      "T": "M.O.M."
+      "T": "M.O.M.",
+      "U": "M.o.M",
+      "V": "{M.o.M}"
     },
     {
       "A": 3,
@@ -12310,7 +13761,9 @@ export default [
       "G": "Phosphatidylcholine IgG B2GP1 dependent MoM (S)",
       "N": "PC IgG B2GP1 dep MoM Ser",
       "O": "LN",
-      "T": "M.O.M."
+      "T": "M.O.M.",
+      "U": "M.o.M",
+      "V": "{M.o.M}"
     },
     {
       "A": 3,
@@ -12321,7 +13774,9 @@ export default [
       "G": "Phosphatidylcholine IgG B2GP1 independent MoM (S)",
       "N": "PC IgG B2GP1 indep MoM Ser",
       "O": "LN",
-      "T": "M.O.M."
+      "T": "M.O.M.",
+      "U": "M.o.M",
+      "V": "{M.o.M}"
     },
     {
       "A": 3,
@@ -12332,7 +13787,9 @@ export default [
       "G": "Phosphatidylcholine IgM B2GP1 dependent MoM (S)",
       "N": "PC IgM B2GP1 dep MoM Ser",
       "O": "LN",
-      "T": "M.O.M."
+      "T": "M.O.M.",
+      "U": "M.o.M",
+      "V": "{M.o.M}"
     },
     {
       "A": 3,
@@ -12343,7 +13800,9 @@ export default [
       "G": "Phosphatidylcholine IgM B2GP1 independent MoM (S)",
       "N": "PC IgM B2GP1 indep MoM Ser",
       "O": "LN",
-      "T": "M.O.M."
+      "T": "M.O.M.",
+      "U": "M.o.M",
+      "V": "{M.o.M}"
     },
     {
       "A": 3,
@@ -12370,7 +13829,9 @@ export default [
       "O": "LN",
       "P": "[GPL'U]",
       "Q": "[GPL'U]",
-      "T": "GPL units"
+      "T": "GPL units",
+      "U": "GPL'U",
+      "V": "[GPL'U]"
     },
     {
       "A": 4,
@@ -12388,7 +13849,9 @@ export default [
       "O": "LN",
       "P": "[MPL'U]",
       "Q": "[MPL'U]",
-      "T": "MPL units"
+      "T": "MPL units",
+      "U": "MPL'U",
+      "V": "[MPL'U]"
     },
     {
       "A": 4,
@@ -12406,7 +13869,8 @@ export default [
       "O": "LN",
       "P": "[APL'U]",
       "Q": "[APL'U]",
-      "T": 0
+      "U": "APL'U",
+      "V": "[APL'U]"
     },
     {
       "A": 4,
@@ -12424,7 +13888,9 @@ export default [
       "O": "LN",
       "P": "[MPL'U]",
       "Q": "[MPL'U]",
-      "T": "MPL units"
+      "T": "MPL units",
+      "U": "MPL'U",
+      "V": "[MPL'U]"
     },
     {
       "A": 3,
@@ -12442,7 +13908,9 @@ export default [
       "G": "Cardiolipin IgM B2GP1 independent MoM (S)",
       "N": "Cardiolipin IgM B2GP1 indep MoM Ser",
       "O": "LN",
-      "T": "M.O.M."
+      "T": "M.O.M.",
+      "U": "M.o.M",
+      "V": "{M.o.M}"
     },
     {
       "A": 4,
@@ -12453,7 +13921,9 @@ export default [
       "G": "Cardiolipin IgM B2GP1 dependent MoM (S)",
       "N": "Cardiolipin IgM B2GP1 dep MoM Ser",
       "O": "LN",
-      "T": "M.O.M."
+      "T": "M.O.M.",
+      "U": "M.o.M",
+      "V": "{M.o.M}"
     },
     {
       "A": 4,
@@ -12464,7 +13934,9 @@ export default [
       "G": "Cardiolipin IgA B2GP1 independent MoM (S)",
       "N": "Cardiolipin IgA B2GP1 indep MoM Ser",
       "O": "LN",
-      "T": "M.O.M."
+      "T": "M.O.M.",
+      "U": "M.o.M",
+      "V": "{M.o.M}"
     },
     {
       "A": 4,
@@ -12475,7 +13947,9 @@ export default [
       "G": "Cardiolipin IgA B2GP1 dependent MoM (S)",
       "N": "Cardiolipin IgA B2GP1 dep MoM Ser",
       "O": "LN",
-      "T": "M.O.M."
+      "T": "M.O.M.",
+      "U": "M.o.M",
+      "V": "{M.o.M}"
     },
     {
       "A": 4,
@@ -12486,7 +13960,9 @@ export default [
       "G": "Cardiolipin IgG B2GP1 independent MoM (S)",
       "N": "Cardiolipin IgG B2GP1 indep MoM Ser",
       "O": "LN",
-      "T": "M.O.M."
+      "T": "M.O.M.",
+      "U": "M.o.M",
+      "V": "{M.o.M}"
     },
     {
       "A": 4,
@@ -12497,7 +13973,9 @@ export default [
       "G": "Cardiolipin IgG B2GP1 dependent MoM (S)",
       "N": "Cardiolipin IgG B2GP1 dep MoM Ser",
       "O": "LN",
-      "T": "M.O.M."
+      "T": "M.O.M.",
+      "U": "M.o.M",
+      "V": "{M.o.M}"
     },
     {
       "A": 3,
@@ -12514,7 +13992,9 @@ export default [
       "G": "Phosphatidylethanolamine IgM B2GP1 independent MoM (S)",
       "N": "PE IgM B2GP1 indep MoM Ser",
       "O": "LN",
-      "T": "M.O.M."
+      "T": "M.O.M.",
+      "U": "M.o.M",
+      "V": "{M.o.M}"
     },
     {
       "A": 4,
@@ -12525,7 +14005,9 @@ export default [
       "G": "Phosphatidylethanolamine IgM B2GP1 dependent MoM (S)",
       "N": "PE IgM B2GP1 dep MoM Ser",
       "O": "LN",
-      "T": "M.O.M."
+      "T": "M.O.M.",
+      "U": "M.o.M",
+      "V": "{M.o.M}"
     },
     {
       "A": 4,
@@ -12536,7 +14018,9 @@ export default [
       "G": "Phosphatidylethanolamine IgA B2GP1 independent MoM (S)",
       "N": "PE IgA B2GP1 indep MoM Ser",
       "O": "LN",
-      "T": "M.O.M."
+      "T": "M.O.M.",
+      "U": "M.o.M",
+      "V": "{M.o.M}"
     },
     {
       "A": 4,
@@ -12547,7 +14031,9 @@ export default [
       "G": "Phosphatidylethanolamine IgA B2GP1 dependent MoM (S)",
       "N": "PE IgA B2GP1 dep MoM Ser",
       "O": "LN",
-      "T": "M.O.M."
+      "T": "M.O.M.",
+      "U": "M.o.M",
+      "V": "{M.o.M}"
     },
     {
       "A": 4,
@@ -12558,7 +14044,9 @@ export default [
       "G": "Phosphatidylethanolamine IgG B2GP1 independent MoM (S)",
       "N": "PE IgG B2GP1 indep MoM Ser",
       "O": "LN",
-      "T": "M.O.M."
+      "T": "M.O.M.",
+      "U": "M.o.M",
+      "V": "{M.o.M}"
     },
     {
       "A": 4,
@@ -12569,7 +14057,9 @@ export default [
       "G": "Phosphatidylethanolamine IgG B2GP1 dependent MoM (S)",
       "N": "PE IgG B2GP1 dep MoM Ser",
       "O": "LN",
-      "T": "M.O.M."
+      "T": "M.O.M.",
+      "U": "M.o.M",
+      "V": "{M.o.M}"
     },
     {
       "A": 3,
@@ -12586,7 +14076,9 @@ export default [
       "G": "Phosphatidylserine IgM B2GP1 independent MoM (S)",
       "N": "PS IgM B2GP1 indep MoM Ser",
       "O": "LN",
-      "T": "M.O.M."
+      "T": "M.O.M.",
+      "U": "M.o.M",
+      "V": "{M.o.M}"
     },
     {
       "A": 4,
@@ -12597,7 +14089,9 @@ export default [
       "G": "Phosphatidylserine IgM B2GP1 dependent MoM (S)",
       "N": "PS IgM B2GP1 dep MoM Ser",
       "O": "LN",
-      "T": "M.O.M."
+      "T": "M.O.M.",
+      "U": "M.o.M",
+      "V": "{M.o.M}"
     },
     {
       "A": 4,
@@ -12608,7 +14102,9 @@ export default [
       "G": "Phosphatidylserine IgA B2GP1 independent MoM (S)",
       "N": "PS IgA B2GP1 indep MoM Ser",
       "O": "LN",
-      "T": "M.O.M."
+      "T": "M.O.M.",
+      "U": "M.o.M",
+      "V": "{M.o.M}"
     },
     {
       "A": 4,
@@ -12619,7 +14115,9 @@ export default [
       "G": "Phosphatidylserine IgA B2GP1 dependent MoM (S)",
       "N": "PS IgA B2GP1 dep MoM Ser",
       "O": "LN",
-      "T": "M.O.M."
+      "T": "M.O.M.",
+      "U": "M.o.M",
+      "V": "{M.o.M}"
     },
     {
       "A": 4,
@@ -12630,7 +14128,9 @@ export default [
       "G": "Phosphatidylserine IgG B2GP1 independent MoM (S)",
       "N": "PS IgG B2GP1 indep MoM Ser",
       "O": "LN",
-      "T": "M.O.M."
+      "T": "M.O.M.",
+      "U": "M.o.M",
+      "V": "{M.o.M}"
     },
     {
       "A": 4,
@@ -12641,7 +14141,9 @@ export default [
       "G": "Phosphatidylserine IgG B2GP1 dependent MoM (S)",
       "N": "PS IgG B2GP1 dep MoM Ser",
       "O": "LN",
-      "T": "M.O.M."
+      "T": "M.O.M.",
+      "U": "M.o.M",
+      "V": "{M.o.M}"
     },
     {
       "A": 2,
@@ -12671,7 +14173,9 @@ export default [
       "O": "LN",
       "P": "mm/h",
       "Q": "mm/h",
-      "T": "mm/hr"
+      "T": "mm/hr",
+      "U": "mm/h",
+      "V": "mm/h"
     },
     {
       "A": 3,
@@ -12690,7 +14194,9 @@ export default [
       "O": "LN",
       "P": "mm/h",
       "Q": "mm/h",
-      "T": "mm/hr"
+      "T": "mm/hr",
+      "U": "mm/h",
+      "V": "mm/h"
     },
     {
       "A": 3,
@@ -12708,7 +14214,9 @@ export default [
       "O": "LN",
       "P": "mm/h",
       "Q": "mm/h",
-      "T": "mm/hr"
+      "T": "mm/hr",
+      "U": "mm/h",
+      "V": "mm/h"
     },
     {
       "A": 1,
@@ -12735,7 +14243,9 @@ export default [
       "K": 250,
       "N": "Sodium Ur-sCnc",
       "O": "LN",
-      "T": "mmol/L"
+      "T": "mmol/L",
+      "U": "mmol/L",
+      "V": "mmol/L"
     },
     {
       "A": 3,
@@ -12750,7 +14260,9 @@ export default [
       "K": 250,
       "N": "Sodium 24h Ur-sRate",
       "O": "LN",
-      "T": "MMOL/TV"
+      "T": "MMOL/TV",
+      "U": "mmol/24hr",
+      "V": "mmol/(24.h)"
     },
     {
       "A": 3,
@@ -12765,7 +14277,9 @@ export default [
       "K": 200,
       "N": "Potassium Ur-sCnc",
       "O": "LN",
-      "T": "mmol/L"
+      "T": "mmol/L",
+      "U": "mmol/L",
+      "V": "mmol/L"
     },
     {
       "A": 3,
@@ -12780,7 +14294,9 @@ export default [
       "K": 80,
       "N": "Potassium 24h Ur-sRate",
       "O": "LN",
-      "T": "MMOL/TV"
+      "T": "MMOL/TV",
+      "U": "mmol/24hr",
+      "V": "mmol/(24.h)"
     },
     {
       "A": 3,
@@ -12796,7 +14312,9 @@ export default [
       "N": "Chloride Ur-sCnc",
       "O": "LN",
       "R": 35.4535,
-      "T": "mmol/L"
+      "T": "mmol/L",
+      "U": "mmol/L",
+      "V": "mmol/L"
     },
     {
       "A": 3,
@@ -12812,7 +14330,9 @@ export default [
       "N": "Chloride 24h Ur-sRate",
       "O": "LN",
       "R": 35.4535,
-      "T": "MMOL/TV"
+      "T": "MMOL/TV",
+      "U": "mmol/24hr",
+      "V": "mmol/(24.h)"
     },
     {
       "A": 3,
@@ -12830,7 +14350,9 @@ export default [
       "O": "LN",
       "P": "mg/(24.h)",
       "Q": "mg/(24.h)",
-      "T": "MG/24H"
+      "T": "MG/24H",
+      "U": "mg/24hr",
+      "V": "mg/(24.h)"
     },
     {
       "A": 3,
@@ -12841,7 +14363,9 @@ export default [
       "G": "Calcium mass conc (U)",
       "N": "Calcium Ur-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
@@ -12856,7 +14380,9 @@ export default [
       "K": 200,
       "N": "Calcium 24h Ur-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/L",
+      "V": "mg/L"
     },
     {
       "A": 3,
@@ -12878,7 +14404,9 @@ export default [
       "N": "Creat Cl 24h Ur+SerPl-vRate",
       "O": "LN",
       "R": 113.1179,
-      "T": "mL/min"
+      "T": "mL/min",
+      "U": "mL/min",
+      "V": "mL/min"
     },
     {
       "A": 3,
@@ -12896,7 +14424,9 @@ export default [
       "N": "5OH-indoleacetate Ur-mCnc",
       "O": "LN",
       "R": 191.1834,
-      "T": "MG/24H"
+      "T": "MG/24H",
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 4,
@@ -12915,7 +14445,9 @@ export default [
       "P": "mg/(24.h)",
       "Q": "mg/(24.h)",
       "R": 191.1834,
-      "T": "MG/24H"
+      "T": "MG/24H",
+      "U": "mg/24hr",
+      "V": "mg/(24.h)"
     },
     {
       "A": 4,
@@ -12927,7 +14459,9 @@ export default [
       "N": "5OH-indoleacetate/Creat Ur",
       "O": "LN",
       "R": 191.1834,
-      "T": "mg/gm Cr"
+      "T": "mg/gm Cr",
+      "U": "mg/gcreat",
+      "V": "mg/g{creat}"
     },
     {
       "A": 3,
@@ -12938,7 +14472,9 @@ export default [
       "G": "Delta aminolevulinate molar conc (24H U)",
       "N": "D-ALA 24h Ur-sCnc",
       "O": "LN",
-      "T": "mcmol/L"
+      "T": "mcmol/L",
+      "U": "umol/L",
+      "V": "umol/L"
     },
     {
       "A": 3,
@@ -12953,7 +14489,9 @@ export default [
       "K": 19,
       "N": "Albumin Ur-mCnc",
       "O": "LN",
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "g/dL",
+      "V": "g/dL"
     },
     {
       "A": 3,
@@ -12964,7 +14502,9 @@ export default [
       "G": "Albumin mass/time (24H U)",
       "N": "Albumin 24h Ur-mRate",
       "O": "LN",
-      "T": "MG/24H"
+      "T": "MG/24H",
+      "U": "mg/24hr",
+      "V": "mg/(24.h)"
     },
     {
       "A": 3,
@@ -12979,7 +14519,9 @@ export default [
       "K": 20,
       "N": "Microalbumin 24h Ur-mRate",
       "O": "LN",
-      "T": "mcg/min"
+      "T": "mcg/min",
+      "U": "mcg/min",
+      "V": "mcg/min"
     },
     {
       "A": 3,
@@ -12994,7 +14536,9 @@ export default [
       "K": 370,
       "N": "Amylase Ur-cCnc",
       "O": "LN",
-      "T": "Units/L"
+      "T": "Units/L",
+      "U": "U/L",
+      "V": "U/L"
     },
     {
       "A": 3,
@@ -13009,7 +14553,9 @@ export default [
       "K": 4.2,
       "N": "Amylase/Creat Ur-Rto",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "umol/gcreat",
+      "V": "umol/g{creat}"
     },
     {
       "A": 3,
@@ -13019,7 +14565,9 @@ export default [
       "F": "Amoxicillin [Susceptibility] by Serum bactericidal titer",
       "N": "Amoxicillin Titr SBT",
       "O": "LN",
-      "R": 365.4042
+      "R": 365.4042,
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 4,
@@ -13034,7 +14582,9 @@ export default [
       "K": 300,
       "N": "Amylase 24h Ur-aCnc",
       "O": "LN",
-      "T": "DYE UNITS"
+      "T": "DYE UNITS",
+      "U": "dye'U",
+      "V": "[dye'U]"
     },
     {
       "A": 4,
@@ -13049,7 +14599,9 @@ export default [
       "K": 75,
       "N": "Amylase 24h Ur-cRate",
       "O": "LN",
-      "T": "Units/hr"
+      "T": "Units/hr",
+      "U": "U/24hr",
+      "V": "U/(24.h)"
     },
     {
       "A": 3,
@@ -13059,7 +14611,9 @@ export default [
       "F": "Citrate [Mass/time] in 24 hour Urine",
       "N": "Citrate 24h Ur-mRate",
       "O": "LN",
-      "R": 189.1013
+      "R": 189.1013,
+      "U": "mg/24hr",
+      "V": "mg/(24.h)"
     },
     {
       "A": 4,
@@ -13071,7 +14625,9 @@ export default [
       "N": "Citrate Ur-mCnc",
       "O": "LN",
       "R": 189.1013,
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 3,
@@ -13083,7 +14639,9 @@ export default [
       "N": "Citrate/Creat 24h Ur",
       "O": "LN",
       "R": 189.1013,
-      "T": "mg/gm Cr"
+      "T": "mg/gm Cr",
+      "U": "mg/gcreat",
+      "V": "mg/g{creat}"
     },
     {
       "A": 3,
@@ -13093,7 +14651,9 @@ export default [
       "F": "Estrogen/Creatinine [Mass Ratio] in 24 hour Urine",
       "G": "Estrogen/Creatinine mass ratio (24H U)",
       "N": "Estrogen/Creat 24h Ur",
-      "O": "LN"
+      "O": "LN",
+      "U": "ug/g",
+      "V": "ug/g{creat}"
     },
     {
       "A": 3,
@@ -13108,7 +14668,9 @@ export default [
       "K": 0,
       "N": "Glucose Ur-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
@@ -13123,7 +14685,9 @@ export default [
       "K": 0.15,
       "N": "Glucose 24h Ur-mRate",
       "O": "LN",
-      "T": "G/TV"
+      "T": "G/TV",
+      "U": "g/24hr",
+      "V": "g/(24.h)"
     },
     {
       "A": 3,
@@ -13139,7 +14703,9 @@ export default [
       "N": "Iron Ur-mCnc",
       "O": "LN",
       "R": 55.845,
-      "T": "mcg/dL"
+      "T": "mcg/dL",
+      "U": "ug/dL",
+      "V": "ug/dL"
     },
     {
       "A": 3,
@@ -13156,7 +14722,9 @@ export default [
       "G": "Magnesium mass conc (24H U)",
       "N": "Magnesium 24h Ur-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 4,
@@ -13167,7 +14735,9 @@ export default [
       "G": "Magnesium mass conc (U)",
       "N": "Magnesium Ur-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 4,
@@ -13185,7 +14755,9 @@ export default [
       "O": "LN",
       "P": "mg/24",
       "Q": "mg/24",
-      "T": "G/TV"
+      "T": "G/TV",
+      "U": "g/24hr",
+      "V": "g/24"
     },
     {
       "A": 3,
@@ -13196,7 +14768,9 @@ export default [
       "G": "Albumin/Creatinine DL <= 20 mg/L mass ratio (U)",
       "N": "Microalbumin/Creat Ur",
       "O": "LN",
-      "T": "mg/gm Cr"
+      "T": "mg/gm Cr",
+      "U": "mg/gcreat",
+      "V": "mg/g{creat}"
     },
     {
       "A": 3,
@@ -13214,7 +14788,9 @@ export default [
       "O": "LN",
       "P": "mg/dL",
       "Q": "mg/dL",
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
@@ -13236,7 +14812,9 @@ export default [
       "G": "Collagen crosslinked N-telopeptide/Creatinine molar ratio (U)",
       "N": "Collagen NTx/Creat Ur-sRto",
       "O": "LN",
-      "T": "nmol BCE/mmol Creat"
+      "T": "nmol BCE/mmol Creat",
+      "U": "nmol/mmolcreat",
+      "V": "nmol/mmol{creat}"
     },
     {
       "A": 3,
@@ -13254,7 +14832,9 @@ export default [
       "O": "LN",
       "P": "mosm/kg",
       "Q": "mosm/kg",
-      "T": "mOsmol/kg"
+      "T": "mOsmol/kg",
+      "U": "mosm/kg",
+      "V": "mosm/kg"
     },
     {
       "A": 3,
@@ -13269,7 +14849,9 @@ export default [
       "K": 1400,
       "N": "Osmolality 24h Ur",
       "O": "LN",
-      "T": "mOsmol/kg"
+      "T": "mOsmol/kg",
+      "U": "mosm/kg",
+      "V": "mosm/kg"
     },
     {
       "A": 3,
@@ -13291,7 +14873,9 @@ export default [
       "N": "Oxalate 24h Ur-mRate",
       "O": "LN",
       "R": 88.0201,
-      "T": "MG/24H"
+      "T": "MG/24H",
+      "U": "mg/24hr",
+      "V": "mg/(24.h)"
     },
     {
       "A": 3,
@@ -13305,7 +14889,9 @@ export default [
       "J": 4,
       "K": 8,
       "N": "pH 24h Ur",
-      "O": "LN"
+      "O": "LN",
+      "U": "pH",
+      "V": "[pH]"
     },
     {
       "A": 3,
@@ -13323,7 +14909,9 @@ export default [
       "N": "Phosphate Ur-mCnc",
       "O": "LN",
       "R": 94.973,
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 4,
@@ -13339,7 +14927,9 @@ export default [
       "N": "Phosphate 24h Ur-mRate",
       "O": "LN",
       "R": 94.973,
-      "T": "G/TV"
+      "T": "G/TV",
+      "U": "g/24hr",
+      "V": "g/(24.h)"
     },
     {
       "A": 4,
@@ -13351,7 +14941,9 @@ export default [
       "N": "Phosphate 24h Ur-mCnc",
       "O": "LN",
       "R": 94.973,
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
@@ -13369,7 +14961,8 @@ export default [
       "O": "LN",
       "P": "ug/mg{creat}",
       "Q": "ug/mg{creat}",
-      "T": 0
+      "U": "ug/mg",
+      "V": "ug/mg{creat}"
     },
     {
       "A": 3,
@@ -13384,7 +14977,9 @@ export default [
       "K": 1000,
       "N": "UUN Ur-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
@@ -13400,7 +14995,9 @@ export default [
       "L": 17,
       "N": "UUN 24h Ur-mRate",
       "O": "LN",
-      "T": "G/TV"
+      "T": "G/TV",
+      "U": "g/24hr",
+      "V": "g/(24.h)"
     },
     {
       "A": 3,
@@ -13418,7 +15015,9 @@ export default [
       "N": "Urate Ur-mCnc",
       "O": "LN",
       "R": 168.1114,
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 4,
@@ -13430,7 +15029,9 @@ export default [
       "N": "Urate 24h Ur-mCnc",
       "O": "LN",
       "R": 168.1114,
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 4,
@@ -13446,7 +15047,9 @@ export default [
       "N": "Urate 24h Ur-mRate",
       "O": "LN",
       "R": 168.1114,
-      "T": "G/TV"
+      "T": "G/TV",
+      "U": "g/24hr",
+      "V": "g/(24.h)"
     },
     {
       "A": 3,
@@ -13460,7 +15063,9 @@ export default [
       "K": 2000,
       "N": "Specimen vol 24h Ur",
       "O": "LN",
-      "T": "mL"
+      "T": "mL",
+      "U": "L",
+      "V": "L"
     },
     {
       "A": 2,
@@ -13487,7 +15092,9 @@ export default [
       "K": 7,
       "N": "D-ALA 24h Ur-mRate",
       "O": "LN",
-      "T": "MG/24H"
+      "T": "MG/24H",
+      "U": "mg/24hr",
+      "V": "mg/(24.h)"
     },
     {
       "A": 3,
@@ -13502,7 +15109,9 @@ export default [
       "K": 0.6,
       "N": "D-ALA Ur-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
@@ -13512,7 +15121,9 @@ export default [
       "F": "pH of Urine",
       "G": "pH (U)",
       "N": "pH Ur",
-      "O": "LN"
+      "O": "LN",
+      "U": "pH",
+      "V": "[pH]"
     },
     {
       "A": 1,
@@ -13558,8 +15169,7 @@ export default [
       "J": 1.002,
       "K": 1.03,
       "N": "Sp Gr Ur Strip",
-      "O": "LN",
-      "T": 0
+      "O": "LN"
     },
     {
       "A": 4,
@@ -13577,7 +15187,8 @@ export default [
       "O": "LN",
       "P": "[pH]",
       "Q": "[pH]",
-      "T": 0
+      "U": "pH",
+      "V": "[pH]"
     },
     {
       "A": 4,
@@ -13592,7 +15203,9 @@ export default [
       "O": "LN",
       "P": "%",
       "Q": "%",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -13610,7 +15223,9 @@ export default [
       "O": "LN",
       "P": "mg/dL",
       "Q": "mg/dL",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 4,
@@ -13626,7 +15241,9 @@ export default [
       "N": "Urobilinogen 24h Ur-mRate",
       "O": "LN",
       "R": 590.7098,
-      "T": "MG/24H"
+      "T": "MG/24H",
+      "U": "mg/24hr",
+      "V": "mg/(24.h)"
     },
     {
       "A": 4,
@@ -13642,7 +15259,9 @@ export default [
       "N": "Urobilinogen Ur Strip-aCnc",
       "O": "LN",
       "R": 590.7098,
-      "T": "EU/DL SEMI"
+      "T": "EU/DL SEMI",
+      "U": "Ehrlich'U/dL",
+      "V": "{Ehrlich'U}/dL"
     },
     {
       "A": 3,
@@ -13665,7 +15284,9 @@ export default [
       "K": 4,
       "N": "RBC #/area UrnS HPF",
       "O": "LN",
-      "T": "#/HPF"
+      "T": "#/HPF",
+      "U": "/HPF",
+      "V": "/[HPF]"
     },
     {
       "A": 4,
@@ -13683,7 +15304,9 @@ export default [
       "O": "LN",
       "P": "/[HPF]",
       "Q": "/[HPF]",
-      "T": "#/HPF"
+      "T": "#/HPF",
+      "U": "/HPF",
+      "V": "/[HPF]"
     },
     {
       "A": 4,
@@ -13698,7 +15321,9 @@ export default [
       "K": 20,
       "N": "Squamous #/area UrnS HPF",
       "O": "LN",
-      "T": "#/HPF"
+      "T": "#/HPF",
+      "U": "/HPF",
+      "V": "/[HPF]"
     },
     {
       "A": 4,
@@ -13709,7 +15334,9 @@ export default [
       "G": "Epithelial cells.renal LM.HPF #/area (Urine sed)",
       "N": "Renal Epi Cells #/area UrnS HPF",
       "O": "LN",
-      "T": "#/HPF"
+      "T": "#/HPF",
+      "U": "/HPF",
+      "V": "/[HPF]"
     },
     {
       "A": 4,
@@ -13720,7 +15347,9 @@ export default [
       "G": "Transitional cells LM.HPF #/area (Urine sed)",
       "N": "Trans Cells #/area UrnS HPF",
       "O": "LN",
-      "T": "#/HPF"
+      "T": "#/HPF",
+      "U": "/HPF",
+      "V": "/[HPF]"
     },
     {
       "A": 4,
@@ -13729,7 +15358,9 @@ export default [
       "E": "9842-6",
       "F": "Casts [#/area] in Urine sediment by Microscopy low power field",
       "N": "Casts #/area UrnS LPF",
-      "O": "LN"
+      "O": "LN",
+      "U": "/LPF",
+      "V": "/[LPF]"
     },
     {
       "A": 5,
@@ -13744,7 +15375,9 @@ export default [
       "K": 0,
       "N": "Mixed Cell Casts #/area UrnS LPF",
       "O": "LN",
-      "T": "#/LPF"
+      "T": "#/LPF",
+      "U": "/LPF",
+      "V": "/[LPF]"
     },
     {
       "A": 5,
@@ -13756,7 +15389,9 @@ export default [
       "H": "#/LPF",
       "N": "Coarse Gran Casts #/area UrnS LPF",
       "O": "LN",
-      "T": "#/LPF"
+      "T": "#/LPF",
+      "U": "/LPF",
+      "V": "/[LPF]"
     },
     {
       "A": 5,
@@ -13771,7 +15406,9 @@ export default [
       "O": "LN",
       "P": "/[LPF]",
       "Q": "/[LPF]",
-      "T": "#/LPF"
+      "T": "#/LPF",
+      "U": "/LPF",
+      "V": "/[LPF]"
     },
     {
       "A": 5,
@@ -13782,7 +15419,9 @@ export default [
       "G": "Fatty casts LM.LPF #/area (Urine sed)",
       "N": "Fatty Casts #/area UrnS LPF",
       "O": "LN",
-      "T": "#/LPF"
+      "T": "#/LPF",
+      "U": "/LPF",
+      "V": "/[LPF]"
     },
     {
       "A": 5,
@@ -13794,7 +15433,9 @@ export default [
       "H": "#/LPF",
       "N": "Fine Gran Casts #/area UrnS LPF",
       "O": "LN",
-      "T": "#/LPF"
+      "T": "#/LPF",
+      "U": "/LPF",
+      "V": "/[LPF]"
     },
     {
       "A": 5,
@@ -13805,7 +15446,9 @@ export default [
       "G": "Granular casts LM.LPF #/area (Urine sed)",
       "N": "Gran Casts #/area UrnS LPF",
       "O": "LN",
-      "T": "#/LPF"
+      "T": "#/LPF",
+      "U": "/LPF",
+      "V": "/[LPF]"
     },
     {
       "A": 5,
@@ -13823,7 +15466,9 @@ export default [
       "O": "LN",
       "P": "/[LPF]",
       "Q": "/[LPF]",
-      "T": "#/LPF"
+      "T": "#/LPF",
+      "U": "/LPF",
+      "V": "/[LPF]"
     },
     {
       "A": 5,
@@ -13841,7 +15486,9 @@ export default [
       "O": "LN",
       "P": "/[LPF]",
       "Q": "/[LPF]",
-      "T": "#/LPF"
+      "T": "#/LPF",
+      "U": "/LPF",
+      "V": "/[LPF]"
     },
     {
       "A": 5,
@@ -13856,7 +15503,9 @@ export default [
       "O": "LN",
       "P": "/[LPF]",
       "Q": "/[LPF]",
-      "T": "#/LPF"
+      "T": "#/LPF",
+      "U": "/LPF",
+      "V": "/[LPF]"
     },
     {
       "A": 5,
@@ -13874,7 +15523,9 @@ export default [
       "O": "LN",
       "P": "/[LPF]",
       "Q": "/[LPF]",
-      "T": "#/LPF"
+      "T": "#/LPF",
+      "U": "/LPF",
+      "V": "/[LPF]"
     },
     {
       "A": 4,
@@ -13923,7 +15574,9 @@ export default [
       "G": "Lecithin/Sphingomyelin Ratio (Amn fld)",
       "N": "Lecithin/Sphingomyelin Amn-Rto",
       "O": "LN",
-      "T": ":1"
+      "T": ":1",
+      "U": "ratio",
+      "V": "{ratio}"
     },
     {
       "A": 4,
@@ -13934,7 +15587,9 @@ export default [
       "G": "Phosphatidylglycerol/Surfactant.total mass fraction (Amn fld)",
       "N": "PG MFr Amn",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 3,
@@ -13951,7 +15606,9 @@ export default [
       "G": "Lamellar bodies #/vol (Amn fld)",
       "N": "Lamellar Bod # Amn",
       "O": "LN",
-      "T": "K/mm3"
+      "T": "K/mm3",
+      "U": "10*3/uL",
+      "V": "10*3/uL"
     },
     {
       "A": 3,
@@ -13963,7 +15620,9 @@ export default [
       "N": "Bilirub Amn-mCnc",
       "O": "LN",
       "R": 584.6621,
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
@@ -13973,7 +15632,9 @@ export default [
       "F": "Optical density of Amniotic fluid by Spectrophotometry",
       "G": "Optical density Spectrophotometry OD (Amn fld)",
       "N": "OD Amn Spect",
-      "O": "LN"
+      "O": "LN",
+      "U": "OD_unit",
+      "V": "{OD_unit}"
     },
     {
       "A": 3,
@@ -13998,7 +15659,9 @@ export default [
       "G": "Phosphatidylinositol/Surfactant.total mass fraction (Amn fld)",
       "N": "PI MFr Amn",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 2,
@@ -14033,7 +15696,9 @@ export default [
       "K": 5,
       "N": "WBC # CSF Manual",
       "O": "LN",
-      "T": "#/mm3"
+      "T": "#/mm3",
+      "U": "/uL",
+      "V": "/uL"
     },
     {
       "A": 3,
@@ -14048,7 +15713,9 @@ export default [
       "K": 1,
       "N": "WBC nRBC cor # CSF",
       "O": "LN",
-      "T": "#/mm3"
+      "T": "#/mm3",
+      "U": "10*3/uL",
+      "V": "10*3/uL"
     },
     {
       "A": 3,
@@ -14063,7 +15730,9 @@ export default [
       "K": 0,
       "N": "RBC # CSF",
       "O": "LN",
-      "T": "#/mm3"
+      "T": "#/mm3",
+      "U": "10*3/uL",
+      "V": "10*3/uL"
     },
     {
       "A": 3,
@@ -14078,7 +15747,9 @@ export default [
       "K": 0,
       "N": "Polys/leuk NFr CSF",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 3,
@@ -14093,7 +15764,9 @@ export default [
       "K": 70,
       "N": "Lymphocytes/leuk NFr CSF Manual",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 3,
@@ -14108,7 +15781,9 @@ export default [
       "K": 30,
       "N": "Monocytes/leuk NFr CSF",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 3,
@@ -14119,7 +15794,9 @@ export default [
       "G": "Mesothelial cells/100 WBC Manual cnt (CSF)",
       "N": "Mesothl Cell/leuk NFr CSF Manual",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 2,
@@ -14140,7 +15817,9 @@ export default [
       "K": 2.5,
       "N": "ACE CSF-cCnc",
       "O": "LN",
-      "T": "Units/L"
+      "T": "Units/L",
+      "U": "U/L",
+      "V": "U/L"
     },
     {
       "A": 3,
@@ -14155,7 +15834,9 @@ export default [
       "K": 70,
       "N": "Albumin MFr CSF Elph",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 3,
@@ -14165,7 +15846,9 @@ export default [
       "F": "Albumin in CSF/Albumin in Serum or Plasma",
       "G": "Albumin in CSF/Albumin in Serum or Plasma RelRto (Serum or Plasma and CSF)",
       "N": "Alb CSF/SerPl",
-      "O": "LN"
+      "O": "LN",
+      "U": "ratio",
+      "V": "{ratio}"
     },
     {
       "A": 3,
@@ -14191,7 +15874,9 @@ export default [
       "N": "Chloride CSF-sCnc",
       "O": "LN",
       "R": 35.4535,
-      "T": "mmol/L"
+      "T": "mmol/L",
+      "U": "mmol/L",
+      "V": "mmol/L"
     },
     {
       "A": 3,
@@ -14206,7 +15891,9 @@ export default [
       "K": 70,
       "N": "Glucose CSF-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
@@ -14221,7 +15908,9 @@ export default [
       "K": 5.9,
       "N": "IgG CSF-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
@@ -14247,7 +15936,9 @@ export default [
       "N": "Lactate CSF-sCnc",
       "O": "LN",
       "R": 89.0705,
-      "T": "mmol/L"
+      "T": "mmol/L",
+      "U": "mmol/L",
+      "V": "mmol/L"
     },
     {
       "A": 3,
@@ -14262,7 +15953,9 @@ export default [
       "K": 4.1,
       "N": "MBP CSF-mCnc",
       "O": "LN",
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 3,
@@ -14289,7 +15982,9 @@ export default [
       "O": "LN",
       "P": "mg/dL",
       "Q": "mg/dL",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 4,
@@ -14304,7 +15999,9 @@ export default [
       "K": 6.5,
       "N": "Prealb MFr CSF Elph",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -14319,7 +16016,9 @@ export default [
       "K": 8,
       "N": "Alpha1 Glob MFr CSF Elph",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -14334,7 +16033,9 @@ export default [
       "K": 9.5,
       "N": "Alpha2 Glob MFr CSF Elph",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -14349,7 +16050,9 @@ export default [
       "K": 16.5,
       "N": "B-Globulin MFr CSF Elph",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -14364,7 +16067,9 @@ export default [
       "K": 14,
       "N": "Gamma glob MFr CSF Elph",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 2,
@@ -14381,7 +16086,9 @@ export default [
       "G": "Specimen weight (St)",
       "N": "Specimen wt Stl Qn",
       "O": "LN",
-      "T": "gm"
+      "T": "gm",
+      "U": "g",
+      "V": "g"
     },
     {
       "A": 3,
@@ -14393,7 +16100,9 @@ export default [
       "N": "Chloride Stl-sCnc",
       "O": "LN",
       "R": 35.4535,
-      "T": "mmol/L"
+      "T": "mmol/L",
+      "U": "mmol/L",
+      "V": "mmol/L"
     },
     {
       "A": 3,
@@ -14404,7 +16113,9 @@ export default [
       "G": "Collection duration * time (St)",
       "N": "Collect duration Time Stl",
       "O": "LN",
-      "T": "hr"
+      "T": "hr",
+      "U": "hr",
+      "V": "h"
     },
     {
       "A": 3,
@@ -14419,7 +16130,9 @@ export default [
       "K": 20,
       "N": "Fat/total solids Stl",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 3,
@@ -14434,7 +16147,9 @@ export default [
       "K": 7,
       "N": "Fat 24h Stl-mRate",
       "O": "LN",
-      "T": "GM/24HR"
+      "T": "GM/24HR",
+      "U": "g/24hr",
+      "V": "g/(24.h)"
     },
     {
       "A": 3,
@@ -14470,7 +16185,9 @@ export default [
       "G": "Potassium molar conc (St)",
       "N": "Potassium Stl-sCnc",
       "O": "LN",
-      "T": "mmol/L"
+      "T": "mmol/L",
+      "U": "mmol/L",
+      "V": "mmol/L"
     },
     {
       "A": 3,
@@ -14481,7 +16198,9 @@ export default [
       "G": "Sodium molar conc (St)",
       "N": "Sodium Stl-sCnc",
       "O": "LN",
-      "T": "mmol/L"
+      "T": "mmol/L",
+      "U": "mmol/L",
+      "V": "mmol/L"
     },
     {
       "A": 3,
@@ -14524,7 +16243,9 @@ export default [
       "G": "Gastric acid free molar conc (Gast fld)",
       "N": "Gastric Ac free Gast-sCnc",
       "O": "LN",
-      "T": "mmol/L"
+      "T": "mmol/L",
+      "U": "mmol/L",
+      "V": "mmol/L"
     },
     {
       "A": 3,
@@ -14535,7 +16256,9 @@ export default [
       "G": "Gastric acid molar conc (Gast fld)",
       "N": "Gastric Ac Gast-sCnc",
       "O": "LN",
-      "T": "mmol/L"
+      "T": "mmol/L",
+      "U": "mmol/L",
+      "V": "mmol/L"
     },
     {
       "A": 3,
@@ -14562,7 +16285,9 @@ export default [
       "O": "LN",
       "P": "mL",
       "Q": "mL",
-      "T": "mL"
+      "T": "mL",
+      "U": "mL",
+      "V": "mL"
     },
     {
       "A": 2,
@@ -14606,7 +16331,9 @@ export default [
       "K": 11,
       "N": "WBC # Fld",
       "O": "LN",
-      "T": "#/mm3"
+      "T": "#/mm3",
+      "U": "10*3/uL",
+      "V": "10*3/uL"
     },
     {
       "A": 4,
@@ -14616,7 +16343,9 @@ export default [
       "F": "Leukocytes [#/volume] corrected for nucleated erythrocytes in Body fluid",
       "G": "WBC corrected for nucl RBC #/vol (Body fld)",
       "N": "WBC nRBC cor # Fld",
-      "O": "LN"
+      "O": "LN",
+      "U": "10*3/uL",
+      "V": "10*3/uL"
     },
     {
       "A": 4,
@@ -14627,7 +16356,9 @@ export default [
       "G": "RBC Manual cnt #/vol (Body fld)",
       "N": "RBC # Fld Manual",
       "O": "LN",
-      "T": "#/mm3"
+      "T": "#/mm3",
+      "U": "/uL",
+      "V": "/uL"
     },
     {
       "A": 4,
@@ -14638,7 +16369,9 @@ export default [
       "G": "Polymorphonuclear cells/100 WBC (Body fld)",
       "N": "Polys/leuk NFr Fld",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -14649,7 +16382,9 @@ export default [
       "G": "Lymphocytes/100 WBC (Body fld)",
       "N": "Lymphocytes/leuk NFr Fld",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -14665,7 +16400,9 @@ export default [
       "L": 100,
       "N": "Monocytes/leuk NFr Fld",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -14681,7 +16418,9 @@ export default [
       "L": 100,
       "N": "Eosinophil/leuk NFr Fld",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -14692,7 +16431,9 @@ export default [
       "G": "Basophils/100 WBC (Body fld)",
       "N": "Basophils/leuk NFr Fld",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -14707,7 +16448,9 @@ export default [
       "K": 0,
       "N": "Mesothl Cell/leuk NFr Fld Manual",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 4,
@@ -14718,7 +16461,9 @@ export default [
       "G": "Burr cells/100 RBC Manual cnt (CSF)",
       "N": "Burr Cells/100 RBC NFr CSF Manual",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 3,
@@ -14748,7 +16493,9 @@ export default [
       "K": 200,
       "N": "Sodium Fld-sCnc",
       "O": "LN",
-      "T": "mmol/L"
+      "T": "mmol/L",
+      "U": "mmol/L",
+      "V": "mmol/L"
     },
     {
       "A": 5,
@@ -14763,7 +16510,9 @@ export default [
       "K": 12,
       "N": "Potassium Fld-sCnc",
       "O": "LN",
-      "T": "mmol/L"
+      "T": "mmol/L",
+      "U": "mmol/L",
+      "V": "mmol/L"
     },
     {
       "A": 5,
@@ -14775,7 +16524,9 @@ export default [
       "N": "Chloride Fld-sCnc",
       "O": "LN",
       "R": 35.4535,
-      "T": "mmol/L"
+      "T": "mmol/L",
+      "U": "mmol/L",
+      "V": "mmol/L"
     },
     {
       "A": 4,
@@ -14786,7 +16537,9 @@ export default [
       "G": "Urea nitrogen mass conc (Body fld)",
       "N": "Urea nit Fld-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 4,
@@ -14797,7 +16550,9 @@ export default [
       "G": "Adenosine deaminase enzyme act/vol (Body fld)",
       "N": "Adenosine deaminase Fld-cCnc",
       "O": "LN",
-      "T": "Units/L"
+      "T": "Units/L",
+      "U": "U/L",
+      "V": "U/L"
     },
     {
       "A": 4,
@@ -14813,7 +16568,9 @@ export default [
       "N": "Creat Fld-mCnc",
       "O": "LN",
       "R": 113.1179,
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 4,
@@ -14828,7 +16585,9 @@ export default [
       "K": 700,
       "N": "Glucose Fld-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 4,
@@ -14839,7 +16598,9 @@ export default [
       "G": "Albumin mass conc (Body fld)",
       "N": "Albumin Fld-mCnc",
       "O": "LN",
-      "T": "g/dL"
+      "T": "g/dL",
+      "U": "g/dL",
+      "V": "g/dL"
     },
     {
       "A": 4,
@@ -14854,7 +16615,9 @@ export default [
       "K": 100,
       "N": "Amylase Fld-cCnc",
       "O": "LN",
-      "T": "Units/L"
+      "T": "Units/L",
+      "U": "U/L",
+      "V": "U/L"
     },
     {
       "A": 4,
@@ -14866,7 +16629,9 @@ export default [
       "N": "Bilirub Fld-mCnc",
       "O": "LN",
       "R": 584.6621,
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 4,
@@ -14881,7 +16646,9 @@ export default [
       "N": "Cholest Fld-mCnc",
       "O": "LN",
       "R": 386.6535,
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 4,
@@ -14896,7 +16663,9 @@ export default [
       "K": 190,
       "N": "LDH Fld-cCnc",
       "O": "LN",
-      "T": "Units/L"
+      "T": "Units/L",
+      "U": "U/L",
+      "V": "U/L"
     },
     {
       "A": 4,
@@ -14914,7 +16683,9 @@ export default [
       "O": "LN",
       "P": "U/L",
       "Q": "U/L",
-      "T": "Units/L"
+      "T": "Units/L",
+      "U": "U/L",
+      "V": "U/L"
     },
     {
       "A": 4,
@@ -14925,7 +16696,9 @@ export default [
       "G": "Osmolality (Body fld)",
       "N": "Osmolality Fld",
       "O": "LN",
-      "T": "mOsmol/kg"
+      "T": "mOsmol/kg",
+      "U": "mosm/kg",
+      "V": "mosm/kg"
     },
     {
       "A": 4,
@@ -14939,7 +16712,9 @@ export default [
       "J": 7.3,
       "K": 7.66,
       "N": "pH Fld",
-      "O": "LN"
+      "O": "LN",
+      "U": "pH",
+      "V": "[pH]"
     },
     {
       "A": 4,
@@ -14953,7 +16728,9 @@ export default [
       "J": 7.6,
       "K": 7.66,
       "N": "pH Plr",
-      "O": "LN"
+      "O": "LN",
+      "U": "pH",
+      "V": "[pH]"
     },
     {
       "A": 4,
@@ -14963,7 +16740,9 @@ export default [
       "F": "pH of Vaginal fluid",
       "G": "pH (Vag fld)",
       "N": "pH Vag",
-      "O": "LN"
+      "O": "LN",
+      "U": "pH",
+      "V": "[pH]"
     },
     {
       "A": 4,
@@ -14981,7 +16760,9 @@ export default [
       "O": "LN",
       "P": "g/dL",
       "Q": "g/dL",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 4,
@@ -15006,7 +16787,9 @@ export default [
       "K": 200,
       "N": "Trigl Fld-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
@@ -15041,7 +16824,9 @@ export default [
       "G": "Nucleated cells Manual cnt #/vol (Bronch spec)",
       "N": "Nuc cell # Bronch Manual",
       "O": "LN",
-      "T": "#/mm3"
+      "T": "#/mm3",
+      "U": "/uL",
+      "V": "/uL"
     },
     {
       "A": 2,
@@ -15052,7 +16837,9 @@ export default [
       "G": "Hemoglobin mass conc (Body fld)",
       "N": "Hgb Fld-mCnc",
       "O": "LN",
-      "T": "g/dL"
+      "T": "g/dL",
+      "U": "g/dL",
+      "V": "g/dL"
     },
     {
       "A": 2,
@@ -15063,7 +16850,9 @@ export default [
       "G": "Neutrophils/100 WBC (Bronch spec)",
       "N": "Neutrophils/leuk NFr Bronch",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 2,
@@ -15074,7 +16863,9 @@ export default [
       "G": "Lymphocytes/100 WBC (Bronch spec)",
       "N": "Lymphocytes/leuk NFr Bronch",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 2,
@@ -15085,7 +16876,9 @@ export default [
       "G": "Monocytes+Macrophages/100 WBC (Bronch spec)",
       "N": "Monos+Macros/leuk NFr Bronch",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 2,
@@ -15129,7 +16922,9 @@ export default [
       "G": "Neutrophils/100 WBC (Pericard fld)",
       "N": "Neutrophils/leuk NFr Pcar",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 2,
@@ -15140,7 +16935,9 @@ export default [
       "G": "Lymphocytes/100 WBC (Pericard fld)",
       "N": "Lymphocytes/leuk NFr Pcar",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 2,
@@ -15165,7 +16962,9 @@ export default [
       "G": "Basophils/100 WBC Manual cnt (Pericard fld)",
       "N": "Basophils/leuk NFr Pcar Manual",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 2,
@@ -15183,7 +16982,9 @@ export default [
       "G": "Plasma cells/100 WBC Manual cnt (Pericard fld)",
       "N": "Plasma Cells/leuk NFr Pcar Manual",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 2,
@@ -15222,7 +17023,9 @@ export default [
       "G": "Albumin mass conc (Pericard fld)",
       "N": "Albumin Pcar-mCnc",
       "O": "LN",
-      "T": "g/dL"
+      "T": "g/dL",
+      "U": "g/dL",
+      "V": "g/dL"
     },
     {
       "A": 2,
@@ -15233,7 +17036,9 @@ export default [
       "G": "Protein mass conc (Pericard fld)",
       "N": "Prot Pcar-mCnc",
       "O": "LN",
-      "T": "g/dL"
+      "T": "g/dL",
+      "U": "g/dL",
+      "V": "g/dL"
     },
     {
       "A": 2,
@@ -15270,7 +17075,9 @@ export default [
       "G": "Nucleated cells Manual cnt #/vol (Perit fld)",
       "N": "Nuc cell # Prt Manual",
       "O": "LN",
-      "T": "#/mm3"
+      "T": "#/mm3",
+      "U": "10*3/uL",
+      "V": "10*3/uL"
     },
     {
       "A": 2,
@@ -15281,7 +17088,9 @@ export default [
       "G": "WBC #/vol (Perit fld)",
       "N": "WBC # Prt",
       "O": "LN",
-      "T": "#/mm3"
+      "T": "#/mm3",
+      "U": "10*3/uL",
+      "V": "10*3/uL"
     },
     {
       "A": 2,
@@ -15292,7 +17101,9 @@ export default [
       "G": "RBC #/vol (Perit fld)",
       "N": "RBC # Prt",
       "O": "LN",
-      "T": "#/mm3"
+      "T": "#/mm3",
+      "U": "10*3/uL",
+      "V": "10*3/uL"
     },
     {
       "A": 2,
@@ -15310,7 +17121,9 @@ export default [
       "G": "Neutrophils/100 WBC (Perit fld)",
       "N": "Neutrophils/leuk NFr Prt",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 2,
@@ -15321,7 +17134,9 @@ export default [
       "G": "Lymphocytes/100 WBC (Perit fld)",
       "N": "Lymphocytes/leuk NFr Prt",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 2,
@@ -15332,7 +17147,9 @@ export default [
       "G": "Monocytes+Macrophages/100 WBC (Perit fld)",
       "N": "Monos+Macros/leuk NFr Prt",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 2,
@@ -15343,7 +17160,9 @@ export default [
       "G": "Monocytes/100 WBC (Perit fld)",
       "N": "Monocytes/leuk NFr Prt",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 2,
@@ -15354,7 +17173,9 @@ export default [
       "G": "Eosinophils/100 WBC (Perit fld)",
       "N": "Eosinophil/leuk NFr Prt",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 2,
@@ -15365,7 +17186,9 @@ export default [
       "G": "Basophils/100 WBC (Perit fld)",
       "N": "Basophils/leuk NFr Prt",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 2,
@@ -15383,7 +17206,9 @@ export default [
       "G": "Mesothelial cells/100 WBC (Perit fld)",
       "N": "Mesothl Cell/leuk NFr Prt",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 2,
@@ -15420,7 +17245,9 @@ export default [
       "G": "Adenosine deaminase enzyme act/vol (Perit fld)",
       "N": "Adenosine deaminase Prt-cCnc",
       "O": "LN",
-      "T": "Units/L"
+      "T": "Units/L",
+      "U": "U/L",
+      "V": "U/L"
     },
     {
       "A": 2,
@@ -15431,7 +17258,9 @@ export default [
       "G": "Albumin mass conc (Perit fld)",
       "N": "Albumin Prt-mCnc",
       "O": "LN",
-      "T": "g/dL"
+      "T": "g/dL",
+      "U": "g/L",
+      "V": "g/L"
     },
     {
       "A": 2,
@@ -15442,7 +17271,9 @@ export default [
       "G": "AFP mass conc (Perit fld)",
       "N": "AFP Prt-mCnc",
       "O": "LN",
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 2,
@@ -15453,7 +17284,9 @@ export default [
       "G": "Amylase enzyme act/vol (Perit fld)",
       "N": "Amylase Prt-cCnc",
       "O": "LN",
-      "T": "Units/L"
+      "T": "Units/L",
+      "U": "U/L",
+      "V": "U/L"
     },
     {
       "A": 2,
@@ -15465,7 +17298,9 @@ export default [
       "N": "Cholest Prt-mCnc",
       "O": "LN",
       "R": 386.6535,
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 2,
@@ -15476,7 +17311,9 @@ export default [
       "G": "Glucose mass conc (Perit fld)",
       "N": "Glucose Prt-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 2,
@@ -15487,7 +17324,9 @@ export default [
       "G": "LDH enzyme act/vol (Perit fld)",
       "N": "LDH Prt-cCnc",
       "O": "LN",
-      "T": "Units/L"
+      "T": "Units/L",
+      "U": "U/L",
+      "V": "U/L"
     },
     {
       "A": 2,
@@ -15498,7 +17337,9 @@ export default [
       "G": "Lipase enzyme act/vol (Perit fld)",
       "N": "Lipase Prt-cCnc",
       "O": "LN",
-      "T": "Units/L"
+      "T": "Units/L",
+      "U": "U/L",
+      "V": "U/L"
     },
     {
       "A": 2,
@@ -15508,7 +17349,9 @@ export default [
       "F": "Lipase [Enzymatic activity/volume] in Pleural fluid",
       "G": "Lipase enzyme act/vol (Pleur fld)",
       "N": "Lipase Plr-cCnc",
-      "O": "LN"
+      "O": "LN",
+      "U": "U/L",
+      "V": "U/L"
     },
     {
       "A": 2,
@@ -15519,7 +17362,9 @@ export default [
       "G": "Protein mass conc (Perit fld)",
       "N": "Prot Prt-mCnc",
       "O": "LN",
-      "T": "g/dL"
+      "T": "g/dL",
+      "U": "g/L",
+      "V": "g/L"
     },
     {
       "A": 2,
@@ -15530,7 +17375,9 @@ export default [
       "G": "Triglyceride mass conc (Perit fld)",
       "N": "Trigl Prt-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 2,
@@ -15542,7 +17389,9 @@ export default [
       "N": "Urate DiafP-mCnc",
       "O": "LN",
       "R": 168.1114,
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 2,
@@ -15580,7 +17429,9 @@ export default [
       "G": "Neutrophils/100 WBC Manual cnt (Perit dial fld)",
       "N": "Neutrophils/leuk NFr DiafP Manual",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 2,
@@ -15591,7 +17442,9 @@ export default [
       "G": "Lymphocytes/100 WBC Manual cnt (Perit dial fld)",
       "N": "Lymphocytes/leuk NFr DiafP Manual",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 2,
@@ -15609,7 +17462,9 @@ export default [
       "G": "Eosinophils/100 WBC Manual cnt (Perit dial fld)",
       "N": "Eosinophil/leuk NFr DiafP Manual",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 2,
@@ -15620,7 +17475,9 @@ export default [
       "G": "Basophils/100 WBC Manual cnt (Perit dial fld)",
       "N": "Basophils/leuk NFr DiafP Manual",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 2,
@@ -15686,7 +17543,9 @@ export default [
       "G": "Nucleated cells Auto #/vol (Pleur fld)",
       "N": "Nuc cell # Plr Auto",
       "O": "LN",
-      "T": "#/mm3"
+      "T": "#/mm3",
+      "U": "10*3/uL",
+      "V": "10*3/uL"
     },
     {
       "A": 2,
@@ -15697,7 +17556,9 @@ export default [
       "G": "WBC #/vol (Pleur fld)",
       "N": "WBC # Plr",
       "O": "LN",
-      "T": "#/mm3"
+      "T": "#/mm3",
+      "U": "10*3/uL",
+      "V": "10*3/uL"
     },
     {
       "A": 2,
@@ -15708,7 +17569,9 @@ export default [
       "G": "WBC corrected for nucl RBC #/vol (Pleur fld)",
       "N": "WBC nRBC cor # Plr",
       "O": "LN",
-      "T": "#/mm3"
+      "T": "#/mm3",
+      "U": "10*3/uL",
+      "V": "10*3/uL"
     },
     {
       "A": 2,
@@ -15719,7 +17582,9 @@ export default [
       "G": "RBC #/vol (Pleur fld)",
       "N": "RBC # Plr",
       "O": "LN",
-      "T": "#/mm3"
+      "T": "#/mm3",
+      "U": "10*3/uL",
+      "V": "10*3/uL"
     },
     {
       "A": 2,
@@ -15730,7 +17595,9 @@ export default [
       "G": "Neutrophils/100 WBC Manual cnt (Pleur fld)",
       "N": "Neutrophils/leuk NFr Plr Manual",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 2,
@@ -15748,7 +17615,9 @@ export default [
       "G": "Lymphocytes/100 WBC Manual cnt (Pleur fld)",
       "N": "Lymphocytes/leuk NFr Plr Manual",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 2,
@@ -15759,7 +17628,9 @@ export default [
       "G": "Monocytes+Macrophages/100 WBC (Pleur fld)",
       "N": "Monos+Macros/leuk NFr Plr",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 2,
@@ -15770,7 +17641,9 @@ export default [
       "G": "Monocytes/100 WBC Manual cnt (Pleur fld)",
       "N": "Monocytes/leuk NFr Plr Manual",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 2,
@@ -15781,7 +17654,9 @@ export default [
       "G": "Eosinophils/100 WBC (Pleur fld)",
       "N": "Eosinophil/leuk NFr Plr",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 2,
@@ -15792,7 +17667,9 @@ export default [
       "G": "Basophils/100 WBC (Pleur fld)",
       "N": "Basophils/leuk NFr Plr",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 2,
@@ -15810,7 +17687,9 @@ export default [
       "G": "Mesothelial cells/100 WBC (Pleur fld)",
       "N": "Mesothl Cell/leuk NFr Plr",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 2,
@@ -15828,7 +17707,9 @@ export default [
       "G": "Unidentified cells/100 WBC (Pleur fld)",
       "N": "Unident Cells/leuk NFr Plr",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 2,
@@ -15851,7 +17732,9 @@ export default [
       "G": "Adenosine deaminase enzyme act/vol (Pleur fld)",
       "N": "Adenosine deaminase Plr-cCnc",
       "O": "LN",
-      "T": "Units/L"
+      "T": "Units/L",
+      "U": "U/L",
+      "V": "U/L"
     },
     {
       "A": 2,
@@ -15862,7 +17745,9 @@ export default [
       "G": "Albumin mass conc (Pleur fld)",
       "N": "Albumin Plr-mCnc",
       "O": "LN",
-      "T": "g/dL"
+      "T": "g/dL",
+      "U": "g/L",
+      "V": "g/L"
     },
     {
       "A": 2,
@@ -15874,7 +17759,9 @@ export default [
       "N": "Cholest Plr-mCnc",
       "O": "LN",
       "R": 386.6535,
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 2,
@@ -15885,7 +17772,9 @@ export default [
       "G": "Glucose mass conc (Pleur fld)",
       "N": "Glucose Plr-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 2,
@@ -15896,7 +17785,9 @@ export default [
       "G": "LDH enzyme act/vol (Pleur fld)",
       "N": "LDH Plr-cCnc",
       "O": "LN",
-      "T": "Units/L"
+      "T": "Units/L",
+      "U": "U/L",
+      "V": "U/L"
     },
     {
       "A": 2,
@@ -15908,7 +17799,9 @@ export default [
       "N": "Phosphate Plr-mCnc",
       "O": "LN",
       "R": 94.973,
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 2,
@@ -15919,7 +17812,9 @@ export default [
       "G": "Protein mass conc (Pleur fld)",
       "N": "Prot Plr-mCnc",
       "O": "LN",
-      "T": "g/dL"
+      "T": "g/dL",
+      "U": "g/L",
+      "V": "g/L"
     },
     {
       "A": 2,
@@ -15930,7 +17825,9 @@ export default [
       "G": "Triglyceride mass conc (Pleur fld)",
       "N": "Trigl Plr-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 2,
@@ -15942,7 +17839,9 @@ export default [
       "N": "Urate Plr-mCnc",
       "O": "LN",
       "R": 168.1114,
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 2,
@@ -15975,7 +17874,9 @@ export default [
       "G": "Specimen weight (Sweat)",
       "N": "Specimen wt Sweat Qn",
       "O": "LN",
-      "T": "gm"
+      "T": "gm",
+      "U": "mg",
+      "V": "mg"
     },
     {
       "A": 3,
@@ -15991,7 +17892,9 @@ export default [
       "N": "Chloride Sweat-sCnc",
       "O": "LN",
       "R": 35.4535,
-      "T": "mmol/L"
+      "T": "mmol/L",
+      "U": "mmol/L",
+      "V": "mmol/L"
     },
     {
       "A": 2,
@@ -16109,7 +18012,9 @@ export default [
       "F": "Colony count [#/volume] in Urine",
       "G": "Colony count #/vol (U)",
       "N": "CC # Ur",
-      "O": "LN"
+      "O": "LN",
+      "U": "/uL",
+      "V": "/uL"
     },
     {
       "A": 3,
@@ -16210,7 +18115,9 @@ export default [
       "G": "Mafenide susc",
       "N": "Mafenide Susc Islt",
       "O": "LN",
-      "T": "mm"
+      "T": "mm",
+      "U": "mm",
+      "V": "mm"
     },
     {
       "A": 5,
@@ -16225,7 +18132,9 @@ export default [
       "K": 100,
       "N": "Silvadene Susc Islt",
       "O": "LN",
-      "T": "mm"
+      "T": "mm",
+      "U": "mm",
+      "V": "mm"
     },
     {
       "A": 5,
@@ -16243,7 +18152,9 @@ export default [
       "G": "Nitrofurazone susc",
       "N": "Nitrofurazone Susc Islt",
       "O": "LN",
-      "T": "mm"
+      "T": "mm",
+      "U": "mm",
+      "V": "mm"
     },
     {
       "A": 5,
@@ -16257,7 +18168,9 @@ export default [
       "O": "LN",
       "P": "mm",
       "Q": "mm",
-      "T": "mm"
+      "T": "mm",
+      "U": "mm",
+      "V": "mm"
     },
     {
       "A": 4,
@@ -16274,7 +18187,8 @@ export default [
       "O": "LN",
       "P": "ug/mL",
       "Q": "ug/mL",
-      "T": 0
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 4,
@@ -16290,7 +18204,8 @@ export default [
       "P": "ug/mL",
       "Q": "ug/mL",
       "R": 396.438,
-      "T": 0
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 4,
@@ -16306,7 +18221,8 @@ export default [
       "P": "ug/mL",
       "Q": "ug/mL",
       "R": 323.1294,
-      "T": 0
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 4,
@@ -16320,7 +18236,8 @@ export default [
       "O": "LN",
       "P": "ug/mL",
       "Q": "ug/mL",
-      "T": 0
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 4,
@@ -16337,7 +18254,8 @@ export default [
       "O": "LN",
       "P": "mcg/mL",
       "Q": "mcg/mL",
-      "T": 0
+      "U": "mcg/mL",
+      "V": "mcg/mL"
     },
     {
       "A": 4,
@@ -16352,7 +18270,8 @@ export default [
       "P": "mcg/mL",
       "Q": "mcg/mL",
       "R": 380.4155,
-      "T": 0
+      "U": "mcg/mL",
+      "V": "mcg/mL"
     },
     {
       "A": 4,
@@ -16369,7 +18288,8 @@ export default [
       "O": "LN",
       "P": "mcg/mL",
       "Q": "mcg/mL",
-      "T": 0
+      "U": "mcg/mL",
+      "V": "mcg/mL"
     },
     {
       "A": 4,
@@ -16381,8 +18301,7 @@ export default [
       "G": "Tetracycline MIC susc",
       "N": "Tetracycline Islt MIC",
       "O": "LN",
-      "R": 444.4346,
-      "T": 0
+      "R": 444.4346
     },
     {
       "A": 4,
@@ -16394,8 +18313,7 @@ export default [
       "G": "Sulfamethoxazole MIC susc",
       "N": "Sulfamethoxazole Islt MIC",
       "O": "LN",
-      "R": 253.2776,
-      "T": 0
+      "R": 253.2776
     },
     {
       "A": 4,
@@ -16407,8 +18325,7 @@ export default [
       "G": "Imipenem susc",
       "N": "Imipenem Susc Islt",
       "O": "LN",
-      "R": 299.3461,
-      "T": 0
+      "R": 299.3461
     },
     {
       "A": 4,
@@ -16461,8 +18378,7 @@ export default [
       "K": 256,
       "N": "Piperacillin Islt MIC",
       "O": "LN",
-      "R": 517.5548,
-      "T": 0
+      "R": 517.5548
     },
     {
       "A": 5,
@@ -16474,8 +18390,7 @@ export default [
       "G": "Piperacillin susc",
       "N": "Piperacillin Susc Islt",
       "O": "LN",
-      "R": 517.5548,
-      "T": 0
+      "R": 517.5548
     },
     {
       "A": 5,
@@ -16489,8 +18404,7 @@ export default [
       "J": 16,
       "K": 512,
       "N": "Carbenicillin Islt MIC",
-      "O": "LN",
-      "T": 0
+      "O": "LN"
     },
     {
       "A": 5,
@@ -16501,8 +18415,7 @@ export default [
       "F": "Carbenicillin [Susceptibility]",
       "G": "Carbenicillin susc",
       "N": "Carbenicillin Susc Islt",
-      "O": "LN",
-      "T": 0
+      "O": "LN"
     },
     {
       "A": 5,
@@ -16514,8 +18427,7 @@ export default [
       "G": "Ticarcillin MIC susc",
       "N": "Ticarcillin Islt MIC",
       "O": "LN",
-      "R": 384.4273,
-      "T": 0
+      "R": 384.4273
     },
     {
       "A": 5,
@@ -16590,8 +18502,7 @@ export default [
       "G": "Cefazolin MIC susc",
       "N": "Cefazolin Islt MIC",
       "O": "LN",
-      "R": 454.5072,
-      "T": 0
+      "R": 454.5072
     },
     {
       "A": 6,
@@ -16605,8 +18516,7 @@ export default [
       "J": 1,
       "N": "Cefazolin Susc Islt",
       "O": "LN",
-      "R": 454.5072,
-      "T": 0
+      "R": 454.5072
     },
     {
       "A": 6,
@@ -16621,8 +18531,7 @@ export default [
       "K": 1,
       "N": "Cephalothin Susc Islt",
       "O": "LN",
-      "R": 396.438,
-      "T": 0
+      "R": 396.438
     },
     {
       "A": 5,
@@ -16639,8 +18548,7 @@ export default [
       "F": "Cefamandole [Susceptibility] by Minimum inhibitory concentration (MIC)",
       "G": "Cefamandole MIC susc",
       "N": "Cefamandole Islt MIC",
-      "O": "LN",
-      "T": 0
+      "O": "LN"
     },
     {
       "A": 6,
@@ -16654,8 +18562,7 @@ export default [
       "J": 0,
       "K": 15.7,
       "N": "Cefamandole Susc Islt",
-      "O": "LN",
-      "T": 0
+      "O": "LN"
     },
     {
       "A": 6,
@@ -16667,8 +18574,7 @@ export default [
       "G": "Cefonicid MIC susc",
       "N": "Cefonocid Islt MIC",
       "O": "LN",
-      "R": 542.5659,
-      "T": 0
+      "R": 542.5659
     },
     {
       "A": 6,
@@ -16680,8 +18586,7 @@ export default [
       "G": "Cefonicid susc",
       "N": "Cefonocid Susc Islt",
       "O": "LN",
-      "R": 542.5659,
-      "T": 0
+      "R": 542.5659
     },
     {
       "A": 6,
@@ -16726,8 +18631,7 @@ export default [
       "G": "Cefotetan MIC susc",
       "N": "Cefotetan Islt MIC",
       "O": "LN",
-      "R": 575.619,
-      "T": 0
+      "R": 575.619
     },
     {
       "A": 6,
@@ -16739,8 +18643,7 @@ export default [
       "G": "Cefotetan susc",
       "N": "Cefotetan Susc Islt",
       "O": "LN",
-      "R": 575.619,
-      "T": 0
+      "R": 575.619
     },
     {
       "A": 6,
@@ -16752,8 +18655,7 @@ export default [
       "G": "Cefoxitin MIC susc",
       "N": "Cefoxitin Islt MIC",
       "O": "LN",
-      "R": 427.4521,
-      "T": 0
+      "R": 427.4521
     },
     {
       "A": 6,
@@ -16768,8 +18670,7 @@ export default [
       "K": 1.1,
       "N": "Cefoxitin Susc Islt",
       "O": "LN",
-      "R": 427.4521,
-      "T": 0
+      "R": 427.4521
     },
     {
       "A": 5,
@@ -16790,8 +18691,7 @@ export default [
       "K": 375,
       "N": "Cefoperazone Islt MIC",
       "O": "LN",
-      "R": 645.6674,
-      "T": 0
+      "R": 645.6674
     },
     {
       "A": 6,
@@ -16806,8 +18706,7 @@ export default [
       "K": 32,
       "N": "Ceftazidime Islt MIC",
       "O": "LN",
-      "R": 546.5761,
-      "T": 0
+      "R": 546.5761
     },
     {
       "A": 6,
@@ -16819,8 +18718,7 @@ export default [
       "G": "Ceftizoxime MIC susc",
       "N": "Ceftizoxime Islt MIC",
       "O": "LN",
-      "R": 383.4028,
-      "T": 0
+      "R": 383.4028
     },
     {
       "A": 6,
@@ -16835,8 +18733,7 @@ export default [
       "K": 2.4,
       "N": "Cefoperazone Susc Islt",
       "O": "LN",
-      "R": 645.6674,
-      "T": 0
+      "R": 645.6674
     },
     {
       "A": 6,
@@ -16847,8 +18744,7 @@ export default [
       "F": "Cefotaxime [Susceptibility] by Minimum inhibitory concentration (MIC)",
       "G": "Cefotaxime MIC susc",
       "N": "Cefotaxime Islt MIC",
-      "O": "LN",
-      "T": 0
+      "O": "LN"
     },
     {
       "A": 6,
@@ -16863,8 +18759,7 @@ export default [
       "K": 2,
       "N": "Ceftazidime Susc Islt",
       "O": "LN",
-      "R": 546.5761,
-      "T": 0
+      "R": 546.5761
     },
     {
       "A": 6,
@@ -16878,8 +18773,7 @@ export default [
       "J": 2.6,
       "K": 3,
       "N": "Cefotaxime Susc Islt",
-      "O": "LN",
-      "T": 0
+      "O": "LN"
     },
     {
       "A": 6,
@@ -16891,8 +18785,7 @@ export default [
       "G": "Ceftriaxone MIC susc",
       "N": "Ceftriaxone Islt MIC",
       "O": "LN",
-      "R": 554.5799,
-      "T": 0
+      "R": 554.5799
     },
     {
       "A": 6,
@@ -16907,8 +18800,7 @@ export default [
       "K": 8.7,
       "N": "Ceftriaxone Susc Islt",
       "O": "LN",
-      "R": 554.5799,
-      "T": 0
+      "R": 554.5799
     },
     {
       "A": 6,
@@ -16920,8 +18812,7 @@ export default [
       "G": "Ceftizoxime susc",
       "N": "Ceftizoxime Susc Islt",
       "O": "LN",
-      "R": 383.4028,
-      "T": 0
+      "R": 383.4028
     },
     {
       "A": 6,
@@ -16933,8 +18824,7 @@ export default [
       "G": "Moxalactam MIC susc",
       "N": "Moxalactam Islt MIC",
       "O": "LN",
-      "R": 520.4726,
-      "T": 0
+      "R": 520.4726
     },
     {
       "A": 6,
@@ -16949,8 +18839,7 @@ export default [
       "K": 2,
       "N": "Moxalactam Susc Islt",
       "O": "LN",
-      "R": 520.4726,
-      "T": 0
+      "R": 520.4726
     },
     {
       "A": 5,
@@ -16973,7 +18862,9 @@ export default [
       "G": "Aztreonam MIC susc",
       "N": "Aztreonam Islt MIC",
       "O": "LN",
-      "R": 435.4328
+      "R": 435.4328,
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 4,
@@ -16991,8 +18882,7 @@ export default [
       "G": "Imipenem MIC susc",
       "N": "Imipenem Islt MIC",
       "O": "LN",
-      "R": 299.3461,
-      "T": 0
+      "R": 299.3461
     },
     {
       "A": 5,
@@ -17091,8 +18981,7 @@ export default [
       "G": "Minocycline MIC susc",
       "N": "Minocycline Islt MIC",
       "O": "LN",
-      "R": 457.4764,
-      "T": 0
+      "R": 457.4764
     },
     {
       "A": 5,
@@ -17106,8 +18995,7 @@ export default [
       "K": 0.9,
       "N": "Tetracycline Susc Islt",
       "O": "LN",
-      "R": 444.4346,
-      "T": 0
+      "R": 444.4346
     },
     {
       "A": 4,
@@ -17187,7 +19075,9 @@ export default [
       "G": "Mupirocin susc",
       "N": "Mupirocin Susc Islt",
       "O": "LN",
-      "T": "mm"
+      "T": "mm",
+      "U": "mm",
+      "V": "mm"
     },
     {
       "A": 5,
@@ -17202,8 +19092,7 @@ export default [
       "K": 128,
       "N": "Nitrofurantoin Islt MIC",
       "O": "LN",
-      "R": 238.157,
-      "T": 0
+      "R": 238.157
     },
     {
       "A": 5,
@@ -17217,8 +19106,7 @@ export default [
       "K": 1.2,
       "N": "Nitrofurantoin Susc Islt",
       "O": "LN",
-      "R": 238.157,
-      "T": 0
+      "R": 238.157
     },
     {
       "A": 5,
@@ -17243,8 +19131,7 @@ export default [
       "K": 1.2,
       "N": "Sulfamethoxazole Susc Islt",
       "O": "LN",
-      "R": 253.2776,
-      "T": 0
+      "R": 253.2776
     },
     {
       "A": 5,
@@ -17342,7 +19229,9 @@ export default [
       "K": 3,
       "N": "B abortus Ab Titr Ser Aggl",
       "O": "LN",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 4,
@@ -17358,7 +19247,9 @@ export default [
       "L": 10,
       "N": "B melitensis Ab Titr Ser",
       "O": "LN",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 4,
@@ -17368,7 +19259,9 @@ export default [
       "F": "Brucella suis Ab [Titer] in Serum by Latex agglutination",
       "G": "B. suis Ab LA titer (S)",
       "N": "B suis Ab Titr Ser LA",
-      "O": "LN"
+      "O": "LN",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 3,
@@ -17395,7 +19288,9 @@ export default [
       "K": 0,
       "N": "Chlamydia IgG Titr Ser",
       "O": "LN",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 4,
@@ -17410,7 +19305,9 @@ export default [
       "K": 0,
       "N": "Chlamydia IgM Titr Ser",
       "O": "LN",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 3,
@@ -17439,7 +19336,9 @@ export default [
       "G": "H. pylori IgM IA Qn (S)",
       "N": "H pylori IgM Ser IA-aCnc",
       "O": "LN",
-      "T": "Index Value"
+      "T": "Index Value",
+      "U": "Index_val",
+      "V": "{Index_val}"
     },
     {
       "A": 4,
@@ -17454,7 +19353,9 @@ export default [
       "K": 0,
       "N": "H pylori IgG Ser IA-aCnc",
       "O": "LN",
-      "T": "EIA INDEX"
+      "T": "EIA INDEX",
+      "U": "Index_val",
+      "V": "{Index_val}"
     },
     {
       "A": 3,
@@ -17478,7 +19379,9 @@ export default [
       "O": "LN",
       "P": "{titer}",
       "Q": "{titer}",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 4,
@@ -17496,7 +19399,9 @@ export default [
       "O": "LN",
       "P": "{titer}",
       "Q": "{titer}",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 3,
@@ -17512,7 +19417,9 @@ export default [
       "F": "Mycoplasma pneumoniae IgG Ab [Units/volume] in Serum by Immunoassay",
       "G": "M. pneumoniae IgG IA Qn (S)",
       "N": "M pneumo IgG Ser IA-aCnc",
-      "O": "LN"
+      "O": "LN",
+      "U": "Index_val",
+      "V": "{Index_val}"
     },
     {
       "A": 4,
@@ -17522,7 +19429,9 @@ export default [
       "F": "Mycoplasma pneumoniae IgM Ab [Units/volume] in Serum by Immunoassay",
       "G": "M. pneumoniae IgM IA Qn (S)",
       "N": "M pneumo IgM Ser IA-aCnc",
-      "O": "LN"
+      "O": "LN",
+      "U": "Index_val",
+      "V": "{Index_val}"
     },
     {
       "A": 4,
@@ -17537,7 +19446,9 @@ export default [
       "K": 11,
       "N": "M pneumo Ab Titr Ser CF",
       "O": "LN",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 4,
@@ -17552,7 +19463,9 @@ export default [
       "K": 0,
       "N": "M pneumo Ab Titr Ser IF",
       "O": "LN",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 3,
@@ -17584,7 +19497,9 @@ export default [
       "F": "Coxiella burnetii phase 1 IgM Ab [Titer] in Serum",
       "G": "C. burnetii phase 1 IgM titer (S)",
       "N": "C burnet Ph1 IgM Titr Ser",
-      "O": "LN"
+      "O": "LN",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 4,
@@ -17594,7 +19509,9 @@ export default [
       "F": "Coxiella burnetii phase 2 IgM Ab [Titer] in Serum",
       "G": "C. burnetii phase 2 IgM titer (S)",
       "N": "C burnet Ph2 IgM Titr Ser",
-      "O": "LN"
+      "O": "LN",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 4,
@@ -17618,7 +19535,9 @@ export default [
       "K": 3,
       "N": "Proteus OX19 Ab Titr Ser",
       "O": "LN",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 3,
@@ -17640,7 +19559,9 @@ export default [
       "L": 5,
       "N": "S Paraty A Ab Titr Ser",
       "O": "LN",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 4,
@@ -17656,7 +19577,9 @@ export default [
       "L": 5,
       "N": "S Paraty B Ab Titr Ser",
       "O": "LN",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 4,
@@ -17683,7 +19606,9 @@ export default [
       "L": 5,
       "N": "S Typhi H d Ab Titr Ser",
       "O": "LN",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 4,
@@ -17699,7 +19624,9 @@ export default [
       "L": 5,
       "N": "S Typhi O D Ab Titr Ser",
       "O": "LN",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 3,
@@ -17723,7 +19650,9 @@ export default [
       "O": "LN",
       "P": "[todd'U]/ml",
       "Q": "[todd'U]/ml",
-      "T": "TODD UNITS"
+      "T": "TODD UNITS",
+      "U": "todd'U/ml",
+      "V": "[todd'U]/ml"
     },
     {
       "A": 4,
@@ -17738,7 +19667,9 @@ export default [
       "K": 85,
       "N": "Strep DNAse B Ser-aCnc",
       "O": "LN",
-      "T": "Units"
+      "T": "Units",
+      "U": "U/mL",
+      "V": "U/mL"
     },
     {
       "A": 4,
@@ -17749,7 +19680,9 @@ export default [
       "G": "Deprecated",
       "N": "Deprecated S pneum 1 IgG Ser-mCnc",
       "O": "LN",
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 4,
@@ -17760,7 +19693,9 @@ export default [
       "G": "Deprecated",
       "N": "Deprecated S pneum3 IgG Ser-mCnc",
       "O": "LN",
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 4,
@@ -17771,7 +19706,9 @@ export default [
       "G": "Deprecated",
       "N": "Deprecated S pneum4 IgG Ser-mCnc",
       "O": "LN",
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 4,
@@ -17782,7 +19719,9 @@ export default [
       "G": "Deprecated",
       "N": "Deprecated S pneum5 IgG Ser-mCnc",
       "O": "LN",
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 4,
@@ -17793,7 +19732,9 @@ export default [
       "G": "S. pneumoniae Danish type 6B IgG mass conc (S)",
       "N": "S pneum Da 6B IgG Ser-mCnc",
       "O": "LN",
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 4,
@@ -17804,7 +19745,9 @@ export default [
       "G": "S. pneumoniae Danish type 7F IgG mass conc (S)",
       "N": "S pneum Da 7F IgG Ser-mCnc",
       "O": "LN",
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 4,
@@ -17815,7 +19758,9 @@ export default [
       "G": "Deprecated",
       "N": "Deprecated S pneum8 IgG Ser-mCnc",
       "O": "LN",
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 4,
@@ -17826,7 +19771,9 @@ export default [
       "G": "Deprecated",
       "N": "Deprecated S pneum9 IgG Ser-mCnc",
       "O": "LN",
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 4,
@@ -17837,7 +19784,9 @@ export default [
       "G": "S. pneumoniae Danish type 9V IgG mass conc (S)",
       "N": "S pneum Da 9V IgG Ser-mCnc",
       "O": "LN",
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 4,
@@ -17848,7 +19797,9 @@ export default [
       "G": "Deprecated",
       "N": "Deprecated S pneum12 IgG Ser-mCnc",
       "O": "LN",
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 4,
@@ -17859,7 +19810,9 @@ export default [
       "G": "Deprecated",
       "N": "Deprecated S pneum14 IgG Ser-mCnc",
       "O": "LN",
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 4,
@@ -17870,7 +19823,9 @@ export default [
       "G": "S. pneumoniae Danish type 18C IgG mass conc (S)",
       "N": "S pneum Da 18C IgG Ser-mCnc",
       "O": "LN",
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 4,
@@ -17881,7 +19836,9 @@ export default [
       "G": "Deprecated",
       "N": "Deprecated S pneum19 IgG Ser-mCnc",
       "O": "LN",
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 4,
@@ -17892,7 +19849,9 @@ export default [
       "G": "Deprecated",
       "N": "Deprecated S pneum23 IgG Ser-mCnc",
       "O": "LN",
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 3,
@@ -17928,7 +19887,9 @@ export default [
       "K": 0,
       "N": "Reagin Ab Titr Ser",
       "O": "LN",
-      "T": "DILS"
+      "T": "DILS",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 3,
@@ -17958,7 +19919,9 @@ export default [
       "K": 3,
       "N": "B quintana IgG Titr Ser",
       "O": "LN",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 4,
@@ -17973,7 +19936,9 @@ export default [
       "K": 0,
       "N": "B quintana IgM Titr Ser",
       "O": "LN",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 4,
@@ -17984,7 +19949,9 @@ export default [
       "G": "H. influenzae B Ab mass conc (S)",
       "N": "Haem influ B Ab Ser-mCnc",
       "O": "LN",
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 3,
@@ -18008,7 +19975,9 @@ export default [
       "K": 3,
       "N": "B henselae IgG Titr Ser",
       "O": "LN",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 4,
@@ -18023,7 +19992,9 @@ export default [
       "K": 0,
       "N": "B henselae IgM Titr Ser",
       "O": "LN",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 3,
@@ -18145,7 +20116,9 @@ export default [
       "K": 0,
       "N": "Aspergillus Ab Titr Ser CF",
       "O": "LN",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 4,
@@ -18156,7 +20129,9 @@ export default [
       "G": "Galactomannan Ag Qn",
       "N": "Galactomannan Ag SerPl-aCnc",
       "O": "LN",
-      "T": "INDEX"
+      "T": "INDEX",
+      "U": "Index_val",
+      "V": "{Index_val}"
     },
     {
       "A": 4,
@@ -18182,7 +20157,9 @@ export default [
       "K": 11,
       "N": "B dermat Ab Titr Ser CF",
       "O": "LN",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 4,
@@ -18200,7 +20177,9 @@ export default [
       "G": "Coccidioides sp IgG Qn (S)",
       "N": "Coccidioides IgG Ser-aCnc",
       "O": "LN",
-      "T": "Index Value"
+      "T": "Index Value",
+      "U": "Index_val",
+      "V": "{Index_val}"
     },
     {
       "A": 4,
@@ -18215,7 +20194,9 @@ export default [
       "K": 11,
       "N": "C immitis Ab Titr Ser CF",
       "O": "LN",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 4,
@@ -18233,7 +20214,9 @@ export default [
       "O": "LN",
       "P": "{titer}",
       "Q": "{titer}",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 4,
@@ -18244,7 +20227,9 @@ export default [
       "G": "H. capsulatum Ag Radioimmunoassay (RIA) Qn (S)",
       "N": "H capsul Ag Ser RIA-aCnc",
       "O": "LN",
-      "T": "Units"
+      "T": "Units",
+      "U": "arb'U",
+      "V": "[arb'U]"
     },
     {
       "A": 4,
@@ -18255,7 +20240,9 @@ export default [
       "G": "H. capsulatum Ag mass conc (Body fld)",
       "N": "H capsul Ag Fld-mCnc",
       "O": "LN",
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 4,
@@ -18281,7 +20268,9 @@ export default [
       "K": 11,
       "N": "H capsul Myc Ab Titr Ser CF",
       "O": "LN",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 4,
@@ -18296,7 +20285,9 @@ export default [
       "K": 11,
       "N": "H capsul Yst Ab Titr Ser CF",
       "O": "LN",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 2,
@@ -18317,7 +20308,9 @@ export default [
       "K": 9,
       "N": "E histolyt Ab Titr Ser HA",
       "O": "LN",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 3,
@@ -18351,7 +20344,9 @@ export default [
       "O": "LN",
       "P": "[arb'U]/mL",
       "Q": "[arb'U]/mL",
-      "T": "EIA INDEX"
+      "T": "EIA INDEX",
+      "U": "EIA_index",
+      "V": "{EIA_index}"
     },
     {
       "A": 4,
@@ -18369,7 +20364,9 @@ export default [
       "O": "LN",
       "P": "{titer}",
       "Q": "{titer}",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 3,
@@ -18380,8 +20377,7 @@ export default [
       "F": "Toxoplasma gondii IgM Ab [Units/volume] in Serum",
       "G": "T. gondii IgM Qn (S)",
       "N": "T gondii IgM Ser-aCnc",
-      "O": "LN",
-      "T": 0
+      "O": "LN"
     },
     {
       "A": 3,
@@ -18392,8 +20388,7 @@ export default [
       "F": "Toxoplasma gondii IgM Ab [Titer] in Serum or Plasma by Immunofluorescence",
       "G": "T. gondii IgM IF titer",
       "N": "T gondii IgM Titr SerPl IF",
-      "O": "LN",
-      "T": 0
+      "O": "LN"
     },
     {
       "A": 2,
@@ -18442,7 +20437,9 @@ export default [
       "K": 9,
       "N": "CMV Ab Titr SerPl IF",
       "O": "LN",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 4,
@@ -18460,7 +20457,9 @@ export default [
       "O": "LN",
       "P": "[arb'U]/mL",
       "Q": "[arb'U]/mL",
-      "T": "EIA INDEX"
+      "T": "EIA INDEX",
+      "U": "EIA_Index",
+      "V": "{EIA_Index}"
     },
     {
       "A": 4,
@@ -18474,7 +20473,8 @@ export default [
       "O": "LN",
       "P": "{titer}",
       "Q": "{titer}",
-      "T": 0
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 4,
@@ -18488,7 +20488,8 @@ export default [
       "O": "LN",
       "P": "{Index_val}",
       "Q": "{Index_val}",
-      "T": 0
+      "U": "Index_val",
+      "V": "{Index_val}"
     },
     {
       "A": 3,
@@ -18527,7 +20528,9 @@ export default [
       "K": 9,
       "N": "CV B1 Ab Titr Ser Nt",
       "O": "LN",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 5,
@@ -18542,7 +20545,9 @@ export default [
       "K": 9,
       "N": "CV B2 Ab Titr Ser Nt",
       "O": "LN",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 5,
@@ -18557,7 +20562,9 @@ export default [
       "K": 9,
       "N": "CV B3 Ab Titr Ser Nt",
       "O": "LN",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 5,
@@ -18572,7 +20579,9 @@ export default [
       "K": 9,
       "N": "CV B4 Ab Titr Ser Nt",
       "O": "LN",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 5,
@@ -18587,7 +20596,9 @@ export default [
       "K": 9,
       "N": "CV B5 Ab Titr Ser Nt",
       "O": "LN",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 5,
@@ -18602,7 +20613,9 @@ export default [
       "K": 9,
       "N": "CV B6 Ab Titr Ser Nt",
       "O": "LN",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 4,
@@ -18632,7 +20645,9 @@ export default [
       "K": 9,
       "N": "ECV6 Ab Titr Ser Nt",
       "O": "LN",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 5,
@@ -18647,7 +20662,9 @@ export default [
       "K": 9,
       "N": "ECV1 Ab Titr Ser Nt",
       "O": "LN",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 5,
@@ -18662,7 +20679,9 @@ export default [
       "K": 9,
       "N": "ECV3 Ab Titr Ser Nt",
       "O": "LN",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 5,
@@ -18677,7 +20696,9 @@ export default [
       "K": 9,
       "N": "ECV4 Ab Titr Ser Nt",
       "O": "LN",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 5,
@@ -18692,7 +20713,9 @@ export default [
       "K": 9,
       "N": "ECV9 Ab Titr Ser Nt",
       "O": "LN",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 5,
@@ -18707,7 +20730,9 @@ export default [
       "K": 9,
       "N": "ECV14 Ab Titr Ser Nt",
       "O": "LN",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 5,
@@ -18722,7 +20747,9 @@ export default [
       "K": 9,
       "N": "ECV19 Ab Titr Ser Nt",
       "O": "LN",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 4,
@@ -18757,7 +20784,9 @@ export default [
       "K": 11,
       "N": "EEEV Ab Titr Ser",
       "O": "LN",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 4,
@@ -18771,7 +20800,9 @@ export default [
       "J": 0,
       "K": 11,
       "N": "LACV Ab Titr Ser",
-      "O": "LN"
+      "O": "LN",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 4,
@@ -18786,7 +20817,9 @@ export default [
       "K": 11,
       "N": "SLEV Ab Titr Ser",
       "O": "LN",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 4,
@@ -18800,7 +20833,9 @@ export default [
       "J": 0,
       "K": 11,
       "N": "WEEV Ab Titr Ser",
-      "O": "LN"
+      "O": "LN",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 3,
@@ -18825,7 +20860,9 @@ export default [
       "O": "LN",
       "P": "{titer}",
       "Q": "{titer}",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 4,
@@ -18836,7 +20873,9 @@ export default [
       "G": "EBV DNA NAA+probe log # conc (Unsp spec)",
       "N": "EBV DNA XXX NAA+probe-Log#",
       "O": "LN",
-      "T": "log copies/mL"
+      "T": "log copies/mL",
+      "U": "Log_copies/mL",
+      "V": "{Log_copies}/mL"
     },
     {
       "A": 4,
@@ -18846,7 +20885,9 @@ export default [
       "F": "Epstein Barr virus capsid IgM Ab [Titer] in Serum by Immunofluorescence",
       "G": "EBV capsid IgM IF titer (S)",
       "N": "EBV VCA IgM Titr Ser IF",
-      "O": "LN"
+      "O": "LN",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 4,
@@ -18861,7 +20902,9 @@ export default [
       "K": 3,
       "N": "Heteroph Ab Abs Titr Ser LA",
       "O": "LN",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 3,
@@ -18891,7 +20934,9 @@ export default [
       "O": "LN",
       "P": "pg/mL",
       "Q": "pg/mL",
-      "T": "pg/mL"
+      "T": "pg/mL",
+      "U": "pg/mL",
+      "V": "pg/mL"
     },
     {
       "A": 4,
@@ -18906,7 +20951,9 @@ export default [
       "K": 0,
       "N": "HBV DNA # Ser Probe+sig amp",
       "O": "LN",
-      "T": "MILLION EQ/ML"
+      "T": "MILLION EQ/ML",
+      "U": "10*6_eq/mL",
+      "V": "10*6_eq/mL"
     },
     {
       "A": 4,
@@ -18917,7 +20964,9 @@ export default [
       "G": "HBV DNA NAA+probe log unit conc",
       "N": "HBV DNA SerPl NAA+probe-Log IU",
       "O": "LN",
-      "T": "Log IU/mL"
+      "T": "Log IU/mL",
+      "U": "Log_IU/mL",
+      "V": "{Log_IU}/mL"
     },
     {
       "A": 3,
@@ -18944,7 +20993,9 @@ export default [
       "O": "LN",
       "P": "10*3/mL",
       "Q": "10*3/mL",
-      "T": "Thous IU/ML"
+      "T": "Thous IU/ML",
+      "U": "10*3/mL",
+      "V": "10*3/mL"
     },
     {
       "A": 4,
@@ -18958,7 +21009,9 @@ export default [
       "O": "LN",
       "P": "{Log_IU}/mL",
       "Q": "{Log_IU}/mL",
-      "T": "Log IU/mL"
+      "T": "Log IU/mL",
+      "U": "Log_IU/mL",
+      "V": "{Log_IU}/mL"
     },
     {
       "A": 4,
@@ -18972,7 +21025,9 @@ export default [
       "O": "LN",
       "P": "[IU]/mL",
       "Q": "[IU]/mL",
-      "T": "IU/ mL"
+      "T": "IU/ mL",
+      "U": "IU/mL",
+      "V": "[IU]/mL"
     },
     {
       "A": 4,
@@ -18987,7 +21042,9 @@ export default [
       "O": "LN",
       "P": "{copies}/mL",
       "Q": "{copies}/mL",
-      "T": "COPIES/ML"
+      "T": "COPIES/ML",
+      "U": "copies/mL",
+      "V": "{copies}/mL"
     },
     {
       "A": 4,
@@ -19002,7 +21059,9 @@ export default [
       "O": "LN",
       "P": "10*6_eq/mL",
       "Q": "10*6_eq/mL",
-      "T": "MILLION EQ/ML"
+      "T": "MILLION EQ/ML",
+      "U": "10*6_eq/mL",
+      "V": "10*6_eq/mL"
     },
     {
       "A": 4,
@@ -19016,7 +21075,9 @@ export default [
       "O": "LN",
       "P": "{Log_IU}/mL",
       "Q": "{Log_IU}/mL",
-      "T": "Log IU/mL"
+      "T": "Log IU/mL",
+      "U": "Log_IU/mL",
+      "V": "{Log_IU}/mL"
     },
     {
       "A": 4,
@@ -19055,7 +21116,9 @@ export default [
       "G": "Herpes virus 6 DNA NAA+probe #/vol (Unsp spec)",
       "N": "HHV6 DNA # XXX NAA+probe",
       "O": "LN",
-      "T": "COPIES/ML"
+      "T": "COPIES/ML",
+      "U": "copies/mL",
+      "V": "{copies}/mL"
     },
     {
       "A": 4,
@@ -19066,7 +21129,9 @@ export default [
       "G": "HSV 1+2 IgG Qn (CSF)",
       "N": "HSV1+2 IgG CSF-aCnc",
       "O": "LN",
-      "T": "Index Value"
+      "T": "Index Value",
+      "U": "Index_val",
+      "V": "{Index_val}"
     },
     {
       "A": 4,
@@ -19076,7 +21141,9 @@ export default [
       "F": "Herpes simplex virus 1+2 IgM Ab [Units/volume] in Cerebral spinal fluid",
       "G": "HSV 1+2 IgM Qn (CSF)",
       "N": "HSV1+2 IgM CSF-aCnc",
-      "O": "LN"
+      "O": "LN",
+      "U": "Index_val",
+      "V": "{Index_val}"
     },
     {
       "A": 4,
@@ -19087,7 +21154,9 @@ export default [
       "G": "HSV 1 glycoprotein G IgG Qn (CSF)",
       "N": "HSV1 gG IgG CSF-aCnc",
       "O": "LN",
-      "T": "Index Value"
+      "T": "Index Value",
+      "U": "Index_val",
+      "V": "{Index_val}"
     },
     {
       "A": 4,
@@ -19098,7 +21167,9 @@ export default [
       "G": "HSV 2 glycoprotein G IgG Qn (CSF)",
       "N": "HSV2 gG IgG CSF-aCnc",
       "O": "LN",
-      "T": "Index Value"
+      "T": "Index Value",
+      "U": "Index_val",
+      "V": "{Index_val}"
     },
     {
       "A": 4,
@@ -19113,7 +21184,9 @@ export default [
       "K": 0,
       "N": "HSV1 Ab Titr Ser IF",
       "O": "LN",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 4,
@@ -19124,7 +21197,9 @@ export default [
       "G": "HSV Ab IA Qn (S)",
       "N": "HSV Ab Ser IA-aCnc",
       "O": "LN",
-      "T": "EIA INDEX"
+      "T": "EIA INDEX",
+      "U": "Index_val",
+      "V": "{Index_val}"
     },
     {
       "A": 3,
@@ -19169,7 +21244,9 @@ export default [
       "O": "LN",
       "P": "{copies}/mL",
       "Q": "{copies}/mL",
-      "T": "COPIES/ML"
+      "T": "COPIES/ML",
+      "U": "copies/mL",
+      "V": "{copies}/mL"
     },
     {
       "A": 4,
@@ -19180,7 +21257,9 @@ export default [
       "G": "HIV 1 RNA NAA+probe log # conc",
       "N": "HIV1 RNA SerPl NAA+probe-Log#",
       "O": "LN",
-      "T": "log copies/mL"
+      "T": "log copies/mL",
+      "U": "log_copies/mL",
+      "V": "{log_copies}/mL"
     },
     {
       "A": 4,
@@ -19222,7 +21301,9 @@ export default [
       "G": "FLUAV IgG Qn (S)",
       "N": "FLUAV IgG Ser-aCnc",
       "O": "LN",
-      "T": "Index Value"
+      "T": "Index Value",
+      "U": "Index_val",
+      "V": "{Index_val}"
     },
     {
       "A": 4,
@@ -19233,7 +21314,9 @@ export default [
       "G": "FLUAV IgM Qn (S)",
       "N": "FLUAV IgM Ser-aCnc",
       "O": "LN",
-      "T": "Index Value"
+      "T": "Index Value",
+      "U": "Index_val",
+      "V": "{Index_val}"
     },
     {
       "A": 4,
@@ -19248,7 +21331,9 @@ export default [
       "K": 11,
       "N": "FLUAV Ab Titr Ser CF",
       "O": "LN",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 4,
@@ -19259,7 +21344,9 @@ export default [
       "G": "FLUBV IgG Qn (S)",
       "N": "FLUBV IgG Ser-aCnc",
       "O": "LN",
-      "T": "Index Value"
+      "T": "Index Value",
+      "U": "Index_val",
+      "V": "{Index_val}"
     },
     {
       "A": 4,
@@ -19270,7 +21357,9 @@ export default [
       "G": "FLUBV IgM Qn (S)",
       "N": "FLUBV IgM Ser-aCnc",
       "O": "LN",
-      "T": "Index Value"
+      "T": "Index Value",
+      "U": "Index_val",
+      "V": "{Index_val}"
     },
     {
       "A": 4,
@@ -19285,7 +21374,9 @@ export default [
       "K": 11,
       "N": "FLUBV Ab Titr Ser CF",
       "O": "LN",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 4,
@@ -19300,7 +21391,9 @@ export default [
       "K": 11,
       "N": "HPIV1 Ab Titr Ser CF",
       "O": "LN",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 4,
@@ -19315,7 +21408,9 @@ export default [
       "K": 11,
       "N": "HPIV2 Ab Titr Ser CF",
       "O": "LN",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 4,
@@ -19330,7 +21425,9 @@ export default [
       "K": 11,
       "N": "HPIV3 Ab Titr Ser CF",
       "O": "LN",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 3,
@@ -19347,7 +21444,9 @@ export default [
       "G": "MeV IgG Qn (CSF)",
       "N": "MeV IgG CSF-aCnc",
       "O": "LN",
-      "T": "Index Value"
+      "T": "Index Value",
+      "U": "Index_val",
+      "V": "{Index_val}"
     },
     {
       "A": 4,
@@ -19362,7 +21461,9 @@ export default [
       "K": 11,
       "N": "MuV Ab Titr Ser",
       "O": "LN",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 4,
@@ -19372,7 +21473,9 @@ export default [
       "F": "Mumps virus IgG Ab [Units/volume] in Serum by Immunoassay",
       "G": "MuV IgG IA Qn (S)",
       "N": "MuV IgG Ser IA-aCnc",
-      "O": "LN"
+      "O": "LN",
+      "U": "index_val",
+      "V": "{index_val}"
     },
     {
       "A": 4,
@@ -19399,7 +21502,9 @@ export default [
       "O": "LN",
       "P": "{titer}",
       "Q": "{titer}",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 4,
@@ -19417,7 +21522,9 @@ export default [
       "O": "LN",
       "P": "{titer}",
       "Q": "{titer}",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 4,
@@ -19434,7 +21541,9 @@ export default [
       "O": "LN",
       "P": "[arb'U]/mL",
       "Q": "[arb'U]/mL",
-      "T": "EIA INDEX"
+      "T": "EIA INDEX",
+      "U": "EIA_index",
+      "V": "{EIA_index}"
     },
     {
       "A": 3,
@@ -19451,7 +21560,9 @@ export default [
       "G": "Parvovirus B19 IgG IA Qn (S)",
       "N": "B19V IgG Ser IA-aCnc",
       "O": "LN",
-      "T": "Units"
+      "T": "Units",
+      "U": "arb'U",
+      "V": "[arb'U]"
     },
     {
       "A": 4,
@@ -19462,7 +21573,9 @@ export default [
       "G": "Parvovirus B19 IgM IA Qn (S)",
       "N": "B19V IgM Ser IA-aCnc",
       "O": "LN",
-      "T": "Units"
+      "T": "Units",
+      "U": "arb'U",
+      "V": "[arb'U]"
     },
     {
       "A": 3,
@@ -19489,7 +21602,9 @@ export default [
       "K": 9,
       "N": "HAdV Ab Titr Ser CF",
       "O": "LN",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 4,
@@ -19500,7 +21615,9 @@ export default [
       "G": "Adenovirus IgM Qn (S)",
       "N": "HAdV IgM Ser-aCnc",
       "O": "LN",
-      "T": "Index Value"
+      "T": "Index Value",
+      "U": "Index_val",
+      "V": "{Index_val}"
     },
     {
       "A": 4,
@@ -19511,7 +21628,9 @@ export default [
       "G": "Adenovirus IgG Qn (S)",
       "N": "HAdV IgG Ser-aCnc",
       "O": "LN",
-      "T": "Index Value"
+      "T": "Index Value",
+      "U": "Index_val",
+      "V": "{Index_val}"
     },
     {
       "A": 4,
@@ -19535,7 +21654,9 @@ export default [
       "K": 11,
       "N": "LCMV Ab Titr Ser CF",
       "O": "LN",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 4,
@@ -19550,7 +21671,9 @@ export default [
       "K": 11,
       "N": "Reovirus Ab Titr Ser CF",
       "O": "LN",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 4,
@@ -19565,7 +21688,9 @@ export default [
       "K": 11,
       "N": "RSV Ab Titr Ser CF",
       "O": "LN",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 4,
@@ -19576,7 +21701,9 @@ export default [
       "G": "RSV IgM Qn (S)",
       "N": "RSV IgM Ser-aCnc",
       "O": "LN",
-      "T": "Index Value"
+      "T": "Index Value",
+      "U": "Index_val",
+      "V": "{Index_val}"
     },
     {
       "A": 4,
@@ -19587,7 +21714,9 @@ export default [
       "G": "RSV IgG Qn (S)",
       "N": "RSV IgG Ser-aCnc",
       "O": "LN",
-      "T": "Index Value"
+      "T": "Index Value",
+      "U": "Index_val",
+      "V": "{Index_val}"
     },
     {
       "A": 4,
@@ -19598,7 +21727,9 @@ export default [
       "G": "VZV IgG IA Qn (S)",
       "N": "VZV IgG Ser IA-aCnc",
       "O": "LN",
-      "T": "EIA INDEX"
+      "T": "EIA INDEX",
+      "U": "arb'U/mL",
+      "V": "[arb'U]/mL"
     },
     {
       "A": 4,
@@ -19681,7 +21812,9 @@ export default [
       "G": "A. alternata IgE Qn (S)",
       "N": "A alternata IgE Qn",
       "O": "LN",
-      "T": "kU/L"
+      "T": "kU/L",
+      "U": "kIU/L",
+      "V": "k[IU]/L"
     },
     {
       "A": 3,
@@ -19692,7 +21825,9 @@ export default [
       "G": "American Cockroach IgE Qn (S)",
       "N": "Amer Roach IgE Qn",
       "O": "LN",
-      "T": "kU/L"
+      "T": "kU/L",
+      "U": "kIU/L",
+      "V": "k[IU]/L"
     },
     {
       "A": 3,
@@ -19703,7 +21838,9 @@ export default [
       "G": "A. fumigatus IgE Qn (S)",
       "N": "A fumigatus IgE Qn",
       "O": "LN",
-      "T": "kU/L"
+      "T": "kU/L",
+      "U": "kIU/L",
+      "V": "k[IU]/L"
     },
     {
       "A": 3,
@@ -19714,7 +21851,9 @@ export default [
       "G": "A. niger IgE Qn (S)",
       "N": "A niger IgE Qn",
       "O": "LN",
-      "T": "kU/L"
+      "T": "kU/L",
+      "U": "kIU/L",
+      "V": "k[IU]/L"
     },
     {
       "A": 3,
@@ -19725,7 +21864,9 @@ export default [
       "G": "Silver Birch IgE Qn (S)",
       "N": "Silver Birch IgE Qn",
       "O": "LN",
-      "T": "kU/L"
+      "T": "kU/L",
+      "U": "kIU/L",
+      "V": "k[IU]/L"
     },
     {
       "A": 3,
@@ -19736,7 +21877,9 @@ export default [
       "G": "Cat dander IgE Qn (S)",
       "N": "Cat Dander IgE Qn",
       "O": "LN",
-      "T": "kU/L"
+      "T": "kU/L",
+      "U": "kIU/L",
+      "V": "k[IU]/L"
     },
     {
       "A": 3,
@@ -19747,7 +21890,9 @@ export default [
       "G": "Cladosporium cladosporioides IgG mass conc (S)",
       "N": "C cladosporioides IgG-mCnc",
       "O": "LN",
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 3,
@@ -19758,7 +21903,9 @@ export default [
       "G": "Cockroach IgE Qn (S)",
       "N": "Roach IgE Qn",
       "O": "LN",
-      "T": "kU/L"
+      "T": "kU/L",
+      "U": "kIU/L",
+      "V": "k[IU]/L"
     },
     {
       "A": 3,
@@ -19769,7 +21916,9 @@ export default [
       "G": "Common Ragweed IgE Qn (S)",
       "N": "Common Ragweed IgE Qn",
       "O": "LN",
-      "T": "kU/L"
+      "T": "kU/L",
+      "U": "kIU/L",
+      "V": "k[IU]/L"
     },
     {
       "A": 3,
@@ -19780,7 +21929,9 @@ export default [
       "G": "American house dust mite IgE Qn (S)",
       "N": "D farinae IgE Qn",
       "O": "LN",
-      "T": "kU/L"
+      "T": "kU/L",
+      "U": "kIU/L",
+      "V": "k[IU]/L"
     },
     {
       "A": 3,
@@ -19791,7 +21942,9 @@ export default [
       "G": "European house dust mite IgE Qn (S)",
       "N": "D pteronyss IgE Qn",
       "O": "LN",
-      "T": "kU/L"
+      "T": "kU/L",
+      "U": "kIU/L",
+      "V": "k[IU]/L"
     },
     {
       "A": 3,
@@ -19802,7 +21955,9 @@ export default [
       "G": "Dog dander IgE Qn (S)",
       "N": "Dog Dander IgE Qn",
       "O": "LN",
-      "T": "kU/L"
+      "T": "kU/L",
+      "U": "kIU/L",
+      "V": "k[IU]/L"
     },
     {
       "A": 3,
@@ -19813,7 +21968,9 @@ export default [
       "G": "White Elm IgE Qn (S)",
       "N": "White Elm IgE Qn",
       "O": "LN",
-      "T": "kU/L"
+      "T": "kU/L",
+      "U": "kIU/L",
+      "V": "k[IU]/L"
     },
     {
       "A": 3,
@@ -19824,7 +21981,9 @@ export default [
       "G": "Firebush IgE Qn (S)",
       "N": "Firebush IgE Qn",
       "O": "LN",
-      "T": "kU/L"
+      "T": "kU/L",
+      "U": "kIU/L",
+      "V": "k[IU]/L"
     },
     {
       "A": 3,
@@ -19835,7 +21994,9 @@ export default [
       "G": "Giant Ragweed IgE Qn (S)",
       "N": "Giant Ragweed IgE Qn",
       "O": "LN",
-      "T": "kU/L"
+      "T": "kU/L",
+      "U": "kIU/L",
+      "V": "k[IU]/L"
     },
     {
       "A": 3,
@@ -19846,7 +22007,9 @@ export default [
       "G": "Kentucky blue grass IgE Qn (S)",
       "N": "Kent blue grass IgE Qn",
       "O": "LN",
-      "T": "kU/L"
+      "T": "kU/L",
+      "U": "kIU/L",
+      "V": "k[IU]/L"
     },
     {
       "A": 3,
@@ -19857,7 +22020,9 @@ export default [
       "G": "Cocksfoot IgE Qn (S)",
       "N": "Cocksfoot IgE Qn",
       "O": "LN",
-      "T": "kU/L"
+      "T": "kU/L",
+      "U": "kIU/L",
+      "V": "k[IU]/L"
     },
     {
       "A": 3,
@@ -19868,7 +22033,9 @@ export default [
       "G": "Red top grass IgE Qn (S)",
       "N": "Red top grass IgE Qn",
       "O": "LN",
-      "T": "kU/L"
+      "T": "kU/L",
+      "U": "kIU/L",
+      "V": "k[IU]/L"
     },
     {
       "A": 3,
@@ -19879,7 +22046,9 @@ export default [
       "G": "Timothy IgE Qn (S)",
       "N": "Timothy IgE Qn",
       "O": "LN",
-      "T": "kU/L"
+      "T": "kU/L",
+      "U": "kIU/L",
+      "V": "k[IU]/L"
     },
     {
       "A": 3,
@@ -19890,7 +22059,9 @@ export default [
       "G": "House dust Hollister Stier IgE Qn (S)",
       "N": "House Dust HS IgE Qn",
       "O": "LN",
-      "T": "kU/L"
+      "T": "kU/L",
+      "U": "kIU/L",
+      "V": "k[IU]/L"
     },
     {
       "A": 3,
@@ -19901,7 +22072,9 @@ export default [
       "G": "Goosefoot IgE Qn (S)",
       "N": "Goosefoot IgE Qn",
       "O": "LN",
-      "T": "kU/L"
+      "T": "kU/L",
+      "U": "kIU/L",
+      "V": "k[IU]/L"
     },
     {
       "A": 3,
@@ -19912,7 +22085,9 @@ export default [
       "G": "London Plane IgE Qn (S)",
       "N": "London Plane IgE Qn",
       "O": "LN",
-      "T": "kU/L"
+      "T": "kU/L",
+      "U": "kIU/L",
+      "V": "k[IU]/L"
     },
     {
       "A": 3,
@@ -19923,7 +22098,9 @@ export default [
       "G": "White Oak IgE Qn (S)",
       "N": "White Oak IgE Qn",
       "O": "LN",
-      "T": "kU/L"
+      "T": "kU/L",
+      "U": "kIU/L",
+      "V": "k[IU]/L"
     },
     {
       "A": 3,
@@ -19934,7 +22111,9 @@ export default [
       "G": "Penicillium notatum IgG mass conc (S)",
       "N": "P notatum IgG Ser-mCnc",
       "O": "LN",
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 3,
@@ -19945,7 +22124,9 @@ export default [
       "G": "Penicillium notatum IgE Qn (S)",
       "N": "P notatum IgE Qn",
       "O": "LN",
-      "T": "kU/L"
+      "T": "kU/L",
+      "U": "kIU/L",
+      "V": "k[IU]/L"
     },
     {
       "A": 3,
@@ -19956,7 +22137,9 @@ export default [
       "G": "Rough Pigweed IgE Qn (S)",
       "N": "Rough Pigweed IgE Qn",
       "O": "LN",
-      "T": "kU/L"
+      "T": "kU/L",
+      "U": "kIU/L",
+      "V": "k[IU]/L"
     },
     {
       "A": 3,
@@ -19967,7 +22150,9 @@ export default [
       "G": "Red Maple IgE Qn (S)",
       "N": "Red Maple IgE Qn",
       "O": "LN",
-      "T": "kU/L"
+      "T": "kU/L",
+      "U": "kIU/L",
+      "V": "k[IU]/L"
     },
     {
       "A": 3,
@@ -19978,7 +22163,9 @@ export default [
       "G": "Saltwort IgE Qn (S)",
       "N": "Saltwort IgE Qn",
       "O": "LN",
-      "T": "kU/L"
+      "T": "kU/L",
+      "U": "kIU/L",
+      "V": "k[IU]/L"
     },
     {
       "A": 3,
@@ -19989,7 +22176,9 @@ export default [
       "G": "Shagbark Hickory IgE Qn (S)",
       "N": "Shagbark Hickory IgE Qn",
       "O": "LN",
-      "T": "kU/L"
+      "T": "kU/L",
+      "U": "kIU/L",
+      "V": "k[IU]/L"
     },
     {
       "A": 3,
@@ -20000,7 +22189,9 @@ export default [
       "G": "California Walnut Pollen IgE Qn (S)",
       "N": "Calif Walnut Poln IgE Qn",
       "O": "LN",
-      "T": "kU/L"
+      "T": "kU/L",
+      "U": "kIU/L",
+      "V": "k[IU]/L"
     },
     {
       "A": 3,
@@ -20011,7 +22202,9 @@ export default [
       "G": "White Ash IgE Qn (S)",
       "N": "White Ash IgE Qn",
       "O": "LN",
-      "T": "kU/L"
+      "T": "kU/L",
+      "U": "kIU/L",
+      "V": "k[IU]/L"
     },
     {
       "A": 3,
@@ -20022,7 +22215,9 @@ export default [
       "G": "White Poplar IgE Qn (S)",
       "N": "White Poplar IgE Qn",
       "O": "LN",
-      "T": "kU/L"
+      "T": "kU/L",
+      "U": "kIU/L",
+      "V": "k[IU]/L"
     },
     {
       "A": 3,
@@ -20033,7 +22228,9 @@ export default [
       "G": "Willow IgE Qn (S)",
       "N": "Willow IgE Qn",
       "O": "LN",
-      "T": "kU/L"
+      "T": "kU/L",
+      "U": "kIU/L",
+      "V": "k[IU]/L"
     },
     {
       "A": 3,
@@ -20067,7 +22264,9 @@ export default [
       "K": 0,
       "N": "AChR Ab Ser-sCnc",
       "O": "LN",
-      "T": "NMOL/L"
+      "T": "NMOL/L",
+      "U": "nmol/L",
+      "V": "nmol/L"
     },
     {
       "A": 3,
@@ -20081,7 +22280,9 @@ export default [
       "K": 0.4,
       "N": "AChR Bind Ab Ser-sCnc",
       "O": "LN",
-      "T": "NMOL/L"
+      "T": "NMOL/L",
+      "U": "nmol/L",
+      "V": "nmol/L"
     },
     {
       "A": 3,
@@ -20100,7 +22301,9 @@ export default [
       "F": "Nuclear Ab [Units/volume] in Serum",
       "G": "Nuclear Ab Qn (S)",
       "N": "ANA Ser-aCnc",
-      "O": "LN"
+      "O": "LN",
+      "U": "arb'U",
+      "V": "[arb'U]"
     },
     {
       "A": 3,
@@ -20111,7 +22314,9 @@ export default [
       "G": "Cryoglobulin mass conc (S)",
       "N": "Cryoglob Ser-mCnc",
       "O": "LN",
-      "T": "MM/ML"
+      "T": "MM/ML",
+      "U": "g/L",
+      "V": "g/L"
     },
     {
       "A": 3,
@@ -20125,7 +22330,9 @@ export default [
       "K": 8,
       "N": "c-ANCA Titr Ser",
       "O": "LN",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 3,
@@ -20147,7 +22354,9 @@ export default [
       "K": 120,
       "N": "dsDNA IgG Ser-aCnc",
       "O": "LN",
-      "T": "AU/ML"
+      "T": "AU/ML",
+      "U": "IU/mL",
+      "V": "[IU]/mL"
     },
     {
       "A": 3,
@@ -20168,7 +22377,9 @@ export default [
       "K": 0,
       "N": "dsDNA Ab Titr Ser",
       "O": "LN",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 3,
@@ -20201,7 +22412,9 @@ export default [
       "G": "Sjogrens syndrome-A extractable nuclear Ab Qn (S)",
       "N": "ENA SS-A Ab Ser-aCnc",
       "O": "LN",
-      "T": "Units/mL"
+      "T": "Units/mL",
+      "U": "arb'U/mL",
+      "V": "[arb'U]/mL"
     },
     {
       "A": 3,
@@ -20212,7 +22425,9 @@ export default [
       "G": "Sjogrens syndrome-B extractable nuclear Ab Qn (S)",
       "N": "ENA SS-B Ab Ser-aCnc",
       "O": "LN",
-      "T": "Units/mL"
+      "T": "Units/mL",
+      "U": "arb'U/mL",
+      "V": "[arb'U]/mL"
     },
     {
       "A": 3,
@@ -20236,7 +22451,9 @@ export default [
       "O": "LN",
       "P": "U/mL",
       "Q": "U/mL",
-      "T": "Units/mL"
+      "T": "Units/mL",
+      "U": "U/mL",
+      "V": "U/mL"
     },
     {
       "A": 3,
@@ -20254,7 +22471,9 @@ export default [
       "O": "LN",
       "P": "U/mL",
       "Q": "U/mL",
-      "T": "Units/mL"
+      "T": "Units/mL",
+      "U": "U/mL",
+      "V": "U/mL"
     },
     {
       "A": 3,
@@ -20264,7 +22483,9 @@ export default [
       "F": "Basement membrane IgG Ab [Units/volume] in Serum by Immunoassay",
       "G": "Basement membrane IgG IA Qn (S)",
       "N": "BM IgG Ser IA-aCnc",
-      "O": "LN"
+      "O": "LN",
+      "U": "arb'U",
+      "V": "[arb'U]"
     },
     {
       "A": 3,
@@ -20275,7 +22496,9 @@ export default [
       "G": "Histone IgG IA Qn (S)",
       "N": "Histone IgG Ser IA-aCnc",
       "O": "LN",
-      "T": "Units"
+      "T": "Units",
+      "U": "arb'U",
+      "V": "[arb'U]"
     },
     {
       "A": 3,
@@ -20290,7 +22513,9 @@ export default [
       "K": 250,
       "N": "Hyaluronidase Ab Ser-aCnc",
       "O": "LN",
-      "T": "Units"
+      "T": "Units",
+      "U": "arb'U",
+      "V": "[arb'U]"
     },
     {
       "A": 3,
@@ -20311,7 +22536,9 @@ export default [
       "K": 20,
       "N": "tTG IgG Ser-aCnc",
       "O": "LN",
-      "T": "Units"
+      "T": "Units",
+      "U": "arb'U",
+      "V": "[arb'U]"
     },
     {
       "A": 4,
@@ -20332,7 +22559,9 @@ export default [
       "G": "Myelin associated glycoprotein IgM IA titer (S)",
       "N": "MAG IgM Titr Ser IA",
       "O": "LN",
-      "T": "Titer Units"
+      "T": "Titer Units",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 3,
@@ -20372,7 +22601,9 @@ export default [
       "O": "LN",
       "P": "{titer}",
       "Q": "{titer}",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 3,
@@ -20390,7 +22621,9 @@ export default [
       "O": "LN",
       "P": "{titer}",
       "Q": "{titer}",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 3,
@@ -20408,7 +22641,9 @@ export default [
       "O": "LN",
       "P": "{titer}",
       "Q": "{titer}",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 3,
@@ -20423,7 +22658,9 @@ export default [
       "K": 9,
       "N": "Myeloperoxidase Ab Ser-aCnc",
       "O": "LN",
-      "T": "Units/mL"
+      "T": "Units/mL",
+      "U": "arb'U/mL",
+      "V": "[arb'U]/mL"
     },
     {
       "A": 3,
@@ -20433,7 +22670,9 @@ export default [
       "F": "Neutrophil cytoplasmic IgG Ab [Titer] in Serum by Immunofluorescence",
       "G": "Neutrophil cytoplasmic IgG IF titer (S)",
       "N": "ANCA IgG Titr Ser IF",
-      "O": "LN"
+      "O": "LN",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 3,
@@ -20455,7 +22694,9 @@ export default [
       "K": 0,
       "N": "PCA Ab Titr Ser IF",
       "O": "LN",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 3,
@@ -20469,7 +22710,9 @@ export default [
       "K": 8,
       "N": "p-ANCA Titr Ser",
       "O": "LN",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 3,
@@ -20490,7 +22733,9 @@ export default [
       "K": 3.5,
       "N": "Proteinase3 Ab Ser-aCnc",
       "O": "LN",
-      "T": "Units/mL"
+      "T": "Units/mL",
+      "U": "arb'U/mL",
+      "V": "[arb'U]/mL"
     },
     {
       "A": 3,
@@ -20515,7 +22760,9 @@ export default [
       "O": "LN",
       "P": "{titer}",
       "Q": "{titer}",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 3,
@@ -20533,7 +22780,9 @@ export default [
       "O": "LN",
       "P": "{titer}",
       "Q": "{titer}",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 3,
@@ -20544,7 +22793,9 @@ export default [
       "G": "Soluble liver Ab Qn (S)",
       "N": "Soluble liver Ab Ser-aCnc",
       "O": "LN",
-      "T": "Elisa Units"
+      "T": "Elisa Units",
+      "U": "arb'U/mL",
+      "V": "[arb'U]/mL"
     },
     {
       "A": 3,
@@ -20562,7 +22813,9 @@ export default [
       "O": "LN",
       "P": "U/mL",
       "Q": "U/mL",
-      "T": "Units/mL"
+      "T": "Units/mL",
+      "U": "U/mL",
+      "V": "U/mL"
     },
     {
       "A": 3,
@@ -20573,7 +22826,9 @@ export default [
       "G": "Voltage-gated calcium channel Ab molar conc (S)",
       "N": "VGCC Ab Ser-sCnc",
       "O": "LN",
-      "T": "fmol/L"
+      "T": "fmol/L",
+      "U": "fmol/L",
+      "V": "fmol/L"
     },
     {
       "A": 2,
@@ -20684,7 +22939,9 @@ export default [
       "K": 0,
       "N": "Metamyelocytes NFr Mar Manual",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 5,
@@ -20705,7 +22962,9 @@ export default [
       "K": 13.9,
       "N": "Albumin CSF-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 5,
@@ -20723,7 +22982,9 @@ export default [
       "N": "CgA SerPl-mCnc",
       "O": "LN",
       "R": 1649.8626,
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 6,
@@ -20741,7 +23002,9 @@ export default [
       "O": "LN",
       "P": "g/dL",
       "Q": "g/dL",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 1,
@@ -20770,7 +23033,9 @@ export default [
       "G": "t(9;22)(q34.1;q11)(ABL1,BCR) fusion transcript/control transcript Molgen # ratio (Bld/Tiss)",
       "N": "t(9;22)(ABL1,BCR)/control Bld/T",
       "O": "LN",
-      "T": "RATIO"
+      "T": "RATIO",
+      "U": "ratio",
+      "V": "{ratio}"
     },
     {
       "A": 3,
@@ -20819,7 +23084,9 @@ export default [
       "N": "Alpraz SerPl-mCnc",
       "O": "LN",
       "R": 308.7649,
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 3,
@@ -20836,7 +23103,9 @@ export default [
       "N": "APAP SerPl-mCnc",
       "O": "LN",
       "R": 151.1626,
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 3,
@@ -20852,7 +23121,9 @@ export default [
       "N": "Amobarbital SerPl-mCnc",
       "O": "LN",
       "R": 226.2722,
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 3,
@@ -20862,7 +23133,9 @@ export default [
       "F": "Dextroamphetamine [Mass/volume] in Serum or Plasma",
       "N": "D-amphet SerPl-mCnc",
       "O": "LN",
-      "R": 135.2062
+      "R": 135.2062,
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
@@ -20876,7 +23149,9 @@ export default [
       "O": "LN",
       "P": "mg/dL",
       "Q": "mg/dL",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
@@ -20892,7 +23167,9 @@ export default [
       "N": "Butabarbital SerPl-mCnc",
       "O": "LN",
       "R": 212.2456,
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 3,
@@ -20908,7 +23185,9 @@ export default [
       "N": "Butalbital SerPl-mCnc",
       "O": "LN",
       "R": 224.2563,
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 3,
@@ -20918,7 +23197,9 @@ export default [
       "F": "Chlordiazepoxide [Mass/volume] in Serum or Plasma",
       "N": "Chlordiazep SerPl-mCnc",
       "O": "LN",
-      "R": 299.7549
+      "R": 299.7549,
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 3,
@@ -20934,7 +23215,9 @@ export default [
       "N": "Cyanide Bld-mCnc",
       "O": "LN",
       "R": 26.0179,
-      "T": "mcg/dL"
+      "T": "mcg/dL",
+      "U": "ug/dL",
+      "V": "ug/dL"
     },
     {
       "A": 3,
@@ -20943,7 +23226,9 @@ export default [
       "E": "3548-5",
       "F": "Diazepam [Mass/volume] in Serum or Plasma",
       "N": "Diazepam SerPl-mCnc",
-      "O": "LN"
+      "O": "LN",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 3,
@@ -20966,7 +23251,9 @@ export default [
       "N": "Haloperidol SerPl-mCnc",
       "O": "LN",
       "R": 375.8642,
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 3,
@@ -20976,7 +23263,9 @@ export default [
       "F": "Meperidine [Mass/volume] in Serum or Plasma",
       "N": "Meperidine SerPl-mCnc",
       "O": "LN",
-      "R": 247.3327
+      "R": 247.3327,
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 3,
@@ -20999,7 +23288,9 @@ export default [
       "N": "Oxycodone SerPl-mCnc",
       "O": "LN",
       "R": 315.36364,
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 3,
@@ -21018,7 +23309,9 @@ export default [
       "P": "mcg/mL",
       "Q": "mcg/mL",
       "R": 226.2722,
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "mcg/mL",
+      "V": "mcg/mL"
     },
     {
       "A": 3,
@@ -21037,7 +23330,9 @@ export default [
       "P": "mcg/mL",
       "Q": "mcg/mL",
       "R": 232.2353,
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "mcg/mL",
+      "V": "mcg/mL"
     },
     {
       "A": 3,
@@ -21046,7 +23341,9 @@ export default [
       "E": "3543-6",
       "F": "Propoxyphene [Mass/volume] in Serum or Plasma",
       "N": "Propoxyph SerPl-mCnc",
-      "O": "LN"
+      "O": "LN",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 3,
@@ -21073,7 +23370,9 @@ export default [
       "P": "mcg/mL",
       "Q": "mcg/mL",
       "R": 238.2829,
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "mcg/mL",
+      "V": "mcg/mL"
     },
     {
       "A": 3,
@@ -21099,7 +23398,9 @@ export default [
       "P": "mcg/mL",
       "Q": "mcg/mL",
       "R": 58.0829,
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
@@ -21118,7 +23419,9 @@ export default [
       "P": "mcg/mL",
       "Q": "mcg/mL",
       "R": 370.5745,
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
@@ -21134,7 +23437,9 @@ export default [
       "N": "Topiramate SerPl-mCnc",
       "O": "LN",
       "R": 339.362,
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 2,
@@ -21161,7 +23466,9 @@ export default [
       "N": "Amphet Ur-mCnc",
       "O": "LN",
       "R": 135.2062,
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 3,
@@ -21173,7 +23480,9 @@ export default [
       "N": "Amphet Ur Cfm-mCnc",
       "O": "LN",
       "R": 135.2062,
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 3,
@@ -21184,7 +23493,9 @@ export default [
       "G": "Barbiturates Screen mass conc (U)",
       "N": "Barbiturates Ur Scn-mCnc",
       "O": "LN",
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 3,
@@ -21195,7 +23506,9 @@ export default [
       "G": "Benzodiazepines cutoff Screen mass conc (U)",
       "N": "Benzodiaz CtO Ur Scn-mCnc",
       "O": "LN",
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 3,
@@ -21206,7 +23519,9 @@ export default [
       "G": "Cannabinoids cutoff Screen mass conc (U)",
       "N": "Cannabinoids CtO Ur Scn-mCnc",
       "O": "LN",
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 3,
@@ -21218,7 +23533,9 @@ export default [
       "N": "Cocaine Ur-mCnc",
       "O": "LN",
       "R": 303.3529,
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 3,
@@ -21227,7 +23544,9 @@ export default [
       "E": "19444-9",
       "F": "Diazepam cutoff [Mass/volume] in Urine for Screen method",
       "N": "Diazepam CtO Ur Scn-mCnc",
-      "O": "LN"
+      "O": "LN",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 3,
@@ -21243,7 +23562,9 @@ export default [
       "F": "Flurazepam [Mass/volume] in Urine by Confirmatory method",
       "N": "Flurazepam Ur Cfm-mCnc",
       "O": "LN",
-      "R": 387.8782
+      "R": 387.8782,
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 3,
@@ -21253,7 +23574,9 @@ export default [
       "F": "Morphine [Mass/volume] in Urine by Confirmatory method",
       "N": "Morphine Ur Cfm-mCnc",
       "O": "LN",
-      "R": 285.3377
+      "R": 285.3377,
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 3,
@@ -21264,7 +23587,9 @@ export default [
       "G": "Nicotine mass conc (U)",
       "N": "Nicotine Ur-mCnc",
       "O": "LN",
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 3,
@@ -21275,7 +23600,9 @@ export default [
       "G": "Opiates mass conc (U)",
       "N": "Opiates Ur-mCnc",
       "O": "LN",
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 3,
@@ -21287,7 +23614,9 @@ export default [
       "N": "PCP Ur-mCnc",
       "O": "LN",
       "R": 243.3871,
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ug/L",
+      "V": "ug/L"
     },
     {
       "A": 3,
@@ -21323,7 +23652,9 @@ export default [
       "N": "Amikacin SerPl-mCnc",
       "O": "LN",
       "R": 585.6025,
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "mg/L",
+      "V": "mg/L"
     },
     {
       "A": 3,
@@ -21340,7 +23671,9 @@ export default [
       "N": "Amikacin Trough SerPl-mCnc",
       "O": "LN",
       "R": 585.6025,
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "mg/L",
+      "V": "mg/L"
     },
     {
       "A": 3,
@@ -21357,7 +23690,9 @@ export default [
       "N": "Amikacin Peak SerPl-mCnc",
       "O": "LN",
       "R": 585.6025,
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "mg/L",
+      "V": "mg/L"
     },
     {
       "A": 3,
@@ -21381,7 +23716,9 @@ export default [
       "N": "Chloramphen SerPl-mCnc",
       "O": "LN",
       "R": 323.1294,
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
@@ -21392,7 +23729,9 @@ export default [
       "G": "Gentamicin mass conc",
       "N": "Gentamicin SerPl-mCnc",
       "O": "LN",
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "mg/L",
+      "V": "mg/L"
     },
     {
       "A": 3,
@@ -21408,7 +23747,9 @@ export default [
       "L": 1000,
       "N": "Gentamicin Rand SerPl-mCnc",
       "O": "LN",
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "mg/L",
+      "V": "mg/L"
     },
     {
       "A": 3,
@@ -21423,7 +23764,9 @@ export default [
       "K": 2,
       "N": "Gentamicin Trough SerPl-mCnc",
       "O": "LN",
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "mg/L",
+      "V": "mg/L"
     },
     {
       "A": 3,
@@ -21439,7 +23782,9 @@ export default [
       "L": 12,
       "N": "Gentamicin Peak SerPl-mCnc",
       "O": "LN",
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "mg/L",
+      "V": "mg/L"
     },
     {
       "A": 3,
@@ -21451,7 +23796,9 @@ export default [
       "N": "Tobramycin SerPl-mCnc",
       "O": "LN",
       "R": 467.5145,
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "mg/L",
+      "V": "mg/L"
     },
     {
       "A": 3,
@@ -21468,7 +23815,9 @@ export default [
       "N": "Tobramycin Rand SerPl-mCnc",
       "O": "LN",
       "R": 467.5145,
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "mg/L",
+      "V": "mg/L"
     },
     {
       "A": 3,
@@ -21490,7 +23839,9 @@ export default [
       "N": "Tobramycin Trough SerPl-mCnc",
       "O": "LN",
       "R": 467.5145,
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "mg/L",
+      "V": "mg/L"
     },
     {
       "A": 3,
@@ -21507,7 +23858,9 @@ export default [
       "N": "Tobramycin Peak SerPl-mCnc",
       "O": "LN",
       "R": 467.5145,
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "mg/L",
+      "V": "mg/L"
     },
     {
       "A": 3,
@@ -21524,7 +23877,9 @@ export default [
       "N": "Vancomycin SerPl-mCnc",
       "O": "LN",
       "R": 1449.2536,
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 3,
@@ -21541,7 +23896,9 @@ export default [
       "N": "Vancomycin Trough SerPl-mCnc",
       "O": "LN",
       "R": 1449.2536,
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 3,
@@ -21558,7 +23915,9 @@ export default [
       "N": "Vancomycin Peak SerPl-mCnc",
       "O": "LN",
       "R": 1449.2536,
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 2,
@@ -21581,7 +23940,9 @@ export default [
       "N": "5-fluorocytosine SerPl-mCnc",
       "O": "LN",
       "R": 129.0925,
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "mg/L",
+      "V": "mg/L"
     },
     {
       "A": 3,
@@ -21592,7 +23953,9 @@ export default [
       "G": "Hydroxyitraconazole mass conc",
       "N": "OH-Itraconaz SerPl-mCnc",
       "O": "LN",
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 3,
@@ -21609,7 +23972,9 @@ export default [
       "N": "Itraconaz SerPl-mCnc",
       "O": "LN",
       "R": 705.6334,
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 2,
@@ -21636,7 +24001,9 @@ export default [
       "K": 3,
       "N": "Amiodarone SerPl-mCnc",
       "O": "LN",
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 4,
@@ -21649,7 +24016,9 @@ export default [
       "N": "Desethylamiodarone SerPl-mCnc",
       "O": "LN",
       "R": 617.2584,
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "mg/L",
+      "V": "mg/L"
     },
     {
       "A": 3,
@@ -21675,7 +24044,9 @@ export default [
       "P": "mcg/mL",
       "Q": "mcg/mL",
       "R": 180.164,
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "mcg/mL",
+      "V": "mcg/mL"
     },
     {
       "A": 3,
@@ -21691,7 +24062,9 @@ export default [
       "N": "Clonidine SerPl-mCnc",
       "O": "LN",
       "R": 230.0939,
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 3,
@@ -21707,7 +24080,9 @@ export default [
       "N": "Digitoxin SerPl-mCnc",
       "O": "LN",
       "R": 764.9391,
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 3,
@@ -21726,7 +24101,9 @@ export default [
       "P": "ng/mL",
       "Q": "ng/mL",
       "R": 780.9385,
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 3,
@@ -21743,7 +24120,9 @@ export default [
       "N": "Disopyramide SerPl-mCnc",
       "O": "LN",
       "R": 339.4745,
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 3,
@@ -21766,7 +24145,9 @@ export default [
       "N": "Flecainide SerPl-mCnc",
       "O": "LN",
       "R": 414.3427,
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 3,
@@ -21784,7 +24165,9 @@ export default [
       "N": "Lidocain SerPl-mCnc",
       "O": "LN",
       "R": 234.3373,
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 3,
@@ -21801,7 +24184,9 @@ export default [
       "N": "Quinidine SerPl-mCnc",
       "O": "LN",
       "R": 324.4168,
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 3,
@@ -21817,7 +24202,9 @@ export default [
       "L": 30,
       "N": "Procainamide+NAPA SerPl-mCnc",
       "O": "LN",
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 4,
@@ -21833,7 +24220,9 @@ export default [
       "N": "NAPA SerPl-mCnc",
       "O": "LN",
       "R": 277.362,
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 4,
@@ -21850,7 +24239,9 @@ export default [
       "N": "Procainamide SerPl-mCnc",
       "O": "LN",
       "R": 235.3253,
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 2,
@@ -21876,7 +24267,9 @@ export default [
       "P": "ng/mL",
       "Q": "ng/mL",
       "R": 1202.61124,
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 3,
@@ -21896,7 +24289,9 @@ export default [
       "P": "ng/mL",
       "Q": "ng/mL",
       "R": 1202.61124,
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 3,
@@ -21907,7 +24302,9 @@ export default [
       "G": "Tacrolimus mass conc (Bld)",
       "N": "Tacrolimus Bld-mCnc",
       "O": "LN",
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 3,
@@ -21918,7 +24315,9 @@ export default [
       "G": "Methotrexate molar conc",
       "N": "MTX SerPl-sCnc",
       "O": "LN",
-      "R": 454.4393
+      "R": 454.4393,
+      "U": "umol/L",
+      "V": "umol/L"
     },
     {
       "A": 3,
@@ -21933,7 +24332,9 @@ export default [
       "K": 12,
       "N": "Sirolimus Bld-mCnc",
       "O": "LN",
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 2,
@@ -21955,7 +24356,9 @@ export default [
       "N": "Amicaproate SerPl-mCnc",
       "O": "LN",
       "R": 130.1655,
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 3,
@@ -21977,7 +24380,9 @@ export default [
       "L": 30,
       "N": "Salicylates SerPl-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
@@ -21994,7 +24399,9 @@ export default [
       "G": "Warfarin mass conc",
       "N": "Warfarin SerPl-mCnc",
       "O": "LN",
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 2,
@@ -22016,7 +24423,9 @@ export default [
       "L": 500,
       "N": "Amitrip+Nor SerPl-mCnc",
       "O": "LN",
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 4,
@@ -22035,7 +24444,9 @@ export default [
       "O": "LN",
       "P": "ng/mL",
       "Q": "ng/mL",
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 4,
@@ -22055,7 +24466,9 @@ export default [
       "O": "LN",
       "P": "ng/mL",
       "Q": "ng/mL",
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 3,
@@ -22065,7 +24478,9 @@ export default [
       "F": "Amoxapine [Mass/volume] in Serum or Plasma",
       "N": "Amoxapine SerPl-mCnc",
       "O": "LN",
-      "R": 313.7814
+      "R": 313.7814,
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 3,
@@ -22084,7 +24499,9 @@ export default [
       "P": "ug/mL",
       "Q": "ug/mL",
       "R": 236.2686,
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 4,
@@ -22093,7 +24510,9 @@ export default [
       "E": "3493-4",
       "F": "Clomipramine+Norclomipramine [Mass/volume] in Serum or Plasma",
       "N": "Clomipramine+Nor SerPl-mCnc",
-      "O": "LN"
+      "O": "LN",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 5,
@@ -22105,7 +24524,9 @@ export default [
       "N": "Clomipramine SerPl-mCnc",
       "O": "LN",
       "R": 314.8523,
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 5,
@@ -22121,7 +24542,9 @@ export default [
       "N": "Norclomipramine SerPl-mCnc",
       "O": "LN",
       "R": 300.8257,
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 3,
@@ -22137,7 +24560,9 @@ export default [
       "L": 75,
       "N": "Clonazepam SerPl-mCnc",
       "O": "LN",
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 3,
@@ -22160,7 +24585,9 @@ export default [
       "N": "Clozapine SerPl-mCnc",
       "O": "LN",
       "R": 326.8233,
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 3,
@@ -22178,7 +24605,9 @@ export default [
       "N": "Doxepin SerPl-mCnc",
       "O": "LN",
       "R": 279.3761,
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 4,
@@ -22190,7 +24619,9 @@ export default [
       "N": "Nordoxepin SerPl-mCnc",
       "O": "LN",
       "R": 265.3496,
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 4,
@@ -22206,7 +24637,9 @@ export default [
       "L": 500,
       "N": "Doxepin+Nor SerPl-mCnc",
       "O": "LN",
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 3,
@@ -22223,7 +24656,9 @@ export default [
       "N": "Ethosuximide SerPl-mCnc",
       "O": "LN",
       "R": 141.1677,
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 3,
@@ -22240,7 +24675,9 @@ export default [
       "N": "Gabapentin SerPl-mCnc",
       "O": "LN",
       "R": 171.2368,
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 3,
@@ -22264,7 +24701,9 @@ export default [
       "M": 0.5,
       "N": "Imipramine SerPl-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 3,
@@ -22281,7 +24720,9 @@ export default [
       "N": "Desipramine SerPl-mCnc",
       "O": "LN",
       "R": 266.3807,
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 3,
@@ -22297,7 +24738,9 @@ export default [
       "L": 500,
       "N": "Imipramine+Desipr SerPl-mCnc",
       "O": "LN",
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 3,
@@ -22313,7 +24756,9 @@ export default [
       "N": "Levetiracetam SerPl-mCnc",
       "O": "LN",
       "R": 170.20896,
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 3,
@@ -22331,7 +24776,9 @@ export default [
       "O": "LN",
       "P": "mmol/L",
       "Q": "mmol/L",
-      "T": "mmol/L"
+      "T": "mmol/L",
+      "U": "mmol/L",
+      "V": "mmol/L"
     },
     {
       "A": 3,
@@ -22347,7 +24794,9 @@ export default [
       "N": "Lamotrigine SerPl-mCnc",
       "O": "LN",
       "R": 256.0914,
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 3,
@@ -22363,7 +24812,9 @@ export default [
       "N": "Meprobamate SerPl-mCnc",
       "O": "LN",
       "R": 218.2502,
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 3,
@@ -22379,7 +24830,9 @@ export default [
       "N": "10OH-Carbazepine SerPl-mCnc",
       "O": "LN",
       "R": 254.2839,
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 3,
@@ -22398,7 +24851,9 @@ export default [
       "P": "mcg/mL",
       "Q": "mcg/mL",
       "R": 252.268,
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "mcg/mL",
+      "V": "mcg/mL"
     },
     {
       "A": 3,
@@ -22413,7 +24868,9 @@ export default [
       "K": 2,
       "N": "Phenytoin Free SerPl-mCnc",
       "O": "LN",
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 3,
@@ -22428,7 +24885,9 @@ export default [
       "K": 12,
       "N": "Primidone SerPl-mCnc",
       "O": "LN",
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 3,
@@ -22444,7 +24903,9 @@ export default [
       "N": "Fluphenazine SerPl-mCnc",
       "O": "LN",
       "R": 437.5215,
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 3,
@@ -22453,7 +24914,9 @@ export default [
       "E": "9394-8",
       "F": "Risperidone+9-Hydroxyrisperidone [Mass/volume] in Serum or Plasma",
       "N": "Risperidone+9OH-Ris SerPl-mCnc",
-      "O": "LN"
+      "O": "LN",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 3,
@@ -22472,7 +24935,9 @@ export default [
       "P": "ug/mL",
       "Q": "ug/mL",
       "R": 143.2035,
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 2,
@@ -22513,7 +24978,9 @@ export default [
       "L": 400,
       "N": "Ethanol SerPl-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
@@ -22530,7 +24997,9 @@ export default [
       "N": "Ethylene Glycol SerPlBld-mCnc",
       "O": "LN",
       "R": 62.0678,
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 3,
@@ -22542,7 +25011,9 @@ export default [
       "N": "Formate SerPl-mCnc",
       "O": "LN",
       "R": 45.018,
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "ug/mL",
+      "V": "ug/mL"
     },
     {
       "A": 3,
@@ -22599,7 +25070,9 @@ export default [
       "K": 0,
       "N": "Ethanol Fld-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 2,
@@ -22621,7 +25094,9 @@ export default [
       "N": "Aluminum SerPl-mCnc",
       "O": "LN",
       "R": 26.9815,
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 3,
@@ -22637,7 +25112,9 @@ export default [
       "N": "Arsenic Bld-mCnc",
       "O": "LN",
       "R": 74.9216,
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ug/dL",
+      "V": "ug/dL"
     },
     {
       "A": 3,
@@ -22653,7 +25130,9 @@ export default [
       "N": "Copper SerPl-mCnc",
       "O": "LN",
       "R": 63.54600000000001,
-      "T": "mcg/dL"
+      "T": "mcg/dL",
+      "U": "ug/dL",
+      "V": "ug/dL"
     },
     {
       "A": 3,
@@ -22672,7 +25151,9 @@ export default [
       "P": "mcg/dL",
       "Q": "mcg/dL",
       "R": 207.2,
-      "T": "mcg/dL"
+      "T": "mcg/dL",
+      "U": "mcg/dL",
+      "V": "mcg/dL"
     },
     {
       "A": 3,
@@ -22690,7 +25171,9 @@ export default [
       "P": "mcg/mL",
       "Q": "mcg/mL",
       "R": 207.2,
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "mcg/mL",
+      "V": "mcg/mL"
     },
     {
       "A": 3,
@@ -22705,7 +25188,9 @@ export default [
       "K": 0,
       "N": "Mercury Bld-mCnc",
       "O": "LN",
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 3,
@@ -22723,7 +25208,9 @@ export default [
       "O": "LN",
       "P": "ug/mL",
       "Q": "ug/mL",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 2,
@@ -22748,7 +25235,9 @@ export default [
       "P": "ug/L",
       "Q": "ug/L",
       "R": 74.9216,
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 3,
@@ -22767,7 +25256,9 @@ export default [
       "P": "ug/L",
       "Q": "ug/L",
       "R": 74.9216,
-      "T": "mcg/mL"
+      "T": "mcg/mL",
+      "U": "ug/L",
+      "V": "ug/L"
     },
     {
       "A": 3,
@@ -22779,7 +25270,9 @@ export default [
       "N": "Arsenic 24h Ur-mRate",
       "O": "LN",
       "R": 74.9216,
-      "T": "mcg/24H"
+      "T": "mcg/24H",
+      "U": "ug/24hr",
+      "V": "ug/(24.h)"
     },
     {
       "A": 3,
@@ -22791,7 +25284,9 @@ export default [
       "N": "Arsenic/Creat Ur",
       "O": "LN",
       "R": 74.9216,
-      "T": "MCG/GM CR"
+      "T": "MCG/GM CR",
+      "U": "ug/g",
+      "V": "ug/g{creat}"
     },
     {
       "A": 3,
@@ -22803,7 +25298,9 @@ export default [
       "N": "Bismuth Ur-mCnc",
       "O": "LN",
       "R": 208.9804,
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 3,
@@ -22815,7 +25312,9 @@ export default [
       "N": "Bismuth 24h Ur-mRate",
       "O": "LN",
       "R": 208.9804,
-      "T": "mcg/24H"
+      "T": "mcg/24H",
+      "U": "ug/24hr",
+      "V": "ug/(24.h)"
     },
     {
       "A": 3,
@@ -22827,7 +25326,9 @@ export default [
       "N": "Bismuth/Creat Ur",
       "O": "LN",
       "R": 208.9804,
-      "T": "MCG/GM CR"
+      "T": "MCG/GM CR",
+      "U": "ug/g",
+      "V": "ug/g{creat}"
     },
     {
       "A": 3,
@@ -22838,7 +25339,9 @@ export default [
       "G": "Cadmium mass/time (24H U)",
       "N": "Cadmium 24h Ur-mRate",
       "O": "LN",
-      "T": "mcg/24H"
+      "T": "mcg/24H",
+      "U": "ug/24hr",
+      "V": "ug/(24.h)"
     },
     {
       "A": 3,
@@ -22849,7 +25352,9 @@ export default [
       "G": "Cadmium mass conc (U)",
       "N": "Cadmium Ur-mCnc",
       "O": "LN",
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 3,
@@ -22860,7 +25365,9 @@ export default [
       "G": "Cadmium/Creatinine mass ratio (U)",
       "N": "Cadmium/Creat Ur",
       "O": "LN",
-      "T": "MCG/GM CR"
+      "T": "MCG/GM CR",
+      "U": "ug/g",
+      "V": "ug/g{creat}"
     },
     {
       "A": 3,
@@ -22872,7 +25379,9 @@ export default [
       "N": "Copper/Creat Ur",
       "O": "LN",
       "R": 63.54600000000001,
-      "T": "MCG/GM CR"
+      "T": "MCG/GM CR",
+      "U": "ug/g",
+      "V": "ug/g{creat}"
     },
     {
       "A": 3,
@@ -22888,7 +25397,9 @@ export default [
       "N": "Copper 24h Ur-mRate",
       "O": "LN",
       "R": 63.54600000000001,
-      "T": "mcg/24H"
+      "T": "mcg/24H",
+      "U": "ug/24hr",
+      "V": "ug/(24.h)"
     },
     {
       "A": 3,
@@ -22904,7 +25415,9 @@ export default [
       "N": "Copper 24h Ur-mCnc",
       "O": "LN",
       "R": 63.54600000000001,
-      "T": "mcg/dL"
+      "T": "mcg/dL",
+      "U": "ug/dL",
+      "V": "ug/dL"
     },
     {
       "A": 3,
@@ -22923,7 +25436,9 @@ export default [
       "P": "ng/mL",
       "Q": "ng/mL",
       "R": 207.2,
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 3,
@@ -22939,7 +25454,9 @@ export default [
       "P": "ng/mL",
       "Q": "ng/mL",
       "R": 207.2,
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 3,
@@ -22955,7 +25472,9 @@ export default [
       "N": "Lead 24h Ur-mRate",
       "O": "LN",
       "R": 207.2,
-      "T": "mcg/24H"
+      "T": "mcg/24H",
+      "U": "ug/24hr",
+      "V": "ug/(24.h)"
     },
     {
       "A": 3,
@@ -22967,7 +25486,9 @@ export default [
       "N": "Lead/Creat Ur",
       "O": "LN",
       "R": 207.2,
-      "T": "MCG/GM CR"
+      "T": "MCG/GM CR",
+      "U": "ug/g",
+      "V": "ug/g{creat}"
     },
     {
       "A": 3,
@@ -22985,7 +25506,9 @@ export default [
       "O": "LN",
       "P": "ng/24",
       "Q": "ng/24",
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/24hr",
+      "V": "ng/(24.h)"
     },
     {
       "A": 3,
@@ -22996,7 +25519,9 @@ export default [
       "G": "Mercury mass/time (24H U)",
       "N": "Mercury 24h Ur-mRate",
       "O": "LN",
-      "T": "mcg/24H"
+      "T": "mcg/24H",
+      "U": "ug/24hr",
+      "V": "ug/(24.H)"
     },
     {
       "A": 3,
@@ -23007,7 +25532,9 @@ export default [
       "G": "Mercury/Creatinine mass ratio (U)",
       "N": "Mercury/Creat Ur",
       "O": "LN",
-      "T": "MCG/GM CR"
+      "T": "MCG/GM CR",
+      "U": "ug/g",
+      "V": "ug/g{creat}"
     },
     {
       "A": 3,
@@ -23026,7 +25553,9 @@ export default [
       "O": "LN",
       "P": "ng/mL",
       "Q": "ng/mL",
-      "T": "ng/mL"
+      "T": "ng/mL",
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 3,
@@ -23037,7 +25566,9 @@ export default [
       "G": "Thallium mass conc (U)",
       "N": "Thallium Ur-mCnc",
       "O": "LN",
-      "R": 204.3833
+      "R": 204.3833,
+      "U": "ng/mL",
+      "V": "ng/mL"
     },
     {
       "A": 3,
@@ -23049,7 +25580,9 @@ export default [
       "N": "Thallium 24h Ur-mRate",
       "O": "LN",
       "R": 204.3833,
-      "T": "mcg/24H"
+      "T": "mcg/24H",
+      "U": "ug/24hr",
+      "V": "ug/(24.h)"
     },
     {
       "A": 3,
@@ -23061,7 +25594,9 @@ export default [
       "N": "Thallium/Creat 24h Ur",
       "O": "LN",
       "R": 204.3833,
-      "T": "UG/G CREATININE"
+      "T": "UG/G CREATININE",
+      "U": "ug/g",
+      "V": "ug/g{creat}"
     },
     {
       "A": 3,
@@ -23076,7 +25611,9 @@ export default [
       "K": 120,
       "N": "Zinc 24h Ur-mCnc",
       "O": "LN",
-      "T": "mcg/dL"
+      "T": "mcg/dL",
+      "U": "ug/dL",
+      "V": "ug/dL"
     },
     {
       "A": 2,
@@ -23122,7 +25659,9 @@ export default [
       "N": "Acetone SerPl-mCnc",
       "O": "LN",
       "R": 58.0791,
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
@@ -23134,7 +25673,9 @@ export default [
       "N": "Isopropanol SerPl-mCnc",
       "O": "LN",
       "R": 60.095,
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
@@ -23150,7 +25691,9 @@ export default [
       "L": 4,
       "N": "Methanol SerPl-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 1,
@@ -23215,7 +25758,9 @@ export default [
       "K": 4,
       "N": "CA Titr SerPl",
       "O": "LN",
-      "T": "titer"
+      "T": "titer",
+      "U": "titer",
+      "V": "{titer}"
     },
     {
       "A": 3,
@@ -23230,7 +25775,9 @@ export default [
       "K": 0,
       "N": "HLA Ab NFr Ser",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 3,
@@ -23630,7 +26177,9 @@ export default [
       "E": "63773-6",
       "F": "How many cigarettes per day do you usually smoke anywhere inside the home [NHANES]",
       "N": "Smoking cigarette quantity nRate NHANES",
-      "O": "LN"
+      "O": "LN",
+      "U": "/day",
+      "V": "/d"
     },
     {
       "A": 3,
@@ -23724,7 +26273,9 @@ export default [
       "L": 102,
       "N": "BP mean",
       "O": "LN",
-      "T": "mm Hg"
+      "T": "mm Hg",
+      "U": "mmHg",
+      "V": "mm[Hg]"
     },
     {
       "A": 2,
@@ -23751,7 +26302,9 @@ export default [
       "K": 100,
       "N": "Hrt ventr Output 2D Echo",
       "O": "LN",
-      "T": "/MIN"
+      "T": "/MIN",
+      "U": "L/min",
+      "V": "L/min"
     },
     {
       "A": 3,
@@ -23778,7 +26331,9 @@ export default [
       "K": 75,
       "N": "P wave axis",
       "O": "LN",
-      "T": "DEG"
+      "T": "DEG",
+      "U": "deg",
+      "V": "deg"
     },
     {
       "A": 3,
@@ -23792,7 +26347,9 @@ export default [
       "K": 90,
       "N": "QRS axis",
       "O": "LN",
-      "T": "DEG"
+      "T": "DEG",
+      "U": "deg",
+      "V": "deg"
     },
     {
       "A": 3,
@@ -23805,7 +26362,9 @@ export default [
       "K": 26,
       "N": "R wave axis",
       "O": "LN",
-      "T": "DEG"
+      "T": "DEG",
+      "U": "deg",
+      "V": "deg"
     },
     {
       "A": 3,
@@ -23835,7 +26394,9 @@ export default [
       "K": 100,
       "N": "Heart rate.btb by EKG",
       "O": "LN",
-      "T": "/MIN"
+      "T": "/MIN",
+      "U": "beats/min",
+      "V": "{beats}/min"
     },
     {
       "A": 3,
@@ -23848,7 +26409,9 @@ export default [
       "J": 60,
       "K": 100,
       "N": "P wave Offset Time RefB",
-      "O": "LN"
+      "O": "LN",
+      "U": "ms",
+      "V": "ms"
     },
     {
       "A": 3,
@@ -23861,7 +26424,9 @@ export default [
       "J": 60,
       "K": 100,
       "N": "P wave Onset Time RefB",
-      "O": "LN"
+      "O": "LN",
+      "U": "s",
+      "V": "s"
     },
     {
       "A": 3,
@@ -23875,7 +26440,9 @@ export default [
       "K": 200,
       "N": "P-R interval",
       "O": "LN",
-      "T": "MS"
+      "T": "MS",
+      "U": "s",
+      "V": "s"
     },
     {
       "A": 3,
@@ -23888,7 +26455,9 @@ export default [
       "J": 0.6,
       "K": 1.2,
       "N": "R-R interval",
-      "O": "LN"
+      "O": "LN",
+      "U": "s",
+      "V": "s"
     },
     {
       "A": 3,
@@ -23902,7 +26471,9 @@ export default [
       "K": 100,
       "N": "QRS dur",
       "O": "LN",
-      "T": "MS"
+      "T": "MS",
+      "U": "ms",
+      "V": "ms"
     },
     {
       "A": 3,
@@ -23915,7 +26486,9 @@ export default [
       "K": 420,
       "N": "Q-T interval",
       "O": "LN",
-      "T": "MS"
+      "T": "MS",
+      "U": "s",
+      "V": "s"
     },
     {
       "A": 3,
@@ -23929,7 +26502,9 @@ export default [
       "K": 440,
       "N": "Q-T interval corrected",
       "O": "LN",
-      "T": "MS"
+      "T": "MS",
+      "U": "s",
+      "V": "s"
     },
     {
       "A": 3,
@@ -23938,7 +26513,9 @@ export default [
       "E": "18514-0",
       "F": "QRS offset [Time] Reference beat",
       "N": "QRS Offset Time RefB",
-      "O": "LN"
+      "O": "LN",
+      "U": "s",
+      "V": "s"
     },
     {
       "A": 3,
@@ -23947,7 +26524,9 @@ export default [
       "E": "18513-2",
       "F": "QRS onset [Time] Reference beat",
       "N": "QRS Onset Time RefB",
-      "O": "LN"
+      "O": "LN",
+      "U": "s",
+      "V": "s"
     },
     {
       "A": 3,
@@ -23956,7 +26535,9 @@ export default [
       "E": "18515-7",
       "F": "T wave offset [Time] Reference beat",
       "N": "T wave Offset Time RefB",
-      "O": "LN"
+      "O": "LN",
+      "U": "s",
+      "V": "s"
     },
     {
       "A": 3,
@@ -23984,7 +26565,9 @@ export default [
       "F": "Left ventricular Minor axis at end diastole [Length] by US 2D",
       "N": "LV ED minor axis 2D US",
       "O": "LN",
-      "T": "CC"
+      "T": "CC",
+      "U": "cm3",
+      "V": "cm3"
     },
     {
       "A": 3,
@@ -23993,7 +26576,9 @@ export default [
       "E": "18051-3",
       "F": "Left ventricular Fractional shortening minor axis by US",
       "N": "LV FS US",
-      "O": "LN"
+      "O": "LN",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 3,
@@ -24009,7 +26594,9 @@ export default [
       "J": 60,
       "K": 100,
       "O": "RI",
-      "T": "CC"
+      "T": "CC",
+      "U": "cm3",
+      "V": "cm3"
     },
     {
       "A": 3,
@@ -24018,7 +26605,9 @@ export default [
       "E": "80011-0",
       "F": "Left ventricular Minor axis at end systole [Length] by US 2D",
       "N": "LV ES minor axis 2D US",
-      "O": "LN"
+      "O": "LN",
+      "U": "cm",
+      "V": "cm"
     },
     {
       "A": 3,
@@ -24027,7 +26616,9 @@ export default [
       "E": "20233-3",
       "F": "Left ventricular outflow tract Mean systole gradient [Pressure] by US.doppler",
       "N": "LVOT Mean grad systole DOP",
-      "O": "LN"
+      "O": "LN",
+      "U": "mmHg",
+      "V": "mm[Hg]"
     },
     {
       "A": 3,
@@ -24036,7 +26627,9 @@ export default [
       "E": "20232-5",
       "F": "Left ventricular outflow tract Mean blood flow by US.doppler",
       "N": "LVOT Vmean DOP",
-      "O": "LN"
+      "O": "LN",
+      "U": "cm/s",
+      "V": "m/s; cm/s"
     },
     {
       "A": 3,
@@ -24045,7 +26638,9 @@ export default [
       "E": "18170-1",
       "F": "Left ventricular outflow tract Blood velocity-time integral by US.doppler",
       "N": "LVOT VTI DOP",
-      "O": "LN"
+      "O": "LN",
+      "U": "cm",
+      "V": "cm"
     },
     {
       "A": 3,
@@ -24068,7 +26663,9 @@ export default [
       "F": "Aortic sinotubular junction diameter/Aortic root diameter by US",
       "N": "Diam AO STJ/OA root US",
       "O": "LN",
-      "T": "CM"
+      "T": "CM",
+      "U": "cm",
+      "V": "cm"
     },
     {
       "A": 3,
@@ -24088,7 +26685,9 @@ export default [
       "F": "Aortic valve annulus Diameter by US",
       "N": "AV ann Diam US",
       "O": "LN",
-      "T": "CM"
+      "T": "CM",
+      "U": "cm",
+      "V": "cm"
     },
     {
       "A": 3,
@@ -24098,7 +26697,9 @@ export default [
       "F": "Aorta arch and Neck Diameter by US",
       "N": "TA arch Diam US",
       "O": "LN",
-      "T": "CM"
+      "T": "CM",
+      "U": "cm",
+      "V": "cm"
     },
     {
       "A": 3,
@@ -24108,7 +26709,9 @@ export default [
       "F": "Aortic valve regurgitant jet Pressure half time by US.doppler",
       "N": "AV reg PHT DOP",
       "O": "LN",
-      "T": "MS"
+      "T": "MS",
+      "U": "ms",
+      "V": "ms"
     },
     {
       "A": 3,
@@ -24118,7 +26721,9 @@ export default [
       "F": "Aorta root annulo-aortic junction Diameter by US",
       "N": "AO.root.annulo-AO junc Diam US",
       "O": "LN",
-      "T": "CM"
+      "T": "CM",
+      "U": "cm",
+      "V": "cm"
     },
     {
       "A": 3,
@@ -24144,7 +26749,9 @@ export default [
       "F": "Aortic valve Mean systole gradient [Pressure] by US.doppler derived full Bernoulli",
       "N": "AV Mean grad systole DOP V1V2",
       "O": "LN",
-      "T": "mm Hg"
+      "T": "mm Hg",
+      "U": "mmHg",
+      "V": "mm[Hg]"
     },
     {
       "A": 3,
@@ -24154,7 +26761,9 @@ export default [
       "F": "Aortic valve Maximum gradient during systole [Pressure] by US.doppler derived full Bernoulli",
       "N": "AV Max grad systole DOP V1V2",
       "O": "LN",
-      "T": "mm Hg"
+      "T": "mm Hg",
+      "U": "mmHg",
+      "V": "mm[Hg]"
     },
     {
       "A": 3,
@@ -24164,14 +26773,18 @@ export default [
       "F": "Aortic valve Peak systolic flow by US.doppler",
       "N": "AV Vmax sys DOP",
       "O": "LN",
-      "T": "cm/s"
+      "T": "cm/s",
+      "U": "cm/s",
+      "V": "m/s; cm/s"
     },
     {
       "A": 3,
       "B": "AoV Stroke Vol",
       "D": 27013,
       "O": "RI",
-      "T": "CC"
+      "T": "CC",
+      "U": "cm3",
+      "V": "cm3"
     },
     {
       "A": 3,
@@ -24187,7 +26800,9 @@ export default [
       "F": "Ascending thoracic aorta Diameter by US",
       "N": "ATA Diam US",
       "O": "LN",
-      "T": "CM"
+      "T": "CM",
+      "U": "cm",
+      "V": "cm"
     },
     {
       "A": 3,
@@ -24220,7 +26835,9 @@ export default [
       "I": ">35",
       "J": 35,
       "N": "RV FAC 2D US",
-      "O": "LN"
+      "O": "LN",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 3,
@@ -24232,7 +26849,9 @@ export default [
       "I": ">18",
       "J": 18,
       "N": "Heart.XXX FS US",
-      "O": "LN"
+      "O": "LN",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 3,
@@ -24242,7 +26861,9 @@ export default [
       "F": "Interventricular septum Thickness during diastole by US",
       "N": "IVS Thickness diastole US",
       "O": "LN",
-      "T": "CM"
+      "T": "CM",
+      "U": "mm",
+      "V": "mm"
     },
     {
       "A": 3,
@@ -24252,7 +26873,9 @@ export default [
       "F": "Left atrial Diameter anterior-posterior systole by US 2D",
       "N": "LA Diam AP sys 2D US",
       "O": "LN",
-      "T": "CM"
+      "T": "CM",
+      "U": "mm",
+      "V": "mm"
     },
     {
       "A": 3,
@@ -24262,7 +26885,9 @@ export default [
       "F": "Left ventricular Internal diameter minor axis diastole by US 2D",
       "N": "LV Diam dias, short 2D US",
       "O": "LN",
-      "T": "CM"
+      "T": "CM",
+      "U": "cm",
+      "V": "cm"
     },
     {
       "A": 3,
@@ -24277,7 +26902,9 @@ export default [
       "L": 3.9,
       "N": "LV Diam sys, short US",
       "O": "LN",
-      "T": "CM"
+      "T": "CM",
+      "U": "cm",
+      "V": "cm"
     },
     {
       "A": 3,
@@ -24289,7 +26916,9 @@ export default [
       "J": 4.3,
       "K": 47.86,
       "N": "LV ED vol US.2D+mod Simpson",
-      "O": "LN"
+      "O": "LN",
+      "U": "mL",
+      "V": "mL"
     },
     {
       "A": 3,
@@ -24298,7 +26927,9 @@ export default [
       "E": "18043-0",
       "F": "Left ventricular Ejection fraction by US",
       "N": "LV EF US",
-      "O": "LN"
+      "O": "LN",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 3,
@@ -24307,7 +26938,9 @@ export default [
       "E": "77892-8",
       "F": "Left ventricular Ejection fraction by US.2D+Calculated by modified Simpson method",
       "N": "LV EF US.2D+mod Simpson",
-      "O": "LN"
+      "O": "LN",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 3,
@@ -24316,7 +26949,9 @@ export default [
       "E": "81393-1",
       "F": "Left ventricular Myocardial performance index (Tei) by US.doppler",
       "N": "LV MPI DOP",
-      "O": "LN"
+      "O": "LN",
+      "U": "ratio",
+      "V": "{ratio}"
     },
     {
       "A": 3,
@@ -24335,7 +26970,9 @@ export default [
       "K": 2.8,
       "N": "LVOT Region Xsection Area US+Calc",
       "O": "LN",
-      "T": "cm2"
+      "T": "cm2",
+      "U": "cm2",
+      "V": "cm2"
     },
     {
       "A": 3,
@@ -24348,7 +26985,9 @@ export default [
       "K": 2.8,
       "N": "LVOT Diam US",
       "O": "LN",
-      "T": "CM"
+      "T": "CM",
+      "U": "cm",
+      "V": "cm"
     },
     {
       "A": 3,
@@ -24358,7 +26997,9 @@ export default [
       "F": "Left ventricular epicardium Short axis papillary level diastole [Area] by US 2D",
       "N": "LV.epi SAX PM dias Area 2D US",
       "O": "LN",
-      "T": "cm2"
+      "T": "cm2",
+      "U": "cm2",
+      "V": "cm2"
     },
     {
       "A": 3,
@@ -24368,7 +27009,9 @@ export default [
       "F": "Left ventricular epicardium Short axis papillary level systole [Area] by US 2D",
       "N": "LV.epi SAX PM sys Area 2D US",
       "O": "LN",
-      "T": "cm2"
+      "T": "cm2",
+      "U": "cm2",
+      "V": "cm2"
     },
     {
       "A": 3,
@@ -24377,7 +27020,9 @@ export default [
       "E": "20330-7",
       "F": "Left ventricular Stroke volume by US.2D+Calculated by modified Simpson method",
       "N": "LV SV US.2D+mod Simpson",
-      "O": "LN"
+      "O": "LN",
+      "U": "mL",
+      "V": "mL"
     },
     {
       "A": 3,
@@ -24386,7 +27031,9 @@ export default [
       "E": "76557-8",
       "F": "Left ventricular End-systolic volume by US.2D+Calculated by modified Simpson method",
       "N": "LV ES vol US.2D+mod Simpson",
-      "O": "LN"
+      "O": "LN",
+      "U": "mL",
+      "V": "mL"
     },
     {
       "A": 3,
@@ -24396,7 +27043,9 @@ export default [
       "F": "Left ventricular outflow tract Maximum gradient during systole [Pressure] by US.doppler",
       "N": "LVOT Max grad systole DOP",
       "O": "LN",
-      "T": "mm Hg"
+      "T": "mm Hg",
+      "U": "mmHg",
+      "V": "mm[Hg]"
     },
     {
       "A": 3,
@@ -24406,7 +27055,9 @@ export default [
       "F": "Left ventricular outflow tract Peak systolic flow by US.doppler",
       "N": "LVOT Vmax sys DOP",
       "O": "LN",
-      "T": "cm/s"
+      "T": "cm/s",
+      "U": "cm/s",
+      "V": "m/s; cm/s"
     },
     {
       "A": 3,
@@ -24420,7 +27071,9 @@ export default [
       "K": 1.1,
       "N": "LVPW Thickness diastole US",
       "O": "LN",
-      "T": "CM"
+      "T": "CM",
+      "U": "cm",
+      "V": "cm"
     },
     {
       "A": 3,
@@ -24430,7 +27083,9 @@ export default [
       "F": "Mitral valve Maximum A-wave velocity by US.doppler",
       "N": "MV A-wave Vmax",
       "O": "LN",
-      "T": "cm/s"
+      "T": "cm/s",
+      "U": "cm/s",
+      "V": "cm/s"
     },
     {
       "A": 3,
@@ -24440,7 +27095,9 @@ export default [
       "F": "Mitral valve E-wave deceleration time by US.doppler",
       "N": "MV E-wave deceleration time DOP",
       "O": "LN",
-      "T": "MS"
+      "T": "MS",
+      "U": "s",
+      "V": "s"
     },
     {
       "A": 3,
@@ -24452,7 +27109,9 @@ export default [
       "K": 0,
       "N": "MV E-wave Vmax",
       "O": "LN",
-      "T": "cm/s"
+      "T": "cm/s",
+      "U": "cm/s",
+      "V": "cm/s"
     },
     {
       "A": 3,
@@ -24461,7 +27120,9 @@ export default [
       "E": "18038-0",
       "F": "Mitral valve Peak E wave/Peak A wave by US.doppler",
       "N": "MV Peak E-wave/Peak A wave DOP",
-      "O": "LN"
+      "O": "LN",
+      "U": "ratio",
+      "V": "{ratio}"
     },
     {
       "A": 3,
@@ -24471,7 +27132,9 @@ export default [
       "F": "Mitral valve annulus Diameter by US",
       "N": "MV ann Diam US",
       "O": "LN",
-      "T": "CM"
+      "T": "CM",
+      "U": "cm",
+      "V": "cm"
     },
     {
       "A": 3,
@@ -24481,7 +27144,9 @@ export default [
       "F": "Mitral valve Orifice [Area] by US.2D+Measured by planimetry",
       "N": "MV Orifice Area US.2D.PLN",
       "O": "LN",
-      "T": "cm2"
+      "T": "cm2",
+      "U": "cm2",
+      "V": "cm2"
     },
     {
       "A": 3,
@@ -24521,7 +27186,9 @@ export default [
       "K": 200,
       "N": "MV Decel Time DOP",
       "O": "LN",
-      "T": "MS"
+      "T": "MS",
+      "U": "ms",
+      "V": "ms"
     },
     {
       "A": 3,
@@ -24534,7 +27201,9 @@ export default [
       "K": 10,
       "N": "MV Grad.mean DOP",
       "O": "LN",
-      "T": "mm Hg"
+      "T": "mm Hg",
+      "U": "mmHg",
+      "V": "mm[Hg]"
     },
     {
       "A": 3,
@@ -24559,7 +27228,9 @@ export default [
       "J": 50,
       "N": "MV Peak grad DOP",
       "O": "LN",
-      "T": "mm Hg"
+      "T": "mm Hg",
+      "U": "mmHg",
+      "V": "mm[Hg]"
     },
     {
       "A": 3,
@@ -24569,7 +27240,9 @@ export default [
       "F": "Mitral valve Peak systolic flow by US.doppler",
       "N": "MV Vmax sys DOP",
       "O": "LN",
-      "T": "cm/s"
+      "T": "cm/s",
+      "U": "cm/s",
+      "V": "m/s; cm/s"
     },
     {
       "A": 3,
@@ -24582,7 +27255,9 @@ export default [
       "K": 200,
       "N": "MV Decel.pres.1/2T DOP",
       "O": "LN",
-      "T": "MS"
+      "T": "MS",
+      "U": "ms",
+      "V": "ms"
     },
     {
       "A": 3,
@@ -24602,7 +27277,9 @@ export default [
       "F": "Left ventricular Stroke volume by US 2D mitral valve flow area calculated",
       "N": "LV SV US.2D.MV flow area",
       "O": "LN",
-      "T": "CC"
+      "T": "CC",
+      "U": "cm3",
+      "V": "cm3"
     },
     {
       "A": 3,
@@ -24615,7 +27292,9 @@ export default [
       "K": 30,
       "N": "MV VTI DOP",
       "O": "LN",
-      "T": "CM"
+      "T": "CM",
+      "U": "cm",
+      "V": "cm"
     },
     {
       "A": 3,
@@ -24625,7 +27304,9 @@ export default [
       "F": "Pulmonic valve Mean gradient [Pressure] by US.doppler",
       "N": "PV Grad.mean DOP",
       "O": "LN",
-      "T": "mm Hg"
+      "T": "mm Hg",
+      "U": "mmHg",
+      "V": "mm[Hg]"
     },
     {
       "A": 3,
@@ -24635,7 +27316,9 @@ export default [
       "F": "Pulmonary valve Mean blood flow by US.doppler",
       "N": "Pulm valve Vmean DOP",
       "O": "LN",
-      "T": "cm/s"
+      "T": "cm/s",
+      "U": "cm/s",
+      "V": "m/s; cm/s"
     },
     {
       "A": 3,
@@ -24645,7 +27328,9 @@ export default [
       "F": "Pulmonic valve Peak gradient [Pressure] by US.doppler",
       "N": "PV Peak grad DOP",
       "O": "LN",
-      "T": "mm Hg"
+      "T": "mm Hg",
+      "U": "mmHg",
+      "V": "mm[Hg]"
     },
     {
       "A": 3,
@@ -24655,7 +27340,9 @@ export default [
       "F": "Pulmonary valve Peak systolic flow by US.doppler",
       "N": "Pulm valve Vmax sys DOP",
       "O": "LN",
-      "T": "cm/s"
+      "T": "cm/s",
+      "U": "cm/s",
+      "V": "m/s; cm/s"
     },
     {
       "A": 3,
@@ -24665,7 +27352,9 @@ export default [
       "F": "Right ventricular Stroke volume by US 2D pulmonic valve flow area calculated",
       "N": "RV SV US.2D.PV flow area",
       "O": "LN",
-      "T": "CC"
+      "T": "CC",
+      "U": "cm3",
+      "V": "cm3"
     },
     {
       "A": 3,
@@ -24675,7 +27364,9 @@ export default [
       "F": "Pulmonic valve Ejection time by US.doppler",
       "N": "PV Ejection time DOP",
       "O": "LN",
-      "T": "MS"
+      "T": "MS",
+      "U": "ms",
+      "V": "ms"
     },
     {
       "A": 3,
@@ -24685,7 +27376,9 @@ export default [
       "F": "Pulmonic valve Blood velocity-time integral by US.doppler",
       "N": "PV VTI DOP",
       "O": "LN",
-      "T": "CM"
+      "T": "CM",
+      "U": "cm",
+      "V": "cm"
     },
     {
       "A": 3,
@@ -24929,7 +27622,9 @@ export default [
       "F": "Right atrial pressure",
       "N": "RA pressure",
       "O": "LN",
-      "T": "mm Hg"
+      "T": "mm Hg",
+      "U": "mmHg",
+      "V": "mm[Hg]"
     },
     {
       "A": 3,
@@ -24944,7 +27639,9 @@ export default [
       "L": 51,
       "N": "RV Intrachamber sys pres",
       "O": "LN",
-      "T": "mm Hg"
+      "T": "mm Hg",
+      "U": "mmHg",
+      "V": "mm[Hg]"
     },
     {
       "A": 3,
@@ -24956,7 +27653,9 @@ export default [
       "J": 5,
       "N": "TV Max grad diastole DOP",
       "O": "LN",
-      "T": "mm Hg"
+      "T": "mm Hg",
+      "U": "mmHg",
+      "V": "mm[Hg]"
     },
     {
       "A": 3,
@@ -24966,7 +27665,9 @@ export default [
       "F": "Tricuspid valve Peak systolic flow by US.doppler",
       "N": "TV Vmax sys DOP",
       "O": "LN",
-      "T": "cm/s"
+      "T": "cm/s",
+      "U": "cm/s",
+      "V": "m/s; cm/s"
     },
     {
       "A": 3,
@@ -24976,7 +27677,9 @@ export default [
       "F": "Tricuspid valve Mean gradient during diastole [Pressure] by US.doppler",
       "N": "TV Mean grad diastole DOP",
       "O": "LN",
-      "T": "mm Hg"
+      "T": "mm Hg",
+      "U": "mmHg",
+      "V": "mm[Hg]"
     },
     {
       "A": 3,
@@ -24986,7 +27689,9 @@ export default [
       "F": "Tricuspid valve Mean blood flow by US.doppler",
       "N": "TV Vmean DOP",
       "O": "LN",
-      "T": "cm/s"
+      "T": "cm/s",
+      "U": "cm/s",
+      "V": "m/s; cm/s"
     },
     {
       "A": 3,
@@ -24996,7 +27701,9 @@ export default [
       "F": "Tricuspid valve Velocity-time integral during diastole by US.doppler",
       "N": "TV VTI diastole DOP",
       "O": "LN",
-      "T": "CM"
+      "T": "CM",
+      "U": "cm",
+      "V": "cm"
     },
     {
       "A": 2,
@@ -25012,7 +27719,9 @@ export default [
       "F": "Percent stenosis of Left main coronary artery by Cardiac angiogram",
       "N": "Percent sten of LM by Angiogram",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 3,
@@ -25022,7 +27731,9 @@ export default [
       "F": "Percent stenosis of Proximal left anterior descending artery by Cardiac angiogram",
       "N": "Percent sten of pLAD by Angiogram",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 3,
@@ -25032,7 +27743,9 @@ export default [
       "F": "Percent stenosis of Mid left anterior descending artery by Cardiac angiogram",
       "N": "Percent sten of mLAD by Angiogram",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 3,
@@ -25042,7 +27755,9 @@ export default [
       "F": "Percent stenosis of Distal left anterior descending artery by Cardiac angiogram",
       "N": "Percent sten of dLAD by Angiogram",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 3,
@@ -25052,7 +27767,9 @@ export default [
       "F": "Percent stenosis of First diagonal artery by Cardiac angiogram",
       "N": "Percent sten of D1 by Angiogram",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 3,
@@ -25062,7 +27779,9 @@ export default [
       "F": "Percent stenosis of Posterolateral branch from left circumflex artery by Cardiac angiogram",
       "N": "Percent sten of L-PLB by Angiogram",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 3,
@@ -25072,7 +27791,9 @@ export default [
       "F": "Percent stenosis of Mid and distal left circumflex artery by Cardiac angiogram",
       "N": "Percent sten of LCx by Angiogram",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 3,
@@ -25082,7 +27803,9 @@ export default [
       "F": "Percent stenosis of Obtuse marginal artery by Cardiac angiogram",
       "N": "Percent sten of OM by Angiogram",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 3,
@@ -25099,7 +27822,9 @@ export default [
       "F": "Percent stenosis of Proximal right coronary artery by Cardiac angiogram",
       "N": "Percent sten of pRCA by Angiogram",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 3,
@@ -25109,7 +27834,9 @@ export default [
       "F": "Percent stenosis of Mid right coronary artery by Cardiac angiogram",
       "N": "Percent sten of mRCA by Angiogram",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 3,
@@ -25119,7 +27846,9 @@ export default [
       "F": "Percent stenosis of Distal right coronary artery by Cardiac angiogram",
       "N": "Percent sten of dRCA by Angiogram",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 3,
@@ -25175,7 +27904,9 @@ export default [
       "K": 5,
       "N": "RA Intrachamber mean pres",
       "O": "LN",
-      "T": "mm Hg"
+      "T": "mm Hg",
+      "U": "mmHg",
+      "V": "mm[Hg]"
     },
     {
       "A": 3,
@@ -25190,7 +27921,9 @@ export default [
       "L": 51,
       "N": "RV Intrachamber dias pres",
       "O": "LN",
-      "T": "mm Hg"
+      "T": "mm Hg",
+      "U": "mmHg",
+      "V": "mm[Hg]"
     },
     {
       "A": 3,
@@ -25204,7 +27937,9 @@ export default [
       "K": 20,
       "N": "PA BP mean",
       "O": "LN",
-      "T": "mm Hg"
+      "T": "mm Hg",
+      "U": "mmHg",
+      "V": "mm[Hg]"
     },
     {
       "A": 3,
@@ -25235,7 +27970,9 @@ export default [
       "F": "Aortic valve Orifice [Area] by US.2D+Measured by planimetry",
       "N": "AV Orifice Area US.2D.PLN",
       "O": "LN",
-      "T": "CM"
+      "T": "CM",
+      "U": "cm2",
+      "V": "cm2"
     },
     {
       "A": 3,
@@ -25245,7 +27982,9 @@ export default [
       "F": "Mitral valve Diameter 2 by US",
       "N": "MV Diam 2 US",
       "O": "LN",
-      "T": "CM"
+      "T": "CM",
+      "U": "cm",
+      "V": "cm"
     },
     {
       "A": 2,
@@ -25302,7 +28041,9 @@ export default [
       "G": "Polyp size greatest dimension length (Spec)",
       "N": "Polyp size greatest dim",
       "O": "LN",
-      "T": "CM"
+      "T": "CM",
+      "U": "cm",
+      "V": "cm"
     },
     {
       "A": 2,
@@ -25500,7 +28241,9 @@ export default [
       "F": "Forced vital capacity [Volume] Respiratory system --pre bronchodilation",
       "N": "FVC pre BD Vol Respiratory",
       "O": "LN",
-      "T": "LITERS"
+      "T": "LITERS",
+      "U": "L",
+      "V": "L"
     },
     {
       "A": 3,
@@ -25510,7 +28253,9 @@ export default [
       "F": "Forced vital capacity [Volume] Respiratory system Predicted",
       "N": "FVC Vol Respiratory Predicted",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "L",
+      "V": "L"
     },
     {
       "A": 3,
@@ -25520,7 +28265,9 @@ export default [
       "F": "Forced vital capacity [Volume] Respiratory system --post bronchodilation",
       "N": "FVC p BD Vol Respiratory",
       "O": "LN",
-      "T": "LITERS"
+      "T": "LITERS",
+      "U": "L",
+      "V": "L"
     },
     {
       "A": 3,
@@ -25530,7 +28277,9 @@ export default [
       "F": "FEV1 --pre bronchodilation",
       "N": "FEV1 pre BD",
       "O": "LN",
-      "T": "LITERS"
+      "T": "LITERS",
+      "U": "L",
+      "V": "L"
     },
     {
       "A": 3,
@@ -25540,7 +28289,9 @@ export default [
       "F": "FEV1/Predicted",
       "N": "FEV1/Predicted",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 3,
@@ -25550,7 +28301,9 @@ export default [
       "F": "FEV1 --post bronchodilation",
       "N": "FEV1 p BD",
       "O": "LN",
-      "T": "LITERS"
+      "T": "LITERS",
+      "U": "L",
+      "V": "L"
     },
     {
       "A": 3,
@@ -25560,7 +28313,9 @@ export default [
       "F": "FEF 25-75% --pre bronchodilation",
       "N": "FEF 25-75% pre BD",
       "O": "LN",
-      "T": "LITERS/SEC"
+      "T": "LITERS/SEC",
+      "U": "L/s",
+      "V": "L/s"
     },
     {
       "A": 3,
@@ -25570,7 +28325,9 @@ export default [
       "F": "FEF 25-75% --post bronchodilation",
       "N": "FEF 25-75% p BD",
       "O": "LN",
-      "T": "LITERS/SEC"
+      "T": "LITERS/SEC",
+      "U": "L/s",
+      "V": "L/s"
     },
     {
       "A": 3,
@@ -25580,7 +28337,9 @@ export default [
       "F": "FEF 25-75% Predicted",
       "N": "FEF 25-75% Predicted",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "L/s",
+      "V": "L/s"
     },
     {
       "A": 2,
@@ -25596,7 +28355,9 @@ export default [
       "F": "Oxygen saturation in Arterial blood by Pulse oximetry --resting",
       "N": "SaO2 Resting % BldA PulseOx",
       "O": "LN",
-      "T": "LITERS"
+      "T": "LITERS",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 3,
@@ -25606,7 +28367,9 @@ export default [
       "F": "Oxygen saturation in Arterial blood by Pulse oximetry --post exercise",
       "N": "SaO2 p Exc % BldA PulseOx",
       "O": "LN",
-      "T": "LITERS"
+      "T": "LITERS",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 2,
@@ -25622,7 +28385,9 @@ export default [
       "F": "Asthma spells per week",
       "N": "Asthma spells 1W nRate",
       "O": "LN",
-      "T": "#/MO"
+      "T": "#/MO",
+      "U": "/wk",
+      "V": "{#}/wk"
     },
     {
       "A": 3,
@@ -25640,7 +28405,9 @@ export default [
       "G": "Specimen volume 24H Flow (Sput)",
       "N": "Specimen vol 24h Spt-vRate",
       "O": "LN",
-      "T": "OZ(FL)"
+      "T": "OZ(FL)",
+      "U": "mL/24hr",
+      "V": "mL/(24.h)"
     },
     {
       "A": 1,
@@ -25741,7 +28508,8 @@ export default [
       "F": "Corynebacterium diphtheriae+Clostridium tetani+Bordetella pertussis dose count in combination vaccine",
       "N": "DTAP dose count in combo vaccine",
       "O": "RI",
-      "T": "mL"
+      "T": "mL",
+      "V": "{#}"
     },
     {
       "A": 3,
@@ -25793,7 +28561,8 @@ export default [
       "F": "Corynebacterium diphtheriae+Clostridium tetani+Bordetella pertussis dose count in combination vaccine",
       "N": "DTAP dose count in combo vaccine",
       "O": "RI",
-      "T": "#"
+      "T": "#",
+      "V": "{#}"
     },
     {
       "A": 3,
@@ -25831,7 +28600,8 @@ export default [
       "F": "Haemophilus influenzae B dose count in combination vaccine",
       "N": "HIB dose count in combo vaccine",
       "O": "RI",
-      "T": "mL"
+      "T": "mL",
+      "V": "{#}"
     },
     {
       "A": 3,
@@ -26104,7 +28874,9 @@ export default [
       "B": "Acetamin/Cod El",
       "D": 4446,
       "O": "RI",
-      "T": "CC"
+      "T": "CC",
+      "U": "cm3",
+      "V": "cm3"
     },
     {
       "A": 3,
@@ -26129,7 +28901,9 @@ export default [
       "G": "Acetaminophen mass (Dose)",
       "N": "APAP Dose",
       "O": "RI",
-      "T": "mg"
+      "T": "mg",
+      "U": "mg",
+      "V": "mg"
     },
     {
       "A": 3,
@@ -26721,7 +29495,9 @@ export default [
       "G": "Amoxicillin mass (Dose)",
       "N": "Amoxicillin Dose",
       "O": "RI",
-      "T": "mg"
+      "T": "mg",
+      "U": "mg",
+      "V": "mg"
     },
     {
       "A": 3,
@@ -26771,7 +29547,9 @@ export default [
       "G": "Ampicillin mass (Dose)",
       "N": "Ampicillin Dose",
       "O": "RI",
-      "T": "mg"
+      "T": "mg",
+      "U": "mg",
+      "V": "mg"
     },
     {
       "A": 3,
@@ -29657,7 +32435,9 @@ export default [
       "G": "Diazepam mass (Dose)",
       "N": "Diazepam Dose",
       "O": "RI",
-      "T": "mg"
+      "T": "mg",
+      "U": "mg",
+      "V": "mg"
     },
     {
       "A": 3,
@@ -30527,7 +33307,9 @@ export default [
       "B": "EPINEPHrine Subcutaneous Susp",
       "D": 5588,
       "O": "RI",
-      "T": "CC"
+      "T": "CC",
+      "U": "cm3",
+      "V": "cm3"
     },
     {
       "A": 3,
@@ -31429,7 +34211,9 @@ export default [
       "B": "Fomepizole Inj",
       "D": 25737,
       "O": "RI",
-      "T": "GM/CC"
+      "T": "GM/CC",
+      "U": "g/cm3",
+      "V": "g/cm3"
     },
     {
       "A": 3,
@@ -31506,7 +34290,9 @@ export default [
       "B": "Gamma Globulin",
       "D": 4930,
       "O": "RI",
-      "T": "CC"
+      "T": "CC",
+      "U": "cm3",
+      "V": "cm3"
     },
     {
       "A": 3,
@@ -32327,7 +35113,9 @@ export default [
       "B": "IMMUNE SERUM GLO",
       "D": 6507,
       "O": "RI",
-      "T": "CC"
+      "T": "CC",
+      "U": "cm3",
+      "V": "cm3"
     },
     {
       "A": 3,
@@ -33776,7 +36564,9 @@ export default [
       "B": "Magic Mouthwash",
       "D": 7322,
       "O": "RI",
-      "T": "CC"
+      "T": "CC",
+      "U": "cm3",
+      "V": "cm3"
     },
     {
       "A": 3,
@@ -34655,7 +37445,9 @@ export default [
       "B": "Mvi Inj",
       "D": 6744,
       "O": "RI",
-      "T": "CC"
+      "T": "CC",
+      "U": "cm3",
+      "V": "cm3"
     },
     {
       "A": 3,
@@ -37162,7 +39954,9 @@ export default [
       "B": "Simethicone Drops 20 mg/0.3mL",
       "D": 3392,
       "O": "RI",
-      "T": "CC"
+      "T": "CC",
+      "U": "cm3",
+      "V": "cm3"
     },
     {
       "A": 3,
@@ -38420,7 +41214,9 @@ export default [
       "B": "Triprolidine/Pseudoephedrine Syr",
       "D": 2619,
       "O": "RI",
-      "T": "CC"
+      "T": "CC",
+      "U": "cm3",
+      "V": "cm3"
     },
     {
       "A": 3,
@@ -39532,7 +42328,9 @@ export default [
       "F": "Hospital stay duration",
       "N": "Hosp stay duration",
       "O": "LN",
-      "T": "DAYS"
+      "T": "DAYS",
+      "U": "d",
+      "V": "d"
     },
     {
       "A": 2,
@@ -39605,7 +42403,9 @@ export default [
       "F": "About how often do your severe headaches occur [PhenX]",
       "N": "Severe headaches avg freq nRate PhenX",
       "O": "LN",
-      "T": "#/MO"
+      "T": "#/MO",
+      "U": "/mo",
+      "V": "{#}/wk;{#}/mo;{#}/a"
     },
     {
       "A": 3,
@@ -39627,7 +42427,9 @@ export default [
       "F": "Seizures per month",
       "N": "Seizures/month nRate",
       "O": "LN",
-      "T": "#/MO"
+      "T": "#/MO",
+      "U": "/mo",
+      "V": "/mo"
     },
     {
       "A": 3,
@@ -39704,7 +42506,9 @@ export default [
       "F": "Cervix [Length] US",
       "N": "Cervix Length US.meas",
       "O": "LN",
-      "T": "CM"
+      "T": "CM",
+      "U": "cm",
+      "V": "cm"
     },
     {
       "A": 3,
@@ -39724,7 +42528,9 @@ export default [
       "F": "Uterus Fundal height Tape measure",
       "N": "Uterus Fundal height Tape measure",
       "O": "LN",
-      "T": "CM"
+      "T": "CM",
+      "U": "cm",
+      "V": "cm"
     },
     {
       "A": 3,
@@ -39734,7 +42540,9 @@ export default [
       "F": "Fetal Heart rate US",
       "N": "Fet Heart rate US.meas",
       "O": "LN",
-      "T": "/MIN"
+      "T": "/MIN",
+      "U": "beats/min",
+      "V": "{beats}/min"
     },
     {
       "A": 2,
@@ -39755,7 +42563,8 @@ export default [
       "L": 25,
       "N": "Abortions",
       "O": "LN",
-      "T": "# OF"
+      "T": "# OF",
+      "V": "{#}"
     },
     {
       "A": 3,
@@ -39764,7 +42573,8 @@ export default [
       "E": "64708-1",
       "F": "Including live births, stillbirths, miscarriages, abortions, and tubal and other ectopic pregnancies, how many times have you been pregnant [PhenX]",
       "N": "Number pregnancy PhenX",
-      "O": "LN"
+      "O": "LN",
+      "V": "{#}"
     },
     {
       "A": 3,
@@ -39773,7 +42583,8 @@ export default [
       "E": "11638-4",
       "F": "[#] Births.still living",
       "N": "Births.still living",
-      "O": "LN"
+      "O": "LN",
+      "V": "{#}"
     },
     {
       "A": 3,
@@ -39783,7 +42594,9 @@ export default [
       "F": "Age at menarche",
       "G": "Age at menarche",
       "N": "Age @ Menarche Time Patient",
-      "O": "LN"
+      "O": "LN",
+      "U": "a",
+      "V": "a"
     },
     {
       "A": 3,
@@ -39791,9 +42604,12 @@ export default [
       "D": 13564,
       "E": "8348-5",
       "F": "Body weight Measured --pre pregnancy",
+      "G": "Weight lbs pre-pregnancy",
       "N": "Weight pre pregnancy Measured",
       "O": "LN",
-      "T": "LBS"
+      "T": "LBS",
+      "U": "lbs",
+      "V": "[lb_av]"
     },
     {
       "A": 3,
@@ -39802,7 +42618,8 @@ export default [
       "E": "11637-6",
       "F": "[#] Births.preterm",
       "N": "Births.preterm",
-      "O": "LN"
+      "O": "LN",
+      "V": "{#}"
     },
     {
       "A": 3,
@@ -39812,7 +42629,8 @@ export default [
       "F": "[#] Births.stillborn",
       "N": "Births.stillborn",
       "O": "LN",
-      "T": "# OF"
+      "T": "# OF",
+      "V": "{#}"
     },
     {
       "A": 3,
@@ -39821,7 +42639,8 @@ export default [
       "E": "11639-2",
       "F": "[#] Births.term",
       "N": "Births.term",
-      "O": "LN"
+      "O": "LN",
+      "V": "{#}"
     },
     {
       "A": 2,
@@ -39843,7 +42662,9 @@ export default [
       "M": 3,
       "N": "Birth weight Measured",
       "O": "LN",
-      "T": "LBS"
+      "T": "LBS",
+      "U": "g",
+      "V": "g"
     },
     {
       "A": 3,
@@ -39872,7 +42693,9 @@ export default [
       "F": "What was your best estimate of the total income of all family members from all sources, before taxes, in last year [PhenX]",
       "N": "Annual family income nRate PhenX",
       "O": "LN",
-      "T": "DOLLARS"
+      "T": "DOLLARS",
+      "U": "dollars",
+      "V": "/a"
     },
     {
       "A": 3,
@@ -39881,7 +42704,8 @@ export default [
       "E": "86639-2",
       "F": "Household size [#]",
       "N": "Household size",
-      "O": "LN"
+      "O": "LN",
+      "V": "{#}"
     },
     {
       "A": 3,
@@ -39890,7 +42714,9 @@ export default [
       "E": "82590-1",
       "F": "Years of education [#] - Reported",
       "N": "Y of education Reported",
-      "O": "LN"
+      "O": "LN",
+      "U": "a",
+      "V": "a"
     },
     {
       "A": 2,
@@ -39919,7 +42745,9 @@ export default [
       "F": "How many cigarettes do you smoke per day now [PhenX]",
       "N": "Cigarettes quant D now nRate PhenX",
       "O": "LN",
-      "T": "cigs/day"
+      "T": "cigs/day",
+      "U": "/day",
+      "V": "/d"
     },
     {
       "A": 3,
@@ -39934,7 +42762,9 @@ export default [
       "E": "64794-1",
       "F": "In the 3 months before you got pregnant, how many cigarettes did you smoke on an average day [PhenX]",
       "N": "Cigarettes before preg per D PhenX",
-      "O": "LN"
+      "O": "LN",
+      "U": "/day",
+      "V": "{#}/d"
     },
     {
       "A": 3,
@@ -39948,7 +42778,9 @@ export default [
       "K": 2,
       "N": "Alcoholic drinks/drinking D Reported",
       "O": "LN",
-      "T": "#drinks/day"
+      "T": "#drinks/day",
+      "U": "/day",
+      "V": "/d"
     },
     {
       "A": 3,
@@ -39963,7 +42795,9 @@ export default [
       "E": "64796-6",
       "F": "During the 3 months before you got pregnant, how many alcoholic drinks did you have in an average week [PhenX]",
       "N": "Alc drinks per W 3Mo before preg PhenX",
-      "O": "LN"
+      "O": "LN",
+      "U": "/wk",
+      "V": "{#}/wk"
     },
     {
       "A": 3,
@@ -40013,7 +42847,9 @@ export default [
       "F": "Calorie intake 24 hour",
       "N": "Calorie intake 24h",
       "O": "LN",
-      "T": "CAL"
+      "T": "CAL",
+      "U": "Kcal/24hr",
+      "V": "Kcal/(24.h)"
     },
     {
       "A": 4,
@@ -40073,7 +42909,9 @@ export default [
       "D": 13521,
       "E": "87296-0",
       "F": "Age--at delivery Father",
-      "O": "LN"
+      "O": "LN",
+      "U": "a",
+      "V": "a"
     },
     {
       "A": 3,
@@ -40129,7 +42967,9 @@ export default [
       "L": 40,
       "N": "Fet Abd Circum US.meas",
       "O": "LN",
-      "T": "CM"
+      "T": "CM",
+      "U": "cm",
+      "V": "cm"
     },
     {
       "A": 4,
@@ -40139,7 +42979,9 @@ export default [
       "F": "Fetal Abdomen Diameter.anterior-posterior US",
       "N": "Fet Abd Diam AP US.meas",
       "O": "LN",
-      "T": "CM"
+      "T": "CM",
+      "U": "cm",
+      "V": "cm"
     },
     {
       "A": 4,
@@ -40149,7 +42991,9 @@ export default [
       "F": "Fetal Abdomen Diameter transverse US",
       "N": "Fetal TAD US.meas",
       "O": "LN",
-      "T": "CM"
+      "T": "CM",
+      "U": "cm",
+      "V": "cm"
     },
     {
       "A": 4,
@@ -40159,7 +43003,9 @@ export default [
       "F": "Fetal Quadrant four Amniotic fluid index derived by US",
       "N": "Fet Q4 AFI der US",
       "O": "LN",
-      "T": "CM"
+      "T": "CM",
+      "U": "cm",
+      "V": "cm"
     },
     {
       "A": 4,
@@ -40169,7 +43015,9 @@ export default [
       "F": "Fetal Crown Rump length US",
       "N": "Fet CRL US.meas",
       "O": "LN",
-      "T": "CM"
+      "T": "CM",
+      "U": "cm",
+      "V": "cm"
     },
     {
       "A": 4,
@@ -40184,7 +43032,9 @@ export default [
       "L": 3000,
       "N": "Fet Weight US+est",
       "O": "LN",
-      "T": "gm"
+      "T": "gm",
+      "U": "g",
+      "V": "g"
     },
     {
       "A": 4,
@@ -40199,7 +43049,9 @@ export default [
       "L": 40,
       "N": "Fet Femur Length US.meas",
       "O": "LN",
-      "T": "CM"
+      "T": "CM",
+      "U": "cm",
+      "V": "cm"
     },
     {
       "A": 4,
@@ -40220,7 +43072,9 @@ export default [
       "L": 40,
       "N": "GA Est from LMP",
       "O": "LN",
-      "T": "week"
+      "T": "week",
+      "U": "wk",
+      "V": "wk"
     },
     {
       "A": 4,
@@ -40235,7 +43089,9 @@ export default [
       "L": 40,
       "N": "GA US.composite.est",
       "O": "LN",
-      "T": "week"
+      "T": "week",
+      "U": "wk",
+      "V": "wk"
     },
     {
       "A": 4,
@@ -40251,7 +43107,9 @@ export default [
       "E": "11947-9",
       "F": "Head circumference/Abdominal circumference derived by US",
       "N": "HC/AC der US",
-      "O": "LN"
+      "O": "LN",
+      "U": "ratio",
+      "V": "{ratio}"
     },
     {
       "A": 4,
@@ -40266,7 +43124,9 @@ export default [
       "L": 40,
       "N": "Fet Head Circum US.meas",
       "O": "LN",
-      "T": "CM"
+      "T": "CM",
+      "U": "cm",
+      "V": "cm"
     },
     {
       "A": 4,
@@ -40281,7 +43141,9 @@ export default [
       "L": 40,
       "N": "Fet BPD US.meas",
       "O": "LN",
-      "T": "CM"
+      "T": "CM",
+      "U": "cm",
+      "V": "cm"
     },
     {
       "A": 4,
@@ -40296,7 +43158,9 @@ export default [
       "L": 40,
       "N": "Fet Head OFD US.meas",
       "O": "LN",
-      "T": "CM"
+      "T": "CM",
+      "U": "cm",
+      "V": "cm"
     },
     {
       "A": 4,
@@ -40306,7 +43170,9 @@ export default [
       "F": "Fetal Head Diameter.outer to outer US",
       "N": "Fet Head Diam.O-O US.meas",
       "O": "LN",
-      "T": "CM"
+      "T": "CM",
+      "U": "cm",
+      "V": "cm"
     },
     {
       "A": 4,
@@ -40316,7 +43182,9 @@ export default [
       "F": "Fetal Humerus diaphysis [Length] US",
       "N": "Fet Humerus Length US.meas",
       "O": "LN",
-      "T": "CM"
+      "T": "CM",
+      "U": "cm",
+      "V": "cm"
     },
     {
       "A": 4,
@@ -40326,7 +43194,9 @@ export default [
       "F": "Fetal Tibia diaphysis [Length] US",
       "N": "Fet Tibia Length US.meas",
       "O": "LN",
-      "T": "CM"
+      "T": "CM",
+      "U": "cm",
+      "V": "cm"
     },
     {
       "A": 4,
@@ -40336,7 +43206,9 @@ export default [
       "F": "Fetal Ulna diaphysis [Length] US",
       "N": "Fet Ulna Length US.meas",
       "O": "LN",
-      "T": "CM"
+      "T": "CM",
+      "U": "cm",
+      "V": "cm"
     },
     {
       "A": 4,
@@ -40345,7 +43217,9 @@ export default [
       "E": "11766-3",
       "F": "Fetal Body weight percentile Comparison of estimated fetal weight with standard population distribution at same estimated gestational age",
       "N": "Fet Bdy weight Prctl Comp of EFW est GA",
-      "O": "LN"
+      "O": "LN",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 3,
@@ -40381,7 +43255,9 @@ export default [
       "L": 4.4,
       "N": "GA Clin est",
       "O": "LN",
-      "T": "week"
+      "T": "week",
+      "U": "wk",
+      "V": "wk"
     },
     {
       "A": 4,
@@ -40449,9 +43325,12 @@ export default [
       "D": 14172,
       "E": "3141-9",
       "F": "Body weight Measured",
+      "G": "Weight lbs",
       "N": "Weight Measured",
       "O": "LN",
-      "T": "LBS"
+      "T": "LBS",
+      "U": "lbs",
+      "V": "[lb_av]"
     },
     {
       "A": 3,
@@ -40460,7 +43339,9 @@ export default [
       "E": "55283-6",
       "F": "Fetal Heart rate",
       "N": "Fet Heart rate",
-      "O": "LN"
+      "O": "LN",
+      "U": "beats/min",
+      "V": "{beats}/min"
     },
     {
       "A": 3,
@@ -40507,7 +43388,9 @@ export default [
       "B": "Delivery Bld Loss",
       "D": 14244,
       "O": "RI",
-      "T": "CC"
+      "T": "CC",
+      "U": "cm3",
+      "V": "cm3"
     },
     {
       "A": 3,
@@ -40516,7 +43399,9 @@ export default [
       "E": "9272-6",
       "F": "1 minute Apgar Score",
       "N": "1M Apgar Score",
-      "O": "LN"
+      "O": "LN",
+      "U": "score",
+      "V": "{score}"
     },
     {
       "A": 3,
@@ -40525,7 +43410,9 @@ export default [
       "E": "9274-2",
       "F": "5 minute Apgar Score",
       "N": "5M Apgar Score",
-      "O": "LN"
+      "O": "LN",
+      "U": "score",
+      "V": "{score}"
     },
     {
       "A": 3,
@@ -40704,7 +43591,9 @@ export default [
       "E": "28710-2",
       "F": "Visual acuity distance Left eye Phoropter",
       "N": "DVA Eye-L Phoropter",
-      "O": "LN"
+      "O": "LN",
+      "U": "ft/ft",
+      "V": "[ft_us]/[ft_us]"
     },
     {
       "A": 3,
@@ -40713,7 +43602,9 @@ export default [
       "E": "55987-2",
       "F": "Visual acuity near Left eye Phoropter",
       "N": "Visual acuity N Eye-L Phoropter",
-      "O": "LN"
+      "O": "LN",
+      "U": "ft/ft",
+      "V": "[ft_us]/[ft_us]"
     },
     {
       "A": 3,
@@ -40722,7 +43613,9 @@ export default [
       "E": "28667-4",
       "F": "Visual acuity distance Right eye Phoropter",
       "N": "DVA Eye-R Phoropter",
-      "O": "LN"
+      "O": "LN",
+      "U": "ft/ft",
+      "V": "[ft_us]/[ft_us]"
     },
     {
       "A": 3,
@@ -40731,7 +43624,9 @@ export default [
       "E": "28719-3",
       "F": "Visual acuity near Right eye Phoropter",
       "N": "Visual acuity N Eye-R Phoropter",
-      "O": "LN"
+      "O": "LN",
+      "U": "ft/ft",
+      "V": "[ft_us]/[ft_us]"
     },
     {
       "A": 3,
@@ -40792,7 +43687,9 @@ export default [
       "F": "Intraocular pressure Left eye",
       "N": "Intraocular pressure Eye-L Tono",
       "O": "LN",
-      "T": "mm Hg"
+      "T": "mm Hg",
+      "U": "mmHg",
+      "V": "mm[Hg]"
     },
     {
       "A": 3,
@@ -40802,7 +43699,9 @@ export default [
       "F": "Intraocular pressure Right eye",
       "N": "Intraocular pressure Eye-R Tono",
       "O": "LN",
-      "T": "mm Hg"
+      "T": "mm Hg",
+      "U": "mmHg",
+      "V": "mm[Hg]"
     },
     {
       "A": 3,
@@ -40942,7 +43841,9 @@ export default [
       "K": 106,
       "N": "Est. average glucose Bld gHb Est-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
@@ -40987,7 +43888,9 @@ export default [
       "G": "Glucose fasting Glucometer mass conc (BldC)",
       "N": "Glucose p fast BldC Glucomtr-mCnc",
       "O": "LN",
-      "T": "mg/dL"
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 2,
@@ -41009,7 +43912,9 @@ export default [
       "F": "Head Occipital-frontal circumference Percentile",
       "N": "Head Circumf OFC Prctl",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 3,
@@ -41019,7 +43924,9 @@ export default [
       "F": "Head Occipital-frontal circumference",
       "N": "Head Circumf OFC",
       "O": "LN",
-      "T": "CM"
+      "T": "CM",
+      "U": "cm",
+      "V": "cm"
     },
     {
       "A": 3,
@@ -41029,7 +43936,9 @@ export default [
       "F": "Body height [Percentile]",
       "N": "Body height Prctl",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 3,
@@ -41039,7 +43948,9 @@ export default [
       "F": "Body height",
       "N": "Body height",
       "O": "LN",
-      "T": "INCH(S)"
+      "T": "INCH(S)",
+      "U": "in",
+      "V": "[in_i]"
     },
     {
       "A": 3,
@@ -41047,9 +43958,12 @@ export default [
       "D": 11401,
       "E": "8328-7",
       "F": "Axillary temperature",
+      "G": "Axiliary temp F",
       "N": "Axil temp",
       "O": "LN",
-      "T": "DEG F"
+      "T": "DEG F",
+      "U": "F",
+      "V": "[degF]"
     },
     {
       "A": 3,
@@ -41057,9 +43971,12 @@ export default [
       "D": 7187,
       "E": "8332-9",
       "F": "Rectal temperature",
+      "G": "Rectal temp F",
       "N": "Rectal temp",
       "O": "LN",
-      "T": "DEG F"
+      "T": "DEG F",
+      "U": "F",
+      "V": "[degF]"
     },
     {
       "A": 3,
@@ -41069,7 +43986,9 @@ export default [
       "F": "Body weight [Percentile] Per age",
       "N": "Bdy weight Prctl Per Age",
       "O": "LN",
-      "T": "%"
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 2,
@@ -41296,7 +44215,9 @@ export default [
       "D": 23421,
       "E": "48544-1",
       "F": "Geriatric depression scale (GDS) total",
-      "O": "LN"
+      "O": "LN",
+      "U": "score",
+      "V": "{score}"
     },
     {
       "A": 2,
@@ -41311,7 +44232,9 @@ export default [
       "E": "72514-3",
       "F": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
       "N": "Pain severity 0-10 Score Reported",
-      "O": "LN"
+      "O": "LN",
+      "U": "score",
+      "V": "{score}"
     },
     {
       "A": 2,
@@ -41367,7 +44290,9 @@ export default [
       "D": 23420,
       "E": "72106-8",
       "F": "Total score [MMSE]",
-      "O": "LN"
+      "O": "LN",
+      "U": "score",
+      "V": "{score}"
     },
     {
       "A": 2,
@@ -41421,7 +44346,9 @@ export default [
       "E": "21841-2",
       "F": "Age at cancer diagnosis",
       "N": "Cancer diagnosis age",
-      "O": "LN"
+      "O": "LN",
+      "U": "a",
+      "V": "a"
     },
     {
       "A": 3,
@@ -41430,7 +44357,8 @@ export default [
       "E": "21873-5",
       "F": "Year first seen at this hospital for [Date] Cancer",
       "N": "Y first seen this hospital for Cancer",
-      "O": "LN"
+      "O": "LN",
+      "V": "{yyyy}"
     },
     {
       "A": 3,
@@ -41449,7 +44377,9 @@ export default [
       "F": "NAACCR survival to last contact (in months) [Time]",
       "N": "NAACCR survi to last contact (in months)",
       "O": "LN",
-      "T": "months"
+      "T": "months",
+      "U": "mo",
+      "V": "mo"
     },
     {
       "A": 2,
@@ -41550,7 +44480,9 @@ export default [
       "E": "38227-5",
       "F": "Braden scale total score",
       "N": "Braden Scale Total Score",
-      "O": "LN"
+      "O": "LN",
+      "U": "score",
+      "V": "{score}"
     },
     {
       "A": 2,
@@ -41571,7 +44503,9 @@ export default [
       "E": "9269-2",
       "F": "Glasgow coma score total",
       "N": "GCS total",
-      "O": "LN"
+      "O": "LN",
+      "U": "score",
+      "V": "{score}"
     },
     {
       "A": 2,

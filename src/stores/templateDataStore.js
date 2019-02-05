@@ -67,7 +67,6 @@ class TemplateDataStore {
       quarter: this.quarterList,
       year: this.yearList
     };
-    console.log(this.templateTree)
 
     return [tableData, columnInfo]
   }
@@ -247,7 +246,7 @@ class TemplateDataStore {
     //   RI NAME
     let name = '';
     if (item.O === 'RI') {
-      name = item.B ? item.B : '';
+      name = item.G ? item.G : item.B ? item.B : '';
     }
     else {
       name = item.G ? item.G : item.N ? item.N : item.F ? item.F : item.B ? item.B : '';
@@ -288,8 +287,9 @@ class TemplateDataStore {
           eqClassRow.isEqClassRow = true; 
           eqClassRow.codeList = codeList;
           //eqClassRow.loincList = loincList;
+          // set display name
           eqClassRow.G = eqClass;
-          eqClassRow.B = eqClass;
+          eqClassRow.displayName = eqClass;
           eqClassRow.key = eqClassRow.key + '_EQ';
           eqClassRow.commonUCUM = ''; // ?
           eqClassList.push(
@@ -396,6 +396,7 @@ class TemplateDataStore {
         let date = this._getDate(item);
         let value = this._getValue(item);
         let unit = this._getUnit(item);
+        let debugInfo = this._getDebugInfo(item);
         let interpretationCode = this._getInterpretation(item);
           
         // let range = this._getReferenceRange(item);
@@ -846,6 +847,9 @@ class TemplateDataStore {
     return entry.resource && entry.resource.referenceRange ? entry.resource.referenceRange : null;
   }
 
+  _getDebugInfo(item, entry) {
+
+  }
 
   /** temp. solution for mass unit conversion */
 

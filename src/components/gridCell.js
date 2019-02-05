@@ -1,8 +1,34 @@
 import React from 'react';
 import SparkLine from "./sparkLine";
-import { Icon, Button } from "antd";
+import { Icon, Button, Popover } from "antd";
 
 class GridCell extends React.PureComponent {
+
+  nodeInfo = {
+     "A": "LVL",
+     "B": "INDENTEDNAME",
+     "C": "EquivalenceClass",
+     "D": "CODE",
+     "E": "LOINC_MERGED",
+     "F": "LONG_COMMON_NAME_LOINC",
+     "G": "LOINC_DISPLAY",
+     "H": "units_normRange",
+     "I": "norm_range",
+     "J": "norm_low",
+     "K": "norm_high",
+     "L": "danger_high",
+     "M": "danger_low",
+     "N": "LOINC_ShortName",
+     "O": "Code_indicator",
+     "P": "EquivalenceClass_UOM",
+     "Q": "EquivalenceClass_UCUM",
+     "R": "Molecular_weight",
+     "S": "Convert_indicator",
+     "T": "UNITS_RI",
+     "U": "UNITS_DISPLAY",
+     "V": "UCUM_EX"
+  };
+
 
   getCellClass(data, columnIndex, rowIndex) {
 
@@ -66,14 +92,16 @@ class GridCell extends React.PureComponent {
 
   dataCell(data, columnIndex, rowIndex) {
 
+    let content = '';
 
     if (!data) {
-      return "Default2, should not appear"
+      content = "no data, should not appear"
     }
-    const { tableData, columns, showUnit, expColFunc } = data;
+
+    const { tableData, columns, showUnit, expColFunc, showDebugInfo} = data;
 
     if (!tableData) {
-      return "Default2, should not appear"
+      content = "no table data, should not appear"
     }
 
     const dataRow = tableData[rowIndex - 1];
@@ -81,7 +109,7 @@ class GridCell extends React.PureComponent {
 
     // column headers
     if (rowIndex === 0 ) {
-      return columns[columnIndex].title
+      content = columns[columnIndex].title
     }
     // data rows
     else if (rowIndex >= 1) {
@@ -90,29 +118,60 @@ class GridCell extends React.PureComponent {
         if (dataRow.isTempHeader) {
           if (dataRow.sectionCollapsed) {
             //return <div><span className="exp-col-button" onClick={() => expColFunc(dataRow.key)}><Icon type="right-circle" /></span>  {dataRow.displayName} {dataRow.isEqClassRow ? ' [' + Object.keys(dataRow.eqClassItems).length + ']' : ''}</div>
-            return <div><span className="exp-col-button" onClick={() => expColFunc(dataRow.key)}><Icon type="right-circle" /></span>  {dataRow.displayName} </div>
+            content = <div><span className="exp-col-button" onClick={() => expColFunc(dataRow.key)}><Icon type="right-circle" /></span>  {dataRow.displayName} </div>
           }
           else {
             //return <div><span className="exp-col-button" onClick={() => expColFunc(dataRow.key)}><Icon type="down-circle" /></span> {dataRow.displayName} {dataRow.isEqClassRow ? ' [' + Object.keys(dataRow.eqClassItems).length + ']' : ''}</div>
-            return <div><span className="exp-col-button" onClick={() => expColFunc(dataRow.key)}><Icon type="down-circle" /></span> {dataRow.displayName} </div>
+            content = <div><span className="exp-col-button" onClick={() => expColFunc(dataRow.key)}><Icon type="down-circle" /></span> {dataRow.displayName} </div>
           }
         }
         else {
           //return dataRow.displayName + (dataRow.isEqClassRow ? ' [' + Object.keys(dataRow.eqClassItems).length + ']' : '')
           if (dataRow.isEqClassRow) {
             //type="box-plot" theme="filled"
-            return <div><span><Icon type="colum-height" /></span> {dataRow.displayName} {dataRow.isEqClassRow ? ' [' + Object.keys(dataRow.eqClassItems).length + ']' : ''}</div>
+            content = <div><span><Icon type="colum-height" /></span> {dataRow.displayName} {dataRow.isEqClassRow ? ' [' + Object.keys(dataRow.eqClassItems).length + ']' : ''}</div>
           }
           else {
-            return dataRow.displayName;
+            content = dataRow.displayName;
           }
 
+        }
+
+        if (showDebugInfo) {
+        //      "A": "LVL",
+        //      "B": "INDENTEDNAME",
+        //      "C": "EquivalenceClass",
+        //      "D": "CODE",
+        //      "E": "LOINC_MERGED",
+        //      "F": "LONG_COMMON_NAME_LOINC",
+        //      "G": "LOINC_DISPLAY",
+        //      "H": "units_normRange",
+        //      "I": "norm_range",
+        //      "J": "norm_low",
+        //      "K": "norm_high",
+        //      "L": "danger_high",
+        //      "M": "danger_low",
+        //      "N": "LOINC_ShortName",
+        //      "O": "Code_indicator",
+        //      "P": "EquivalenceClass_UOM",
+        //      "Q": "EquivalenceClass_UCUM",
+        //      "R": "Molecular_weight",
+        //      "S": "Convert_indicator",
+        //      "T": "UNITS_RI",
+        //      "U": "UNITS_DISPLAY",
+        //      "V": "UCUM_EX"
+          let debugInfo =
+              <Popover placement="bottomLeft" title={dataRow.displayName} content={this._getDebugInfo(dataRow)} trigger="click">
+                <Button type="circle" icon="tool" size="small"></Button>
+              </Popover>
+
+          content = <div>{content} {debugInfo}</div>
         }
 
       }
       // spark line
       else if (columnIndex === 1) {
-        return <SparkLine record={dataRow}/>
+        content = <SparkLine record={dataRow}/>
       }
       // data
       else {
@@ -120,20 +179,53 @@ class GridCell extends React.PureComponent {
         let dataKey = columns[columnIndex].dataKey;
         if (dataKey && dataRow[dataKey]) {
           if (showUnit) {
-            return dataRow[dataKey].valueWithUnit
+            content = dataRow[dataKey].valueWithUnit
           }
           else {
-            return dataRow[dataKey].value
+            content = dataRow[dataKey].value
           }
         }
         else if (dataRow.isSectionHeader) {
-          return ""
+          content = ""
         }
         else {
-          return "-"
+          content = "-"
         }
       }
     }
+
+    return content;
+
+  }
+
+
+  _renderDebugInfoRow(field) {
+    return (
+        <tr key={field.key}>
+          <td>{ field.key }</td>
+          <td>{ field.value }</td>
+        </tr>
+    );
+  }
+
+  /**
+   * Display all the info on the node in the hierarchy file
+    * @param node a node in the hierarchy file
+   * @returns {*} a html table
+   * @private
+   */
+  _getDebugInfo(node) {
+
+    let dataFields = Object.keys(this.nodeInfo)
+        .reduce((acc, key) => node[key] ? ([...acc, {key: key +":" + this.nodeInfo[key], value:node[key]}]) : acc,  []);
+
+    return (
+        <table>
+          <tbody>
+          { dataFields.map(this._renderDebugInfoRow) }
+          </tbody>
+        </table>
+    );
 
   }
 

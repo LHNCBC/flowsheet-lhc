@@ -12,7 +12,7 @@ class ZoomLevelPicker extends React.Component {
     super(props);
 
     let list = [
-      {name: 'All', key: 'date'},
+      {name: 'All Dates', key: 'date'},
       {name: 'One Per Day', key: 'day'},
       {name: 'One Per Week', key: 'week'},
       {name: 'One Per Month', key: 'month'},
