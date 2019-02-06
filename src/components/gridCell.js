@@ -98,7 +98,7 @@ class GridCell extends React.PureComponent {
       content = "no data, should not appear"
     }
 
-    const { tableData, columns, showUnit, expColFunc, showDebugInfo} = data;
+    const { tableData, columns, showUnit, expColFunc, eqExpColFunc, showDebugInfo} = data;
 
     if (!tableData) {
       content = "no table data, should not appear"
@@ -129,7 +129,7 @@ class GridCell extends React.PureComponent {
           //return dataRow.displayName + (dataRow.isEqClassRow ? ' [' + Object.keys(dataRow.eqClassItems).length + ']' : '')
           if (dataRow.isEqClassRow) {
             //type="box-plot" theme="filled"
-            content = <span><span><Icon type="colum-height" /></span> {dataRow.displayName} {dataRow.isEqClassRow ? ' [' + Object.keys(dataRow.eqClassItems).length + ']' : ''}</span>
+            content = <span><span className="exp-col-button" onClick={() => eqExpColFunc(dataRow.key)}><Icon type="colum-height" /></span> {dataRow.displayName} {dataRow.isEqClassRow ? ' [' + Object.keys(dataRow.eqClassItems).length + ']' : ''}</span>
           }
           else {
             content = dataRow.displayName;
@@ -138,28 +138,6 @@ class GridCell extends React.PureComponent {
         }
 
         if (showDebugInfo) {
-        //      "A": "LVL",
-        //      "B": "INDENTEDNAME",
-        //      "C": "EquivalenceClass",
-        //      "D": "CODE",
-        //      "E": "LOINC_MERGED",
-        //      "F": "LONG_COMMON_NAME_LOINC",
-        //      "G": "LOINC_DISPLAY",
-        //      "H": "units_normRange",
-        //      "I": "norm_range",
-        //      "J": "norm_low",
-        //      "K": "norm_high",
-        //      "L": "danger_high",
-        //      "M": "danger_low",
-        //      "N": "LOINC_ShortName",
-        //      "O": "Code_indicator",
-        //      "P": "EquivalenceClass_UOM",
-        //      "Q": "EquivalenceClass_UCUM",
-        //      "R": "Molecular_weight",
-        //      "S": "Convert_indicator",
-        //      "T": "UNITS_RI",
-        //      "U": "UNITS_DISPLAY",
-        //      "V": "UCUM_EX"
           let debugInfo =
               <Popover placement="bottomLeft" title={dataRow.displayName} content={this._getDebugInfo(dataRow)} trigger="click">
                 <Button type="circle" icon="tool" size="small"></Button>

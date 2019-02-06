@@ -48,6 +48,7 @@ class App extends Component {
     this.expandCollapseAHeader = this.expandCollapseAHeader.bind(this);
     this.onAdditionalControlsChange = this.onAdditionalControlsChange.bind(this);
     this.onDebugSwitchChange = this.onDebugSwitchChange.bind(this);
+    this.expandCollapseAnEqClassRow = this.expandCollapseAnEqClassRow.bind(this);
 
   }
 
@@ -218,7 +219,7 @@ class App extends Component {
 
     this.setState({
       showEqClass: checked,
-      flowsheetData: tableDataStore.resetData(checked),
+      flowsheetData: tableDataStore.resetData(checked, true),
     })
 
   }
@@ -252,6 +253,18 @@ class App extends Component {
     }
   }
 
+  expandCollapseAnEqClassRow(itemKey) {
+    console.log('in app.js');
+    console.log(itemKey);
+    let changed = tableDataStore.expandCollapseAnEqClassRow(itemKey);
+    console.log(changed);
+    if (changed) {
+      this.setState({
+        flowsheetData: tableDataStore.resetData(this.state.showEqClass),
+      })
+
+    }
+  }
 
   render() {
     let name = this.state.selectedPatient ? this.state.selectedPatient.name : "";
@@ -384,7 +397,8 @@ class App extends Component {
                 showUnit: this.state.showUnit,
                 showEqClass: this.state.showEqClass,
                 showDebugInfo: this.state.showDebugInfo,
-                expColFunc: this.expandCollapseAHeader
+                expColFunc: this.expandCollapseAHeader,
+                eqExpColFunc: this.expandCollapseAnEqClassRow
               }
               }
           >

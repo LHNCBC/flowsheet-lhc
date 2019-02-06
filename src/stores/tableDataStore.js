@@ -100,14 +100,17 @@ class TableDataStore {
       });
   }
 
-  resetData(showEqClass) {
-    return templateStore.resetTableData(showEqClass)
+  resetData(showEqClass, force) {
+    return templateStore.resetTableData(showEqClass, force)
   }
 
   expandCollapseAHeader(itemKey) {
     return templateStore.expandCollapseAHeader(itemKey);
   }
 
+  expandCollapseAnEqClassRow(itemKey) {
+    return templateStore.expandCollapseAnEqClassRow(itemKey);
+  }
 }
 
 

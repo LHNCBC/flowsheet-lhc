@@ -71,10 +71,21 @@ class TemplateDataStore {
     return [tableData, columnInfo]
   }
 
-  resetTableData(showEqClass) {
+  resetTableData(showEqClass, force) {
 
-    let tableData = this._exportTableData(showEqClass);
+    let tableData = this._exportTableData(showEqClass, force);
 
+    if (force) {
+      for(let j=0; j<this.templateTree.length; j++) {
+        let item = this.templateTree[j];
+        if (item.isEqClassRow && (item.eqClassRowHidden === false || item.eqClassRowHidden === true)) {
+          delete item.eqClassRowHidden
+        }
+        if (item.isTempItemInEqClass && (item.itemInEqClassHidden === false || item.itemInEqClassHidden === true)) {
+          delete item.itemInEqClassHidden
+        }
+      }
+    }
     console.log(tableData)
     return tableData
   }
@@ -151,6 +162,77 @@ class TemplateDataStore {
 
     return true;
   }
+
+  expandCollapseAnEqClassRow(itemKey) {
+    let clickedItemIndex = this.templateTree.findIndex(item => item.key === itemKey);
+
+    // not found
+    if (clickedItemIndex === -1) {
+      return false;
+    }
+
+    let clickedItem = this.templateTree[clickedItemIndex];
+    if (clickedItem.isEqClassRow) {
+      if (clickedItem.eqClassRowHidden || clickedItem.eqClassRowHidden === undefined) {
+        return this.expandAnEqClassRow(clickedItem, clickedItemIndex);
+      }
+      else {
+        return this.collapseAnEqClassRow(clickedItem, clickedItemIndex)
+      }
+    }
+  }
+
+  expandAnEqClassRow(clickedItem, clickedItemIndex) {
+
+    // if it's already expanded (itself is hidden), do nothing
+    if (clickedItem.eqClassRowHidden) {
+      return false;
+    }
+    else {
+      clickedItem.eqClassRowHidden = true;
+    }
+
+
+    let k = 1;
+    while(k<=clickedItem.codeList.length && clickedItemIndex+k < this.templateTree.length && this.templateTree[clickedItemIndex+k].isTempItemInEqClass) {
+      let nextItem = this.templateTree[clickedItemIndex+k];
+      let nextCode = nextItem.O === "RI" ? nextItem.D : nextItem.E;
+
+
+      clickedItem.codeList.forEach((code) => {
+        if (code === nextCode) {
+          nextItem.itemInEqClassHidden = false;
+        }
+      });
+      k++;
+    }
+
+    return true;
+  }
+
+
+  collapseAnEqClassRow(clickedItem, clickedItemIndex) {
+
+    let clickedItemLevel = clickedItem.A;
+
+    // if it's already collapsed, do nothing
+    if (clickedItem.sectionCollapsed) {
+      return false;
+    }
+    else {
+      clickedItem.sectionCollapsed = true;
+    }
+
+    // check all its decedents
+    for(let i=clickedItemIndex+1; i<this.templateTree.length && this.templateTree[i].A > clickedItemLevel; i++) {
+      let item = this.templateTree[i];
+      item.itemHidden = true;
+    }
+
+    return true;
+  }
+
+
   /**
    * Remove items in the hierarchy that have no code (LOINC, in E) while keeping the hierachy structure.
    * Group header items do not have to have the code.
@@ -703,17 +785,26 @@ class TemplateDataStore {
    * @returns {*[]}
    * @private
    */
-  _exportTableData(showEqClass) {
-    // return this.templateTree.filter(node => node.hasData &&
-    //     (showEqClass && (node.hasMultipleItemsInEqClass || !node.isEqClassRow && !node.isTempItemInEqClass) ||
-    //         !showEqClass && (node.hasMultipleItemsInEqClass || !node.isEqClassRow)
+  _exportTableData(showEqClass, force) {
+    // return this.templateTree.filter(node => node.hasData && !node.itemHidden &&
+    //     (showEqClass && (node.hasMultipleItemsInEqClass || !node.isEqClassRow && !node.isMultipleItemsInEqClass) ||
+    //         !showEqClass && !node.isEqClassRow
     //     )
     // );
-    return this.templateTree.filter(node => node.hasData && !node.itemHidden &&
-        (showEqClass && (node.hasMultipleItemsInEqClass || !node.isEqClassRow && !node.isMultipleItemsInEqClass) ||
-            !showEqClass && !node.isEqClassRow
+
+    return force ?
+        this.templateTree.filter(node => node.hasData && !node.itemHidden &&
+            (showEqClass && (node.hasMultipleItemsInEqClass || !node.isEqClassRow && !node.isMultipleItemsInEqClass) ||
+                !showEqClass && !node.isEqClassRow
+            )
         )
-    );
+        :
+        this.templateTree.filter(node => node.hasData && !node.itemHidden &&
+            (showEqClass && (node.hasMultipleItemsInEqClass || !node.isEqClassRow && (!node.isMultipleItemsInEqClass || node.itemInEqClassHidden === false)) && !node.eqClassRowHidden ||
+                !showEqClass && !node.isEqClassRow
+            )
+        );
+
   }
 
 
