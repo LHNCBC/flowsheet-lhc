@@ -40,15 +40,14 @@
   border-top: 2px solid #0BACB6;
   border-bottom: 7px solid #17b4e3;
   line-height: normal;
-  padding-bottom: 22px;
+  padding-bottom: 32px;
 }
 
 #logo img {
   float: left;
-  margin-right: 10px;
-  margin-left: 20px;
+  margin: 10px;
   border-right: 1px solid #0BACB6;
-  padding-right: .75em;
+  padding-right: 10px;
 }
 #siteNameBox {
   margin-top: 2.2em;
@@ -61,7 +60,7 @@
   font-size: 300%;
 }
 
-#lf-options, 
+#lf-options,
 #lf-data-table {
   border-top: 2px solid #0BACB6;
   border-bottom: 2px solid #17b4e3;
@@ -85,22 +84,22 @@
 }
 
 .flowsheet-table .row-level-1.col-name {
-  padding-left: 2px;
+  padding-left: 6px;
 }
 .flowsheet-table .row-level-2.col-name {
-  padding-left: 18px;
+  padding-left: 26px;
 }
 .flowsheet-table .row-level-3.col-name {
-  padding-left: 34px;
+  padding-left: 46px;
 }
 .flowsheet-table .row-level-4.col-name {
-  padding-left: 50px;
-}
-.flowsheet-table .row-level-5.col-name {
   padding-left: 66px;
 }
+.flowsheet-table .row-level-5.col-name {
+  padding-left: 86px;
+}
 .flowsheet-table .row-level-6.col-name {
-  padding-left: 82px;
+  padding-left: 106px;
 }
 
 
@@ -130,7 +129,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  padding: 2px;
+  padding: 4px;
   font-size: 16px;
   border-bottom: 1px solid #e8e8e8;
   text-align: center;
@@ -140,7 +139,7 @@
   z-index: 12;
 }
 .flowsheet-table .StickyRowColCell {
-  padding: 2px;
+  padding: 4px;
   font-size: 16px;
   border-bottom: 1px solid #e8e8e8;
 }
@@ -154,7 +153,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  padding: 2px;
+  padding: 4px;
   font-size: 16px;
   border-bottom: 1px solid #e8e8e8;
 }
@@ -165,7 +164,7 @@
 
 .flowsheet-table .col-header {
   font-size: 16px;
-  padding: 2px;
+  padding: 4px;
   font-weight: 500;
   color: rgba(0,0,0, 0.85);
 
@@ -188,7 +187,7 @@
 
   border-top: 2px solid #2f96b4;
   top: 14px;
-  width: 6px;
+  width: 4px;
   height: 0;
 
 }
@@ -209,9 +208,9 @@
   position: absolute;
 
   border-top: 2px solid #2f96b4;
-  top: 14px;
-  width: 6px;
+  width: 4px;
   height: 0;
+  bottom: 12px;
 }
 /* vertical line */
 .flowsheet-table .row-multiple-item-in-eq-class.last-item-in-eq-class.col-name:after {
@@ -221,7 +220,7 @@
   border-left: 2px solid #2f96b4;
   width: 0;
   top: 0;
-  bottom: 14px;
+  bottom: 12px;
 }
 /* middle items, no horizontal bar */
 .flowsheet-table .row-multiple-item-in-eq-class.col-name:after {
@@ -235,49 +234,101 @@
 }
 /* set left position of different levels*/
 .flowsheet-table .row-level-1.row-multiple-item-in-eq-class.col-name:before {
-  left: 0;
+  left: 2;
 }
 .flowsheet-table .row-level-2.row-multiple-item-in-eq-class.col-name:before {
-  left: 12px;
+  left: 22px;
 }
 .flowsheet-table .row-level-3.row-multiple-item-in-eq-class.col-name:before {
-  left: 28px;
+  left: 42px;
 }
 .flowsheet-table .row-level-4.row-multiple-item-in-eq-class.col-name:before {
-  left: 44px;
+  left: 62px;
 }
 .flowsheet-table .row-level-5.row-multiple-item-in-eq-class.col-name:before {
-  left: 60px;
+  left: 82px;
 }
 .flowsheet-table .row-level-6.row-multiple-item-in-eq-class.col-name:before {
-  left: 76px;
+  left: 102px;
 }
 .flowsheet-table .row-level-1.row-multiple-item-in-eq-class.col-name:after {
-  left: 0;
+  left: 2;
 }
 .flowsheet-table .row-level-2.row-multiple-item-in-eq-class.col-name:after {
-  left: 12px;
+  left: 22px;
 }
 .flowsheet-table .row-level-3.row-multiple-item-in-eq-class.col-name:after {
-  left: 28px;
+  left: 42px;
 }
 .flowsheet-table .row-level-4.row-multiple-item-in-eq-class.col-name:after {
-  left: 44px;
+  left: 62px;
 }
 .flowsheet-table .row-level-5.row-multiple-item-in-eq-class.col-name:after {
-  left: 60px;
+  left: 82px;
 }
 .flowsheet-table .row-level-6.row-multiple-item-in-eq-class.col-name:after {
-  left: 76px;
+  left: 102px;
 }
+/*!* first item that has a button *!*/
+/*.flowsheet-table .first-item-in-eq-class.row-level-1.row-multiple-item-in-eq-class.col-name:before {*/
+  /*left: 20px;*/
+/*}*/
+/*.flowsheet-table .first-item-in-eq-class.row-level-2.row-multiple-item-in-eq-class.col-name:before {*/
+  /*left: 32px;*/
+/*}*/
+/*.flowsheet-table .first-item-in-eq-class.row-level-3.row-multiple-item-in-eq-class.col-name:before {*/
+  /*left: 48px;*/
+/*}*/
+/*.flowsheet-table .first-item-in-eq-class.row-level-4.row-multiple-item-in-eq-class.col-name:before {*/
+  /*left: 64px;*/
+/*}*/
+/*.flowsheet-table .first-item-in-eq-class.row-level-5.row-multiple-item-in-eq-class.col-name:before {*/
+  /*left: 80px;*/
+/*}*/
+/*.flowsheet-table .first-item-in-eq-class.row-level-6.row-multiple-item-in-eq-class.col-name:before {*/
+  /*left: 96px;*/
+/*}*/
+/*.flowsheet-table .first-item-in-eq-class.row-level-1.row-multiple-item-in-eq-class.col-name:after {*/
+  /*left: 20px;*/
+/*}*/
+/*.flowsheet-table .first-item-in-eq-class.row-level-2.row-multiple-item-in-eq-class.col-name:after {*/
+  /*left: 32px;*/
+/*}*/
+/*.flowsheet-table .first-item-in-eq-class.row-level-3.row-multiple-item-in-eq-class.col-name:after {*/
+  /*left: 48px;*/
+/*}*/
+/*.flowsheet-table .first-item-in-eq-class.row-level-4.row-multiple-item-in-eq-class.col-name:after {*/
+  /*left: 64px;*/
+/*}*/
+/*.flowsheet-table .row-level-5.row-multiple-item-in-eq-class.col-name:after {*/
+  /*left: 80px;*/
+/*}*/
+/*.flowsheet-table .row-level-6.row-multiple-item-in-eq-class.col-name:after {*/
+  /*left: 96px;*/
+/*}*/
+
 
 /* styles for items in eq class */
 
-.exp-col-button {
+.exp-col-button,
+.eq-exp-col-button {
   cursor: pointer;
   transition: color .3s ease-in-out,background-color .3s ease-in-out;
 }
 .exp-col-button:hover {
   /*background-color: #1890ff;*/
   color: #fff;
+}
+.eq-exp-col-button {
+}
+.eq-exp-col-button:hover {
+  color: #2f96b4
+}
+
+/* to do */
+.row-multiple-item-in-eq-class.first-item-in-eq-class.col-name .item-name {
+  margin-left: -20px;
+}
+.row-type-eq-class.col-name .item-name {
+  margin-left: -20px;
 }

@@ -338,7 +338,9 @@ class App extends Component {
               </Col>
             </Row>
 
-            <Button className='lf-button' type="dashed" icon={this.state.showAdditionalControls ? "down" : "right"} onClick={() => this.onAdditionalControlsChange()}>Additional Controls</Button>
+            <Row type="flex" className="lf-row">
+              <Button type="dashed" icon={this.state.showAdditionalControls ? "down" : "right"} onClick={() => this.onAdditionalControlsChange()}>Additional Controls</Button>
+            </Row>
 
             { this.state.showAdditionalControls &&
             <Row type="flex" className="lf-row">
@@ -351,20 +353,22 @@ class App extends Component {
             }
           </div>
 
-          <Row id="lf-status" className='lf-data-info lf-row'>
-            <Col xs={24} sm={12} md={6} lg={6} xl={6}>
-              Displayed Resources: <span className="lf-bold">{ tableDataStore.retrievedNumOfRes }</span>
-            </Col>
-            <Col xs={24} sm={12} md={6} lg={6} xl={6}>
-              Total Resources: <span className="lf-bold">{ tableDataStore.availableNumOfRes }</span>
-            </Col>
-            <Col xs={24} sm={12} md={6} lg={6} xl={6}>
-              Columns: <span className="lf-bold">{this.state.flowsheetColumns ? this.state.flowsheetColumns.length-3 : 0 }</span>
-            </Col>
-            <Col xs={24} sm={12} md={6} lg={6} xl={6}>
-              Rows: <span className="lf-bold">{this.state.flowsheetData ? this.state.flowsheetData.length : 0 }</span>
-            </Col>
-          </Row>
+          <div id="lf-status">
+            <Row type="flex" className='lf-data-info lf-row'>
+              <Col xs={24} sm={12} md={6} lg={6} xl={6}>
+                Displayed Resources: <span className="lf-bold">{ tableDataStore.retrievedNumOfRes }</span>
+              </Col>
+              <Col xs={24} sm={12} md={6} lg={6} xl={6}>
+                Total Resources: <span className="lf-bold">{ tableDataStore.availableNumOfRes }</span>
+              </Col>
+              <Col xs={24} sm={12} md={6} lg={6} xl={6}>
+                Columns: <span className="lf-bold">{this.state.flowsheetColumns ? this.state.flowsheetColumns.length-3 : 0 }</span>
+              </Col>
+              <Col xs={24} sm={12} md={6} lg={6} xl={6}>
+                Rows: <span className="lf-bold">{this.state.flowsheetData ? this.state.flowsheetData.length : 0 }</span>
+              </Col>
+            </Row>
+          </div>
 
 
         </div>

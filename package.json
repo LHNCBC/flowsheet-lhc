@@ -22,7 +22,8 @@
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-sparklines": "file:../react-sparklines",
-    "react-window": "file:../react-window"
+    "react-window": "file:../react-window",
+    "recharts": "^1.4.2"
   },
   "scripts": {
     "start": "react-scripts start",
