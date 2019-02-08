@@ -141,7 +141,7 @@ class GridCell extends React.PureComponent {
           if (dataRow.isEqClassRow) {
             //type="box-plot" theme="filled"
             //content = <span><span className="exp-col-button" onClick={() => eqExpColFunc(dataRow.key)}><Icon type="vertical-align-middl" /></span> {dataRow.displayName} {dataRow.isEqClassRow ? ' [' + Object.keys(dataRow.eqClassItems).length + ']' : ''}</span>
-            content = <span className="item-name"><span className="exp-col-button" onClick={() => eqExpColFunc(dataRow.key)}><Icon type="colum-height" /></span> {dataRow.displayName} {dataRow.isEqClassRow ? ' [' + Object.keys(dataRow.eqClassItems).length + ']' : ''}</span>
+            content = <span className="item-name"><span className="eq-exp-col-button" onClick={() => eqExpColFunc(dataRow.key)}><Icon type="colum-height" /></span> {dataRow.displayName} {dataRow.isEqClassRow ? ' [' + Object.keys(dataRow.eqClassItems).length + ']' : ''}</span>
           }
           else if (dataRow.isMultipleItemsInEqClass) {
             if (dataRow.firstItemInEqClass) {
