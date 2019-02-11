@@ -37,7 +37,28 @@ class GridCell extends React.PureComponent {
      "S": "Convert_indicator",
      "T": "UNITS_RI",
      "U": "UNITS_DISPLAY",
-     "V": "UCUM_EX"
+     "V": "UCUM_EX",
+     "displayName": "",
+     "firstItemInEqClass":"",
+     "lastItemInEqClass":"",
+     "isMultipleItemsInEqClass":"",
+     "isTempItemInEqClass":"",
+     "itemHidden":"",
+     "hasData":"",
+     "keep":"",
+     "key":"",
+     "high":"",
+     "low":"",
+     "isSectionHeader":"",
+     "isTempHeader":"",
+     "sectionCollapsed":"",
+     "commonUCUM":"",
+     "eqClassItems":"",
+     "hasMultipleItemsInEqClass":"",
+     "isEqClassRow":"",
+    "itemInEqClassHidden":"",
+    "eqClassRowHidden":"",
+    "codeList": ""
   };
 
 
@@ -217,7 +238,7 @@ class GridCell extends React.PureComponent {
   _getDebugInfo(node) {
 
     let dataFields = Object.keys(this.nodeInfo)
-        .reduce((acc, key) => node[key] ? ([...acc, {key: key +":" + this.nodeInfo[key], value:node[key]}]) : acc,  []);
+        .reduce((acc, key) => node[key] ? ([...acc, {key: key +":" + this.nodeInfo[key], value:node[key] + ""}]) : acc,  []);
 
     return (
         <table>

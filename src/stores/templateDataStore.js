@@ -92,20 +92,24 @@ class TemplateDataStore {
 
 
   expandCollapseAHeader(itemKey) {
+
+    let changed = false;
     let clickedItemIndex = this.templateTree.findIndex(item => item.key === itemKey);
 
     // not found
     if (clickedItemIndex === -1) {
-      return false;
+      changed = false;
     }
 
     let clickedItem = this.templateTree[clickedItemIndex];
     if (clickedItem.sectionCollapsed) {
-      return this.expandAHeader(clickedItem, clickedItemIndex);
+      changed = this.expandAHeader(clickedItem, clickedItemIndex);
     }
     else {
-      return this.collapseAHeader(clickedItem, clickedItemIndex)
+      changed = this.collapseAHeader(clickedItem, clickedItemIndex)
     }
+
+    return changed;
   }
 
   expandAHeader(clickedItem, clickedItemIndex) {
@@ -164,46 +168,36 @@ class TemplateDataStore {
   }
 
   expandCollapseAnEqClassRow(itemKey) {
+
+    let changed = false;
     let clickedItemIndex = this.templateTree.findIndex(item => item.key === itemKey);
 
     // not found
     if (clickedItemIndex === -1) {
-      return false;
+      changed = false;
     }
 
     let clickedItem = this.templateTree[clickedItemIndex];
-    if (clickedItem.isEqClassRow) {
-      if (clickedItem.eqClassRowHidden || clickedItem.eqClassRowHidden === undefined) {
-        return this.expandAnEqClassRow(clickedItem, clickedItemIndex);
-      }
-      else {
-        return this.collapseAnEqClassRow(clickedItem, clickedItemIndex)
-      }
+
+    if (clickedItem.isEqClassRow && !clickedItem.eqClassRowHidden) {
+      changed = this.expandAnEqClassRow(clickedItem, clickedItemIndex);
     }
+    if (clickedItem.isMultipleItemsInEqClass && !clickedItem.itemInEqClassHidden) {
+      changed = this.collapseAnEqClassRow(clickedItem, clickedItemIndex);
+    }
+
+    return changed;
+
   }
 
   expandAnEqClassRow(clickedItem, clickedItemIndex) {
 
-    // if it's already expanded (itself is hidden), do nothing
-    if (clickedItem.eqClassRowHidden) {
-      return false;
-    }
-    else {
-      clickedItem.eqClassRowHidden = true;
-    }
-
+    clickedItem.eqClassRowHidden = true;
 
     let k = 1;
     while(k<=clickedItem.codeList.length && clickedItemIndex+k < this.templateTree.length && this.templateTree[clickedItemIndex+k].isTempItemInEqClass) {
       let nextItem = this.templateTree[clickedItemIndex+k];
-      let nextCode = nextItem.O === "RI" ? nextItem.D : nextItem.E;
-
-
-      clickedItem.codeList.forEach((code) => {
-        if (code === nextCode) {
-          nextItem.itemInEqClassHidden = false;
-        }
-      });
+      nextItem.itemInEqClassHidden = false;
       k++;
     }
 
@@ -211,24 +205,33 @@ class TemplateDataStore {
   }
 
 
+  // only on the first item in eq class
   collapseAnEqClassRow(clickedItem, clickedItemIndex) {
 
-    let clickedItemLevel = clickedItem.A;
+    // find the eq class item
+    let k = clickedItemIndex-1;
+    while(k >=0) {
+      let preItem = this.templateTree[k];
+      if (preItem.isEqClassRow) {
+        let eqClassRow = preItem;
+        let eqClassRowIndex = k;
 
-    // if it's already collapsed, do nothing
-    if (clickedItem.sectionCollapsed) {
-      return false;
+        // change hidden status
+        if (eqClassRow.eqClassRowHidden || eqClassRow.eqClassRowHidden === undefined) {
+          // show eq class row
+          eqClassRow.eqClassRowHidden = false;
+          // hide all items in eq class
+          let i = 1;
+          while(i<=eqClassRow.codeList.length && eqClassRowIndex+i < this.templateTree.length && this.templateTree[eqClassRowIndex+i].isTempItemInEqClass) {
+            let nextItem = this.templateTree[eqClassRowIndex+i];
+            nextItem.itemInEqClassHidden = true;
+            i++;
+          }
+        }
+        break;
+      }
+      k--;
     }
-    else {
-      clickedItem.sectionCollapsed = true;
-    }
-
-    // check all its decedents
-    for(let i=clickedItemIndex+1; i<this.templateTree.length && this.templateTree[i].A > clickedItemLevel; i++) {
-      let item = this.templateTree[i];
-      item.itemHidden = true;
-    }
-
     return true;
   }
 
@@ -478,7 +481,6 @@ class TemplateDataStore {
         let date = this._getDate(item);
         let value = this._getValue(item);
         let unit = this._getUnit(item);
-        let debugInfo = this._getDebugInfo(item);
         let interpretationCode = this._getInterpretation(item);
           
         // let range = this._getReferenceRange(item);
@@ -597,14 +599,11 @@ class TemplateDataStore {
   _getDisplayValueForEqClassRow(commonUnit, commonUCUM, itemValues, node) {
     
     let ret, displayValue = [], displayValueWithUnit = [];
-    let riCodes = ["65", "202", "12984", "22414", "1276", "256", "1274", "4053", "4038", "39", "1793", "60", "876", "877",
-                   "65z", "202z", "12984z", "22414z", "1276z", "256z", "1274z", "4053z", "4038z", "39z", "1793z", "60z", "876z", "877z"];
 
     itemValues.forEach((val) => {
 
       if (commonUCUM && val.unit.code !== commonUCUM) {
         // special handling for mass unit conversion
-        //if (node.R && riCodes.includes(node.D)) {
         if (node.R && node.S === 'x') {
           let result = this._msUnitConvert(node.D, val.value, val.unit.code, commonUCUM, node.R);
           if (result && !isNaN(result)) {
@@ -801,7 +800,7 @@ class TemplateDataStore {
         :
         this.templateTree.filter(node => node.hasData && !node.itemHidden &&
             (showEqClass && (node.hasMultipleItemsInEqClass || !node.isEqClassRow && (!node.isMultipleItemsInEqClass || node.itemInEqClassHidden === false)) && !node.eqClassRowHidden ||
-                !showEqClass && !node.isEqClassRow
+                !showEqClass && (!node.isEqClassRow || node.isEqClassRow && node.eqClassRowHidden === false) && !node.itemInEqClassHidden
             )
         );
 
@@ -938,9 +937,6 @@ class TemplateDataStore {
     return entry.resource && entry.resource.referenceRange ? entry.resource.referenceRange : null;
   }
 
-  _getDebugInfo(item, entry) {
-
-  }
 
   /** temp. solution for mass unit conversion */
 
