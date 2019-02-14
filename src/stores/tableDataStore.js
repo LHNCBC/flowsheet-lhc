@@ -18,6 +18,8 @@ class TableDataStore {
   moreData = false;
   retrievedNumOfRes = 0;
   availableNumOfRes = 0;
+  dateStart = 0;
+  dateEnd = 0;
   
   setTemplate(temp) {
     templateStore.setTemplate(temp);    
@@ -70,6 +72,7 @@ class TableDataStore {
         that.moreData = fhirStore.moreData;
         that.retrievedNumOfRes = fhirStore.resourceRetrieved;
         that.availableNumOfRes = fhirStore.resourceAvailable;
+
         return {tableData: tableData, moreData: that.moreData}
         
       })

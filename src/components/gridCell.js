@@ -1,5 +1,7 @@
 import React from 'react';
 import SparkLine from "./sparkLine";
+//import SparkLine from "./sparkLineChart2";
+//import SparkLine from "./sparkLineChart";
 import { Icon, Button, Popover } from "antd";
 import CollapseIcon from '../collapse.svg';
 
@@ -130,7 +132,7 @@ class GridCell extends React.PureComponent {
       content = "no data, should not appear"
     }
 
-    const { tableData, columns, showUnit, expColFunc, eqExpColFunc, showDebugInfo} = data;
+    const { tableData, columns, showUnit, expColFunc, eqExpColFunc, showDebugInfo, dateRange} = data;
 
     if (!tableData) {
       content = "no table data, should not appear"
@@ -182,7 +184,7 @@ class GridCell extends React.PureComponent {
 
         if (showDebugInfo) {
           let debugInfo =
-              <Popover placement="bottomLeft" title={dataRow.displayName} content={this._getDebugInfo(dataRow)} trigger="click">
+              <Popover placement="bottomLeft" title={dataRow.displayName} content={this._getDebugInfo(dataRow, rowIndex)} trigger="click">
                 <Button type="circle" icon="tool" size="small"></Button>
               </Popover>
 
@@ -192,7 +194,8 @@ class GridCell extends React.PureComponent {
       }
       // spark line
       else if (columnIndex === 1) {
-        content = <SparkLine record={dataRow}/>
+        //content = <SparkLine record={dataRow}/>
+        content = <SparkLine record={dataRow} range={dateRange}/>
       }
       // data
       else {
@@ -235,10 +238,13 @@ class GridCell extends React.PureComponent {
    * @returns {*} a html table
    * @private
    */
-  _getDebugInfo(node) {
+  _getDebugInfo(node, index) {
 
     let dataFields = Object.keys(this.nodeInfo)
         .reduce((acc, key) => node[key] ? ([...acc, {key: key +":" + this.nodeInfo[key], value:node[key] + ""}]) : acc,  []);
+
+    // add index
+    dataFields.splice(0,0,{key: "RowIndex:", value: index});
 
     return (
         <table>

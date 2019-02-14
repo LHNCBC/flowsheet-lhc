@@ -40,6 +40,15 @@ class App extends Component {
       showDebugInfo: false
     };
 
+    this.anchorItemIndex = 0;
+    this.needReposition = false;
+    this.visibleRowStartIndex = 0;
+    this.visibleColumnStartIndex = 0;
+
+
+    this.refHeader = React.createRef();
+    this.refFooter = React.createRef();
+
     this.loadData = this.loadData.bind(this);
     this.appendData = this.appendData.bind(this);
     this.onUnitSwitchChange = this.onUnitSwitchChange.bind(this);
@@ -49,8 +58,11 @@ class App extends Component {
     this.onAdditionalControlsChange = this.onAdditionalControlsChange.bind(this);
     this.onDebugSwitchChange = this.onDebugSwitchChange.bind(this);
     this.expandCollapseAnEqClassRow = this.expandCollapseAnEqClassRow.bind(this);
+    this.stayPut = this.stayPut.bind(this);
 
   }
+
+  gridRef = React.createRef();
 
   setSelectedPatient(patient) {
     // reset template
@@ -101,12 +113,20 @@ class App extends Component {
 
     tableDataStore.getFirstPageData(patientId, this.state.showEqClass)
       .then(function(data) {
+
+        // scroll to the anchor item
+        that.anchorItemIndex = 0;
+        that.needReposition = true;
+
         that.setState({
           flowsheetData: data.tableData,
           moreData: data.moreData,
-          flowsheetColumns: tableDataStore.getColumnHeaders(that.state.zoomLevel)
+          flowsheetColumns: tableDataStore.getColumnHeaders(that.state.zoomLevel),
+
         });
         console.log(that.state.flowsheetColumns);
+
+
       })
       .catch(function(error) {
         console.log(error);
@@ -120,14 +140,32 @@ class App extends Component {
       moreData: false
     });
 
+    // get anchor item key, which is the 3nd item after the "visibleRowStartIndex" ??
+    let offsetRowNum = 3;
+    let itemIndex = this.visibleRowStartIndex + offsetRowNum;
+    let itemKey = this.state.flowsheetData[itemIndex].key;
     tableDataStore.getNextPageData(this.state.showEqClass)
       .then(function(data) {
+        // console.log("in appendData");
+        // console.log("visibleRowStartIndex: " + that.visibleRowStartIndex);
+        // console.log(itemKey);
+
+        // scroll to the anchor item
+        let newItemIndex = that._findItemIndexByKey(data.tableData, itemKey);
+        // console.log("newItemIndex: " + newItemIndex);
+
+        that.anchorItemIndex = newItemIndex - offsetRowNum;
+        // console.log("anchorItemIndex: " + that.anchorItemIndex);
+
+        that.needReposition = true;
+
         that.setState({
           flowsheetData: data.tableData,
           moreData: data.moreData,
-          flowsheetColumns: tableDataStore.getColumnHeaders(that.state.zoomLevel)
-        })    
-        //console.log(data);
+          flowsheetColumns: tableDataStore.getColumnHeaders(that.state.zoomLevel),
+        })
+
+
       })
       .catch(function(error) {
         console.log(error);
@@ -135,6 +173,18 @@ class App extends Component {
 
   }
 
+
+  _findItemIndexByKey(tableData, itemKey) {
+    let itemIndex = -1;
+    for(let i=0, iLen=tableData.length; i<iLen; i++) {
+      if (itemKey === tableData[i].key) {
+        itemIndex = i;
+        break;
+      }
+    }
+
+    return itemIndex;
+  }
 
   /**
    * NOT USED due to performance problems
@@ -177,12 +227,14 @@ class App extends Component {
   }
 
   componentDidUpdate() {
-    //console.log("did update")
-    // if (this.state.isLoading) {
-    //   this.setState({
-    //     isLoading: false
-    //   })  
-    // }
+    // console.log("in componentDidUpdate")
+    // console.log(this.anchorItemIndex);
+    // console.log(this.needReposition);
+    if (this.needReposition) {
+      this.stayPut(this.anchorItemIndex)
+      this.needReposition = false;
+    }
+
   }
 
   componentWillUnmount() {
@@ -192,8 +244,9 @@ class App extends Component {
   }
 
   handleResize(e) {
-      let headerHeight = document.querySelector('#lf-app-header').clientHeight;
-      let footerHeight = document.querySelector('#lf-app-footer').clientHeight;
+      let headerHeight = this.refHeader.current.clientHeight;
+      let footerHeight = this.refFooter.current.clientHeight;
+
       this.setState({
         tableHeight: window.innerHeight - headerHeight - footerHeight -20, // not sure why there is a gap
         tableWidth: window.innerWidth -10
@@ -212,18 +265,50 @@ class App extends Component {
   onAdditionalControlsChange() {
     this.setState({
       showAdditionalControls : !this.state.showAdditionalControls
-    })
+    });
+
+    //this.handleResize();
   }
 
   onEqClassSwitchChange(checked) {
 
+    // get anchor item key, which is the 3nd item after the "visibleRowStartIndex" ??
+    let offsetRowNum = 3;
+    let itemIndex = this.visibleRowStartIndex + offsetRowNum;
+    let itemKey = this.state.flowsheetData[itemIndex].key;
+
+
+    let newData = tableDataStore.resetData(checked, true);
+    let newItemIndex = this._findNextItemWithEqRow(newData, itemKey);
+
+    this.anchorItemIndex = newItemIndex - offsetRowNum;
+//    console.log("anchorItemIndex: " + this.anchorItemIndex);
+
+    this.needReposition = true;
+
     this.setState({
       showEqClass: checked,
-      flowsheetData: tableDataStore.resetData(checked, true),
+      flowsheetData: newData
     })
 
   }
 
+  _findNextItemWithEqRow(tableData, itemKey) {
+
+    let itemIndex = 0;
+    if (itemKey.match(/$_EQ/)) {
+      itemIndex = this._findItemIndexByKey(itemKey.substring(0, itemKey.length -3))
+    }
+    else {
+      itemIndex = this._findItemIndexByKey(tableData, itemKey);
+      if (itemIndex === -1) {
+        itemIndex = this._findItemIndexByKey(tableData, itemKey + "_EQ")
+      }
+    }
+
+    return itemIndex;
+
+  }
   onDebugSwitchChange(checked) {
 
     this.setState({
@@ -231,6 +316,43 @@ class App extends Component {
     })
 
   }
+
+  onScroll(parameters) {
+    // {
+    //   horizontalScrollDirection,
+    //   scrollLeft,
+    //   scrollTop,
+    //   scrollUpdateWasRequested,
+    //   verticalScrollDirection
+    // }
+    // this.setState({
+    //   scrollLeft: parameters.scrollLeft,
+    //   scrollTop: parameters.scrollTop
+    // });
+
+    console.log(parameters)
+  }
+
+
+  onItemsRendered(parameters) {
+
+    // {
+    //   overscanColumnStartIndex,
+    //       overscanColumnStopIndex,
+    //       overscanRowStartIndex,
+    //       overscanRowStopIndex,
+    //       visibleColumnStartIndex,
+    //       visibleColumnStopIndex,
+    //       visibleRowStartIndex,
+    //       visibleRowStopIndex
+    // }
+    // All index params are numbers.
+    //console.log(parameters);
+
+    this.visibleRowStartIndex = parameters.visibleRowStartIndex;
+    this.visibleColumnStartIndex = parameters.visibleColumnStartIndex;
+  }
+
 
   columnWidth(index) {
     return index === 0 ? 300 : index === 1 ? 110 : 120;
@@ -266,6 +388,21 @@ class App extends Component {
     }
   }
 
+  stayPut(rowIndex) {
+    if (rowIndex === undefined) {
+//      console.log("no rowIndex")
+      rowIndex = this.anchorItemIndex;
+    }
+//    console.log("in stayPut")
+//    console.log(rowIndex);
+    this.gridRef.current.scrollToItem({
+      align: "start",
+      columnIndex: this.visibleColumnStartIndex,
+      rowIndex: rowIndex
+    });
+  }
+
+
   render() {
     let name = this.state.selectedPatient ? this.state.selectedPatient.name : "";
     let gender = this.state.selectedPatient ? this.state.selectedPatient.gender : "";
@@ -279,7 +416,7 @@ class App extends Component {
 
     return (
       <div>
-        <div id="lf-app-header">
+        <div id="lf-app-header" ref={this.refHeader}>
           <div id="lf-header">
             <a href="http://lhncbc.nlm.nih.gov" title="Lister Hill National Center for Biomedical Communications (LHNCBC)" id="logo">
               <img src={LHCImage} alt="Lister Hill National Center for Biomedical Communications (LHNCBC)"></img>
@@ -349,6 +486,7 @@ class App extends Component {
                   <Switch checkedChildren="Debug Info Shown" unCheckedChildren="Debug Info Hidden" defaultChecked={false} onChange={this.onDebugSwitchChange}/>
                 </Row>
               </Col>
+              <Button onClick={() => this.stayPut()}>Move to col:{this.visibleColumnStartIndex}, row:{this.visibleRowStartIndex}</Button>
             </Row>
             }
           </div>
@@ -386,6 +524,7 @@ class App extends Component {
           {/*/>*/}
 
           <VariableSizeGrid
+              ref={this.gridRef}
               className={this.state.tableClass}
               columnCount={colCount}
               columnWidth={index => this.columnWidth(index)}
@@ -395,6 +534,7 @@ class App extends Component {
               width={this.state.tableWidth}
               stickyColumns={2}
               stickyRows={1}
+              onItemsRendered={obj => this.onItemsRendered(obj)}
               itemData={{
                 tableData: this.state.flowsheetData,
                 columns: this.state.flowsheetColumns,
@@ -403,8 +543,7 @@ class App extends Component {
                 showDebugInfo: this.state.showDebugInfo,
                 expColFunc: this.expandCollapseAHeader,
                 eqExpColFunc: this.expandCollapseAnEqClassRow
-              }
-              }
+              }}
           >
             {GridCell}
           </VariableSizeGrid>
@@ -414,7 +553,7 @@ class App extends Component {
           <button onClick={() => this.getNextPageData()}>Get Next Page Data</button> */}
 
         </div>
-        <div id="lf-app-footer">
+        <div id="lf-app-footer" ref={this.refFooter}>
         </div>
       </div>
     );

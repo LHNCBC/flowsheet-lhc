@@ -23,7 +23,8 @@
     "react-dom": "^16.5.2",
     "react-sparklines": "file:../react-sparklines",
     "react-window": "file:../react-window",
-    "recharts": "^1.4.2"
+    "recharts": "^1.4.2",
+    "victory": "^31.2.0"
   },
   "scripts": {
     "start": "react-scripts start",

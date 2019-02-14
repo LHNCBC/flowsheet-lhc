@@ -495,6 +495,10 @@ class TemplateDataStore {
           if (!node.sparklineData) {
             node.sparklineData = [];
           }
+          if (!node.sparklineData2) {
+            node.sparklineData2 = [];
+          }
+
           if (node.isEqClassRow) {
             // add a counter of how many item in the eq class has data
             if (!node.eqClassItems) {
@@ -519,6 +523,7 @@ class TemplateDataStore {
           }
           else if (itemCode === code) {
             node.sparklineData.push(value);
+            node.sparklineData2.push({x: (new Date(date)).getTime(), y: value});
             node.hasData = true;
             if (!node.data) {
               node.data = {};
