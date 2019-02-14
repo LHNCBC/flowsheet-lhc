@@ -486,7 +486,6 @@ class App extends Component {
                   <Switch checkedChildren="Debug Info Shown" unCheckedChildren="Debug Info Hidden" defaultChecked={false} onChange={this.onDebugSwitchChange}/>
                 </Row>
               </Col>
-              <Button onClick={() => this.stayPut()}>Move to col:{this.visibleColumnStartIndex}, row:{this.visibleRowStartIndex}</Button>
             </Row>
             }
           </div>
