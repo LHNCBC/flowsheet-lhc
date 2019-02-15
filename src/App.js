@@ -92,13 +92,15 @@ class App extends Component {
     //console.log(level);
     this.setState({
       zoomLevel: level
-    })
+    });
 
     if (this.state.flowsheetData) {
       this.setState({
         flowsheetColumns: tableDataStore.getColumnHeaders(level)
       })  
     }
+
+
 
   }
 
@@ -142,7 +144,8 @@ class App extends Component {
 
     // get anchor item key, which is the 3nd item after the "visibleRowStartIndex" ??
     let offsetRowNum = 3;
-    let itemIndex = this.visibleRowStartIndex + offsetRowNum;
+    //let itemIndex = this.visibleRowStartIndex + offsetRowNum;
+    let itemIndex = this.visibleRowStartIndex < 1 ? this.visibleRowStartIndex : this.visibleRowStartIndex + offsetRowNum;
     let itemKey = this.state.flowsheetData[itemIndex].key;
     tableDataStore.getNextPageData(this.state.showEqClass)
       .then(function(data) {
@@ -154,7 +157,7 @@ class App extends Component {
         let newItemIndex = that._findItemIndexByKey(data.tableData, itemKey);
         // console.log("newItemIndex: " + newItemIndex);
 
-        that.anchorItemIndex = newItemIndex - offsetRowNum;
+        that.anchorItemIndex = newItemIndex >= offsetRowNum  ? newItemIndex - offsetRowNum : 0;
         // console.log("anchorItemIndex: " + that.anchorItemIndex);
 
         that.needReposition = true;
@@ -267,21 +270,19 @@ class App extends Component {
       showAdditionalControls : !this.state.showAdditionalControls
     });
 
-    //this.handleResize();
   }
 
   onEqClassSwitchChange(checked) {
 
     // get anchor item key, which is the 3nd item after the "visibleRowStartIndex" ??
     let offsetRowNum = 3;
-    let itemIndex = this.visibleRowStartIndex + offsetRowNum;
+    let itemIndex = this.visibleRowStartIndex < offsetRowNum ? this.visibleRowStartIndex : this.visibleRowStartIndex + offsetRowNum;
     let itemKey = this.state.flowsheetData[itemIndex].key;
-
 
     let newData = tableDataStore.resetData(checked, true);
     let newItemIndex = this._findNextItemWithEqRow(newData, itemKey);
 
-    this.anchorItemIndex = newItemIndex - offsetRowNum;
+    this.anchorItemIndex = newItemIndex >= offsetRowNum ? newItemIndex - offsetRowNum : 0;
 //    console.log("anchorItemIndex: " + this.anchorItemIndex);
 
     this.needReposition = true;
@@ -388,16 +389,19 @@ class App extends Component {
     }
   }
 
-  stayPut(rowIndex) {
+  stayPut(rowIndex, colIndex) {
     if (rowIndex === undefined) {
 //      console.log("no rowIndex")
       rowIndex = this.anchorItemIndex;
+    }
+    if (colIndex === undefined) {
+      colIndex = this.visibleColumnStartIndex;
     }
 //    console.log("in stayPut")
 //    console.log(rowIndex);
     this.gridRef.current.scrollToItem({
       align: "start",
-      columnIndex: this.visibleColumnStartIndex,
+      columnIndex: colIndex,
       rowIndex: rowIndex
     });
   }
