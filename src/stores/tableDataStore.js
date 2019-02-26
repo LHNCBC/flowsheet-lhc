@@ -44,11 +44,13 @@ class TableDataStore {
     let restCols = [];
     let columnList = this.tableColumnInfo[zoomLevel];
     if (columnList) {
-      for (let [dateKey, columnLabel] of columnList) {
+      for (let [dateKey, colInfo] of columnList) {
         restCols.push({
-          title: columnLabel,
+          title: colInfo.label,
           dataKey: dateKey,
-          key: dateKey, 
+          key: dateKey,
+          start: colInfo.start,
+          end: colInfo.end
         })
       }  
     }

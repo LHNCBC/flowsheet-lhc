@@ -12,7 +12,7 @@ class ConditionListDialog extends React.Component {
       conditionList: []
     };
 
-    console.log(this.props.selectedPatient)
+    //console.log(this.props.selectedPatient)
   }
 
   showModal = () => {

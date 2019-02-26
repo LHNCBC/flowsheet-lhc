@@ -540,6 +540,9 @@ class TemplateDataStore {
             //   }            
             // }    
           }
+          else if (!node.isTempHeader) {
+            //node.sparklineData.push("");
+          }
         }
       }  
     }
@@ -673,21 +676,28 @@ class TemplateDataStore {
       let dateKey, columnLabel;
 
       this.zoomLevel.forEach((type) => {
+        let mntDate2 = moment(dateObj);
+        let colInfo = {
+          start: mntDate2.startOf(type).valueOf(),
+          end: mntDate2.endOf(type).valueOf()
+        };
+
         switch (type) {
           case 'day':
             columnLabel = <div><div>{mntDate.format("YYYY")}</div><div>{mntDate.format("MM/DD")}</div></div>;
             dateKey = 'day_' + mntDate.format("YYYY/MM/DD");
-            this.dayList.set(dateKey, columnLabel);        
+            colInfo.label = columnLabel;
+            this.dayList.set(dateKey, colInfo);
             if (dateKeyCounts[dateKey]) {
               dateKeyCounts[dateKey] += 1;
             }
             break;
           case 'week':
-            // use a separate moment objct becuase startOf and endOf change the value
+            // use a separate moment object because startOf and endOf change the value
             let mntDate2 = moment(dateObj);
-            let startOfWeek = mntDate2.startOf('week').format('MM/DD') 
+            let startOfWeek = mntDate2.startOf('week').format('MM/DD');
             let startYear = mntDate2.startOf('week').year();
-            let endOfWeek = mntDate2.endOf('week').format('MM/DD') 
+            let endOfWeek = mntDate2.endOf('week').format('MM/DD');
             let endYear = mntDate2.endOf('week').year();
             if (startYear === endYear) {
               columnLabel =<div><div> {startOfWeek}</div><div> {'-' + endOfWeek}</div><div>{startYear}</div></div>
@@ -695,29 +705,35 @@ class TemplateDataStore {
             else {
               columnLabel =<div><div> {startOfWeek + '/' + startYear}</div><div> {'-' + endOfWeek + '/' + startYear}</div></div>
             }
-            dateKey = 'week_' + mntDate.year() + '-' + mntDate.weeks();
-            this.weekList.set(dateKey, columnLabel);
+            dateKey = 'week_' + mntDate.format("YYYY-WW");
+            colInfo.label = columnLabel;
+            this.weekList.set(dateKey, colInfo);
             break;
           case 'month':
             columnLabel =  mntDate.format("YYYY/MM")
             dateKey = 'month_' + columnLabel;
-            this.monthList.set(dateKey, columnLabel);
+            colInfo.label = columnLabel;
+            this.monthList.set(dateKey, colInfo);
             break;
           case 'quarter':
             columnLabel = mntDate.year() + ' Q' + mntDate.quarters();
             dateKey = 'quarter_' + mntDate.year() + '-' + mntDate.quarters();
-            this.quarterList.set(dateKey, columnLabel);
+            colInfo.label = columnLabel;
+            this.quarterList.set(dateKey, colInfo);
             break;
           case 'year':
             columnLabel = mntDate.year();
             dateKey = 'year_' + mntDate.year();
-            this.yearList.set(dateKey, columnLabel);
+            colInfo.label = columnLabel;
+            this.yearList.set(dateKey, colInfo);
             break;
           case 'date':
           default: 
             columnLabel = <div><div>{mntDate.format("YYYY")}</div><div>{mntDate.format("MM/DD")}</div><div>{mntDate.format("HH:mm")}</div></div>;
             dateKey = 'date_' + date;
-            this.dateList.set(dateKey, columnLabel);
+            colInfo.label = columnLabel;
+
+            this.dateList.set(dateKey, colInfo);
         }
         // count dateKeys
         dateKeyCounts[dateKey] = dateKeyCounts[dateKey] ? dateKeyCounts[dateKey] + 1 : 1;            

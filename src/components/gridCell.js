@@ -143,7 +143,8 @@ class GridCell extends React.PureComponent {
 
     // column headers
     if (rowIndex === 0 ) {
-      content = columns[columnIndex].title
+      content = columns[columnIndex].title;
+      //content = <div>{columns[columnIndex].title}<div>{columns[columnIndex].start}</div><div>{columns[columnIndex].end}</div></div>
     }
     // data rows
     else if (rowIndex >= 1) {

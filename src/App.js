@@ -41,7 +41,9 @@ class App extends Component {
     };
 
     this.anchorItemIndex = 0;
-    this.needReposition = false;
+    this.anchorColIndex = 0;
+    this.needRepositionRow = false;
+    this.needRepositionCol = false;
     this.visibleRowStartIndex = 0;
     this.visibleColumnStartIndex = 0;
 
@@ -58,7 +60,6 @@ class App extends Component {
     this.onAdditionalControlsChange = this.onAdditionalControlsChange.bind(this);
     this.onDebugSwitchChange = this.onDebugSwitchChange.bind(this);
     this.expandCollapseAnEqClassRow = this.expandCollapseAnEqClassRow.bind(this);
-    this.stayPut = this.stayPut.bind(this);
 
   }
 
@@ -86,23 +87,64 @@ class App extends Component {
       })
     }
 
-  }
+  };
 
   setZoomLevel = (level) => {
     //console.log(level);
+
+    let prevZoomLevel = this.state.zoomLevel;
+
     this.setState({
       zoomLevel: level
     });
 
-    if (this.state.flowsheetData) {
+    if (this.state.flowsheetData && prevZoomLevel !== level) {
+
+      // get the date on the first visible column
+      let firstVisColDate = this._findFirstVisibleColDate(this.state.flowsheetColumns, this.visibleColumnStartIndex);
+
+      let newColumns = tableDataStore.getColumnHeaders(level);
+
+      // get the position of that date in the new columns
+      let colStartIndex = this._findFirstColInView(newColumns, firstVisColDate);
+
+      this.anchorColIndex = newColumns.length < 10 ? 0 : colStartIndex;
+      this.needRepositionCol = true;
+
+      // console.log('pre visible col index')
+      // console.log(this.visibleColumnStartIndex);
+      // console.log(firstVisColDate)
+      // console.log('new col index')
+      // console.log(colStartIndex);
+
       this.setState({
-        flowsheetColumns: tableDataStore.getColumnHeaders(level)
+        flowsheetColumns: newColumns
       })  
     }
 
+  };
 
+  _findFirstVisibleColDate(columns, colIndex) {
+    return colIndex >= columns.length ? columns[columns.length-1].start : columns[colIndex].start;
+  }
+
+  _findFirstColInView(columns, ts) {
+
+    let colIndex = 0;
+
+    for (let i=0, iLen=columns.length; i<iLen; i++) {
+      // if ts is within the date range of a column
+      //if (columns[i].end <= ts && columns[i].start >= ts) {
+      if (ts >= columns[i].start) {
+        colIndex = i;
+        break;
+      }
+    }
+
+    return colIndex;
 
   }
+
 
   loadData() {
 
@@ -118,7 +160,9 @@ class App extends Component {
 
         // scroll to the anchor item
         that.anchorItemIndex = 0;
-        that.needReposition = true;
+        that.anchorColIndex = 0;
+        that.needRepositionRow = true;
+        that.needRepositionCol = true;
 
         that.setState({
           flowsheetData: data.tableData,
@@ -160,7 +204,7 @@ class App extends Component {
         that.anchorItemIndex = newItemIndex >= offsetRowNum  ? newItemIndex - offsetRowNum : 0;
         // console.log("anchorItemIndex: " + that.anchorItemIndex);
 
-        that.needReposition = true;
+        that.needRepositionRow = true;
 
         that.setState({
           flowsheetData: data.tableData,
@@ -233,11 +277,33 @@ class App extends Component {
     // console.log("in componentDidUpdate")
     // console.log(this.anchorItemIndex);
     // console.log(this.needReposition);
-    if (this.needReposition) {
-      this.stayPut(this.anchorItemIndex)
-      this.needReposition = false;
-    }
 
+
+    if (this.needRepositionRow && this.needRepositionCol) {
+      this.gridRef.current.scrollToItem({
+        align: "start",
+        columnIndex: this.anchorColIndex,
+        rowIndex: this.anchorItemIndex
+      });
+      this.needRepositionRow = false;
+      this.needRepositionCol = false;
+    }
+    else if (this.needRepositionRow) {
+      this.gridRef.current.scrollToItem({
+        align: "start",
+        columnIndex: this.visibleColumnStartIndex,
+        rowIndex: this.anchorItemIndex
+      });
+      this.needRepositionRow = false;
+    }
+    else if (this.needRepositionCol) {
+      this.gridRef.current.scrollToItem({
+        align: "start",
+        columnIndex: this.anchorColIndex,
+        rowIndex: this.visibleRowStartIndex
+      });
+      this.needRepositionCol = false;
+    }
   }
 
   componentWillUnmount() {
@@ -285,7 +351,7 @@ class App extends Component {
     this.anchorItemIndex = newItemIndex >= offsetRowNum ? newItemIndex - offsetRowNum : 0;
 //    console.log("anchorItemIndex: " + this.anchorItemIndex);
 
-    this.needReposition = true;
+    this.needRepositionRow = true;
 
     this.setState({
       showEqClass: checked,
@@ -310,6 +376,8 @@ class App extends Component {
     return itemIndex;
 
   }
+
+
   onDebugSwitchChange(checked) {
 
     this.setState({
@@ -364,10 +432,10 @@ class App extends Component {
   }
 
   expandCollapseAHeader(itemKey) {
-    console.log('in app.js');
-    console.log(itemKey);
+    // console.log('in app.js');
+    // console.log(itemKey);
     let changed = tableDataStore.expandCollapseAHeader(itemKey);
-    console.log(changed);
+    //console.log(changed);
     if (changed) {
       this.setState({
         flowsheetData: tableDataStore.resetData(this.state.showEqClass),
@@ -377,33 +445,16 @@ class App extends Component {
   }
 
   expandCollapseAnEqClassRow(itemKey) {
-    console.log('in app.js');
-    console.log(itemKey);
+    // console.log('in app.js');
+    // console.log(itemKey);
     let changed = tableDataStore.expandCollapseAnEqClassRow(itemKey);
-    console.log(changed);
+    //console.log(changed);
     if (changed) {
       this.setState({
         flowsheetData: tableDataStore.resetData(this.state.showEqClass),
       })
 
     }
-  }
-
-  stayPut(rowIndex, colIndex) {
-    if (rowIndex === undefined) {
-//      console.log("no rowIndex")
-      rowIndex = this.anchorItemIndex;
-    }
-    if (colIndex === undefined) {
-      colIndex = this.visibleColumnStartIndex;
-    }
-//    console.log("in stayPut")
-//    console.log(rowIndex);
-    this.gridRef.current.scrollToItem({
-      align: "start",
-      columnIndex: colIndex,
-      rowIndex: rowIndex
-    });
   }
 
 
@@ -503,7 +554,7 @@ class App extends Component {
                 Total Resources: <span className="lf-bold">{ tableDataStore.availableNumOfRes }</span>
               </Col>
               <Col xs={24} sm={12} md={6} lg={6} xl={6}>
-                Columns: <span className="lf-bold">{this.state.flowsheetColumns ? this.state.flowsheetColumns.length-3 : 0 }</span>
+                Columns: <span className="lf-bold">{this.state.flowsheetColumns ? this.state.flowsheetColumns.length - 2 : 0 }</span>
               </Col>
               <Col xs={24} sm={12} md={6} lg={6} xl={6}>
                 Rows: <span className="lf-bold">{this.state.flowsheetData ? this.state.flowsheetData.length : 0 }</span>
