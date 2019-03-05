@@ -1,7 +1,5 @@
 import React from 'react';
 import SparkLine from "./sparkLine";
-//import SparkLine from "./sparkLineChart2";
-//import SparkLine from "./sparkLineChart";
 import { Icon, Button, Popover } from "antd";
 import CollapseIcon from '../collapse.svg';
 
@@ -195,7 +193,6 @@ class GridCell extends React.PureComponent {
       }
       // spark line
       else if (columnIndex === 1) {
-        //content = <SparkLine record={dataRow}/>
         content = <SparkLine record={dataRow} range={dateRange}/>
       }
       // data

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import 'antd/dist/antd.css';
-import { Row, Col, Button, Switch, Collapse, Icon } from 'antd';
+import { Row, Col, Button, Switch} from 'antd';
 
 import GridCell from './components/gridCell';
 import { FixedSizeGrid, VariableSizeGrid } from 'react-window';
@@ -10,11 +10,11 @@ import PatientSearchDialog from './components/patientSearchDialog';
 import TemplatePicker from './components/templatePicker';
 import ZoomLevelPicker from './components/zoomLevelPicker';
 import ConditionListDialog from './components/conditionListDialog';
+import OverviewMap from './components/overviewMap';
+
 import tableDataStore from './stores/tableDataStore';
 
 import LHCImage from './lhncbc.jpg';
-
-const Panel = Collapse.Panel;
 
 class App extends Component {
   constructor(props) {
@@ -37,7 +37,10 @@ class App extends Component {
       tableHeight: window.innerHeight,
       tableWidth: window.innerWidth,
       showAdditionalControls: false,
-      showDebugInfo: false
+      showDebugInfo: false,
+      chartData: null,
+      showOverviewMap: false,
+      emptyCellPercentage: 0
     };
 
     this.anchorItemIndex = 0;
@@ -46,7 +49,6 @@ class App extends Component {
     this.needRepositionCol = false;
     this.visibleRowStartIndex = 0;
     this.visibleColumnStartIndex = 0;
-
 
     this.refHeader = React.createRef();
     this.refFooter = React.createRef();
@@ -60,6 +62,7 @@ class App extends Component {
     this.onAdditionalControlsChange = this.onAdditionalControlsChange.bind(this);
     this.onDebugSwitchChange = this.onDebugSwitchChange.bind(this);
     this.expandCollapseAnEqClassRow = this.expandCollapseAnEqClassRow.bind(this);
+    this.createAndShowOverViewMap = this.createAndShowOverViewMap.bind(this);
 
   }
 
@@ -119,7 +122,10 @@ class App extends Component {
 
       this.setState({
         flowsheetColumns: newColumns
-      })  
+      });
+      if (this.state.showOverviewMap) {
+        this._processChartData(newColumns, this.state.flowsheetData);
+      }
     }
 
   };
@@ -164,13 +170,17 @@ class App extends Component {
         that.needRepositionRow = true;
         that.needRepositionCol = true;
 
+        let columns = tableDataStore.getColumnHeaders(that.state.zoomLevel);
         that.setState({
           flowsheetData: data.tableData,
           moreData: data.moreData,
-          flowsheetColumns: tableDataStore.getColumnHeaders(that.state.zoomLevel),
+          flowsheetColumns: columns,
 
         });
         console.log(that.state.flowsheetColumns);
+        if (that.state.showOverviewMap) {
+          that._processChartData(columns, data.tableData);
+        }
 
 
       })
@@ -206,12 +216,15 @@ class App extends Component {
 
         that.needRepositionRow = true;
 
+        let columns = tableDataStore.getColumnHeaders(that.state.zoomLevel);
         that.setState({
           flowsheetData: data.tableData,
           moreData: data.moreData,
-          flowsheetColumns: tableDataStore.getColumnHeaders(that.state.zoomLevel),
+          flowsheetColumns: columns,
         })
-
+        if (that.state.showOverviewMap) {
+          that._processChartData(columns, data.tableData);
+        }
 
       })
       .catch(function(error) {
@@ -358,6 +371,10 @@ class App extends Component {
       flowsheetData: newData
     })
 
+    if (this.state.showOverviewMap) {
+      this._processChartData(this.state.flowsheetColumns, newData);
+    }
+
   }
 
   _findNextItemWithEqRow(tableData, itemKey) {
@@ -375,6 +392,75 @@ class App extends Component {
 
     return itemIndex;
 
+  }
+
+  createAndShowOverViewMap() {
+
+    if (this.state.showOverviewMap) {
+      this.setState({
+        showOverviewMap: false
+      })
+    }
+    else {
+      if (this.state.flowsheetColumns && this.state.flowsheetData) {
+        this._processChartData(this.state.flowsheetColumns, this.state.flowsheetData)
+      }
+      this.setState({
+        showOverviewMap: true
+      })
+    }
+  }
+
+  // domain: {x: [ tsStart, tsEnd], y: [1, tableData.length]
+  // data: [
+  //          {x: ts, y: row #}  // row # in reverse order
+  //       ]
+  // xTickValues: [tsStart, ... tsYears#, tsEnd]
+  // lineYearData: [ {x: tsYear, y: 1}, {x: tsYear, y: tableData.length} ]
+
+  _processChartData(columns, tableData) {
+
+    let chartData = {};
+    //let columns = this.state.flowsheetColumns, tableData = this.state.flowsheetData;
+
+    if (columns && tableData) {
+      let tsStart = columns[2].start;
+      let tsEnd = columns[columns.length-1].start;
+      chartData.domain = {
+        x: [tsStart, tsEnd],
+        y: [0, tableData.length - 1]
+      };
+
+      chartData.xTickValues = [tsStart, tsEnd];
+
+      chartData.data = [];
+
+      let dpCount = 0;
+      let headerRowCount = 0;
+      for (let i=0, iLen = tableData.length; i<iLen; i++) {
+        let item = tableData[i];
+        for (let j=2, jLen=columns.length; j<jLen; j++) {
+          let col = columns[j];
+          if (item[col.dataKey]) {
+            chartData.data.push({x: col.start, y: iLen - i -1});
+            if (!item.isTempHeader) {
+              dpCount++;
+            }
+            else {
+              headerRowCount++;
+            }
+          }
+        }
+      }
+
+      let emptyPercentage = ((1- dpCount/((tableData.length -headerRowCount) * (columns.length-2))) * 100).toFixed(2) + "%";
+
+      this.setState({
+        chartData: chartData,
+        emptyCellPercentage: emptyPercentage
+      })
+
+    }
   }
 
 
@@ -440,7 +526,9 @@ class App extends Component {
       this.setState({
         flowsheetData: tableDataStore.resetData(this.state.showEqClass),
       })
-
+      if (this.state.showOverviewMap) {
+        this._processChartData();
+      }
     }
   }
 
@@ -453,7 +541,9 @@ class App extends Component {
       this.setState({
         flowsheetData: tableDataStore.resetData(this.state.showEqClass),
       })
-
+      if (this.state.showOverviewMap) {
+        this._processChartData();
+      }
     }
   }
 
@@ -536,10 +626,8 @@ class App extends Component {
 
             { this.state.showAdditionalControls &&
             <Row type="flex" className="lf-row">
-              <Col xs={24} sm={12} md={8} lg={8} xl={8}>
-                <Row className="lf-switch-row">
+              <Col xs={24} sm={12} md={6} lg={6} xl={4}>
                   <Switch checkedChildren="Debug Info Shown" unCheckedChildren="Debug Info Hidden" defaultChecked={false} onChange={this.onDebugSwitchChange}/>
-                </Row>
               </Col>
             </Row>
             }
@@ -547,23 +635,44 @@ class App extends Component {
 
           <div id="lf-status">
             <Row type="flex" className='lf-data-info lf-row'>
-              <Col xs={24} sm={12} md={6} lg={6} xl={6}>
+
+              <Col xs={24} sm={12} md={4} lg={4} xl={4}>
+                <Button type="primary" icon="dot-chart" size={"small"} disabled={!this.state.flowsheetData} onClick={this.createAndShowOverViewMap}>Overview Map</Button>
+              </Col>
+
+              <Col xs={24} sm={12} md={5} lg={5} xl={5}>
                 Displayed Resources: <span className="lf-bold">{ tableDataStore.retrievedNumOfRes }</span>
               </Col>
-              <Col xs={24} sm={12} md={6} lg={6} xl={6}>
+              <Col xs={24} sm={12} md={5} lg={5} xl={5}>
                 Total Resources: <span className="lf-bold">{ tableDataStore.availableNumOfRes }</span>
               </Col>
-              <Col xs={24} sm={12} md={6} lg={6} xl={6}>
+              <Col xs={24} sm={12} md={5} lg={5} xl={5}>
                 Columns: <span className="lf-bold">{this.state.flowsheetColumns ? this.state.flowsheetColumns.length - 2 : 0 }</span>
               </Col>
-              <Col xs={24} sm={12} md={6} lg={6} xl={6}>
+              <Col xs={24} sm={12} md={5} lg={5} xl={5}>
                 Rows: <span className="lf-bold">{this.state.flowsheetData ? this.state.flowsheetData.length : 0 }</span>
               </Col>
             </Row>
           </div>
-
-
         </div>
+
+        { this.state.showOverviewMap &&
+            <div>
+              <Row type="flex" className="lf-row">
+                <Col xs={24} sm={12} md={12} lg={12} xl={12}>
+                  Empty Cell Percentage: <span className="lf-bold">{this.state.flowsheetData ? this.state.emptyCellPercentage : '' }</span>
+                </Col>
+              </Row>
+                <OverviewMap
+                    // width={this.state.tableWidth}
+                    width={400}
+                    height={400}
+                    chartData = {this.state.chartData}
+                >
+                </OverviewMap>
+            </div>
+        }
+
         <div id="lf-data-table">
           {/* <div><span>{this.state.isLoading ? "Loading ..." : ""}</span></div> */}
           
