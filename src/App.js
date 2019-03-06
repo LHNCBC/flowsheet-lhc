@@ -340,7 +340,12 @@ class App extends Component {
 
     this.setState({
       showUnit: checked,
-    })
+    });
+
+    if (this.state.showOverviewMap) {
+      this._processChartData(this.state.flowsheetColumns, this.state.flowsheetData);
+    }
+
 
   }
 
@@ -428,7 +433,7 @@ class App extends Component {
       let tsEnd = columns[columns.length-1].start;
       chartData.domain = {
         x: [tsStart, tsEnd],
-        y: [0, tableData.length - 1]
+        y: [0, tableData.length-1]
       };
 
       chartData.xTickValues = [tsStart, tsEnd];
@@ -442,7 +447,8 @@ class App extends Component {
         for (let j=2, jLen=columns.length; j<jLen; j++) {
           let col = columns[j];
           if (item[col.dataKey]) {
-            chartData.data.push({x: col.start, y: iLen - i -1});
+            let value = this.state.showUnit ? item[col.dataKey].valueWithUnit : item[col.dataKey].value;
+            chartData.data.push({x: col.start, y: iLen - i -1, label: item.displayName + "\n" + value + "\n" + col.tsLabel});
             if (!item.isTempHeader) {
               dpCount++;
             }
@@ -664,8 +670,8 @@ class App extends Component {
                 </Col>
               </Row>
                 <OverviewMap
-                    // width={this.state.tableWidth}
-                    width={400}
+                    width={this.state.tableWidth}
+                    //width={400}
                     height={400}
                     chartData = {this.state.chartData}
                 >

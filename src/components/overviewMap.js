@@ -1,6 +1,6 @@
 import React from "react";
 import moment from 'moment';
-import {VictoryAxis, VictoryLine, VictoryScatter, VictoryChart, VictoryTheme, VictoryContainer} from 'victory';
+import {VictoryAxis, VictoryLine, VictoryTooltip, VictoryScatter, VictoryChart, VictoryTheme, VictoryContainer} from 'victory';
 
 
 class OverviewMap extends React.Component {
@@ -53,15 +53,18 @@ class OverviewMap extends React.Component {
     return (
         <div>
           <VictoryChart
+              // padding={{ top: 10, bottom: 40, left: 40, right: 40 }}
               width={this.props.width}
               height={this.props.height}
               theme={VictoryTheme.material}
               domain={this.props.chartData.domain}
+              // domainPadding={{y:[10, 10]}}
               containerComponent={<VictoryContainer responsive={false}/>}
           >
             <VictoryScatter
                 style={{ data: { fill: "#c43a31" } }}
-                size={1}
+                size={1.5}
+                labelComponent={<VictoryTooltip/>}
                 data={this.props.chartData.data}
             />
             <VictoryAxis

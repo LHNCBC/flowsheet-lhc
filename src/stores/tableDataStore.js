@@ -47,6 +47,7 @@ class TableDataStore {
       for (let [dateKey, colInfo] of columnList) {
         restCols.push({
           title: colInfo.label,
+          tsLabel : colInfo.tsLabel,
           dataKey: dateKey,
           key: dateKey,
           start: colInfo.start,

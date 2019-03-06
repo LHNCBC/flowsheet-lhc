@@ -687,6 +687,7 @@ class TemplateDataStore {
             columnLabel = <div><div>{mntDate.format("YYYY")}</div><div>{mntDate.format("MM/DD")}</div></div>;
             dateKey = 'day_' + mntDate.format("YYYY/MM/DD");
             colInfo.label = columnLabel;
+            colInfo.tsLabel = mntDate.format("YYYY/MM/DD");
             this.dayList.set(dateKey, colInfo);
             if (dateKeyCounts[dateKey]) {
               dateKeyCounts[dateKey] += 1;
@@ -707,24 +708,28 @@ class TemplateDataStore {
             }
             dateKey = 'week_' + mntDate.format("YYYY-WW");
             colInfo.label = columnLabel;
+            colInfo.tsLabel = startYear === endYear ? startOfWeek + "-" + endOfWeek + ", " + startYear : startOfWeek + "/" + startYear + "-" + endOfWeek + '/' + startYear;
             this.weekList.set(dateKey, colInfo);
             break;
           case 'month':
             columnLabel =  mntDate.format("YYYY/MM")
             dateKey = 'month_' + columnLabel;
             colInfo.label = columnLabel;
+            colInfo.tsLabel = columnLabel;
             this.monthList.set(dateKey, colInfo);
             break;
           case 'quarter':
             columnLabel = mntDate.year() + ' Q' + mntDate.quarters();
             dateKey = 'quarter_' + mntDate.year() + '-' + mntDate.quarters();
             colInfo.label = columnLabel;
+            colInfo.tsLabel = columnLabel;
             this.quarterList.set(dateKey, colInfo);
             break;
           case 'year':
             columnLabel = mntDate.year();
             dateKey = 'year_' + mntDate.year();
             colInfo.label = columnLabel;
+            colInfo.tsLabel = columnLabel;
             this.yearList.set(dateKey, colInfo);
             break;
           case 'date':
@@ -732,6 +737,7 @@ class TemplateDataStore {
             columnLabel = <div><div>{mntDate.format("YYYY")}</div><div>{mntDate.format("MM/DD")}</div><div>{mntDate.format("HH:mm")}</div></div>;
             dateKey = 'date_' + date;
             colInfo.label = columnLabel;
+            colInfo.tsLabel = mntDate.format("YYYY/MM/DD HH:mm");
 
             this.dateList.set(dateKey, colInfo);
         }
