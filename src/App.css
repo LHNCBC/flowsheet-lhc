@@ -332,3 +332,8 @@
 .row-type-eq-class.col-name .item-name {
   margin-left: -20px;
 }
+
+/* slider */
+.lf-right-date {
+  text-align: right;
+}

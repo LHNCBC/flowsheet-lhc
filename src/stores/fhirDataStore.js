@@ -1,14 +1,17 @@
 import patientStore from './patientDataStore';
+import moment from 'moment';
 
 const mkFhir = require("fhir.js");
 
-const PAGE_SIZE = 500;
+const PAGE_SIZE = 1000;
 
 const LHC_FHIR_SERVER = {
   name: "LHC Internal FHIR Server #2", 
-  desc: "Internal FHIR server at LHC, for dev/test only", 
+  desc: "Internal FHIR server at LHC, for dev/test only",
+  url: "https://lhc-docker.nlm.nih.gov:8343/fhir2/baseDstu3",
+  //url: "https://lhcflowsheet.nlm.nih.gov/hapi-fhir-jpaserver/baseDstu3",
   //url: "https://lforms-service-stage-rh7.nlm.nih.gov:8143/hapi-fhir-jpaserver-example/baseDstu3",
-  url: "https://lhc-docker.nlm.nih.gov:8243/hapi-fhir-jpaserver/baseDstu3",
+  //url: "http://lhc-docker.nlm.nih.gov:8280/hapi-fhir-jpaserver/baseDstu3",
 //  url: "https://lforms-service-stage-rh7.nlm.nih.gov:8243/hapi-fhir-jpaserver-example/baseDstu3",
 //  url: "https://lforms-service-stage-rh7.nlm.nih.gov:8543/hapi-fhir-jpaserver-example/baseDstu3",
 //  url: "http://hapi.fhir.org/baseDstu3",  // no auth
@@ -173,22 +176,72 @@ class FhirDataStore {
       });
   };
 
-
-  /**
-   * Get all Observation resources of a patient
-   * @param pId the current patient's ID
-   * @param pageSize optional. the number of records that should be returned in a single page
-   */
-  getAllObservationByPatientId(pId, pageSize=this.pageSize) {
-    
+  getLastObservationByPatientId(pId) {
     let that = this;
     return this._fhirClient.search({
       type: 'Observation',
       query: {
         subject: 'Patient/' + pId,
         _sort: '-date',
-        _count: pageSize
+        _count: 1
       }
+    })
+        .then(function(response) {   // response.data is a searchset bundle
+          //console.log(response);
+          if (response.data && response.data.entry.length === 1)
+            return response.data.entry[0].resource;
+        })
+        .catch(function(error) {
+          console.log(error);
+        });
+
+  }
+
+  getFirstObservationByPatientId(pId) {
+    let that = this;
+    return this._fhirClient.search({
+      type: 'Observation',
+      query: {
+        subject: 'Patient/' + pId,
+        _sort: 'date',
+        _count: 1
+      }
+    })
+        .then(function(response) {   // response.data is a searchset bundle
+          //console.log(response);
+          if (response.data && response.data.entry.length === 1)
+          return response.data.entry[0].resource;
+        })
+        .catch(function(error) {
+          console.log(error);
+        });
+
+  }
+
+  /**
+   * Get all Observation resources of a patient
+   * @param pId the current patient's ID
+   * @param pageSize optional. the number of records that should be returned in a single page
+   */
+  getAllObservationByPatientId(pId, pageSize=this.pageSize, dateRange) {
+    
+    let that = this;
+    let queryOption = {
+      subject: 'Patient/' + pId,
+      _sort: '-date',
+      _count: pageSize,
+      _total: 'accurate'  // new supported parameter in HAPI 3.6. not affecting performance.
+    };
+
+    if (dateRange) {
+      let rangeStart = moment(dateRange[0]).format('YYYY-MM-DD');
+      let rangeEnd = moment(dateRange[1] + 86400000).format('YYYY-MM-DD');
+      queryOption['date'] = {$ge: rangeStart, $lt: rangeEnd}
+
+    }
+    return this._fhirClient.search({
+      type: 'Observation',
+      query: queryOption
     })
     .then(function(response) {   // response.data is a searchset bundle
       //console.log(response);
@@ -216,7 +269,8 @@ class FhirDataStore {
         subject: 'Patient/' + pId,
         'clinical-status': 'active',
         _sort: '-asserted-date',
-        _count: pageSize
+        _count: pageSize,
+        _total: 'accurate'
       }
     })
     .then(function(response) {   // response.data is a searchset bundle
@@ -229,15 +283,15 @@ class FhirDataStore {
 
 
   getNextPageUrl(bundle) {
+
+    this._nextPageUrl = null;
+
     if(bundle && bundle.type === "searchset" && bundle.link && bundle.link) {
       bundle.link.forEach(link => {
         if (link.relation === "next") {
           this._nextPageUrl = link.url;
         }
       });
-    }
-    else {
-      this._nextPageUrl = null;      
     }
     this.moreData = this._nextPageUrl ? true : false;
   };

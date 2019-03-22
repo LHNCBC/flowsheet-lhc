@@ -9,6 +9,8 @@ import { FixedSizeGrid, VariableSizeGrid } from 'react-window';
 import PatientSearchDialog from './components/patientSearchDialog';
 import TemplatePicker from './components/templatePicker';
 import ZoomLevelPicker from './components/zoomLevelPicker';
+import TimelineSlider from './components/timelineSlider';
+import BatchSizePicker from './components/batchSizePicker';
 import ConditionListDialog from './components/conditionListDialog';
 import OverviewMap from './components/overviewMap';
 
@@ -29,6 +31,7 @@ class App extends Component {
       patient: null,
       showUnit: false,
       zoomLevel: 'date',
+      batchSize: '1000',
       showEqClass: false,
       selectedPatient: null,
       appTitle: "LHC Flowsheet On FHIR",
@@ -40,7 +43,12 @@ class App extends Component {
       showDebugInfo: false,
       chartData: null,
       showOverviewMap: false,
-      emptyCellPercentage: 0
+      emptyCellPercentage: 0,
+      visiblePosition: {},
+      moreButtonLabel: 'Load More',
+      firstObxDate: null,
+      lastObxDate: null,
+      dateRange: null
     };
 
     this.anchorItemIndex = 0;
@@ -68,15 +76,39 @@ class App extends Component {
 
   gridRef = React.createRef();
 
-  setSelectedPatient(patient) {
+  setSelectedPatient = (patient, preLoadData) => {
     // reset template
     if (patient && (!this.state.selectedPatient || patient.id !== this.state.selectedPatient.id)) {
       this.setState({
         selectedPatient: patient,
         flowsheetData : null,
         flowsheetColumns: null,
-        moreData: false
-        })  
+        moreData: false,
+        firstObxDate: null,
+        lastObxDate: null,
+        });
+
+      let that = this;
+      tableDataStore.getFirstObservationDate(patient.id )
+          .then(function(data) {
+            console.log(data)
+            that.setState({
+              firstObxDate: data
+            })
+          });
+
+      tableDataStore.getLastObservationDate(patient.id )
+          .then(function(data) {
+            console.log(data)
+            that.setState({
+              lastObxDate: data
+            })
+          });
+
+      if (preLoadData) {
+        this.loadData(patient.id);
+      }
+
     }
   }
 
@@ -90,6 +122,16 @@ class App extends Component {
       })
     }
 
+  };
+
+  setDateRange = (range) => {
+    if (range && this.state.selectedPatient) {
+      this.setState({
+        dateRange: range
+      })
+
+      console.log(range)
+    }
   };
 
   setZoomLevel = (level) => {
@@ -130,6 +172,13 @@ class App extends Component {
 
   };
 
+  setBatchSize = (size) => {
+
+    this.setState({
+      batchSize: size
+    })
+  };
+
   _findFirstVisibleColDate(columns, colIndex) {
     return colIndex >= columns.length ? columns[columns.length-1].start : columns[colIndex].start;
   }
@@ -152,16 +201,16 @@ class App extends Component {
   }
 
 
-  loadData() {
+  loadData(pId) {
 
-    let patientId = this.state.selectedPatient ? this.state.selectedPatient.id : ""; 
+    let patientId = pId ? pId : this.state.selectedPatient ? this.state.selectedPatient.id : "";
     let that = this;
 
     this.handleResize();
 
     tableDataStore.setTemplate(this.state.selectedTemplate.data);
 
-    tableDataStore.getFirstPageData(patientId, this.state.showEqClass)
+    tableDataStore.getFirstPageData(patientId, this.state.showEqClass, this.state.batchSize, this.state.dateRange)
       .then(function(data) {
 
         // scroll to the anchor item
@@ -175,7 +224,7 @@ class App extends Component {
           flowsheetData: data.tableData,
           moreData: data.moreData,
           flowsheetColumns: columns,
-
+          moreButtonLabel: `Load ${that.state.batchSize} More`
         });
         console.log(that.state.flowsheetColumns);
         if (that.state.showOverviewMap) {
@@ -187,6 +236,7 @@ class App extends Component {
       .catch(function(error) {
         console.log(error);
       });
+
   }
 
   appendData() {
@@ -444,19 +494,22 @@ class App extends Component {
       let headerRowCount = 0;
       for (let i=0, iLen = tableData.length; i<iLen; i++) {
         let item = tableData[i];
-        for (let j=2, jLen=columns.length; j<jLen; j++) {
-          let col = columns[j];
-          if (item[col.dataKey]) {
-            let value = this.state.showUnit ? item[col.dataKey].valueWithUnit : item[col.dataKey].value;
-            chartData.data.push({x: col.start, y: iLen - i -1, label: item.displayName + "\n" + value + "\n" + col.tsLabel});
-            if (!item.isTempHeader) {
-              dpCount++;
-            }
-            else {
-              headerRowCount++;
+        if (item.isTempHeader) {
+          headerRowCount++;
+        }
+        else {
+          for (let j=2, jLen=columns.length; j<jLen; j++) {
+            let col = columns[j];
+            if (item[col.dataKey]) {
+              let value = this.state.showUnit ? item[col.dataKey].valueWithUnit : item[col.dataKey].value;
+              chartData.data.push({x: col.start, y: iLen - i -1, label: item.displayName + "\n" + value + "\n" + col.tsLabel, abnormal: item[col.dataKey].abnormal});
+              if (!item.isTempHeader) {
+                dpCount++;
+              }
             }
           }
         }
+
       }
 
       let emptyPercentage = ((1- dpCount/((tableData.length -headerRowCount) * (columns.length-2))) * 100).toFixed(2) + "%";
@@ -512,6 +565,36 @@ class App extends Component {
 
     this.visibleRowStartIndex = parameters.visibleRowStartIndex;
     this.visibleColumnStartIndex = parameters.visibleColumnStartIndex;
+
+
+
+    let colStartIndex = parameters.visibleColumnStartIndex < 2 ? 2 : parameters.visibleColumnStartIndex + 2;
+    let colStopIndex = parameters.visibleColumnStopIndex < 2 ? 2 : parameters.visibleColumnStopIndex;
+    let colStart = this.state.flowsheetColumns[colStartIndex].start;
+    let colStop = this.state.flowsheetColumns[colStopIndex].start;
+
+    console.log("colStart: " + parameters.visibleColumnStartIndex)
+    console.log("colStop: " + parameters.visibleColumnStopIndex)
+
+    let rowStart = parameters.visibleRowStartIndex;
+    let rowStop = parameters.visibleRowStopIndex;
+    console.log("rowStart: " + rowStart)
+    console.log("rowStop: " + rowStop)
+
+    // let tsEnd = columns[columns.length-1].start;
+    // chartData.domain = {
+    //   x: [tsStart, tsEnd],
+    //   y: [0, tableData.length-1]
+    // };
+
+    this.setState({
+      visiblePosition: {
+        rowStart: this.state.flowsheetData.length - rowStart -1,
+        rowStop: this.state.flowsheetData.length - rowStop -1,
+        colStart: colStart,
+        colStop: colStop
+      }
+    })
   }
 
 
@@ -557,12 +640,12 @@ class App extends Component {
   render() {
     let name = this.state.selectedPatient ? this.state.selectedPatient.name : "";
     let gender = this.state.selectedPatient ? this.state.selectedPatient.gender : "";
-    let dob = this.state.selectedPatient ? this.state.selectedPatient.dob : "";
+    // let dob = this.state.selectedPatient ? this.state.selectedPatient.dob : "";
     let pid = this.state.selectedPatient ? this.state.selectedPatient.id: "";
-    let deceased = this.state.selectedPatient ? this.state.selectedPatient.resource.deceasedDateTime : "";
+    // let deceased = this.state.selectedPatient ? this.state.selectedPatient.resource.deceasedDateTime : "";
     let reloadButtonLabel = this.state.flowsheetData ? "Reload Data" : "Load Data";
 
-    let rowCount = this.state.flowsheetData ? this.state.flowsheetData.length : 0;
+    let rowCount = this.state.flowsheetData ? this.state.flowsheetData.length +1 : 0;
     let colCount = this.state.flowsheetColumns ? this.state.flowsheetColumns.length : 0;
 
     return (
@@ -583,7 +666,7 @@ class App extends Component {
           <div id='lf-options'>
             <Row type="flex" justify="start" className="lf-row">
               <Col>
-                <PatientSearchDialog selectedPatient={this.state.selectedPatient} onOK={(patient) => this.setSelectedPatient(patient)}/>
+                <PatientSearchDialog selectedPatient={this.state.selectedPatient} onOK={this.setSelectedPatient}/>
               </Col>
               { this.state.selectedPatient &&
               <Col className="lf-patient-info" span={20}>
@@ -591,8 +674,8 @@ class App extends Component {
                   <Col xs={24} sm={24} md={24} lg={6} xl={6} className="lf-patient-name" >{name}</Col>
                   <Col xs={24} sm={12} md={6} lg={4} xl={4}>ID: <span className="lf-bold">{pid}</span></Col>
                   <Col xs={24} sm={12} md={6} lg={4} xl={4}>Gender: <span className="lf-bold">{gender}</span></Col>
-                  <Col xs={24} sm={12} md={6} lg={4} xl={4}>DoB: <span className="lf-bold">{dob}</span></Col>
-                  <Col xs={24} sm={12} md={6} lg={4} xl={4}>Deceased: <span className="lf-bold">{deceased}</span></Col>
+                  {/*<Col xs={24} sm={12} md={6} lg={4} xl={4}>DoB: <span className="lf-bold">{dob}</span></Col>*/}
+                  {/*<Col xs={24} sm={12} md={6} lg={4} xl={4}>Deceased: <span className="lf-bold">{deceased}</span></Col>*/}
                 </Row>
               </Col>
               }
@@ -606,13 +689,14 @@ class App extends Component {
               </Col>
               <Col xs={24} sm={12} md={8} lg={8} xl={8}>
                 <Button className='lf-button' type="primary" icon="reload" disabled={!this.state.selectedPatient} onClick={() => this.loadData()}>{reloadButtonLabel}</Button>  
-                <Button className='lf-button' type="primary" icon="swap" disabled={!this.state.moreData} onClick={() => this.appendData()}>Load More Data</Button>
+                <Button className='lf-button' type="primary" icon="swap" disabled={!this.state.moreData} onClick={() => this.appendData()}>{this.state.moreButtonLabel}</Button>
               </Col>
             </Row>
 
             <Row type="flex" className="lf-row">
               <Col xs={24} sm={12} md={8} lg={8} xl={8}>
                 <ZoomLevelPicker zoomLevel={this.state.zoomLevel} setZoomLevel={(level) => this.setZoomLevel(level)}/>
+                <BatchSizePicker batchSize={this.state.batchSize} setBatchSize={(size) => this.setBatchSize(size)}/>
               </Col>
               <Col xs={24} sm={12} md={8} lg={8} xl={8}>
                 <Row className="lf-switch-row">
@@ -626,6 +710,15 @@ class App extends Component {
               </Col>
             </Row>
 
+            {this.state.lastObxDate && this.state.firstObxDate &&
+              <Row type="flex" className="lf-row">
+                <Col xs={24} sm={24} md={24} lg={24} xl={24}>
+                  <TimelineSlider minDate={this.state.firstObxDate} maxDate={this.state.lastObxDate}
+                                  setRange={(r) => this.setDateRange(r)}
+                  />
+                </Col>
+              </Row>
+            }
             <Row type="flex" className="lf-row">
               <Button type="dashed" icon={this.state.showAdditionalControls ? "down" : "right"} onClick={() => this.onAdditionalControlsChange()}>Additional Controls</Button>
             </Row>
@@ -670,10 +763,11 @@ class App extends Component {
                 </Col>
               </Row>
                 <OverviewMap
-                    width={this.state.tableWidth}
-                    //width={400}
+                    //width={this.state.tableWidth}
+                    width={400}
                     height={400}
                     chartData = {this.state.chartData}
+                    visiblePosition = {this.state.visiblePosition}
                 >
                 </OverviewMap>
             </div>

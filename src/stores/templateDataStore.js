@@ -237,13 +237,18 @@ class TemplateDataStore {
 
 
   /**
-   * Remove items in the hierarchy that have no code (LOINC, in E) while keeping the hierachy structure.
+   * Remove items in the hierarchy that have no code (LOINC or RI) while keeping the hierarchy structure.
    * Group header items do not have to have the code.
    * This is done before the user data is loaded.
    */
   _preProcessTemplate() {
     let levelStatus = [];
     let start = this.template.length - 1;
+
+    console.log(this.template);
+    console.log(this.template[67])
+    console.log(this.template[99])
+    console.log(this.template[118])
 
     // initial setup of the levelStatus
     let lastLevel = this.template[start].A;
@@ -314,10 +319,21 @@ class TemplateDataStore {
       }
     }
 
+    console.log(this.template);
+    console.log(this.template[67])
+    console.log(this.template[99])
+    console.log(this.template[118])
+
+
     let newTemplate = this.template.filter(item => item.keep)
     newTemplate.forEach(function (item, index) {
       item.key = 'K' + index
     });
+
+    console.log(newTemplate)
+    console.log(newTemplate[67])
+    console.log(newTemplate[99])
+    console.log(newTemplate[118])
 
     return newTemplate;
 
@@ -404,9 +420,66 @@ class TemplateDataStore {
 
 
   /**
-   * Reprocess the hierachy after user data is loaded.
-   * to remove items that have no user data while keeping the hierachy structure.
+   * Reprocess the hierarchy after user data is loaded.
+   * to remove items that have no user data while keeping the hierarchy structure.
    */
+  // _postProcessTemplateTree() {
+  //   let levelStatus = [];
+  //   let start = this.templateTree.length - 1;
+  //
+  //   // initial setup of the levelStatus
+  //   let lastLevel = this.templateTree[start].A;
+  //   let lastLevelStatus = this.templateTree[start].hasData;
+  //
+  //   // loop through the items in the templateTree starting from the end
+  //   for (let i = start; i >= 0; i--) {
+  //
+  //     let item = this.templateTree[i];
+  //     let itemLevel = item.A;
+  //
+  //     // same level
+  //     if (itemLevel === lastLevel) {
+  //       if (item.hasData) {
+  //         lastLevelStatus = true;
+  //       }
+  //     }
+  //     // upper level (itemLevel === lastLevel - 1)
+  //     else if (itemLevel < lastLevel) {
+  //       // at least a lower level item is kept
+  //       if (lastLevelStatus) {
+  //         item.hasData = true;
+  //         item.isSectionHeader = true;
+  //         levelStatus[levelStatus.length - 1 - k][itemLevel] = true;
+  //       }
+  //       // remove the previous level info
+  //       while(k>0) {
+  //         levelStatus.pop();
+  //         k--;
+  //       }
+  //       lastLevel = itemLevel;
+  //     }
+  //     // lower level (itemLevel === lastLevel + n, where n >= 1)
+  //     else {
+  //       // initial setup of the levelStatus of the new branch
+  //       let i = parseInt(lastLevel, 10) + 1,
+  //         n = parseInt(itemLevel, 10);
+  //       while (i <= n) {
+  //         let status = {};
+  //         status[i + ''] = false;
+  //         levelStatus.push(status);
+  //         i++;
+  //       }
+  //
+  //       if (item.hasData) {
+  //         levelStatus[levelStatus.length - 1][itemLevel] = true;
+  //       }
+  //       lastLevel = itemLevel;
+  //
+  //     }
+  //   }
+  // }
+  //
+
   _postProcessTemplateTree() {
     let levelStatus = [];
     let start = this.templateTree.length - 1;
@@ -414,7 +487,7 @@ class TemplateDataStore {
     // initial setup of the levelStatus
     let lastLevel = this.templateTree[start].A;
     let i = 1,
-      n = parseInt(lastLevel, 10);
+        n = parseInt(lastLevel, 10);
     while (i <= n) {
       let status = {};
       status[i + ''] = false;
@@ -436,21 +509,29 @@ class TemplateDataStore {
       }
       // upper level (itemLevel === lastLevel - 1)
       else if (itemLevel < lastLevel) {
+        let k = lastLevel - itemLevel;
+        if (k > 1) {
+          console.log(item)
+          console.log(lastLevel)
+        }
         // at least a lower level item is kept
         if (levelStatus[levelStatus.length - 1][lastLevel]) {
           item.hasData = true;
           item.isSectionHeader = true;
-          levelStatus[levelStatus.length - 2][itemLevel] = true;
+          levelStatus[levelStatus.length - 1 - k][itemLevel] = true;
         }
         // remove the previous level info
-        levelStatus.pop();
+        while(k>0) {
+          levelStatus.pop();
+          k--;
+        }
         lastLevel = itemLevel;
       }
       // lower level (itemLevel === lastLevel + n, where n >= 1)
       else {
         // initial setup of the levelStatus of the new branch
         let i = parseInt(lastLevel, 10) + 1,
-          n = parseInt(itemLevel, 10);
+            n = parseInt(itemLevel, 10);
         while (i <= n) {
           let status = {};
           status[i + ''] = false;
@@ -482,11 +563,21 @@ class TemplateDataStore {
         let value = this._getValue(item);
         let unit = this._getUnit(item);
         let interpretationCode = this._getInterpretation(item);
-          
+
         // let range = this._getReferenceRange(item);
   
         for(let j=0; j<this.templateTree.length; j++) {
           let node = this.templateTree[j];
+          // if there is normal range in the hierarchy file
+          let abnormal;
+          if (node.I) {
+            if (interpretationCode !== undefined && interpretationCode!=='N') {
+              abnormal = true
+            }
+            else {
+              abnormal = false
+            }
+          }
           // use LOINC or RI CODE for the identifier of the record
           let itemCode = node.O === "RI" ? node.D : node.E;
 
@@ -498,6 +589,7 @@ class TemplateDataStore {
           if (!node.sparklineData2) {
             node.sparklineData2 = [];
           }
+
 
           if (node.isEqClassRow) {
             // add a counter of how many item in the eq class has data
@@ -513,10 +605,10 @@ class TemplateDataStore {
                   node.data = {};
                 }
                 if (!node.data[date]) {
-                  node.data[date] = [{value: value, unit: unit, normalFlag: interpretationCode, code: code}];
+                  node.data[date] = [{value: value, unit: unit, normalFlag: interpretationCode, code: code, abnormal: abnormal}];
                 }
                 else {
-                  node.data[date].push({value: value, unit: unit, normalFlag: interpretationCode, code: code});
+                  node.data[date].push({value: value, unit: unit, normalFlag: interpretationCode, code: code, abnormal: abnormal});
                 }
               }
             }
@@ -528,10 +620,8 @@ class TemplateDataStore {
             if (!node.data) {
               node.data = {};
             }
-            node.data[date] = {value: value, unit: unit, normalFlag: interpretationCode, code: code};
+            node.data[date] = {value: value, unit: unit, normalFlag: interpretationCode, code: code, abnormal: abnormal};
             this.tsList.set(date);
-  
-            // if(range && Array.isArray(range)) {
             //   if (range[0].low) {
             //     node.low = range[0].low.value;
             //   }
@@ -600,7 +690,7 @@ class TemplateDataStore {
     let valWithUnit = unit ? itemValue.value + ' ' + unit : itemValue.value;
     let displayValWithUnit = itemValue.normalFlag && itemValue.normalFlag !== 'N' ? valWithUnit + ' *' + itemValue.normalFlag : valWithUnit;
 
-    return  {value: displayVal, valueWithUnit: displayValWithUnit}
+    return  {value: displayVal, valueWithUnit: displayValWithUnit, abnormal: itemValue.abnormal}
   }
 
   
@@ -671,15 +761,14 @@ class TemplateDataStore {
     let dateArray = Object.keys(node.data);
     for (var date of dateArray) {
 
-      let dateObj = new Date(date);
-      let mntDate  = moment(dateObj);
+      let mntDate  = moment(date, "YYYY-MM-DDTHH:mm:ss.SSS");
       let dateKey, columnLabel;
 
       this.zoomLevel.forEach((type) => {
-        let mntDate2 = moment(dateObj);
+        let mntDate2 = moment(date, "YYYY-MM-DDTHH:mm:ss.SSS");
         let colInfo = {
-          start: mntDate2.startOf(type).valueOf(),
-          end: mntDate2.endOf(type).valueOf()
+          start: type==='date' ?  mntDate2.valueOf() : mntDate2.startOf(type).valueOf(),
+          end: type==='date' ? mntDate2.valueOf() : mntDate2.endOf(type).valueOf()
         };
 
         switch (type) {
@@ -695,7 +784,7 @@ class TemplateDataStore {
             break;
           case 'week':
             // use a separate moment object because startOf and endOf change the value
-            let mntDate2 = moment(dateObj);
+            let mntDate2 = moment(date, "YYYY-MM-DDTHH:mm:ss.SSS");
             let startOfWeek = mntDate2.startOf('week').format('MM/DD');
             let startYear = mntDate2.startOf('week').year();
             let endOfWeek = mntDate2.endOf('week').format('MM/DD');
@@ -862,8 +951,7 @@ class TemplateDataStore {
   }
 
   _formatDate(date, type) {
-    let dateObj = new Date(date);
-    let mntDate  = moment(dateObj);
+    let mntDate  = moment(date, "YYYY-MM-DDTHH:mm:ss.SSS");
       
     let dateKey, columnLabel;
     switch (type) {

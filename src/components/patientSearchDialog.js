@@ -1,7 +1,7 @@
 
 import React from 'react';
 //import './index.css';
-import { Modal, Button  } from 'antd';
+import { Modal, Button, Checkbox } from 'antd';
 import PatientPicker from './patientPicker';
 
 class PatientSearchDialog extends React.Component {
@@ -10,7 +10,8 @@ class PatientSearchDialog extends React.Component {
     super(props);
     this.state = {
       visible: false,
-      selectedPatient: this.props.selectedPatient      
+      selectedPatient: this.props.selectedPatient,
+      preLoadData: false
     };
 
   }
@@ -28,7 +29,7 @@ class PatientSearchDialog extends React.Component {
   }
 
   handleOK = () => {
-    this.props.onOK(this.state.selectedPatient);
+    this.props.onOK(this.state.selectedPatient, this.state.preLoadData);
     this.hideModal();
   }
 
@@ -42,6 +43,12 @@ class PatientSearchDialog extends React.Component {
     return this.props.selectedPatient ? "" : "Select Patient";
   }
 
+  onChange =(e) => {
+    this.setState({
+      preLoadData: e.target.checked
+    });
+    console.log(`checked = ${e.target.checked}`);
+  }
 
   render() {
     let label = this.patientButtonLabel();
@@ -58,6 +65,8 @@ class PatientSearchDialog extends React.Component {
           cancelText="Cancel"
         >
           <PatientPicker selectedPatient={this.state.selectedPatient} setSelectedPatient={(patient)=>this.setSelectedPatient(patient)}/>
+
+          <Checkbox className="patient-checkbox" onChange={this.onChange}>Preload first page of data.</Checkbox>
         </Modal>
       </div>
     );

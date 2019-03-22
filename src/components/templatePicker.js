@@ -14,8 +14,8 @@ class TemplatePicker extends React.Component {
     super(props);
 
     let list = [
-        {name: 'Complete Hierarchy', file: 'h11.js', data: loincTemp},
-        {name: 'Cardiac Hierarchy', file: 'c11.js', data: cardiacTemp }
+        {name: 'Full View', file: 'h11.js', data: loincTemp},
+        {name: 'Cardiac View', file: 'c11.js', data: cardiacTemp }
     ];
 
     // set default value
@@ -50,18 +50,19 @@ class TemplatePicker extends React.Component {
       
     return (
         <div>
-        <Select
-            showSearch
-            style={{ width: 200 }}
-            placeholder="Select a template"
-            optionFilterProp="children"
-            onChange={this.handleChange}
-            onFocus={this.handleFocus}
-            onBlur={this.handleBlur}
-            defaultValue={this.state.selectedTemplate.name}
-        >
-        {this.state.templateList.map(t => <Option key={t.name}>{t.name}</Option>)}
-        </Select>
+          <div>Flowsheet View:</div>
+          <Select
+              showSearch
+              style={{ width: 200 }}
+              placeholder="Select a template"
+              optionFilterProp="children"
+              onChange={this.handleChange}
+              onFocus={this.handleFocus}
+              onBlur={this.handleBlur}
+              defaultValue={this.state.selectedTemplate.name}
+          >
+          {this.state.templateList.map(t => <Option key={t.name}>{t.name}</Option>)}
+          </Select>
         </div>
     );
   }

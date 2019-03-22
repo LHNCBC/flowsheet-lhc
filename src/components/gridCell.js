@@ -257,6 +257,9 @@ class GridCell extends React.PureComponent {
   render() {
     const { data, columnIndex, rowIndex, style, className } = this.props;
 
+    // console.log("colIndex " + columnIndex );
+    // console.log("rowIndex " + rowIndex);
+
     let cell = this.dataCell(data, columnIndex, rowIndex);
     let cellClassName = this.getCellClass(data, columnIndex, rowIndex);
     if (className) {

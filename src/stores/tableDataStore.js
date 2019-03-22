@@ -61,9 +61,9 @@ class TableDataStore {
   }
 
 
-  getFirstPageData(patientId, showEqClass) {
+  getFirstPageData(patientId, showEqClass, batchSize, dateRange) {
     let that = this;
-    return fhirStore.getAllObservationByPatientId(patientId)
+    return fhirStore.getAllObservationByPatientId(patientId, batchSize, dateRange)
       .then(function(data) {
         //console.log(data);
         let [tableData, columnInfo] = templateStore.getTableData(data, showEqClass);
@@ -104,6 +104,36 @@ class TableDataStore {
       .catch(function(error) {
         console.log(error);
       });
+  }
+
+  getFirstObservationDate(patientId) {
+    let that = this;
+    return fhirStore.getFirstObservationByPatientId(patientId)
+        .then(function(data) {
+          //console.log(data);
+          if (data && data.effectiveDateTime) {
+            return data.effectiveDateTime;
+          }
+        })
+        .catch(function(error) {
+          console.log(error);
+        });
+
+  }
+
+  getLastObservationDate(patientId) {
+    let that = this;
+    return fhirStore.getLastObservationByPatientId(patientId)
+        .then(function(data) {
+          //console.log(data);
+          if (data && data.effectiveDateTime) {
+            return data.effectiveDateTime;
+          }
+        })
+        .catch(function(error) {
+          console.log(error);
+        });
+
   }
 
   resetData(showEqClass, force) {

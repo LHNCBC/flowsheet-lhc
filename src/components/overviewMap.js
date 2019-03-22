@@ -47,7 +47,30 @@ class OverviewMap extends React.Component {
 
   handleChange(value) {
   }
-  
+
+  getDotColor(data) {
+    let fillColor = 'black';
+    if (data.abnormal === true ) {
+      fillColor = 'red';
+    }
+    else if (data.abnormal === false ) {
+      fillColor = 'blue';
+    }
+    // "#c43a31"
+    return fillColor;
+  }
+
+  getXTickLabel(tick, index) {
+    let label = `${moment(tick).format("YYYY/MM/DD")}`
+    if (index === 0) {
+      label += " [Older]"
+    }
+    else {
+      label += " [Younger]"
+    }
+    return label
+  }
+
   render() {
       
     return (
@@ -62,14 +85,14 @@ class OverviewMap extends React.Component {
               containerComponent={<VictoryContainer responsive={false}/>}
           >
             <VictoryScatter
-                style={{ data: { fill: "#c43a31" } }}
+                style={{ data: { fill: d => this.getDotColor(d) } }}
                 size={1.5}
                 labelComponent={<VictoryTooltip/>}
                 data={this.props.chartData.data}
             />
             <VictoryAxis
                 tickValues={this.props.chartData.xTickValues}
-                tickFormat={(t) => `${moment(t).format("YYYY/MM/DD")}`}
+                tickFormat={(t, i) => this.getXTickLabel(t,i)}
             />
             <VictoryAxis
                 dependentAxis
@@ -78,7 +101,35 @@ class OverviewMap extends React.Component {
             {/*<VictoryLine*/}
                 {/*data={this.props.chartData.lineYearData}*/}
             {/*/>*/}
-
+            <VictoryLine
+                //domain={{x:[0,5],y:[0,5]}}
+                style={{
+                  data: { stroke: "#c43a31" },
+                  parent: { border: "1px solid #ccc"}
+                }}
+                data={[
+                  { x: this.props.visiblePosition.colStart, y: this.props.visiblePosition.rowStart },
+                  { x: this.props.visiblePosition.colStart, y: this.props.visiblePosition.rowStop },
+                ]}
+            />
+            <VictoryLine
+                data={[
+                  { x: this.props.visiblePosition.colStop, y: this.props.visiblePosition.rowStart },
+                  { x: this.props.visiblePosition.colStop, y: this.props.visiblePosition.rowStop },
+                ]}
+            />
+            <VictoryLine
+                data={[
+                  { x: this.props.visiblePosition.colStart, y: this.props.visiblePosition.rowStart },
+                  { x: this.props.visiblePosition.colStop, y: this.props.visiblePosition.rowStart },
+                ]}
+            />
+            <VictoryLine
+                data={[
+                  { x: this.props.visiblePosition.colStart, y: this.props.visiblePosition.rowStop },
+                  { x: this.props.visiblePosition.colStop, y: this.props.visiblePosition.rowStop },
+                ]}
+            />
 
           </VictoryChart>
         </div>
