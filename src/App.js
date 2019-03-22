@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import 'antd/dist/antd.css';
-import { Row, Col, Button, Switch} from 'antd';
+import { Row, Col, Button, Switch, Icon} from 'antd';
 
 import GridCell from './components/gridCell';
 import { FixedSizeGrid, VariableSizeGrid } from 'react-window';
@@ -37,8 +37,8 @@ class App extends Component {
       appTitle: "LHC Flowsheet On FHIR",
       selectedTemplate: null,
       moreData: false,
-      tableHeight: window.innerHeight,
-      tableWidth: window.innerWidth,
+      tableHeight: 0, //window.innerHeight - 508,
+      tableWidth: window.innerWidth -10,
       showAdditionalControls: false,
       showDebugInfo: false,
       chartData: null,
@@ -48,7 +48,8 @@ class App extends Component {
       moreButtonLabel: 'Load More',
       firstObxDate: null,
       lastObxDate: null,
-      dateRange: null
+      dateRange: null,
+      showControlPanel: true
     };
 
     this.anchorItemIndex = 0;
@@ -376,14 +377,28 @@ class App extends Component {
   }
 
   handleResize(e) {
-      let headerHeight = this.refHeader.current.clientHeight;
-      let footerHeight = this.refFooter.current.clientHeight;
+      // let headerHeight = this.refHeader.current.clientHeight;
+      // let footerHeight = this.refFooter.current.clientHeight;
+      //
+      // console.log("headerHeight: " + headerHeight);
+      let tableHeight = !this.state.showControlPanel ? window.innerHeight - 170 : window.innerHeight - 508;
 
       this.setState({
-        tableHeight: window.innerHeight - headerHeight - footerHeight -20, // not sure why there is a gap
+        // tableHeight: window.innerHeight - headerHeight - footerHeight -20, // not sure why there is a gap
+        tableHeight: tableHeight,
         tableWidth: window.innerWidth -10
       })
   }
+
+  hideShowControlPanel = () => {
+
+    let tableHeight = this.state.showControlPanel ? window.innerHeight - 170 : window.innerHeight - 508;
+    this.setState({
+      showControlPanel: !this.state.showControlPanel,
+      tableHeight: tableHeight
+    })
+
+  };
 
 
   onUnitSwitchChange(checked) {
@@ -652,34 +667,67 @@ class App extends Component {
       <div>
         <div id="lf-app-header" ref={this.refHeader}>
           <div id="lf-header">
-            <a href="http://lhncbc.nlm.nih.gov" title="Lister Hill National Center for Biomedical Communications (LHNCBC)" id="logo">
-              <img src={LHCImage} alt="Lister Hill National Center for Biomedical Communications (LHNCBC)"></img>
-            </a>
-            <div id="siteNameBox">
-              <a href="/">
+            <Row type="flex" justify="start" className="lf-row">
+              <Col xs={24} sm={24} md={12} lg={12} xl={12} >
+                <a href="http://lhncbc.nlm.nih.gov" title="Lister Hill National Center for Biomedical Communications (LHNCBC)" id="logo">
+                  <img src={LHCImage} alt="Lister Hill National Center for Biomedical Communications (LHNCBC)"></img>
+                </a>
+                <div id="siteNameBox">
+                  <a href="/">
                 <span id="siteName">
                   {this.state.appTitle}
                 </span>
-              </a>
-            </div>
-          </div>
-          <div id='lf-options'>
-            <Row type="flex" justify="start" className="lf-row">
-              <Col>
-                <PatientSearchDialog selectedPatient={this.state.selectedPatient} onOK={this.setSelectedPatient}/>
+                  </a>
+                </div>
               </Col>
-              { this.state.selectedPatient &&
-              <Col className="lf-patient-info" span={20}>
-                <Row>
-                  <Col xs={24} sm={24} md={24} lg={6} xl={6} className="lf-patient-name" >{name}</Col>
-                  <Col xs={24} sm={12} md={6} lg={4} xl={4}>ID: <span className="lf-bold">{pid}</span></Col>
-                  <Col xs={24} sm={12} md={6} lg={4} xl={4}>Gender: <span className="lf-bold">{gender}</span></Col>
-                  {/*<Col xs={24} sm={12} md={6} lg={4} xl={4}>DoB: <span className="lf-bold">{dob}</span></Col>*/}
-                  {/*<Col xs={24} sm={12} md={6} lg={4} xl={4}>Deceased: <span className="lf-bold">{deceased}</span></Col>*/}
+              <Col xs={24} sm={24} md={12} lg={12} xl={12} >
+                <Row type="flex" justify="start" className="lf-row">
+                  <Col xs={24} sm={24} md={12} lg={12} xl={12}>
+                    <Row>
+                      <Col>
+                        <PatientSearchDialog selectedPatient={this.state.selectedPatient} onOK={this.setSelectedPatient}/>
+                      </Col>
+                    </Row>
+                    { this.state.selectedPatient &&
+                      <Row className="lf-patient-info">
+                        <Col xs={24} sm={24} md={24} lg={6} xl={6} className="lf-patient-name" >{name}</Col>
+                        <Col xs={24} sm={12} md={6} lg={4} xl={4}>ID: <span className="lf-bold">{pid}</span></Col>
+                        <Col xs={24} sm={12} md={6} lg={4} xl={4}>Gender: <span className="lf-bold">{gender}</span></Col>
+                        {/*<Col xs={24} sm={12} md={6} lg={4} xl={4}>DoB: <span className="lf-bold">{dob}</span></Col>*/}
+                        {/*<Col xs={24} sm={12} md={6} lg={4} xl={4}>Deceased: <span className="lf-bold">{deceased}</span></Col>*/}
+                      </Row>
+                    }
+
+                  </Col>
+                  <Col>
+
+                    <Button icon="sliders" onClick={this.hideShowControlPanel}/>
+                  </Col>
                 </Row>
               </Col>
-              }
+
             </Row>
+
+          </div>
+
+          { this.state.showControlPanel &&
+            <div id='lf-options'>
+            {/*<Row type="flex" justify="start" className="lf-row">*/}
+              {/*<Col>*/}
+                {/*<PatientSearchDialog selectedPatient={this.state.selectedPatient} onOK={this.setSelectedPatient}/>*/}
+              {/*</Col>*/}
+              {/*{ this.state.selectedPatient &&*/}
+              {/*<Col className="lf-patient-info" span={20}>*/}
+                {/*<Row>*/}
+                  {/*<Col xs={24} sm={24} md={24} lg={6} xl={6} className="lf-patient-name" >{name}</Col>*/}
+                  {/*<Col xs={24} sm={12} md={6} lg={4} xl={4}>ID: <span className="lf-bold">{pid}</span></Col>*/}
+                  {/*<Col xs={24} sm={12} md={6} lg={4} xl={4}>Gender: <span className="lf-bold">{gender}</span></Col>*/}
+                  {/*/!*<Col xs={24} sm={12} md={6} lg={4} xl={4}>DoB: <span className="lf-bold">{dob}</span></Col>*!/*/}
+                  {/*/!*<Col xs={24} sm={12} md={6} lg={4} xl={4}>Deceased: <span className="lf-bold">{deceased}</span></Col>*!/*/}
+                {/*</Row>*/}
+              {/*</Col>*/}
+              {/*}*/}
+            {/*</Row>*/}
             <Row type="flex" className="lf-row">
               <Col xs={24} sm={12} md={8} lg={8} xl={8}>
                 <TemplatePicker selectedTemplate={this.state.selectedTemplate} setSelectedTemplate={(temp) => this.setSelectedTemplate(temp)}/>
@@ -731,7 +779,7 @@ class App extends Component {
             </Row>
             }
           </div>
-
+          }
           <div id="lf-status">
             <Row type="flex" className='lf-data-info lf-row'>
 
@@ -764,8 +812,8 @@ class App extends Component {
               </Row>
                 <OverviewMap
                     //width={this.state.tableWidth}
-                    width={400}
-                    height={400}
+                    width={500}
+                    height={420}
                     chartData = {this.state.chartData}
                     visiblePosition = {this.state.visiblePosition}
                 >
@@ -816,8 +864,8 @@ class App extends Component {
           <button onClick={() => this.getNextPageData()}>Get Next Page Data</button> */}
 
         </div>
-        <div id="lf-app-footer" ref={this.refFooter}>
-        </div>
+        {/*<div id="lf-app-footer" ref={this.refFooter}>*/}
+        {/*</div>*/}
       </div>
     );
   }

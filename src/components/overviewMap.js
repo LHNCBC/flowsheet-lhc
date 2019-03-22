@@ -76,7 +76,7 @@ class OverviewMap extends React.Component {
     return (
         <div>
           <VictoryChart
-              // padding={{ top: 10, bottom: 40, left: 40, right: 40 }}
+               padding={{ top: 10, bottom: 40, left: 60, right: 60 }}
               width={this.props.width}
               height={this.props.height}
               theme={VictoryTheme.material}
