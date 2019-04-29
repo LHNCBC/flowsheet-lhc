@@ -52,11 +52,12 @@ class ZoomLevelPicker extends React.Component {
   
   render() {
     return (
-        <div>
-          <div>Display Mode:</div>
+        <div className={"lf-option"}>
+          <div className={"lf-option-label"}>Display Mode:</div>
           <Select
+              className={"lf-option-field"}
               showSearch
-              style={{ width: 200 }}
+              style={{ width: 180 }}
               placeholder="Select a Date Range"
               optionFilterProp="children"
               onChange={this.handleChange}
@@ -64,8 +65,8 @@ class ZoomLevelPicker extends React.Component {
               onBlur={this.handleBlur}
               defaultValue={this.state.selectedLevel.name}
           >
-        {this.state.zoomLevelList.map(l => <Option key={l.name}>{l.name}</Option>)}
-        </Select>
+            {this.state.zoomLevelList.map(l => <Option key={l.name}>{l.name}</Option>)}
+          </Select>
         </div>
     );
   }

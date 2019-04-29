@@ -55,11 +55,12 @@ class BatchSizePicker extends React.Component {
   
   render() {
     return (
-        <div>
-          <div>Load Batch Size:</div>
+        <div className={"lf-option"}>
+          <div className={"lf-option-label"}>Page Size:</div>
           <Select
+              className={"lf-option-field"}
               showSearch
-              style={{ width: 200 }}
+              style={{ width: 180 }}
               placeholder="Select a batch size for data query"
               optionFilterProp="children"
               onChange={this.handleChange}

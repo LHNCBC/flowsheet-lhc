@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@lhncbc/ucum-lhc": "2.4.1",
-    "antd": "^3.10.0",
+    "antd": "^3.15.2",
     "deep-copy": "^1.4.2",
     "fhir.js": "git://github.com/akanduru/fhir.js",
     "lodash": "^4.17.11",

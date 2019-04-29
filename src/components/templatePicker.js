@@ -1,8 +1,8 @@
 import React from "react";
 import "antd/dist/antd.css";
 import { Select } from "antd";
-import loincTemp from '../stores/h11';
-import cardiacTemp from '../stores/c11';
+import loincTemp from "../stores/h11";
+import cardiacTemp from "../stores/c11";
 
 const Option = Select.Option;
 
@@ -49,11 +49,12 @@ class TemplatePicker extends React.Component {
   render() {
       
     return (
-        <div>
-          <div>Flowsheet View:</div>
+        <div className={"lf-option"}>
+          <div className={"lf-option-label"}>Flowsheet View:</div>
           <Select
+              className={"lf-option-field"}
               showSearch
-              style={{ width: 200 }}
+              style={{ width: 180 }}
               placeholder="Select a template"
               optionFilterProp="children"
               onChange={this.handleChange}

@@ -8,8 +8,8 @@ const PAGE_SIZE = 1000;
 const LHC_FHIR_SERVER = {
   name: "LHC Internal FHIR Server #2", 
   desc: "Internal FHIR server at LHC, for dev/test only",
-  url: "https://lhc-docker.nlm.nih.gov:8343/fhir2/baseDstu3",
-  //url: "https://lhcflowsheet.nlm.nih.gov/hapi-fhir-jpaserver/baseDstu3",
+  //url: "https://lhc-docker.nlm.nih.gov:8343/fhir2/baseDstu3",
+  url: "https://lhcflowsheet.nlm.nih.gov/hapi-fhir-jpaserver/baseDstu3",
   //url: "https://lforms-service-stage-rh7.nlm.nih.gov:8143/hapi-fhir-jpaserver-example/baseDstu3",
   //url: "http://lhc-docker.nlm.nih.gov:8280/hapi-fhir-jpaserver/baseDstu3",
 //  url: "https://lforms-service-stage-rh7.nlm.nih.gov:8243/hapi-fhir-jpaserver-example/baseDstu3",
@@ -234,9 +234,15 @@ class FhirDataStore {
     };
 
     if (dateRange) {
-      let rangeStart = moment(dateRange[0]).format('YYYY-MM-DD');
-      let rangeEnd = moment(dateRange[1] + 86400000).format('YYYY-MM-DD');
-      queryOption['date'] = {$ge: rangeStart, $lt: rangeEnd}
+      queryOption['date'] = {};
+      if (dateRange[0]) {
+        let rangeStart = moment(dateRange[0]).format('YYYY-MM-DD');
+        queryOption['date']['$ge'] = rangeStart;
+      }
+      if (dateRange[1]) {
+        let rangeEnd = moment(dateRange[1] + 86400000).format('YYYY-MM-DD');
+        queryOption['date']['$lt'] = rangeEnd;
+      }
 
     }
     return this._fhirClient.search({

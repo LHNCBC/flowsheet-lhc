@@ -8,11 +8,11 @@ const Option = AutoComplete.Option;
 const TabPane = Tabs.TabPane;
 
 const preSelectedPatients = [
-  {name: "AMIT AZIZ", id: "pat-33378", gender: "male", desc: "16375 Observations"},
-  {name: "WILFREDO R BHAT", id: "pat-88616", gender: "female", desc: "16141 Observations"},
-  {name: "BLAIR MACALUSO", id: "pat-87082", gender: "female", desc: "25906 Observations"},
-  {name: "CARMEN U REED", id: "pat-123839", gender: "male", desc: "17886 Observations"},
-  {name: "DILIP D VAUGHAN", id: "pat-4322", gender: "male", desc: "24395 Observations"}
+  {name: "AMIT AZIZ", id: "pat-33378", gender: "male", desc: "20517 Observations"},
+  {name: "WILFREDO R BHAT", id: "pat-88616", gender: "female", desc: "20172 Observations"},
+  {name: "BLAIR MACALUSO", id: "pat-87082", gender: "female", desc: "32359 Observations"},
+  {name: "CARMEN U REED", id: "pat-123839", gender: "male", desc: "22406 Observations"},
+  {name: "DILIP D VAUGHAN", id: "pat-4322", gender: "male", desc: "30518 Observations"}
 ];
 const defaultPatientIndex = 0;
 

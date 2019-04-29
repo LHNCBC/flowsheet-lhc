@@ -51,22 +51,22 @@ class OverviewMap extends React.Component {
   getDotColor(data) {
     let fillColor = 'black';
     if (data.abnormal === true ) {
-      fillColor = 'red';
+      fillColor = '#ff6118'; //'rgb(217,49,62)';
     }
     else if (data.abnormal === false ) {
-      fillColor = 'blue';
+      fillColor = '#1890ff'; //'rgb(64,72,204)';
     }
     // "#c43a31"
     return fillColor;
   }
 
   getXTickLabel(tick, index) {
-    let label = `${moment(tick).format("YYYY/MM/DD")}`
+    let label = `${moment(tick).format("YYYY/MM/DD")}`;
     if (index === 0) {
-      label += " [Older]"
+      label += " [Newer Dates]";
     }
     else {
-      label += " [Younger]"
+      label += " [Older Dates]";
     }
     return label
   }
@@ -76,7 +76,7 @@ class OverviewMap extends React.Component {
     return (
         <div>
           <VictoryChart
-               padding={{ top: 10, bottom: 40, left: 60, right: 60 }}
+              padding={{ top: 10, bottom: 40, left: 80, right: 80 }}
               width={this.props.width}
               height={this.props.height}
               theme={VictoryTheme.material}

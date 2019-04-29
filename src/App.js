@@ -1,16 +1,20 @@
 import React, { Component } from 'react';
 import './App.css';
 import 'antd/dist/antd.css';
-import { Row, Col, Button, Switch, Icon} from 'antd';
+import { Row, Col, Button, Switch, Icon, Spin} from 'antd';
 
 import GridCell from './components/gridCell';
 import { FixedSizeGrid, VariableSizeGrid } from 'react-window';
+import moment from 'moment';
 
 import PatientSearchDialog from './components/patientSearchDialog';
 import TemplatePicker from './components/templatePicker';
+import TemplateCustomizerDialog from './components/templateCustomizerDialog';
+
 import ZoomLevelPicker from './components/zoomLevelPicker';
 import TimelineSlider from './components/timelineSlider';
 import BatchSizePicker from './components/batchSizePicker';
+import DateRangePicker from './components/dateRangePicker';
 import ConditionListDialog from './components/conditionListDialog';
 import OverviewMap from './components/overviewMap';
 
@@ -37,7 +41,7 @@ class App extends Component {
       appTitle: "LHC Flowsheet On FHIR",
       selectedTemplate: null,
       moreData: false,
-      tableHeight: 0, //window.innerHeight - 508,
+      tableHeight: window.innerHeight - 213 -16,
       tableWidth: window.innerWidth -10,
       showAdditionalControls: false,
       showDebugInfo: false,
@@ -48,7 +52,10 @@ class App extends Component {
       moreButtonLabel: 'Load More',
       firstObxDate: null,
       lastObxDate: null,
-      dateRange: null,
+      rangeStart: null,
+      rangeEnd: null,
+      selectedRangeValue: null,
+      selectedRangeKey: 'all',
       showControlPanel: true
     };
 
@@ -67,6 +74,7 @@ class App extends Component {
     this.onUnitSwitchChange = this.onUnitSwitchChange.bind(this);
     this.onEqClassSwitchChange = this.onEqClassSwitchChange.bind(this);
     this.handleResize = this.handleResize.bind(this);
+    this.hideShowControlPanel = this.hideShowControlPanel.bind(this);
     this.expandCollapseAHeader = this.expandCollapseAHeader.bind(this);
     this.onAdditionalControlsChange = this.onAdditionalControlsChange.bind(this);
     this.onDebugSwitchChange = this.onDebugSwitchChange.bind(this);
@@ -76,6 +84,7 @@ class App extends Component {
   }
 
   gridRef = React.createRef();
+  nonTableRef = React.createRef();
 
   setSelectedPatient = (patient, preLoadData) => {
     // reset template
@@ -93,16 +102,20 @@ class App extends Component {
       tableDataStore.getFirstObservationDate(patient.id )
           .then(function(data) {
             console.log(data)
+            let first = moment(data, "YYYY-MM-DDTHH:mm:ss.SSS").startOf('day');
             that.setState({
-              firstObxDate: data
+              firstObxDate: data,
+              rangeStart: first.valueOf()
             })
           });
 
       tableDataStore.getLastObservationDate(patient.id )
           .then(function(data) {
             console.log(data)
+            let last = moment(data, "YYYY-MM-DDTHH:mm:ss.SSS").startOf('day');
             that.setState({
-              lastObxDate: data
+              lastObxDate: data,
+              rangeEnd: last.valueOf()
             })
           });
 
@@ -127,9 +140,42 @@ class App extends Component {
 
   setDateRange = (range) => {
     if (range && this.state.selectedPatient) {
+      let rangeValue = [];
+      if (range.selection === 'all') {
+        rangeValue = null;
+      }
+      else {
+        let latest = moment(this.state.rangeEnd);
+        let year = latest.year();
+        switch (range.selection) {
+          case '1y':
+            rangeValue = [latest.year(year - 1).valueOf(), null];
+            break;
+          case '2y':
+            rangeValue = [latest.year(year - 2).valueOf(), null];
+            break;
+          case '3y':
+            rangeValue = [latest.year(year - 3).valueOf(), null];
+            break;
+          case '5y':
+            rangeValue = [latest.year(year - 5).valueOf(), null];
+            break;
+          case '10y':
+            rangeValue = [latest.year(year - 10).valueOf(), null];
+            break;
+          case 'customize':
+            rangeValue = range.rangeValue;
+            break;
+          case 'all':
+          default:
+            rangeValue = null;
+        }
+      }
+
       this.setState({
-        dateRange: range
-      })
+        selectedRangeKey: range.selection,
+        selectedRangeValue: rangeValue
+      });
 
       console.log(range)
     }
@@ -180,6 +226,10 @@ class App extends Component {
     })
   };
 
+  setCustomizedData = (data) => {
+
+  }
+
   _findFirstVisibleColDate(columns, colIndex) {
     return colIndex >= columns.length ? columns[columns.length-1].start : columns[colIndex].start;
   }
@@ -207,11 +257,18 @@ class App extends Component {
     let patientId = pId ? pId : this.state.selectedPatient ? this.state.selectedPatient.id : "";
     let that = this;
 
+    this.setState({
+      flowsheetData: null,
+      moreData: null,
+      flowsheetColumns: null,
+      isLoading: true
+    });
+
     this.handleResize();
 
     tableDataStore.setTemplate(this.state.selectedTemplate.data);
 
-    tableDataStore.getFirstPageData(patientId, this.state.showEqClass, this.state.batchSize, this.state.dateRange)
+    tableDataStore.getFirstPageData(patientId, this.state.showEqClass, this.state.batchSize, this.state.selectedRangeValue)
       .then(function(data) {
 
         // scroll to the anchor item
@@ -225,7 +282,8 @@ class App extends Component {
           flowsheetData: data.tableData,
           moreData: data.moreData,
           flowsheetColumns: columns,
-          moreButtonLabel: `Load ${that.state.batchSize} More`
+          moreButtonLabel: `Load ${that.state.batchSize} More`,
+          isLoading: false
         });
         console.log(that.state.flowsheetColumns);
         if (that.state.showOverviewMap) {
@@ -236,6 +294,13 @@ class App extends Component {
       })
       .catch(function(error) {
         console.log(error);
+        that.setState({
+          flowsheetData: null,
+          moreData: null,
+          flowsheetColumns: null,
+          isLoading: false
+        });
+
       });
 
   }
@@ -244,7 +309,8 @@ class App extends Component {
     let that = this;
 
     that.setState({
-      moreData: false
+      moreData: false,
+      isLoading: true
     });
 
     // get anchor item key, which is the 3nd item after the "visibleRowStartIndex" ??
@@ -272,6 +338,7 @@ class App extends Component {
           flowsheetData: data.tableData,
           moreData: data.moreData,
           flowsheetColumns: columns,
+          isLoading: false
         })
         if (that.state.showOverviewMap) {
           that._processChartData(columns, data.tableData);
@@ -280,6 +347,13 @@ class App extends Component {
       })
       .catch(function(error) {
         console.log(error);
+        that.setState({
+          flowsheetData: null,
+          moreData: null,
+          flowsheetColumns: null,
+          isLoading: false
+        });
+
       });
 
   }
@@ -338,10 +412,6 @@ class App extends Component {
   }
 
   componentDidUpdate() {
-    // console.log("in componentDidUpdate")
-    // console.log(this.anchorItemIndex);
-    // console.log(this.needReposition);
-
 
     if (this.needRepositionRow && this.needRepositionCol) {
       this.gridRef.current.scrollToItem({
@@ -377,26 +447,45 @@ class App extends Component {
   }
 
   handleResize(e) {
-      // let headerHeight = this.refHeader.current.clientHeight;
-      // let footerHeight = this.refFooter.current.clientHeight;
-      //
-      // console.log("headerHeight: " + headerHeight);
-      let tableHeight = !this.state.showControlPanel ? window.innerHeight - 170 : window.innerHeight - 508;
 
-      this.setState({
+    let that = this;
+    // setTimeout(function(){
+      let nonTableHeight = that.nonTableRef.current.offsetHeight;
+      let tableHeight = that.state.showControlPanel ? window.innerHeight -213 : window.innerHeight - 123; //nonTableHeight;
+
+      that.setState({
         // tableHeight: window.innerHeight - headerHeight - footerHeight -20, // not sure why there is a gap
-        tableHeight: tableHeight,
-        tableWidth: window.innerWidth -10
+        tableHeight: tableHeight -16,
+        tableWidth: window.innerWidth - 8
       })
+
+      console.log("in resize");
+      console.log(window.innerHeight);
+      console.log(tableHeight)
+      console.log(nonTableHeight)
+
+    // }, 150);
+
+
   }
 
   hideShowControlPanel = () => {
+    let that = this;
+    // setTimeout(function(){
+      let nonTableHeight = that.nonTableRef.current.offsetHeight;
+      let tableHeight = that.state.showControlPanel ? window.innerHeight -123 : window.innerHeight - 213; //nonTableHeight;
 
-    let tableHeight = this.state.showControlPanel ? window.innerHeight - 170 : window.innerHeight - 508;
-    this.setState({
-      showControlPanel: !this.state.showControlPanel,
-      tableHeight: tableHeight
-    })
+      that.setState({
+        showControlPanel: !that.state.showControlPanel,
+        tableHeight: tableHeight -16,
+        tableWidth: window.innerWidth -8
+      })
+
+      console.log("in hide/show control panel");
+      console.log(window.innerHeight);
+      console.log(nonTableHeight)
+
+    // }, 150);
 
   };
 
@@ -653,7 +742,7 @@ class App extends Component {
 
 
   render() {
-    let name = this.state.selectedPatient ? this.state.selectedPatient.name : "";
+    let name = this.state.selectedPatient ? this.state.selectedPatient.name : "Select a Patient";
     let gender = this.state.selectedPatient ? this.state.selectedPatient.gender : "";
     // let dob = this.state.selectedPatient ? this.state.selectedPatient.dob : "";
     let pid = this.state.selectedPatient ? this.state.selectedPatient.id: "";
@@ -665,174 +754,178 @@ class App extends Component {
 
     return (
       <div>
-        <div id="lf-app-header" ref={this.refHeader}>
-          <div id="lf-header">
-            <Row type="flex" justify="start" className="lf-row">
-              <Col xs={24} sm={24} md={12} lg={12} xl={12} >
+        <div id={"lf-non-data-table"} ref={this.nonTableRef}>
+          <div className="lf-app-header" ref={this.refHeader}>
+            <div className="lf-header">
+              <div className="lf-logo">
                 <a href="http://lhncbc.nlm.nih.gov" title="Lister Hill National Center for Biomedical Communications (LHNCBC)" id="logo">
                   <img src={LHCImage} alt="Lister Hill National Center for Biomedical Communications (LHNCBC)"></img>
                 </a>
-                <div id="siteNameBox">
-                  <a href="/">
-                <span id="siteName">
-                  {this.state.appTitle}
-                </span>
-                  </a>
-                </div>
-              </Col>
-              <Col xs={24} sm={24} md={12} lg={12} xl={12} >
-                <Row type="flex" justify="start" className="lf-row">
-                  <Col xs={24} sm={24} md={12} lg={12} xl={12}>
-                    <Row>
-                      <Col>
-                        <PatientSearchDialog selectedPatient={this.state.selectedPatient} onOK={this.setSelectedPatient}/>
-                      </Col>
-                    </Row>
+              </div>
+
+              <div className={"lf-app-title"}>
+                <a href="/">
+                  <span>
+                    {this.state.appTitle}
+                  </span>
+                </a>
+              </div>
+
+              <div className={"lf-app-control"}>
+
+                <div className={"lf-patient"}>
+                  <div className={"lf-patient-info"}>
+                    <div className={"lf-patient-name"}>
+                        <div>{name}</div>
+                    </div>
                     { this.state.selectedPatient &&
-                      <Row className="lf-patient-info">
-                        <Col xs={24} sm={24} md={24} lg={6} xl={6} className="lf-patient-name" >{name}</Col>
-                        <Col xs={24} sm={12} md={6} lg={4} xl={4}>ID: <span className="lf-bold">{pid}</span></Col>
-                        <Col xs={24} sm={12} md={6} lg={4} xl={4}>Gender: <span className="lf-bold">{gender}</span></Col>
-                        {/*<Col xs={24} sm={12} md={6} lg={4} xl={4}>DoB: <span className="lf-bold">{dob}</span></Col>*/}
-                        {/*<Col xs={24} sm={12} md={6} lg={4} xl={4}>Deceased: <span className="lf-bold">{deceased}</span></Col>*/}
-                      </Row>
+                    <div className={"lf-patient-extra"}>
+
+                      <div className="lf-patient-field">
+                        <span>ID: </span><span className="lf-bold">{pid}</span>
+                      </div>
+                      <div className="lf-patient-field">
+                        <span>Gender: </span><span className="lf-bold">{gender}</span>
+                      </div>
+                    </div>
                     }
+                  </div>
+                  <div className={"lf-patient-btn"}>
+                    <PatientSearchDialog selectedPatient={this.state.selectedPatient} onOK={this.setSelectedPatient}/>
+                  </div>
+                </div>
 
-                  </Col>
-                  <Col>
+                <div className={"lf-control"}>
+                  <div className={"lf-control-btn"}>
+                    <Button className='lf-button' size={"small"} type="primary" icon="reload" disabled={!this.state.selectedPatient} onClick={() => this.loadData()}>{reloadButtonLabel}</Button>
+                  </div>
+                  <div className={"lf-control-btn"}>
+                    <Button className='lf-button' size={"small"} type="primary" icon="swap" disabled={!this.state.moreData} onClick={() => this.appendData()}>{this.state.moreButtonLabel}</Button>
+                  </div>
+                  <div className={"lf-control-btn"}>
+                    <ConditionListDialog selectedPatient={this.state.selectedPatient}/>
+                  </div>
+                </div>
 
-                    <Button icon="sliders" onClick={this.hideShowControlPanel}/>
-                  </Col>
-                </Row>
-              </Col>
-
-            </Row>
-
-          </div>
-
-          { this.state.showControlPanel &&
-            <div id='lf-options'>
-            {/*<Row type="flex" justify="start" className="lf-row">*/}
-              {/*<Col>*/}
-                {/*<PatientSearchDialog selectedPatient={this.state.selectedPatient} onOK={this.setSelectedPatient}/>*/}
-              {/*</Col>*/}
-              {/*{ this.state.selectedPatient &&*/}
-              {/*<Col className="lf-patient-info" span={20}>*/}
-                {/*<Row>*/}
-                  {/*<Col xs={24} sm={24} md={24} lg={6} xl={6} className="lf-patient-name" >{name}</Col>*/}
-                  {/*<Col xs={24} sm={12} md={6} lg={4} xl={4}>ID: <span className="lf-bold">{pid}</span></Col>*/}
-                  {/*<Col xs={24} sm={12} md={6} lg={4} xl={4}>Gender: <span className="lf-bold">{gender}</span></Col>*/}
-                  {/*/!*<Col xs={24} sm={12} md={6} lg={4} xl={4}>DoB: <span className="lf-bold">{dob}</span></Col>*!/*/}
-                  {/*/!*<Col xs={24} sm={12} md={6} lg={4} xl={4}>Deceased: <span className="lf-bold">{deceased}</span></Col>*!/*/}
-                {/*</Row>*/}
-              {/*</Col>*/}
-              {/*}*/}
-            {/*</Row>*/}
-            <Row type="flex" className="lf-row">
-              <Col xs={24} sm={12} md={8} lg={8} xl={8}>
-                <TemplatePicker selectedTemplate={this.state.selectedTemplate} setSelectedTemplate={(temp) => this.setSelectedTemplate(temp)}/>
-              </Col>
-              <Col xs={24} sm={12} md={8} lg={8} xl={8}>
-                <ConditionListDialog selectedPatient={this.state.selectedPatient}/>
-              </Col>
-              <Col xs={24} sm={12} md={8} lg={8} xl={8}>
-                <Button className='lf-button' type="primary" icon="reload" disabled={!this.state.selectedPatient} onClick={() => this.loadData()}>{reloadButtonLabel}</Button>  
-                <Button className='lf-button' type="primary" icon="swap" disabled={!this.state.moreData} onClick={() => this.appendData()}>{this.state.moreButtonLabel}</Button>
-              </Col>
-            </Row>
-
-            <Row type="flex" className="lf-row">
-              <Col xs={24} sm={12} md={8} lg={8} xl={8}>
-                <ZoomLevelPicker zoomLevel={this.state.zoomLevel} setZoomLevel={(level) => this.setZoomLevel(level)}/>
-                <BatchSizePicker batchSize={this.state.batchSize} setBatchSize={(size) => this.setBatchSize(size)}/>
-              </Col>
-              <Col xs={24} sm={12} md={8} lg={8} xl={8}>
-                <Row className="lf-switch-row">
-                  <Switch checkedChildren="Units Shown" unCheckedChildren="Units Hidden" defaultChecked={false} onChange={this.onUnitSwitchChange}/>
-                </Row>
-              </Col>
-              <Col xs={24} sm={12} md={8} lg={8} xl={8}>
-                <Row className="lf-switch-row">
-                  <Switch checkedChildren="Equivalence Classes Collapsed" unCheckedChildren="Equivalence Classes Expanded" defaultChecked={false} onChange={this.onEqClassSwitchChange}/>
-                </Row>
-              </Col>
-            </Row>
-
-            {this.state.lastObxDate && this.state.firstObxDate &&
-              <Row type="flex" className="lf-row">
-                <Col xs={24} sm={24} md={24} lg={24} xl={24}>
-                  <TimelineSlider minDate={this.state.firstObxDate} maxDate={this.state.lastObxDate}
-                                  setRange={(r) => this.setDateRange(r)}
-                  />
-                </Col>
-              </Row>
-            }
-            <Row type="flex" className="lf-row">
-              <Button type="dashed" icon={this.state.showAdditionalControls ? "down" : "right"} onClick={() => this.onAdditionalControlsChange()}>Additional Controls</Button>
-            </Row>
-
-            { this.state.showAdditionalControls &&
-            <Row type="flex" className="lf-row">
-              <Col xs={24} sm={12} md={6} lg={6} xl={4}>
-                  <Switch checkedChildren="Debug Info Shown" unCheckedChildren="Debug Info Hidden" defaultChecked={false} onChange={this.onDebugSwitchChange}/>
-              </Col>
-            </Row>
-            }
-          </div>
-          }
-          <div id="lf-status">
-            <Row type="flex" className='lf-data-info lf-row'>
-
-              <Col xs={24} sm={12} md={4} lg={4} xl={4}>
-                <Button type="primary" icon="dot-chart" size={"small"} disabled={!this.state.flowsheetData} onClick={this.createAndShowOverViewMap}>Overview Map</Button>
-              </Col>
-
-              <Col xs={24} sm={12} md={5} lg={5} xl={5}>
-                Displayed Resources: <span className="lf-bold">{ tableDataStore.retrievedNumOfRes }</span>
-              </Col>
-              <Col xs={24} sm={12} md={5} lg={5} xl={5}>
-                Total Resources: <span className="lf-bold">{ tableDataStore.availableNumOfRes }</span>
-              </Col>
-              <Col xs={24} sm={12} md={5} lg={5} xl={5}>
-                Columns: <span className="lf-bold">{this.state.flowsheetColumns ? this.state.flowsheetColumns.length - 2 : 0 }</span>
-              </Col>
-              <Col xs={24} sm={12} md={5} lg={5} xl={5}>
-                Rows: <span className="lf-bold">{this.state.flowsheetData ? this.state.flowsheetData.length : 0 }</span>
-              </Col>
-            </Row>
-          </div>
-        </div>
-
-        { this.state.showOverviewMap &&
-            <div>
-              <Row type="flex" className="lf-row">
-                <Col xs={24} sm={12} md={12} lg={12} xl={12}>
-                  Empty Cell Percentage: <span className="lf-bold">{this.state.flowsheetData ? this.state.emptyCellPercentage : '' }</span>
-                </Col>
-              </Row>
-                <OverviewMap
-                    //width={this.state.tableWidth}
-                    width={500}
-                    height={420}
-                    chartData = {this.state.chartData}
-                    visiblePosition = {this.state.visiblePosition}
-                >
-                </OverviewMap>
+              </div>
             </div>
-        }
 
+
+            { this.state.showControlPanel &&
+              <div id='lf-options'>
+              <Row type="flex" className="lf-row">
+                <Col xs={24} sm={12} md={8} lg={6} xl={6}>
+                  <TemplatePicker selectedTemplate={this.state.selectedTemplate} setSelectedTemplate={(temp) => this.setSelectedTemplate(temp)}/>
+                </Col>
+                {/*<Col xs={24} sm={12} md={8} lg={6} xl={6}>*/}
+                  {/*<TemplateCustomizerDialog*/}
+                      {/*selectedTemplate={this.state.selectedTemplate}*/}
+                      {/*flowsheetData={this.state.flowsheetData}*/}
+                      {/*flowsheetColumns={this.state.flowsheetColumns}*/}
+                      {/*setCustomizedData={(data) => this.setCustomizedData(data)}/>*/}
+                {/*</Col>*/}
+                <Col xs={24} sm={12} md={8} lg={6} xl={6}>
+                  <BatchSizePicker batchSize={this.state.batchSize} setBatchSize={(size) => this.setBatchSize(size)}/>
+                </Col>
+                <Col xs={24} sm={12} md={8} lg={6} xl={6}>
+                  {/*{this.state.lastObxDate && this.state.firstObxDate &&*/}
+                  {/*<TimelineSlider minDate={this.state.firstObxDate} maxDate={this.state.lastObxDate}*/}
+                                  {/*setRange={(r) => this.setDateRange(r)}*/}
+                  {/*/>*/}
+                  {/*}*/}
+                  <DateRangePicker rangeStart={this.state.rangeStart} rangeEnd={this.state.rangeEnd} selectedRangeKey={this.state.selectedRangeKey}
+                                   setDateRange={(r) => this.setDateRange(r)}/>
+                </Col>
+                {/*<Col xs={24} sm={12} md={8} lg={6} xl={6}>*/}
+                  {/*<Button className='lf-button' type="primary" icon="reload" disabled={!this.state.selectedPatient} onClick={() => this.loadData()}>{reloadButtonLabel}</Button>*/}
+                  {/*<Button className='lf-button' type="primary" icon="swap" disabled={!this.state.moreData} onClick={() => this.appendData()}>{this.state.moreButtonLabel}</Button>*/}
+                {/*</Col>*/}
+              </Row>
+
+              <Row type="flex" className="lf-row">
+                <Col xs={24} sm={12} md={8} lg={6} xl={6}>
+                  <ZoomLevelPicker zoomLevel={this.state.zoomLevel} setZoomLevel={(level) => this.setZoomLevel(level)}/>
+
+                </Col>
+                <Col xs={24} sm={12} md={8} lg={6} xl={6}>
+                  <Row className="lf-switch-row">
+                    <Switch checkedChildren="Units Shown" unCheckedChildren="Units Hidden" defaultChecked={false} onChange={this.onUnitSwitchChange}/>
+                  </Row>
+                </Col>
+                <Col xs={24} sm={12} md={8} lg={6} xl={6}>
+                  <Row className="lf-switch-row">
+                    <Switch checkedChildren="Equivalence Classes Collapsed" unCheckedChildren="Equivalence Classes Expanded" defaultChecked={false} onChange={this.onEqClassSwitchChange}/>
+                  </Row>
+                </Col>
+                <Col xs={24} sm={12} md={8} lg={6} xl={6}>
+                  <Button type="dashed" icon={this.state.showAdditionalControls ? "down" : "right"} onClick={() => this.onAdditionalControlsChange()}>Additional Controls</Button>
+                </Col>
+              </Row>
+
+              { this.state.showAdditionalControls &&
+              <Row type="flex" className="lf-row">
+                <Col xs={24} sm={12} md={8} lg={6} xl={6}>
+                    <Switch checkedChildren="Debug Info Shown" unCheckedChildren="Debug Info Hidden" defaultChecked={false} onChange={this.onDebugSwitchChange}/>
+                </Col>
+              </Row>
+              }
+            </div>
+            }
+            <div id="lf-status">
+              <Row type="flex" className='lf-data-info lf-row'>
+
+                <Col xs={24} sm={12} md={4} lg={4} xl={4}>
+                  <Button type="primary" icon="dot-chart" size={"small"} disabled={!this.state.flowsheetData} onClick={this.createAndShowOverViewMap}>Overview Map</Button>
+                </Col>
+
+                <Col xs={24} sm={12} md={4} lg={4} xl={4}>
+                  Retrieved Observations: <span className="lf-bold">{ this.state.flowsheetData ? tableDataStore.retrievedNumOfRes : 0 }</span>
+                </Col>
+                <Col xs={24} sm={12} md={4} lg={4} xl={4}>
+                  Total Observations: <span className="lf-bold">{ tableDataStore.availableNumOfRes }</span>
+                </Col>
+                <Col xs={24} sm={12} md={4} lg={4} xl={4}>
+                  Columns: <span className="lf-bold">{this.state.flowsheetColumns ? this.state.flowsheetColumns.length - 2 : 0 }</span>
+                </Col>
+                <Col xs={24} sm={12} md={4} lg={4} xl={4}>
+                  Rows: <span className="lf-bold">{this.state.flowsheetData ? this.state.flowsheetData.length : 0 }</span>
+                </Col>
+                <Col className="lf-option-btn-col" xs={24} sm={12} md={4} lg={4} xl={4}>
+                  <div className={"lf-option-btn"}>
+                    <Button onClick={this.hideShowControlPanel} type={"primary"} size={"small"}><Icon type={"double-right"} rotate={this.state.showControlPanel ? -90 : 90}></Icon></Button>
+                  </div>
+                </Col>
+              </Row>
+            </div>
+          </div>
+
+          { this.state.showOverviewMap &&
+              <div>
+                <Row type="flex" className="lf-row">
+                  <Col xs={24} sm={12} md={12} lg={12} xl={12}>
+                    Empty Cell Percentage: <span className="lf-bold">{this.state.flowsheetData ? this.state.emptyCellPercentage : '' }</span>
+                  </Col>
+                </Row>
+                  <OverviewMap
+                      //width={this.state.tableWidth}
+                      width={540}
+                      height={420}
+                      chartData = {this.state.chartData}
+                      visiblePosition = {this.state.visiblePosition}
+                  >
+                  </OverviewMap>
+              </div>
+          }
+        </div>
         <div id="lf-data-table">
-          {/* <div><span>{this.state.isLoading ? "Loading ..." : ""}</span></div> */}
-          
-          {/*<Table className={this.state.tableClass}*/}
-            {/*// loading= {this.state.isLoading}*/}
-            {/*columns={this.state.flowsheetColumns} */}
-            {/*dataSource={this.state.flowsheetData} */}
-            {/*rowClassName={(record, index) => this.getRowClass(record, index)}*/}
-            {/*scroll={{ x: tableDataStore.tableWidth , y: this.state.tableHeight}}*/}
-            {/*pagination={false} */}
-            {/*defaultExpandAllRows={true}*/}
-          {/*/>*/}
+          {this.state.isLoading &&
+          <div className={"lf-spinner"}>
+            <Spin size="large" tip="Loading...">
+
+            </Spin>
+          </div>
+
+          }
 
           <VariableSizeGrid
               ref={this.gridRef}
@@ -859,9 +952,6 @@ class App extends Component {
             {GridCell}
           </VariableSizeGrid>
 
-          {/* <button onClick={() => this.appendData()}>Load More Data</button>
-          <button onClick={() => this.testFhirServer()}>Get Data from FHIR Server</button>
-          <button onClick={() => this.getNextPageData()}>Get Next Page Data</button> */}
 
         </div>
         {/*<div id="lf-app-footer" ref={this.refFooter}>*/}

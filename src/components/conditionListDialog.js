@@ -118,7 +118,7 @@ class ConditionListDialog extends React.Component {
     const { conditionList } = this.state;
     return (      
       <div>
-        <Button type="primary" icon='profile'  disabled={!this.props.selectedPatient} onClick={this.showModal}>Problem List</Button>
+        <Button type="primary" icon='profile' size={"small"} disabled={!this.props.selectedPatient} onClick={this.showModal} title={"Problem List"}>Problem List</Button>
         <Modal
           // maskClosable = {true}
           title="Problems List"

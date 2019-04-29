@@ -11,7 +11,7 @@ class PatientSearchDialog extends React.Component {
     this.state = {
       visible: false,
       selectedPatient: this.props.selectedPatient,
-      preLoadData: false
+      preLoadData: true
     };
 
   }
@@ -40,7 +40,7 @@ class PatientSearchDialog extends React.Component {
   }
 
   patientButtonLabel() {
-    return this.props.selectedPatient ? "" : "Select Patient";
+    return this.props.selectedPatient ? "" : ""; //"Select Patient";
   }
 
   onChange =(e) => {
@@ -55,7 +55,7 @@ class PatientSearchDialog extends React.Component {
     
     return (
       <div>
-        <Button type="primary" icon='user' onClick={this.showModal}>{label}</Button>
+        <Button type="primary" icon='user' onClick={this.showModal} title={"Select a patient"} size={"large"} shape="circle">{label}</Button>
         <Modal
           title="Patient Picker"
           visible={this.state.visible}
@@ -66,7 +66,7 @@ class PatientSearchDialog extends React.Component {
         >
           <PatientPicker selectedPatient={this.state.selectedPatient} setSelectedPatient={(patient)=>this.setSelectedPatient(patient)}/>
 
-          <Checkbox className="patient-checkbox" onChange={this.onChange}>Preload first page of data.</Checkbox>
+          <Checkbox className="patient-checkbox" defaultChecked={this.state.preLoadData} onChange={this.onChange}>Preload first page of data.</Checkbox>
         </Modal>
       </div>
     );

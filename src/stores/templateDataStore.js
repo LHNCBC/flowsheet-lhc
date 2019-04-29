@@ -569,13 +569,15 @@ class TemplateDataStore {
         for(let j=0; j<this.templateTree.length; j++) {
           let node = this.templateTree[j];
           // if there is normal range in the hierarchy file
-          let abnormal;
+          let abnormal, normalFlag;
           if (node.I) {
             if (interpretationCode !== undefined && interpretationCode!=='N') {
-              abnormal = true
+              abnormal = true;
+              normalFlag = interpretationCode === "H" ? '⇧' :  interpretationCode === "L" ? '⇩' : ''
             }
             else {
-              abnormal = false
+              abnormal = false;
+              normalFlag = '';
             }
           }
           // use LOINC or RI CODE for the identifier of the record
@@ -605,10 +607,10 @@ class TemplateDataStore {
                   node.data = {};
                 }
                 if (!node.data[date]) {
-                  node.data[date] = [{value: value, unit: unit, normalFlag: interpretationCode, code: code, abnormal: abnormal}];
+                  node.data[date] = [{value: value, unit: unit, normalFlag: normalFlag, code: code, abnormal: abnormal}];
                 }
                 else {
-                  node.data[date].push({value: value, unit: unit, normalFlag: interpretationCode, code: code, abnormal: abnormal});
+                  node.data[date].push({value: value, unit: unit, normalFlag: normalFlag, code: code, abnormal: abnormal});
                 }
               }
             }
@@ -620,7 +622,7 @@ class TemplateDataStore {
             if (!node.data) {
               node.data = {};
             }
-            node.data[date] = {value: value, unit: unit, normalFlag: interpretationCode, code: code, abnormal: abnormal};
+            node.data[date] = {value: value, unit: unit, normalFlag: normalFlag, code: code, abnormal: abnormal};
             this.tsList.set(date);
             //   if (range[0].low) {
             //     node.low = range[0].low.value;
@@ -686,9 +688,11 @@ class TemplateDataStore {
   _getDisplayValue(itemValue) {
 
     let unit = this._getUnitName(itemValue);
-    let displayVal = itemValue.normalFlag && itemValue.normalFlag !== 'N' ? itemValue.value + ' *' + itemValue.normalFlag : itemValue.value;
+    //let displayVal = itemValue.normalFlag && itemValue.normalFlag !== 'N' ? itemValue.value + ' *' + itemValue.normalFlag : itemValue.value;
+    let displayVal = itemValue.abnormal ? itemValue.value + ' *' + itemValue.normalFlag : itemValue.value;
     let valWithUnit = unit ? itemValue.value + ' ' + unit : itemValue.value;
-    let displayValWithUnit = itemValue.normalFlag && itemValue.normalFlag !== 'N' ? valWithUnit + ' *' + itemValue.normalFlag : valWithUnit;
+    //let displayValWithUnit = itemValue.normalFlag && itemValue.normalFlag !== 'N' ? valWithUnit + ' *' + itemValue.normalFlag : valWithUnit;
+    let displayValWithUnit = itemValue.abnormal ? valWithUnit + ' *' + itemValue.normalFlag : valWithUnit;
 
     return  {value: displayVal, valueWithUnit: displayValWithUnit, abnormal: itemValue.abnormal}
   }
@@ -708,9 +712,11 @@ class TemplateDataStore {
             let toVal = Math.round(result * 100) / 100;
             let unitName = commonUnit ? commonUnit : commonUCUM;
 
-            let displayVal = val.interpretationCode && val.interpretationCode !== 'N' ? toVal + ' *' + val.interpretationCode : toVal;
+            //let displayVal = val.interpretationCode && val.interpretationCode !== 'N' ? toVal + ' *' + val.interpretationCode : toVal;
+            let displayVal = val.abnormal ? toVal + ' *' + val.normalFlag : toVal;
             let valWithUnit = unitName ? toVal + ' ' + unitName : toVal;
-            let displayValWithUnit = val.interpretationCode && val.interpretationCode !== 'N' ? valWithUnit + ' *' + val.interpretationCode : valWithUnit;
+            //let displayValWithUnit = val.interpretationCode && val.interpretationCode !== 'N' ? valWithUnit + ' *' + val.interpretationCode : valWithUnit;
+            let displayValWithUnit = val.abnormal ? valWithUnit + ' *' + val.normalFlag : valWithUnit;
             displayValue.push(displayVal);
             displayValueWithUnit.push(displayValWithUnit);
           }
@@ -728,9 +734,11 @@ class TemplateDataStore {
             let unitName = commonUnit ? commonUnit : result.printSymbol;
             let toVal = Math.round(result.toVal * 100)/100;
 
-            let displayVal = val.interpretationCode && val.interpretationCode !== 'N' ? toVal + ' *' + val.interpretationCode : toVal;
+            //let displayVal = val.interpretationCode && val.interpretationCode !== 'N' ? toVal + ' *' + val.interpretationCode : toVal;
+            let displayVal = val.abnormal ? toVal + ' *' + val.normalFlag : toVal;
             let valWithUnit = unitName ? toVal + ' ' + unitName : toVal;
-            let displayValWithUnit = val.interpretationCode && val.interpretationCode !== 'N' ? valWithUnit + ' *' + val.interpretationCode : valWithUnit;
+            //let displayValWithUnit = val.interpretationCode && val.interpretationCode !== 'N' ? valWithUnit + ' *' + val.interpretationCode : valWithUnit;
+            let displayValWithUnit = val.abnormal ? valWithUnit + ' *' + val.normalFlag : valWithUnit;
             displayValue.push(displayVal);
             displayValueWithUnit.push(displayValWithUnit);
           }

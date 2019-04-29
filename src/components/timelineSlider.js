@@ -74,9 +74,9 @@ class TimelineSlider extends React.Component {
     // console.log(min);
     // console.log(max);
     return (
-        <div>
-          <div>Date Range:</div>
-          <div>
+        <div className={"lf-option"}>
+          <div className={"lf-option-label"}>Date Range:</div>
+          <div className={"lf-option-field"}>
             <Row type="flex" className="lf-row" justify="center">
               <Col xs={22} sm={22} md={22} lg={22} xl={22}>
                 <Slider
@@ -104,8 +104,6 @@ class TimelineSlider extends React.Component {
                 <span>{this.state.labelEnd}</span>
               </Col>
             </Row>
-
-
 
           </div>
         </div>
