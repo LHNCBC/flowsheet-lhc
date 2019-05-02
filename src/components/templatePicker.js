@@ -1,8 +1,8 @@
 import React from "react";
 import "antd/dist/antd.css";
 import { Select } from "antd";
-import loincTemp from "../stores/h11";
-import cardiacTemp from "../stores/c11";
+import loincTemp from "../stores/h13";
+import cardiacTemp from "../stores/c13";
 
 const Option = Select.Option;
 
@@ -14,8 +14,8 @@ class TemplatePicker extends React.Component {
     super(props);
 
     let list = [
-        {name: 'Full View', file: 'h11.js', data: loincTemp},
-        {name: 'Cardiac View', file: 'c11.js', data: cardiacTemp }
+        {name: 'Full View', file: 'h13.js', data: loincTemp},
+        {name: 'Cardiac View', file: 'c13.js', data: cardiacTemp }
     ];
 
     // set default value

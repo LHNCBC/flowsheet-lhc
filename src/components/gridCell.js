@@ -271,7 +271,7 @@ class GridCell extends React.PureComponent {
             className={cellClassName}
             style={style}
         >
-          {cell}
+          <span>{cell}</span>
         </div>
     );
   }

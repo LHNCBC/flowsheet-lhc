@@ -33,7 +33,7 @@ class App extends Component {
       isLoading: false,
       tableClass: "flowsheet-table",
       patient: null,
-      showUnit: false,
+      showUnit: true,
       zoomLevel: 'date',
       batchSize: '1000',
       showEqClass: false,
@@ -849,7 +849,7 @@ class App extends Component {
                 </Col>
                 <Col xs={24} sm={12} md={8} lg={6} xl={6}>
                   <Row className="lf-switch-row">
-                    <Switch checkedChildren="Units Shown" unCheckedChildren="Units Hidden" defaultChecked={false} onChange={this.onUnitSwitchChange}/>
+                    <Switch checkedChildren="Units Shown" unCheckedChildren="Units Hidden" defaultChecked={true} onChange={this.onUnitSwitchChange}/>
                   </Row>
                 </Col>
                 <Col xs={24} sm={12} md={8} lg={6} xl={6}>
@@ -857,8 +857,8 @@ class App extends Component {
                     <Switch checkedChildren="Equivalence Classes Collapsed" unCheckedChildren="Equivalence Classes Expanded" defaultChecked={false} onChange={this.onEqClassSwitchChange}/>
                   </Row>
                 </Col>
-                <Col xs={24} sm={12} md={8} lg={6} xl={6}>
-                  <Button type="dashed" icon={this.state.showAdditionalControls ? "down" : "right"} onClick={() => this.onAdditionalControlsChange()}>Additional Controls</Button>
+                <Col xs={24} sm={12} md={8} lg={6} xl={6} className={"lf-additional-controls-btn"}>
+                  <Button type="dashed" size={"small"} icon={this.state.showAdditionalControls ? "down" : "right"} onClick={() => this.onAdditionalControlsChange()}>Additional Controls</Button>
                 </Col>
               </Row>
 

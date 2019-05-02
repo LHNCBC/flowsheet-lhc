@@ -569,11 +569,31 @@ class TemplateDataStore {
         for(let j=0; j<this.templateTree.length; j++) {
           let node = this.templateTree[j];
           // if there is normal range in the hierarchy file
-          let abnormal, normalFlag;
+          let abnormal, normalFlag, normalFlagClass;
           if (node.I) {
             if (interpretationCode !== undefined && interpretationCode!=='N') {
               abnormal = true;
-              normalFlag = interpretationCode === "H" ? '⇧' :  interpretationCode === "L" ? '⇩' : ''
+              switch (interpretationCode) {
+                case "H":
+                  //normalFlag = "&#xe601;"; // "\u{1f845}"; //\u{1f809}";
+                  normalFlag = "\u{e601}"; // "\u{1f845}"; //\u{1f809}";
+                  normalFlagClass = "lf-abnormal-h";
+                  break;
+                case "L":
+                  normalFlag = "\u{e600}"; //"\u{1f847}"; //"\u{1f80b}";
+                  normalFlagClass = "lf-abnormal-l";
+                  break;
+                case "HH":
+                  normalFlag = "\u{e603}"; //"\u{2bed}";
+                  normalFlagClass = "lf-abnormal-hh";
+                  break;
+                case "LL":
+                  normalFlag = "\u{e602}"; //\u{2bef}";
+                  normalFlagClass = "lf-abnormal-ll";
+                  break;
+                default:
+                  normalFlag = "";
+              }
             }
             else {
               abnormal = false;
@@ -607,10 +627,12 @@ class TemplateDataStore {
                   node.data = {};
                 }
                 if (!node.data[date]) {
-                  node.data[date] = [{value: value, unit: unit, normalFlag: normalFlag, code: code, abnormal: abnormal}];
+                  node.data[date] = [{value: value, unit: unit, normalFlag: normalFlag,
+                    normalFlagClass: normalFlagClass, code: code, abnormal: abnormal}];
                 }
                 else {
-                  node.data[date].push({value: value, unit: unit, normalFlag: normalFlag, code: code, abnormal: abnormal});
+                  node.data[date].push({value: value, unit: unit, normalFlag: normalFlag,
+                    normalFlagClass: normalFlagClass, code: code, abnormal: abnormal});
                 }
               }
             }
@@ -622,7 +644,8 @@ class TemplateDataStore {
             if (!node.data) {
               node.data = {};
             }
-            node.data[date] = {value: value, unit: unit, normalFlag: normalFlag, code: code, abnormal: abnormal};
+            node.data[date] = {value: value, unit: unit, normalFlag: normalFlag,
+              normalFlagClass: normalFlagClass, code: code, abnormal: abnormal};
             this.tsList.set(date);
             //   if (range[0].low) {
             //     node.low = range[0].low.value;
@@ -689,10 +712,15 @@ class TemplateDataStore {
 
     let unit = this._getUnitName(itemValue);
     //let displayVal = itemValue.normalFlag && itemValue.normalFlag !== 'N' ? itemValue.value + ' *' + itemValue.normalFlag : itemValue.value;
-    let displayVal = itemValue.abnormal ? itemValue.value + ' *' + itemValue.normalFlag : itemValue.value;
+    //let displayVal = itemValue.abnormal ? itemValue.value + ' *' + itemValue.normalFlag : itemValue.value;
+
+    let displayVal = <span>{itemValue.value} {itemValue.abnormal && <i className={`iconfont ${itemValue.normalFlagClass}`}>{itemValue.normalFlag}</i>}</span>;
+
     let valWithUnit = unit ? itemValue.value + ' ' + unit : itemValue.value;
+
     //let displayValWithUnit = itemValue.normalFlag && itemValue.normalFlag !== 'N' ? valWithUnit + ' *' + itemValue.normalFlag : valWithUnit;
-    let displayValWithUnit = itemValue.abnormal ? valWithUnit + ' *' + itemValue.normalFlag : valWithUnit;
+    //let displayValWithUnit = itemValue.abnormal ? valWithUnit + ' *' + itemValue.normalFlag : valWithUnit;
+    let displayValWithUnit = <span> {valWithUnit} {itemValue.abnormal && <i className={`iconfont ${itemValue.normalFlagClass}`}>{itemValue.normalFlag}</i>}</span>;
 
     return  {value: displayVal, valueWithUnit: displayValWithUnit, abnormal: itemValue.abnormal}
   }
@@ -713,10 +741,14 @@ class TemplateDataStore {
             let unitName = commonUnit ? commonUnit : commonUCUM;
 
             //let displayVal = val.interpretationCode && val.interpretationCode !== 'N' ? toVal + ' *' + val.interpretationCode : toVal;
-            let displayVal = val.abnormal ? toVal + ' *' + val.normalFlag : toVal;
+            //let displayVal = val.abnormal ? toVal + ' *' + val.normalFlag : toVal;
+            let displayVal = <span>{toVal} {val.abnormal && <i className={`iconfont ${val.normalFlagClass}`}>{val.normalFlag}</i>}</span>;
+
             let valWithUnit = unitName ? toVal + ' ' + unitName : toVal;
             //let displayValWithUnit = val.interpretationCode && val.interpretationCode !== 'N' ? valWithUnit + ' *' + val.interpretationCode : valWithUnit;
-            let displayValWithUnit = val.abnormal ? valWithUnit + ' *' + val.normalFlag : valWithUnit;
+            //let displayValWithUnit = val.abnormal ? valWithUnit + ' *' + val.normalFlag : valWithUnit;
+            let displayValWithUnit = <span>{valWithUnit} {val.abnormal && <i className={`iconfont ${val.normalFlagClass}`}>{val.normalFlag}</i>}</span>;
+
             displayValue.push(displayVal);
             displayValueWithUnit.push(displayValWithUnit);
           }
@@ -735,10 +767,15 @@ class TemplateDataStore {
             let toVal = Math.round(result.toVal * 100)/100;
 
             //let displayVal = val.interpretationCode && val.interpretationCode !== 'N' ? toVal + ' *' + val.interpretationCode : toVal;
-            let displayVal = val.abnormal ? toVal + ' *' + val.normalFlag : toVal;
+            //let displayVal = val.abnormal ? toVal + ' *' + val.normalFlag : toVal;
+            let displayVal = <span>{toVal} {val.abnormal && <i className={`iconfont ${val.normalFlagClass}`}>{val.normalFlag}</i>}</span>;
+
             let valWithUnit = unitName ? toVal + ' ' + unitName : toVal;
+
             //let displayValWithUnit = val.interpretationCode && val.interpretationCode !== 'N' ? valWithUnit + ' *' + val.interpretationCode : valWithUnit;
-            let displayValWithUnit = val.abnormal ? valWithUnit + ' *' + val.normalFlag : valWithUnit;
+            //let displayValWithUnit = val.abnormal ? valWithUnit + ' *' + val.normalFlag : valWithUnit;
+            let displayValWithUnit = <span>{valWithUnit} {val.abnormal && <i className={`iconfont ${val.normalFlagClass}`}>{val.normalFlag}</i>}</span>;
+
             displayValue.push(displayVal);
             displayValueWithUnit.push(displayValWithUnit);
           }
@@ -756,7 +793,16 @@ class TemplateDataStore {
         displayValueWithUnit.push(dispVal.valueWithUnit);
       }
     });
-    ret =  {value: displayValue.join('; '), valueWithUnit: displayValueWithUnit.join('; ')}
+
+    let value = displayValue
+        .reduce((prev, curr) => [prev, ', ', curr]);
+    let valueWithUnit = displayValueWithUnit
+        .reduce((prev, curr) => [prev, ', ', curr]);
+
+    ret =  {
+      value: <span>{value}</span>,
+      valueWithUnit: <span>{valueWithUnit}</span>
+    };
 
     return ret;
   }
