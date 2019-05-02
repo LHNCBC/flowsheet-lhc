@@ -907,14 +907,16 @@ class TemplateDataStore {
 
     }
 
+    // TODO: Need a new solution to add back "...", vulue and valueWithUnit are now JSX, not strings
+
     // add decorator for zoom levels that have more than one data points
-    for (let dateKey in dateKeyCounts) {
-      if (dateKeyCounts[dateKey] > 1 && !node[dateKey].dotAdded && !dateKey.match(/^date/)) {
-        node[dateKey].value += ' ...';
-        node[dateKey].valueWithUnit += ' ...';
-        node[dateKey].dotAdded = true;
-      }
-    }
+    // for (let dateKey in dateKeyCounts) {
+    //   if (dateKeyCounts[dateKey] > 1 && !node[dateKey].dotAdded && !dateKey.match(/^date/)) {
+    //     node[dateKey].value += ' ...';
+    //     node[dateKey].valueWithUnit += ' ...';
+    //     node[dateKey].dotAdded = true;
+    //   }
+    // }
 
   }
 
