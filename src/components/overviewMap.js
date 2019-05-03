@@ -87,7 +87,7 @@ class OverviewMap extends React.Component {
             <VictoryScatter
                 style={{ data: { fill: d => this.getDotColor(d) } }}
                 size={1.5}
-                labelComponent={<VictoryTooltip/>}
+                // labelComponent={<VictoryTooltip/>}
                 data={this.props.chartData.data}
             />
             <VictoryAxis

@@ -606,7 +606,10 @@ class App extends Component {
             let col = columns[j];
             if (item[col.dataKey]) {
               let value = this.state.showUnit ? item[col.dataKey].valueWithUnit : item[col.dataKey].value;
-              chartData.data.push({x: col.start, y: iLen - i -1, label: item.displayName + "\n" + value + "\n" + col.tsLabel, abnormal: item[col.dataKey].abnormal});
+              //let tootipLabel = item.displayName + "\n" + value + "\n" + col.tsLabel;
+              //let tooltipLabel = <span><div>{item.displayName}</div>{value}<div></div><div>{col.tsLabel}</div></span>;
+              //chartData.data.push({x: col.start, y: iLen - i -1, label: tootipLabel, abnormal: item[col.dataKey].abnormal});
+              chartData.data.push({x: col.start, y: iLen - i -1, abnormal: item[col.dataKey].abnormal});
               if (!item.isTempHeader) {
                 dpCount++;
               }
