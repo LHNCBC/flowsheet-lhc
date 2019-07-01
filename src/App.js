@@ -848,7 +848,6 @@ class App extends Component {
               <Row type="flex" className="lf-row">
                 <Col xs={24} sm={12} md={8} lg={6} xl={6}>
                   <ZoomLevelPicker zoomLevel={this.state.zoomLevel} setZoomLevel={(level) => this.setZoomLevel(level)}/>
-
                 </Col>
                 <Col xs={24} sm={12} md={8} lg={6} xl={6}>
                   <Row className="lf-switch-row">

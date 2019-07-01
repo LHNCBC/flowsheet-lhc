@@ -5,11 +5,14 @@
   "private": true,
   "author": "Ye Wang <wangye@nih.gov>",
   "devDependencies": {
-    "custom-react-scripts": "^0.2.0",
+    "axios": "^0.18.0",
     "convert-excel-to-json": "^1.4.1",
-    "gh-pages": "^1.0.0",
+    "custom-react-scripts": "^0.2.0",
     "eslint": "^5.0.1",
-    "jshint": "^2.9.5"
+    "gh-pages": "^1.0.0",
+    "jshint": "^2.9.5",
+    "react-test-renderer": "^16.8.6",
+    "react-testing-library": "^7.0.0"
   },
   "dependencies": {
     "@lhncbc/ucum-lhc": "2.4.1",
