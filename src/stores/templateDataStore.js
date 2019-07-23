@@ -562,6 +562,7 @@ class TemplateDataStore {
         let date = this._getDate(item);
         let value = this._getValue(item);
         let unit = this._getUnit(item);
+        let valueType = this._getValueType(item);
         let interpretationCode = this._getInterpretation(item);
 
         // let range = this._getReferenceRange(item);
@@ -638,8 +639,10 @@ class TemplateDataStore {
             }
           }
           else if (itemCode === code) {
-            node.sparklineData.push(value);
-            node.sparklineData2.push({x: (new Date(date)).getTime(), y: value});
+            if (valueType === "valueQuantity") {
+              node.sparklineData.push(value);
+              node.sparklineData2.push({x: (new Date(date)).getTime(), y: value});
+            }
             node.hasData = true;
             if (!node.data) {
               node.data = {};
@@ -708,19 +711,19 @@ class TemplateDataStore {
     }
   }
   
-  _getDisplayValue(itemValue) {
+  _getDisplayValue(itemValue, key) {
 
     let unit = this._getUnitName(itemValue);
     //let displayVal = itemValue.normalFlag && itemValue.normalFlag !== 'N' ? itemValue.value + ' *' + itemValue.normalFlag : itemValue.value;
     //let displayVal = itemValue.abnormal ? itemValue.value + ' *' + itemValue.normalFlag : itemValue.value;
 
-    let displayVal = <span>{itemValue.value} {itemValue.abnormal && <i className={`iconfont ${itemValue.normalFlagClass}`}>{itemValue.normalFlag}</i>}</span>;
+    let displayVal = <span key={key}>{itemValue.value} {itemValue.abnormal && <i className={`iconfont ${itemValue.normalFlagClass}`}>{itemValue.normalFlag}</i>}</span>;
 
     let valWithUnit = unit ? itemValue.value + ' ' + unit : itemValue.value;
 
     //let displayValWithUnit = itemValue.normalFlag && itemValue.normalFlag !== 'N' ? valWithUnit + ' *' + itemValue.normalFlag : valWithUnit;
     //let displayValWithUnit = itemValue.abnormal ? valWithUnit + ' *' + itemValue.normalFlag : valWithUnit;
-    let displayValWithUnit = <span> {valWithUnit} {itemValue.abnormal && <i className={`iconfont ${itemValue.normalFlagClass}`}>{itemValue.normalFlag}</i>}</span>;
+    let displayValWithUnit = <span key={key}> {valWithUnit} {itemValue.abnormal && <i className={`iconfont ${itemValue.normalFlagClass}`}>{itemValue.normalFlag}</i>}</span>;
 
     return  {value: displayVal, valueWithUnit: displayValWithUnit, abnormal: itemValue.abnormal}
   }
@@ -730,9 +733,9 @@ class TemplateDataStore {
     
     let ret, displayValue = [], displayValueWithUnit = [];
 
-    itemValues.forEach((val) => {
+    itemValues.forEach((val, index) => {
 
-      if (commonUCUM && val.unit.code !== commonUCUM) {
+      if (commonUCUM && val.unit && val.unit.code !== commonUCUM) {
         // special handling for mass unit conversion
         if (node.R && node.S === 'x') {
           let result = this._msUnitConvert(node.D, val.value, val.unit.code, commonUCUM, node.R);
@@ -742,19 +745,19 @@ class TemplateDataStore {
 
             //let displayVal = val.interpretationCode && val.interpretationCode !== 'N' ? toVal + ' *' + val.interpretationCode : toVal;
             //let displayVal = val.abnormal ? toVal + ' *' + val.normalFlag : toVal;
-            let displayVal = <span>{toVal} {val.abnormal && <i className={`iconfont ${val.normalFlagClass}`}>{val.normalFlag}</i>}</span>;
+            let displayVal = <span key={index}>{toVal} {val.abnormal && <i className={`iconfont ${val.normalFlagClass}`}>{val.normalFlag}</i>}</span>;
 
             let valWithUnit = unitName ? toVal + ' ' + unitName : toVal;
             //let displayValWithUnit = val.interpretationCode && val.interpretationCode !== 'N' ? valWithUnit + ' *' + val.interpretationCode : valWithUnit;
             //let displayValWithUnit = val.abnormal ? valWithUnit + ' *' + val.normalFlag : valWithUnit;
-            let displayValWithUnit = <span>{valWithUnit} {val.abnormal && <i className={`iconfont ${val.normalFlagClass}`}>{val.normalFlag}</i>}</span>;
+            let displayValWithUnit = <span key={index}>{valWithUnit} {val.abnormal && <i className={`iconfont ${val.normalFlagClass}`}>{val.normalFlag}</i>}</span>;
 
             displayValue.push(displayVal);
             displayValueWithUnit.push(displayValWithUnit);
           }
           // failed or error in unit conversion
           else {
-            let dispVal = this._getDisplayValue(val);
+            let dispVal = this._getDisplayValue(val, index);
             displayValue.push(dispVal.displayValue);
             displayValueWithUnit.push(dispVal.displayValueWithUnit);
           }
@@ -768,27 +771,27 @@ class TemplateDataStore {
 
             //let displayVal = val.interpretationCode && val.interpretationCode !== 'N' ? toVal + ' *' + val.interpretationCode : toVal;
             //let displayVal = val.abnormal ? toVal + ' *' + val.normalFlag : toVal;
-            let displayVal = <span>{toVal} {val.abnormal && <i className={`iconfont ${val.normalFlagClass}`}>{val.normalFlag}</i>}</span>;
+            let displayVal = <span key={index}>{toVal} {val.abnormal && <i className={`iconfont ${val.normalFlagClass}`}>{val.normalFlag}</i>}</span>;
 
             let valWithUnit = unitName ? toVal + ' ' + unitName : toVal;
 
             //let displayValWithUnit = val.interpretationCode && val.interpretationCode !== 'N' ? valWithUnit + ' *' + val.interpretationCode : valWithUnit;
             //let displayValWithUnit = val.abnormal ? valWithUnit + ' *' + val.normalFlag : valWithUnit;
-            let displayValWithUnit = <span>{valWithUnit} {val.abnormal && <i className={`iconfont ${val.normalFlagClass}`}>{val.normalFlag}</i>}</span>;
+            let displayValWithUnit = <span key={index}>{valWithUnit} {val.abnormal && <i className={`iconfont ${val.normalFlagClass}`}>{val.normalFlag}</i>}</span>;
 
             displayValue.push(displayVal);
             displayValueWithUnit.push(displayValWithUnit);
           }
           // failed or error in unit conversion
           else {
-            let dispVal = this._getDisplayValue(val);
+            let dispVal = this._getDisplayValue(val, index);
             displayValue.push(dispVal.displayValue);
             displayValueWithUnit.push(dispVal.displayValueWithUnit);
           }
         }
       }
       else {
-        let dispVal = this._getDisplayValue(val);
+        let dispVal = this._getDisplayValue(val, index);
         displayValue.push(dispVal.value);
         displayValueWithUnit.push(dispVal.valueWithUnit);
       }
@@ -899,7 +902,7 @@ class TemplateDataStore {
             node[dateKey] = this._getDisplayValueForEqClassRow(node.P, node.Q, node.data[date], node);
           }
           else {
-            node[dateKey] = this._getDisplayValue(node.data[date]);  
+            node[dateKey] = this._getDisplayValue(node.data[date], dateKey);
           }          
         }  
         
@@ -1039,11 +1042,42 @@ class TemplateDataStore {
   _getValue(entry) {
     let ret;
     let resource = entry.resource;
-    if (resource && resource.valueQuantity) {
-      ret = resource.valueQuantity.value;
+    if (resource) {
+      if (resource.valueQuantity) {
+        ret = resource.valueQuantity.value;
+      }
+      else if (resource.valueCodeableConcept) {
+        if (resource.valueCodeableConcept.text) {
+          ret = resource.valueCodeableConcept.text;
+        }
+        else if (resource.valueCodeableConcept.coding && resource.valueCodeableConcept.coding[0]) {
+          if (resource.valueCodeableConcept.coding[0].display) {
+            ret = resource.valueCodeableConcept.coding[0].display;
+          }
+          else {
+            ret = resource.valueCodeableConcept.coding[0].code;
+          }
+        }
+      }
     }
     return ret;
   }
+
+  _getValueType(entry) {
+    let ret;
+    let resource = entry.resource;
+    if (resource) {
+      if (resource.valueQuantity) {
+        ret = "valueQuantity";
+      }
+      else if (resource.valueCodeableConcept) {
+        ret = "valueCodeableConcept";
+      }
+    }
+    return ret;
+
+  }
+
 
   _getUnit(entry) {
     let ret;
@@ -1083,7 +1117,7 @@ class TemplateDataStore {
   _getInterpretation(entry) {
     let ret;
     let resource = entry.resource;
-    if (resource && resource.interpretation && resource.interpretation.coding[0]) {
+    if (resource && resource.interpretation && resource.interpretation.code && resource.interpretation.coding[0]) {
       ret = resource.interpretation.coding[0].code;
     }
     return ret;
