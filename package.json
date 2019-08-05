@@ -12,7 +12,8 @@
     "gh-pages": "^1.0.0",
     "jshint": "^2.9.5",
     "react-test-renderer": "^16.8.6",
-    "react-testing-library": "^7.0.0"
+    "react-testing-library": "^7.0.0",
+    "source-map-explorer": "^2.0.1"
   },
   "dependencies": {
     "@lhncbc/ucum-lhc": "2.4.1",
@@ -33,6 +34,7 @@
     "start2": "PORT=80 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "analyze": "source-map-explorer 'build/static/js/*.js'"
   }
 }
