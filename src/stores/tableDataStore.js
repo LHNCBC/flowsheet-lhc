@@ -25,6 +25,119 @@ class TableDataStore {
     templateStore.setTemplate(temp);    
   }
 
+  getColumnSize() {
+    return this.COLUMN_SIZE;
+  }
+
+  getRetrievedNumOfRes() {
+    return this.retrievedNumOfRes;
+  }
+
+  getAvailableNumOfRes() {
+    return this.availableNumOfRes;
+  }
+
+
+  fhirDataQueue = [];
+
+  getFirstPageDataFromFHIR(patientId, batchSize, dateRange) {
+
+    let that = this;
+    this.fhirDataQueue =[];
+
+    return fhirStore.getAllObservationByPatientId(patientId, batchSize, dateRange)
+        .then(function(data) {
+          // prefetch next page data
+          setTimeout(function () {
+            fhirStore.getNextPageData()
+                .then(function (data) {
+                  that.fhirDataQueue.unshift({
+                    fhirData: data,
+                    moreData: fhirStore.moreData,
+                    retrievedNumOfRes: fhirStore.resourceRetrieved,
+                    availableNumOfRes: fhirStore.resourceAvailable
+                  });
+                })
+                .catch(function (error) {
+                  console.log(error);
+                })
+          }, 0);
+
+          return {
+            fhirData: data,
+            moreData: fhirStore.moreData,
+            retrievedNumOfRes: fhirStore.resourceRetrieved,
+            availableNumOfRes: fhirStore.resourceAvailable
+          }
+        })
+        .catch(function(error) {
+          console.log(error);
+        });
+
+  }
+
+
+  getNextPageDataFromFHIR() {
+
+    let that = this;
+
+    if (this.fhirDataQueue.length === 0) {
+      return fhirStore.getNextPageData()
+          .then(function(data) {
+            // prefetch next page data
+            setTimeout(function () {
+              fhirStore.getNextPageData()
+                  .then(function (data) {
+                    that.fhirDataQueue.unshift({
+                      fhirData: data,
+                      moreData: fhirStore.moreData,
+                      retrievedNumOfRes: fhirStore.resourceRetrieved,
+                      availableNumOfRes: fhirStore.resourceAvailable
+                    });
+                  })
+                  .catch(function (error) {
+                    console.log(error);
+                  })
+            }, 0);
+
+            return {
+              fhirData: data,
+              moreData: fhirStore.moreData,
+              retrievedNumOfRes: fhirStore.resourceRetrieved,
+              availableNumOfRes: fhirStore.resourceAvailable
+            }
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+    }
+    else {
+      // prefetch next page data
+      setTimeout(function(){
+        // prefetch next page data
+        fhirStore.getNextPageData()
+            .then(function(data) {
+              that.fhirDataQueue.unshift({
+                fhirData: data,
+                moreData: fhirStore.moreData,
+                retrievedNumOfRes: fhirStore.resourceRetrieved,
+                availableNumOfRes: fhirStore.resourceAvailable
+              });
+            })
+            .catch(function(error) {
+              console.log(error);
+            });
+
+      }, 0);
+
+      return new Promise(function(resolve, reject) {
+        return resolve(that.fhirDataQueue.pop())
+      });
+    }
+
+  }
+
+
   getColumnHeaders(zoomLevel) {
 
     // test name columns
@@ -63,18 +176,18 @@ class TableDataStore {
 
   getFirstPageData(patientId, showEqClass, batchSize, dateRange) {
     let that = this;
-    return fhirStore.getAllObservationByPatientId(patientId, batchSize, dateRange)
+    return this.getFirstPageDataFromFHIR(patientId, batchSize, dateRange)
       .then(function(data) {
         //console.log(data);
-        let [tableData, columnInfo] = templateStore.getTableData(data, showEqClass);
+        let [tableData, columnInfo] = templateStore.getTableData(data.fhirData, showEqClass);
         console.log(tableData);
         console.log(columnInfo);
         that.dateList = templateStore.dateList;
         that.tableColumnInfo = columnInfo;
         that.tableData = tableData;
-        that.moreData = fhirStore.moreData;
-        that.retrievedNumOfRes = fhirStore.resourceRetrieved;
-        that.availableNumOfRes = fhirStore.resourceAvailable;
+        that.moreData = data.moreData;
+        that.retrievedNumOfRes = data.retrievedNumOfRes;
+        that.availableNumOfRes = data.availableNumOfRes;
 
         return {tableData: tableData, moreData: that.moreData}
         
@@ -87,18 +200,18 @@ class TableDataStore {
 
   getNextPageData(showEqClass) {
     let that = this;
-    return fhirStore.getNextPageData()
+    return this.getNextPageDataFromFHIR()
       .then(function(data) {
         //console.log(data);
-        let [tableData, columnInfo] = templateStore.getTableData(data, showEqClass)
+        let [tableData, columnInfo] = templateStore.getTableData(data.fhirData, showEqClass)
         console.log(tableData);
         console.log(columnInfo);
         that.dateList = templateStore.dateList;
         that.tableColumnInfo = columnInfo;
         that.tableData = tableData;
-        that.moreData = fhirStore.moreData;
-        that.retrievedNumOfRes += fhirStore.resourceRetrieved;
-        that.availableNumOfRes = fhirStore.resourceAvailable;
+        that.moreData = data.moreData;
+        that.retrievedNumOfRes += data.retrievedNumOfRes;
+        that.availableNumOfRes = data.availableNumOfRes;
         return {tableData: tableData, moreData: that.moreData}
       })
       .catch(function(error) {

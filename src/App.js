@@ -29,7 +29,7 @@ class App extends Component {
     this.state = {
       flowsheetData : null,
       flowsheetColumns: null,
-      unitWidth : tableDataStore.columnSize,
+      unitWidth : tableDataStore.getColumnSize(),
       isLoading: false,
       tableClass: "flowsheet-table",
       patient: null,
@@ -266,6 +266,8 @@ class App extends Component {
 
     this.handleResize();
 
+
+
     tableDataStore.setTemplate(this.state.selectedTemplate.data);
 
     tableDataStore.getFirstPageData(patientId, this.state.showEqClass, this.state.batchSize, this.state.selectedRangeValue)
@@ -289,7 +291,6 @@ class App extends Component {
         if (that.state.showOverviewMap) {
           that._processChartData(columns, data.tableData);
         }
-
 
       })
       .catch(function(error) {
@@ -383,7 +384,7 @@ class App extends Component {
     //console.log(event);
     let maxScroll = event.target.scrollWidth - event.target.clientWidth
     let currentScroll = event.target.scrollLeft
-    if (currentScroll > 0 && currentScroll >= maxScroll - tableDataStore.scrollBufferSize) {  // 20 px as a buffer area
+    if (currentScroll > 0 && currentScroll >= maxScroll - tableDataStore.getScrollBufferSize()) {  // 20 px as a buffer area
         // load more data
         
         if (this.state.isLoading) {
@@ -881,10 +882,10 @@ class App extends Component {
                 </Col>
 
                 <Col xs={24} sm={12} md={4} lg={4} xl={4}>
-                  Retrieved Observations: <span className="lf-bold">{ this.state.flowsheetData ? tableDataStore.retrievedNumOfRes : 0 }</span>
+                  Retrieved Observations: <span className="lf-bold">{ this.state.flowsheetData ? tableDataStore.getRetrievedNumOfRes() : 0 }</span>
                 </Col>
                 <Col xs={24} sm={12} md={4} lg={4} xl={4}>
-                  Total Observations: <span className="lf-bold">{ tableDataStore.availableNumOfRes }</span>
+                  Total Observations: <span className="lf-bold">{ tableDataStore.getAvailableNumOfRes() }</span>
                 </Col>
                 <Col xs={24} sm={12} md={4} lg={4} xl={4}>
                   Columns: <span className="lf-bold">{this.state.flowsheetColumns ? this.state.flowsheetColumns.length - 2 : 0 }</span>
