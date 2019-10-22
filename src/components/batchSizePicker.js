@@ -20,7 +20,7 @@ class BatchSizePicker extends React.Component {
       // {name: '200', key: '200'},
       // {name: '100', key: '100'},
       // {name: '10', key: '10'},
-      // {name: '2', key: '2'}
+      {name: '2', key: '2'}
     ];
 
     // set default value

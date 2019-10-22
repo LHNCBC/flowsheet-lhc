@@ -28,12 +28,35 @@ class FhirDataStore {
 
   fhirServerConfig = LHC_FHIR_SERVER;
   pageSize = PAGE_SIZE;
-  fhirSearchResult = null;
-  moreData = false;
-  resourceRetrieved = 0;
-  resourceAvailable = 0;
+
+  _cacheSize = 1; // not including the current page (fhir) data being displayed
+
+  // moreData = false; // to remove
+  // resourceRetrieved = 0;  // over all obx retrieved
+  // resourceAvailable = 0;
+
   _nextPageUrl = null;
+
   _fhirClient = null;
+
+  _obxSearchSet = {
+    searchSet: null,
+    hasMoreData: false,
+    nextPageUrl: null,
+    retrievedNumOfRes: 0,
+    availableNumOfRes: 0
+  };
+
+  _obxSearchSetCache = [];
+
+
+  _addToCache(data) {
+    this._obxSearchSetCache.unshift(data);
+  }
+
+  _getFromCache() {
+    return this._obxSearchSetCache.pop()
+  }
 
 
   constructor(serverConfig) {
@@ -47,7 +70,6 @@ class FhirDataStore {
   setFhirServerConfig(serverConfig) {
     this.fhirServerConfig = serverConfig;
     this._setupFhirClient();
-    
   }
 
 
@@ -149,6 +171,7 @@ class FhirDataStore {
    * Delete an FHIR resource
    * @param resType FHIR resource type
    * @param resId FHIR resource ID
+   *
    */
   deleteFhirResource(resType, resId) {
     return this._fhirClient.delete({type: resType, id: resId})
@@ -163,6 +186,7 @@ class FhirDataStore {
 
 
   /**
+   * NOT USED
    * Process a FHIR transaction bundle.
    * Within the bundle, each resource could have its own request method.
    * @param bundle a FHIR transaction bundel.
@@ -225,7 +249,7 @@ class FhirDataStore {
    * @param pId the current patient's ID
    * @param pageSize optional. the number of records that should be returned in a single page
    */
-  getAllObservationByPatientId(pId, pageSize=this.pageSize, dateRange) {
+  _getAllObservationByPatientId(pId, pageSize=this.pageSize, dateRange) {
     
     let that = this;
     let queryOption = {
@@ -253,10 +277,29 @@ class FhirDataStore {
     })
     .then(function(response) {   // response.data is a searchset bundle
       //console.log(response);
-      that.getNextPageUrl(response.data);
-      that.resourceRetrieved = response.data.entry ? response.data.entry.length : 0;
-      that.resourceAvailable = response.data.total ? response.data.total : "N/A";
-      return response.data;
+      let nextPageUrl = that._getNextPageUrl(response.data);
+      let retrievedNumOfRes = response.data.entry ? response.data.entry.length : 0;
+      let availableNumOfRes = response.data.total ? response.data.total : "N/A";
+      that.resourceRetrieved = retrievedNumOfRes;
+      that.resourceAvailable = availableNumOfRes;
+      let obxData = {
+        searchSet: response.data,
+        hasMoreData: nextPageUrl ? true : false,
+        nextPageUrl: nextPageUrl,
+        retrievedNumOfRes: retrievedNumOfRes,
+        availableNumOfRes: availableNumOfRes
+      };
+
+      that._nextPageUrl = nextPageUrl;
+
+      that._addToCache(obxData);
+
+      if (nextPageUrl && that._obxSearchSetCache.length < that._cacheSize) {
+        that._getNextPageDataFromFHIRServer(nextPageUrl)
+      }
+
+      return that._getFromCache();
+
     })
     .catch(function(error) {
       console.log(error);
@@ -290,22 +333,29 @@ class FhirDataStore {
   };
 
 
-  getNextPageUrl(bundle) {
+  _getNextPageUrl(bundle) {
 
     this._nextPageUrl = null;
+
+    let nextPageUrl = null;
 
     if(bundle && bundle.type === "searchset" && bundle.link && bundle.link) {
       bundle.link.forEach(link => {
         if (link.relation === "next") {
-          this._nextPageUrl = link.url;
+          nextPageUrl = link.url;
         }
       });
     }
-    this.moreData = this._nextPageUrl ? true : false;
+
+    this._nextPageUrl = nextPageUrl;
+
+    return nextPageUrl;
+
   };
 
+  _count = 0;
 
-  getNextPageData() {
+  _getNextPageDataFromFHIRServer(nextPageUrl, returnImmediately) {
     let that = this;
     let bundle = {
       "resourceType": "Bundle",
@@ -313,7 +363,7 @@ class FhirDataStore {
       "link": [
         {
           "relation": "next",
-          "url": this._nextPageUrl
+          "url": nextPageUrl + "&_total=accurate"
         }
       ]
     };
@@ -321,15 +371,90 @@ class FhirDataStore {
     return this._fhirClient.nextPage({bundle: bundle})
       .then(function(response) {   // response.data is a searchset bundle
         //console.log(response);
-        that.getNextPageUrl(response.data);
-        that.resourceRetrieved = response.data.entry ? response.data.entry.length : 0;
-        that.resourceAvailable = response.data.total ? response.data.total : "N/A";
-        return response.data;
+        //console.log(response);
+        let nextPageUrl = that._getNextPageUrl(response.data);
+        let retrievedNumOfRes = response.data.entry ? response.data.entry.length : 0;
+        let availableNumOfRes = response.data.total ? response.data.total : "N/A";
+        that.resourceRetrieved = retrievedNumOfRes;
+        that.resourceAvailable = availableNumOfRes;
+        let obxData = {
+          searchSet: response.data,
+          hasMoreData: nextPageUrl ? true : false,
+          nextPageUrl: nextPageUrl,
+          retrievedNumOfRes: retrievedNumOfRes,
+          availableNumOfRes: availableNumOfRes
+        }
+
+        that._nextPageUrl = nextPageUrl;
+
+        that._addToCache(obxData);
+
+        if (nextPageUrl && (that._obxSearchSetCache.length < that._cacheSize || returnImmediately) ) {
+          console.log("fhirDataStore: _getNextPageDataFromFHIRServer: 1:" + that._count++)
+          console.log(nextPageUrl)
+          setTimeout(function() {
+            that._getNextPageDataFromFHIRServer(nextPageUrl)
+          }, 10)
+        }
+
+        if (returnImmediately) {
+          return that._getFromCache();
+        }
+
       })
       .catch(function(error) {
         console.log(error);
       });
   };
+
+
+  getFirstPageObxData(pId, pageSize=this.pageSize, dateRange) {
+
+    this._obxSearchSetCache = [];
+
+    let that = this;
+
+    return this._getAllObservationByPatientId(pId, pageSize, dateRange)
+        .then(function(data) {
+          console.log("fhirDataStore: getFirstPageObxData: 1:"+ that._count++);
+          console.log(that._obxSearchSetCache)
+          return data
+        })
+        .catch(function(error) {
+          console.log(error)
+        })
+
+  }
+
+  getNextPageObxData() {
+    let that = this;
+    if (this._obxSearchSetCache.length > 0) {
+      //let nextPageUrl = this._obxSearchSetCache[0].nextPageUrl;
+      // prefetch next page data
+
+      if (this._nextPageUrl) {
+        console.log("fhirDataStore: getNextPageObxData: 1:" + this._count++)
+        console.log(this._nextPageUrl)
+        console.log(this._obxSearchSetCache)
+        that._getNextPageDataFromFHIRServer(this._nextPageUrl);
+      }
+
+      return new Promise(function(resolve, reject) {
+        return resolve(that._getFromCache())
+      });
+
+    }
+    // no cached data
+    else {
+      if (this._nextPageUrl) {
+        console.log("fhirDataStore: getNextPageObxData: 2:" + that._count++)
+        console.log(this._nextPageUrl)
+        console.log(this._obxSearchSetCache)
+        return that._getNextPageDataFromFHIRServer(this._nextPageUrl, true);
+      }
+    }
+
+  }
 
 }
 

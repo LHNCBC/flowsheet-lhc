@@ -9,6 +9,7 @@ class BufferedTableDataStore {
   // getNextPageData
   // getScrollBufferSize (not used)
   // resetData
+
   // expandCollapseAHeader
   // expandCollapseAnEqClassRow
   // getRetrievedNumOfRes

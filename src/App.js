@@ -40,7 +40,7 @@ class App extends Component {
       selectedPatient: null,
       appTitle: "LHC Flowsheet On FHIR",
       selectedTemplate: null,
-      moreData: false,
+      hasMoreData: false,
       tableHeight: window.innerHeight - 213 -16,
       tableWidth: window.innerWidth -10,
       showAdditionalControls: false,
@@ -93,7 +93,7 @@ class App extends Component {
         selectedPatient: patient,
         flowsheetData : null,
         flowsheetColumns: null,
-        moreData: false,
+        hasMoreData: false,
         firstObxDate: null,
         lastObxDate: null,
         });
@@ -101,7 +101,6 @@ class App extends Component {
       let that = this;
       tableDataStore.getFirstObservationDate(patient.id )
           .then(function(data) {
-            console.log(data)
             let first = moment(data, "YYYY-MM-DDTHH:mm:ss.SSS").startOf('day');
             that.setState({
               firstObxDate: data,
@@ -111,7 +110,6 @@ class App extends Component {
 
       tableDataStore.getLastObservationDate(patient.id )
           .then(function(data) {
-            console.log(data)
             let last = moment(data, "YYYY-MM-DDTHH:mm:ss.SSS").startOf('day');
             that.setState({
               lastObxDate: data,
@@ -132,7 +130,7 @@ class App extends Component {
         selectedTemplate: temp,
         flowsheetData : null,
         flowsheetColumns: null,
-        moreData: false
+        hasMoreData: false
       })
     }
 
@@ -195,7 +193,7 @@ class App extends Component {
       // get the date on the first visible column
       let firstVisColDate = this._findFirstVisibleColDate(this.state.flowsheetColumns, this.visibleColumnStartIndex);
 
-      let newColumns = tableDataStore.getColumnHeaders(level);
+      let newColumns = tableDataStore.getColumnHeaders(level, this.state.data);
 
       // get the position of that date in the new columns
       let colStartIndex = this._findFirstColInView(newColumns, firstVisColDate);
@@ -259,7 +257,7 @@ class App extends Component {
 
     this.setState({
       flowsheetData: null,
-      moreData: null,
+      hasMoreData: null,
       flowsheetColumns: null,
       isLoading: true
     });
@@ -270,8 +268,15 @@ class App extends Component {
 
     tableDataStore.setTemplate(this.state.selectedTemplate.data);
 
-    tableDataStore.getFirstPageData(patientId, this.state.showEqClass, this.state.batchSize, this.state.selectedRangeValue)
+    tableDataStore.getFirstPageFlowsheetData(patientId, this.state.showEqClass, this.state.batchSize, this.state.selectedRangeValue)
       .then(function(data) {
+            // flowsheetTableData: tableData,
+            // tableColumnInfo: columnInfo,
+            // dateList: columnInfo.date,
+            // //columnHeaders: null,
+            // hasMoreData: data.hasMoreData,
+            // retrievedNumOfRes: data.retrievedNumOfRes,
+            // availableNumOfRes: data.availableNumOfRes,
 
         // scroll to the anchor item
         that.anchorItemIndex = 0;
@@ -279,25 +284,31 @@ class App extends Component {
         that.needRepositionRow = true;
         that.needRepositionCol = true;
 
-        let columns = tableDataStore.getColumnHeaders(that.state.zoomLevel);
+        let columns = tableDataStore.getColumnHeaders(that.state.zoomLevel, data);
         that.setState({
-          flowsheetData: data.tableData,
-          moreData: data.moreData,
+          data: data,
+          flowsheetData: data.flowsheetTableData,
+          hasMoreData: data.hasMoreData,
           flowsheetColumns: columns,
           moreButtonLabel: `Load ${that.state.batchSize} More`,
-          isLoading: false
+          isLoading: false,
+          retrievedNumOfRes: data.retrievedNumOfRes,
+          availableNumOfRes: tableDataStore.availableNumOfRes
         });
-        console.log(that.state.flowsheetColumns);
+
         if (that.state.showOverviewMap) {
-          that._processChartData(columns, data.tableData);
+          that._processChartData(columns, data.flowsheetTableData);
         }
+
+        console.log("App: loadData: getFirstPageFlowsheetData: 1:")
+        console.log(data)
 
       })
       .catch(function(error) {
         console.log(error);
         that.setState({
           flowsheetData: null,
-          moreData: null,
+          hasMoreData: null,
           flowsheetColumns: null,
           isLoading: false
         });
@@ -310,7 +321,7 @@ class App extends Component {
     let that = this;
 
     that.setState({
-      moreData: false,
+      hasMoreData: false,
       isLoading: true
     });
 
@@ -319,14 +330,14 @@ class App extends Component {
     //let itemIndex = this.visibleRowStartIndex + offsetRowNum;
     let itemIndex = this.visibleRowStartIndex < 1 ? this.visibleRowStartIndex : this.visibleRowStartIndex + offsetRowNum;
     let itemKey = this.state.flowsheetData[itemIndex].key;
-    tableDataStore.getNextPageData(this.state.showEqClass)
+    tableDataStore.getNextPageFlowsheetData(this.state.showEqClass)
       .then(function(data) {
         // console.log("in appendData");
         // console.log("visibleRowStartIndex: " + that.visibleRowStartIndex);
         // console.log(itemKey);
 
         // scroll to the anchor item
-        let newItemIndex = that._findItemIndexByKey(data.tableData, itemKey);
+        let newItemIndex = that._findItemIndexByKey(data.flowsheetTableData, itemKey);
         // console.log("newItemIndex: " + newItemIndex);
 
         that.anchorItemIndex = newItemIndex >= offsetRowNum  ? newItemIndex - offsetRowNum : 0;
@@ -334,23 +345,28 @@ class App extends Component {
 
         that.needRepositionRow = true;
 
-        let columns = tableDataStore.getColumnHeaders(that.state.zoomLevel);
+        let columns = tableDataStore.getColumnHeaders(that.state.zoomLevel, data);
         that.setState({
-          flowsheetData: data.tableData,
-          moreData: data.moreData,
+          data: data,
+          flowsheetData: data.flowsheetTableData,
+          hasMoreData: data.hasMoreData,
           flowsheetColumns: columns,
-          isLoading: false
+          isLoading: false,
+          retrievedNumOfRes: that.state.retrievedNumOfRes + data.retrievedNumOfRes
         })
         if (that.state.showOverviewMap) {
-          that._processChartData(columns, data.tableData);
+          that._processChartData(columns, data.flowsheetTableData);
         }
+
+        console.log("App: appendData: getNextPageFlowsheetData: 1:")
+        console.log(data)
 
       })
       .catch(function(error) {
         console.log(error);
         that.setState({
           flowsheetData: null,
-          moreData: null,
+          hasMoreData: null,
           flowsheetColumns: null,
           isLoading: false
         });
@@ -460,10 +476,10 @@ class App extends Component {
         tableWidth: window.innerWidth - 8
       })
 
-      console.log("in resize");
-      console.log(window.innerHeight);
-      console.log(tableHeight)
-      console.log(nonTableHeight)
+      // console.log("in resize");
+      // console.log(window.innerHeight);
+      // console.log(tableHeight)
+      // console.log(nonTableHeight)
 
     // }, 150);
 
@@ -681,13 +697,13 @@ class App extends Component {
     let colStart = this.state.flowsheetColumns[colStartIndex].start;
     let colStop = this.state.flowsheetColumns[colStopIndex].start;
 
-    console.log("colStart: " + parameters.visibleColumnStartIndex)
-    console.log("colStop: " + parameters.visibleColumnStopIndex)
+    // console.log("colStart: " + parameters.visibleColumnStartIndex)
+    // console.log("colStop: " + parameters.visibleColumnStopIndex)
 
     let rowStart = parameters.visibleRowStartIndex;
     let rowStop = parameters.visibleRowStopIndex;
-    console.log("rowStart: " + rowStart)
-    console.log("rowStop: " + rowStop)
+    // console.log("rowStart: " + rowStart)
+    // console.log("rowStop: " + rowStop)
 
     // let tsEnd = columns[columns.length-1].start;
     // chartData.domain = {
@@ -804,7 +820,7 @@ class App extends Component {
                     <Button className='lf-button' size={"small"} type="primary" icon="reload" disabled={!this.state.selectedPatient} onClick={() => this.loadData()}>{reloadButtonLabel}</Button>
                   </div>
                   <div className={"lf-control-btn"}>
-                    <Button className='lf-button' size={"small"} type="primary" icon="swap" disabled={!this.state.moreData} onClick={() => this.appendData()}>{this.state.moreButtonLabel}</Button>
+                    <Button className='lf-button' size={"small"} type="primary" icon="swap" disabled={!this.state.hasMoreData} onClick={() => this.appendData()}>{this.state.moreButtonLabel}</Button>
                   </div>
                   <div className={"lf-control-btn"}>
                     <ConditionListDialog selectedPatient={this.state.selectedPatient}/>
@@ -842,7 +858,7 @@ class App extends Component {
                 </Col>
                 {/*<Col xs={24} sm={12} md={8} lg={6} xl={6}>*/}
                   {/*<Button className='lf-button' type="primary" icon="reload" disabled={!this.state.selectedPatient} onClick={() => this.loadData()}>{reloadButtonLabel}</Button>*/}
-                  {/*<Button className='lf-button' type="primary" icon="swap" disabled={!this.state.moreData} onClick={() => this.appendData()}>{this.state.moreButtonLabel}</Button>*/}
+                  {/*<Button className='lf-button' type="primary" icon="swap" disabled={!this.state.hasMoreData} onClick={() => this.appendData()}>{this.state.moreButtonLabel}</Button>*/}
                 {/*</Col>*/}
               </Row>
 
@@ -882,10 +898,10 @@ class App extends Component {
                 </Col>
 
                 <Col xs={24} sm={12} md={4} lg={4} xl={4}>
-                  Retrieved Observations: <span className="lf-bold">{ this.state.flowsheetData ? tableDataStore.getRetrievedNumOfRes() : 0 }</span>
+                  Retrieved Observations: <span className="lf-bold">{ this.state.flowsheetData ? this.state.retrievedNumOfRes : 0 }</span>
                 </Col>
                 <Col xs={24} sm={12} md={4} lg={4} xl={4}>
-                  Total Observations: <span className="lf-bold">{ tableDataStore.getAvailableNumOfRes() }</span>
+                  Total Observations: <span className="lf-bold">{ this.state.availableNumOfRes }</span>
                 </Col>
                 <Col xs={24} sm={12} md={4} lg={4} xl={4}>
                   Columns: <span className="lf-bold">{this.state.flowsheetColumns ? this.state.flowsheetColumns.length - 2 : 0 }</span>

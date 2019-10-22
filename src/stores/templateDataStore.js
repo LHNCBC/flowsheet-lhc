@@ -22,62 +22,81 @@ class TemplateDataStore {
   //     "M": "danger_low"
   // },
 
-  template = null;
-  templateTree = [];
-  tsList = new Map();  
-  dateList = new Map();
-  dayList = new Map();
-  weekList = new Map();
-  monthList = new Map();
-  yearList = new Map();
-  zoomLevel = ['day', 'week', 'month', 'quarter', 'year', 'date'];
+
+  // template = null;
+  // templateTree = [];
+  // tsList = new Map();
+  // dateList = new Map();
+  // dayList = new Map();
+  // weekList = new Map();
+  // monthList = new Map();
+  // yearList = new Map();
+  // zoomLevel = ['day', 'week', 'month', 'quarter', 'year', 'date'];
 
   ucumUtils = ucum.UcumLhcUtils.getInstance();
 
   setTemplate(template) {
-    this.tsList = new Map();
-    this.dateList = new Map();
-    this.dayList = new Map();
-    this.weekList = new Map();
-    this.monthList = new Map();
-    this.quarterList = new Map();
-    this.yearList = new Map();
-
-    this.template = dcopy(template);
-    this.templateTree = this._preProcessTemplate();
-    this.addEquivlaneClassRow();
+    // this.tsList = new Map();
+    // this.dateList = new Map();
+    // this.dayList = new Map();
+    // this.weekList = new Map();
+    // this.monthList = new Map();
+    // this.quarterList = new Map();
+    // this.yearList = new Map();
+    //
+    // this.template = dcopy(template);
+    // this.templateTree = this._preProcessTemplate();
+    // this._addEquivlaneClassRow();
     //console.log(this.templateTree)
 
+
+    let templateInfo = {
+      zoomLevel: ['day', 'week', 'month', 'quarter', 'year', 'date'],
+//      tsList: new Map(),
+      dateList: new Map(),
+      dayList: new Map(),
+      weekList: new Map(),
+      monthList: new Map(),
+      quarterList: new Map(),
+      yearList: new Map(),
+      template: dcopy(template),
+      templateTree: null
+    }
+
+    this._preProcessTemplate(templateInfo);
+    this._addEquivlaneClassRow(templateInfo);
+
+    return templateInfo;
   }
 
 
-  getTableData(fhirData, showEqClass) {
+  getTableData(templateInfo, fhirData, showEqClass) {
 
-    this._filterDataByTemplate(fhirData);
-    this._countItemsInEqClass();
-    this._addAggregatedData();
-    this._postProcessTemplateTree();
-    this._sortColumnHeaders();
-    let tableData = this._exportTableData(showEqClass);
+    this._filterDataByTemplate(templateInfo, fhirData);
+    this._countItemsInEqClass(templateInfo);
+    this._addAggregatedData(templateInfo);
+    this._postProcessTemplateTree(templateInfo);
+    this._sortColumnHeaders(templateInfo);
+    let tableData = this._exportTableData(templateInfo, showEqClass);
     let columnInfo = {
-      date: this.dateList,
-      day: this.dayList,
-      week: this.weekList,
-      month: this.monthList,
-      quarter: this.quarterList,
-      year: this.yearList
+      date: templateInfo.dateList,
+      day: templateInfo.dayList,
+      week: templateInfo.weekList,
+      month: templateInfo.monthList,
+      quarter: templateInfo.quarterList,
+      year: templateInfo.yearList
     };
 
     return [tableData, columnInfo]
   }
 
-  resetTableData(showEqClass, force) {
+  resetTableData(templateInfo, showEqClass, force) {
 
-    let tableData = this._exportTableData(showEqClass, force);
+    let tableData = this._exportTableData(templateInfo, showEqClass, force);
 
     if (force) {
-      for(let j=0; j<this.templateTree.length; j++) {
-        let item = this.templateTree[j];
+      for(let j=0; j<templateInfo.templateTree.length; j++) {
+        let item = templateInfo.templateTree[j];
         if (item.isEqClassRow && (item.eqClassRowHidden === false || item.eqClassRowHidden === true)) {
           delete item.eqClassRowHidden
         }
@@ -91,28 +110,28 @@ class TemplateDataStore {
   }
 
 
-  expandCollapseAHeader(itemKey) {
+  expandCollapseAHeader(templateInfo, itemKey) {
 
     let changed = false;
-    let clickedItemIndex = this.templateTree.findIndex(item => item.key === itemKey);
+    let clickedItemIndex = templateInfo.templateTree.findIndex(item => item.key === itemKey);
 
     // not found
     if (clickedItemIndex === -1) {
       changed = false;
     }
 
-    let clickedItem = this.templateTree[clickedItemIndex];
+    let clickedItem = templateInfo.templateTree[clickedItemIndex];
     if (clickedItem.sectionCollapsed) {
-      changed = this.expandAHeader(clickedItem, clickedItemIndex);
+      changed = this.expandAHeader(templateInfo, clickedItem, clickedItemIndex);
     }
     else {
-      changed = this.collapseAHeader(clickedItem, clickedItemIndex)
+      changed = this.collapseAHeader(templateInfo, clickedItem, clickedItemIndex)
     }
 
     return changed;
   }
 
-  expandAHeader(clickedItem, clickedItemIndex) {
+  expandAHeader(templateInfo, clickedItem, clickedItemIndex) {
 
     let clickedItemLevel = clickedItem.A;
 
@@ -125,8 +144,8 @@ class TemplateDataStore {
     }
 
     // check all its decedents
-    for(let i=clickedItemIndex+1; i<this.templateTree.length && this.templateTree[i].A > clickedItemLevel; i++) {
-      let item = this.templateTree[i];
+    for(let i=clickedItemIndex+1; i<templateInfo.templateTree.length && templateInfo.templateTree[i].A > clickedItemLevel; i++) {
+      let item = templateInfo.templateTree[i];
       if (!item.sectionCollapsed) {
         item.itemHidden = false;
       }
@@ -137,7 +156,7 @@ class TemplateDataStore {
         let subHeaderItemLevel = item.A;
 
         let j=i+1; // first item in the sub section
-        while (this.templateTree[j].A > subHeaderItemLevel && j<this.templateTree.length) {
+        while (templateInfo.templateTree[j].A > subHeaderItemLevel && j<templateInfo.templateTree.length) {
           j++;
         }
         i = j-1; // move back one item (i++ runs after this) and let the main loop continue
@@ -146,7 +165,7 @@ class TemplateDataStore {
     return true;
   }
 
-  collapseAHeader(clickedItem, clickedItemIndex) {
+  collapseAHeader(templateInfo, clickedItem, clickedItemIndex) {
 
     let clickedItemLevel = clickedItem.A;
 
@@ -159,44 +178,44 @@ class TemplateDataStore {
     }
 
     // check all its decedents
-    for(let i=clickedItemIndex+1; i<this.templateTree.length && this.templateTree[i].A > clickedItemLevel; i++) {
-      let item = this.templateTree[i];
+    for(let i=clickedItemIndex+1; i<templateInfo.templateTree.length && templateInfo.templateTree[i].A > clickedItemLevel; i++) {
+      let item = templateInfo.templateTree[i];
       item.itemHidden = true;
     }
 
     return true;
   }
 
-  expandCollapseAnEqClassRow(itemKey) {
+  expandCollapseAnEqClassRow(templateInfo, itemKey) {
 
     let changed = false;
-    let clickedItemIndex = this.templateTree.findIndex(item => item.key === itemKey);
+    let clickedItemIndex = templateInfo.templateTree.findIndex(item => item.key === itemKey);
 
     // not found
     if (clickedItemIndex === -1) {
       changed = false;
     }
 
-    let clickedItem = this.templateTree[clickedItemIndex];
+    let clickedItem = templateInfo.templateTree[clickedItemIndex];
 
     if (clickedItem.isEqClassRow && !clickedItem.eqClassRowHidden) {
-      changed = this.expandAnEqClassRow(clickedItem, clickedItemIndex);
+      changed = this.expandAnEqClassRow(templateInfo, clickedItem, clickedItemIndex);
     }
     if (clickedItem.isMultipleItemsInEqClass && !clickedItem.itemInEqClassHidden) {
-      changed = this.collapseAnEqClassRow(clickedItem, clickedItemIndex);
+      changed = this.collapseAnEqClassRow(templateInfo, clickedItem, clickedItemIndex);
     }
 
     return changed;
 
   }
 
-  expandAnEqClassRow(clickedItem, clickedItemIndex) {
+  expandAnEqClassRow(templateInfo, clickedItem, clickedItemIndex) {
 
     clickedItem.eqClassRowHidden = true;
 
     let k = 1;
-    while(k<=clickedItem.codeList.length && clickedItemIndex+k < this.templateTree.length && this.templateTree[clickedItemIndex+k].isTempItemInEqClass) {
-      let nextItem = this.templateTree[clickedItemIndex+k];
+    while(k<=clickedItem.codeList.length && clickedItemIndex+k < templateInfo.templateTree.length && templateInfo.templateTree[clickedItemIndex+k].isTempItemInEqClass) {
+      let nextItem = templateInfo.templateTree[clickedItemIndex+k];
       nextItem.itemInEqClassHidden = false;
       k++;
     }
@@ -206,12 +225,12 @@ class TemplateDataStore {
 
 
   // only on the first item in eq class
-  collapseAnEqClassRow(clickedItem, clickedItemIndex) {
+  collapseAnEqClassRow(templateInfo, clickedItem, clickedItemIndex) {
 
     // find the eq class item
     let k = clickedItemIndex-1;
     while(k >=0) {
-      let preItem = this.templateTree[k];
+      let preItem = templateInfo.templateTree[k];
       if (preItem.isEqClassRow) {
         let eqClassRow = preItem;
         let eqClassRowIndex = k;
@@ -222,8 +241,8 @@ class TemplateDataStore {
           eqClassRow.eqClassRowHidden = false;
           // hide all items in eq class
           let i = 1;
-          while(i<=eqClassRow.codeList.length && eqClassRowIndex+i < this.templateTree.length && this.templateTree[eqClassRowIndex+i].isTempItemInEqClass) {
-            let nextItem = this.templateTree[eqClassRowIndex+i];
+          while(i<=eqClassRow.codeList.length && eqClassRowIndex+i < templateInfo.templateTree.length && templateInfo.templateTree[eqClassRowIndex+i].isTempItemInEqClass) {
+            let nextItem = templateInfo.templateTree[eqClassRowIndex+i];
             nextItem.itemInEqClassHidden = true;
             i++;
           }
@@ -240,18 +259,15 @@ class TemplateDataStore {
    * Remove items in the hierarchy that have no code (LOINC or RI) while keeping the hierarchy structure.
    * Group header items do not have to have the code.
    * This is done before the user data is loaded.
+   * @param templateInfo an object that contains template info
+   * @private
    */
-  _preProcessTemplate() {
+  _preProcessTemplate(templateInfo) {
     let levelStatus = [];
-    let start = this.template.length - 1;
-
-    console.log(this.template);
-    console.log(this.template[67])
-    console.log(this.template[99])
-    console.log(this.template[118])
+    let start = templateInfo.template.length - 1;
 
     // initial setup of the levelStatus
-    let lastLevel = this.template[start].A;
+    let lastLevel = templateInfo.template[start].A;
     let i = 1, n = parseInt(lastLevel, 10);
     while (i <= n) {
       let status = {};
@@ -263,7 +279,7 @@ class TemplateDataStore {
     // loop through the items in the template starting from the end
     for (let i = start; i >= 0; i--) {
       
-      let item = this.template[i];
+      let item = templateInfo.template[i];
       // make RI CODE a string
       item.D = item.D + '';
 
@@ -319,23 +335,13 @@ class TemplateDataStore {
       }
     }
 
-    console.log(this.template);
-    console.log(this.template[67])
-    console.log(this.template[99])
-    console.log(this.template[118])
 
-
-    let newTemplate = this.template.filter(item => item.keep)
+    let newTemplate = templateInfo.template.filter(item => item.keep)
     newTemplate.forEach(function (item, index) {
       item.key = 'K' + index
     });
 
-    console.log(newTemplate)
-    console.log(newTemplate[67])
-    console.log(newTemplate[99])
-    console.log(newTemplate[118])
-
-    return newTemplate;
+    templateInfo.templateTree = newTemplate;
 
   }
 
@@ -361,14 +367,16 @@ class TemplateDataStore {
 
   /**
    * Add a row for equivalence class before the rows that have more than one rows with the same equivalence class
+   * @param templateInfo an object that contains template info
+   * @private
    */
-  addEquivlaneClassRow() {
+  _addEquivlaneClassRow(templateInfo) {
     let eqClassList = [], codeList = [];// loincList = [];
     let repeats = 1;    
     let eqClass = '';
     // loop through the items in the template starting from the end
-    for (let i = this.templateTree.length-1; i >= 0; i--) {
-      let item = this.templateTree[i];
+    for (let i = templateInfo.templateTree.length-1; i >= 0; i--) {
+      let item = templateInfo.templateTree[i];
       let itemEqClass = item.C,
           itemCode = item.O === "RI" ? item.D : item.E;
 
@@ -383,7 +391,7 @@ class TemplateDataStore {
       else {
         // found previous repeating eq class
         if (repeats > 1) {
-          let preItem = this.templateTree[i+1];
+          let preItem = templateInfo.templateTree[i+1];
           let eqClassRow = Object.assign({}, preItem);
           eqClassRow.isEqClassRow = true; 
           eqClassRow.codeList = codeList;
@@ -400,7 +408,7 @@ class TemplateDataStore {
           );
           // add flags to the items that belong to this equivalence class
           for (let j=0; j<codeList.length; j++) {
-            this.templateTree[i+1+j].isTempItemInEqClass = true;
+            templateInfo.templateTree[i+1+j].isTempItemInEqClass = true;
           }
         }
 
@@ -414,15 +422,16 @@ class TemplateDataStore {
 
     // insert the eq class row
     for(let i=0; i < eqClassList.length; i++) {
-      this.templateTree.splice(eqClassList[i].index, 0, eqClassList[i].row);
+      templateInfo.templateTree.splice(eqClassList[i].index, 0, eqClassList[i].row);
     }
   }
 
 
-  /**
-   * Reprocess the hierarchy after user data is loaded.
-   * to remove items that have no user data while keeping the hierarchy structure.
-   */
+  // /**
+  //  * Reprocess the hierarchy after user data is loaded.
+  //  * to remove items that have no user data while keeping the hierarchy structure.
+  //  * @param templateInfo an object that contains template info
+  //  */
   // _postProcessTemplateTree() {
   //   let levelStatus = [];
   //   let start = this.templateTree.length - 1;
@@ -480,12 +489,18 @@ class TemplateDataStore {
   // }
   //
 
-  _postProcessTemplateTree() {
+  /**
+   * Reprocess the hierarchy after user data is loaded.
+   * to remove items that have no user data while keeping the hierarchy structure.
+   * @param templateInfo an object that contains template info
+   * @private
+   */
+  _postProcessTemplateTree(templateInfo) {
     let levelStatus = [];
-    let start = this.templateTree.length - 1;
+    let start = templateInfo.templateTree.length - 1;
 
     // initial setup of the levelStatus
-    let lastLevel = this.templateTree[start].A;
+    let lastLevel = templateInfo.templateTree[start].A;
     let i = 1,
         n = parseInt(lastLevel, 10);
     while (i <= n) {
@@ -498,7 +513,7 @@ class TemplateDataStore {
     // loop through the items in the templateTree starting from the end
     for (let i = start; i >= 0; i--) {
 
-      let item = this.templateTree[i];
+      let item = templateInfo.templateTree[i];
       let itemLevel = item.A;
 
       // same level
@@ -511,8 +526,8 @@ class TemplateDataStore {
       else if (itemLevel < lastLevel) {
         let k = lastLevel - itemLevel;
         if (k > 1) {
-          console.log(item)
-          console.log(lastLevel)
+          // console.log(item)
+          // console.log(lastLevel)
         }
         // at least a lower level item is kept
         if (levelStatus[levelStatus.length - 1][lastLevel]) {
@@ -550,9 +565,11 @@ class TemplateDataStore {
 
   /**
    * Filter user data with the hierarchy.
+   * @param templateInfo an object that contains template info
    * @param {*} newData user data from FHIR server.
+   * @private
    */
-  _filterDataByTemplate(newData) {
+  _filterDataByTemplate(templateInfo, newData) {
     let list = newData.entry;
     if (list) {
       for(let i=0; i<list.length; i++) {    
@@ -567,8 +584,8 @@ class TemplateDataStore {
 
         // let range = this._getReferenceRange(item);
   
-        for(let j=0; j<this.templateTree.length; j++) {
-          let node = this.templateTree[j];
+        for(let j=0; j<templateInfo.templateTree.length; j++) {
+          let node = templateInfo.templateTree[j];
           // if there is normal range in the hierarchy file
           let abnormal, normalFlag, normalFlagClass;
           if (node.I) {
@@ -623,7 +640,7 @@ class TemplateDataStore {
               if (node.codeList[k] === code) {
                 node.hasData = true;
                 node.eqClassItems[code]=true; // the item has data
-                this.tsList.set(date);
+//                templateInfo.tsList.set(date);
                 if (!node.data) {
                   node.data = {};
                 }
@@ -649,7 +666,7 @@ class TemplateDataStore {
             }
             node.data[date] = {value: value, unit: unit, normalFlag: normalFlag,
               normalFlagClass: normalFlagClass, code: code, abnormal: abnormal};
-            this.tsList.set(date);
+ //           templateInfo.tsList.set(date);
             //   if (range[0].low) {
             //     node.low = range[0].low.value;
             //   }
@@ -666,9 +683,14 @@ class TemplateDataStore {
     }
   }
 
-  _countItemsInEqClass() {
-    for(let j=0; j<this.templateTree.length; j++) {
-      let item = this.templateTree[j];
+  /**
+   * Precess items that belong to same equivalence classes
+   * @param templateInfo an object that contains template info
+   * @private
+   */
+  _countItemsInEqClass(templateInfo) {
+    for(let j=0; j<templateInfo.templateTree.length; j++) {
+      let item = templateInfo.templateTree[j];
       // has items in this eq class that have values      
       if (item.isEqClassRow && item.eqClassItems && Object.keys(item.eqClassItems).length > 0 ) {
         let itemCodes = Object.keys(item.eqClassItems);
@@ -679,8 +701,8 @@ class TemplateDataStore {
         let k = 1;
         let firstItemIndex=null, lastItemIndex=null;
         let foundFirst = false;
-        while(k<=item.codeList.length && j+k < this.templateTree.length && this.templateTree[j+k].isTempItemInEqClass) {
-          let nextItem = this.templateTree[j+k];
+        while(k<=item.codeList.length && j+k < templateInfo.templateTree.length && templateInfo.templateTree[j+k].isTempItemInEqClass) {
+          let nextItem = templateInfo.templateTree[j+k];
           let nextCode = nextItem.O === "RI" ? nextItem.D : nextItem.E;
 
           // reset status
@@ -701,10 +723,10 @@ class TemplateDataStore {
         }
 
         if (firstItemIndex !==null) {
-          this.templateTree[firstItemIndex].firstItemInEqClass = true;
+          templateInfo.templateTree[firstItemIndex].firstItemInEqClass = true;
         }
         if (lastItemIndex !==null) {
-          this.templateTree[lastItemIndex].lastItemInEqClass = true;
+          templateInfo.templateTree[lastItemIndex].lastItemInEqClass = true;
         }
 
       }
@@ -811,7 +833,7 @@ class TemplateDataStore {
   }
 
 
-  _setNodeAggregatedData(node) {
+  _setNodeAggregatedData(templateInfo, node) {
 
     let dateKeyCounts = {};
 
@@ -821,7 +843,7 @@ class TemplateDataStore {
       let mntDate  = moment(date, "YYYY-MM-DDTHH:mm:ss.SSS");
       let dateKey, columnLabel;
 
-      this.zoomLevel.forEach((type) => {
+      templateInfo.zoomLevel.forEach((type) => {
         let mntDate2 = moment(date, "YYYY-MM-DDTHH:mm:ss.SSS");
         let colInfo = {
           start: type==='date' ?  mntDate2.valueOf() : mntDate2.startOf(type).valueOf(),
@@ -834,7 +856,7 @@ class TemplateDataStore {
             dateKey = 'day_' + mntDate.format("YYYY/MM/DD");
             colInfo.label = columnLabel;
             colInfo.tsLabel = mntDate.format("YYYY/MM/DD");
-            this.dayList.set(dateKey, colInfo);
+            templateInfo.dayList.set(dateKey, colInfo);
             if (dateKeyCounts[dateKey]) {
               dateKeyCounts[dateKey] += 1;
             }
@@ -855,28 +877,28 @@ class TemplateDataStore {
             dateKey = 'week_' + mntDate.format("YYYY-WW");
             colInfo.label = columnLabel;
             colInfo.tsLabel = startYear === endYear ? startOfWeek + "-" + endOfWeek + ", " + startYear : startOfWeek + "/" + startYear + "-" + endOfWeek + '/' + startYear;
-            this.weekList.set(dateKey, colInfo);
+            templateInfo.weekList.set(dateKey, colInfo);
             break;
           case 'month':
             columnLabel =  mntDate.format("YYYY/MM")
             dateKey = 'month_' + columnLabel;
             colInfo.label = columnLabel;
             colInfo.tsLabel = columnLabel;
-            this.monthList.set(dateKey, colInfo);
+            templateInfo.monthList.set(dateKey, colInfo);
             break;
           case 'quarter':
             columnLabel = mntDate.year() + ' Q' + mntDate.quarters();
             dateKey = 'quarter_' + mntDate.year() + '-' + mntDate.quarters();
             colInfo.label = columnLabel;
             colInfo.tsLabel = columnLabel;
-            this.quarterList.set(dateKey, colInfo);
+            templateInfo.quarterList.set(dateKey, colInfo);
             break;
           case 'year':
             columnLabel = mntDate.year();
             dateKey = 'year_' + mntDate.year();
             colInfo.label = columnLabel;
             colInfo.tsLabel = columnLabel;
-            this.yearList.set(dateKey, colInfo);
+            templateInfo.yearList.set(dateKey, colInfo);
             break;
           case 'date':
           default: 
@@ -885,7 +907,7 @@ class TemplateDataStore {
             colInfo.label = columnLabel;
             colInfo.tsLabel = mntDate.format("YYYY/MM/DD HH:mm");
 
-            this.dateList.set(dateKey, colInfo);
+            templateInfo.dateList.set(dateKey, colInfo);
         }
         // count dateKeys
         dateKeyCounts[dateKey] = dateKeyCounts[dateKey] ? dateKeyCounts[dateKey] + 1 : 1;            
@@ -927,25 +949,25 @@ class TemplateDataStore {
   /**
    * sort data by the keys in reverse order, in dateList, dayList, weekList and etc, so that columns are display with the most recent date first. 
    */
-  _sortColumnHeaders() {
+  _sortColumnHeaders(templateInfo) {
 
-    this.dateList = new Map([...this.dateList.entries()].sort((a,b)=>{return a[0] < b[0] ? 1 : -1 }));
-    this.dayList = new Map([...this.dayList.entries()].sort((a,b)=>{return a[0] < b[0] ? 1 : -1 }));
-    this.weekList = new Map([...this.weekList.entries()].sort((a,b)=>{return a[0] < b[0] ? 1 : -1 }));
-    this.monthList = new Map([...this.monthList.entries()].sort((a,b)=>{return a[0] < b[0] ? 1 : -1 }));
-    this.quarterList = new Map([...this.quarterList.entries()].sort((a,b)=>{return a[0] < b[0] ? 1 : -1 }));
-    this.yearList = new Map([...this.yearList.entries()].sort((a,b)=>{return a[0] < b[0] ? 1 : -1 }));
+    templateInfo.dateList = new Map([...templateInfo.dateList.entries()].sort((a,b)=>{return a[0] < b[0] ? 1 : -1 }));
+    templateInfo.dayList = new Map([...templateInfo.dayList.entries()].sort((a,b)=>{return a[0] < b[0] ? 1 : -1 }));
+    templateInfo.weekList = new Map([...templateInfo.weekList.entries()].sort((a,b)=>{return a[0] < b[0] ? 1 : -1 }));
+    templateInfo.monthList = new Map([...templateInfo.monthList.entries()].sort((a,b)=>{return a[0] < b[0] ? 1 : -1 }));
+    templateInfo.quarterList = new Map([...templateInfo.quarterList.entries()].sort((a,b)=>{return a[0] < b[0] ? 1 : -1 }));
+    templateInfo.yearList = new Map([...templateInfo.yearList.entries()].sort((a,b)=>{return a[0] < b[0] ? 1 : -1 }));
     
   }
 
   /**
    * create aggregated data on day, week, month and year level, after the data is loaded and process on date (timestamp)
    */
-  _addAggregatedData() {
-    for(let j=0; j<this.templateTree.length; j++) {
-      let node = this.templateTree[j];
+  _addAggregatedData(templateInfo) {
+    for(let j=0; j<templateInfo.templateTree.length; j++) {
+      let node = templateInfo.templateTree[j];
       if (node.hasData && node.data) {
-        this._setNodeAggregatedData(node)
+        this._setNodeAggregatedData(templateInfo, node)
       }
       
     }
@@ -959,7 +981,7 @@ class TemplateDataStore {
    * @returns {*[]}
    * @private
    */
-  _exportTableData(showEqClass, force) {
+  _exportTableData(templateInfo, showEqClass, force) {
     // return this.templateTree.filter(node => node.hasData && !node.itemHidden &&
     //     (showEqClass && (node.hasMultipleItemsInEqClass || !node.isEqClassRow && !node.isMultipleItemsInEqClass) ||
     //         !showEqClass && !node.isEqClassRow
@@ -967,13 +989,13 @@ class TemplateDataStore {
     // );
 
     return force ?
-        this.templateTree.filter(node => node.hasData && !node.itemHidden &&
+        templateInfo.templateTree.filter(node => node.hasData && !node.itemHidden &&
             (showEqClass && (node.hasMultipleItemsInEqClass || !node.isEqClassRow && !node.isMultipleItemsInEqClass) ||
                 !showEqClass && !node.isEqClassRow
             )
         )
         :
-        this.templateTree.filter(node => node.hasData && !node.itemHidden &&
+        templateInfo.templateTree.filter(node => node.hasData && !node.itemHidden &&
             (showEqClass && (node.hasMultipleItemsInEqClass || !node.isEqClassRow && (!node.isMultipleItemsInEqClass || node.itemInEqClassHidden === false)) && !node.eqClassRowHidden ||
                 !showEqClass && (!node.isEqClassRow || node.isEqClassRow && node.eqClassRowHidden === false) && !node.itemInEqClassHidden
             )
