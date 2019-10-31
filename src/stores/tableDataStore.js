@@ -124,14 +124,14 @@ class TableDataStore {
   getFirstPageFlowsheetData(patientId, showEqClass, batchSize, dateRange) {
 
     let that = this;
-    console.log("tableDataStore: getFirstPageFlowsheetData: 1:"+ that.count++);
-    console.log(that._flowsheetTableDataCache)
+//    console.log("tableDataStore: getFirstPageFlowsheetData: 1:"+ that.count++);
+//    console.log(that._flowsheetTableDataCache)
 
     this._flowsheetTableDataCache = [];
 
     return this._getFirstPageDataFromFHIRStore(patientId, showEqClass, batchSize, dateRange)
         .then(function(data) {
-          console.log("tableDataStore: getFirstPageFlowsheetData: 2:"+ that.count++)
+ //         console.log("tableDataStore: getFirstPageFlowsheetData: 2:"+ that.count++)
           return data
         })
         .catch(function(error) {
@@ -143,35 +143,35 @@ class TableDataStore {
 
 
     let that = this;
-    console.log("tableDataStore: getNextPageFlowsheetData: 1:"+ that.count++)
-    console.log(that._flowsheetTableDataCache)
+//    console.log("tableDataStore: getNextPageFlowsheetData: 1:"+ that.count++)
+//    console.log(that._flowsheetTableDataCache)
 
     if (this._flowsheetTableDataCache.length > 1) {
 //      let showEqClass = this._flowsheetTableDataCache[this._flowsheetTableDataCache.length-1].showEqClass;
       // prefetch next page data
       setTimeout(function(){
         // prefetch next page data
-        console.log("tableDataStore: getNextPageFlowsheetData: 2:"+ that.count++)
-        console.log(that._flowsheetTableDataCache)
+//        console.log("tableDataStore: getNextPageFlowsheetData: 2:"+ that.count++)
+//        console.log(that._flowsheetTableDataCache)
         that._getNextPageDataFromFHIRStore(showEqClass);
       }, 10);
 
-      console.log("tableDataStore: getNextPageFlowsheetData: 3:"+ that.count++)
-      console.log(that._flowsheetTableDataCache)
+//      console.log("tableDataStore: getNextPageFlowsheetData: 3:"+ that.count++)
+//      console.log(that._flowsheetTableDataCache)
 
       that._removeLastFromCache();
 
       return new Promise(function(resolve, reject) {
-        console.log("tableDataStore: getNextPageFlowsheetData: 4:"+ that.count++)
-        console.log(that._flowsheetTableDataCache)
+//        console.log("tableDataStore: getNextPageFlowsheetData: 4:"+ that.count++)
+//        console.log(that._flowsheetTableDataCache)
 
         return resolve(that._getCurrentFromCache())
       });
     }
     // no cached data or has current data
     else {
-      console.log("tableDataStore: getNextPageFlowsheetData: 5:"+ that.count++)
-      console.log(that._flowsheetTableDataCache)
+//      console.log("tableDataStore: getNextPageFlowsheetData: 5:"+ that.count++)
+//      console.log(that._flowsheetTableDataCache)
       return that._getNextPageDataFromFHIRStore(showEqClass, true);
     }
 
@@ -184,8 +184,8 @@ class TableDataStore {
 
 
     let that = this;
-    console.log("tableDataStore: _getFirstPageDataFromFHIRStore: 1:"+ that.count++)
-    console.log(that._flowsheetTableDataCache)
+//    console.log("tableDataStore: _getFirstPageDataFromFHIRStore: 1:"+ that.count++)
+//    console.log(that._flowsheetTableDataCache)
 
     return fhirStore.getFirstPageObxData(patientId, batchSize, dateRange)
       .then(function(data) {
@@ -210,14 +210,14 @@ class TableDataStore {
         // only set it when the first page data is return. total could be missing in the next page data.
         that.availableNumOfRes = data.availableNumOfRes;
 
-        console.log("tableDataStore: _getFirstPageDataFromFHIRStore: 2:" + that.count++)
-        console.log(that._flowsheetTableDataCache)
+//        console.log("tableDataStore: _getFirstPageDataFromFHIRStore: 2:" + that.count++)
+//        console.log(that._flowsheetTableDataCache)
 
         that._addToCache(flowsheetTableData);
 
         if (that._flowsheetTableDataCache.length < that._cacheSize) {
-          console.log("tableDataStore: _getFirstPageDataFromFHIRStore: 3:" + that.count++)
-          console.log(that._flowsheetTableDataCache)
+//          console.log("tableDataStore: _getFirstPageDataFromFHIRStore: 3:" + that.count++)
+//          console.log(that._flowsheetTableDataCache)
           setTimeout(function() {
             that._getNextPageDataFromFHIRStore(showEqClass)
           }, 10)
@@ -234,16 +234,16 @@ class TableDataStore {
 
   _getNextPageDataFromFHIRStore(showEqClass, returnImmediately) {
     let that = this;
-    console.log("tableDataStore: _getNextPageDataFromFHIRStore: 1:"+ that.count++)
-    console.log(that._flowsheetTableDataCache)
+//    console.log("tableDataStore: _getNextPageDataFromFHIRStore: 1:"+ that.count++)
+//    console.log(that._flowsheetTableDataCache)
     return fhirStore.getNextPageObxData()
       .then(function(data) {
         //console.log(data);
         let currentTemplateInfo = that._dcopyTemplateInfo(that._getCurrentFromCache().templateInfo);
         let [tableData, columnInfo] = templateStore.getTableData(currentTemplateInfo, data.searchSet, showEqClass)
 
-        console.log("tableDataStore: _getNextPageDataFromFHIRStore: 2:"+ that.count++)
-        console.log(that._flowsheetTableDataCache)
+//        console.log("tableDataStore: _getNextPageDataFromFHIRStore: 2:"+ that.count++)
+//        console.log(that._flowsheetTableDataCache)
 
         // console.log(tableData);
         // console.log(columnInfo);
@@ -263,16 +263,16 @@ class TableDataStore {
         that._addToCache(flowsheetTableData);
 
         if (that._flowsheetTableDataCache.length < that._cacheSize) {
-          console.log("tableDataStore: _getNextPageDataFromFHIRStore: 3:"+ that.count++)
-          console.log(that._flowsheetTableDataCache)
+//          console.log("tableDataStore: _getNextPageDataFromFHIRStore: 3:"+ that.count++)
+//          console.log(that._flowsheetTableDataCache)
           setTimeout(function() {
             that._getNextPageDataFromFHIRStore(showEqClass)
           }, 10)
         }
 
         if (returnImmediately) {
-          console.log("tableDataStore: _getNextPageDataFromFHIRStore: 4:"+ that.count++)
-          console.log(that._flowsheetTableDataCache)
+//          console.log("tableDataStore: _getNextPageDataFromFHIRStore: 4:"+ that.count++)
+//          console.log(that._flowsheetTableDataCache)
 
           that._removeLastFromCache();
           return that._getCurrentFromCache();

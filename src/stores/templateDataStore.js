@@ -105,7 +105,7 @@ class TemplateDataStore {
         }
       }
     }
-    console.log(tableData)
+//    console.log(tableData)
     return tableData
   }
 

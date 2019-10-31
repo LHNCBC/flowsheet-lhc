@@ -47,7 +47,7 @@ class PatientSearchDialog extends React.Component {
     this.setState({
       preLoadData: e.target.checked
     });
-    console.log(`checked = ${e.target.checked}`);
+    //console.log(`checked = ${e.target.checked}`);
   }
 
   render() {

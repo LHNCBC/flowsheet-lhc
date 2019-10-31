@@ -175,7 +175,7 @@ class App extends Component {
         selectedRangeValue: rangeValue
       });
 
-      console.log(range)
+      //console.log(range)
     }
   };
 
@@ -300,8 +300,8 @@ class App extends Component {
           that._processChartData(columns, data.flowsheetTableData);
         }
 
-        console.log("App: loadData: getFirstPageFlowsheetData: 1:")
-        console.log(data)
+//        console.log("App: loadData: getFirstPageFlowsheetData: 1:")
+//        console.log(data)
 
       })
       .catch(function(error) {
@@ -358,8 +358,8 @@ class App extends Component {
           that._processChartData(columns, data.flowsheetTableData);
         }
 
-        console.log("App: appendData: getNextPageFlowsheetData: 1:")
-        console.log(data)
+//        console.log("App: appendData: getNextPageFlowsheetData: 1:")
+//        console.log(data)
 
       })
       .catch(function(error) {
@@ -498,9 +498,9 @@ class App extends Component {
         tableWidth: window.innerWidth -8
       })
 
-      console.log("in hide/show control panel");
-      console.log(window.innerHeight);
-      console.log(nonTableHeight)
+      //console.log("in hide/show control panel");
+      //console.log(window.innerHeight);
+      //console.log(nonTableHeight)
 
     // }, 150);
 
@@ -668,7 +668,7 @@ class App extends Component {
     //   scrollTop: parameters.scrollTop
     // });
 
-    console.log(parameters)
+    //console.log(parameters)
   }
 
 

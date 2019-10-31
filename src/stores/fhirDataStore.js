@@ -390,8 +390,8 @@ class FhirDataStore {
         that._addToCache(obxData);
 
         if (nextPageUrl && (that._obxSearchSetCache.length < that._cacheSize || returnImmediately) ) {
-          console.log("fhirDataStore: _getNextPageDataFromFHIRServer: 1:" + that._count++)
-          console.log(nextPageUrl)
+          // console.log("fhirDataStore: _getNextPageDataFromFHIRServer: 1:" + that._count++)
+          // console.log(nextPageUrl)
           setTimeout(function() {
             that._getNextPageDataFromFHIRServer(nextPageUrl)
           }, 10)
@@ -416,8 +416,8 @@ class FhirDataStore {
 
     return this._getAllObservationByPatientId(pId, pageSize, dateRange)
         .then(function(data) {
-          console.log("fhirDataStore: getFirstPageObxData: 1:"+ that._count++);
-          console.log(that._obxSearchSetCache)
+          // console.log("fhirDataStore: getFirstPageObxData: 1:"+ that._count++);
+          // console.log(that._obxSearchSetCache)
           return data
         })
         .catch(function(error) {
@@ -433,9 +433,9 @@ class FhirDataStore {
       // prefetch next page data
 
       if (this._nextPageUrl) {
-        console.log("fhirDataStore: getNextPageObxData: 1:" + this._count++)
-        console.log(this._nextPageUrl)
-        console.log(this._obxSearchSetCache)
+        // console.log("fhirDataStore: getNextPageObxData: 1:" + this._count++)
+        // console.log(this._nextPageUrl)
+        // console.log(this._obxSearchSetCache)
         that._getNextPageDataFromFHIRServer(this._nextPageUrl);
       }
 
@@ -447,9 +447,9 @@ class FhirDataStore {
     // no cached data
     else {
       if (this._nextPageUrl) {
-        console.log("fhirDataStore: getNextPageObxData: 2:" + that._count++)
-        console.log(this._nextPageUrl)
-        console.log(this._obxSearchSetCache)
+        // console.log("fhirDataStore: getNextPageObxData: 2:" + that._count++)
+        // console.log(this._nextPageUrl)
+        // console.log(this._obxSearchSetCache)
         return that._getNextPageDataFromFHIRServer(this._nextPageUrl, true);
       }
     }
