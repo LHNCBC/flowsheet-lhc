@@ -9,8 +9,10 @@ const LHC_FHIR_SERVER = {
   name: "LHC Internal FHIR Server #2", 
   desc: "Internal FHIR server at LHC, for dev/test only",
   url: "https://lhcflowsheet.nlm.nih.gov/hapi-fhir-jpaserver/baseDstu3",
-  //url: "http://lforms-fhir.nlm.nih.gov:8780/baseR4",
 
+  //url: "http://lhc-docker.nlm.nih.gov:8980/hapi-fhir-jpaserver/baseDstu3",
+
+  //url: "http://lforms-fhir.nlm.nih.gov:8780/baseR4",
   //url: "https://lhc-docker.nlm.nih.gov:8343/fhir2/baseDstu3",
   //url: "https://lforms-service-stage-rh7.nlm.nih.gov:8143/hapi-fhir-jpaserver-example/baseDstu3",
   //url: "http://lhc-docker.nlm.nih.gov:8280/hapi-fhir-jpaserver/baseDstu3",

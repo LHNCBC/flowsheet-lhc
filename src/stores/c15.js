@@ -1,28 +1,28 @@
 export default [
-//    {
-//      "A": "LVL",
-//      "B": "INDENTEDNAME",
-//      "C": "EquivalenceClass",
-//      "D": "CODE",
-//      "E": "LOINC_MERGED",
-//      "F": "LONG_COMMON_NAME_LOINC",
-//      "G": "LOINC_DISPLAY",
-//      "H": "units_normRange",
-//      "I": "norm_range",
-//      "J": "norm_low",
-//      "K": "norm_high",
-//      "L": "danger_high",
-//      "M": "danger_low",
-//      "N": "LOINC_ShortName",
-//      "O": "Code_indicator",
-//      "P": "EquivalenceClass_UOM",
-//      "Q": "EquivalenceClass_UCUM",
-//      "R": "Molecular_weight",
-//      "S": "Convert_indicator",
-//      "T": "UNITS_RI",
-//      "U": "UNITS_DISPLAY",
-//      "V": "UCUM_EX"
-//    },
+    // {
+    //   "A": "LVL",
+    //   "B": "INDENTEDNAME",
+    //   "C": "EquivalenceClass20191113",
+    //   "D": "CODE",
+    //   "E": "LOINC_MERGED",
+    //   "F": "LONG_COMMON_NAME_LOINC",
+    //   "G": "LOINC_DISPLAY",
+    //   "H": "units_normRange",
+    //   "I": "norm_range",
+    //   "J": "norm_low",
+    //   "K": "norm_high",
+    //   "L": "danger_high",
+    //   "M": "danger_low",
+    //   "N": "LOINC_ShortName",
+    //   "O": "Code_indicator",
+    //   "P": "EquivalenceClass_UOM",
+    //   "Q": "EquivalenceClass_UCUM",
+    //   "R": "Molecular_weight",
+    //   "S": "Convert_indicator",
+    //   "T": "UNITS_RI",
+    //   "U": "UNITS_DISPLAY",
+    //   "V": "UCUM_EX"
+    // },
     {
       "A": 1,
       "B": "VITALS",
@@ -604,7 +604,7 @@ export default [
     {
       "A": 4,
       "B": "Sodium Bld Qn",
-      "C": "Sodium|PrTitrSCnc|Intravascular-Any||Pt",
+      "C": "Sodium|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 22599,
       "E": "2947-0",
       "F": "Sodium [Moles/volume] in Blood",
@@ -626,7 +626,7 @@ export default [
     {
       "A": 4,
       "B": "Sodium (CSH)",
-      "C": "Sodium|PrTitrSCnc|Ser/Plas||Pt",
+      "C": "Sodium|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 11428,
       "E": "2951-2",
       "F": "Sodium [Moles/volume] in Serum or Plasma",
@@ -646,7 +646,7 @@ export default [
     {
       "A": 4,
       "B": "Potassium (CSH)",
-      "C": "Potassium|PrTitrSCnc|Ser/Plas||Pt",
+      "C": "Potassium|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 11429,
       "E": "2823-3",
       "F": "Potassium [Moles/volume] in Serum or Plasma",
@@ -666,7 +666,7 @@ export default [
     {
       "A": 4,
       "B": "CO2 (CSH)",
-      "C": "Carbon dioxide|PrTitrSCnc|Ser/Plas||Pt",
+      "C": "Carbon dioxide|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 11431,
       "E": "2028-9",
       "F": "Carbon dioxide, total [Moles/volume] in Serum or Plasma",
@@ -687,7 +687,7 @@ export default [
     {
       "A": 4,
       "B": "Chloride Bld Qn (ISTAT)'",
-      "C": "Chloride|PrTitrSCnc|Intravascular-Any||Pt",
+      "C": "Chloride|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 18997,
       "E": "2069-3",
       "F": "Chloride [Moles/volume] in Blood",
@@ -710,7 +710,7 @@ export default [
     {
       "A": 4,
       "B": "Chloride (CSH)",
-      "C": "Chloride|PrTitrSCnc|Ser/Plas||Pt",
+      "C": "Chloride|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 11430,
       "E": "2075-0",
       "F": "Chloride [Moles/volume] in Serum or Plasma",
@@ -731,7 +731,7 @@ export default [
     {
       "A": 4,
       "B": "HCO3 Bld Qn Calc (ER-IS)",
-      "C": "Bicarbonate|PrTitrSCnc|Intravascular-Any||Pt",
+      "C": "Bicarbonate|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 20044,
       "E": "1959-6",
       "F": "Bicarbonate [Moles/volume] in Blood",
@@ -772,6 +772,7 @@ export default [
     {
       "A": 4,
       "B": "Anion Gap 4 Bld Qn (POC)",
+      "C": "Anion gap 4|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 20028,
       "E": "1863-0",
       "F": "Anion gap 4 in Serum or Plasma",
@@ -789,6 +790,7 @@ export default [
     {
       "A": 4,
       "B": "Lactate BldA Qn (POC)",
+      "C": "Lactate|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 29654,
       "E": "2518-9",
       "F": "Lactate [Moles/volume] in Arterial blood",
@@ -808,6 +810,7 @@ export default [
     {
       "A": 5,
       "B": "BUN Bld Qn (POC)",
+      "C": "Urea nitrogen|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 18989,
       "E": "6299-2",
       "F": "Urea nitrogen [Mass/volume] in Blood",
@@ -885,6 +888,7 @@ export default [
     {
       "A": 4,
       "B": "GFR Est MDRD Afric American",
+      "C": "Glomerular filtration rate/1.73 sq M.predicted.black|ArVRat|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 31001,
       "E": "48643-1",
       "F": "Glomerular filtration rate/1.73 sq M predicted among blacks [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (MDRD)",
@@ -903,6 +907,7 @@ export default [
     {
       "A": 4,
       "B": "GFR Est MDRD Non Afric American",
+      "C": "Glomerular filtration rate/1.73 sq M.predicted.non black|ArVRat|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 31002,
       "E": "48642-3",
       "F": "Glomerular filtration rate/1.73 sq M predicted among non-blacks [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (MDRD)",
@@ -921,6 +926,7 @@ export default [
     {
       "A": 4,
       "B": "GFR Estimated MDRD",
+      "C": "Glomerular filtration rate/1.73 sq M.predicted|ArVRat|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 32543,
       "E": "33914-3",
       "F": "Glomerular filtration rate/1.73 sq M.predicted [Volume Rate/Area] in Serum or Plasma by Creatinine-based formula (MDRD)",
@@ -940,7 +946,7 @@ export default [
     {
       "A": 3,
       "B": "Cholesterol Bld Qn (POC)",
-      "C": "Cholesterol|MCnc|Ser/Plas||Pt",
+      "C": "Cholesterol|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 31105,
       "E": "2093-3",
       "F": "Cholesterol [Mass/volume] in Serum or Plasma",
@@ -961,7 +967,7 @@ export default [
     {
       "A": 3,
       "B": "HDL Cholesterol Bld Qn (POC)",
-      "C": "Cholesterol.in HDL|MCnc|Ser/Plas||Pt",
+      "C": "Cholesterol.in HDL|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 31106,
       "E": "2085-9",
       "F": "Cholesterol in HDL [Mass/volume] in Serum or Plasma",
@@ -974,6 +980,7 @@ export default [
       "O": "LN",
       "P": "mg/dL",
       "Q": "mg/dL",
+      "R": 386.6535,
       "T": "mg/dL",
       "U": "mg/dL",
       "V": "mg/dL"
@@ -981,7 +988,7 @@ export default [
     {
       "A": 3,
       "B": "LDL Calc Bld Qn (POC)",
-      "C": "Cholesterol.in LDL|MCnc|Ser/Plas|Method_Other|Pt",
+      "C": "Cholesterol.in LDL|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 31109,
       "E": "13457-7",
       "F": "Cholesterol in LDL [Mass/volume] in Serum or Plasma by calculation",
@@ -994,6 +1001,7 @@ export default [
       "O": "LN",
       "P": "mg/dL",
       "Q": "mg/dL",
+      "R": 386.6535,
       "T": "mg/dL",
       "U": "mg/dL",
       "V": "mg/dL"
@@ -1001,7 +1009,7 @@ export default [
     {
       "A": 3,
       "B": "LDL Direct SerPl Qn",
-      "C": "Cholesterol.in LDL|MCnc|Ser/Plas|Method_Other|Pt",
+      "C": "Cholesterol.in LDL|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 22757,
       "E": "18262-6",
       "F": "Cholesterol in LDL [Mass/volume] in Serum or Plasma by Direct assay",
@@ -1013,6 +1021,7 @@ export default [
       "O": "LN",
       "P": "mg/dL",
       "Q": "mg/dL",
+      "R": 386.6535,
       "T": "mg/dL",
       "U": "mg/dL",
       "V": "mg/dL"
@@ -1037,7 +1046,7 @@ export default [
     {
       "A": 3,
       "B": "Cholesterol/HDL Bld Qn (POC)",
-      "C": "Cholesterol.total/Cholesterol.in HDL|MRto|Ser/Plas||Pt",
+      "C": "Cholesterol.total/Cholesterol.in HDL|MRtoSRto|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 31108,
       "E": "9830-1",
       "F": "Cholesterol.total/Cholesterol in HDL [Mass Ratio] in Serum or Plasma",
@@ -1056,7 +1065,7 @@ export default [
     {
       "A": 3,
       "B": "Triglycerides Bld Qn (POC)",
-      "C": "Triglyceride|MCnc|Ser/Plas||Pt",
+      "C": "Triglyceride|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 31107,
       "E": "3043-7",
       "F": "Triglyceride [Mass/volume] in Blood",
@@ -1076,7 +1085,7 @@ export default [
     {
       "A": 3,
       "B": "Triglyceride SerPl Qn",
-      "C": "Triglyceride|MCnc|Ser/Plas||Pt",
+      "C": "Triglyceride|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 553,
       "E": "2571-8",
       "F": "Triglyceride [Mass/volume] in Serum or Plasma",
@@ -1119,7 +1128,7 @@ export default [
     {
       "A": 3,
       "B": "pH Bld",
-      "C": "pH|LsCnc|Intravascular-Any||Pt",
+      "C": "pH|LsCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 6131,
       "E": "11558-4",
       "F": "pH of Blood",
@@ -1138,6 +1147,7 @@ export default [
     {
       "A": 3,
       "B": "pH Corrected",
+      "C": "pH|LsCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 6132,
       "E": "33254-4",
       "F": "pH of Arterial blood adjusted to patient's actual temperature",
@@ -1154,7 +1164,7 @@ export default [
     {
       "A": 3,
       "B": "PCO2 Bld",
-      "C": "Carbon dioxide|PPres|Intravascular-Any||Pt",
+      "C": "Carbon dioxide|PPres|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 6139,
       "E": "11557-6",
       "F": "Carbon dioxide [Partial pressure] in Blood",
@@ -1177,6 +1187,7 @@ export default [
     {
       "A": 3,
       "B": "PCO2 Corrected",
+      "C": "Carbon dioxide|PPres|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 6133,
       "E": "34705-4",
       "F": "Carbon dioxide [Partial pressure] adjusted to patient's actual temperature in Blood",
@@ -1196,7 +1207,7 @@ export default [
     {
       "A": 3,
       "B": "PO2",
-      "C": "Oxygen|PPres|Intravascular-Any||Pt",
+      "C": "Oxygen|PPres|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 6140,
       "E": "11556-8",
       "F": "Oxygen [Partial pressure] in Blood",
@@ -1217,6 +1228,7 @@ export default [
     {
       "A": 3,
       "B": "PO2 Corrected",
+      "C": "Oxygen|PPres|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 6134,
       "E": "19254-2",
       "F": "Oxygen [Partial pressure] adjusted to patient's actual temperature in Blood",
@@ -1285,7 +1297,7 @@ export default [
     {
       "A": 3,
       "B": "O2 Sat Bld Qn (POC)",
-      "C": "Oxygen saturation|MFr|Intravascular-Any|Method_Other|Pt",
+      "C": "Oxygen saturation|MFrSFr|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 21226,
       "E": "2713-6",
       "F": "Oxygen saturation Calculated from oxygen partial pressure in Blood",
@@ -1305,6 +1317,7 @@ export default [
     {
       "A": 3,
       "B": "O2 Content Bld",
+      "C": "Oxygen content|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 5864,
       "E": "34163-6",
       "F": "Oxygen content in Blood",
@@ -1323,7 +1336,7 @@ export default [
     {
       "A": 3,
       "B": "Carboxyhemoglob",
-      "C": "Carboxyhemoglobin/Hemoglobin.total|MFr|Intravascular-Any||Pt",
+      "C": "Carboxyhemoglobin/Hemoglobin.total|MFrSFr|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 5381,
       "E": "20563-3",
       "F": "Carboxyhemoglobin/Hemoglobin.total in Blood",
@@ -1376,7 +1389,7 @@ export default [
     {
       "A": 3,
       "B": "Base Excess Bld Qn Calc",
-      "C": "Base excess|PrTitrSCnc|Intravascular-Any|Method_Other|Pt",
+      "C": "Base excess|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 5870,
       "E": "11555-0",
       "F": "Base excess in Blood by calculation",
@@ -1396,7 +1409,7 @@ export default [
     {
       "A": 4,
       "B": "pH Scalp",
-      "C": "pH|LsCnc|Intravascular-Any||Pt",
+      "C": "pH|LsCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 6130,
       "E": "2746-6",
       "F": "pH of Venous blood",
@@ -1416,6 +1429,7 @@ export default [
     {
       "A": 4,
       "B": "pH Cord Bld",
+      "C": "pH|LsCnc|Pt|BldCo|NarDocOrdQn|Method-Other",
       "D": 6459,
       "E": "14873-4",
       "F": "pH of Cord blood",
@@ -1441,7 +1455,7 @@ export default [
     {
       "A": 4,
       "B": "pH BldA",
-      "C": "pH|LsCnc|Intravascular-Any||Pt",
+      "C": "pH|LsCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 6128,
       "E": "2744-1",
       "F": "pH of Arterial blood",
@@ -1460,7 +1474,7 @@ export default [
     {
       "A": 4,
       "B": "PCO2 BldA",
-      "C": "Carbon dioxide|PPres|Intravascular-Any||Pt",
+      "C": "Carbon dioxide|PPres|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 7869,
       "E": "2019-8",
       "F": "Carbon dioxide [Partial pressure] in Arterial blood",
@@ -1481,7 +1495,7 @@ export default [
     {
       "A": 4,
       "B": "PO2-BldA",
-      "C": "Oxygen|PPres|Intravascular-Any||Pt",
+      "C": "Oxygen|PPres|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 7872,
       "E": "2703-7",
       "F": "Oxygen [Partial pressure] in Arterial blood",
@@ -1501,7 +1515,7 @@ export default [
     {
       "A": 4,
       "B": "HCO3 BldA Qn Calc",
-      "C": "Bicarbonate|PrTitrSCnc|Intravascular-Any||Pt",
+      "C": "Bicarbonate|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 29681,
       "E": "1960-4",
       "F": "Bicarbonate [Moles/volume] in Arterial blood",
@@ -1522,7 +1536,7 @@ export default [
     {
       "A": 4,
       "B": "Base Excess BldA Qn",
-      "C": "Base excess|PrTitrSCnc|Intravascular-Any|Method_Other|Pt",
+      "C": "Base excess|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 22608,
       "E": "1925-7",
       "F": "Base excess in Arterial blood by calculation",
@@ -1542,6 +1556,7 @@ export default [
     {
       "A": 3,
       "B": "CRP Ser Qn High Sensitive mg/dL",
+      "C": "C reactive protein|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 30216,
       "E": "30522-7",
       "F": "C reactive protein [Mass/volume] in Serum or Plasma by High sensitivity method",
@@ -1552,6 +1567,7 @@ export default [
       "K": 0.7,
       "N": "CRP SerPl HS-mCnc",
       "O": "LN",
+      "R": 105000,
       "T": "mg/dL",
       "U": "mg/L",
       "V": "mg/L"
@@ -1559,6 +1575,7 @@ export default [
     {
       "A": 3,
       "B": "CRP SerPl Qn",
+      "C": "C reactive protein|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 18550,
       "E": "1988-5",
       "F": "C reactive protein [Mass/volume] in Serum or Plasma",
@@ -1569,6 +1586,7 @@ export default [
       "K": 0.49,
       "N": "CRP SerPl-mCnc",
       "O": "LN",
+      "R": 105000,
       "T": "mg/dL",
       "U": "mg/L",
       "V": "mg/L"
@@ -1576,6 +1594,7 @@ export default [
     {
       "A": 3,
       "B": "B-Natriuretic Peptide Pl Qn",
+      "C": "Natriuretic peptide.B|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 26886,
       "E": "30934-4",
       "F": "Natriuretic peptide B [Mass/volume] in Serum or Plasma",
@@ -1593,6 +1612,7 @@ export default [
     {
       "A": 3,
       "B": "Myoglobin SerPl Qn",
+      "C": "Myoglobin|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 13714,
       "E": "2639-3",
       "F": "Myoglobin [Mass/volume] in Serum or Plasma",
@@ -1603,6 +1623,7 @@ export default [
       "K": 72,
       "N": "Myoglobin SerPl-mCnc",
       "O": "LN",
+      "R": 17200,
       "T": "ng/mL",
       "U": "ng/mL",
       "V": "ng/mL"
@@ -1646,7 +1667,6 @@ export default [
     {
       "A": 3,
       "B": "Glycated Hgb %",
-      "C": "Hemoglobin A1c/Hemoglobin.total|MFr|Bld - Any|Method_Any",
       "D": 18091,
       "E": "4548-4",
       "F": "Hemoglobin A1c/Hemoglobin.total in Blood",
@@ -1666,7 +1686,6 @@ export default [
     {
       "A": 3,
       "B": "Glycated Hb-Total (Hplc)",
-      "C": "Hemoglobin A1c/Hemoglobin.total|MFr|Bld - Any|Method_Any",
       "D": 21844,
       "E": "17856-6",
       "F": "Hemoglobin A1c/Hemoglobin.total in Blood by HPLC",
@@ -1686,7 +1705,6 @@ export default [
     {
       "A": 3,
       "B": "Hb A1C Calculated",
-      "C": "Hemoglobin A1c/Hemoglobin.total|MFr|Bld - Any|Method_Any",
       "D": 21845,
       "E": "17855-8",
       "F": "Hemoglobin A1c/Hemoglobin.total in Blood by calculation",
@@ -1719,7 +1737,7 @@ export default [
     {
       "A": 4,
       "B": "FTI [Nichols]",
-      "C": "Thyroxine free index|MCnc|Ser/Plas|Method_Other|Pt",
+      "C": "Thyroxine free index|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 22165,
       "E": "32215-6",
       "F": "Thyroxine (T4) free index in Serum or Plasma by calculation",
@@ -1736,7 +1754,7 @@ export default [
     {
       "A": 4,
       "B": "TBG Assess [Nichols]",
-      "C": "Thyroxine binding globulin|MCnc|Ser/Plas||Pt",
+      "C": "Thyroxine binding globulin|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 22167,
       "E": "3021-3",
       "F": "Thyroxine binding globulin [Mass/volume] in Serum or Plasma",
@@ -1755,7 +1773,7 @@ export default [
     {
       "A": 4,
       "B": "T3 RIA'",
-      "C": "Triiodothyronine|MCnc|Ser/Plas||Pt",
+      "C": "Triiodothyronine|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 3652,
       "E": "3053-6",
       "F": "Triiodothyronine (T3) [Mass/volume] in Serum or Plasma",
@@ -1775,7 +1793,7 @@ export default [
     {
       "A": 4,
       "B": "T3 Free SerPl Qn",
-      "C": "Triiodothyronine.free|MCnc|Ser/Plas||Pt",
+      "C": "Triiodothyronine.free|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 23332,
       "E": "3051-0",
       "F": "Triiodothyronine (T3) Free [Mass/volume] in Serum or Plasma",
@@ -1788,6 +1806,7 @@ export default [
       "O": "LN",
       "P": "pg/mL",
       "Q": "pg/mL",
+      "R": 650.9735,
       "T": "pg/mL",
       "U": "pg/mL",
       "V": "pg/mL"
@@ -1795,7 +1814,6 @@ export default [
     {
       "A": 4,
       "B": "T3 Reverse SerPl Qn",
-      "C": "Triiodothyronine.reverse|MCnc|Ser/Plas||Pt",
       "D": 16373,
       "E": "3052-8",
       "F": "Triiodothyronine (T3).reverse [Mass/volume] in Serum or Plasma",
@@ -1815,7 +1833,6 @@ export default [
     {
       "A": 4,
       "B": "T3 Ru (Nuc Med)'",
-      "C": "Triiodothyronine resin uptake (T3RU)|NFr|Ser/Plas||Pt",
       "D": 414,
       "E": "3050-2",
       "F": "Triiodothyronine resin uptake (T3RU) in Serum or Plasma",
@@ -1835,12 +1852,14 @@ export default [
     {
       "A": 4,
       "B": "T4 Free SerPl Qn Eq/HPLC-MS/MS",
+      "C": "Thyroxine.free|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 32832,
       "E": "6892-4",
       "F": "Thyroxine (T4) free [Mass/volume] in Serum or Plasma by Dialysis",
       "G": "T4 free Dialysis mass conc",
       "N": "T4 Free SerPl Dialy-mCnc",
       "O": "LN",
+      "R": 776.93,
       "T": "ng/dL",
       "U": "ng/dL",
       "V": "ng/dL"
@@ -1848,7 +1867,7 @@ export default [
     {
       "A": 4,
       "B": "TSH SerPl Qn",
-      "C": "Thyrotropin|ACnc|Ser/Plas||Pt",
+      "C": "Thyrotropin|ACnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 5294,
       "E": "3016-3",
       "F": "Thyrotropin [Units/volume] in Serum or Plasma",
@@ -1861,6 +1880,7 @@ export default [
       "O": "LN",
       "P": "m[IU]/L",
       "Q": "m[IU]/L",
+      "R": 30000,
       "T": "mcU/mL",
       "U": "mcU/ml",
       "V": "{mcU}/ml"
@@ -1868,7 +1888,6 @@ export default [
     {
       "A": 4,
       "B": "TSH RIA'''",
-      "C": "Thyrotropin|MCnc|Ser/Plas||Pt",
       "D": 646,
       "E": "27975-2",
       "F": "Thyrotropin [Mass/volume] in Serum or Plasma",
@@ -2001,7 +2020,6 @@ export default [
     {
       "A": 3,
       "B": "HGB F Kleih-Betke RBC %",
-      "C": "Hemoglobin F/Hemoglobin.total|MFr|Bld - Any|Method_Any",
       "D": 16005,
       "E": "4633-4",
       "F": "Hemoglobin F/Hemoglobin.total in Blood by Kleihauer-Betke method",
@@ -2034,7 +2052,6 @@ export default [
     {
       "A": 4,
       "B": "Protime (POC)",
-      "C": "Coagulation tissue factor induced|Time|Intravascular-COAG|Method_Other",
       "D": 22102,
       "E": "5964-2",
       "F": "Prothrombin time (PT) in Blood by Coagulation assay",
@@ -2055,7 +2072,6 @@ export default [
     {
       "A": 4,
       "B": "PT Patient",
-      "C": "Coagulation tissue factor induced|Time|Intravascular-COAG|Method_Other",
       "D": 214,
       "E": "5902-2",
       "F": "Prothrombin time (PT)",
@@ -2093,7 +2109,6 @@ export default [
     {
       "A": 4,
       "B": "INR",
-      "C": "Coagulation tissue factor induced.INR|RelTime|Intravascular-COAG|Method_Other",
       "D": 18239,
       "E": "6301-6",
       "F": "INR in Platelet poor plasma by Coagulation assay",
@@ -2113,7 +2128,6 @@ export default [
     {
       "A": 4,
       "B": "INR POC",
-      "C": "Coagulation tissue factor induced.INR|RelTime|Intravascular-COAG|Method_Other",
       "D": 30871,
       "E": "34714-6",
       "F": "INR in Blood by Coagulation assay",
@@ -2272,7 +2286,6 @@ export default [
     {
       "A": 3,
       "B": "Protein S Activ %",
-      "C": "Protein S actual/Normal|RelCCnc|Intravascular-COAG|Method_Other",
       "D": 24710,
       "E": "31102-7",
       "F": "Protein S actual/normal in Platelet poor plasma by Chromogenic method",
@@ -2292,7 +2305,6 @@ export default [
     {
       "A": 3,
       "B": "Protein S Ag %",
-      "C": "Protein S Ag actual/Normal|RelMCnc|Intravascular-COAG|Method_Other",
       "D": 19965,
       "E": "27823-4",
       "F": "Protein S Ag actual/normal in Platelet poor plasma by Immunoassay",
@@ -4373,21 +4385,5 @@ export default [
       "B": "PND #/NIGHT",
       "D": 20369,
       "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "PHQ-9 quick depression assessment panel",
-      "D": "phq9-0",
-      "E": "44249-1",
-      "F": "PHQ-9 quick depression assessment panel [Reported.PHQ]",
-      "G": "PHQ-9 quick depression assessment panel"
-    },
-    {
-      "A": 2,
-      "B": "Generalized anxiety disorder 7 item (GAD-7)",
-      "D": "gad7-0",
-      "E": "69737-5",
-      "F": "Generalized anxiety disorder 7 item",
-      "G": "Generalized anxiety disorder 7 item"
     }
   ];
