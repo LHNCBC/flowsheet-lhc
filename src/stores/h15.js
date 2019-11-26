@@ -24,6 +24,266 @@ export default [
     //   "V": "UCUM_EX"
     // },
     {
+      "A": 1,
+      "B": "VITALS",
+      "D": 64,
+      "E": "72513-5",
+      "F": "Vital signs with smoking status and pain scale [VSP]",
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "Temp",
+      "C": "Temp F->C",
+      "D": 65,
+      "E": "8310-5",
+      "F": "Body temperature",
+      "G": "Body Temp F",
+      "H": "F",
+      "I": "97.8 - 99",
+      "J": 97.8,
+      "K": 99,
+      "N": "Body temperature",
+      "O": "RI",
+      "P": "Cel",
+      "Q": "Cel",
+      "S": "x",
+      "T": "DEG F",
+      "U": "F",
+      "V": "[degF]"
+    },
+    {
+      "A": 2,
+      "B": "Temp",
+      "C": "Temp F->C",
+      "D": "65z",
+      "E": "8310-5",
+      "F": "Body temperature",
+      "G": "Body Temp C",
+      "H": "Cel",
+      "I": "36.1 - 37.2",
+      "J": 36.1,
+      "K": 37.2,
+      "N": "Body temperature",
+      "O": "RI",
+      "P": "Cel",
+      "Q": "Cel",
+      "T": "Cel",
+      "U": "C",
+      "V": "Cel"
+    },
+    {
+      "A": 2,
+      "B": "Temp Auto Axillary",
+      "C": "Temp F->C",
+      "D": 12986,
+      "E": "8328-7",
+      "F": "Axillary temperature",
+      "G": "Axil temp F",
+      "H": "degF",
+      "I": "97 - 99",
+      "J": 97,
+      "K": 99,
+      "N": "Axil temp",
+      "O": "RI",
+      "P": "Cel",
+      "Q": "Cel",
+      "S": "x",
+      "T": "DEG F",
+      "U": "F",
+      "V": "[degF]"
+    },
+    {
+      "A": 2,
+      "B": "Temp Auto Oral",
+      "C": "Temp F->C",
+      "D": 12984,
+      "E": "8331-1",
+      "F": "Oral temperature",
+      "G": "Oral temp F",
+      "H": "DEG F",
+      "I": "97.6 - 99",
+      "J": 97.6,
+      "K": 99,
+      "L": 102.5,
+      "M": 95.6,
+      "N": "Oral temp",
+      "O": "RI",
+      "P": "Cel",
+      "Q": "Cel",
+      "S": "x",
+      "T": "DEG F",
+      "U": "F",
+      "V": "[degF]"
+    },
+    {
+      "A": 2,
+      "B": "Temp Auto Oral",
+      "C": "Temp F->C",
+      "D": "12984z",
+      "E": "8331-1",
+      "F": "Oral temperature",
+      "G": "Oral temp C",
+      "H": "Cel",
+      "I": "36.4 - 37.2",
+      "J": 36.4,
+      "K": 37.2,
+      "L": 39.2,
+      "M": 35.3,
+      "N": "Oral temp",
+      "O": "RI",
+      "P": "Cel",
+      "Q": "Cel",
+      "T": "C",
+      "U": "C",
+      "V": "Cel"
+    },
+    {
+      "A": 2,
+      "B": "Temp Auto Rectal",
+      "C": "Temp F->C",
+      "D": 12985,
+      "E": "8332-9",
+      "F": "Rectal temperature",
+      "G": "Rectal temp F",
+      "H": "degF",
+      "I": "97 - 100.3",
+      "J": 97,
+      "K": 100.3,
+      "N": "Rectal temp",
+      "O": "RI",
+      "P": "Cel",
+      "Q": "Cel",
+      "S": "x",
+      "T": "DEG F",
+      "U": "F",
+      "V": "[degF]"
+    },
+    {
+      "A": 2,
+      "B": "Temp Auto Tympanic",
+      "C": "Temp F->C",
+      "D": 19218,
+      "E": "8333-7",
+      "F": "Tympanic membrane temperature",
+      "G": "Tymp memb temp F",
+      "H": "DegF",
+      "I": "95.72 - 100.04",
+      "J": 95.72,
+      "K": 100.04,
+      "N": "Tymp memb temp",
+      "O": "RI",
+      "P": "Cel",
+      "Q": "Cel",
+      "S": "x",
+      "T": "DEG F",
+      "U": "F",
+      "V": "[degF]"
+    },
+    {
+      "A": 2,
+      "B": "Heart Rate",
+      "C": "Heart rate merged",
+      "D": 66,
+      "E": "8867-4",
+      "F": "Heart rate",
+      "H": "/min",
+      "I": "60-100",
+      "J": 60,
+      "K": 100,
+      "L": 130,
+      "M": 40,
+      "N": "Heart rate",
+      "O": "RI",
+      "P": "{beats}/min",
+      "Q": "{beats}/min",
+      "T": "/MIN",
+      "U": "beats/min",
+      "V": "{beats}/min"
+    },
+    {
+      "A": 2,
+      "B": "Heart Rate #2",
+      "C": "Heart rate merged",
+      "D": 31686,
+      "E": "8867-4",
+      "F": "Heart rate",
+      "H": "/min",
+      "I": "60-100",
+      "J": 60,
+      "K": 100,
+      "L": 130,
+      "M": 40,
+      "N": "Heart rate",
+      "O": "RI",
+      "P": "{beats}/min",
+      "Q": "{beats}/min",
+      "T": "/MIN",
+      "U": "beats/min",
+      "V": "{beats}/min"
+    },
+    {
+      "A": 2,
+      "B": "Pulse Auto",
+      "C": "Heart rate merged",
+      "D": 12989,
+      "E": "8867-4",
+      "F": "Heart rate",
+      "H": "/min",
+      "I": "60-100",
+      "J": 60,
+      "K": 100,
+      "L": 130,
+      "M": 40,
+      "N": "Heart rate",
+      "O": "RI",
+      "P": "{beats}/min",
+      "Q": "{beats}/min",
+      "T": "/MIN",
+      "U": "beats/min",
+      "V": "{beats}/min"
+    },
+    {
+      "A": 2,
+      "B": "Pulse Apical",
+      "C": "Heart rate merged",
+      "D": 3972,
+      "E": "8891-4",
+      "F": "Heart rate Cardiac apex by palpation",
+      "G": "Heart rate Cardiac apex by palpation",
+      "H": "beats/min",
+      "I": "60 - 100",
+      "J": 60,
+      "K": 100,
+      "N": "Heart rate Cardiac Apex Palpation",
+      "O": "RI",
+      "P": "{beats}/min",
+      "Q": "{beats}/min",
+      "T": "/MIN",
+      "U": "beats/min",
+      "V": "{beats}/min"
+    },
+    {
+      "A": 2,
+      "B": "Pulse Recumbent",
+      "C": "Heart rate merged",
+      "D": 2985,
+      "E": "68999-2",
+      "F": "Heart rate --supine",
+      "G": "Heart rate --supine",
+      "H": "/min",
+      "I": "60-100",
+      "J": 60,
+      "K": 100,
+      "N": "Heart rate sup",
+      "O": "RI",
+      "P": "{beats}/min",
+      "Q": "{beats}/min",
+      "T": "/MIN",
+      "U": "beats/min",
+      "V": "{beats}/min"
+    },
+    {
       "A": 2,
       "B": "Pulse Standing",
       "D": 2986,
@@ -155,6 +415,64 @@ export default [
     },
     {
       "A": 2,
+      "B": "Mean BP",
+      "C": "Mean Arterial Pressure merged",
+      "D": 36044,
+      "E": "8478-0",
+      "F": "Mean blood pressure",
+      "H": "mmHg",
+      "I": "70 - 100",
+      "J": 70,
+      "K": 100,
+      "N": "BP mean",
+      "O": "RI",
+      "P": "mm[Hg]",
+      "Q": "mm[Hg]",
+      "T": "mm Hg",
+      "U": "mmHg",
+      "V": "mm[Hg]"
+    },
+    {
+      "A": 2,
+      "B": "Mean Arterial Pressure",
+      "C": "Mean Arterial Pressure merged",
+      "D": 31692,
+      "E": "8478-0",
+      "F": "Mean blood pressure",
+      "H": "mmHg",
+      "I": "70 - 100",
+      "J": 70,
+      "K": 100,
+      "N": "BP mean",
+      "O": "RI",
+      "P": "mm[Hg]",
+      "Q": "mm[Hg]",
+      "T": "mm Hg",
+      "U": "mmHg",
+      "V": "mm[Hg]"
+    },
+    {
+      "A": 2,
+      "B": "MAP Auto",
+      "C": "Mean Arterial Pressure merged",
+      "D": 12987,
+      "E": "8478-0",
+      "F": "Mean blood pressure",
+      "H": "mm Hg",
+      "I": "70 - 100",
+      "J": 70,
+      "K": 100,
+      "L": 102,
+      "N": "BP mean",
+      "O": "RI",
+      "P": "mm[Hg]",
+      "Q": "mm[Hg]",
+      "T": "mm Hg",
+      "U": "mmHg",
+      "V": "mm[Hg]"
+    },
+    {
+      "A": 2,
       "B": "BP Dias Recumbnt",
       "D": 2991,
       "E": "8455-8",
@@ -265,6 +583,124 @@ export default [
     },
     {
       "A": 2,
+      "B": "Height(In)",
+      "C": "Height in->cm",
+      "D": 497,
+      "E": "3137-7",
+      "F": "Body height Measured",
+      "G": "Height inches",
+      "N": "Body height Measured",
+      "O": "RI",
+      "P": "cm",
+      "Q": "cm",
+      "S": "x",
+      "T": "INCH(S)",
+      "U": "in",
+      "V": "[in_i]"
+    },
+    {
+      "A": 2,
+      "B": "Height(In)",
+      "C": "Height in->cm",
+      "D": 497,
+      "E": "3137-7",
+      "F": "Body height Measured",
+      "G": "Height cm",
+      "N": "Body height Measured",
+      "O": "RI",
+      "P": "cm",
+      "Q": "cm",
+      "T": "CM",
+      "U": "cm",
+      "V": "cm"
+    },
+    {
+      "A": 2,
+      "B": "Height Metric",
+      "C": "Height in->cm",
+      "D": 3897,
+      "E": "3137-7",
+      "F": "Body height Measured",
+      "G": "Height cm",
+      "N": "Body height Measured",
+      "O": "RI",
+      "P": "cm",
+      "Q": "cm",
+      "T": "CM",
+      "U": "cm",
+      "V": "cm"
+    },
+    {
+      "A": 2,
+      "B": "Weight Lbs",
+      "C": "Weight lbs->kg",
+      "D": 202,
+      "E": "3141-9",
+      "F": "Body weight Measured",
+      "G": "Weight lbs",
+      "H": "lbs",
+      "N": "Weight Measured",
+      "O": "RI",
+      "P": "kg",
+      "Q": "kg",
+      "S": "x",
+      "T": "LBS",
+      "U": "lbs",
+      "V": "[lb_av]"
+    },
+    {
+      "A": 2,
+      "B": "Weight Lbs",
+      "C": "Weight lbs->kg",
+      "D": "202z",
+      "E": "3141-9",
+      "F": "Body weight Measured",
+      "G": "Weight kg",
+      "H": "kg",
+      "N": "Weight Measured",
+      "O": "RI",
+      "P": "kg",
+      "Q": "kg",
+      "T": "KG",
+      "U": "kg",
+      "V": "kg"
+    },
+    {
+      "A": 2,
+      "B": "Weight Metric",
+      "C": "Weight lbs->kg",
+      "D": 2996,
+      "E": "3141-9",
+      "F": "Body weight Measured",
+      "G": "Weight kg",
+      "N": "Weight Measured",
+      "O": "RI",
+      "P": "kg",
+      "Q": "kg",
+      "T": "KG",
+      "U": "kg",
+      "V": "kg"
+    },
+    {
+      "A": 2,
+      "B": "Weight Auto",
+      "C": "Weight lbs->kg",
+      "D": 14343,
+      "E": "3141-9",
+      "F": "Body weight Measured",
+      "G": "Weight lbs",
+      "H": "pounds",
+      "N": "Weight Measured",
+      "O": "RI",
+      "P": "kg",
+      "Q": "kg",
+      "S": "x",
+      "T": "LBS",
+      "U": "lbs",
+      "V": "[lb_av]"
+    },
+    {
+      "A": 2,
       "B": "Oximetry",
       "D": 11869,
       "E": "59410-1",
@@ -279,6 +715,12 @@ export default [
       "T": "%",
       "U": "%",
       "V": "%"
+    },
+    {
+      "A": 2,
+      "B": "OUTPUT",
+      "D": 19196,
+      "O": "RI"
     },
     {
       "A": 3,
@@ -314,6 +756,12 @@ export default [
       "N": "Num stools",
       "O": "LN",
       "V": "{#}"
+    },
+    {
+      "A": 3,
+      "B": "Incont/Br#",
+      "D": 19164,
+      "O": "RI"
     },
     {
       "A": 3,
@@ -412,6 +860,12 @@ export default [
       "V": "mL/(24.h)"
     },
     {
+      "A": 2,
+      "B": "INTAKE",
+      "D": 19195,
+      "O": "RI"
+    },
+    {
       "A": 3,
       "B": "IN IV#1/24H",
       "D": 26852,
@@ -422,6 +876,24 @@ export default [
       "T": "CC",
       "U": "mL/24hr",
       "V": "mL/(24.h)"
+    },
+    {
+      "A": 3,
+      "B": "IN IVPB/24H",
+      "D": 26855,
+      "O": "RI",
+      "T": "CC",
+      "U": "cm3",
+      "V": "cm3"
+    },
+    {
+      "A": 3,
+      "B": "Intake IVPB Vol/8hrs",
+      "D": 26635,
+      "O": "RI",
+      "T": "CC",
+      "U": "cm3",
+      "V": "cm3"
     },
     {
       "A": 3,
@@ -485,6 +957,24 @@ export default [
     },
     {
       "A": 3,
+      "B": "Intake Vol Haf",
+      "D": 19138,
+      "O": "RI",
+      "T": "CC",
+      "U": "cm3",
+      "V": "cm3"
+    },
+    {
+      "A": 3,
+      "B": "Intake Vol IVPB",
+      "D": 19137,
+      "O": "RI",
+      "T": "CC",
+      "U": "cm3",
+      "V": "cm3"
+    },
+    {
+      "A": 3,
       "B": "Intake Vol IV#1",
       "D": 19135,
       "E": "8975-5",
@@ -531,6 +1021,18 @@ export default [
       "T": "CC",
       "U": "mL/24hr",
       "V": "mL/(24.h)"
+    },
+    {
+      "A": 1,
+      "B": "CHEMISTRY STUDIES",
+      "D": 4011,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "ROUTINE SER-PLAS CHEM TESTS:",
+      "D": 16931,
+      "O": "RI"
     },
     {
       "A": 3,
@@ -801,6 +1303,264 @@ export default [
     },
     {
       "A": 4,
+      "B": "BUN TESTS",
+      "D": 3966,
+      "O": "RI"
+    },
+    {
+      "A": 5,
+      "B": "BUN SerPl Qn",
+      "C": "Urea nitrogen MSCNC demo",
+      "D": 1276,
+      "E": "3094-0",
+      "F": "Urea nitrogen [Mass/volume] in Serum or Plasma",
+      "G": "Urea nitrogen mass conc",
+      "H": "mg/dL",
+      "I": "7 - 20",
+      "J": 7,
+      "K": 20,
+      "N": "BUN SerPl-mCnc",
+      "O": "RI",
+      "P": "mg/dL",
+      "Q": "mg/dL",
+      "R": 28,
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
+    },
+    {
+      "A": 5,
+      "B": "BUN SerPl Qn",
+      "C": "Urea nitrogen MSCNC demo",
+      "D": "1276z",
+      "E": "14937-7",
+      "F": "Urea nitrogen [Moles/volume] in Serum or Plasma",
+      "G": "Urea nitrogen molar conc",
+      "H": "mmol/L",
+      "I": "2.5 - 7.1",
+      "J": 2.5,
+      "K": 7.1,
+      "N": "BUN SerPl-sCnc",
+      "O": "RI",
+      "P": "mg/dL",
+      "Q": "mg/dL",
+      "R": 28,
+      "S": "x",
+      "T": "mmol/L",
+      "U": "mmol/L",
+      "V": "mmol/L"
+    },
+    {
+      "A": 5,
+      "B": "BUN (CSH)",
+      "C": "Urea nitrogen MSCNC demo",
+      "D": 11433,
+      "E": "3094-0",
+      "F": "Urea nitrogen [Mass/volume] in Serum or Plasma",
+      "G": "Urea nitrogen mass conc",
+      "H": "mg/dL",
+      "I": "10 - 26",
+      "J": 10,
+      "K": 26,
+      "N": "BUN SerPl-mCnc",
+      "O": "RI",
+      "P": "mg/dL",
+      "Q": "mg/dL",
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
+    },
+    {
+      "A": 5,
+      "B": "BUN (SMA)",
+      "C": "Urea nitrogen MSCNC demo",
+      "D": 34,
+      "E": "3094-0",
+      "F": "Urea nitrogen [Mass/volume] in Serum or Plasma",
+      "G": "Urea nitrogen mass conc",
+      "H": "mg/dL",
+      "I": "10 - 26",
+      "J": 10,
+      "K": 26,
+      "N": "BUN SerPl-mCnc",
+      "O": "RI",
+      "P": "mg/dL",
+      "Q": "mg/dL",
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
+    },
+    {
+      "A": 5,
+      "B": "BUN Bld Qn (POC)",
+      "C": "Urea nitrogen|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "D": 18989,
+      "E": "6299-2",
+      "F": "Urea nitrogen [Mass/volume] in Blood",
+      "G": "Urea nitrogen mass conc (Bld)",
+      "H": "mg/dL",
+      "I": "7 - 22",
+      "J": 7,
+      "K": 22,
+      "N": "BUN Bld-mCnc",
+      "O": "RI",
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
+    },
+    {
+      "A": 5,
+      "B": "BUN(ER-IS)",
+      "C": "Urea nitrogen MSCNC demo",
+      "D": 20034,
+      "E": "3094-0",
+      "F": "Urea nitrogen [Mass/volume] in Serum or Plasma",
+      "G": "Urea nitrogen mass conc",
+      "H": "mg/dL",
+      "I": "8 - 26",
+      "J": 8,
+      "K": 26,
+      "N": "BUN SerPl-mCnc",
+      "O": "RI",
+      "P": "mg/dL",
+      "Q": "mg/dL",
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
+    },
+    {
+      "A": 4,
+      "B": "CREATININE TESTS",
+      "D": 4095,
+      "O": "RI"
+    },
+    {
+      "A": 5,
+      "B": "Creatinine (ISTAT)'",
+      "C": "Creatinine serum moles->mass",
+      "D": 29499,
+      "E": "38483-4",
+      "F": "Creatinine [Mass/volume] in Blood",
+      "G": "Creatinine mass conc (Bld)",
+      "H": "mg/dL",
+      "I": "0.6 - 1.3",
+      "J": 0.6,
+      "K": 1.3,
+      "N": "Creat Bld-mCnc",
+      "O": "RI",
+      "R": 113.1179,
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
+    },
+    {
+      "A": 5,
+      "B": "Creatinine Ser",
+      "C": "Creatinine serum moles->mass",
+      "D": 6145,
+      "E": "2160-0",
+      "F": "Creatinine [Mass/volume] in Serum or Plasma",
+      "G": "Creatinine mass conc",
+      "H": "mg/dL",
+      "I": "0.4 - 1.5",
+      "J": 0.4,
+      "K": 1.5,
+      "N": "Creat SerPl-mCnc",
+      "O": "RI",
+      "P": "mg/dL",
+      "Q": "mg/dL",
+      "R": 113.1179,
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
+    },
+    {
+      "A": 5,
+      "B": "Creatinine SerPl Qn",
+      "C": "Creatinine serum moles->mass",
+      "D": 256,
+      "E": "2160-0",
+      "F": "Creatinine [Mass/volume] in Serum or Plasma",
+      "G": "Creatinine mass conc",
+      "H": "mg/dL",
+      "I": "0.5 - 1.0",
+      "J": 0.5,
+      "K": 1,
+      "N": "Creat SerPl-mCnc",
+      "O": "RI",
+      "P": "mg/dL",
+      "Q": "mg/dL",
+      "R": 113.1179,
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
+    },
+    {
+      "A": 5,
+      "B": "Creatinine SerPl Qn",
+      "C": "Creatinine serum moles->mass",
+      "D": "256z",
+      "E": "14682-9",
+      "F": "Creatinine [Moles/volume] in Serum or Plasma",
+      "G": "Creatinine molar conc",
+      "H": "umol/l",
+      "I": "45 - 90",
+      "J": 45,
+      "K": 90,
+      "N": "Creat SerPl-sCnc",
+      "O": "RI",
+      "P": "mg/dL",
+      "Q": "mg/dL",
+      "R": 113.1179,
+      "S": "x",
+      "T": "umol/l",
+      "U": "umol/l",
+      "V": "umol/l"
+    },
+    {
+      "A": 5,
+      "B": "Creatinine (CSH)",
+      "C": "Creatinine serum moles->mass",
+      "D": 11434,
+      "E": "2160-0",
+      "F": "Creatinine [Mass/volume] in Serum or Plasma",
+      "G": "Creatinine mass conc",
+      "H": "mg/dL",
+      "I": "0.4 - 1.5",
+      "J": 0.4,
+      "K": 1.5,
+      "N": "Creat SerPl-mCnc",
+      "O": "RI",
+      "P": "mg/dL",
+      "Q": "mg/dL",
+      "R": 113.1179,
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
+    },
+    {
+      "A": 5,
+      "B": "Creatinine (SMA)",
+      "C": "Creatinine serum moles->mass",
+      "D": 6513,
+      "E": "2160-0",
+      "F": "Creatinine [Mass/volume] in Serum or Plasma",
+      "G": "Creatinine mass conc",
+      "H": "mg/dL",
+      "I": "0.4 - 1.5",
+      "J": 0.4,
+      "K": 1.5,
+      "N": "Creat SerPl-mCnc",
+      "O": "RI",
+      "P": "mg/dL",
+      "Q": "mg/dL",
+      "R": 113.1179,
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
+    },
+    {
+      "A": 4,
       "B": "GFR Est MDRD Afric American",
       "C": "Glomerular filtration rate/1.73 sq M.predicted.black|ArVRat|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 31001,
@@ -852,6 +1612,429 @@ export default [
       "V": "mL/min/{1.73_m2}"
     },
     {
+      "A": 3,
+      "B": "GLUCOSE TESTS",
+      "D": 3079,
+      "O": "RI"
+    },
+    {
+      "A": 4,
+      "B": "Glucose SerPl Qn",
+      "C": "Glucose Serum moles->mass",
+      "D": 1274,
+      "E": "2345-7",
+      "F": "Glucose [Mass/volume] in Serum or Plasma",
+      "G": "Glucose mass conc",
+      "H": "mg/dL",
+      "I": "70 -140",
+      "J": 70,
+      "K": 115,
+      "N": "Glucose SerPl-mCnc",
+      "O": "RI",
+      "P": "mg/dL",
+      "Q": "mg/dL",
+      "R": 180.156,
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
+    },
+    {
+      "A": 4,
+      "B": "Glucose SerPl Qn",
+      "C": "Glucose Serum moles->mass",
+      "D": "1274z",
+      "E": "14749-6",
+      "F": "Glucose [Moles/volume] in Serum or Plasma",
+      "G": "Glucose molar conc",
+      "H": "mmol/L",
+      "I": "3.9 - 7.8",
+      "J": 3.9,
+      "K": 7.8,
+      "N": "Glucose SerPl-sCnc",
+      "O": "RI",
+      "P": "mg/dL",
+      "Q": "mg/dL",
+      "R": 180.156,
+      "S": "x",
+      "T": "mmol/L",
+      "U": "mmol/L",
+      "V": "mmol/L"
+    },
+    {
+      "A": 4,
+      "B": "Glucose (ACA)",
+      "C": "Glucose Serum moles->mass",
+      "D": 4035,
+      "E": "2345-7",
+      "F": "Glucose [Mass/volume] in Serum or Plasma",
+      "G": "Glucose mass conc",
+      "H": "mg/dL",
+      "I": "70 -115",
+      "J": 70,
+      "K": 115,
+      "N": "Glucose SerPl-mCnc",
+      "O": "RI",
+      "P": "mg/dL",
+      "Q": "mg/dL",
+      "R": 180.156,
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
+    },
+    {
+      "A": 4,
+      "B": "Glucose (CSH)",
+      "C": "Glucose Serum moles->mass",
+      "D": 11432,
+      "E": "2345-7",
+      "F": "Glucose [Mass/volume] in Serum or Plasma",
+      "G": "Glucose mass conc",
+      "H": "mg/dL",
+      "I": "70 -115",
+      "J": 70,
+      "K": 115,
+      "N": "Glucose SerPl-mCnc",
+      "O": "RI",
+      "P": "mg/dL",
+      "Q": "mg/dL",
+      "R": 180.156,
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
+    },
+    {
+      "A": 4,
+      "B": "Glu (SMA)",
+      "C": "Glucose Serum moles->mass",
+      "D": 33,
+      "E": "2345-7",
+      "F": "Glucose [Mass/volume] in Serum or Plasma",
+      "G": "Glucose mass conc",
+      "H": "mg/dL",
+      "I": "70 -115",
+      "J": 70,
+      "K": 115,
+      "N": "Glucose SerPl-mCnc",
+      "O": "RI",
+      "P": "mg/dL",
+      "Q": "mg/dL",
+      "R": 180.156,
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
+    },
+    {
+      "A": 4,
+      "B": "Glucose Fast SerPl Qn",
+      "C": "Glucose Serum moles->mass",
+      "D": 11500,
+      "E": "1558-6",
+      "F": "Fasting glucose [Mass/volume] in Serum or Plasma",
+      "G": "Glucose fasting mass conc",
+      "H": "mg/dL",
+      "I": "65 - 94",
+      "J": 65,
+      "K": 94,
+      "L": 700,
+      "M": 30,
+      "N": "Glucose p fast SerPl-mCnc",
+      "O": "RI",
+      "R": 180.156,
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
+    },
+    {
+      "A": 4,
+      "B": "Glucose Bld Qn",
+      "C": "Glucose Bld moles->mass",
+      "D": 24588,
+      "E": "2339-0",
+      "F": "Glucose [Mass/volume] in Blood",
+      "G": "Glucose mass conc (Bld)",
+      "H": "mg/dL",
+      "I": "70 - 109",
+      "J": 70,
+      "K": 109,
+      "L": 500,
+      "M": 39,
+      "N": "Glucose Bld-mCnc",
+      "O": "RI",
+      "P": "mg/dL",
+      "Q": "mg/dL",
+      "R": 180.156,
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
+    },
+    {
+      "A": 4,
+      "B": "Glucose Bld Qn (POC)",
+      "C": "Glucose Bld moles->mass",
+      "D": 22414,
+      "E": "2339-0",
+      "F": "Glucose [Mass/volume] in Blood",
+      "G": "Glucose mass conc (Bld)",
+      "H": "mg/dL",
+      "I": "70 - 109",
+      "J": 70,
+      "K": 105,
+      "L": 400,
+      "M": 45,
+      "N": "Glucose Bld-mCnc",
+      "O": "RI",
+      "P": "mg/dL",
+      "Q": "mg/dL",
+      "R": 180.156,
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
+    },
+    {
+      "A": 4,
+      "B": "Glucose Bld Qn (POC)",
+      "C": "Glucose Bld moles->mass",
+      "D": "22414z",
+      "E": "15074-8",
+      "F": "Glucose [Moles/volume] in Blood",
+      "G": "Glucose molar conc (Bld)",
+      "H": "mmol/l",
+      "I": "3.8 - 6.1",
+      "J": 3.8,
+      "K": 6.1,
+      "N": "Glucose Bld-sCnc",
+      "O": "RI",
+      "P": "mg/dL",
+      "Q": "mg/dL",
+      "R": 180.156,
+      "S": "x",
+      "T": "mmol/L",
+      "U": "mmol/L",
+      "V": "mmol/L"
+    },
+    {
+      "A": 4,
+      "B": "Glucose Bld Fingerstick",
+      "C": "Glucose Bld moles->mass",
+      "D": 13014,
+      "E": "32016-8",
+      "F": "Glucose [Mass/volume] in Capillary blood",
+      "G": "Glucose mass conc (BldC)",
+      "H": "mg/dL",
+      "I": "70 - 109",
+      "J": 70,
+      "K": 109,
+      "L": 500,
+      "M": 39,
+      "N": "Glucose BldC-mCnc",
+      "O": "RI",
+      "P": "mg/dL",
+      "Q": "mg/dL",
+      "R": 180.156,
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
+    },
+    {
+      "A": 4,
+      "B": "Glucose Bld Qn (ISTAT)'",
+      "C": "Glucose Bld moles->mass",
+      "D": 18991,
+      "E": "2339-0",
+      "F": "Glucose [Mass/volume] in Blood",
+      "G": "Glucose mass conc (Bld)",
+      "H": "mg/dL",
+      "I": "70 - 109",
+      "J": 70,
+      "K": 105,
+      "L": 400,
+      "M": 45,
+      "N": "Glucose Bld-mCnc",
+      "O": "RI",
+      "P": "mg/dL",
+      "Q": "mg/dL",
+      "R": 180.156,
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
+    },
+    {
+      "A": 4,
+      "B": "Glucose(ER-IS)",
+      "C": "Glucose Bld moles->mass",
+      "D": 20029,
+      "E": "2339-0",
+      "F": "Glucose [Mass/volume] in Blood",
+      "G": "Glucose mass conc (Bld)",
+      "H": "mg/dL",
+      "I": "70 - 109",
+      "J": 70,
+      "K": 105,
+      "L": 400,
+      "M": 45,
+      "N": "Glucose Bld-mCnc",
+      "O": "RI",
+      "P": "mg/dL",
+      "Q": "mg/dL",
+      "R": 180.156,
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
+    },
+    {
+      "A": 3,
+      "B": "CALCIUM TESTS",
+      "D": 4096,
+      "O": "RI"
+    },
+    {
+      "A": 4,
+      "B": "Calcium Ser",
+      "C": "Calcium moles->mass",
+      "D": 15346,
+      "E": "17861-6",
+      "F": "Calcium [Mass/volume] in Serum or Plasma",
+      "G": "Calcium mass conc",
+      "H": "mg/dL",
+      "I": "8.6 - 10.2",
+      "J": 8.6,
+      "K": 10.2,
+      "N": "Calcium SerPl-mCnc",
+      "O": "RI",
+      "P": "mg/dL",
+      "Q": "mg/dL",
+      "R": 40.078,
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
+    },
+    {
+      "A": 4,
+      "B": "Calcium SerPl Qn",
+      "C": "Calcium moles->mass",
+      "D": 4053,
+      "E": "17861-6",
+      "F": "Calcium [Mass/volume] in Serum or Plasma",
+      "G": "Calcium mass conc",
+      "H": "mg/dL",
+      "I": "8.6 - 10.2",
+      "J": 8.6,
+      "K": 10.2,
+      "N": "Calcium SerPl-mCnc",
+      "O": "RI",
+      "P": "mg/dL",
+      "Q": "mg/dL",
+      "R": 40.078,
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
+    },
+    {
+      "A": 4,
+      "B": "Calcium SerPl Qn",
+      "C": "Calcium moles->mass",
+      "D": "4053z",
+      "E": "2000-8",
+      "F": "Calcium [Moles/volume] in Serum or Plasma",
+      "G": "Calcium moles conc",
+      "H": "mmol/L",
+      "I": "2.2 - 2.7",
+      "J": 2.2,
+      "K": 2.7,
+      "N": "Calcium SerPl-sCnc",
+      "O": "RI",
+      "P": "mg/dL",
+      "Q": "mg/dL",
+      "R": 40.078,
+      "S": "x",
+      "T": "mmol/L",
+      "U": "mmol/L",
+      "V": "mmol/L"
+    },
+    {
+      "A": 4,
+      "B": "Calcium (CSH) mg/dL",
+      "C": "Calcium moles->mass",
+      "D": 11445,
+      "E": "17861-6",
+      "F": "Calcium [Mass/volume] in Serum or Plasma",
+      "G": "Calcium mass conc",
+      "H": "mg/dL",
+      "I": "8.6 - 10.2",
+      "J": 8.6,
+      "K": 10.2,
+      "N": "Calcium SerPl-mCnc",
+      "O": "RI",
+      "P": "mg/dL",
+      "Q": "mg/dL",
+      "R": 40.078,
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
+    },
+    {
+      "A": 4,
+      "B": "Calcium (SMA)-mg/ddL",
+      "C": "Calcium moles->mass",
+      "D": 31,
+      "E": "17861-6",
+      "F": "Calcium [Mass/volume] in Serum or Plasma",
+      "G": "Calcium mass conc",
+      "H": "mg/dL",
+      "I": "8.6 - 10.2",
+      "J": 8.6,
+      "K": 10.2,
+      "N": "Calcium SerPl-mCnc",
+      "O": "RI",
+      "P": "mg/dL",
+      "Q": "mg/dL",
+      "R": 40.078,
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
+    },
+    {
+      "A": 4,
+      "B": "Calcium-Ion Ser mg/dL",
+      "C": "Calcium moles->mass",
+      "D": 14698,
+      "E": "17863-2",
+      "F": "Calcium.ionized [Mass/volume] in Serum or Plasma",
+      "G": "Calcium.ionized mass conc",
+      "H": "mg/dL",
+      "I": "4.6 - 5.1",
+      "J": 4.6,
+      "K": 5.1,
+      "L": 6.3,
+      "M": 3.1,
+      "N": "Ca-I SerPl-mCnc",
+      "O": "RI",
+      "R": 40.078,
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
+    },
+    {
+      "A": 4,
+      "B": "Calcium-Ion SerPl mmol/L",
+      "C": "Calcium moles->mass",
+      "D": 7768,
+      "E": "1995-0",
+      "F": "Calcium.ionized [Moles/volume] in Serum or Plasma",
+      "G": "Calcium.ionized molar conc",
+      "H": "mmol/L",
+      "I": "2.28 - 2.64",
+      "J": 2.28,
+      "K": 2.64,
+      "N": "Ca-I SerPl-sCnc",
+      "O": "RI",
+      "R": 40.078,
+      "S": "x",
+      "T": "mmol/L",
+      "U": "mmol/L",
+      "V": "mmol/L"
+    },
+    {
       "A": 4,
       "B": "Calcium-Ion Bld mmol/L (POC)",
       "C": "Calcium.ionized|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
@@ -900,6 +2083,124 @@ export default [
       "V": "[pH]"
     },
     {
+      "A": 3,
+      "B": "ALBUMIN TESTS",
+      "D": 7796,
+      "O": "RI"
+    },
+    {
+      "A": 4,
+      "B": "Albumin SerPl Qn",
+      "C": "Albumin moles->mass",
+      "D": 4038,
+      "E": "1751-7",
+      "F": "Albumin [Mass/volume] in Serum or Plasma",
+      "G": "Albumin mass conc",
+      "H": "g/dL",
+      "I": "3.5-5.5",
+      "J": 3.5,
+      "K": 5.5,
+      "N": "Albumin SerPl-mCnc",
+      "O": "RI",
+      "P": "g/dL",
+      "Q": "g/dL",
+      "R": 66000,
+      "T": "g/dL",
+      "U": "g/dL",
+      "V": "g/dL"
+    },
+    {
+      "A": 4,
+      "B": "Albumin SerPl Qn",
+      "C": "Albumin moles->mass",
+      "D": "4038z",
+      "E": "54347-0",
+      "F": "Albumin [Moles/volume] in Serum or Plasma",
+      "G": "Albumin molar conc",
+      "H": "umol/l",
+      "I": "526.6 - 827.6",
+      "J": 526.6,
+      "K": 827.6,
+      "N": "Albumin SerPl-sCnc",
+      "O": "RI",
+      "P": "g/dL",
+      "Q": "g/dL",
+      "R": 66000,
+      "S": "x",
+      "T": "umol/l",
+      "U": "umol/l",
+      "V": "umol/l"
+    },
+    {
+      "A": 4,
+      "B": "Albumin Ser Neph",
+      "C": "Albumin moles->mass",
+      "D": 25166,
+      "E": "1751-7",
+      "F": "Albumin [Mass/volume] in Serum or Plasma",
+      "G": "Albumin mass conc",
+      "H": "g/dL",
+      "I": "3.5-5.5",
+      "J": 3.5,
+      "K": 5.5,
+      "N": "Albumin SerPl-mCnc",
+      "O": "RI",
+      "P": "g/dL",
+      "Q": "g/dL",
+      "R": 66000,
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
+    },
+    {
+      "A": 4,
+      "B": "Albumin (CSH)",
+      "C": "Albumin moles->mass",
+      "D": 11448,
+      "E": "1751-7",
+      "F": "Albumin [Mass/volume] in Serum or Plasma",
+      "G": "Albumin mass conc",
+      "H": "g/dL",
+      "I": "3.5-5.5",
+      "J": 3.5,
+      "K": 5.5,
+      "N": "Albumin SerPl-mCnc",
+      "O": "RI",
+      "P": "g/dL",
+      "Q": "g/dL",
+      "R": 66000,
+      "T": "g/dL",
+      "U": "g/dL",
+      "V": "g/dL"
+    },
+    {
+      "A": 4,
+      "B": "Albumin (SMA)",
+      "C": "Albumin moles->mass",
+      "D": 38,
+      "E": "1751-7",
+      "F": "Albumin [Mass/volume] in Serum or Plasma",
+      "G": "Albumin mass conc",
+      "H": "g/dL",
+      "I": "3.5-5.5",
+      "J": 3.5,
+      "K": 5.5,
+      "N": "Albumin SerPl-mCnc",
+      "O": "RI",
+      "P": "g/dL",
+      "Q": "g/dL",
+      "R": 66000,
+      "T": "g/dL",
+      "U": "g/dL",
+      "V": "g/dL"
+    },
+    {
+      "A": 3,
+      "B": "BILIRUBINS (CSH)",
+      "D": 11453,
+      "O": "RI"
+    },
+    {
       "A": 4,
       "B": "Bilirubin Indir",
       "C": "Bilirubin.non-glucuronidated|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
@@ -941,6 +2242,118 @@ export default [
     },
     {
       "A": 4,
+      "B": "Bilirubin Total SerPl Qn",
+      "C": "Bilirubin moles->mass",
+      "D": 1275,
+      "E": "1975-2",
+      "F": "Bilirubin.total [Mass/volume] in Serum or Plasma",
+      "G": "Bilirubin mass conc",
+      "H": "mg/dL",
+      "I": "0.2 - 1.2",
+      "J": 0.2,
+      "K": 1.2,
+      "N": "Bilirub SerPl-mCnc",
+      "O": "RI",
+      "P": "mg/dL",
+      "Q": "mg/dL",
+      "R": 584.6621,
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
+    },
+    {
+      "A": 4,
+      "B": "Bilirubin Tot Ser",
+      "C": "Bilirubin moles->mass",
+      "D": 11438,
+      "E": "1975-2",
+      "F": "Bilirubin.total [Mass/volume] in Serum or Plasma",
+      "G": "Bilirubin mass conc",
+      "H": "mg/dL",
+      "I": "0.2 - 1.2",
+      "J": 0.2,
+      "K": 1.2,
+      "N": "Bilirub SerPl-mCnc",
+      "O": "RI",
+      "P": "mg/dL",
+      "Q": "mg/dL",
+      "R": 584.6621,
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
+    },
+    {
+      "A": 4,
+      "B": "Bilirubin SerPl Qn",
+      "C": "Bilirubin moles->mass",
+      "D": 39,
+      "E": "1975-2",
+      "F": "Bilirubin.total [Mass/volume] in Serum or Plasma",
+      "G": "Bilirubin mass conc",
+      "H": "mg/dL",
+      "I": "0.1 - 1.2",
+      "J": 0.1,
+      "K": 1.2,
+      "N": "Bilirub SerPl-mCnc",
+      "O": "RI",
+      "P": "mg/dL",
+      "Q": "mg/dL",
+      "R": 584.6621,
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
+    },
+    {
+      "A": 4,
+      "B": "Bilirubin SerPl Qn Molar",
+      "C": "Bilirubin moles->mass",
+      "D": "39z",
+      "E": "14631-6",
+      "F": "Bilirubin.total [Moles/volume] in Serum or Plasma",
+      "G": "Bilibrubin molar conc",
+      "H": "umol/l",
+      "I": "1.71 - 20.5",
+      "J": 1.71,
+      "K": 20.5,
+      "N": "Bilirub SerPl-sCnc",
+      "O": "RI",
+      "P": "mg/dL",
+      "Q": "mg/dL",
+      "R": 584.6621,
+      "S": "x",
+      "T": "umol/l",
+      "U": "umol/l",
+      "V": "umol/l"
+    },
+    {
+      "A": 4,
+      "B": "Bilirubin SerPl Qn Calc",
+      "C": "Bilirubin moles->mass",
+      "D": 16459,
+      "E": "1975-2",
+      "F": "Bilirubin.total [Mass/volume] in Serum or Plasma",
+      "G": "Bilirubin mass conc",
+      "H": "mg/dL",
+      "I": "0.2 - 1.2",
+      "J": 0.2,
+      "K": 1.2,
+      "N": "Bilirub SerPl-mCnc",
+      "O": "RI",
+      "P": "mg/dL",
+      "Q": "mg/dL",
+      "R": 584.6621,
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
+    },
+    {
+      "A": 3,
+      "B": "ALK PHOS TESTS",
+      "D": 4937,
+      "O": "RI"
+    },
+    {
+      "A": 4,
       "B": "Alk Phos SerPl Qn",
       "C": "Alkaline phosphatase|CCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 4032,
@@ -958,6 +2371,12 @@ export default [
       "T": "Units/L",
       "U": "U/L",
       "V": "U/L"
+    },
+    {
+      "A": 3,
+      "B": "AST TESTS",
+      "D": 5004,
+      "O": "RI"
     },
     {
       "A": 4,
@@ -995,6 +2414,12 @@ export default [
       "T": "Units/L",
       "U": "U/L",
       "V": "U/L"
+    },
+    {
+      "A": 3,
+      "B": "ALT TESTS",
+      "D": 26281,
+      "O": "RI"
     },
     {
       "A": 4,
@@ -1052,6 +2477,12 @@ export default [
       "V": "U/L"
     },
     {
+      "A": 3,
+      "B": "AMMONIA TESTS",
+      "D": 26586,
+      "O": "RI"
+    },
+    {
       "A": 4,
       "B": "Ammonia SerPl Qn",
       "C": "Ammonia|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
@@ -1088,6 +2519,12 @@ export default [
       "T": "mcg/dL",
       "U": "ug/dL",
       "V": "ug/dL"
+    },
+    {
+      "A": 3,
+      "B": "CPK TESTS",
+      "D": 5732,
+      "O": "RI"
     },
     {
       "A": 4,
@@ -1201,6 +2638,12 @@ export default [
       "V": "U/L"
     },
     {
+      "A": 3,
+      "B": "LIPASE TESTS",
+      "D": 26587,
+      "O": "RI"
+    },
+    {
       "A": 4,
       "B": "Lipase'",
       "D": 258,
@@ -1280,6 +2723,103 @@ export default [
       "V": "mosm/kg"
     },
     {
+      "A": 3,
+      "B": "PHOS TESTS",
+      "D": 5385,
+      "O": "RI"
+    },
+    {
+      "A": 4,
+      "B": "Phosphorus SerPl Qn",
+      "C": "Phosphate moles->mass",
+      "D": 1793,
+      "E": "2777-1",
+      "F": "Phosphate [Mass/volume] in Serum or Plasma",
+      "G": "Phosphate mass conc",
+      "H": "mg/dL",
+      "I": "3.4 - 4.5",
+      "J": 3.4,
+      "K": 4.5,
+      "N": "Phosphate SerPl-mCnc",
+      "O": "RI",
+      "P": "mg/dL",
+      "Q": "mg/dL",
+      "R": 30.974,
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
+    },
+    {
+      "A": 4,
+      "B": "Phosphorus SerPl Qn",
+      "C": "Phosphate moles->mass",
+      "D": "1793z",
+      "E": "14879-1",
+      "F": "Phosphate [Moles/volume] in Serum or Plasma",
+      "G": "Phosphate molar conc",
+      "H": "mmol/L",
+      "I": "1.12 - 1.45",
+      "J": 1.12,
+      "K": 1.45,
+      "N": "Phosphate SerPl-sCnc",
+      "O": "RI",
+      "P": "mg/dL",
+      "Q": "mg/dL",
+      "R": 30.974,
+      "S": "x",
+      "T": "mmol/L",
+      "U": "mmol/L",
+      "V": "mmol/L"
+    },
+    {
+      "A": 4,
+      "B": "Phos (CSH)",
+      "C": "Phosphate moles->mass",
+      "D": 11446,
+      "E": "2777-1",
+      "F": "Phosphate [Mass/volume] in Serum or Plasma",
+      "G": "Phosphate mass conc",
+      "H": "mg/dL",
+      "I": "2.5-4.5",
+      "J": 2.5,
+      "K": 4.5,
+      "N": "Phosphate SerPl-mCnc",
+      "O": "RI",
+      "P": "mg/dL",
+      "Q": "mg/dL",
+      "R": 30.974,
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
+    },
+    {
+      "A": 4,
+      "B": "Phos (SMA)",
+      "C": "Phosphate moles->mass",
+      "D": 32,
+      "E": "2777-1",
+      "F": "Phosphate [Mass/volume] in Serum or Plasma",
+      "G": "Phosphate mass conc",
+      "H": "mg/dL",
+      "I": "2.5-4.5",
+      "J": 2.5,
+      "K": 4.5,
+      "N": "Phosphate SerPl-mCnc",
+      "O": "RI",
+      "P": "mg/dL",
+      "Q": "mg/dL",
+      "R": 30.974,
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
+    },
+    {
+      "A": 3,
+      "B": "TOTAL PROTEIN TESTS",
+      "D": 26588,
+      "O": "RI"
+    },
+    {
       "A": 4,
       "B": "Protein SerPl Qn",
       "C": "Protein|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
@@ -1353,6 +2893,12 @@ export default [
       "T": "mg/dL",
       "U": "mg/dL",
       "V": "mg/dL"
+    },
+    {
+      "A": 2,
+      "B": "CHOLESTEROL TESTS & LIPID PANELS",
+      "D": 26255,
+      "O": "RI"
     },
     {
       "A": 3,
@@ -1529,6 +3075,12 @@ export default [
       "T": "mg/dL",
       "U": "mg/dL",
       "V": "mg/dL"
+    },
+    {
+      "A": 2,
+      "B": "BLD GASES:",
+      "D": 195,
+      "O": "RI"
     },
     {
       "A": 3,
@@ -1860,6 +3412,12 @@ export default [
       "V": "%"
     },
     {
+      "A": 3,
+      "B": "PH RESULTS",
+      "D": 6489,
+      "O": "RI"
+    },
+    {
       "A": 4,
       "B": "pH Scalp",
       "C": "pH|LsCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
@@ -2070,6 +3628,12 @@ export default [
       "V": "%"
     },
     {
+      "A": 3,
+      "B": "Intensive care calculations",
+      "D": 9019,
+      "O": "RI"
+    },
+    {
       "A": 4,
       "B": "O2 Consump",
       "D": 7884,
@@ -2203,6 +3767,12 @@ export default [
       "T": "mL/min",
       "U": "mmHg",
       "V": "mm[Hg]"
+    },
+    {
+      "A": 3,
+      "B": "SWAN BEDSIDE",
+      "D": 8369,
+      "O": "RI"
     },
     {
       "A": 4,
@@ -2353,6 +3923,12 @@ export default [
       "T": "L/MIN",
       "U": "L/min",
       "V": "L/min"
+    },
+    {
+      "A": 2,
+      "B": "CARDIAC MARKERS",
+      "D": 24726,
+      "O": "RI"
     },
     {
       "A": 3,
@@ -2586,6 +4162,12 @@ export default [
       "V": "ng/mL"
     },
     {
+      "A": 2,
+      "B": "CARBOHYDRATE/DIABETES STUDIES:",
+      "D": 16935,
+      "O": "RI"
+    },
+    {
       "A": 3,
       "B": "Carbohyd Def Transferrin Ser Qn",
       "D": 33167,
@@ -2678,6 +4260,133 @@ export default [
       "D": 16439,
       "E": "568-9",
       "O": "LN"
+    },
+    {
+      "A": 4,
+      "B": "Glucose Fast OB",
+      "D": 16440,
+      "G": "Glucose fasting mass conc",
+      "H": "mg/dL",
+      "I": "65 - 94",
+      "J": 65,
+      "K": 94,
+      "L": 700,
+      "M": 30,
+      "N": "Glucose p fast SerPl-mCnc",
+      "O": "RI",
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
+    },
+    {
+      "A": 4,
+      "B": "Glucose 50Gm",
+      "D": 17732,
+      "G": "Glucose 1H p 50 g glucose PO mass conc",
+      "H": "mg/dL",
+      "I": "70 - 139",
+      "J": 70,
+      "K": 139,
+      "L": 500,
+      "M": 30,
+      "N": "Glucose 1h p 50 g Glc PO SerPl-mCnc",
+      "O": "RI",
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
+    },
+    {
+      "A": 4,
+      "B": "Glucose Ser 1H P OB GTT",
+      "D": 16442,
+      "G": "Glucose 1H p dose glucose mass conc",
+      "H": "mg/dL",
+      "I": "65 - 169",
+      "J": 65,
+      "K": 169,
+      "L": 700,
+      "M": 30,
+      "N": "Glucose 1h p Glc SerPl-mCnc",
+      "O": "RI",
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
+    },
+    {
+      "A": 4,
+      "B": "Glucose Ser 2H P OB GTT",
+      "D": 16444,
+      "G": "Glucose 2 hours p dose glucose mass conc",
+      "H": "mg/dL",
+      "I": "65 - 119",
+      "J": 65,
+      "K": 119,
+      "L": 700,
+      "M": 30,
+      "N": "Glucose 2h p Glc SerPl-mCnc",
+      "O": "RI",
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
+    },
+    {
+      "A": 4,
+      "B": "Glucose Ser 3H P OB GTT",
+      "D": 18191,
+      "G": "Glucose 3 hours p dose glucose mass conc",
+      "H": "mg/dL",
+      "I": "65 - 119",
+      "J": 65,
+      "K": 119,
+      "L": 700,
+      "M": 30,
+      "N": "Glucose 3h p Glc SerPl-mCnc",
+      "O": "RI",
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
+    },
+    {
+      "A": 4,
+      "B": "GTT 50Gm Hb",
+      "D": 18833,
+      "G": "Glucose 2 hours p dose glucose mass conc (Bld)",
+      "N": "Glucose 2h p Glc Bld-mCnc",
+      "O": "RI",
+      "U": "mg/dL",
+      "V": "mg/dL"
+    },
+    {
+      "A": 4,
+      "B": "Glucose 0.5H OB SerPl Qn",
+      "D": 16441,
+      "G": "Glucose 30M p dose glucose mass conc",
+      "H": "mg/dL",
+      "I": "65 - 169",
+      "J": 65,
+      "K": 169,
+      "L": 700,
+      "M": 30,
+      "N": "Glucose 30M p Glc SerPl-mCnc",
+      "O": "RI",
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
+    },
+    {
+      "A": 4,
+      "B": "Glucose 1.5H OB SerPl Qn",
+      "D": 16443,
+      "G": "Glucose 1.5 hours p dose glucose mass conc",
+      "H": "mg/dL",
+      "I": "70 - 180",
+      "J": 70,
+      "K": 180,
+      "N": "Glucose 1.5h p Glc SerPl-mCnc",
+      "O": "RI",
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
     },
     {
       "A": 3,
@@ -3032,6 +4741,18 @@ export default [
       "T": "mcU/mL",
       "U": "uIU/mL",
       "V": "u[IU]/mL"
+    },
+    {
+      "A": 2,
+      "B": "LIPIDS",
+      "D": 16936,
+      "O": "RI"
+    },
+    {
+      "A": 3,
+      "B": "Acylcarnitines Bld Panel",
+      "D": 30083,
+      "O": "RI"
     },
     {
       "A": 4,
@@ -3814,6 +5535,12 @@ export default [
       "V": "mg/L"
     },
     {
+      "A": 2,
+      "B": "PROTEIN(UR-SER)",
+      "D": 16934,
+      "O": "RI"
+    },
+    {
       "A": 3,
       "B": "A 1 Antitrypsin SerPl Qn",
       "C": "Alpha 1 antitrypsin|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
@@ -3850,6 +5577,12 @@ export default [
       "T": "mcg/mL",
       "U": "ug/mL",
       "V": "ug/mL"
+    },
+    {
+      "A": 3,
+      "B": "PROTEIN FRACTIONS",
+      "D": 5852,
+      "O": "RI"
     },
     {
       "A": 4,
@@ -4227,6 +5960,12 @@ export default [
       "V": "ng/L"
     },
     {
+      "A": 2,
+      "B": "ENZYMES & ISOENZ NON CARDIAC",
+      "D": 16932,
+      "O": "RI"
+    },
+    {
       "A": 3,
       "B": "ACE SerPl Qn",
       "C": "Angiotensin converting enzyme|CCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
@@ -4301,6 +6040,12 @@ export default [
       "T": "Units/L",
       "U": "U/L",
       "V": "U/L"
+    },
+    {
+      "A": 3,
+      "B": "ALK PHOS ISO'",
+      "D": 975,
+      "O": "RI"
     },
     {
       "A": 4,
@@ -4547,6 +6292,12 @@ export default [
       "V": "U/L"
     },
     {
+      "A": 3,
+      "B": "LDH TESTS",
+      "D": 5612,
+      "O": "RI"
+    },
+    {
       "A": 4,
       "B": "LDH SerPl Qn",
       "C": "Lactate dehydrogenase|CCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
@@ -4565,6 +6316,12 @@ export default [
       "T": "Units/L",
       "U": "U/L",
       "V": "U/L"
+    },
+    {
+      "A": 3,
+      "B": "LDH ISOENZYMES",
+      "D": 6121,
+      "O": "RI"
     },
     {
       "A": 4,
@@ -4670,6 +6427,14 @@ export default [
     },
     {
       "A": 3,
+      "B": "Other Isoenzymes",
+      "D": 6113,
+      "E": "no idea",
+      "H": "%",
+      "O": "RI"
+    },
+    {
+      "A": 3,
       "B": "Cholinesterase SerPl Qn",
       "C": "Cholinesterase|CCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 5547,
@@ -4688,6 +6453,17 @@ export default [
     },
     {
       "A": 3,
+      "B": "BILE ISOENZ",
+      "D": 18073,
+      "E": "no idea",
+      "H": "%",
+      "I": "0 - 18",
+      "J": 0,
+      "K": 18,
+      "O": "RI"
+    },
+    {
+      "A": 3,
       "B": "Liver 2 Isoenz",
       "D": 18072,
       "E": "13875-0",
@@ -4702,6 +6478,12 @@ export default [
       "T": "Units",
       "U": "U/L",
       "V": "U/L"
+    },
+    {
+      "A": 2,
+      "B": "PORPHYRINS(UR-STL-RBC)",
+      "D": 16943,
+      "O": "RI"
     },
     {
       "A": 3,
@@ -4973,6 +6755,12 @@ export default [
       "V": "h"
     },
     {
+      "A": 2,
+      "B": "TUMOR MARKERS:",
+      "D": 16946,
+      "O": "RI"
+    },
+    {
       "A": 3,
       "B": "AFP SerPl Qn Tumor Mark",
       "D": 5186,
@@ -5202,6 +6990,18 @@ export default [
       "V": "%"
     },
     {
+      "A": 2,
+      "B": "AMINO ACIDS/METAB/NEWBORN SCN:",
+      "D": 16941,
+      "O": "RI"
+    },
+    {
+      "A": 3,
+      "B": "AMINO ACIDS SER/PLAS STUDIES",
+      "D": 25286,
+      "O": "RI"
+    },
+    {
       "A": 4,
       "B": "Homocysteine SerPl Qn",
       "C": "Homocysteine|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
@@ -5239,6 +7039,12 @@ export default [
       "T": "NMOL/L",
       "U": "nmol/L",
       "V": "nmol/L"
+    },
+    {
+      "A": 3,
+      "B": "AMINO ACIDS URINE STUDIES",
+      "D": 25287,
+      "O": "RI"
     },
     {
       "A": 4,
@@ -5387,6 +7193,12 @@ export default [
       "T": "week",
       "U": "wk",
       "V": "wk"
+    },
+    {
+      "A": 2,
+      "B": "CHEM HORMONE/ENDO:",
+      "D": 16947,
+      "O": "RI"
     },
     {
       "A": 3,
@@ -5595,6 +7407,12 @@ export default [
       "V": "%"
     },
     {
+      "A": 3,
+      "B": "ANDROGENS STUDIES(UR-SER)",
+      "D": 16954,
+      "O": "RI"
+    },
+    {
       "A": 4,
       "B": "110H-Androst 24H Ur",
       "C": "11-Hydroxyandrosterone|MRatSRat|TimedSpecimen|Urine|NarDocOrdQn|Method-Other",
@@ -5745,6 +7563,12 @@ export default [
       "V": "%"
     },
     {
+      "A": 3,
+      "B": "ESTROGEN/PROGESTIN(UR-SER)",
+      "D": 16953,
+      "O": "RI"
+    },
+    {
       "A": 4,
       "B": "Estradiol Ser Qn",
       "C": "Estradiol|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
@@ -5884,6 +7708,12 @@ export default [
       "T": "MG/24H",
       "U": "ug/24hr",
       "V": "ug/(24.h)"
+    },
+    {
+      "A": 3,
+      "B": "PITUITARY STUDIES:",
+      "D": 16952,
+      "O": "RI"
     },
     {
       "A": 4,
@@ -6095,6 +7925,12 @@ export default [
       "T": "ng/mL",
       "U": "ng/mL",
       "V": "ng/mL"
+    },
+    {
+      "A": 3,
+      "B": "ADRNL MEDUL/AMINES(UR-SER)",
+      "D": 16951,
+      "O": "RI"
     },
     {
       "A": 4,
@@ -6470,6 +8306,12 @@ export default [
       "T": "MCG/MG CR",
       "U": "ug/mg",
       "V": "ug/mg{creat}"
+    },
+    {
+      "A": 3,
+      "B": "ADRENAL CORTEX STUDIES(UR-SER)",
+      "D": 16950,
+      "O": "RI"
     },
     {
       "A": 4,
@@ -6887,6 +8729,12 @@ export default [
       "V": "ng/L"
     },
     {
+      "A": 3,
+      "B": "PARATHYROID/VIT D STUDIES:",
+      "D": 16949,
+      "O": "RI"
+    },
+    {
       "A": 4,
       "B": "Calcitonin SerPl Qn",
       "C": "Calcitonin|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
@@ -7100,6 +8948,12 @@ export default [
       "T": "pg/mL",
       "U": "pg/mL",
       "V": "pg/mL"
+    },
+    {
+      "A": 3,
+      "B": "THYROID STUDIES:",
+      "D": 16948,
+      "O": "RI"
     },
     {
       "A": 4,
@@ -7544,6 +9398,12 @@ export default [
       "V": "%{basal_activity}"
     },
     {
+      "A": 2,
+      "B": "PREGNANCY/MATERNAL SERUM SCREENS",
+      "D": 5731,
+      "O": "RI"
+    },
+    {
       "A": 3,
       "B": "HCG SerPl Qn*",
       "C": "Choriogonadotropin|ACnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
@@ -7560,6 +9420,12 @@ export default [
       "T": "mU/mL",
       "U": "mIU/mL",
       "V": "m[IU]/mL"
+    },
+    {
+      "A": 3,
+      "B": "MS-AFP SCN",
+      "D": 16956,
+      "O": "RI"
     },
     {
       "A": 4,
@@ -7661,6 +9527,13 @@ export default [
     },
     {
       "A": 4,
+      "B": "Med AFP/Wks Gest",
+      "D": 11151,
+      "E": "No LOINC code",
+      "O": "RI"
+    },
+    {
+      "A": 4,
       "B": "AFP Adj M.O.M. (MS)",
       "C": "Alpha-1-Fetoprotein|MoM|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 19005,
@@ -7693,6 +9566,13 @@ export default [
       "R": 69000,
       "U": "M.o.M",
       "V": "{M.o.M}"
+    },
+    {
+      "A": 4,
+      "B": "M.O.M. Value-Hb",
+      "D": 18838,
+      "E": "No LOINC code",
+      "O": "RI"
     },
     {
       "A": 4,
@@ -7917,6 +9797,12 @@ export default [
       "V": "{M.o.M}"
     },
     {
+      "A": 2,
+      "B": "COMPLEMENT STUDIES",
+      "D": 16914,
+      "O": "RI"
+    },
+    {
       "A": 3,
       "B": "Complement SerPl Qn",
       "D": 14012,
@@ -8030,6 +9916,18 @@ export default [
       "V": "mg/dL"
     },
     {
+      "A": 2,
+      "B": "CHEM IMMUNOLOGY STUDIES",
+      "D": 17580,
+      "O": "RI"
+    },
+    {
+      "A": 3,
+      "B": "IMMUNOGLOBULIN LEVELS",
+      "D": 16913,
+      "O": "RI"
+    },
+    {
       "A": 4,
       "B": "IgG Synthesis Rate",
       "D": 22396,
@@ -8045,6 +9943,12 @@ export default [
       "T": "mg/day",
       "U": "mg/24hr",
       "V": "mg/(24.h)"
+    },
+    {
+      "A": 4,
+      "B": "IgG IMMUNO",
+      "D": 9509,
+      "O": "RI"
     },
     {
       "A": 5,
@@ -8084,6 +9988,12 @@ export default [
       "T": "mg/dL",
       "U": "mg/dL",
       "V": "mg/dL"
+    },
+    {
+      "A": 4,
+      "B": "IgG SUBCLASS PRFL",
+      "D": 13741,
+      "O": "RI"
     },
     {
       "A": 5,
@@ -8155,6 +10065,12 @@ export default [
       "V": "mg/dL"
     },
     {
+      "A": 4,
+      "B": "IgA IMMUNO",
+      "D": 9510,
+      "O": "RI"
+    },
+    {
       "A": 5,
       "B": "IgA (ACT) Qn",
       "D": 663,
@@ -8190,6 +10106,12 @@ export default [
       "T": "mg/dL",
       "U": "mg/dL",
       "V": "mg/dL"
+    },
+    {
+      "A": 4,
+      "B": "IgM IMMUNO",
+      "D": 9511,
+      "O": "RI"
     },
     {
       "A": 5,
@@ -8301,6 +10223,12 @@ export default [
       "G": "Immunoglobulin light chains.kappa.free/Immunoglobulin light chains.lambda.free mass ratio (U)",
       "N": "Kappa LC Free/Lambda Free Ur",
       "O": "LN"
+    },
+    {
+      "A": 2,
+      "B": "VITAMINS MISC",
+      "D": 16945,
+      "O": "RI"
     },
     {
       "A": 3,
@@ -8449,6 +10377,12 @@ export default [
       "V": "mg/dL"
     },
     {
+      "A": 2,
+      "B": "MISC BLD CHEM",
+      "D": 6163,
+      "O": "RI"
+    },
+    {
       "A": 3,
       "B": "BSP'",
       "D": 599,
@@ -8492,6 +10426,12 @@ export default [
       "T": "U/ML RBC",
       "U": "U/mL",
       "V": "U/mL{RBCs}"
+    },
+    {
+      "A": 1,
+      "B": "HEMATOLOGY STUDIES:",
+      "D": 16540,
+      "O": "RI"
     },
     {
       "A": 2,
@@ -8575,6 +10515,154 @@ export default [
     },
     {
       "A": 3,
+      "B": "Hemoglobin-Hb",
+      "C": "Hemoglobin Bld moles->mass",
+      "D": 16342,
+      "E": "718-7",
+      "F": "Hemoglobin [Mass/volume] in Blood",
+      "G": "Hemoglobin mass conc (Bld)",
+      "H": "g/dL",
+      "I": "12 - 17.5",
+      "J": 12,
+      "K": 17.5,
+      "N": "Hgb Bld-mCnc",
+      "O": "RI",
+      "P": "g/dL",
+      "Q": "g/dL",
+      "R": 64458,
+      "T": "g/dL",
+      "U": "g/dL",
+      "V": "g/dL"
+    },
+    {
+      "A": 3,
+      "B": "Hgb Bld",
+      "C": "Hemoglobin Bld moles->mass",
+      "D": 22594,
+      "E": "20509-6",
+      "F": "Hemoglobin [Mass/volume] in Blood by calculation",
+      "G": "Hemoglobin Calculated mass conc (Bld)",
+      "H": "g/dL",
+      "I": "12 - 17.5",
+      "J": 12,
+      "K": 17.5,
+      "N": "Hgb Bld Calc-mCnc",
+      "O": "RI",
+      "P": "g/dL",
+      "Q": "g/dL",
+      "R": 64458,
+      "T": "g/dL",
+      "U": "g/dL",
+      "V": "g/dL"
+    },
+    {
+      "A": 3,
+      "B": "Hgb Bld Qn (POC)",
+      "C": "Hemoglobin Bld moles->mass",
+      "D": 22410,
+      "E": "20509-6",
+      "F": "Hemoglobin [Mass/volume] in Blood by calculation",
+      "G": "Hemoglobin Calculated mass conc (Bld)",
+      "H": "g/dL",
+      "I": "12 - 17.5",
+      "J": 12,
+      "K": 17.5,
+      "N": "Hgb Bld Calc-mCnc",
+      "O": "RI",
+      "P": "g/dL",
+      "Q": "g/dL",
+      "R": 64458,
+      "T": "g/dL",
+      "U": "g/dL",
+      "V": "g/dL"
+    },
+    {
+      "A": 3,
+      "B": "Hgb Bld Qn Calc (ER-IS)",
+      "C": "Hemoglobin Bld moles->mass",
+      "D": 20027,
+      "E": "20509-6",
+      "F": "Hemoglobin [Mass/volume] in Blood by calculation",
+      "G": "Hemoglobin Calculated mass conc (Bld)",
+      "H": "g/dL",
+      "I": "12 - 17.5",
+      "J": 12,
+      "K": 17.5,
+      "N": "Hgb Bld Calc-mCnc",
+      "O": "RI",
+      "P": "g/dL",
+      "Q": "g/dL",
+      "R": 64458,
+      "T": "g/dL",
+      "U": "g/dL",
+      "V": "g/dL"
+    },
+    {
+      "A": 3,
+      "B": "Hgb Bld Qn (ISTAT)'",
+      "C": "Hemoglobin Bld moles->mass",
+      "D": 18992,
+      "E": "20509-6",
+      "F": "Hemoglobin [Mass/volume] in Blood by calculation",
+      "G": "Hemoglobin Calculated mass conc (Bld)",
+      "H": "g/dL",
+      "I": "12 - 17.5",
+      "J": 12,
+      "K": 17.5,
+      "N": "Hgb Bld Calc-mCnc",
+      "O": "RI",
+      "P": "g/dL",
+      "Q": "g/dL",
+      "R": 64458,
+      "T": "g/dL",
+      "U": "g/dL",
+      "V": "g/dL"
+    },
+    {
+      "A": 3,
+      "B": "Hgb",
+      "C": "Hemoglobin Bld moles->mass",
+      "D": 60,
+      "E": "718-7",
+      "F": "Hemoglobin [Mass/volume] in Blood",
+      "G": "Hemoglobin mass conc (Bld)",
+      "H": "g/dL",
+      "I": "12 - 17.5",
+      "J": 12,
+      "K": 17.5,
+      "N": "Hgb Bld-mCnc",
+      "O": "RI",
+      "P": "g/dL",
+      "Q": "g/dL",
+      "R": 64458,
+      "T": "g/dL",
+      "U": "g/dL",
+      "V": "g/dL"
+    },
+    {
+      "A": 3,
+      "B": "Hgb",
+      "C": "Hemoglobin Bld moles->mass",
+      "D": "60z",
+      "E": "59260-0",
+      "F": "Hemoglobin [Moles/volume] in Blood",
+      "G": "Hemoglobin molar conc (bld)",
+      "H": "mmol/L",
+      "I": "7.4 - 10.86",
+      "J": 7.4,
+      "K": 10.86,
+      "N": "Hgb Bld-sCnc",
+      "O": "RI",
+      "P": "g/dL",
+      "Q": "g/dL",
+      "R": 64458,
+      "S": "x",
+      "T": "mmol/L",
+      "U": "mmol/L",
+      "V": "mmol/L"
+    },
+    {
+      "A": 3,
       "B": "Hematocrit-Hb",
       "D": 16344,
       "E": "4545-0",
@@ -8635,6 +10723,12 @@ export default [
       "V": "%"
     },
     {
+      "A": 2,
+      "B": "BLD INDICES",
+      "D": 874,
+      "O": "RI"
+    },
+    {
       "A": 3,
       "B": "MCV",
       "D": 875,
@@ -8673,6 +10767,88 @@ export default [
       "T": "fL",
       "U": "fL",
       "V": "fL"
+    },
+    {
+      "A": 3,
+      "B": "MCH",
+      "C": "Erythrocyte mean corpuscular hemoglobin MSCNC demo",
+      "D": 876,
+      "E": "785-6",
+      "F": "MCH [Entitic mass] by Automated count",
+      "H": "pg",
+      "I": "23 - 31",
+      "J": 23,
+      "K": 31,
+      "L": 40,
+      "M": 15,
+      "N": "MCH RBC Qn Auto",
+      "O": "RI",
+      "P": "pg",
+      "Q": "pg",
+      "T": "pg",
+      "U": "pg",
+      "V": "pg"
+    },
+    {
+      "A": 3,
+      "B": "MCH",
+      "C": "Erythrocyte mean corpuscular hemoglobin MSCNC demo",
+      "D": "876z",
+      "E": "59468-9",
+      "F": "MCH [Entitic mass]",
+      "H": "fmol",
+      "I": "1.68 - 1.92",
+      "J": 1.68,
+      "K": 1.92,
+      "N": "MCH EntSub RBC",
+      "O": "RI",
+      "P": "pg",
+      "Q": "pg",
+      "S": "x",
+      "T": "fmol",
+      "U": "fmol",
+      "V": "fmol"
+    },
+    {
+      "A": 3,
+      "B": "MCHC",
+      "C": "MCHC (RBC) moles->mass",
+      "D": 877,
+      "E": "786-4",
+      "F": "MCHC [Mass/volume] by Automated count",
+      "H": "g/dL",
+      "I": "32 - 36",
+      "J": 32,
+      "K": 36,
+      "L": 37,
+      "M": 28,
+      "N": "MCHC RBC Auto-mCnc",
+      "O": "RI",
+      "P": "g/dL",
+      "Q": "g/dL",
+      "T": "g/dL",
+      "U": "g/dL",
+      "V": "g/dL"
+    },
+    {
+      "A": 3,
+      "B": "MCHC",
+      "C": "MCHC (RBC) moles->mass",
+      "D": "877z",
+      "E": "59467-1",
+      "F": "MCHC [Moles/volume] by Automated count",
+      "H": "mmol/l",
+      "I": "19.8 - 22.3",
+      "J": 19.8,
+      "K": 22.3,
+      "N": "MCHC RBC-sCnc",
+      "O": "RI",
+      "P": "g/dL",
+      "Q": "g/dL",
+      "S": "x",
+      "T": "mmol/L",
+      "U": "mmol/L",
+      "V": "mmol/L"
     },
     {
       "A": 3,
@@ -9178,6 +11354,12 @@ export default [
       "V": "%"
     },
     {
+      "A": 2,
+      "B": "IRON/EPO STUDIES(SER-LIVER)",
+      "D": 6187,
+      "O": "RI"
+    },
+    {
       "A": 3,
       "B": "Iron SerPl Qn",
       "C": "Iron|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
@@ -9330,6 +11512,12 @@ export default [
       "V": "[IU]/L"
     },
     {
+      "A": 2,
+      "B": "FOLATE/B12 STUDIES",
+      "D": 25230,
+      "O": "RI"
+    },
+    {
       "A": 3,
       "B": "Folate Ser Qn'",
       "C": "Folate|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
@@ -9457,6 +11645,12 @@ export default [
       "V": "%{excretion}"
     },
     {
+      "A": 2,
+      "B": "HEMOLYSIS STUDIES",
+      "D": 7809,
+      "O": "RI"
+    },
+    {
       "A": 3,
       "B": "G6PD-RBC Qn",
       "C": "Glucose-6-Phosphate dehydrogenase|CCnt|Pt|RBC|NarDocOrdQn|Method-Other",
@@ -9536,6 +11730,12 @@ export default [
       "V": "%"
     },
     {
+      "A": 3,
+      "B": "RBC ENZYMES",
+      "D": 6189,
+      "O": "RI"
+    },
+    {
       "A": 4,
       "B": "Pyruvate Kinase RBC Qn",
       "D": 4422,
@@ -9551,6 +11751,12 @@ export default [
       "T": "U/g Hgb",
       "U": "U/gHb",
       "V": "U/g{Hb}"
+    },
+    {
+      "A": 2,
+      "B": "HEMOGLOBINOPATHY STUDIES",
+      "D": 16907,
+      "O": "RI"
     },
     {
       "A": 3,
@@ -9734,6 +11940,18 @@ export default [
       "V": "%"
     },
     {
+      "A": 2,
+      "B": "WBC FUNCTION/CYTOCHEM STUDIES",
+      "D": 25229,
+      "O": "RI"
+    },
+    {
+      "A": 3,
+      "B": "WBC FUNCTION TESTS",
+      "D": 16910,
+      "O": "RI"
+    },
+    {
       "A": 4,
       "B": "Lymphocyte Prolif Mitog Bld Pnl",
       "D": 36631,
@@ -9746,6 +11964,12 @@ export default [
       "D": 36761,
       "E": "6942-0",
       "O": "LN"
+    },
+    {
+      "A": 3,
+      "B": "CYTOCHEMISTRY/WBC STUDIES",
+      "D": 16909,
+      "O": "RI"
     },
     {
       "A": 4,
@@ -9777,6 +12001,18 @@ export default [
       "V": "mcg/mL"
     },
     {
+      "A": 2,
+      "B": "IMMUNOTYPING-FLOW CYTOMETRY",
+      "D": 25228,
+      "O": "RI"
+    },
+    {
+      "A": 3,
+      "B": "LYMPH CLASS",
+      "D": 6188,
+      "O": "RI"
+    },
+    {
       "A": 4,
       "B": "B Cells Total %",
       "D": 5271,
@@ -9801,6 +12037,12 @@ export default [
       "T": "%",
       "U": "%",
       "V": "%"
+    },
+    {
+      "A": 3,
+      "B": "IMMUNOPHENOTYPING STUDIES - WBC",
+      "D": 16911,
+      "O": "RI"
     },
     {
       "A": 4,
@@ -10565,6 +12807,12 @@ export default [
       "V": "/uL"
     },
     {
+      "A": 2,
+      "B": "COAGULATION STUDIES:",
+      "D": 16541,
+      "O": "RI"
+    },
+    {
       "A": 3,
       "B": "Prothrombin time",
       "D": 1188,
@@ -10767,6 +13015,12 @@ export default [
       "V": "s"
     },
     {
+      "A": 2,
+      "B": "MISC. COAG TESTS",
+      "D": 6169,
+      "O": "RI"
+    },
+    {
       "A": 3,
       "B": "Heparin Ser Qn",
       "D": 5219,
@@ -10839,6 +13093,12 @@ export default [
       "O": "LN",
       "U": "arb'U/mL",
       "V": "[arb'U]/mL"
+    },
+    {
+      "A": 2,
+      "B": "THROMBOSIS STUDIES",
+      "D": 25309,
+      "O": "RI"
     },
     {
       "A": 3,
@@ -11008,6 +13268,12 @@ export default [
       "V": "{ratio}"
     },
     {
+      "A": 2,
+      "B": "LUPUS ANTICOAGULANT PANEL/TESTS",
+      "D": 31831,
+      "O": "RI"
+    },
+    {
       "A": 3,
       "B": "PT Base Line (Lupus Anticoag)",
       "D": 25111,
@@ -11154,6 +13420,12 @@ export default [
       "O": "LN",
       "U": "%",
       "V": "%"
+    },
+    {
+      "A": 2,
+      "B": "CLOTTING FACTORS",
+      "D": 6192,
+      "O": "RI"
     },
     {
       "A": 3,
@@ -11345,6 +13617,12 @@ export default [
       "V": "%"
     },
     {
+      "A": 2,
+      "B": "PLATELET FUNCTION TESTS",
+      "D": 16917,
+      "O": "RI"
+    },
+    {
       "A": 3,
       "B": "Bleed Tm-Simplate",
       "D": 5182,
@@ -11379,6 +13657,12 @@ export default [
       "V": "{OD_unit}"
     },
     {
+      "A": 3,
+      "B": "PLATELET FUNCTION SCN",
+      "D": 25410,
+      "O": "RI"
+    },
+    {
       "A": 4,
       "B": "Collagen Epineph Closure",
       "D": 25409,
@@ -11411,6 +13695,12 @@ export default [
       "T": "sec",
       "U": "s",
       "V": "s"
+    },
+    {
+      "A": 2,
+      "B": "APA PROFILE",
+      "D": 22054,
+      "O": "RI"
     },
     {
       "A": 3,
@@ -11660,6 +13950,12 @@ export default [
       "V": "{M.o.M}"
     },
     {
+      "A": 3,
+      "B": "ANTIPHOSHATIDYLETHANOLAMINE(aPE)",
+      "D": 22051,
+      "O": "RI"
+    },
+    {
       "A": 4,
       "B": "aPE IgM (Independ)",
       "D": 23307,
@@ -11736,6 +14032,12 @@ export default [
       "T": "M.O.M.",
       "U": "M.o.M",
       "V": "{M.o.M}"
+    },
+    {
+      "A": 3,
+      "B": "ANTIPHOSPHATIDYLSERINE (aPS)",
+      "D": 22052,
+      "O": "RI"
     },
     {
       "A": 4,
@@ -11816,6 +14118,19 @@ export default [
       "V": "{M.o.M}"
     },
     {
+      "A": 2,
+      "B": "OTHER HEMATOLOGY TESTS",
+      "D": 6162,
+      "O": "RI"
+    },
+    {
+      "A": 3,
+      "B": "Ser Water Ratio",
+      "D": 10997,
+      "E": "skip for now",
+      "O": "RI"
+    },
+    {
       "A": 3,
       "B": "ESR Bld Qn",
       "D": 27630,
@@ -11871,6 +14186,18 @@ export default [
       "T": "mm/hr",
       "U": "mm/h",
       "V": "mm/h"
+    },
+    {
+      "A": 1,
+      "B": "URINE STUDIES",
+      "D": 16969,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "URN CHEMISTRY:",
+      "D": 16545,
+      "O": "RI"
     },
     {
       "A": 3,
@@ -12034,6 +14361,12 @@ export default [
     },
     {
       "A": 3,
+      "B": "Creatinine 24H UR",
+      "D": 1011,
+      "O": "RI"
+    },
+    {
+      "A": 3,
       "B": "Creatinine Clr Rate",
       "C": "Creatinine renal clearance|VRat|TimedSpecimen|Urine+Ser/Plas|NarDocOrdQn|Method-Other",
       "D": 630,
@@ -12050,6 +14383,12 @@ export default [
       "T": "mL/min",
       "U": "mL/min",
       "V": "mL/min"
+    },
+    {
+      "A": 3,
+      "B": "5HIAA T-UR",
+      "D": 6454,
+      "O": "RI"
     },
     {
       "A": 4,
@@ -12356,6 +14695,12 @@ export default [
       "V": "ug/dL"
     },
     {
+      "A": 3,
+      "B": "MAGNESIUM UR BAT",
+      "D": 8422,
+      "O": "RI"
+    },
+    {
       "A": 4,
       "B": "Magnesium Ur Tm Cnc",
       "C": "Magnesium|MCnc|TimedSpecimen|Urine|NarDocOrdQn|Method-Other",
@@ -12500,6 +14845,12 @@ export default [
       "V": "mosm/kg"
     },
     {
+      "A": 3,
+      "B": "OXALATE 24H UR",
+      "D": 6562,
+      "O": "RI"
+    },
+    {
       "A": 4,
       "B": "Oxalate 24H Ur Qn",
       "C": "Oxalate|MRatSRat|TimedSpecimen|Urine|NarDocOrdQn|Method-Other",
@@ -12534,6 +14885,12 @@ export default [
       "O": "LN",
       "U": "pH",
       "V": "[pH]"
+    },
+    {
+      "A": 3,
+      "B": "PHOS 24H UR",
+      "D": 1018,
+      "O": "RI"
     },
     {
       "A": 4,
@@ -12640,6 +14997,12 @@ export default [
       "V": "g/(24.h)"
     },
     {
+      "A": 3,
+      "B": "URIC ACID 24H UR",
+      "D": 1048,
+      "O": "RI"
+    },
+    {
       "A": 4,
       "B": "Uric Acid Ur Qn",
       "D": 21112,
@@ -12704,6 +15067,18 @@ export default [
       "V": "L"
     },
     {
+      "A": 2,
+      "B": "NEPHROLITHIASIS CHEM PANEL",
+      "D": 25508,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "RANDOM URN TESTS",
+      "D": 6172,
+      "O": "RI"
+    },
+    {
       "A": 3,
       "B": "ALA Ur 24H",
       "C": "Delta aminolevulinate|MRatSRat|TimedSpecimen|Urine|NarDocOrdQn|Method-Other",
@@ -12749,6 +15124,18 @@ export default [
       "O": "LN",
       "U": "pH",
       "V": "[pH]"
+    },
+    {
+      "A": 1,
+      "B": "URINALYSIS:",
+      "D": 16544,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "U-A",
+      "D": 2113,
+      "O": "RI"
     },
     {
       "A": 3,
@@ -13151,6 +15538,18 @@ export default [
       "O": "LN"
     },
     {
+      "A": 1,
+      "B": "CSF&OTHER FLUID (COUNTS & CHEM)",
+      "D": 16962,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "AMNIOTIC FLD STUDIES:",
+      "D": 978,
+      "O": "RI"
+    },
+    {
       "A": 3,
       "B": "FETAL LUNG MATURITY PANEL",
       "D": 25248,
@@ -13182,6 +15581,12 @@ export default [
       "T": "%",
       "U": "%",
       "V": "%"
+    },
+    {
+      "A": 3,
+      "B": "LAMELLAR BODY COUNT",
+      "D": 22732,
+      "O": "RI"
     },
     {
       "A": 4,
@@ -13222,6 +15627,20 @@ export default [
       "O": "LN",
       "U": "OD_unit",
       "V": "{OD_unit}"
+    },
+    {
+      "A": 3,
+      "B": "Acetone Insol L",
+      "D": 6308,
+      "E": "skip for now",
+      "O": "RI"
+    },
+    {
+      "A": 3,
+      "B": "Foam Stab Index",
+      "D": 9867,
+      "E": "skip for now",
+      "O": "RI"
     },
     {
       "A": 3,
@@ -13370,6 +15789,12 @@ export default [
       "T": "%",
       "U": "%",
       "V": "%"
+    },
+    {
+      "A": 2,
+      "B": "CSF CHEM & SERO",
+      "D": 656,
+      "O": "RI"
     },
     {
       "A": 3,
@@ -13645,6 +16070,12 @@ export default [
       "V": "%"
     },
     {
+      "A": 2,
+      "B": "FECES STUDIES:",
+      "D": 16940,
+      "O": "RI"
+    },
+    {
       "A": 3,
       "B": "Tot Weight Stl Qn",
       "D": 15339,
@@ -13720,6 +16151,21 @@ export default [
       "V": "g/(24.h)"
     },
     {
+      "A": 3,
+      "B": "OCCULT BLOOD TESTS",
+      "D": 5914,
+      "O": "RI"
+    },
+    {
+      "A": 4,
+      "B": "BLD STOOL 24H",
+      "D": 20723,
+      "E": "No LOINC code",
+      "J": 0,
+      "K": 0,
+      "O": "RI"
+    },
+    {
       "A": 4,
       "B": "Hemoccult(0-4)",
       "C": "Hemoglobin.gastrointestinal.lower|PrThr|Pt|Stool|NarDocOrdQn|Method-Other",
@@ -13769,12 +16215,24 @@ export default [
     },
     {
       "A": 3,
+      "B": "Laxative Stl Panel",
+      "D": 29525,
+      "O": "RI"
+    },
+    {
+      "A": 3,
       "B": "WRIGHTS STAIN",
       "D": 6648,
       "E": "681-7",
       "F": "Microscopic observation [Identifier] in Unspecified specimen by Wright stain",
       "N": "Wright Stn XXX",
       "O": "LN"
+    },
+    {
+      "A": 2,
+      "B": "GASTRIC FLUID STUDIES:",
+      "D": 16938,
+      "O": "RI"
     },
     {
       "A": 3,
@@ -13829,6 +16287,18 @@ export default [
       "T": "mL",
       "U": "mL",
       "V": "mL"
+    },
+    {
+      "A": 2,
+      "B": "NASAL SMEAR EXAM",
+      "D": 15805,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "OTHER BODY FLD STUDIES:",
+      "D": 16543,
+      "O": "RI"
     },
     {
       "A": 3,
@@ -13993,6 +16463,12 @@ export default [
       "T": "%",
       "U": "%",
       "V": "%"
+    },
+    {
+      "A": 3,
+      "B": "BODY FLUID CHEM & SERO",
+      "D": 16966,
+      "O": "RI"
     },
     {
       "A": 4,
@@ -14323,6 +16799,30 @@ export default [
       "V": "mg/dL"
     },
     {
+      "A": 3,
+      "B": "MISC FLD TESTS",
+      "D": 6174,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "Test Name Body Fluid",
+      "D": 37915,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "Test Result Body Fluid",
+      "D": 37916,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "Units Body Fluid Tests",
+      "D": 37917,
+      "O": "RI"
+    },
+    {
       "A": 2,
       "B": "TNC BAL Qn",
       "D": 39339,
@@ -14389,6 +16889,12 @@ export default [
     },
     {
       "A": 2,
+      "B": "PERITONEAL FLUID COUNTS & CHEM",
+      "D": 26104,
+      "O": "RI"
+    },
+    {
+      "A": 2,
       "B": "Cell Ct+Diff Pericard Fld Panel",
       "D": 39613,
       "E": "59257-6",
@@ -14406,6 +16912,13 @@ export default [
       "G": "Appearance Nom (Pericard fld)",
       "N": "Appearance Pcar",
       "O": "LN"
+    },
+    {
+      "A": 2,
+      "B": "TNC Pericard Fld Qn",
+      "D": 39615,
+      "O": "RI",
+      "T": "#/mm3"
     },
     {
       "A": 2,
@@ -14435,6 +16948,20 @@ export default [
     },
     {
       "A": 2,
+      "B": "Mono+Macro % Pericard Fld",
+      "D": 39616,
+      "O": "RI",
+      "T": "%"
+    },
+    {
+      "A": 2,
+      "B": "Eosinophils % Pericard Fld",
+      "D": 39614,
+      "O": "RI",
+      "T": "%"
+    },
+    {
+      "A": 2,
       "B": "Basophils % Pericard Fld",
       "D": 42125,
       "E": "31994-7",
@@ -14448,6 +16975,13 @@ export default [
     },
     {
       "A": 2,
+      "B": "Imm Granulocytes % Pericard Fld",
+      "D": 42126,
+      "O": "RI",
+      "T": "%"
+    },
+    {
+      "A": 2,
       "B": "Plasma Cells % Pericard Fld",
       "D": 42127,
       "E": "40526-6",
@@ -14458,6 +16992,26 @@ export default [
       "T": "%",
       "U": "%",
       "V": "%"
+    },
+    {
+      "A": 2,
+      "B": "Atypical Cells % Pericard Fld",
+      "D": 41068,
+      "O": "RI",
+      "T": "%"
+    },
+    {
+      "A": 2,
+      "B": "Pericardial Lining Cells%PeriFld",
+      "D": 42123,
+      "O": "RI",
+      "T": "%"
+    },
+    {
+      "A": 2,
+      "B": "Other Cells Pericard Fld",
+      "D": 42124,
+      "O": "RI"
     },
     {
       "A": 2,
@@ -14492,6 +17046,12 @@ export default [
       "T": "g/dL",
       "U": "g/dL",
       "V": "g/dL"
+    },
+    {
+      "A": 2,
+      "B": "Cell Ct+Diff Peritoneal Fld Pnl",
+      "D": 37509,
+      "O": "RI"
     },
     {
       "A": 2,
@@ -14551,6 +17111,13 @@ export default [
       "T": "#/mm3",
       "U": "10*3/uL",
       "V": "10*3/uL"
+    },
+    {
+      "A": 2,
+      "B": "WBC Corrected # Peritoneal Fld",
+      "D": 34159,
+      "O": "RI",
+      "T": "#/mm3"
     },
     {
       "A": 2,
@@ -14632,6 +17199,13 @@ export default [
     },
     {
       "A": 2,
+      "B": "Plasma Cell % Peritoneal Fld",
+      "D": 34162,
+      "O": "RI",
+      "T": "%"
+    },
+    {
+      "A": 2,
       "B": "Mesothelial Cells % Periton Fld",
       "D": 39609,
       "E": "30432-9",
@@ -14642,6 +17216,32 @@ export default [
       "T": "%",
       "U": "%",
       "V": "%"
+    },
+    {
+      "A": 2,
+      "B": "Immature Gran % Peritoneal Fld",
+      "D": 41352,
+      "O": "RI",
+      "T": "%"
+    },
+    {
+      "A": 2,
+      "B": "Atypical Cells % Peritoneal Fld",
+      "D": 41353,
+      "O": "RI",
+      "T": "%"
+    },
+    {
+      "A": 2,
+      "B": "Peritoneal Fld Other Cells",
+      "D": 34163,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "Peritoneal Fld Diff Cmnt",
+      "D": 34160,
+      "O": "RI"
     },
     {
       "A": 2,
@@ -14827,6 +17427,13 @@ export default [
     },
     {
       "A": 2,
+      "B": "TNC Peritoneal Dialysate Qn",
+      "D": 39346,
+      "O": "RI",
+      "T": "#/mm3"
+    },
+    {
+      "A": 2,
       "B": "Neutrophils % Periton Dialysate",
       "D": 39347,
       "E": "40536-5",
@@ -14853,6 +17460,13 @@ export default [
     },
     {
       "A": 2,
+      "B": "Mono+Macro % Periton Dialysate",
+      "D": 39349,
+      "O": "RI",
+      "T": "%"
+    },
+    {
+      "A": 2,
       "B": "Eosinophils % Periton Dialysate",
       "D": 41066,
       "E": "40539-9",
@@ -14876,6 +17490,31 @@ export default [
       "T": "%",
       "U": "%",
       "V": "%"
+    },
+    {
+      "A": 2,
+      "B": "Lining Cells % Periton Dialysate",
+      "D": 39350,
+      "O": "RI",
+      "T": "%"
+    },
+    {
+      "A": 2,
+      "B": "Other Cells Periton Dialysate",
+      "D": 41565,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "Bacteria Ql Periton Dialysate",
+      "D": 41067,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "PLEURAL FLUID COUNT & CHEM",
+      "D": 26103,
+      "O": "RI"
     },
     {
       "A": 2,
@@ -14974,6 +17613,13 @@ export default [
     },
     {
       "A": 2,
+      "B": "Bands % Pleural Fld",
+      "D": 33977,
+      "O": "RI",
+      "T": "%"
+    },
+    {
+      "A": 2,
       "B": "Lymphocyte % Pleural Fld",
       "D": 33978,
       "E": "14820-5",
@@ -15039,6 +17685,13 @@ export default [
     },
     {
       "A": 2,
+      "B": "Plasma Cell % Pleural Fld",
+      "D": 34464,
+      "O": "RI",
+      "T": "%"
+    },
+    {
+      "A": 2,
       "B": "Mesothelial Cells % Pleural Fld",
       "D": 39605,
       "E": "30431-1",
@@ -15052,6 +17705,13 @@ export default [
     },
     {
       "A": 2,
+      "B": "Atypical Cells % Pleural Fld",
+      "D": 39354,
+      "O": "RI",
+      "T": "%"
+    },
+    {
+      "A": 2,
       "B": "Other Cells % Pleural Fld",
       "D": 39606,
       "E": "34983-7",
@@ -15062,6 +17722,18 @@ export default [
       "T": "%",
       "U": "%",
       "V": "%"
+    },
+    {
+      "A": 2,
+      "B": "Other Cells Pleural Fld Rpt",
+      "D": 34225,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "Pleural Fld Diff Comment",
+      "D": 33980,
+      "O": "RI"
     },
     {
       "A": 2,
@@ -15196,6 +17868,18 @@ export default [
       "O": "LN"
     },
     {
+      "A": 2,
+      "B": "Vitreous Fluid Panel",
+      "D": 36903,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "SWEAT ANALYSIS STUDIES",
+      "D": 16968,
+      "O": "RI"
+    },
+    {
       "A": 3,
       "B": "Amount Sweat",
       "D": 6569,
@@ -15228,12 +17912,30 @@ export default [
     },
     {
       "A": 2,
+      "B": "SYNOVIAL FLUID COUNTS & CHEM",
+      "D": 26105,
+      "O": "RI"
+    },
+    {
+      "A": 3,
+      "B": "SYNOVIAL FLUID STUDIES:",
+      "D": 16967,
+      "O": "RI"
+    },
+    {
+      "A": 2,
       "B": "Reviewing Pathologist",
       "D": 35883,
       "E": "19139-5",
       "F": "Pathologist name",
       "N": "Pathologist name",
       "O": "LN"
+    },
+    {
+      "A": 1,
+      "B": "MICROBIOLOGY STUDIES:",
+      "D": 16554,
+      "O": "RI"
     },
     {
       "A": 2,
@@ -15243,6 +17945,12 @@ export default [
       "F": "Public health notifiable condition",
       "N": "PH notifiable condition",
       "O": "LN"
+    },
+    {
+      "A": 2,
+      "B": "CULTURES",
+      "D": 313,
+      "O": "RI"
     },
     {
       "A": 2,
@@ -15268,6 +17976,30 @@ export default [
     },
     {
       "A": 2,
+      "B": "Culture Result-Transf Rxn",
+      "D": 25980,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "Micro Bact ID(Ur)",
+      "D": 20194,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "Corrected Stain Report",
+      "D": 29229,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "Preliminary Report",
+      "D": 38171,
+      "O": "RI"
+    },
+    {
+      "A": 2,
       "B": "Reference Ranges Micro",
       "D": 39772,
       "E": "19147-8",
@@ -15275,6 +18007,18 @@ export default [
       "G": "Reference lab test reference range Unsp time Nom (Reference lab test)",
       "N": "Ref Lab Test Ref Range",
       "O": "LN"
+    },
+    {
+      "A": 2,
+      "B": "BACTERIAL CULT AND SUSC",
+      "D": 6490,
+      "O": "RI"
+    },
+    {
+      "A": 3,
+      "B": "BACTERIA SMEARS AND STAINS",
+      "D": 16334,
+      "O": "RI"
     },
     {
       "A": 3,
@@ -15289,6 +18033,48 @@ export default [
       "V": "/uL"
     },
     {
+      "A": 3,
+      "B": "BACTERIAL SUSCEPTIBILITIES",
+      "D": 16333,
+      "O": "RI"
+    },
+    {
+      "A": 4,
+      "B": "Suscept GP 1",
+      "D": 6417,
+      "O": "RI"
+    },
+    {
+      "A": 4,
+      "B": "Susc-Anaerobe",
+      "D": 15191,
+      "O": "RI"
+    },
+    {
+      "A": 4,
+      "B": "Suscept BP1",
+      "D": 13344,
+      "O": "RI"
+    },
+    {
+      "A": 4,
+      "B": "Suscept Enter 1",
+      "D": 6482,
+      "O": "RI"
+    },
+    {
+      "A": 4,
+      "B": "Suscept Gn1",
+      "D": 11337,
+      "O": "RI"
+    },
+    {
+      "A": 4,
+      "B": "Suscept Gn 1",
+      "D": 6416,
+      "O": "RI"
+    },
+    {
       "A": 4,
       "B": "Suscept MIC1",
       "D": 13599,
@@ -15299,12 +18085,42 @@ export default [
     },
     {
       "A": 4,
+      "B": "Suscept Org 1",
+      "D": 13074,
+      "O": "RI"
+    },
+    {
+      "A": 4,
       "B": "Suscept Ur 1",
       "D": 6415,
       "E": "23658-8",
       "F": "Other Antibiotic [Susceptibility]",
       "N": "Other Antibiotic Susc Islt",
       "O": "LN"
+    },
+    {
+      "A": 4,
+      "B": "Susc-Gram Pos 4",
+      "D": 15228,
+      "O": "RI"
+    },
+    {
+      "A": 4,
+      "B": "Susc-Gram Neg 5",
+      "D": 15240,
+      "O": "RI"
+    },
+    {
+      "A": 4,
+      "B": "Susc-Ur Gn 6",
+      "D": 15250,
+      "O": "RI"
+    },
+    {
+      "A": 4,
+      "B": "TOPICAL SUSCEPT",
+      "D": 7945,
+      "O": "RI"
     },
     {
       "A": 5,
@@ -15335,6 +18151,13 @@ export default [
       "T": "mm",
       "U": "mm",
       "V": "mm"
+    },
+    {
+      "A": 5,
+      "B": "Betadine Top Susc",
+      "D": 7941,
+      "E": "No LOINC code",
+      "O": "RI"
     },
     {
       "A": 5,
@@ -15510,6 +18333,12 @@ export default [
       "R": 299.3461
     },
     {
+      "A": 4,
+      "B": "PENICILLINS NON-COMBO SUSC",
+      "D": 25271,
+      "O": "RI"
+    },
+    {
       "A": 5,
       "B": "AMPICILLIN-UR",
       "D": 9473,
@@ -15616,6 +18445,12 @@ export default [
       "R": 401.4363
     },
     {
+      "A": 4,
+      "B": "BETA-LACTAM INHIBITOR COMBO SUSC",
+      "D": 25272,
+      "O": "RI"
+    },
+    {
       "A": 5,
       "B": "Augmentin GNR",
       "D": 9036,
@@ -15650,6 +18485,12 @@ export default [
       "G": "Ticarcillin+Clavulanate MIC susc",
       "N": "Ticarcillin+Clav Islt MIC",
       "O": "LN"
+    },
+    {
+      "A": 5,
+      "B": "CEPHALOSPORINS 1ST GEN SUSC",
+      "D": 25274,
+      "O": "RI"
     },
     {
       "A": 6,
@@ -15688,6 +18529,12 @@ export default [
       "N": "Cephalothin Susc Islt",
       "O": "LN",
       "R": 396.438
+    },
+    {
+      "A": 5,
+      "B": "CEPHALOSPORINS 2ND GEN SUSC",
+      "D": 25275,
+      "O": "RI"
     },
     {
       "A": 6,
@@ -15813,6 +18660,12 @@ export default [
       "N": "Cefoxitin Susc Islt",
       "O": "LN",
       "R": 427.4521
+    },
+    {
+      "A": 5,
+      "B": "CEPHALOSPORINS 3RD GEN SUSC",
+      "D": 25276,
+      "O": "RI"
     },
     {
       "A": 6,
@@ -15967,6 +18820,18 @@ export default [
     },
     {
       "A": 5,
+      "B": "CEPHALOSPORINS 4TH GEN SUSC",
+      "D": 25277,
+      "O": "RI"
+    },
+    {
+      "A": 4,
+      "B": "MONOBACTAMS SUSC",
+      "D": 25279,
+      "O": "RI"
+    },
+    {
+      "A": 5,
       "B": "Aztreonam MIC",
       "D": 11031,
       "E": "44-8",
@@ -15977,6 +18842,12 @@ export default [
       "R": 435.4328,
       "U": "ug/mL",
       "V": "ug/mL"
+    },
+    {
+      "A": 4,
+      "B": "CARBAPENEMS SUSC",
+      "D": 25278,
+      "O": "RI"
     },
     {
       "A": 5,
@@ -15999,6 +18870,12 @@ export default [
       "N": "Meropenem Islt MIC",
       "O": "LN",
       "R": 383.4625
+    },
+    {
+      "A": 4,
+      "B": "AMINOGLYCOSIDES SUSC",
+      "D": 25280,
+      "O": "RI"
     },
     {
       "A": 5,
@@ -16046,6 +18923,12 @@ export default [
       "R": 467.5145
     },
     {
+      "A": 4,
+      "B": "MACROLIDES SUSC",
+      "D": 25281,
+      "O": "RI"
+    },
+    {
       "A": 5,
       "B": "Erythromycin MIC",
       "D": 7214,
@@ -16057,6 +18940,12 @@ export default [
       "N": "Erythromycin Islt MIC",
       "O": "LN",
       "R": 733.9268
+    },
+    {
+      "A": 4,
+      "B": "TETRACYCLINES SUSC",
+      "D": 25282,
+      "O": "RI"
     },
     {
       "A": 5,
@@ -16081,6 +18970,12 @@ export default [
       "N": "Tetracycline Susc Islt",
       "O": "LN",
       "R": 444.4346
+    },
+    {
+      "A": 4,
+      "B": "QUINOLONES SUSC",
+      "D": 25283,
+      "O": "RI"
     },
     {
       "A": 5,
@@ -16119,6 +19014,12 @@ export default [
       "R": 361.3675
     },
     {
+      "A": 4,
+      "B": "GLYCOPEPTIDES SUSC",
+      "D": 25284,
+      "O": "RI"
+    },
+    {
       "A": 5,
       "B": "Vancomycin MIC",
       "D": 7217,
@@ -16132,6 +19033,12 @@ export default [
       "N": "Vancomycin Islt MIC",
       "O": "LN",
       "R": 1449.2536
+    },
+    {
+      "A": 4,
+      "B": "MISCELLANEOUS SUSC",
+      "D": 25285,
+      "O": "RI"
     },
     {
       "A": 5,
@@ -16220,6 +19127,42 @@ export default [
     },
     {
       "A": 4,
+      "B": "OTHER SUSCEPTIBILITY TESTS",
+      "D": 16601,
+      "O": "RI"
+    },
+    {
+      "A": 4,
+      "B": "Agar Screen",
+      "D": 29226,
+      "O": "RI"
+    },
+    {
+      "A": 3,
+      "B": "ROUTINE MICROBIOLOGY",
+      "D": 6167,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "Infection Control Observation",
+      "D": 30986,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "NAMED BACTERIA STUDIES",
+      "D": 25210,
+      "O": "RI"
+    },
+    {
+      "A": 3,
+      "B": "BORRELIA (+LYME) STUDIES",
+      "D": 25062,
+      "O": "RI"
+    },
+    {
+      "A": 4,
       "B": "B burgdorf EIA Index Titr",
       "C": "Borrelia burgdorferi Ab|PrTitrACnc|Intravascular - any|IA_IF_Null*",
       "D": 17901,
@@ -16239,6 +19182,12 @@ export default [
       "G": "B. burgdorferi Ab IA Qn (CSF)",
       "N": "B burgdor Ab CSF IA-aCnc",
       "O": "LN"
+    },
+    {
+      "A": 3,
+      "B": "BRUCELLA SP STUDIES",
+      "D": 25267,
+      "O": "RI"
     },
     {
       "A": 4,
@@ -16291,6 +19240,18 @@ export default [
       "V": "{titer}"
     },
     {
+      "A": 3,
+      "B": "CAMPYLOBACTER STUDIES",
+      "D": 25063,
+      "O": "RI"
+    },
+    {
+      "A": 3,
+      "B": "CHLAMYDIA STUDIES",
+      "D": 25204,
+      "O": "RI"
+    },
+    {
       "A": 4,
       "B": "Chlamydia Sp IgG Ser Titr",
       "C": "Chlamydia sp Ab.IgG|PrTitrACnc|Intravascular - any|IA_IF_Null*",
@@ -16327,6 +19288,24 @@ export default [
       "V": "{titer}"
     },
     {
+      "A": 3,
+      "B": "CLOSTRIDIAL STUDIES",
+      "D": 25065,
+      "O": "RI"
+    },
+    {
+      "A": 3,
+      "B": "GC CHLAMYDIA TESTS",
+      "D": 17730,
+      "O": "RI"
+    },
+    {
+      "A": 3,
+      "B": "HELICOBACTER STUDIES",
+      "D": 25066,
+      "O": "RI"
+    },
+    {
       "A": 4,
       "B": "H Pylori IgM Ser Qn EIA",
       "C": "Helicobacter pylori Ab.IgM|PrTitrACnc|Intravascular - any|IA_IF_Null*",
@@ -16357,6 +19336,12 @@ export default [
       "T": "EIA INDEX",
       "U": "Index_val",
       "V": "{Index_val}"
+    },
+    {
+      "A": 3,
+      "B": "LEGIONELLA STUDIES",
+      "D": 25067,
+      "O": "RI"
     },
     {
       "A": 4,
@@ -16397,6 +19382,12 @@ export default [
       "T": "titer",
       "U": "titer",
       "V": "{titer}"
+    },
+    {
+      "A": 3,
+      "B": "MYCOPLASMA STUDIES",
+      "D": 25069,
+      "O": "RI"
     },
     {
       "A": 4,
@@ -16461,6 +19452,12 @@ export default [
       "V": "{titer}"
     },
     {
+      "A": 3,
+      "B": "NEISSERIA STUDIES",
+      "D": 25199,
+      "O": "RI"
+    },
+    {
       "A": 4,
       "B": "N mening Group A:C:Y:W135 Titr",
       "D": 15334,
@@ -16469,6 +19466,12 @@ export default [
       "G": "N. meningitidis A+C+w135+Y Ag LA Ql (S)",
       "N": "N men sg A+C+W135+Y Ag Ser Ql LA",
       "O": "LN"
+    },
+    {
+      "A": 3,
+      "B": "RICKETTSIA STUDIES",
+      "D": 25070,
+      "O": "RI"
     },
     {
       "A": 4,
@@ -16522,6 +19525,12 @@ export default [
       "T": "titer",
       "U": "titer",
       "V": "{titer}"
+    },
+    {
+      "A": 3,
+      "B": "SALMONELLA SHIGELLA STUDIES",
+      "D": 25073,
+      "O": "RI"
     },
     {
       "A": 4,
@@ -16607,6 +19616,12 @@ export default [
       "T": "titer",
       "U": "titer",
       "V": "{titer}"
+    },
+    {
+      "A": 3,
+      "B": "STREPTOCOCCAL SP STUDIES",
+      "D": 25071,
+      "O": "RI"
     },
     {
       "A": 4,
@@ -16843,6 +19858,12 @@ export default [
       "V": "ug/mL"
     },
     {
+      "A": 3,
+      "B": "SYPHILIS STUDIES:",
+      "D": 25197,
+      "O": "RI"
+    },
+    {
       "A": 4,
       "B": "VDRL CSF Qn",
       "C": "Reagin Ab|PrTitrACnc|CSF|VDRL",
@@ -16875,6 +19896,12 @@ export default [
       "T": "DILS",
       "U": "titer",
       "V": "{titer}"
+    },
+    {
+      "A": 3,
+      "B": "OTHER BACTERIAL STUDIES",
+      "D": 25198,
+      "O": "RI"
     },
     {
       "A": 4,
@@ -16980,6 +20007,50 @@ export default [
       "V": "{titer}"
     },
     {
+      "A": 3,
+      "B": "BACTERIAL SEROLOGY",
+      "D": 16985,
+      "O": "RI"
+    },
+    {
+      "A": 3,
+      "B": "BACTERIAL TITRS",
+      "D": 7820,
+      "O": "RI"
+    },
+    {
+      "A": 3,
+      "B": "BACTERIAL SUSC TESTS",
+      "D": 16598,
+      "O": "RI"
+    },
+    {
+      "A": 4,
+      "B": "Max Bact Dilut",
+      "D": 5871,
+      "E": "No LOINC code",
+      "O": "RI"
+    },
+    {
+      "A": 4,
+      "B": "Max Inhib Dilut",
+      "D": 5874,
+      "E": "No LOINC code",
+      "O": "RI"
+    },
+    {
+      "A": 3,
+      "B": "BACTERIAL AG",
+      "D": 11331,
+      "O": "RI"
+    },
+    {
+      "A": 3,
+      "B": "YERSINIA STUDIES",
+      "D": 25074,
+      "O": "RI"
+    },
+    {
       "A": 2,
       "B": "Bacterial Specimen Source",
       "D": 39568,
@@ -16990,12 +20061,30 @@ export default [
       "O": "LN"
     },
     {
+      "A": 2,
+      "B": "AFB (MYCOBACTERIAL) STUDIES:",
+      "D": 25059,
+      "O": "RI"
+    },
+    {
+      "A": 3,
+      "B": "AFB CULTURE AND SUSC",
+      "D": 25211,
+      "O": "RI"
+    },
+    {
       "A": 4,
       "B": "AFB Susceptibility",
       "D": 11135,
       "E": "18769-0",
       "F": "Microbial susceptibility tests Set",
       "O": "LN"
+    },
+    {
+      "A": 2,
+      "B": "FUNGAL STUDIES",
+      "D": 25208,
+      "O": "RI"
     },
     {
       "A": 3,
@@ -17005,6 +20094,24 @@ export default [
       "F": "Cycloserine [Susceptibility] by Minimum inhibitory concentration (MIC)",
       "N": "Cycloserine Islt MIC",
       "O": "LN"
+    },
+    {
+      "A": 3,
+      "B": "FUNGUS GENERAL STUDIES",
+      "D": 25195,
+      "O": "RI"
+    },
+    {
+      "A": 4,
+      "B": "ANTIFUNGAL MICS",
+      "D": 16599,
+      "O": "RI"
+    },
+    {
+      "A": 3,
+      "B": "FUNGUS SPECIFIC STUDIES",
+      "D": 25194,
+      "O": "RI"
     },
     {
       "A": 4,
@@ -17065,6 +20172,13 @@ export default [
       "T": "titer",
       "U": "titer",
       "V": "{titer}"
+    },
+    {
+      "A": 4,
+      "B": "Coccidioides Ag Qn EIA",
+      "D": 35533,
+      "E": "No LOINC code",
+      "O": "RI"
     },
     {
       "A": 4,
@@ -17191,6 +20305,12 @@ export default [
       "V": "{titer}"
     },
     {
+      "A": 2,
+      "B": "PARASITOLOGY STUDIES",
+      "D": 16987,
+      "O": "RI"
+    },
+    {
       "A": 3,
       "B": "E histolytica Ab Ser Titr HA",
       "C": "Entamoeba histolytica Ab|PrTitrACnc|Intravascular - any|Aggl",
@@ -17218,6 +20338,12 @@ export default [
       "G": "E. histolytica IgG IA Qn (S)",
       "N": "E histolyt IgG Ser IA-aCnc",
       "O": "LN"
+    },
+    {
+      "A": 3,
+      "B": "Toxoplasma IgG EIA-QN",
+      "D": 18178,
+      "O": "RI"
     },
     {
       "A": 4,
@@ -17282,6 +20408,12 @@ export default [
       "O": "LN"
     },
     {
+      "A": 2,
+      "B": "VIROLOGY STUDIES",
+      "D": 25205,
+      "O": "RI"
+    },
+    {
       "A": 3,
       "B": "VIRAL CULTURE GENERAL",
       "D": 6281,
@@ -17291,11 +20423,23 @@ export default [
       "O": "LN"
     },
     {
+      "A": 4,
+      "B": "RESP VIRUS CULT & AG PRFL",
+      "D": 6571,
+      "O": "RI"
+    },
+    {
       "A": 5,
       "B": "PARAINFLUENZA AG IF QL",
       "D": 16217,
       "E": "4155-9",
       "O": "LN"
+    },
+    {
+      "A": 3,
+      "B": "CYTOMEGALO VIRUS STUDIES:",
+      "D": 25077,
+      "O": "RI"
     },
     {
       "A": 4,
@@ -17364,6 +20508,12 @@ export default [
       "Q": "{Index_val}",
       "U": "Index_val",
       "V": "{Index_val}"
+    },
+    {
+      "A": 3,
+      "B": "ENTERIC VIRUS STUDIES:",
+      "D": 25203,
+      "O": "RI"
     },
     {
       "A": 4,
@@ -17493,6 +20643,12 @@ export default [
       "F": "Coxsackievirus B Ab panel [Titer] - Serum by Complement fixation",
       "N": "CV B Virus Ab Pnl Titr Ser CF",
       "O": "LN"
+    },
+    {
+      "A": 4,
+      "B": "ECHOVIRUS NEUT",
+      "D": 5339,
+      "O": "RI"
     },
     {
       "A": 5,
@@ -17628,6 +20784,12 @@ export default [
       "O": "LN"
     },
     {
+      "A": 3,
+      "B": "ENCEPHALITIS VIRUS STUDIES:",
+      "D": 25078,
+      "O": "RI"
+    },
+    {
       "A": 4,
       "B": "E Equin Enceph Ab Titr",
       "C": "Eastern equine encephalitis virus Ab|PrTitrACnc|Intravascular - any|IA_IF_Null*",
@@ -17698,6 +20860,12 @@ export default [
       "V": "{titer}"
     },
     {
+      "A": 3,
+      "B": "EPSTEIN BARR VIRUS STUDIES:",
+      "D": 25202,
+      "O": "RI"
+    },
+    {
       "A": 4,
       "B": "EBV IFA' Titr",
       "C": "Epstein Barr virus capsid Ab.IgG|PrTitrACnc|Intravascular - any|IA_IF_Null*",
@@ -17762,6 +20930,18 @@ export default [
       "V": "{titer}"
     },
     {
+      "A": 3,
+      "B": "HEPATITIS A STUDIES:",
+      "D": 25201,
+      "O": "RI"
+    },
+    {
+      "A": 3,
+      "B": "HEPATITIS B STUDIES:",
+      "D": 25081,
+      "O": "RI"
+    },
+    {
       "A": 4,
       "B": "Hep B DNA Qn",
       "D": 17329,
@@ -17810,6 +20990,12 @@ export default [
       "T": "Log IU/mL",
       "U": "Log_IU/mL",
       "V": "{Log_IU}/mL"
+    },
+    {
+      "A": 3,
+      "B": "HEPATITIS C STUDIES:",
+      "D": 25082,
+      "O": "RI"
     },
     {
       "A": 4,
@@ -17928,10 +21114,22 @@ export default [
     },
     {
       "A": 3,
+      "B": "HEPATITIS D STUDIES:",
+      "D": 25083,
+      "O": "RI"
+    },
+    {
+      "A": 3,
       "B": "Hepatitis E Ab Ser Panel",
       "D": 39488,
       "E": "3568-8",
       "O": "LN"
+    },
+    {
+      "A": 3,
+      "B": "HERPES VIRUS STUDIES:",
+      "D": 25085,
+      "O": "RI"
     },
     {
       "A": 4,
@@ -18031,6 +21229,12 @@ export default [
       "V": "{Index_val}"
     },
     {
+      "A": 3,
+      "B": "HIV/HTLV STUDIES",
+      "D": 25060,
+      "O": "RI"
+    },
+    {
       "A": 4,
       "B": "HIV-1 Ab IB QL Bands",
       "D": 19853,
@@ -18038,6 +21242,18 @@ export default [
       "F": "HIV 1 Ab band pattern [Interpretation] in Serum by Immunoblot",
       "N": "HIV1 Ab Patrn Ser IB-Imp",
       "O": "LN"
+    },
+    {
+      "A": 5,
+      "B": "HIV-1 p24 Ag SerPl Panel",
+      "D": 31028,
+      "O": "RI"
+    },
+    {
+      "A": 5,
+      "B": "HIV-1 p24 Ag SerPl Cnfrm",
+      "D": 31029,
+      "O": "RI"
     },
     {
       "A": 4,
@@ -18097,6 +21313,12 @@ export default [
       "F": "HIV phenotype [Susceptibility]",
       "N": "HIV Phenotyp Islt",
       "O": "LN"
+    },
+    {
+      "A": 3,
+      "B": "INFLUENZA/PARAINFLU STUDIES:",
+      "D": 25266,
+      "O": "RI"
     },
     {
       "A": 4,
@@ -18242,6 +21464,12 @@ export default [
       "V": "{titer}"
     },
     {
+      "A": 3,
+      "B": "MEASLES/MUMPS/RUBELLA VIRUS:",
+      "D": 25086,
+      "O": "RI"
+    },
+    {
       "A": 4,
       "B": "Measles IgG CSF Qn",
       "C": "Measles virus Ab.IgG|PrTitrACnc|CSF|IA_IF_Null*",
@@ -18356,6 +21584,12 @@ export default [
       "V": "{EIA_index}"
     },
     {
+      "A": 3,
+      "B": "PARVOVIRUS STUDIES",
+      "D": 25265,
+      "O": "RI"
+    },
+    {
       "A": 4,
       "B": "Parvovir B19 IgG Ser Qn",
       "C": "Parvovirus B19 Ab.IgG|PrTitrACnc|Intravascular - any|IA_IF_Null*",
@@ -18382,6 +21616,18 @@ export default [
       "T": "Units",
       "U": "arb'U",
       "V": "[arb'U]"
+    },
+    {
+      "A": 3,
+      "B": "VIRAL SEROLOGY",
+      "D": 16986,
+      "O": "RI"
+    },
+    {
+      "A": 3,
+      "B": "VIRUS OTHER STUDIES:",
+      "D": 25088,
+      "O": "RI"
     },
     {
       "A": 4,
@@ -18564,6 +21810,48 @@ export default [
       "G": "VZV IgM Qn (CSF)",
       "N": "VZV IgM CSF-aCnc",
       "O": "LN"
+    },
+    {
+      "A": 2,
+      "B": "Employee Exposure Panel",
+      "D": 37070,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "Patient Exposure Panel",
+      "D": 37356,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "Reportable Disease Test Status",
+      "D": 37167,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "HYPERSENS PNEUMONITIS STUDIES:",
+      "D": 25193,
+      "O": "RI"
+    },
+    {
+      "A": 3,
+      "B": "ECHOVIRUS CF",
+      "D": 30982,
+      "O": "RI"
+    },
+    {
+      "A": 1,
+      "B": "SEROLOGY STUDIES:",
+      "D": 16549,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "ALLERGEN STUDIES",
+      "D": 16915,
+      "O": "RI"
     },
     {
       "A": 3,
@@ -18996,6 +22284,18 @@ export default [
     },
     {
       "A": 3,
+      "B": "Milk Precipitins Ser Panel",
+      "D": 29564,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "AUTO-ANTIBODY TESTS",
+      "D": 16916,
+      "O": "RI"
+    },
+    {
+      "A": 3,
       "B": "Purkinje Cell Ab Qn",
       "D": 24897,
       "E": "2768-6",
@@ -19086,6 +22386,13 @@ export default [
     },
     {
       "A": 3,
+      "B": "Differl Titr RA",
+      "D": 5154,
+      "E": "skip for now",
+      "O": "RI"
+    },
+    {
+      "A": 3,
       "B": "DNA DS IgG Ser Qn Multi FIA",
       "D": 34525,
       "E": "33800-4",
@@ -19100,6 +22407,12 @@ export default [
       "T": "AU/ML",
       "U": "IU/mL",
       "V": "[IU]/mL"
+    },
+    {
+      "A": 3,
+      "B": "DNA Ab %",
+      "D": 5222,
+      "O": "RI"
     },
     {
       "A": 4,
@@ -19165,6 +22478,12 @@ export default [
       "T": "Units/mL",
       "U": "arb'U/mL",
       "V": "[arb'U]/mL"
+    },
+    {
+      "A": 3,
+      "B": "GM1 Ab-SER TITR",
+      "D": 20688,
+      "O": "RI"
     },
     {
       "A": 3,
@@ -19248,6 +22567,12 @@ export default [
       "V": "[arb'U]"
     },
     {
+      "A": 3,
+      "B": "IBD Ab Ser Report",
+      "D": 29390,
+      "O": "RI"
+    },
+    {
       "A": 4,
       "B": "Tiss Transglutami IgG Ser Qn EIA",
       "D": 30417,
@@ -19286,6 +22611,13 @@ export default [
       "T": "Titer Units",
       "U": "titer",
       "V": "{titer}"
+    },
+    {
+      "A": 3,
+      "B": "Anti Microsm IFA",
+      "D": 5226,
+      "E": "skip for now",
+      "O": "RI"
     },
     {
       "A": 3,
@@ -19390,6 +22722,13 @@ export default [
     },
     {
       "A": 3,
+      "B": "Normal Cell(RA)",
+      "D": 5152,
+      "O": "RI",
+      "T": "titer"
+    },
+    {
+      "A": 3,
       "B": "Parietal Cell Ab Ser Titr",
       "D": 9144,
       "E": "5271-2",
@@ -19423,6 +22762,12 @@ export default [
     },
     {
       "A": 3,
+      "B": "RA Aggl'",
+      "D": 401,
+      "O": "RI"
+    },
+    {
+      "A": 3,
       "B": "Serine Proteinase 3 Ab Ser Qn",
       "D": 20631,
       "E": "6968-2",
@@ -19437,6 +22782,13 @@ export default [
       "T": "Units/mL",
       "U": "arb'U/mL",
       "V": "[arb'U]/mL"
+    },
+    {
+      "A": 3,
+      "B": "Sensit Cell(RA)",
+      "D": 5153,
+      "O": "RI",
+      "T": "titer"
     },
     {
       "A": 3,
@@ -19522,6 +22874,102 @@ export default [
       "V": "fmol/L"
     },
     {
+      "A": 2,
+      "B": "MISC. SEROLOGY",
+      "D": 17047,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "RHEUMATOLOGY",
+      "D": 324,
+      "O": "RI"
+    },
+    {
+      "A": 1,
+      "B": "TRANSPLANT/ STEM CELL LEUKEMIA",
+      "D": 26106,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "TRANSPLANT STUDIES",
+      "D": 25212,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "TRANSPLANT IMMUNOLOGY:",
+      "D": 21301,
+      "O": "RI"
+    },
+    {
+      "A": 3,
+      "B": "HLA ImmuKnow Bld Panel",
+      "D": 32535,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "STEM CELL PROCESSING:",
+      "D": 20078,
+      "O": "RI"
+    },
+    {
+      "A": 3,
+      "B": "STEM CELL PROCESSING",
+      "D": 20079,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "LEUKEMIA CYTOGENETICS",
+      "D": 25334,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "Bone Marrow",
+      "D": 4228,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "Bone Marrow Report",
+      "D": 38156,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "BONE MARROW STUDIES",
+      "D": 7812,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "BONE MARROW BX:",
+      "D": 6283,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "BONE MARROW SMR",
+      "D": 6303,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "BM STAIN INTERP",
+      "D": 10063,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "Bone Marrow Diff:",
+      "D": 7098,
+      "O": "RI"
+    },
+    {
       "A": 3,
       "B": "Metamyelocytes % Mar",
       "D": 13914,
@@ -19537,6 +22985,12 @@ export default [
       "T": "%",
       "U": "%",
       "V": "%"
+    },
+    {
+      "A": 5,
+      "B": "NEUROLOGIC IMMUNOTYPING CSF",
+      "D": 19604,
+      "O": "RI"
     },
     {
       "A": 6,
@@ -19556,6 +23010,12 @@ export default [
       "T": "mg/dL",
       "U": "mg/dL",
       "V": "mg/dL"
+    },
+    {
+      "A": 5,
+      "B": "NEUROLOGIC IMMUNOTYPING BLD",
+      "D": 19606,
+      "O": "RI"
     },
     {
       "A": 6,
@@ -19593,6 +23053,24 @@ export default [
       "V": "mg/dL"
     },
     {
+      "A": 1,
+      "B": "CHROMOSOME&MOLECULAR PATHOLOGY",
+      "D": 26134,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "CHROMOSOME STUDIES",
+      "D": 25268,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "MOLECULAR PATHOLOGY",
+      "D": 25269,
+      "O": "RI"
+    },
+    {
       "A": 3,
       "B": "BCR/ABL Gene Rearrange Ratio PCR",
       "D": 32575,
@@ -19607,12 +23085,24 @@ export default [
     },
     {
       "A": 3,
+      "B": "5-FU Sensitivity Gene Mut Panel",
+      "D": 42059,
+      "O": "RI"
+    },
+    {
+      "A": 3,
       "B": "MTHFR Gene Mut Detection",
       "D": 29692,
       "E": "38415-6",
       "F": "MTHFR gene targeted mutation analysis in Blood or Tissue by Molecular genetics method Narrative",
       "N": "MTHFR gene Mut Anl Bld/T",
       "O": "LN"
+    },
+    {
+      "A": 1,
+      "B": "TDM & TOXICOLOGY STUDIES",
+      "D": 16559,
+      "O": "RI"
     },
     {
       "A": 2,
@@ -19623,6 +23113,12 @@ export default [
       "G": "Drugs of abuse panel (Mec)",
       "N": "Drugs of abuse Pnl Mec",
       "O": "LN"
+    },
+    {
+      "A": 2,
+      "B": "TOXIC DRUG SER LEVELS",
+      "D": 16973,
+      "O": "RI"
     },
     {
       "A": 3,
@@ -19787,6 +23283,13 @@ export default [
     },
     {
       "A": 3,
+      "B": "Felbamate",
+      "D": 18882,
+      "O": "RI",
+      "T": "mg"
+    },
+    {
+      "A": 3,
       "B": "Haloperidol SerPl Qn",
       "C": "Haloperidol|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 11490,
@@ -19816,6 +23319,12 @@ export default [
       "R": 247.3327,
       "U": "ug/mL",
       "V": "ug/mL"
+    },
+    {
+      "A": 3,
+      "B": "Nicotine+Cotinine SerPl Panel",
+      "D": 30939,
+      "O": "RI"
     },
     {
       "A": 3,
@@ -19891,6 +23400,12 @@ export default [
     },
     {
       "A": 3,
+      "B": "Qual 1[Bs]",
+      "D": 5548,
+      "O": "RI"
+    },
+    {
+      "A": 3,
       "B": "Secobarb SerPl Qn",
       "D": 5254,
       "E": "4028-7",
@@ -19910,6 +23425,12 @@ export default [
       "T": "mcg/mL",
       "U": "mcg/mL",
       "V": "mcg/mL"
+    },
+    {
+      "A": 3,
+      "B": "Subs 1[Bs]",
+      "D": 5575,
+      "O": "RI"
     },
     {
       "A": 3,
@@ -19972,6 +23493,12 @@ export default [
       "T": "mcg/mL",
       "U": "ug/mL",
       "V": "ug/mL"
+    },
+    {
+      "A": 2,
+      "B": "URINE DRUG SCREENS",
+      "D": 16971,
+      "O": "RI"
     },
     {
       "A": 3,
@@ -20077,6 +23604,12 @@ export default [
     },
     {
       "A": 3,
+      "B": "Drug Interp Ur QL",
+      "D": 17117,
+      "O": "RI"
+    },
+    {
+      "A": 3,
       "B": "Flurazepam Ur Qn Cnfrm",
       "D": 24606,
       "E": "16231-3",
@@ -20141,6 +23674,30 @@ export default [
     },
     {
       "A": 3,
+      "B": "Qual 1 [Bi]",
+      "D": 6152,
+      "O": "RI"
+    },
+    {
+      "A": 3,
+      "B": "Tox Ur Interp",
+      "D": 17140,
+      "O": "RI"
+    },
+    {
+      "A": 3,
+      "B": "Diuretic Ur Panel",
+      "D": 28533,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "ANTI-BACTERIAL DRUG LEVELS",
+      "D": 16957,
+      "O": "RI"
+    },
+    {
+      "A": 3,
       "B": "Amikacin SerPl Qn",
       "C": "Amikacin|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 5842,
@@ -20193,6 +23750,13 @@ export default [
       "T": "mcg/mL",
       "U": "mg/L",
       "V": "mg/L"
+    },
+    {
+      "A": 3,
+      "B": "Antibact Ser Qn",
+      "D": 5849,
+      "O": "RI",
+      "T": "mcg/mL"
     },
     {
       "A": 3,
@@ -20321,6 +23885,12 @@ export default [
     },
     {
       "A": 3,
+      "B": "Tobramycin Pre",
+      "D": 5445,
+      "O": "RI"
+    },
+    {
+      "A": 3,
       "B": "Tobramycin Level (Trough)",
       "C": "Tobramycin|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 24193,
@@ -20419,6 +23989,12 @@ export default [
       "V": "ug/mL"
     },
     {
+      "A": 2,
+      "B": "ANTI FUNGAL DRUG LEVELS",
+      "D": 16958,
+      "O": "RI"
+    },
+    {
       "A": 3,
       "B": "5-F-Cytosine Ser Qn",
       "C": "5-Fluorocytosine|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
@@ -20470,6 +24046,18 @@ export default [
       "T": "mcg/mL",
       "U": "ug/mL",
       "V": "ug/mL"
+    },
+    {
+      "A": 2,
+      "B": "AntiViral SerPl Drug Levels",
+      "D": 29565,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "CARDIO-PULMONARY DRUG LEVELS",
+      "D": 16959,
+      "O": "RI"
     },
     {
       "A": 3,
@@ -20734,6 +24322,12 @@ export default [
       "V": "ug/mL"
     },
     {
+      "A": 2,
+      "B": "IMMUNOSUPPRESSANT DRUG LEVELS",
+      "D": 25330,
+      "O": "RI"
+    },
+    {
       "A": 3,
       "B": "Cyclosporin Bld Qn",
       "C": "Cyclosporine|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
@@ -20824,6 +24418,12 @@ export default [
       "V": "ng/mL"
     },
     {
+      "A": 2,
+      "B": "MISC. DRUG LEVELS - BLD",
+      "D": 16961,
+      "O": "RI"
+    },
+    {
       "A": 3,
       "B": "Amincaproate SerPl Qn",
       "C": "Aminocaproate|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
@@ -20841,6 +24441,12 @@ export default [
       "T": "mcg/mL",
       "U": "ug/mL",
       "V": "ug/mL"
+    },
+    {
+      "A": 3,
+      "B": "Ipecac SerPl Panel",
+      "D": 30981,
+      "O": "RI"
     },
     {
       "A": 3,
@@ -20864,6 +24470,12 @@ export default [
     },
     {
       "A": 3,
+      "B": "Sulfonylurea Hypogly SerPl Panel",
+      "D": 29369,
+      "O": "RI"
+    },
+    {
+      "A": 3,
       "B": "Warfarin SerPl Qn",
       "D": 25777,
       "E": "4098-0",
@@ -20874,6 +24486,12 @@ export default [
       "T": "mcg/mL",
       "U": "ug/mL",
       "V": "ug/mL"
+    },
+    {
+      "A": 2,
+      "B": "NEURO-PSYCHIATRIC DRUG LEVELS",
+      "D": 16960,
+      "O": "RI"
     },
     {
       "A": 3,
@@ -21038,6 +24656,12 @@ export default [
       "V": "ug/mL"
     },
     {
+      "A": 3,
+      "B": "Clozapine+Norclozapine Ser Panel",
+      "D": 36027,
+      "O": "RI"
+    },
+    {
       "A": 4,
       "B": "Clozapine SerPl Qn",
       "C": "cloZAPine|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
@@ -21056,6 +24680,12 @@ export default [
       "T": "ng/mL",
       "U": "ng/mL",
       "V": "ng/mL"
+    },
+    {
+      "A": 3,
+      "B": "Doxepin and Metabolite Levels",
+      "D": 21123,
+      "O": "RI"
     },
     {
       "A": 4,
@@ -21417,6 +25047,31 @@ export default [
       "V": "ug/mL"
     },
     {
+      "A": 2,
+      "B": "TOXIC SUBSTANCES BLD/SER/PLAS",
+      "D": 16974,
+      "O": "RI"
+    },
+    {
+      "A": 3,
+      "B": "Barb ID 1",
+      "D": 5994,
+      "O": "RI"
+    },
+    {
+      "A": 3,
+      "B": "CO'",
+      "D": 1401,
+      "O": "RI"
+    },
+    {
+      "A": 3,
+      "B": "CARBON MONOXIDE'",
+      "D": 5213,
+      "O": "RI",
+      "T": "% SAT"
+    },
+    {
       "A": 3,
       "B": "Ethanol Ser/P",
       "C": "Ethanol|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
@@ -21471,6 +25126,48 @@ export default [
       "V": "ug/mL"
     },
     {
+      "A": 3,
+      "B": "Liver Interp",
+      "D": 17119,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "TOXICOLOGY (UR-GASTRIC-MEC)",
+      "D": 16547,
+      "O": "RI"
+    },
+    {
+      "A": 3,
+      "B": "DRUG SCN GASTRIC",
+      "D": 6214,
+      "O": "RI"
+    },
+    {
+      "A": 4,
+      "B": "Drug Interp Gast 1",
+      "D": 17084,
+      "O": "RI"
+    },
+    {
+      "A": 4,
+      "B": "Drug Interp Gast 2",
+      "D": 17085,
+      "O": "RI"
+    },
+    {
+      "A": 4,
+      "B": "Drug Interp Gast 3",
+      "D": 17086,
+      "O": "RI"
+    },
+    {
+      "A": 3,
+      "B": "DRUG SCN OTHER",
+      "D": 6216,
+      "O": "RI"
+    },
+    {
       "A": 4,
       "B": "Ethanol Fld",
       "D": 7306,
@@ -21486,6 +25183,12 @@ export default [
       "T": "mg/dL",
       "U": "mg/dL",
       "V": "mg/dL"
+    },
+    {
+      "A": 2,
+      "B": "Heavy Metal Studies",
+      "D": 32873,
+      "O": "RI"
     },
     {
       "A": 3,
@@ -21624,6 +25327,12 @@ export default [
       "T": "mg/dL",
       "U": "mg/dL",
       "V": "mg/dL"
+    },
+    {
+      "A": 2,
+      "B": "Heavy Metal Screen Ur",
+      "D": 6448,
+      "O": "RI"
     },
     {
       "A": 3,
@@ -22117,6 +25826,56 @@ export default [
       "V": "mg/dL"
     },
     {
+      "A": 1,
+      "B": "BLOOD BANK:",
+      "D": 16550,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "BLD BANK TESTS",
+      "D": 15739,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "BLOOD BANK STUDIES:",
+      "D": 17581,
+      "O": "RI"
+    },
+    {
+      "A": 3,
+      "B": "SICKLE CELL RBC PROFILE",
+      "D": 18471,
+      "O": "RI"
+    },
+    {
+      "A": 3,
+      "B": "ANTIBODY ID TESTING",
+      "D": 25292,
+      "O": "RI"
+    },
+    {
+      "A": 4,
+      "B": "ALBUMIN TITR",
+      "D": 1877,
+      "O": "RI",
+      "T": "titer"
+    },
+    {
+      "A": 4,
+      "B": "Ab Titr-Saline",
+      "D": 1876,
+      "O": "RI",
+      "T": "titer"
+    },
+    {
+      "A": 3,
+      "B": "Trans Compl Eval",
+      "D": 6312,
+      "O": "RI"
+    },
+    {
       "A": 3,
       "B": "Cold Aggl Ser Titr",
       "D": 5136,
@@ -22151,12 +25910,60 @@ export default [
       "V": "%"
     },
     {
+      "A": 3,
+      "B": "NB/MAT PROFILE",
+      "D": 15205,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "RH PHENOTYPE:",
+      "D": 13835,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "DNR BMT Ag/Ab TEST:",
+      "D": 16758,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "BLOOD PRODUCTS:",
+      "D": 15636,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "APHERESIS PROCEDURES",
+      "D": 25293,
+      "O": "RI"
+    },
+    {
+      "A": 1,
+      "B": "SURGICAL PATHOLOGY & CYTOLOGY",
+      "D": 26107,
+      "O": "RI"
+    },
+    {
       "A": 2,
       "B": "SURGICAL PATH",
       "D": 6226,
       "E": "11529-5",
       "F": "Surgical pathology study",
       "O": "LN"
+    },
+    {
+      "A": 2,
+      "B": "Calculus Analysis Panel",
+      "D": 25247,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "ANATOMIC PATHOLOGY REPORTS:",
+      "D": 25482,
+      "O": "RI"
     },
     {
       "A": 3,
@@ -22168,12 +25975,330 @@ export default [
     },
     {
       "A": 2,
+      "B": "BIOPSIES",
+      "D": 26523,
+      "O": "RI"
+    },
+    {
+      "A": 3,
+      "B": "Excisional Biopsy",
+      "D": 10750,
+      "O": "RI",
+      "T": "# OF"
+    },
+    {
+      "A": 3,
+      "B": "PUNCH BIOPSY",
+      "D": 10749,
+      "O": "RI",
+      "T": "# OF"
+    },
+    {
+      "A": 3,
+      "B": "Shave Biopsy",
+      "D": 10748,
+      "O": "RI",
+      "T": "# OF"
+    },
+    {
+      "A": 2,
+      "B": "SURG PATH TISSUE STAINS",
+      "D": 16273,
+      "O": "RI"
+    },
+    {
+      "A": 3,
+      "B": "Non-Gyn Cyto&FNA",
+      "D": 19561,
+      "O": "RI"
+    },
+    {
+      "A": 3,
+      "B": "GYN CYTOLOGY:",
+      "D": 25535,
+      "O": "RI"
+    },
+    {
+      "A": 4,
+      "B": "PT Refu Cerv Pap",
+      "D": 6656,
+      "O": "RI",
+      "T": "(-1)"
+    },
+    {
+      "A": 4,
+      "B": "Pap Screened Adequate Age",
+      "D": 23188,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "CYTOGENETICS",
+      "D": 11311,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "Biochemical Genetics Report",
+      "D": 41647,
+      "O": "RI"
+    },
+    {
+      "A": 1,
+      "B": "REFERRAL LAB",
+      "D": 22108,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "Parathyroid Tiss Cryopreservn",
+      "D": 29430,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "REFERRAL TESTS",
+      "D": 23110,
+      "O": "RI"
+    },
+    {
+      "A": 1,
+      "B": "CARDIOLOGY STUDIES",
+      "D": 7496,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "ASD/PFO Closure Report",
+      "D": 42538,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "MIBG SPEC Cardiac Scan",
+      "D": 18149,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "Cardiac Gated Rest Scn",
+      "D": 6874,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "MUGA Scan Resting",
+      "D": 8505,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "Cardiac Gated Stress/Rest Scn",
+      "D": 8506,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "Cardiac Infarct Scan",
+      "D": 6873,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "Heart Biopsy",
+      "D": 42536,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "Heart Transplant Scan",
+      "D": 24111,
+      "O": "RI"
+    },
+    {
+      "A": 2,
       "B": "Myocardial Perfusion Scan",
       "D": 26508,
       "E": "24750-2",
       "F": "NM Heart Views at rest and W Tl-201 IV",
       "N": "NM Hrt Views Rest+W Tl201 IV",
       "O": "LN"
+    },
+    {
+      "A": 2,
+      "B": "Myoperf Adeno",
+      "D": 26017,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "Myoperf Adeno W Rest",
+      "D": 25701,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "Myoperf Adeno W Rest & EF Scan",
+      "D": 25683,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "Myoperf Bike & Rest Scan",
+      "D": 24021,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "Myoperf Bike & Rest W EF Scan",
+      "D": 23748,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "Myoperf Bike Scan",
+      "D": 24022,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "Myoperf Bike W EF Scan",
+      "D": 24023,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "Myoperf Dipyrim & Rest Scan",
+      "D": 23751,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "Myoperf Dipyrim & Rest W EF Scan",
+      "D": 23750,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "Myoperf Dipyrim Scan",
+      "D": 24024,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "Myoperf Dobut & Rest W EF Scan",
+      "D": 23749,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "Myoperf Dobut W EF",
+      "D": 23667,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "Myoperf Treadmill & Rest W EF Sc",
+      "D": 24029,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "Myoperf Dobut & Rest Scan",
+      "D": 24025,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "Myoperf Dobut Scan",
+      "D": 24026,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "Myoperf Rest W EF Scan",
+      "D": 24027,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "Myoperf Treadmill & Rest Scan",
+      "D": 24028,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "Myoperf Treadmill Scan",
+      "D": 23753,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "Myoperf Treadmill W EF Scan",
+      "D": 23752,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "Lexiscan Stress ECG",
+      "D": 30347,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "Unspecified Coronary Procedure",
+      "D": 42539,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "Valve Procedure",
+      "D": 42540,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "CARDIAC STRESS MYOVIEW",
+      "D": 23724,
+      "O": "RI"
+    },
+    {
+      "A": 3,
+      "B": "AoV Area Cont Eq VTI",
+      "D": 26770,
+      "O": "RI"
+    },
+    {
+      "A": 3,
+      "B": "AoV VTI",
+      "D": 26975,
+      "O": "RI",
+      "T": "CM"
+    },
+    {
+      "A": 3,
+      "B": "Myocardial Perf Pharm Stress",
+      "D": 30350,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "CARDIOPULMONARY SX&FINDINGS",
+      "D": 26525,
+      "O": "RI"
+    },
+    {
+      "A": 3,
+      "B": "Accur Bpunit",
+      "D": 4141,
+      "O": "RI"
+    },
+    {
+      "A": 3,
+      "B": "Angina(#/Mo)",
+      "D": 265,
+      "O": "RI",
+      "T": "#/MO"
     },
     {
       "A": 3,
@@ -22185,6 +26310,13 @@ export default [
       "O": "LN",
       "U": "/day",
       "V": "/d"
+    },
+    {
+      "A": 3,
+      "B": "Chest Pain(#/Mo)",
+      "D": 4926,
+      "O": "RI",
+      "T": "#/MO"
     },
     {
       "A": 3,
@@ -22215,6 +26347,51 @@ export default [
     },
     {
       "A": 3,
+      "B": "Orthop#Pilws",
+      "D": 269,
+      "O": "RI",
+      "T": "# PILLOWS"
+    },
+    {
+      "A": 3,
+      "B": "PND #/Mo",
+      "D": 268,
+      "O": "RI"
+    },
+    {
+      "A": 3,
+      "B": "Rales %Chst",
+      "D": 892,
+      "O": "RI",
+      "T": "%"
+    },
+    {
+      "A": 3,
+      "B": "S3 Gallop",
+      "D": 781,
+      "O": "RI"
+    },
+    {
+      "A": 3,
+      "B": "Use/Wk Bpunit",
+      "D": 4140,
+      "O": "RI"
+    },
+    {
+      "A": 3,
+      "B": "Walking Toleranc",
+      "D": 868,
+      "O": "RI",
+      "T": "BLKS"
+    },
+    {
+      "A": 2,
+      "B": "SWAN DATA",
+      "D": 7857,
+      "O": "RI"
+    },
+    {
+      "A": 3,
       "B": "MAP",
       "D": 7860,
       "E": "8478-0",
@@ -22229,6 +26406,19 @@ export default [
       "T": "mm Hg",
       "U": "mmHg",
       "V": "mm[Hg]"
+    },
+    {
+      "A": 2,
+      "B": "EKG MEASURES",
+      "D": 19217,
+      "O": "RI"
+    },
+    {
+      "A": 3,
+      "B": "Prematures/Min",
+      "D": 288,
+      "O": "RI",
+      "T": "/MIN"
     },
     {
       "A": 3,
@@ -22481,6 +26671,24 @@ export default [
     },
     {
       "A": 3,
+      "B": "Signal Averaged EKG",
+      "D": 16512,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "Cardiac Stress Test Report",
+      "D": 27704,
+      "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "CARDIAC ECHO MEASURES",
+      "D": 8627,
+      "O": "RI"
+    },
+    {
+      "A": 3,
       "B": "LV Diastolic Volume TE SAX L",
       "D": 26771,
       "E": "80007-8",
@@ -22501,6 +26709,24 @@ export default [
       "O": "LN",
       "U": "%",
       "V": "%"
+    },
+    {
+      "A": 3,
+      "B": "LV Mass TE SAX L",
+      "D": 26773,
+      "O": "RI"
+    },
+    {
+      "A": 3,
+      "B": "LV Stroke Volume TE",
+      "D": 26774,
+      "I": "60.0-100.0",
+      "J": 60,
+      "K": 100,
+      "O": "RI",
+      "T": "CC",
+      "U": "cm3",
+      "V": "cm3"
     },
     {
       "A": 3,
@@ -22548,6 +26774,19 @@ export default [
     },
     {
       "A": 3,
+      "B": "Regional Wall Peak Dose %FM",
+      "D": 26787,
+      "O": "RI",
+      "T": "%"
+    },
+    {
+      "A": 3,
+      "B": "Regional Wall Peak Dose LAD",
+      "D": 26789,
+      "O": "RI"
+    },
+    {
+      "A": 3,
       "B": "Aorta at Sinotubular Diam",
       "D": 26994,
       "E": "59116-4",
@@ -22557,6 +26796,16 @@ export default [
       "T": "CM",
       "U": "cm",
       "V": "cm"
+    },
+    {
+      "A": 3,
+      "B": "Aorta at Sinuses Diameter",
+      "D": 26980,
+      "I": "2.4-4.0",
+      "J": 2.4,
+      "K": 4,
+      "O": "RI",
+      "T": "CM"
     },
     {
       "A": 3,
@@ -22608,6 +26857,22 @@ export default [
     },
     {
       "A": 3,
+      "B": "Aortic Tube Diam",
+      "D": 27011,
+      "I": ">4",
+      "J": 4,
+      "O": "RI",
+      "T": "CM"
+    },
+    {
+      "A": 3,
+      "B": "AoV Area Cont Eq pk",
+      "D": 26796,
+      "O": "RI",
+      "T": "cm2"
+    },
+    {
+      "A": 3,
       "B": "AoV Mean Gradient",
       "D": 26974,
       "E": "18066-1",
@@ -22644,6 +26909,21 @@ export default [
     },
     {
       "A": 3,
+      "B": "AoV Stroke Vol",
+      "D": 27013,
+      "O": "RI",
+      "T": "CC",
+      "U": "cm3",
+      "V": "cm3"
+    },
+    {
+      "A": 3,
+      "B": "AoV Velocity Ejection Time",
+      "D": 26799,
+      "O": "RI"
+    },
+    {
+      "A": 3,
       "B": "Ascending Aorta Diameter",
       "D": 26981,
       "E": "18012-5",
@@ -22653,6 +26933,27 @@ export default [
       "T": "CM",
       "U": "cm",
       "V": "cm"
+    },
+    {
+      "A": 3,
+      "B": "CSE (2D) Aorta",
+      "D": 5746,
+      "O": "RI",
+      "T": "CM"
+    },
+    {
+      "A": 3,
+      "B": "CSE (2D) Mitral",
+      "D": 5749,
+      "O": "RI",
+      "T": "sq cm"
+    },
+    {
+      "A": 3,
+      "B": "Diastolic Slope",
+      "D": 26976,
+      "O": "RI",
+      "T": "cm/sec2"
     },
     {
       "A": 3,
@@ -22781,6 +27082,12 @@ export default [
       "O": "LN",
       "U": "ratio",
       "V": "{ratio}"
+    },
+    {
+      "A": 3,
+      "B": "LV Outflow Tract AoV Vel Ratio",
+      "D": 26704,
+      "O": "RI"
     },
     {
       "A": 3,
@@ -22986,6 +27293,20 @@ export default [
     },
     {
       "A": 3,
+      "B": "Mitral Valve C to D Interval",
+      "D": 29994,
+      "O": "RI",
+      "T": "MS"
+    },
+    {
+      "A": 3,
+      "B": "Mitral Valve D to C Interval",
+      "D": 26983,
+      "O": "RI",
+      "T": "MS"
+    },
+    {
+      "A": 3,
       "B": "Mitral Valve Decelaration Time",
       "D": 26979,
       "E": "17999-4",
@@ -23188,6000 +27509,6 @@ export default [
       "T": "CM",
       "U": "cm",
       "V": "cm"
-    },
-    {
-      "A": 3,
-      "B": "Right Atrial Press(Enterd Value)",
-      "D": 26992,
-      "E": "60996-6",
-      "F": "Right atrial pressure",
-      "N": "RA pressure",
-      "O": "LN",
-      "T": "mm Hg",
-      "U": "mmHg",
-      "V": "mm[Hg]"
-    },
-    {
-      "A": 3,
-      "B": "Right Ventricle Systolic Press",
-      "D": 26995,
-      "E": "8432-7",
-      "F": "Right ventricular Intrachamber systolic pressure",
-      "H": "mm Hg",
-      "I": "17 - 35",
-      "J": 17,
-      "K": 35,
-      "L": 51,
-      "N": "RV Intrachamber sys pres",
-      "O": "LN",
-      "T": "mm Hg",
-      "U": "mmHg",
-      "V": "mm[Hg]"
-    },
-    {
-      "A": 3,
-      "B": "TricuspidV Peak Gradient",
-      "D": 26754,
-      "E": "18055-4",
-      "F": "Tricuspid valve Maximum gradient during diastole [Pressure] by US.doppler",
-      "I": "≥5",
-      "J": 5,
-      "N": "TV Max grad diastole DOP",
-      "O": "LN",
-      "T": "mm Hg",
-      "U": "mmHg",
-      "V": "mm[Hg]"
-    },
-    {
-      "A": 3,
-      "B": "TricuspidV Peak Velocity",
-      "D": 26755,
-      "E": "11712-7",
-      "F": "Tricuspid valve Peak systolic flow by US.doppler",
-      "N": "TV Vmax sys DOP",
-      "O": "LN",
-      "T": "cm/s",
-      "U": "cm/s",
-      "V": "m/s; cm/s"
-    },
-    {
-      "A": 3,
-      "B": "TricuspidV Mean Gradient DP",
-      "D": 29948,
-      "E": "18056-2",
-      "F": "Tricuspid valve Mean gradient during diastole [Pressure] by US.doppler",
-      "N": "TV Mean grad diastole DOP",
-      "O": "LN",
-      "T": "mm Hg",
-      "U": "mmHg",
-      "V": "mm[Hg]"
-    },
-    {
-      "A": 3,
-      "B": "TricuspidV Mean Velocity DP",
-      "D": 29947,
-      "E": "20350-5",
-      "F": "Tricuspid valve Mean blood flow by US.doppler",
-      "N": "TV Vmean DOP",
-      "O": "LN",
-      "T": "cm/s",
-      "U": "cm/s",
-      "V": "m/s; cm/s"
-    },
-    {
-      "A": 3,
-      "B": "TricuspidV Vel Time Integral DP",
-      "D": 29946,
-      "E": "18175-0",
-      "F": "Tricuspid valve Velocity-time integral during diastole by US.doppler",
-      "N": "TV VTI diastole DOP",
-      "O": "LN",
-      "T": "CM",
-      "U": "cm",
-      "V": "cm"
-    },
-    {
-      "A": 3,
-      "B": "LMCA % Stenosis",
-      "D": 18561,
-      "E": "78902-4",
-      "F": "Percent stenosis of Left main coronary artery by Cardiac angiogram",
-      "N": "Percent sten of LM by Angiogram",
-      "O": "LN",
-      "T": "%",
-      "U": "%",
-      "V": "%"
-    },
-    {
-      "A": 3,
-      "B": "pLAD % Stenosis",
-      "D": 18562,
-      "E": "78903-2",
-      "F": "Percent stenosis of Proximal left anterior descending artery by Cardiac angiogram",
-      "N": "Percent sten of pLAD by Angiogram",
-      "O": "LN",
-      "T": "%",
-      "U": "%",
-      "V": "%"
-    },
-    {
-      "A": 3,
-      "B": "mLAD % Stenosis",
-      "D": 18563,
-      "E": "78904-0",
-      "F": "Percent stenosis of Mid left anterior descending artery by Cardiac angiogram",
-      "N": "Percent sten of mLAD by Angiogram",
-      "O": "LN",
-      "T": "%",
-      "U": "%",
-      "V": "%"
-    },
-    {
-      "A": 3,
-      "B": "Dlad % Stenosis",
-      "D": 18564,
-      "E": "78905-7",
-      "F": "Percent stenosis of Distal left anterior descending artery by Cardiac angiogram",
-      "N": "Percent sten of dLAD by Angiogram",
-      "O": "LN",
-      "T": "%",
-      "U": "%",
-      "V": "%"
-    },
-    {
-      "A": 3,
-      "B": "D1 % Stenosis",
-      "D": 18826,
-      "E": "78906-5",
-      "F": "Percent stenosis of First diagonal artery by Cardiac angiogram",
-      "N": "Percent sten of D1 by Angiogram",
-      "O": "LN",
-      "T": "%",
-      "U": "%",
-      "V": "%"
-    },
-    {
-      "A": 3,
-      "B": "pLCx % Stenosis",
-      "D": 18565,
-      "E": "78911-5",
-      "F": "Percent stenosis of Posterolateral branch from left circumflex artery by Cardiac angiogram",
-      "N": "Percent sten of L-PLB by Angiogram",
-      "O": "LN",
-      "T": "%",
-      "U": "%",
-      "V": "%"
-    },
-    {
-      "A": 3,
-      "B": "mLCx % Stenosis",
-      "D": 18825,
-      "E": "78910-7",
-      "F": "Percent stenosis of Mid and distal left circumflex artery by Cardiac angiogram",
-      "N": "Percent sten of LCx by Angiogram",
-      "O": "LN",
-      "T": "%",
-      "U": "%",
-      "V": "%"
-    },
-    {
-      "A": 3,
-      "B": "OM1 % Stenosis",
-      "D": 18567,
-      "E": "78909-9",
-      "F": "Percent stenosis of Obtuse marginal artery by Cardiac angiogram",
-      "N": "Percent sten of OM by Angiogram",
-      "O": "LN",
-      "T": "%",
-      "U": "%",
-      "V": "%"
-    },
-    {
-      "A": 3,
-      "B": "pRCA % Stenosis",
-      "D": 18570,
-      "E": "78897-6",
-      "F": "Percent stenosis of Proximal right coronary artery by Cardiac angiogram",
-      "N": "Percent sten of pRCA by Angiogram",
-      "O": "LN",
-      "T": "%",
-      "U": "%",
-      "V": "%"
-    },
-    {
-      "A": 3,
-      "B": "mRCA % Stenosis",
-      "D": 18571,
-      "E": "78898-4",
-      "F": "Percent stenosis of Mid right coronary artery by Cardiac angiogram",
-      "N": "Percent sten of mRCA by Angiogram",
-      "O": "LN",
-      "T": "%",
-      "U": "%",
-      "V": "%"
-    },
-    {
-      "A": 3,
-      "B": "dRCA % Stenosis",
-      "D": 18572,
-      "E": "78899-2",
-      "F": "Percent stenosis of Distal right coronary artery by Cardiac angiogram",
-      "N": "Percent sten of dRCA by Angiogram",
-      "O": "LN",
-      "T": "%",
-      "U": "%",
-      "V": "%"
-    },
-    {
-      "A": 3,
-      "B": "Right Atrial MBP Cath",
-      "D": 18588,
-      "E": "8400-4",
-      "F": "Right atrial Intrachamber mean pressure",
-      "H": "mm Hg",
-      "I": "1 - 5",
-      "J": 1,
-      "K": 5,
-      "N": "RA Intrachamber mean pres",
-      "O": "LN",
-      "T": "mm Hg",
-      "U": "mmHg",
-      "V": "mm[Hg]"
-    },
-    {
-      "A": 3,
-      "B": "Right Ventricle DBP Cath",
-      "D": 18616,
-      "E": "8377-4",
-      "F": "Right ventricular Intrachamber diastolic pressure",
-      "H": "mm Hg",
-      "I": "1 - 7",
-      "J": 1,
-      "K": 7,
-      "L": 51,
-      "N": "RV Intrachamber dias pres",
-      "O": "LN",
-      "T": "mm Hg",
-      "U": "mmHg",
-      "V": "mm[Hg]"
-    },
-    {
-      "A": 3,
-      "B": "Pulmonary Artery MBP Cath",
-      "D": 18614,
-      "E": "8414-5",
-      "F": "Pulmonary artery Mean blood pressure",
-      "H": "mm Hg",
-      "I": "9 - 20",
-      "J": 9,
-      "K": 20,
-      "N": "PA BP mean",
-      "O": "LN",
-      "T": "mm Hg",
-      "U": "mmHg",
-      "V": "mm[Hg]"
-    },
-    {
-      "A": 3,
-      "B": "Aortic Valve Area(2D)",
-      "D": 18590,
-      "E": "29487-6",
-      "F": "Aortic valve Orifice [Area] by US.2D+Measured by planimetry",
-      "N": "AV Orifice Area US.2D.PLN",
-      "O": "LN",
-      "T": "CM",
-      "U": "cm2",
-      "V": "cm2"
-    },
-    {
-      "A": 3,
-      "B": "Mitral Valve Area(2D)",
-      "D": 18596,
-      "E": "20273-9",
-      "F": "Mitral valve Diameter 2 by US",
-      "N": "MV Diam 2 US",
-      "O": "LN",
-      "T": "CM",
-      "U": "cm",
-      "V": "cm"
-    },
-    {
-      "A": 2,
-      "B": "Colonoscopy",
-      "D": 5009,
-      "E": "28022-2",
-      "F": "Colonoscopy Study observation Narrative",
-      "N": "Colonoscopy Study",
-      "O": "LN"
-    },
-    {
-      "A": 3,
-      "B": "Colon Polyp Size",
-      "D": 6942,
-      "E": "33756-8",
-      "F": "Polyp size greatest dimension",
-      "G": "Polyp size greatest dimension length (Spec)",
-      "N": "Polyp size greatest dim",
-      "O": "LN",
-      "T": "CM",
-      "U": "cm",
-      "V": "cm"
-    },
-    {
-      "A": 2,
-      "B": "Endoscopy",
-      "D": 3713,
-      "E": "19776-4",
-      "F": "Relevant Hx and Px for procedure Endoscopy",
-      "N": "Relevant H&P Endoscopy",
-      "O": "LN"
-    },
-    {
-      "A": 2,
-      "B": "Sigmoidoscopy",
-      "D": 3761,
-      "E": "28027-1",
-      "F": "Flexible sigmoidoscopy Study observation",
-      "N": "FSIG Study",
-      "O": "LN"
-    },
-    {
-      "A": 3,
-      "B": "FVC Pre BD",
-      "D": 870,
-      "E": "19877-0",
-      "F": "Forced vital capacity [Volume] Respiratory system --pre bronchodilation",
-      "N": "FVC pre BD Vol Respiratory",
-      "O": "LN",
-      "T": "LITERS",
-      "U": "L",
-      "V": "L"
-    },
-    {
-      "A": 3,
-      "B": "FVC %Pred",
-      "D": 4908,
-      "E": "19869-7",
-      "F": "Forced vital capacity [Volume] Respiratory system Predicted",
-      "N": "FVC Vol Respiratory Predicted",
-      "O": "LN",
-      "T": "%",
-      "U": "L",
-      "V": "L"
-    },
-    {
-      "A": 3,
-      "B": "FVC Post BD",
-      "D": 4301,
-      "E": "19875-4",
-      "F": "Forced vital capacity [Volume] Respiratory system --post bronchodilation",
-      "N": "FVC p BD Vol Respiratory",
-      "O": "LN",
-      "T": "LITERS",
-      "U": "L",
-      "V": "L"
-    },
-    {
-      "A": 3,
-      "B": "FEV1 Pre BD",
-      "D": 871,
-      "E": "20157-4",
-      "F": "FEV1 --pre bronchodilation",
-      "N": "FEV1 pre BD",
-      "O": "LN",
-      "T": "LITERS",
-      "U": "L",
-      "V": "L"
-    },
-    {
-      "A": 3,
-      "B": "FEV1 %Pred",
-      "D": 4909,
-      "E": "20152-5",
-      "F": "FEV1/Predicted",
-      "N": "FEV1/Predicted",
-      "O": "LN",
-      "T": "%",
-      "U": "%",
-      "V": "%"
-    },
-    {
-      "A": 3,
-      "B": "FEV1 Post BD",
-      "D": 4910,
-      "E": "20155-8",
-      "F": "FEV1 --post bronchodilation",
-      "N": "FEV1 p BD",
-      "O": "LN",
-      "T": "LITERS",
-      "U": "L",
-      "V": "L"
-    },
-    {
-      "A": 3,
-      "B": "FEF25-75 Pre BD",
-      "D": 4911,
-      "E": "69972-8",
-      "F": "FEF 25-75% --pre bronchodilation",
-      "N": "FEF 25-75% pre BD",
-      "O": "LN",
-      "T": "LITERS/SEC",
-      "U": "L/s",
-      "V": "L/s"
-    },
-    {
-      "A": 3,
-      "B": "FEF25-75 Aft Dil",
-      "D": 4913,
-      "E": "69973-6",
-      "F": "FEF 25-75% --post bronchodilation",
-      "N": "FEF 25-75% p BD",
-      "O": "LN",
-      "T": "LITERS/SEC",
-      "U": "L/s",
-      "V": "L/s"
-    },
-    {
-      "A": 3,
-      "B": "FEF25-75 %Pre BD%Predicted",
-      "D": 4912,
-      "E": "69971-0",
-      "F": "FEF 25-75% Predicted",
-      "N": "FEF 25-75% Predicted",
-      "O": "LN",
-      "T": "%",
-      "U": "L/s",
-      "V": "L/s"
-    },
-    {
-      "A": 3,
-      "B": "O2 Rest",
-      "D": 9507,
-      "E": "59417-6",
-      "F": "Oxygen saturation in Arterial blood by Pulse oximetry --resting",
-      "N": "SaO2 Resting % BldA PulseOx",
-      "O": "LN",
-      "T": "LITERS",
-      "U": "%",
-      "V": "%"
-    },
-    {
-      "A": 3,
-      "B": "O2 Exercise",
-      "D": 9508,
-      "E": "59412-7",
-      "F": "Oxygen saturation in Arterial blood by Pulse oximetry --post exercise",
-      "N": "SaO2 p Exc % BldA PulseOx",
-      "O": "LN",
-      "T": "LITERS",
-      "U": "%",
-      "V": "%"
-    },
-    {
-      "A": 3,
-      "B": "Asthma Exacerbations",
-      "D": 897,
-      "E": "55404-8",
-      "F": "Asthma spells per week",
-      "N": "Asthma spells 1W nRate",
-      "O": "LN",
-      "T": "#/MO",
-      "U": "/wk",
-      "V": "{#}/wk"
-    },
-    {
-      "A": 3,
-      "B": "Sputm Oz/Dy",
-      "D": 869,
-      "E": "3161-7",
-      "F": "Volume [Flow] of 24 hour Sputum",
-      "G": "Specimen volume 24H Flow (Sput)",
-      "N": "Specimen vol 24h Spt-vRate",
-      "O": "LN",
-      "T": "OZ(FL)",
-      "U": "mL/24hr",
-      "V": "mL/(24.h)"
-    },
-    {
-      "A": 2,
-      "B": "NUCLEAR MEDICINE",
-      "D": 3597,
-      "E": "18757-5",
-      "F": "Deprecated Nuclear medicine study",
-      "N": "Deprecated",
-      "O": "LN"
-    },
-    {
-      "A": 3,
-      "B": "Bone Densitometry",
-      "D": 23059,
-      "E": "38268-9",
-      "F": "DXA Skeletal system Views for bone density",
-      "N": "DXA Skeletal Sys Views for BMD",
-      "O": "LN"
-    },
-    {
-      "A": 3,
-      "B": "Hospitalizations",
-      "D": 8,
-      "E": "11337-3",
-      "F": "History of Hospitalization",
-      "N": "Hx of Hospitalization",
-      "O": "LN",
-      "T": "# OF"
-    },
-    {
-      "A": 3,
-      "B": "Length of Stay",
-      "D": 7836,
-      "E": "78033-8",
-      "F": "Hospital stay duration",
-      "N": "Hosp stay duration",
-      "O": "LN",
-      "T": "DAYS",
-      "U": "d",
-      "V": "d"
-    },
-    {
-      "A": 3,
-      "B": "Headaches/Mo",
-      "D": 899,
-      "E": "65376-6",
-      "F": "About how often do your severe headaches occur [PhenX]",
-      "N": "Severe headaches avg freq nRate PhenX",
-      "O": "LN",
-      "T": "#/MO",
-      "U": "/mo",
-      "V": "{#}/wk;{#}/mo;{#}/a"
-    },
-    {
-      "A": 3,
-      "B": "Seizures/Mo",
-      "D": 900,
-      "E": "55414-7",
-      "F": "Seizures per month",
-      "N": "Seizures/month nRate",
-      "O": "LN",
-      "T": "#/MO",
-      "U": "/mo",
-      "V": "/mo"
-    },
-    {
-      "A": 3,
-      "B": "Cervical Dilatation",
-      "D": 6620,
-      "E": "11961-0",
-      "F": "Cervix [Length] US",
-      "N": "Cervix Length US.meas",
-      "O": "LN",
-      "T": "CM",
-      "U": "cm",
-      "V": "cm"
-    },
-    {
-      "A": 3,
-      "B": "Effacement",
-      "D": 6621,
-      "E": "11867-9",
-      "F": "Effacement Cervix",
-      "N": "Effacement Cervix",
-      "O": "LN",
-      "T": "%"
-    },
-    {
-      "A": 3,
-      "B": "Fundus Height",
-      "D": 6525,
-      "E": "11881-0",
-      "F": "Uterus Fundal height Tape measure",
-      "N": "Uterus Fundal height Tape measure",
-      "O": "LN",
-      "T": "CM",
-      "U": "cm",
-      "V": "cm"
-    },
-    {
-      "A": 3,
-      "B": "Fetal Heart Rate",
-      "D": 6547,
-      "E": "11948-7",
-      "F": "Fetal Heart rate US",
-      "N": "Fet Heart rate US.meas",
-      "O": "LN",
-      "T": "/MIN",
-      "U": "beats/min",
-      "V": "{beats}/min"
-    },
-    {
-      "A": 3,
-      "B": "Abortions",
-      "D": 8994,
-      "E": "11612-9",
-      "F": "[#] Abortions",
-      "H": "# OF",
-      "I": "0 - 25",
-      "J": 0,
-      "K": 25,
-      "L": 25,
-      "N": "Abortions",
-      "O": "LN",
-      "T": "# OF",
-      "V": "{#}"
-    },
-    {
-      "A": 3,
-      "B": "Gravida",
-      "D": 8991,
-      "E": "64708-1",
-      "F": "Including live births, stillbirths, miscarriages, abortions, and tubal and other ectopic pregnancies, how many times have you been pregnant [PhenX]",
-      "N": "Number pregnancy PhenX",
-      "O": "LN",
-      "V": "{#}"
-    },
-    {
-      "A": 3,
-      "B": "Living Children",
-      "D": 18203,
-      "E": "11638-4",
-      "F": "[#] Births.still living",
-      "N": "Births.still living",
-      "O": "LN",
-      "V": "{#}"
-    },
-    {
-      "A": 3,
-      "B": "Menarche",
-      "D": 13559,
-      "E": "42798-9",
-      "F": "Age at menarche",
-      "G": "Age at menarche",
-      "N": "Age @ Menarche Time Patient",
-      "O": "LN",
-      "U": "a",
-      "V": "a"
-    },
-    {
-      "A": 3,
-      "B": "Pre Pregnant Weight",
-      "D": 13564,
-      "E": "8348-5",
-      "F": "Body weight Measured --pre pregnancy",
-      "G": "Weight lbs pre-pregnancy",
-      "N": "Weight pre pregnancy Measured",
-      "O": "LN",
-      "T": "LBS",
-      "U": "lbs",
-      "V": "[lb_av]"
-    },
-    {
-      "A": 3,
-      "B": "Preterm",
-      "D": 17854,
-      "E": "11637-6",
-      "F": "[#] Births.preterm",
-      "N": "Births.preterm",
-      "O": "LN",
-      "V": "{#}"
-    },
-    {
-      "A": 3,
-      "B": "Stillborns",
-      "D": 13563,
-      "E": "57062-2",
-      "F": "[#] Births.stillborn",
-      "N": "Births.stillborn",
-      "O": "LN",
-      "T": "# OF",
-      "V": "{#}"
-    },
-    {
-      "A": 3,
-      "B": "Term",
-      "D": 17855,
-      "E": "11639-2",
-      "F": "[#] Births.term",
-      "N": "Births.term",
-      "O": "LN",
-      "V": "{#}"
-    },
-    {
-      "A": 3,
-      "B": "Birth Weight Hx Baby A",
-      "D": 13558,
-      "E": "8339-4",
-      "F": "Birth weight Measured",
-      "H": "pounds",
-      "I": "5 - 10",
-      "J": 5,
-      "K": 10,
-      "L": 12,
-      "M": 3,
-      "N": "Birth weight Measured",
-      "O": "LN",
-      "T": "LBS",
-      "U": "g",
-      "V": "g"
-    },
-    {
-      "A": 3,
-      "B": "Monthly Income",
-      "D": 13512,
-      "E": "63586-2",
-      "F": "What was your best estimate of the total income of all family members from all sources, before taxes, in last year [PhenX]",
-      "N": "Annual family income nRate PhenX",
-      "O": "LN",
-      "T": "DOLLARS",
-      "U": "dollars",
-      "V": "/a"
-    },
-    {
-      "A": 3,
-      "B": "People In Household",
-      "D": 13515,
-      "E": "86639-2",
-      "F": "Household size [#]",
-      "N": "Household size",
-      "O": "LN",
-      "V": "{#}"
-    },
-    {
-      "A": 3,
-      "B": "Yrs Attnd School",
-      "D": 7678,
-      "E": "82590-1",
-      "F": "Years of education [#] - Reported",
-      "N": "Y of education Reported",
-      "O": "LN",
-      "U": "a",
-      "V": "a"
-    },
-    {
-      "A": 3,
-      "B": "Cig Amount/Day",
-      "D": 13554,
-      "E": "64218-1",
-      "F": "How many cigarettes do you smoke per day now [PhenX]",
-      "N": "Cigarettes quant D now nRate PhenX",
-      "O": "LN",
-      "T": "cigs/day",
-      "U": "/day",
-      "V": "/d"
-    },
-    {
-      "A": 3,
-      "B": "Cigaret #/Day Pre-Preg",
-      "D": 14350,
-      "E": "64794-1",
-      "F": "In the 3 months before you got pregnant, how many cigarettes did you smoke on an average day [PhenX]",
-      "N": "Cigarettes before preg per D PhenX",
-      "O": "LN",
-      "U": "/day",
-      "V": "{#}/d"
-    },
-    {
-      "A": 3,
-      "B": "ETOH Amount/Day",
-      "D": 13553,
-      "E": "11287-0",
-      "F": "Alcoholic drinks per drinking day - Reported",
-      "H": "#drinks/day",
-      "I": "0 - 2",
-      "J": 0,
-      "K": 2,
-      "N": "Alcoholic drinks/drinking D Reported",
-      "O": "LN",
-      "T": "#drinks/day",
-      "U": "/day",
-      "V": "/d"
-    },
-    {
-      "A": 3,
-      "B": "ETOH Days/Mo Pre-Preg",
-      "D": 14352,
-      "E": "64796-6",
-      "F": "During the 3 months before you got pregnant, how many alcoholic drinks did you have in an average week [PhenX]",
-      "N": "Alc drinks per W 3Mo before preg PhenX",
-      "O": "LN",
-      "U": "/wk",
-      "V": "{#}/wk"
-    },
-    {
-      "A": 3,
-      "B": "Smoker 0-1",
-      "D": 5424,
-      "E": "64234-8",
-      "F": "Current smoker",
-      "N": "Current smoker",
-      "O": "LN"
-    },
-    {
-      "A": 4,
-      "B": "Diet Kcal/Dy",
-      "D": 419,
-      "E": "75302-0",
-      "F": "Calorie intake 24 hour",
-      "N": "Calorie intake 24h",
-      "O": "LN",
-      "T": "CAL",
-      "U": "Kcal/24hr",
-      "V": "Kcal/(24.h)"
-    },
-    {
-      "A": 3,
-      "B": "Age Baby's Father",
-      "D": 13521,
-      "E": "87296-0",
-      "F": "Age--at delivery Father",
-      "O": "LN",
-      "U": "a",
-      "V": "a"
-    },
-    {
-      "A": 3,
-      "B": "Yrs School Baby's Father",
-      "D": 13522,
-      "E": "87300-0",
-      "F": "Highest level of education Father",
-      "O": "LN"
-    },
-    {
-      "A": 3,
-      "B": "Yrs School Mom",
-      "D": 15047,
-      "E": "57712-2",
-      "F": "Highest level of education Mother",
-      "N": "Highest level of education Mother",
-      "O": "LN"
-    },
-    {
-      "A": 4,
-      "B": "Abd Circum Fetus A",
-      "D": 14036,
-      "E": "11979-2",
-      "F": "Fetal Abdomen Circumference US",
-      "H": "centimeters",
-      "I": "0 - 40",
-      "J": 0,
-      "K": 40,
-      "L": 40,
-      "N": "Fet Abd Circum US.meas",
-      "O": "LN",
-      "T": "CM",
-      "U": "cm",
-      "V": "cm"
-    },
-    {
-      "A": 4,
-      "B": "Abd Dia AP A",
-      "D": 16719,
-      "E": "11818-2",
-      "F": "Fetal Abdomen Diameter.anterior-posterior US",
-      "N": "Fet Abd Diam AP US.meas",
-      "O": "LN",
-      "T": "CM",
-      "U": "cm",
-      "V": "cm"
-    },
-    {
-      "A": 4,
-      "B": "Abd Dia Trans A",
-      "D": 16721,
-      "E": "11862-0",
-      "F": "Fetal Abdomen Diameter transverse US",
-      "N": "Fetal TAD US.meas",
-      "O": "LN",
-      "T": "CM",
-      "U": "cm",
-      "V": "cm"
-    },
-    {
-      "A": 4,
-      "B": "AF Index A",
-      "D": 16722,
-      "E": "11623-6",
-      "F": "Fetal Quadrant four Amniotic fluid index derived by US",
-      "N": "Fet Q4 AFI der US",
-      "O": "LN",
-      "T": "CM",
-      "U": "cm",
-      "V": "cm"
-    },
-    {
-      "A": 4,
-      "B": "Crown Rump Len A",
-      "D": 16723,
-      "E": "11957-8",
-      "F": "Fetal Crown Rump length US",
-      "N": "Fet CRL US.meas",
-      "O": "LN",
-      "T": "CM",
-      "U": "cm",
-      "V": "cm"
-    },
-    {
-      "A": 4,
-      "B": "EFW By US A",
-      "D": 14040,
-      "E": "11727-5",
-      "F": "Fetal Body weight estimated by US",
-      "H": "gm",
-      "I": "0 - 3000",
-      "J": 0,
-      "K": 3000,
-      "L": 3000,
-      "N": "Fet Weight US+est",
-      "O": "LN",
-      "T": "gm",
-      "U": "g",
-      "V": "g"
-    },
-    {
-      "A": 4,
-      "B": "Femur Len A",
-      "D": 14035,
-      "E": "11963-6",
-      "F": "Fetal Femur diaphysis [Length] US",
-      "H": "centimeters",
-      "I": "0 - 40",
-      "J": 0,
-      "K": 40,
-      "L": 40,
-      "N": "Fet Femur Length US.meas",
-      "O": "LN",
-      "T": "CM",
-      "U": "cm",
-      "V": "cm"
-    },
-    {
-      "A": 4,
-      "B": "GA By LMP A",
-      "D": 14042,
-      "E": "11885-1",
-      "F": "Gestational age Estimated from last menstrual period",
-      "H": "week",
-      "I": "0 - 40",
-      "J": 0,
-      "K": 40,
-      "L": 40,
-      "N": "GA Est from LMP",
-      "O": "LN",
-      "T": "week",
-      "U": "wk",
-      "V": "wk"
-    },
-    {
-      "A": 4,
-      "B": "GA By US A",
-      "D": 14038,
-      "E": "11888-5",
-      "F": "Gestational age US composite estimate",
-      "H": "week",
-      "I": "0 - 40",
-      "J": 0,
-      "K": 40,
-      "L": 40,
-      "N": "GA US.composite.est",
-      "O": "LN",
-      "T": "week",
-      "U": "wk",
-      "V": "wk"
-    },
-    {
-      "A": 4,
-      "B": "Head Abd Circ Ratio US Fetus A",
-      "D": 18786,
-      "E": "11947-9",
-      "F": "Head circumference/Abdominal circumference derived by US",
-      "N": "HC/AC der US",
-      "O": "LN",
-      "U": "ratio",
-      "V": "{ratio}"
-    },
-    {
-      "A": 4,
-      "B": "Head Circum Fetus A",
-      "D": 14037,
-      "E": "11984-2",
-      "F": "Fetal Head Circumference US",
-      "H": "centimeters",
-      "I": "0 - 40",
-      "J": 0,
-      "K": 40,
-      "L": 40,
-      "N": "Fet Head Circum US.meas",
-      "O": "LN",
-      "T": "CM",
-      "U": "cm",
-      "V": "cm"
-    },
-    {
-      "A": 4,
-      "B": "Head Dia Bipar A",
-      "D": 14033,
-      "E": "11820-8",
-      "F": "Fetal Head Diameter.biparietal US",
-      "H": "centimeters",
-      "I": "0 - 40",
-      "J": 0,
-      "K": 40,
-      "L": 40,
-      "N": "Fet BPD US.meas",
-      "O": "LN",
-      "T": "CM",
-      "U": "cm",
-      "V": "cm"
-    },
-    {
-      "A": 4,
-      "B": "Head Dia Ofd A",
-      "D": 14034,
-      "E": "11851-3",
-      "F": "Fetal Head Diameter.occipito-frontal US",
-      "H": "centimeters",
-      "I": "0 - 40",
-      "J": 0,
-      "K": 40,
-      "L": 40,
-      "N": "Fet Head OFD US.meas",
-      "O": "LN",
-      "T": "CM",
-      "U": "cm",
-      "V": "cm"
-    },
-    {
-      "A": 4,
-      "B": "Head Dia Ood A",
-      "D": 16720,
-      "E": "11852-1",
-      "F": "Fetal Head Diameter.outer to outer US",
-      "N": "Fet Head Diam.O-O US.meas",
-      "O": "LN",
-      "T": "CM",
-      "U": "cm",
-      "V": "cm"
-    },
-    {
-      "A": 4,
-      "B": "Humerus Len A",
-      "D": 19205,
-      "E": "11966-9",
-      "F": "Fetal Humerus diaphysis [Length] US",
-      "N": "Fet Humerus Length US.meas",
-      "O": "LN",
-      "T": "CM",
-      "U": "cm",
-      "V": "cm"
-    },
-    {
-      "A": 4,
-      "B": "Tibia Len A",
-      "D": 19201,
-      "E": "11968-5",
-      "F": "Fetal Tibia diaphysis [Length] US",
-      "N": "Fet Tibia Length US.meas",
-      "O": "LN",
-      "T": "CM",
-      "U": "cm",
-      "V": "cm"
-    },
-    {
-      "A": 4,
-      "B": "Ulna Len A",
-      "D": 19209,
-      "E": "11969-3",
-      "F": "Fetal Ulna diaphysis [Length] US",
-      "N": "Fet Ulna Length US.meas",
-      "O": "LN",
-      "T": "CM",
-      "U": "cm",
-      "V": "cm"
-    },
-    {
-      "A": 4,
-      "B": "Weight % Fetus A",
-      "D": 17624,
-      "E": "11766-3",
-      "F": "Fetal Body weight percentile Comparison of estimated fetal weight with standard population distribution at same estimated gestational age",
-      "N": "Fet Bdy weight Prctl Comp of EFW est GA",
-      "O": "LN",
-      "U": "%",
-      "V": "%"
-    },
-    {
-      "A": 4,
-      "B": "AF Vol B",
-      "D": 16784,
-      "E": "12167-3",
-      "F": "Fetal Amniotic fluid space [Interpretation] Volume.amniotic fluid US",
-      "N": "Fet AF space Imp Vol amnio fld US",
-      "O": "LN"
-    },
-    {
-      "A": 4,
-      "B": "GA Select B",
-      "D": 14611,
-      "E": "11884-4",
-      "F": "Gestational age Estimated",
-      "H": "week",
-      "I": "0 - 4.1",
-      "J": 0,
-      "K": 4.1,
-      "L": 4.4,
-      "N": "GA Clin est",
-      "O": "LN",
-      "T": "week",
-      "U": "wk",
-      "V": "wk"
-    },
-    {
-      "A": 3,
-      "B": "Weight Admission",
-      "D": 14172,
-      "E": "3141-9",
-      "F": "Body weight Measured",
-      "G": "Weight lbs",
-      "N": "Weight Measured",
-      "O": "LN",
-      "T": "LBS",
-      "U": "lbs",
-      "V": "[lb_av]"
-    },
-    {
-      "A": 3,
-      "B": "Fhts Admission",
-      "D": 14186,
-      "E": "55283-6",
-      "F": "Fetal Heart rate",
-      "N": "Fet Heart rate",
-      "O": "LN",
-      "U": "beats/min",
-      "V": "{beats}/min"
-    },
-    {
-      "A": 3,
-      "B": "Apgar 1 Min Delivery Record",
-      "D": 14242,
-      "E": "9272-6",
-      "F": "1 minute Apgar Score",
-      "N": "1M Apgar Score",
-      "O": "LN",
-      "U": "score",
-      "V": "{score}"
-    },
-    {
-      "A": 3,
-      "B": "Apgar 5 Min Delivery Record",
-      "D": 14243,
-      "E": "9274-2",
-      "F": "5 minute Apgar Score",
-      "N": "5M Apgar Score",
-      "O": "LN",
-      "U": "score",
-      "V": "{score}"
-    },
-    {
-      "A": 3,
-      "B": "Acuity L Far 20/",
-      "D": 448,
-      "E": "28710-2",
-      "F": "Visual acuity distance Left eye Phoropter",
-      "N": "DVA Eye-L Phoropter",
-      "O": "LN",
-      "U": "ft/ft",
-      "V": "[ft_us]/[ft_us]"
-    },
-    {
-      "A": 3,
-      "B": "Acuity L Near20/",
-      "D": 447,
-      "E": "55987-2",
-      "F": "Visual acuity near Left eye Phoropter",
-      "N": "Visual acuity N Eye-L Phoropter",
-      "O": "LN",
-      "U": "ft/ft",
-      "V": "[ft_us]/[ft_us]"
-    },
-    {
-      "A": 3,
-      "B": "Acuity R Far 20/",
-      "D": 446,
-      "E": "28667-4",
-      "F": "Visual acuity distance Right eye Phoropter",
-      "N": "DVA Eye-R Phoropter",
-      "O": "LN",
-      "U": "ft/ft",
-      "V": "[ft_us]/[ft_us]"
-    },
-    {
-      "A": 3,
-      "B": "Acuity R Near20/",
-      "D": 445,
-      "E": "28719-3",
-      "F": "Visual acuity near Right eye Phoropter",
-      "N": "Visual acuity N Eye-R Phoropter",
-      "O": "LN",
-      "U": "ft/ft",
-      "V": "[ft_us]/[ft_us]"
-    },
-    {
-      "A": 3,
-      "B": "Tono Time(Hhmm)",
-      "D": 11380,
-      "E": "28672-4",
-      "F": "Tonometry time Eye",
-      "N": "Tonometry time Eye",
-      "O": "LN"
-    },
-    {
-      "A": 3,
-      "B": "Tonometry L",
-      "D": 450,
-      "E": "79893-4",
-      "F": "Intraocular pressure Left eye",
-      "N": "Intraocular pressure Eye-L Tono",
-      "O": "LN",
-      "T": "mm Hg",
-      "U": "mmHg",
-      "V": "mm[Hg]"
-    },
-    {
-      "A": 3,
-      "B": "Tonometry R",
-      "D": 449,
-      "E": "79892-6",
-      "F": "Intraocular pressure Right eye",
-      "N": "Intraocular pressure Eye-R Tono",
-      "O": "LN",
-      "T": "mm Hg",
-      "U": "mmHg",
-      "V": "mm[Hg]"
-    },
-    {
-      "A": 3,
-      "B": "# Ft Lesions",
-      "D": 452,
-      "E": "58125-6",
-      "F": "Other open lesion(s) on the foot [MDSv3]",
-      "O": "LN",
-      "T": "# OF"
-    },
-    {
-      "A": 3,
-      "B": "AVE Bg",
-      "D": 17740,
-      "E": "27353-2",
-      "F": "Glucose mean value [Mass/volume] in Blood Estimated from glycated hemoglobin",
-      "G": "Average glucose Estimated from glycated hemoglobin mass conc (Bld)",
-      "H": "mg/dL",
-      "I": "74-106",
-      "J": 74,
-      "K": 106,
-      "N": "Est. average glucose Bld gHb Est-mCnc",
-      "O": "LN",
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 3,
-      "B": "Eye Exam Date",
-      "D": 17746,
-      "E": "55400-6",
-      "F": "Date of last eye examination",
-      "N": "Date of last eye exam",
-      "O": "LN"
-    },
-    {
-      "A": 3,
-      "B": "FBG - Glucofact",
-      "D": 17748,
-      "E": "41604-0",
-      "F": "Fasting glucose [Mass/volume] in Capillary blood by Glucometer",
-      "G": "Glucose fasting Glucometer mass conc (BldC)",
-      "N": "Glucose p fast BldC Glucomtr-mCnc",
-      "O": "LN",
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 3,
-      "B": "Head Circ % Ile",
-      "D": 1285,
-      "E": "8289-1",
-      "F": "Head Occipital-frontal circumference Percentile",
-      "N": "Head Circumf OFC Prctl",
-      "O": "LN",
-      "T": "%",
-      "U": "%",
-      "V": "%"
-    },
-    {
-      "A": 3,
-      "B": "Head Circumf",
-      "D": 1284,
-      "E": "9843-4",
-      "F": "Head Occipital-frontal circumference",
-      "N": "Head Circumf OFC",
-      "O": "LN",
-      "T": "CM",
-      "U": "cm",
-      "V": "cm"
-    },
-    {
-      "A": 3,
-      "B": "Height % Ile",
-      "D": 1283,
-      "E": "8303-0",
-      "F": "Body height [Percentile]",
-      "N": "Body height Prctl",
-      "O": "LN",
-      "T": "%",
-      "U": "%",
-      "V": "%"
-    },
-    {
-      "A": 3,
-      "B": "Height Peds",
-      "D": 6493,
-      "E": "8302-2",
-      "F": "Body height",
-      "N": "Body height",
-      "O": "LN",
-      "T": "INCH(S)",
-      "U": "in",
-      "V": "[in_i]"
-    },
-    {
-      "A": 3,
-      "B": "Temp Axillary",
-      "D": 11401,
-      "E": "8328-7",
-      "F": "Axillary temperature",
-      "G": "Axiliary temp F",
-      "N": "Axil temp",
-      "O": "LN",
-      "T": "DEG F",
-      "U": "F",
-      "V": "[degF]"
-    },
-    {
-      "A": 3,
-      "B": "Temp Rectal",
-      "D": 7187,
-      "E": "8332-9",
-      "F": "Rectal temperature",
-      "G": "Rectal temp F",
-      "N": "Rectal temp",
-      "O": "LN",
-      "T": "DEG F",
-      "U": "F",
-      "V": "[degF]"
-    },
-    {
-      "A": 3,
-      "B": "Wt % Ile",
-      "D": 1281,
-      "E": "8336-0",
-      "F": "Body weight [Percentile] Per age",
-      "N": "Bdy weight Prctl Per Age",
-      "O": "LN",
-      "T": "%",
-      "U": "%",
-      "V": "%"
-    },
-    {
-      "A": 3,
-      "B": "Progress Notes",
-      "D": 1052,
-      "E": "11506-3",
-      "F": "Progress note",
-      "N": "Progress note",
-      "O": "LN"
-    },
-    {
-      "A": 3,
-      "B": "GERIATRIC DEPRESSION SCALE SCORE",
-      "D": 23421,
-      "E": "48544-1",
-      "F": "Geriatric depression scale (GDS) total",
-      "O": "LN",
-      "U": "score",
-      "V": "{score}"
-    },
-    {
-      "A": 3,
-      "B": "Pain Scale (0-10)",
-      "D": 27159,
-      "E": "72514-3",
-      "F": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
-      "N": "Pain severity 0-10 Score Reported",
-      "O": "LN",
-      "U": "score",
-      "V": "{score}"
-    },
-    {
-      "A": 3,
-      "B": "MINI MENTAL STATUS SCORE",
-      "D": 23420,
-      "E": "72106-8",
-      "F": "Total score [MMSE]",
-      "O": "LN",
-      "U": "score",
-      "V": "{score}"
-    },
-    {
-      "A": 3,
-      "B": "Tumor Record Number",
-      "D": 27211,
-      "E": "21831-3",
-      "F": "Unique tumor case ID Cancer",
-      "N": "Unique tumor case ID Cancer",
-      "O": "LN"
-    },
-    {
-      "A": 3,
-      "B": "HIPPA truncated Age at Cancer Dx",
-      "D": 27217,
-      "E": "21841-2",
-      "F": "Age at cancer diagnosis",
-      "N": "Cancer diagnosis age",
-      "O": "LN",
-      "U": "a",
-      "V": "a"
-    },
-    {
-      "A": 3,
-      "B": "Year Ca First Seen by Hospital",
-      "D": 27243,
-      "E": "21873-5",
-      "F": "Year first seen at this hospital for [Date] Cancer",
-      "N": "Y first seen this hospital for Cancer",
-      "O": "LN",
-      "V": "{yyyy}"
-    },
-    {
-      "A": 3,
-      "B": "Patient Tumor Registry ID",
-      "D": 27209,
-      "E": "21829-7",
-      "F": "Institution data source Registry message",
-      "N": "Inst data source Registry Message",
-      "O": "LN"
-    },
-    {
-      "A": 3,
-      "B": "NAACCR Survival To Last Contact",
-      "D": 30263,
-      "E": "35350-8",
-      "F": "NAACCR survival to last contact (in months) [Time]",
-      "N": "NAACCR survi to last contact (in months)",
-      "O": "LN",
-      "T": "months",
-      "U": "mo",
-      "V": "mo"
-    },
-    {
-      "A": 2,
-      "B": "Patient Reported Quality of Life",
-      "D": 42693,
-      "E": "72355-1",
-      "F": "Patient Reported Outcome Quality of Life tool",
-      "O": "LN"
-    },
-    {
-      "A": 3,
-      "B": "Little interest or pleasure in doing things in last 2W",
-      "D": "phq9-1",
-      "E": "44250-9",
-      "F": "Little interest or pleasure in doing things in last 2 weeks [Reported.PHQ]",
-      "G": "Little interest or pleasure in doing things in last 2W",
-      "O": "LN"
-    },
-    {
-      "A": 3,
-      "B": "Feeling down, depressed, or hopeless in last 2W",
-      "D": "phq9-2",
-      "E": "44255-8",
-      "F": "Feeling down, depressed, or hopeless in last 2 weeks [Reported.PHQ]",
-      "G": "Feeling down, depressed, or hopeless in last 2W",
-      "O": "LN"
-    },
-    {
-      "A": 3,
-      "B": "Trouble falling or staying asleep, or sleeping too much in last 2W",
-      "D": "phq9-3",
-      "E": "44259-0",
-      "F": "Trouble falling or staying asleep, or sleeping too much in last 2 weeks [Reported.PHQ]",
-      "G": "Trouble falling or staying asleep, or sleeping too much in last 2W",
-      "O": "LN"
-    },
-    {
-      "A": 3,
-      "B": "Feeling tired or having little energy in last 2W",
-      "D": "phq9-4",
-      "E": "44254-1",
-      "F": "Feeling tired or having little energy in last 2 weeks [Reported.PHQ]",
-      "G": "Feeling tired or having little energy in last 2W",
-      "O": "LN"
-    },
-    {
-      "A": 3,
-      "B": "Poor appetite or overeating in last 2W",
-      "D": "phq9-5",
-      "E": "44251-7",
-      "F": "Poor appetite or overeating in last 2 weeks [Reported.PHQ]",
-      "G": "Poor appetite or overeating in last 2W",
-      "O": "LN"
-    },
-    {
-      "A": 3,
-      "B": "Feeling bad about yourself - or that you are a failure or have let yourself or your family down in last 2W",
-      "D": "phq9-6",
-      "E": "44258-2",
-      "F": "Feeling bad about yourself - or that you are a failure or have let yourself or your family down in last 2 weeks [Reported.PHQ]",
-      "G": "Feeling bad about yourself - or that you are a failure or have let yourself or your family down in last 2W",
-      "O": "LN"
-    },
-    {
-      "A": 3,
-      "B": "Trouble concentrating on things, such as reading the newspaper or watching television in last 2W",
-      "D": "phq9-7",
-      "E": "44252-5",
-      "F": "Trouble concentrating on things, such as reading the newspaper or watching television in last 2 weeks [Reported.PHQ]",
-      "G": "Trouble concentrating on things, such as reading the newspaper or watching television in last 2W",
-      "O": "LN"
-    },
-    {
-      "A": 3,
-      "B": "Moving or speaking so slowly that other people could have noticed. Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual in last 2W",
-      "D": "phq-8",
-      "E": "44253-3",
-      "F": "Moving or speaking so slowly that other people could have noticed. Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual in last 2 weeks [Reported.PHQ]",
-      "G": "Moving or speaking so slowly that other people could have noticed. Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual in last 2W",
-      "O": "LN"
-    },
-    {
-      "A": 3,
-      "B": "Thoughts that you would be better off dead, or of hurting yourself in some way in last 2W",
-      "D": "phq9-9",
-      "E": "44260-8",
-      "F": "Thoughts that you would be better off dead, or of hurting yourself in some way in last 2 weeks [Reported.PHQ]",
-      "G": "Thoughts that you would be better off dead, or of hurting yourself in some way in last 2W",
-      "O": "LN"
-    },
-    {
-      "A": 3,
-      "B": "Patient health questionnaire 9 item total score",
-      "D": "phq9-10",
-      "E": "44261-6",
-      "F": "Patient Health Questionnaire 9 item (PHQ-9) total score [Reported]",
-      "G": "Patient health questionnaire 9 item total score",
-      "O": "LN"
-    },
-    {
-      "A": 3,
-      "B": "How difficult have these made it for you to do your work, take care of things at home, or get along with other people",
-      "D": "phq9-11",
-      "E": "69722-7",
-      "F": "How difficult have these made it for you to do your work, take care of things at home, or get along with other people [Reported.PHQ]",
-      "G": "How difficult have these made it for you to do your work, take care of things at home, or get along with other people",
-      "O": "LN"
-    },
-    {
-      "A": 3,
-      "B": "Feeling nervous, anxious or on edge in last 2W",
-      "D": "gad7-1",
-      "E": "69725-0",
-      "F": "Feeling nervous, anxious or on edge in last 2 weeks [Reported.PHQ]",
-      "G": "Feeling nervous, anxious or on edge in last 2W",
-      "O": "LN"
-    },
-    {
-      "A": 3,
-      "B": "Not able to stop or control worrying in the last 2W",
-      "D": "gad7-2",
-      "E": "68509-9",
-      "F": "Not able to stop or control worrying in the last 2 weeks [SAMHSA]",
-      "G": "Not able to stop or control worrying in the last 2W",
-      "O": "LN"
-    },
-    {
-      "A": 3,
-      "B": "Worrying too much about different things in last 2W",
-      "D": "gad7-3",
-      "E": "69733-4",
-      "F": "Worrying too much about different things in last 2 weeks [Reported.PHQ]",
-      "G": "Worrying too much about different things in last 2W",
-      "O": "LN"
-    },
-    {
-      "A": 3,
-      "B": "Trouble relaxing in last 2W",
-      "D": "gad7-4",
-      "E": "69734-2",
-      "F": "Trouble relaxing in last 2 weeks [Reported.PHQ]",
-      "G": "Trouble relaxing in last 2W",
-      "O": "LN"
-    },
-    {
-      "A": 3,
-      "B": "Being so restless that it is hard to sit still in last 2W",
-      "D": "gad7-5",
-      "E": "69735-9",
-      "F": "Being so restless that it is hard to sit still in last 2 weeks [Reported.PHQ]",
-      "G": "Being so restless that it is hard to sit still in last 2W",
-      "O": "LN"
-    },
-    {
-      "A": 3,
-      "B": "Becoming easily annoyed or irritable in last 4W",
-      "D": "gad7-6",
-      "E": "69689-8",
-      "F": "Becoming easily annoyed or irritable in last 4 weeks [Reported.PHQ]",
-      "G": "Becoming easily annoyed or irritable in last 4W",
-      "O": "LN"
-    },
-    {
-      "A": 3,
-      "B": "Feeling afraid as if something awful might happen in last 2W",
-      "D": "gad7-7",
-      "E": "69736-7",
-      "F": "Feeling afraid as if something awful might happen in last 2 weeks [Reported.PHQ]",
-      "G": "Feeling afraid as if something awful might happen in last 2W",
-      "O": "LN"
-    },
-    {
-      "A": 3,
-      "B": "Generalized anxiety disorder 7 item total score",
-      "D": "gad7-8",
-      "E": "70274-6",
-      "F": "Generalized anxiety disorder 7 item (GAD-7) total score [Reported.PHQ]",
-      "G": "Generalized anxiety disorder 7 item total score",
-      "O": "LN"
-    },
-    {
-      "A": 3,
-      "B": "Braden Score",
-      "D": 31708,
-      "E": "38227-5",
-      "F": "Braden scale total score",
-      "N": "Braden Scale Total Score",
-      "O": "LN",
-      "U": "score",
-      "V": "{score}"
-    },
-    {
-      "A": 2,
-      "B": "Glasgow Coma Scale Data",
-      "D": 31768,
-      "E": "9269-2",
-      "F": "Glasgow coma score total",
-      "N": "GCS total",
-      "O": "LN",
-      "U": "score",
-      "V": "{score}"
-    },
-    {
-      "A": 1,
-      "B": "VITALS",
-      "D": 64,
-      "E": "72513-5",
-      "F": "Vital signs with smoking status and pain scale [VSP]",
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "Temp",
-      "C": "Temp F->C",
-      "D": 65,
-      "E": "8310-5",
-      "F": "Body temperature",
-      "G": "Body Temp F",
-      "H": "F",
-      "I": "97.8 - 99",
-      "J": 97.8,
-      "K": 99,
-      "N": "Body temperature",
-      "O": "RI",
-      "P": "Cel",
-      "Q": "Cel",
-      "S": "x",
-      "T": "DEG F",
-      "U": "F",
-      "V": "[degF]"
-    },
-    {
-      "A": 2,
-      "B": "Temp",
-      "C": "Temp F->C",
-      "D": "65z",
-      "E": "8310-5",
-      "F": "Body temperature",
-      "G": "Body Temp C",
-      "H": "Cel",
-      "I": "36.1 - 37.2",
-      "J": 36.1,
-      "K": 37.2,
-      "N": "Body temperature",
-      "O": "RI",
-      "P": "Cel",
-      "Q": "Cel",
-      "T": "Cel",
-      "U": "C",
-      "V": "Cel"
-    },
-    {
-      "A": 2,
-      "B": "Temp Auto Axillary",
-      "C": "Temp F->C",
-      "D": 12986,
-      "E": "8328-7",
-      "F": "Axillary temperature",
-      "G": "Axil temp F",
-      "H": "degF",
-      "I": "97 - 99",
-      "J": 97,
-      "K": 99,
-      "N": "Axil temp",
-      "O": "RI",
-      "P": "Cel",
-      "Q": "Cel",
-      "S": "x",
-      "T": "DEG F",
-      "U": "F",
-      "V": "[degF]"
-    },
-    {
-      "A": 2,
-      "B": "Temp Auto Oral",
-      "C": "Temp F->C",
-      "D": 12984,
-      "E": "8331-1",
-      "F": "Oral temperature",
-      "G": "Oral temp F",
-      "H": "DEG F",
-      "I": "97.6 - 99",
-      "J": 97.6,
-      "K": 99,
-      "L": 102.5,
-      "M": 95.6,
-      "N": "Oral temp",
-      "O": "RI",
-      "P": "Cel",
-      "Q": "Cel",
-      "S": "x",
-      "T": "DEG F",
-      "U": "F",
-      "V": "[degF]"
-    },
-    {
-      "A": 2,
-      "B": "Temp Auto Oral",
-      "C": "Temp F->C",
-      "D": "12984z",
-      "E": "8331-1",
-      "F": "Oral temperature",
-      "G": "Oral temp C",
-      "H": "Cel",
-      "I": "36.4 - 37.2",
-      "J": 36.4,
-      "K": 37.2,
-      "L": 39.2,
-      "M": 35.3,
-      "N": "Oral temp",
-      "O": "RI",
-      "P": "Cel",
-      "Q": "Cel",
-      "T": "C",
-      "U": "C",
-      "V": "Cel"
-    },
-    {
-      "A": 2,
-      "B": "Temp Auto Rectal",
-      "C": "Temp F->C",
-      "D": 12985,
-      "E": "8332-9",
-      "F": "Rectal temperature",
-      "G": "Rectal temp F",
-      "H": "degF",
-      "I": "97 - 100.3",
-      "J": 97,
-      "K": 100.3,
-      "N": "Rectal temp",
-      "O": "RI",
-      "P": "Cel",
-      "Q": "Cel",
-      "S": "x",
-      "T": "DEG F",
-      "U": "F",
-      "V": "[degF]"
-    },
-    {
-      "A": 2,
-      "B": "Temp Auto Tympanic",
-      "C": "Temp F->C",
-      "D": 19218,
-      "E": "8333-7",
-      "F": "Tympanic membrane temperature",
-      "G": "Tymp memb temp F",
-      "H": "DegF",
-      "I": "95.72 - 100.04",
-      "J": 95.72,
-      "K": 100.04,
-      "N": "Tymp memb temp",
-      "O": "RI",
-      "P": "Cel",
-      "Q": "Cel",
-      "S": "x",
-      "T": "DEG F",
-      "U": "F",
-      "V": "[degF]"
-    },
-    {
-      "A": 2,
-      "B": "Heart Rate",
-      "C": "Heart rate merged",
-      "D": 66,
-      "E": "8867-4",
-      "F": "Heart rate",
-      "H": "/min",
-      "I": "60-100",
-      "J": 60,
-      "K": 100,
-      "L": 130,
-      "M": 40,
-      "N": "Heart rate",
-      "O": "RI",
-      "P": "{beats}/min",
-      "Q": "{beats}/min",
-      "T": "/MIN",
-      "U": "beats/min",
-      "V": "{beats}/min"
-    },
-    {
-      "A": 2,
-      "B": "Heart Rate #2",
-      "C": "Heart rate merged",
-      "D": 31686,
-      "E": "8867-4",
-      "F": "Heart rate",
-      "H": "/min",
-      "I": "60-100",
-      "J": 60,
-      "K": 100,
-      "L": 130,
-      "M": 40,
-      "N": "Heart rate",
-      "O": "RI",
-      "P": "{beats}/min",
-      "Q": "{beats}/min",
-      "T": "/MIN",
-      "U": "beats/min",
-      "V": "{beats}/min"
-    },
-    {
-      "A": 2,
-      "B": "Pulse Auto",
-      "C": "Heart rate merged",
-      "D": 12989,
-      "E": "8867-4",
-      "F": "Heart rate",
-      "H": "/min",
-      "I": "60-100",
-      "J": 60,
-      "K": 100,
-      "L": 130,
-      "M": 40,
-      "N": "Heart rate",
-      "O": "RI",
-      "P": "{beats}/min",
-      "Q": "{beats}/min",
-      "T": "/MIN",
-      "U": "beats/min",
-      "V": "{beats}/min"
-    },
-    {
-      "A": 2,
-      "B": "Pulse Apical",
-      "C": "Heart rate merged",
-      "D": 3972,
-      "E": "8891-4",
-      "F": "Heart rate Cardiac apex by palpation",
-      "G": "Heart rate Cardiac apex by palpation",
-      "H": "beats/min",
-      "I": "60 - 100",
-      "J": 60,
-      "K": 100,
-      "N": "Heart rate Cardiac Apex Palpation",
-      "O": "RI",
-      "P": "{beats}/min",
-      "Q": "{beats}/min",
-      "T": "/MIN",
-      "U": "beats/min",
-      "V": "{beats}/min"
-    },
-    {
-      "A": 2,
-      "B": "Pulse Recumbent",
-      "C": "Heart rate merged",
-      "D": 2985,
-      "E": "68999-2",
-      "F": "Heart rate --supine",
-      "G": "Heart rate --supine",
-      "H": "/min",
-      "I": "60-100",
-      "J": 60,
-      "K": 100,
-      "N": "Heart rate sup",
-      "O": "RI",
-      "P": "{beats}/min",
-      "Q": "{beats}/min",
-      "T": "/MIN",
-      "U": "beats/min",
-      "V": "{beats}/min"
-    },
-    {
-      "A": 2,
-      "B": "Mean BP",
-      "C": "Mean Arterial Pressure merged",
-      "D": 36044,
-      "E": "8478-0",
-      "F": "Mean blood pressure",
-      "H": "mmHg",
-      "I": "70 - 100",
-      "J": 70,
-      "K": 100,
-      "N": "BP mean",
-      "O": "RI",
-      "P": "mm[Hg]",
-      "Q": "mm[Hg]",
-      "T": "mm Hg",
-      "U": "mmHg",
-      "V": "mm[Hg]"
-    },
-    {
-      "A": 2,
-      "B": "Mean Arterial Pressure",
-      "C": "Mean Arterial Pressure merged",
-      "D": 31692,
-      "E": "8478-0",
-      "F": "Mean blood pressure",
-      "H": "mmHg",
-      "I": "70 - 100",
-      "J": 70,
-      "K": 100,
-      "N": "BP mean",
-      "O": "RI",
-      "P": "mm[Hg]",
-      "Q": "mm[Hg]",
-      "T": "mm Hg",
-      "U": "mmHg",
-      "V": "mm[Hg]"
-    },
-    {
-      "A": 2,
-      "B": "MAP Auto",
-      "C": "Mean Arterial Pressure merged",
-      "D": 12987,
-      "E": "8478-0",
-      "F": "Mean blood pressure",
-      "H": "mm Hg",
-      "I": "70 - 100",
-      "J": 70,
-      "K": 100,
-      "L": 102,
-      "N": "BP mean",
-      "O": "RI",
-      "P": "mm[Hg]",
-      "Q": "mm[Hg]",
-      "T": "mm Hg",
-      "U": "mmHg",
-      "V": "mm[Hg]"
-    },
-    {
-      "A": 2,
-      "B": "Height(In)",
-      "C": "Height in->cm",
-      "D": 497,
-      "E": "3137-7",
-      "F": "Body height Measured",
-      "G": "Height inches",
-      "N": "Body height Measured",
-      "O": "RI",
-      "P": "cm",
-      "Q": "cm",
-      "S": "x",
-      "T": "INCH(S)",
-      "U": "in",
-      "V": "[in_i]"
-    },
-    {
-      "A": 2,
-      "B": "Height(In)",
-      "C": "Height in->cm",
-      "D": 497,
-      "E": "3137-7",
-      "F": "Body height Measured",
-      "G": "Height cm",
-      "N": "Body height Measured",
-      "O": "RI",
-      "P": "cm",
-      "Q": "cm",
-      "T": "CM",
-      "U": "cm",
-      "V": "cm"
-    },
-    {
-      "A": 2,
-      "B": "Height Metric",
-      "C": "Height in->cm",
-      "D": 3897,
-      "E": "3137-7",
-      "F": "Body height Measured",
-      "G": "Height cm",
-      "N": "Body height Measured",
-      "O": "RI",
-      "P": "cm",
-      "Q": "cm",
-      "T": "CM",
-      "U": "cm",
-      "V": "cm"
-    },
-    {
-      "A": 2,
-      "B": "Weight Lbs",
-      "C": "Weight lbs->kg",
-      "D": 202,
-      "E": "3141-9",
-      "F": "Body weight Measured",
-      "G": "Weight lbs",
-      "H": "lbs",
-      "N": "Weight Measured",
-      "O": "RI",
-      "P": "kg",
-      "Q": "kg",
-      "S": "x",
-      "T": "LBS",
-      "U": "lbs",
-      "V": "[lb_av]"
-    },
-    {
-      "A": 2,
-      "B": "Weight Lbs",
-      "C": "Weight lbs->kg",
-      "D": "202z",
-      "E": "3141-9",
-      "F": "Body weight Measured",
-      "G": "Weight kg",
-      "H": "kg",
-      "N": "Weight Measured",
-      "O": "RI",
-      "P": "kg",
-      "Q": "kg",
-      "T": "KG",
-      "U": "kg",
-      "V": "kg"
-    },
-    {
-      "A": 2,
-      "B": "Weight Metric",
-      "C": "Weight lbs->kg",
-      "D": 2996,
-      "E": "3141-9",
-      "F": "Body weight Measured",
-      "G": "Weight kg",
-      "N": "Weight Measured",
-      "O": "RI",
-      "P": "kg",
-      "Q": "kg",
-      "T": "KG",
-      "U": "kg",
-      "V": "kg"
-    },
-    {
-      "A": 2,
-      "B": "Weight Auto",
-      "C": "Weight lbs->kg",
-      "D": 14343,
-      "E": "3141-9",
-      "F": "Body weight Measured",
-      "G": "Weight lbs",
-      "H": "pounds",
-      "N": "Weight Measured",
-      "O": "RI",
-      "P": "kg",
-      "Q": "kg",
-      "S": "x",
-      "T": "LBS",
-      "U": "lbs",
-      "V": "[lb_av]"
-    },
-    {
-      "A": 2,
-      "B": "OUTPUT",
-      "D": 19196,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "Incont/Br#",
-      "D": 19164,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "INTAKE",
-      "D": 19195,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "IN IVPB/24H",
-      "D": 26855,
-      "O": "RI",
-      "T": "CC",
-      "U": "cm3",
-      "V": "cm3"
-    },
-    {
-      "A": 3,
-      "B": "Intake IVPB Vol/8hrs",
-      "D": 26635,
-      "O": "RI",
-      "T": "CC",
-      "U": "cm3",
-      "V": "cm3"
-    },
-    {
-      "A": 3,
-      "B": "Intake Vol Haf",
-      "D": 19138,
-      "O": "RI",
-      "T": "CC",
-      "U": "cm3",
-      "V": "cm3"
-    },
-    {
-      "A": 3,
-      "B": "Intake Vol IVPB",
-      "D": 19137,
-      "O": "RI",
-      "T": "CC",
-      "U": "cm3",
-      "V": "cm3"
-    },
-    {
-      "A": 1,
-      "B": "CHEMISTRY STUDIES",
-      "D": 4011,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "ROUTINE SER-PLAS CHEM TESTS:",
-      "D": 16931,
-      "O": "RI"
-    },
-    {
-      "A": 4,
-      "B": "BUN TESTS",
-      "D": 3966,
-      "O": "RI"
-    },
-    {
-      "A": 5,
-      "B": "BUN SerPl Qn",
-      "C": "Urea nitrogen MSCNC demo",
-      "D": 1276,
-      "E": "3094-0",
-      "F": "Urea nitrogen [Mass/volume] in Serum or Plasma",
-      "G": "Urea nitrogen mass conc",
-      "H": "mg/dL",
-      "I": "7 - 20",
-      "J": 7,
-      "K": 20,
-      "N": "BUN SerPl-mCnc",
-      "O": "RI",
-      "P": "mg/dL",
-      "Q": "mg/dL",
-      "R": 28,
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 5,
-      "B": "BUN SerPl Qn",
-      "C": "Urea nitrogen MSCNC demo",
-      "D": "1276z",
-      "E": "14937-7",
-      "F": "Urea nitrogen [Moles/volume] in Serum or Plasma",
-      "G": "Urea nitrogen molar conc",
-      "H": "mmol/L",
-      "I": "2.5 - 7.1",
-      "J": 2.5,
-      "K": 7.1,
-      "N": "BUN SerPl-sCnc",
-      "O": "RI",
-      "P": "mg/dL",
-      "Q": "mg/dL",
-      "R": 28,
-      "S": "x",
-      "T": "mmol/L",
-      "U": "mmol/L",
-      "V": "mmol/L"
-    },
-    {
-      "A": 5,
-      "B": "BUN (CSH)",
-      "C": "Urea nitrogen MSCNC demo",
-      "D": 11433,
-      "E": "3094-0",
-      "F": "Urea nitrogen [Mass/volume] in Serum or Plasma",
-      "G": "Urea nitrogen mass conc",
-      "H": "mg/dL",
-      "I": "10 - 26",
-      "J": 10,
-      "K": 26,
-      "N": "BUN SerPl-mCnc",
-      "O": "RI",
-      "P": "mg/dL",
-      "Q": "mg/dL",
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 5,
-      "B": "BUN (SMA)",
-      "C": "Urea nitrogen MSCNC demo",
-      "D": 34,
-      "E": "3094-0",
-      "F": "Urea nitrogen [Mass/volume] in Serum or Plasma",
-      "G": "Urea nitrogen mass conc",
-      "H": "mg/dL",
-      "I": "10 - 26",
-      "J": 10,
-      "K": 26,
-      "N": "BUN SerPl-mCnc",
-      "O": "RI",
-      "P": "mg/dL",
-      "Q": "mg/dL",
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 5,
-      "B": "BUN Bld Qn (POC)",
-      "C": "Urea nitrogen|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
-      "D": 18989,
-      "E": "6299-2",
-      "F": "Urea nitrogen [Mass/volume] in Blood",
-      "G": "Urea nitrogen mass conc (Bld)",
-      "H": "mg/dL",
-      "I": "7 - 22",
-      "J": 7,
-      "K": 22,
-      "N": "BUN Bld-mCnc",
-      "O": "RI",
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 5,
-      "B": "BUN(ER-IS)",
-      "C": "Urea nitrogen MSCNC demo",
-      "D": 20034,
-      "E": "3094-0",
-      "F": "Urea nitrogen [Mass/volume] in Serum or Plasma",
-      "G": "Urea nitrogen mass conc",
-      "H": "mg/dL",
-      "I": "8 - 26",
-      "J": 8,
-      "K": 26,
-      "N": "BUN SerPl-mCnc",
-      "O": "RI",
-      "P": "mg/dL",
-      "Q": "mg/dL",
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 4,
-      "B": "CREATININE TESTS",
-      "D": 4095,
-      "O": "RI"
-    },
-    {
-      "A": 5,
-      "B": "Creatinine (ISTAT)'",
-      "C": "Creatinine serum moles->mass",
-      "D": 29499,
-      "E": "38483-4",
-      "F": "Creatinine [Mass/volume] in Blood",
-      "G": "Creatinine mass conc (Bld)",
-      "H": "mg/dL",
-      "I": "0.6 - 1.3",
-      "J": 0.6,
-      "K": 1.3,
-      "N": "Creat Bld-mCnc",
-      "O": "RI",
-      "R": 113.1179,
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 5,
-      "B": "Creatinine Ser",
-      "C": "Creatinine serum moles->mass",
-      "D": 6145,
-      "E": "2160-0",
-      "F": "Creatinine [Mass/volume] in Serum or Plasma",
-      "G": "Creatinine mass conc",
-      "H": "mg/dL",
-      "I": "0.4 - 1.5",
-      "J": 0.4,
-      "K": 1.5,
-      "N": "Creat SerPl-mCnc",
-      "O": "RI",
-      "P": "mg/dL",
-      "Q": "mg/dL",
-      "R": 113.1179,
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 5,
-      "B": "Creatinine SerPl Qn",
-      "C": "Creatinine serum moles->mass",
-      "D": 256,
-      "E": "2160-0",
-      "F": "Creatinine [Mass/volume] in Serum or Plasma",
-      "G": "Creatinine mass conc",
-      "H": "mg/dL",
-      "I": "0.5 - 1.0",
-      "J": 0.5,
-      "K": 1,
-      "N": "Creat SerPl-mCnc",
-      "O": "RI",
-      "P": "mg/dL",
-      "Q": "mg/dL",
-      "R": 113.1179,
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 5,
-      "B": "Creatinine SerPl Qn",
-      "C": "Creatinine serum moles->mass",
-      "D": "256z",
-      "E": "14682-9",
-      "F": "Creatinine [Moles/volume] in Serum or Plasma",
-      "G": "Creatinine molar conc",
-      "H": "umol/l",
-      "I": "45 - 90",
-      "J": 45,
-      "K": 90,
-      "N": "Creat SerPl-sCnc",
-      "O": "RI",
-      "P": "mg/dL",
-      "Q": "mg/dL",
-      "R": 113.1179,
-      "S": "x",
-      "T": "umol/l",
-      "U": "umol/l",
-      "V": "umol/l"
-    },
-    {
-      "A": 5,
-      "B": "Creatinine (CSH)",
-      "C": "Creatinine serum moles->mass",
-      "D": 11434,
-      "E": "2160-0",
-      "F": "Creatinine [Mass/volume] in Serum or Plasma",
-      "G": "Creatinine mass conc",
-      "H": "mg/dL",
-      "I": "0.4 - 1.5",
-      "J": 0.4,
-      "K": 1.5,
-      "N": "Creat SerPl-mCnc",
-      "O": "RI",
-      "P": "mg/dL",
-      "Q": "mg/dL",
-      "R": 113.1179,
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 5,
-      "B": "Creatinine (SMA)",
-      "C": "Creatinine serum moles->mass",
-      "D": 6513,
-      "E": "2160-0",
-      "F": "Creatinine [Mass/volume] in Serum or Plasma",
-      "G": "Creatinine mass conc",
-      "H": "mg/dL",
-      "I": "0.4 - 1.5",
-      "J": 0.4,
-      "K": 1.5,
-      "N": "Creat SerPl-mCnc",
-      "O": "RI",
-      "P": "mg/dL",
-      "Q": "mg/dL",
-      "R": 113.1179,
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 3,
-      "B": "GLUCOSE TESTS",
-      "D": 3079,
-      "O": "RI"
-    },
-    {
-      "A": 4,
-      "B": "Glucose SerPl Qn",
-      "C": "Glucose Serum moles->mass",
-      "D": 1274,
-      "E": "2345-7",
-      "F": "Glucose [Mass/volume] in Serum or Plasma",
-      "G": "Glucose mass conc",
-      "H": "mg/dL",
-      "I": "70 -140",
-      "J": 70,
-      "K": 115,
-      "N": "Glucose SerPl-mCnc",
-      "O": "RI",
-      "P": "mg/dL",
-      "Q": "mg/dL",
-      "R": 180.156,
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 4,
-      "B": "Glucose SerPl Qn",
-      "C": "Glucose Serum moles->mass",
-      "D": "1274z",
-      "E": "14749-6",
-      "F": "Glucose [Moles/volume] in Serum or Plasma",
-      "G": "Glucose molar conc",
-      "H": "mmol/L",
-      "I": "3.9 - 7.8",
-      "J": 3.9,
-      "K": 7.8,
-      "N": "Glucose SerPl-sCnc",
-      "O": "RI",
-      "P": "mg/dL",
-      "Q": "mg/dL",
-      "R": 180.156,
-      "S": "x",
-      "T": "mmol/L",
-      "U": "mmol/L",
-      "V": "mmol/L"
-    },
-    {
-      "A": 4,
-      "B": "Glucose (ACA)",
-      "C": "Glucose Serum moles->mass",
-      "D": 4035,
-      "E": "2345-7",
-      "F": "Glucose [Mass/volume] in Serum or Plasma",
-      "G": "Glucose mass conc",
-      "H": "mg/dL",
-      "I": "70 -115",
-      "J": 70,
-      "K": 115,
-      "N": "Glucose SerPl-mCnc",
-      "O": "RI",
-      "P": "mg/dL",
-      "Q": "mg/dL",
-      "R": 180.156,
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 4,
-      "B": "Glucose (CSH)",
-      "C": "Glucose Serum moles->mass",
-      "D": 11432,
-      "E": "2345-7",
-      "F": "Glucose [Mass/volume] in Serum or Plasma",
-      "G": "Glucose mass conc",
-      "H": "mg/dL",
-      "I": "70 -115",
-      "J": 70,
-      "K": 115,
-      "N": "Glucose SerPl-mCnc",
-      "O": "RI",
-      "P": "mg/dL",
-      "Q": "mg/dL",
-      "R": 180.156,
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 4,
-      "B": "Glu (SMA)",
-      "C": "Glucose Serum moles->mass",
-      "D": 33,
-      "E": "2345-7",
-      "F": "Glucose [Mass/volume] in Serum or Plasma",
-      "G": "Glucose mass conc",
-      "H": "mg/dL",
-      "I": "70 -115",
-      "J": 70,
-      "K": 115,
-      "N": "Glucose SerPl-mCnc",
-      "O": "RI",
-      "P": "mg/dL",
-      "Q": "mg/dL",
-      "R": 180.156,
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 4,
-      "B": "Glucose Fast SerPl Qn",
-      "C": "Glucose Serum moles->mass",
-      "D": 11500,
-      "E": "1558-6",
-      "F": "Fasting glucose [Mass/volume] in Serum or Plasma",
-      "G": "Glucose fasting mass conc",
-      "H": "mg/dL",
-      "I": "65 - 94",
-      "J": 65,
-      "K": 94,
-      "L": 700,
-      "M": 30,
-      "N": "Glucose p fast SerPl-mCnc",
-      "O": "RI",
-      "R": 180.156,
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 4,
-      "B": "Glucose Bld Qn",
-      "C": "Glucose Bld moles->mass",
-      "D": 24588,
-      "E": "2339-0",
-      "F": "Glucose [Mass/volume] in Blood",
-      "G": "Glucose mass conc (Bld)",
-      "H": "mg/dL",
-      "I": "70 - 109",
-      "J": 70,
-      "K": 109,
-      "L": 500,
-      "M": 39,
-      "N": "Glucose Bld-mCnc",
-      "O": "RI",
-      "P": "mg/dL",
-      "Q": "mg/dL",
-      "R": 180.156,
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 4,
-      "B": "Glucose Bld Qn (POC)",
-      "C": "Glucose Bld moles->mass",
-      "D": 22414,
-      "E": "2339-0",
-      "F": "Glucose [Mass/volume] in Blood",
-      "G": "Glucose mass conc (Bld)",
-      "H": "mg/dL",
-      "I": "70 - 109",
-      "J": 70,
-      "K": 105,
-      "L": 400,
-      "M": 45,
-      "N": "Glucose Bld-mCnc",
-      "O": "RI",
-      "P": "mg/dL",
-      "Q": "mg/dL",
-      "R": 180.156,
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 4,
-      "B": "Glucose Bld Qn (POC)",
-      "C": "Glucose Bld moles->mass",
-      "D": "22414z",
-      "E": "15074-8",
-      "F": "Glucose [Moles/volume] in Blood",
-      "G": "Glucose molar conc (Bld)",
-      "H": "mmol/l",
-      "I": "3.8 - 6.1",
-      "J": 3.8,
-      "K": 6.1,
-      "N": "Glucose Bld-sCnc",
-      "O": "RI",
-      "P": "mg/dL",
-      "Q": "mg/dL",
-      "R": 180.156,
-      "S": "x",
-      "T": "mmol/L",
-      "U": "mmol/L",
-      "V": "mmol/L"
-    },
-    {
-      "A": 4,
-      "B": "Glucose Bld Fingerstick",
-      "C": "Glucose Bld moles->mass",
-      "D": 13014,
-      "E": "32016-8",
-      "F": "Glucose [Mass/volume] in Capillary blood",
-      "G": "Glucose mass conc (BldC)",
-      "H": "mg/dL",
-      "I": "70 - 109",
-      "J": 70,
-      "K": 109,
-      "L": 500,
-      "M": 39,
-      "N": "Glucose BldC-mCnc",
-      "O": "RI",
-      "P": "mg/dL",
-      "Q": "mg/dL",
-      "R": 180.156,
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 4,
-      "B": "Glucose Bld Qn (ISTAT)'",
-      "C": "Glucose Bld moles->mass",
-      "D": 18991,
-      "E": "2339-0",
-      "F": "Glucose [Mass/volume] in Blood",
-      "G": "Glucose mass conc (Bld)",
-      "H": "mg/dL",
-      "I": "70 - 109",
-      "J": 70,
-      "K": 105,
-      "L": 400,
-      "M": 45,
-      "N": "Glucose Bld-mCnc",
-      "O": "RI",
-      "P": "mg/dL",
-      "Q": "mg/dL",
-      "R": 180.156,
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 4,
-      "B": "Glucose(ER-IS)",
-      "C": "Glucose Bld moles->mass",
-      "D": 20029,
-      "E": "2339-0",
-      "F": "Glucose [Mass/volume] in Blood",
-      "G": "Glucose mass conc (Bld)",
-      "H": "mg/dL",
-      "I": "70 - 109",
-      "J": 70,
-      "K": 105,
-      "L": 400,
-      "M": 45,
-      "N": "Glucose Bld-mCnc",
-      "O": "RI",
-      "P": "mg/dL",
-      "Q": "mg/dL",
-      "R": 180.156,
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 3,
-      "B": "CALCIUM TESTS",
-      "D": 4096,
-      "O": "RI"
-    },
-    {
-      "A": 4,
-      "B": "Calcium Ser",
-      "C": "Calcium moles->mass",
-      "D": 15346,
-      "E": "17861-6",
-      "F": "Calcium [Mass/volume] in Serum or Plasma",
-      "G": "Calcium mass conc",
-      "H": "mg/dL",
-      "I": "8.6 - 10.2",
-      "J": 8.6,
-      "K": 10.2,
-      "N": "Calcium SerPl-mCnc",
-      "O": "RI",
-      "P": "mg/dL",
-      "Q": "mg/dL",
-      "R": 40.078,
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 4,
-      "B": "Calcium SerPl Qn",
-      "C": "Calcium moles->mass",
-      "D": 4053,
-      "E": "17861-6",
-      "F": "Calcium [Mass/volume] in Serum or Plasma",
-      "G": "Calcium mass conc",
-      "H": "mg/dL",
-      "I": "8.6 - 10.2",
-      "J": 8.6,
-      "K": 10.2,
-      "N": "Calcium SerPl-mCnc",
-      "O": "RI",
-      "P": "mg/dL",
-      "Q": "mg/dL",
-      "R": 40.078,
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 4,
-      "B": "Calcium SerPl Qn",
-      "C": "Calcium moles->mass",
-      "D": "4053z",
-      "E": "2000-8",
-      "F": "Calcium [Moles/volume] in Serum or Plasma",
-      "G": "Calcium moles conc",
-      "H": "mmol/L",
-      "I": "2.2 - 2.7",
-      "J": 2.2,
-      "K": 2.7,
-      "N": "Calcium SerPl-sCnc",
-      "O": "RI",
-      "P": "mg/dL",
-      "Q": "mg/dL",
-      "R": 40.078,
-      "S": "x",
-      "T": "mmol/L",
-      "U": "mmol/L",
-      "V": "mmol/L"
-    },
-    {
-      "A": 4,
-      "B": "Calcium (CSH) mg/dL",
-      "C": "Calcium moles->mass",
-      "D": 11445,
-      "E": "17861-6",
-      "F": "Calcium [Mass/volume] in Serum or Plasma",
-      "G": "Calcium mass conc",
-      "H": "mg/dL",
-      "I": "8.6 - 10.2",
-      "J": 8.6,
-      "K": 10.2,
-      "N": "Calcium SerPl-mCnc",
-      "O": "RI",
-      "P": "mg/dL",
-      "Q": "mg/dL",
-      "R": 40.078,
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 4,
-      "B": "Calcium (SMA)-mg/ddL",
-      "C": "Calcium moles->mass",
-      "D": 31,
-      "E": "17861-6",
-      "F": "Calcium [Mass/volume] in Serum or Plasma",
-      "G": "Calcium mass conc",
-      "H": "mg/dL",
-      "I": "8.6 - 10.2",
-      "J": 8.6,
-      "K": 10.2,
-      "N": "Calcium SerPl-mCnc",
-      "O": "RI",
-      "P": "mg/dL",
-      "Q": "mg/dL",
-      "R": 40.078,
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 4,
-      "B": "Calcium-Ion Ser mg/dL",
-      "C": "Calcium moles->mass",
-      "D": 14698,
-      "E": "17863-2",
-      "F": "Calcium.ionized [Mass/volume] in Serum or Plasma",
-      "G": "Calcium.ionized mass conc",
-      "H": "mg/dL",
-      "I": "4.6 - 5.1",
-      "J": 4.6,
-      "K": 5.1,
-      "L": 6.3,
-      "M": 3.1,
-      "N": "Ca-I SerPl-mCnc",
-      "O": "RI",
-      "R": 40.078,
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 4,
-      "B": "Calcium-Ion SerPl mmol/L",
-      "C": "Calcium moles->mass",
-      "D": 7768,
-      "E": "1995-0",
-      "F": "Calcium.ionized [Moles/volume] in Serum or Plasma",
-      "G": "Calcium.ionized molar conc",
-      "H": "mmol/L",
-      "I": "2.28 - 2.64",
-      "J": 2.28,
-      "K": 2.64,
-      "N": "Ca-I SerPl-sCnc",
-      "O": "RI",
-      "R": 40.078,
-      "S": "x",
-      "T": "mmol/L",
-      "U": "mmol/L",
-      "V": "mmol/L"
-    },
-    {
-      "A": 3,
-      "B": "ALBUMIN TESTS",
-      "D": 7796,
-      "O": "RI"
-    },
-    {
-      "A": 4,
-      "B": "Albumin SerPl Qn",
-      "C": "Albumin moles->mass",
-      "D": 4038,
-      "E": "1751-7",
-      "F": "Albumin [Mass/volume] in Serum or Plasma",
-      "G": "Albumin mass conc",
-      "H": "g/dL",
-      "I": "3.5-5.5",
-      "J": 3.5,
-      "K": 5.5,
-      "N": "Albumin SerPl-mCnc",
-      "O": "RI",
-      "P": "g/dL",
-      "Q": "g/dL",
-      "R": 66000,
-      "T": "g/dL",
-      "U": "g/dL",
-      "V": "g/dL"
-    },
-    {
-      "A": 4,
-      "B": "Albumin SerPl Qn",
-      "C": "Albumin moles->mass",
-      "D": "4038z",
-      "E": "54347-0",
-      "F": "Albumin [Moles/volume] in Serum or Plasma",
-      "G": "Albumin molar conc",
-      "H": "umol/l",
-      "I": "526.6 - 827.6",
-      "J": 526.6,
-      "K": 827.6,
-      "N": "Albumin SerPl-sCnc",
-      "O": "RI",
-      "P": "g/dL",
-      "Q": "g/dL",
-      "R": 66000,
-      "S": "x",
-      "T": "umol/l",
-      "U": "umol/l",
-      "V": "umol/l"
-    },
-    {
-      "A": 4,
-      "B": "Albumin Ser Neph",
-      "C": "Albumin moles->mass",
-      "D": 25166,
-      "E": "1751-7",
-      "F": "Albumin [Mass/volume] in Serum or Plasma",
-      "G": "Albumin mass conc",
-      "H": "g/dL",
-      "I": "3.5-5.5",
-      "J": 3.5,
-      "K": 5.5,
-      "N": "Albumin SerPl-mCnc",
-      "O": "RI",
-      "P": "g/dL",
-      "Q": "g/dL",
-      "R": 66000,
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 4,
-      "B": "Albumin (CSH)",
-      "C": "Albumin moles->mass",
-      "D": 11448,
-      "E": "1751-7",
-      "F": "Albumin [Mass/volume] in Serum or Plasma",
-      "G": "Albumin mass conc",
-      "H": "g/dL",
-      "I": "3.5-5.5",
-      "J": 3.5,
-      "K": 5.5,
-      "N": "Albumin SerPl-mCnc",
-      "O": "RI",
-      "P": "g/dL",
-      "Q": "g/dL",
-      "R": 66000,
-      "T": "g/dL",
-      "U": "g/dL",
-      "V": "g/dL"
-    },
-    {
-      "A": 4,
-      "B": "Albumin (SMA)",
-      "C": "Albumin moles->mass",
-      "D": 38,
-      "E": "1751-7",
-      "F": "Albumin [Mass/volume] in Serum or Plasma",
-      "G": "Albumin mass conc",
-      "H": "g/dL",
-      "I": "3.5-5.5",
-      "J": 3.5,
-      "K": 5.5,
-      "N": "Albumin SerPl-mCnc",
-      "O": "RI",
-      "P": "g/dL",
-      "Q": "g/dL",
-      "R": 66000,
-      "T": "g/dL",
-      "U": "g/dL",
-      "V": "g/dL"
-    },
-    {
-      "A": 3,
-      "B": "BILIRUBINS (CSH)",
-      "D": 11453,
-      "O": "RI"
-    },
-    {
-      "A": 4,
-      "B": "Bilirubin Total SerPl Qn",
-      "C": "Bilirubin moles->mass",
-      "D": 1275,
-      "E": "1975-2",
-      "F": "Bilirubin.total [Mass/volume] in Serum or Plasma",
-      "G": "Bilirubin mass conc",
-      "H": "mg/dL",
-      "I": "0.2 - 1.2",
-      "J": 0.2,
-      "K": 1.2,
-      "N": "Bilirub SerPl-mCnc",
-      "O": "RI",
-      "P": "mg/dL",
-      "Q": "mg/dL",
-      "R": 584.6621,
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 4,
-      "B": "Bilirubin Tot Ser",
-      "C": "Bilirubin moles->mass",
-      "D": 11438,
-      "E": "1975-2",
-      "F": "Bilirubin.total [Mass/volume] in Serum or Plasma",
-      "G": "Bilirubin mass conc",
-      "H": "mg/dL",
-      "I": "0.2 - 1.2",
-      "J": 0.2,
-      "K": 1.2,
-      "N": "Bilirub SerPl-mCnc",
-      "O": "RI",
-      "P": "mg/dL",
-      "Q": "mg/dL",
-      "R": 584.6621,
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 4,
-      "B": "Bilirubin SerPl Qn",
-      "C": "Bilirubin moles->mass",
-      "D": 39,
-      "E": "1975-2",
-      "F": "Bilirubin.total [Mass/volume] in Serum or Plasma",
-      "G": "Bilirubin mass conc",
-      "H": "mg/dL",
-      "I": "0.1 - 1.2",
-      "J": 0.1,
-      "K": 1.2,
-      "N": "Bilirub SerPl-mCnc",
-      "O": "RI",
-      "P": "mg/dL",
-      "Q": "mg/dL",
-      "R": 584.6621,
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 4,
-      "B": "Bilirubin SerPl Qn Molar",
-      "C": "Bilirubin moles->mass",
-      "D": "39z",
-      "E": "14631-6",
-      "F": "Bilirubin.total [Moles/volume] in Serum or Plasma",
-      "G": "Bilibrubin molar conc",
-      "H": "umol/l",
-      "I": "1.71 - 20.5",
-      "J": 1.71,
-      "K": 20.5,
-      "N": "Bilirub SerPl-sCnc",
-      "O": "RI",
-      "P": "mg/dL",
-      "Q": "mg/dL",
-      "R": 584.6621,
-      "S": "x",
-      "T": "umol/l",
-      "U": "umol/l",
-      "V": "umol/l"
-    },
-    {
-      "A": 4,
-      "B": "Bilirubin SerPl Qn Calc",
-      "C": "Bilirubin moles->mass",
-      "D": 16459,
-      "E": "1975-2",
-      "F": "Bilirubin.total [Mass/volume] in Serum or Plasma",
-      "G": "Bilirubin mass conc",
-      "H": "mg/dL",
-      "I": "0.2 - 1.2",
-      "J": 0.2,
-      "K": 1.2,
-      "N": "Bilirub SerPl-mCnc",
-      "O": "RI",
-      "P": "mg/dL",
-      "Q": "mg/dL",
-      "R": 584.6621,
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 3,
-      "B": "ALK PHOS TESTS",
-      "D": 4937,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "AST TESTS",
-      "D": 5004,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "ALT TESTS",
-      "D": 26281,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "AMMONIA TESTS",
-      "D": 26586,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "CPK TESTS",
-      "D": 5732,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "LIPASE TESTS",
-      "D": 26587,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "PHOS TESTS",
-      "D": 5385,
-      "O": "RI"
-    },
-    {
-      "A": 4,
-      "B": "Phosphorus SerPl Qn",
-      "C": "Phosphate moles->mass",
-      "D": 1793,
-      "E": "2777-1",
-      "F": "Phosphate [Mass/volume] in Serum or Plasma",
-      "G": "Phosphate mass conc",
-      "H": "mg/dL",
-      "I": "3.4 - 4.5",
-      "J": 3.4,
-      "K": 4.5,
-      "N": "Phosphate SerPl-mCnc",
-      "O": "RI",
-      "P": "mg/dL",
-      "Q": "mg/dL",
-      "R": 30.974,
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 4,
-      "B": "Phosphorus SerPl Qn",
-      "C": "Phosphate moles->mass",
-      "D": "1793z",
-      "E": "14879-1",
-      "F": "Phosphate [Moles/volume] in Serum or Plasma",
-      "G": "Phosphate molar conc",
-      "H": "mmol/L",
-      "I": "1.12 - 1.45",
-      "J": 1.12,
-      "K": 1.45,
-      "N": "Phosphate SerPl-sCnc",
-      "O": "RI",
-      "P": "mg/dL",
-      "Q": "mg/dL",
-      "R": 30.974,
-      "S": "x",
-      "T": "mmol/L",
-      "U": "mmol/L",
-      "V": "mmol/L"
-    },
-    {
-      "A": 4,
-      "B": "Phos (CSH)",
-      "C": "Phosphate moles->mass",
-      "D": 11446,
-      "E": "2777-1",
-      "F": "Phosphate [Mass/volume] in Serum or Plasma",
-      "G": "Phosphate mass conc",
-      "H": "mg/dL",
-      "I": "2.5-4.5",
-      "J": 2.5,
-      "K": 4.5,
-      "N": "Phosphate SerPl-mCnc",
-      "O": "RI",
-      "P": "mg/dL",
-      "Q": "mg/dL",
-      "R": 30.974,
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 4,
-      "B": "Phos (SMA)",
-      "C": "Phosphate moles->mass",
-      "D": 32,
-      "E": "2777-1",
-      "F": "Phosphate [Mass/volume] in Serum or Plasma",
-      "G": "Phosphate mass conc",
-      "H": "mg/dL",
-      "I": "2.5-4.5",
-      "J": 2.5,
-      "K": 4.5,
-      "N": "Phosphate SerPl-mCnc",
-      "O": "RI",
-      "P": "mg/dL",
-      "Q": "mg/dL",
-      "R": 30.974,
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 3,
-      "B": "TOTAL PROTEIN TESTS",
-      "D": 26588,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "CHOLESTEROL TESTS & LIPID PANELS",
-      "D": 26255,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "BLD GASES:",
-      "D": 195,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "PH RESULTS",
-      "D": 6489,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "Intensive care calculations",
-      "D": 9019,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "SWAN BEDSIDE",
-      "D": 8369,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "CARDIAC MARKERS",
-      "D": 24726,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "CARBOHYDRATE/DIABETES STUDIES:",
-      "D": 16935,
-      "O": "RI"
-    },
-    {
-      "A": 4,
-      "B": "Glucose Fast OB",
-      "D": 16440,
-      "G": "Glucose fasting mass conc",
-      "H": "mg/dL",
-      "I": "65 - 94",
-      "J": 65,
-      "K": 94,
-      "L": 700,
-      "M": 30,
-      "N": "Glucose p fast SerPl-mCnc",
-      "O": "RI",
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 4,
-      "B": "Glucose 50Gm",
-      "D": 17732,
-      "G": "Glucose 1H p 50 g glucose PO mass conc",
-      "H": "mg/dL",
-      "I": "70 - 139",
-      "J": 70,
-      "K": 139,
-      "L": 500,
-      "M": 30,
-      "N": "Glucose 1h p 50 g Glc PO SerPl-mCnc",
-      "O": "RI",
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 4,
-      "B": "Glucose Ser 1H P OB GTT",
-      "D": 16442,
-      "G": "Glucose 1H p dose glucose mass conc",
-      "H": "mg/dL",
-      "I": "65 - 169",
-      "J": 65,
-      "K": 169,
-      "L": 700,
-      "M": 30,
-      "N": "Glucose 1h p Glc SerPl-mCnc",
-      "O": "RI",
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 4,
-      "B": "Glucose Ser 2H P OB GTT",
-      "D": 16444,
-      "G": "Glucose 2 hours p dose glucose mass conc",
-      "H": "mg/dL",
-      "I": "65 - 119",
-      "J": 65,
-      "K": 119,
-      "L": 700,
-      "M": 30,
-      "N": "Glucose 2h p Glc SerPl-mCnc",
-      "O": "RI",
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 4,
-      "B": "Glucose Ser 3H P OB GTT",
-      "D": 18191,
-      "G": "Glucose 3 hours p dose glucose mass conc",
-      "H": "mg/dL",
-      "I": "65 - 119",
-      "J": 65,
-      "K": 119,
-      "L": 700,
-      "M": 30,
-      "N": "Glucose 3h p Glc SerPl-mCnc",
-      "O": "RI",
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 4,
-      "B": "GTT 50Gm Hb",
-      "D": 18833,
-      "G": "Glucose 2 hours p dose glucose mass conc (Bld)",
-      "N": "Glucose 2h p Glc Bld-mCnc",
-      "O": "RI",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 4,
-      "B": "Glucose 0.5H OB SerPl Qn",
-      "D": 16441,
-      "G": "Glucose 30M p dose glucose mass conc",
-      "H": "mg/dL",
-      "I": "65 - 169",
-      "J": 65,
-      "K": 169,
-      "L": 700,
-      "M": 30,
-      "N": "Glucose 30M p Glc SerPl-mCnc",
-      "O": "RI",
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 4,
-      "B": "Glucose 1.5H OB SerPl Qn",
-      "D": 16443,
-      "G": "Glucose 1.5 hours p dose glucose mass conc",
-      "H": "mg/dL",
-      "I": "70 - 180",
-      "J": 70,
-      "K": 180,
-      "N": "Glucose 1.5h p Glc SerPl-mCnc",
-      "O": "RI",
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 2,
-      "B": "LIPIDS",
-      "D": 16936,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "Acylcarnitines Bld Panel",
-      "D": 30083,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "PROTEIN(UR-SER)",
-      "D": 16934,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "PROTEIN FRACTIONS",
-      "D": 5852,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "ENZYMES & ISOENZ NON CARDIAC",
-      "D": 16932,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "ALK PHOS ISO'",
-      "D": 975,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "LDH TESTS",
-      "D": 5612,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "LDH ISOENZYMES",
-      "D": 6121,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "Other Isoenzymes",
-      "D": 6113,
-      "E": "no idea",
-      "H": "%",
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "BILE ISOENZ",
-      "D": 18073,
-      "E": "no idea",
-      "H": "%",
-      "I": "0 - 18",
-      "J": 0,
-      "K": 18,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "PORPHYRINS(UR-STL-RBC)",
-      "D": 16943,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "TUMOR MARKERS:",
-      "D": 16946,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "AMINO ACIDS/METAB/NEWBORN SCN:",
-      "D": 16941,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "AMINO ACIDS SER/PLAS STUDIES",
-      "D": 25286,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "AMINO ACIDS URINE STUDIES",
-      "D": 25287,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "CHEM HORMONE/ENDO:",
-      "D": 16947,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "ANDROGENS STUDIES(UR-SER)",
-      "D": 16954,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "ESTROGEN/PROGESTIN(UR-SER)",
-      "D": 16953,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "PITUITARY STUDIES:",
-      "D": 16952,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "ADRNL MEDUL/AMINES(UR-SER)",
-      "D": 16951,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "ADRENAL CORTEX STUDIES(UR-SER)",
-      "D": 16950,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "PARATHYROID/VIT D STUDIES:",
-      "D": 16949,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "THYROID STUDIES:",
-      "D": 16948,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "PREGNANCY/MATERNAL SERUM SCREENS",
-      "D": 5731,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "MS-AFP SCN",
-      "D": 16956,
-      "O": "RI"
-    },
-    {
-      "A": 4,
-      "B": "Med AFP/Wks Gest",
-      "D": 11151,
-      "E": "No LOINC code",
-      "O": "RI"
-    },
-    {
-      "A": 4,
-      "B": "M.O.M. Value-Hb",
-      "D": 18838,
-      "E": "No LOINC code",
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "COMPLEMENT STUDIES",
-      "D": 16914,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "CHEM IMMUNOLOGY STUDIES",
-      "D": 17580,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "IMMUNOGLOBULIN LEVELS",
-      "D": 16913,
-      "O": "RI"
-    },
-    {
-      "A": 4,
-      "B": "IgG IMMUNO",
-      "D": 9509,
-      "O": "RI"
-    },
-    {
-      "A": 4,
-      "B": "IgG SUBCLASS PRFL",
-      "D": 13741,
-      "O": "RI"
-    },
-    {
-      "A": 4,
-      "B": "IgA IMMUNO",
-      "D": 9510,
-      "O": "RI"
-    },
-    {
-      "A": 4,
-      "B": "IgM IMMUNO",
-      "D": 9511,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "VITAMINS MISC",
-      "D": 16945,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "MISC BLD CHEM",
-      "D": 6163,
-      "O": "RI"
-    },
-    {
-      "A": 1,
-      "B": "HEMATOLOGY STUDIES:",
-      "D": 16540,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "Hemoglobin-Hb",
-      "C": "Hemoglobin Bld moles->mass",
-      "D": 16342,
-      "E": "718-7",
-      "F": "Hemoglobin [Mass/volume] in Blood",
-      "G": "Hemoglobin mass conc (Bld)",
-      "H": "g/dL",
-      "I": "12 - 17.5",
-      "J": 12,
-      "K": 17.5,
-      "N": "Hgb Bld-mCnc",
-      "O": "RI",
-      "P": "g/dL",
-      "Q": "g/dL",
-      "R": 64458,
-      "T": "g/dL",
-      "U": "g/dL",
-      "V": "g/dL"
-    },
-    {
-      "A": 3,
-      "B": "Hgb Bld",
-      "C": "Hemoglobin Bld moles->mass",
-      "D": 22594,
-      "E": "20509-6",
-      "F": "Hemoglobin [Mass/volume] in Blood by calculation",
-      "G": "Hemoglobin Calculated mass conc (Bld)",
-      "H": "g/dL",
-      "I": "12 - 17.5",
-      "J": 12,
-      "K": 17.5,
-      "N": "Hgb Bld Calc-mCnc",
-      "O": "RI",
-      "P": "g/dL",
-      "Q": "g/dL",
-      "R": 64458,
-      "T": "g/dL",
-      "U": "g/dL",
-      "V": "g/dL"
-    },
-    {
-      "A": 3,
-      "B": "Hgb Bld Qn (POC)",
-      "C": "Hemoglobin Bld moles->mass",
-      "D": 22410,
-      "E": "20509-6",
-      "F": "Hemoglobin [Mass/volume] in Blood by calculation",
-      "G": "Hemoglobin Calculated mass conc (Bld)",
-      "H": "g/dL",
-      "I": "12 - 17.5",
-      "J": 12,
-      "K": 17.5,
-      "N": "Hgb Bld Calc-mCnc",
-      "O": "RI",
-      "P": "g/dL",
-      "Q": "g/dL",
-      "R": 64458,
-      "T": "g/dL",
-      "U": "g/dL",
-      "V": "g/dL"
-    },
-    {
-      "A": 3,
-      "B": "Hgb Bld Qn Calc (ER-IS)",
-      "C": "Hemoglobin Bld moles->mass",
-      "D": 20027,
-      "E": "20509-6",
-      "F": "Hemoglobin [Mass/volume] in Blood by calculation",
-      "G": "Hemoglobin Calculated mass conc (Bld)",
-      "H": "g/dL",
-      "I": "12 - 17.5",
-      "J": 12,
-      "K": 17.5,
-      "N": "Hgb Bld Calc-mCnc",
-      "O": "RI",
-      "P": "g/dL",
-      "Q": "g/dL",
-      "R": 64458,
-      "T": "g/dL",
-      "U": "g/dL",
-      "V": "g/dL"
-    },
-    {
-      "A": 3,
-      "B": "Hgb Bld Qn (ISTAT)'",
-      "C": "Hemoglobin Bld moles->mass",
-      "D": 18992,
-      "E": "20509-6",
-      "F": "Hemoglobin [Mass/volume] in Blood by calculation",
-      "G": "Hemoglobin Calculated mass conc (Bld)",
-      "H": "g/dL",
-      "I": "12 - 17.5",
-      "J": 12,
-      "K": 17.5,
-      "N": "Hgb Bld Calc-mCnc",
-      "O": "RI",
-      "P": "g/dL",
-      "Q": "g/dL",
-      "R": 64458,
-      "T": "g/dL",
-      "U": "g/dL",
-      "V": "g/dL"
-    },
-    {
-      "A": 3,
-      "B": "Hgb",
-      "C": "Hemoglobin Bld moles->mass",
-      "D": 60,
-      "E": "718-7",
-      "F": "Hemoglobin [Mass/volume] in Blood",
-      "G": "Hemoglobin mass conc (Bld)",
-      "H": "g/dL",
-      "I": "12 - 17.5",
-      "J": 12,
-      "K": 17.5,
-      "N": "Hgb Bld-mCnc",
-      "O": "RI",
-      "P": "g/dL",
-      "Q": "g/dL",
-      "R": 64458,
-      "T": "g/dL",
-      "U": "g/dL",
-      "V": "g/dL"
-    },
-    {
-      "A": 3,
-      "B": "Hgb",
-      "C": "Hemoglobin Bld moles->mass",
-      "D": "60z",
-      "E": "59260-0",
-      "F": "Hemoglobin [Moles/volume] in Blood",
-      "G": "Hemoglobin molar conc (bld)",
-      "H": "mmol/L",
-      "I": "7.4 - 10.86",
-      "J": 7.4,
-      "K": 10.86,
-      "N": "Hgb Bld-sCnc",
-      "O": "RI",
-      "P": "g/dL",
-      "Q": "g/dL",
-      "R": 64458,
-      "S": "x",
-      "T": "mmol/L",
-      "U": "mmol/L",
-      "V": "mmol/L"
-    },
-    {
-      "A": 2,
-      "B": "BLD INDICES",
-      "D": 874,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "MCH",
-      "C": "Erythrocyte mean corpuscular hemoglobin MSCNC demo",
-      "D": 876,
-      "E": "785-6",
-      "F": "MCH [Entitic mass] by Automated count",
-      "H": "pg",
-      "I": "23 - 31",
-      "J": 23,
-      "K": 31,
-      "L": 40,
-      "M": 15,
-      "N": "MCH RBC Qn Auto",
-      "O": "RI",
-      "P": "pg",
-      "Q": "pg",
-      "T": "pg",
-      "U": "pg",
-      "V": "pg"
-    },
-    {
-      "A": 3,
-      "B": "MCH",
-      "C": "Erythrocyte mean corpuscular hemoglobin MSCNC demo",
-      "D": "876z",
-      "E": "59468-9",
-      "F": "MCH [Entitic mass]",
-      "H": "fmol",
-      "I": "1.68 - 1.92",
-      "J": 1.68,
-      "K": 1.92,
-      "N": "MCH EntSub RBC",
-      "O": "RI",
-      "P": "pg",
-      "Q": "pg",
-      "S": "x",
-      "T": "fmol",
-      "U": "fmol",
-      "V": "fmol"
-    },
-    {
-      "A": 3,
-      "B": "MCHC",
-      "C": "MCHC (RBC) moles->mass",
-      "D": 877,
-      "E": "786-4",
-      "F": "MCHC [Mass/volume] by Automated count",
-      "H": "g/dL",
-      "I": "32 - 36",
-      "J": 32,
-      "K": 36,
-      "L": 37,
-      "M": 28,
-      "N": "MCHC RBC Auto-mCnc",
-      "O": "RI",
-      "P": "g/dL",
-      "Q": "g/dL",
-      "T": "g/dL",
-      "U": "g/dL",
-      "V": "g/dL"
-    },
-    {
-      "A": 3,
-      "B": "MCHC",
-      "C": "MCHC (RBC) moles->mass",
-      "D": "877z",
-      "E": "59467-1",
-      "F": "MCHC [Moles/volume] by Automated count",
-      "H": "mmol/l",
-      "I": "19.8 - 22.3",
-      "J": 19.8,
-      "K": 22.3,
-      "N": "MCHC RBC-sCnc",
-      "O": "RI",
-      "P": "g/dL",
-      "Q": "g/dL",
-      "S": "x",
-      "T": "mmol/L",
-      "U": "mmol/L",
-      "V": "mmol/L"
-    },
-    {
-      "A": 2,
-      "B": "IRON/EPO STUDIES(SER-LIVER)",
-      "D": 6187,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "FOLATE/B12 STUDIES",
-      "D": 25230,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "HEMOLYSIS STUDIES",
-      "D": 7809,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "RBC ENZYMES",
-      "D": 6189,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "HEMOGLOBINOPATHY STUDIES",
-      "D": 16907,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "WBC FUNCTION/CYTOCHEM STUDIES",
-      "D": 25229,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "WBC FUNCTION TESTS",
-      "D": 16910,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "CYTOCHEMISTRY/WBC STUDIES",
-      "D": 16909,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "IMMUNOTYPING-FLOW CYTOMETRY",
-      "D": 25228,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "LYMPH CLASS",
-      "D": 6188,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "IMMUNOPHENOTYPING STUDIES - WBC",
-      "D": 16911,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "COAGULATION STUDIES:",
-      "D": 16541,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "MISC. COAG TESTS",
-      "D": 6169,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "THROMBOSIS STUDIES",
-      "D": 25309,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "LUPUS ANTICOAGULANT PANEL/TESTS",
-      "D": 31831,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "CLOTTING FACTORS",
-      "D": 6192,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "PLATELET FUNCTION TESTS",
-      "D": 16917,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "PLATELET FUNCTION SCN",
-      "D": 25410,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "APA PROFILE",
-      "D": 22054,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "ANTIPHOSHATIDYLETHANOLAMINE(aPE)",
-      "D": 22051,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "ANTIPHOSPHATIDYLSERINE (aPS)",
-      "D": 22052,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "OTHER HEMATOLOGY TESTS",
-      "D": 6162,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "Ser Water Ratio",
-      "D": 10997,
-      "E": "skip for now",
-      "O": "RI"
-    },
-    {
-      "A": 1,
-      "B": "URINE STUDIES",
-      "D": 16969,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "URN CHEMISTRY:",
-      "D": 16545,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "Creatinine 24H UR",
-      "D": 1011,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "5HIAA T-UR",
-      "D": 6454,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "MAGNESIUM UR BAT",
-      "D": 8422,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "OXALATE 24H UR",
-      "D": 6562,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "PHOS 24H UR",
-      "D": 1018,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "URIC ACID 24H UR",
-      "D": 1048,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "NEPHROLITHIASIS CHEM PANEL",
-      "D": 25508,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "RANDOM URN TESTS",
-      "D": 6172,
-      "O": "RI"
-    },
-    {
-      "A": 1,
-      "B": "URINALYSIS:",
-      "D": 16544,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "U-A",
-      "D": 2113,
-      "O": "RI"
-    },
-    {
-      "A": 1,
-      "B": "CSF&OTHER FLUID (COUNTS & CHEM)",
-      "D": 16962,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "AMNIOTIC FLD STUDIES:",
-      "D": 978,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "LAMELLAR BODY COUNT",
-      "D": 22732,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "Acetone Insol L",
-      "D": 6308,
-      "E": "skip for now",
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "Foam Stab Index",
-      "D": 9867,
-      "E": "skip for now",
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "CSF CHEM & SERO",
-      "D": 656,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "FECES STUDIES:",
-      "D": 16940,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "OCCULT BLOOD TESTS",
-      "D": 5914,
-      "O": "RI"
-    },
-    {
-      "A": 4,
-      "B": "BLD STOOL 24H",
-      "D": 20723,
-      "E": "No LOINC code",
-      "J": 0,
-      "K": 0,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "Laxative Stl Panel",
-      "D": 29525,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "GASTRIC FLUID STUDIES:",
-      "D": 16938,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "NASAL SMEAR EXAM",
-      "D": 15805,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "OTHER BODY FLD STUDIES:",
-      "D": 16543,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "BODY FLUID CHEM & SERO",
-      "D": 16966,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "MISC FLD TESTS",
-      "D": 6174,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "Test Name Body Fluid",
-      "D": 37915,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "Test Result Body Fluid",
-      "D": 37916,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "Units Body Fluid Tests",
-      "D": 37917,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "PERITONEAL FLUID COUNTS & CHEM",
-      "D": 26104,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "TNC Pericard Fld Qn",
-      "D": 39615,
-      "O": "RI",
-      "T": "#/mm3"
-    },
-    {
-      "A": 2,
-      "B": "Mono+Macro % Pericard Fld",
-      "D": 39616,
-      "O": "RI",
-      "T": "%"
-    },
-    {
-      "A": 2,
-      "B": "Eosinophils % Pericard Fld",
-      "D": 39614,
-      "O": "RI",
-      "T": "%"
-    },
-    {
-      "A": 2,
-      "B": "Imm Granulocytes % Pericard Fld",
-      "D": 42126,
-      "O": "RI",
-      "T": "%"
-    },
-    {
-      "A": 2,
-      "B": "Atypical Cells % Pericard Fld",
-      "D": 41068,
-      "O": "RI",
-      "T": "%"
-    },
-    {
-      "A": 2,
-      "B": "Pericardial Lining Cells%PeriFld",
-      "D": 42123,
-      "O": "RI",
-      "T": "%"
-    },
-    {
-      "A": 2,
-      "B": "Other Cells Pericard Fld",
-      "D": 42124,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "Cell Ct+Diff Peritoneal Fld Pnl",
-      "D": 37509,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "WBC Corrected # Peritoneal Fld",
-      "D": 34159,
-      "O": "RI",
-      "T": "#/mm3"
-    },
-    {
-      "A": 2,
-      "B": "Plasma Cell % Peritoneal Fld",
-      "D": 34162,
-      "O": "RI",
-      "T": "%"
-    },
-    {
-      "A": 2,
-      "B": "Immature Gran % Peritoneal Fld",
-      "D": 41352,
-      "O": "RI",
-      "T": "%"
-    },
-    {
-      "A": 2,
-      "B": "Atypical Cells % Peritoneal Fld",
-      "D": 41353,
-      "O": "RI",
-      "T": "%"
-    },
-    {
-      "A": 2,
-      "B": "Peritoneal Fld Other Cells",
-      "D": 34163,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "Peritoneal Fld Diff Cmnt",
-      "D": 34160,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "TNC Peritoneal Dialysate Qn",
-      "D": 39346,
-      "O": "RI",
-      "T": "#/mm3"
-    },
-    {
-      "A": 2,
-      "B": "Mono+Macro % Periton Dialysate",
-      "D": 39349,
-      "O": "RI",
-      "T": "%"
-    },
-    {
-      "A": 2,
-      "B": "Lining Cells % Periton Dialysate",
-      "D": 39350,
-      "O": "RI",
-      "T": "%"
-    },
-    {
-      "A": 2,
-      "B": "Other Cells Periton Dialysate",
-      "D": 41565,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "Bacteria Ql Periton Dialysate",
-      "D": 41067,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "PLEURAL FLUID COUNT & CHEM",
-      "D": 26103,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "Bands % Pleural Fld",
-      "D": 33977,
-      "O": "RI",
-      "T": "%"
-    },
-    {
-      "A": 2,
-      "B": "Plasma Cell % Pleural Fld",
-      "D": 34464,
-      "O": "RI",
-      "T": "%"
-    },
-    {
-      "A": 2,
-      "B": "Atypical Cells % Pleural Fld",
-      "D": 39354,
-      "O": "RI",
-      "T": "%"
-    },
-    {
-      "A": 2,
-      "B": "Other Cells Pleural Fld Rpt",
-      "D": 34225,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "Pleural Fld Diff Comment",
-      "D": 33980,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "Vitreous Fluid Panel",
-      "D": 36903,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "SWEAT ANALYSIS STUDIES",
-      "D": 16968,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "SYNOVIAL FLUID COUNTS & CHEM",
-      "D": 26105,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "SYNOVIAL FLUID STUDIES:",
-      "D": 16967,
-      "O": "RI"
-    },
-    {
-      "A": 1,
-      "B": "MICROBIOLOGY STUDIES:",
-      "D": 16554,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "CULTURES",
-      "D": 313,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "Culture Result-Transf Rxn",
-      "D": 25980,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "Micro Bact ID(Ur)",
-      "D": 20194,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "Corrected Stain Report",
-      "D": 29229,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "Preliminary Report",
-      "D": 38171,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "BACTERIAL CULT AND SUSC",
-      "D": 6490,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "BACTERIA SMEARS AND STAINS",
-      "D": 16334,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "BACTERIAL SUSCEPTIBILITIES",
-      "D": 16333,
-      "O": "RI"
-    },
-    {
-      "A": 4,
-      "B": "Suscept GP 1",
-      "D": 6417,
-      "O": "RI"
-    },
-    {
-      "A": 4,
-      "B": "Susc-Anaerobe",
-      "D": 15191,
-      "O": "RI"
-    },
-    {
-      "A": 4,
-      "B": "Suscept BP1",
-      "D": 13344,
-      "O": "RI"
-    },
-    {
-      "A": 4,
-      "B": "Suscept Enter 1",
-      "D": 6482,
-      "O": "RI"
-    },
-    {
-      "A": 4,
-      "B": "Suscept Gn1",
-      "D": 11337,
-      "O": "RI"
-    },
-    {
-      "A": 4,
-      "B": "Suscept Gn 1",
-      "D": 6416,
-      "O": "RI"
-    },
-    {
-      "A": 4,
-      "B": "Suscept Org 1",
-      "D": 13074,
-      "O": "RI"
-    },
-    {
-      "A": 4,
-      "B": "Susc-Gram Pos 4",
-      "D": 15228,
-      "O": "RI"
-    },
-    {
-      "A": 4,
-      "B": "Susc-Gram Neg 5",
-      "D": 15240,
-      "O": "RI"
-    },
-    {
-      "A": 4,
-      "B": "Susc-Ur Gn 6",
-      "D": 15250,
-      "O": "RI"
-    },
-    {
-      "A": 4,
-      "B": "TOPICAL SUSCEPT",
-      "D": 7945,
-      "O": "RI"
-    },
-    {
-      "A": 5,
-      "B": "Betadine Top Susc",
-      "D": 7941,
-      "E": "No LOINC code",
-      "O": "RI"
-    },
-    {
-      "A": 4,
-      "B": "PENICILLINS NON-COMBO SUSC",
-      "D": 25271,
-      "O": "RI"
-    },
-    {
-      "A": 4,
-      "B": "BETA-LACTAM INHIBITOR COMBO SUSC",
-      "D": 25272,
-      "O": "RI"
-    },
-    {
-      "A": 5,
-      "B": "CEPHALOSPORINS 1ST GEN SUSC",
-      "D": 25274,
-      "O": "RI"
-    },
-    {
-      "A": 5,
-      "B": "CEPHALOSPORINS 2ND GEN SUSC",
-      "D": 25275,
-      "O": "RI"
-    },
-    {
-      "A": 5,
-      "B": "CEPHALOSPORINS 3RD GEN SUSC",
-      "D": 25276,
-      "O": "RI"
-    },
-    {
-      "A": 5,
-      "B": "CEPHALOSPORINS 4TH GEN SUSC",
-      "D": 25277,
-      "O": "RI"
-    },
-    {
-      "A": 4,
-      "B": "MONOBACTAMS SUSC",
-      "D": 25279,
-      "O": "RI"
-    },
-    {
-      "A": 4,
-      "B": "CARBAPENEMS SUSC",
-      "D": 25278,
-      "O": "RI"
-    },
-    {
-      "A": 4,
-      "B": "AMINOGLYCOSIDES SUSC",
-      "D": 25280,
-      "O": "RI"
-    },
-    {
-      "A": 4,
-      "B": "MACROLIDES SUSC",
-      "D": 25281,
-      "O": "RI"
-    },
-    {
-      "A": 4,
-      "B": "TETRACYCLINES SUSC",
-      "D": 25282,
-      "O": "RI"
-    },
-    {
-      "A": 4,
-      "B": "QUINOLONES SUSC",
-      "D": 25283,
-      "O": "RI"
-    },
-    {
-      "A": 4,
-      "B": "GLYCOPEPTIDES SUSC",
-      "D": 25284,
-      "O": "RI"
-    },
-    {
-      "A": 4,
-      "B": "MISCELLANEOUS SUSC",
-      "D": 25285,
-      "O": "RI"
-    },
-    {
-      "A": 4,
-      "B": "OTHER SUSCEPTIBILITY TESTS",
-      "D": 16601,
-      "O": "RI"
-    },
-    {
-      "A": 4,
-      "B": "Agar Screen",
-      "D": 29226,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "ROUTINE MICROBIOLOGY",
-      "D": 6167,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "Infection Control Observation",
-      "D": 30986,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "NAMED BACTERIA STUDIES",
-      "D": 25210,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "BORRELIA (+LYME) STUDIES",
-      "D": 25062,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "BRUCELLA SP STUDIES",
-      "D": 25267,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "CAMPYLOBACTER STUDIES",
-      "D": 25063,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "CHLAMYDIA STUDIES",
-      "D": 25204,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "CLOSTRIDIAL STUDIES",
-      "D": 25065,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "GC CHLAMYDIA TESTS",
-      "D": 17730,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "HELICOBACTER STUDIES",
-      "D": 25066,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "LEGIONELLA STUDIES",
-      "D": 25067,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "MYCOPLASMA STUDIES",
-      "D": 25069,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "NEISSERIA STUDIES",
-      "D": 25199,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "RICKETTSIA STUDIES",
-      "D": 25070,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "SALMONELLA SHIGELLA STUDIES",
-      "D": 25073,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "STREPTOCOCCAL SP STUDIES",
-      "D": 25071,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "SYPHILIS STUDIES:",
-      "D": 25197,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "OTHER BACTERIAL STUDIES",
-      "D": 25198,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "BACTERIAL SEROLOGY",
-      "D": 16985,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "BACTERIAL TITRS",
-      "D": 7820,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "BACTERIAL SUSC TESTS",
-      "D": 16598,
-      "O": "RI"
-    },
-    {
-      "A": 4,
-      "B": "Max Bact Dilut",
-      "D": 5871,
-      "E": "No LOINC code",
-      "O": "RI"
-    },
-    {
-      "A": 4,
-      "B": "Max Inhib Dilut",
-      "D": 5874,
-      "E": "No LOINC code",
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "BACTERIAL AG",
-      "D": 11331,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "YERSINIA STUDIES",
-      "D": 25074,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "AFB (MYCOBACTERIAL) STUDIES:",
-      "D": 25059,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "AFB CULTURE AND SUSC",
-      "D": 25211,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "FUNGAL STUDIES",
-      "D": 25208,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "FUNGUS GENERAL STUDIES",
-      "D": 25195,
-      "O": "RI"
-    },
-    {
-      "A": 4,
-      "B": "ANTIFUNGAL MICS",
-      "D": 16599,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "FUNGUS SPECIFIC STUDIES",
-      "D": 25194,
-      "O": "RI"
-    },
-    {
-      "A": 4,
-      "B": "Coccidioides Ag Qn EIA",
-      "D": 35533,
-      "E": "No LOINC code",
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "PARASITOLOGY STUDIES",
-      "D": 16987,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "Toxoplasma IgG EIA-QN",
-      "D": 18178,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "VIROLOGY STUDIES",
-      "D": 25205,
-      "O": "RI"
-    },
-    {
-      "A": 4,
-      "B": "RESP VIRUS CULT & AG PRFL",
-      "D": 6571,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "CYTOMEGALO VIRUS STUDIES:",
-      "D": 25077,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "ENTERIC VIRUS STUDIES:",
-      "D": 25203,
-      "O": "RI"
-    },
-    {
-      "A": 4,
-      "B": "ECHOVIRUS NEUT",
-      "D": 5339,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "ENCEPHALITIS VIRUS STUDIES:",
-      "D": 25078,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "EPSTEIN BARR VIRUS STUDIES:",
-      "D": 25202,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "HEPATITIS A STUDIES:",
-      "D": 25201,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "HEPATITIS B STUDIES:",
-      "D": 25081,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "HEPATITIS C STUDIES:",
-      "D": 25082,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "HEPATITIS D STUDIES:",
-      "D": 25083,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "HERPES VIRUS STUDIES:",
-      "D": 25085,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "HIV/HTLV STUDIES",
-      "D": 25060,
-      "O": "RI"
-    },
-    {
-      "A": 5,
-      "B": "HIV-1 p24 Ag SerPl Panel",
-      "D": 31028,
-      "O": "RI"
-    },
-    {
-      "A": 5,
-      "B": "HIV-1 p24 Ag SerPl Cnfrm",
-      "D": 31029,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "INFLUENZA/PARAINFLU STUDIES:",
-      "D": 25266,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "MEASLES/MUMPS/RUBELLA VIRUS:",
-      "D": 25086,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "PARVOVIRUS STUDIES",
-      "D": 25265,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "VIRAL SEROLOGY",
-      "D": 16986,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "VIRUS OTHER STUDIES:",
-      "D": 25088,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "Employee Exposure Panel",
-      "D": 37070,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "Patient Exposure Panel",
-      "D": 37356,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "Reportable Disease Test Status",
-      "D": 37167,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "HYPERSENS PNEUMONITIS STUDIES:",
-      "D": 25193,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "ECHOVIRUS CF",
-      "D": 30982,
-      "O": "RI"
-    },
-    {
-      "A": 1,
-      "B": "SEROLOGY STUDIES:",
-      "D": 16549,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "ALLERGEN STUDIES",
-      "D": 16915,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "Milk Precipitins Ser Panel",
-      "D": 29564,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "AUTO-ANTIBODY TESTS",
-      "D": 16916,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "Differl Titr RA",
-      "D": 5154,
-      "E": "skip for now",
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "DNA Ab %",
-      "D": 5222,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "GM1 Ab-SER TITR",
-      "D": 20688,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "IBD Ab Ser Report",
-      "D": 29390,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "Anti Microsm IFA",
-      "D": 5226,
-      "E": "skip for now",
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "Normal Cell(RA)",
-      "D": 5152,
-      "O": "RI",
-      "T": "titer"
-    },
-    {
-      "A": 3,
-      "B": "RA Aggl'",
-      "D": 401,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "Sensit Cell(RA)",
-      "D": 5153,
-      "O": "RI",
-      "T": "titer"
-    },
-    {
-      "A": 2,
-      "B": "MISC. SEROLOGY",
-      "D": 17047,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "RHEUMATOLOGY",
-      "D": 324,
-      "O": "RI"
-    },
-    {
-      "A": 1,
-      "B": "TRANSPLANT/ STEM CELL LEUKEMIA",
-      "D": 26106,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "TRANSPLANT STUDIES",
-      "D": 25212,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "TRANSPLANT IMMUNOLOGY:",
-      "D": 21301,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "HLA ImmuKnow Bld Panel",
-      "D": 32535,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "STEM CELL PROCESSING:",
-      "D": 20078,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "STEM CELL PROCESSING",
-      "D": 20079,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "LEUKEMIA CYTOGENETICS",
-      "D": 25334,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "Bone Marrow",
-      "D": 4228,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "Bone Marrow Report",
-      "D": 38156,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "BONE MARROW STUDIES",
-      "D": 7812,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "BONE MARROW BX:",
-      "D": 6283,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "BONE MARROW SMR",
-      "D": 6303,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "BM STAIN INTERP",
-      "D": 10063,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "Bone Marrow Diff:",
-      "D": 7098,
-      "O": "RI"
-    },
-    {
-      "A": 5,
-      "B": "NEUROLOGIC IMMUNOTYPING CSF",
-      "D": 19604,
-      "O": "RI"
-    },
-    {
-      "A": 5,
-      "B": "NEUROLOGIC IMMUNOTYPING BLD",
-      "D": 19606,
-      "O": "RI"
-    },
-    {
-      "A": 1,
-      "B": "CHROMOSOME&MOLECULAR PATHOLOGY",
-      "D": 26134,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "CHROMOSOME STUDIES",
-      "D": 25268,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "MOLECULAR PATHOLOGY",
-      "D": 25269,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "5-FU Sensitivity Gene Mut Panel",
-      "D": 42059,
-      "O": "RI"
-    },
-    {
-      "A": 1,
-      "B": "TDM & TOXICOLOGY STUDIES",
-      "D": 16559,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "TOXIC DRUG SER LEVELS",
-      "D": 16973,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "Felbamate",
-      "D": 18882,
-      "O": "RI",
-      "T": "mg"
-    },
-    {
-      "A": 3,
-      "B": "Nicotine+Cotinine SerPl Panel",
-      "D": 30939,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "Qual 1[Bs]",
-      "D": 5548,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "Subs 1[Bs]",
-      "D": 5575,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "URINE DRUG SCREENS",
-      "D": 16971,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "Drug Interp Ur QL",
-      "D": 17117,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "Qual 1 [Bi]",
-      "D": 6152,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "Tox Ur Interp",
-      "D": 17140,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "Diuretic Ur Panel",
-      "D": 28533,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "ANTI-BACTERIAL DRUG LEVELS",
-      "D": 16957,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "Antibact Ser Qn",
-      "D": 5849,
-      "O": "RI",
-      "T": "mcg/mL"
-    },
-    {
-      "A": 3,
-      "B": "Tobramycin Pre",
-      "D": 5445,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "ANTI FUNGAL DRUG LEVELS",
-      "D": 16958,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "AntiViral SerPl Drug Levels",
-      "D": 29565,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "CARDIO-PULMONARY DRUG LEVELS",
-      "D": 16959,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "IMMUNOSUPPRESSANT DRUG LEVELS",
-      "D": 25330,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "MISC. DRUG LEVELS - BLD",
-      "D": 16961,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "Ipecac SerPl Panel",
-      "D": 30981,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "Sulfonylurea Hypogly SerPl Panel",
-      "D": 29369,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "NEURO-PSYCHIATRIC DRUG LEVELS",
-      "D": 16960,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "Clozapine+Norclozapine Ser Panel",
-      "D": 36027,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "Doxepin and Metabolite Levels",
-      "D": 21123,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "TOXIC SUBSTANCES BLD/SER/PLAS",
-      "D": 16974,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "Barb ID 1",
-      "D": 5994,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "CO'",
-      "D": 1401,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "CARBON MONOXIDE'",
-      "D": 5213,
-      "O": "RI",
-      "T": "% SAT"
-    },
-    {
-      "A": 3,
-      "B": "Liver Interp",
-      "D": 17119,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "TOXICOLOGY (UR-GASTRIC-MEC)",
-      "D": 16547,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "DRUG SCN GASTRIC",
-      "D": 6214,
-      "O": "RI"
-    },
-    {
-      "A": 4,
-      "B": "Drug Interp Gast 1",
-      "D": 17084,
-      "O": "RI"
-    },
-    {
-      "A": 4,
-      "B": "Drug Interp Gast 2",
-      "D": 17085,
-      "O": "RI"
-    },
-    {
-      "A": 4,
-      "B": "Drug Interp Gast 3",
-      "D": 17086,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "DRUG SCN OTHER",
-      "D": 6216,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "Heavy Metal Studies",
-      "D": 32873,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "Heavy Metal Screen Ur",
-      "D": 6448,
-      "O": "RI"
-    },
-    {
-      "A": 1,
-      "B": "BLOOD BANK:",
-      "D": 16550,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "BLD BANK TESTS",
-      "D": 15739,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "BLOOD BANK STUDIES:",
-      "D": 17581,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "SICKLE CELL RBC PROFILE",
-      "D": 18471,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "ANTIBODY ID TESTING",
-      "D": 25292,
-      "O": "RI"
-    },
-    {
-      "A": 4,
-      "B": "ALBUMIN TITR",
-      "D": 1877,
-      "O": "RI",
-      "T": "titer"
-    },
-    {
-      "A": 4,
-      "B": "Ab Titr-Saline",
-      "D": 1876,
-      "O": "RI",
-      "T": "titer"
-    },
-    {
-      "A": 3,
-      "B": "Trans Compl Eval",
-      "D": 6312,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "NB/MAT PROFILE",
-      "D": 15205,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "RH PHENOTYPE:",
-      "D": 13835,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "DNR BMT Ag/Ab TEST:",
-      "D": 16758,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "BLOOD PRODUCTS:",
-      "D": 15636,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "APHERESIS PROCEDURES",
-      "D": 25293,
-      "O": "RI"
-    },
-    {
-      "A": 1,
-      "B": "SURGICAL PATHOLOGY & CYTOLOGY",
-      "D": 26107,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "Calculus Analysis Panel",
-      "D": 25247,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "ANATOMIC PATHOLOGY REPORTS:",
-      "D": 25482,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "BIOPSIES",
-      "D": 26523,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "Excisional Biopsy",
-      "D": 10750,
-      "O": "RI",
-      "T": "# OF"
-    },
-    {
-      "A": 3,
-      "B": "PUNCH BIOPSY",
-      "D": 10749,
-      "O": "RI",
-      "T": "# OF"
-    },
-    {
-      "A": 3,
-      "B": "Shave Biopsy",
-      "D": 10748,
-      "O": "RI",
-      "T": "# OF"
-    },
-    {
-      "A": 2,
-      "B": "SURG PATH TISSUE STAINS",
-      "D": 16273,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "Non-Gyn Cyto&FNA",
-      "D": 19561,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "GYN CYTOLOGY:",
-      "D": 25535,
-      "O": "RI"
-    },
-    {
-      "A": 4,
-      "B": "PT Refu Cerv Pap",
-      "D": 6656,
-      "O": "RI",
-      "T": "(-1)"
-    },
-    {
-      "A": 4,
-      "B": "Pap Screened Adequate Age",
-      "D": 23188,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "CYTOGENETICS",
-      "D": 11311,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "Biochemical Genetics Report",
-      "D": 41647,
-      "O": "RI"
-    },
-    {
-      "A": 1,
-      "B": "REFERRAL LAB",
-      "D": 22108,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "Parathyroid Tiss Cryopreservn",
-      "D": 29430,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "REFERRAL TESTS",
-      "D": 23110,
-      "O": "RI"
-    },
-    {
-      "A": 1,
-      "B": "CARDIOLOGY STUDIES",
-      "D": 7496,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "ASD/PFO Closure Report",
-      "D": 42538,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "MIBG SPEC Cardiac Scan",
-      "D": 18149,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "Cardiac Gated Rest Scn",
-      "D": 6874,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "MUGA Scan Resting",
-      "D": 8505,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "Cardiac Gated Stress/Rest Scn",
-      "D": 8506,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "Cardiac Infarct Scan",
-      "D": 6873,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "Heart Biopsy",
-      "D": 42536,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "Heart Transplant Scan",
-      "D": 24111,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "Myoperf Adeno",
-      "D": 26017,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "Myoperf Adeno W Rest",
-      "D": 25701,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "Myoperf Adeno W Rest & EF Scan",
-      "D": 25683,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "Myoperf Bike & Rest Scan",
-      "D": 24021,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "Myoperf Bike & Rest W EF Scan",
-      "D": 23748,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "Myoperf Bike Scan",
-      "D": 24022,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "Myoperf Bike W EF Scan",
-      "D": 24023,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "Myoperf Dipyrim & Rest Scan",
-      "D": 23751,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "Myoperf Dipyrim & Rest W EF Scan",
-      "D": 23750,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "Myoperf Dipyrim Scan",
-      "D": 24024,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "Myoperf Dobut & Rest W EF Scan",
-      "D": 23749,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "Myoperf Dobut W EF",
-      "D": 23667,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "Myoperf Treadmill & Rest W EF Sc",
-      "D": 24029,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "Myoperf Dobut & Rest Scan",
-      "D": 24025,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "Myoperf Dobut Scan",
-      "D": 24026,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "Myoperf Rest W EF Scan",
-      "D": 24027,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "Myoperf Treadmill & Rest Scan",
-      "D": 24028,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "Myoperf Treadmill Scan",
-      "D": 23753,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "Myoperf Treadmill W EF Scan",
-      "D": 23752,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "Lexiscan Stress ECG",
-      "D": 30347,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "Unspecified Coronary Procedure",
-      "D": 42539,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "Valve Procedure",
-      "D": 42540,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "CARDIAC STRESS MYOVIEW",
-      "D": 23724,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "AoV Area Cont Eq VTI",
-      "D": 26770,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "AoV VTI",
-      "D": 26975,
-      "O": "RI",
-      "T": "CM"
-    },
-    {
-      "A": 3,
-      "B": "Myocardial Perf Pharm Stress",
-      "D": 30350,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "CARDIOPULMONARY SX&FINDINGS",
-      "D": 26525,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "Accur Bpunit",
-      "D": 4141,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "Angina(#/Mo)",
-      "D": 265,
-      "O": "RI",
-      "T": "#/MO"
-    },
-    {
-      "A": 3,
-      "B": "Chest Pain(#/Mo)",
-      "D": 4926,
-      "O": "RI",
-      "T": "#/MO"
-    },
-    {
-      "A": 3,
-      "B": "Orthop#Pilws",
-      "D": 269,
-      "O": "RI",
-      "T": "# PILLOWS"
-    },
-    {
-      "A": 3,
-      "B": "PND #/Mo",
-      "D": 268,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "Rales %Chst",
-      "D": 892,
-      "O": "RI",
-      "T": "%"
-    },
-    {
-      "A": 3,
-      "B": "S3 Gallop",
-      "D": 781,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "Use/Wk Bpunit",
-      "D": 4140,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "Walking Toleranc",
-      "D": 868,
-      "O": "RI",
-      "T": "BLKS"
-    },
-    {
-      "A": 2,
-      "B": "SWAN DATA",
-      "D": 7857,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "EKG MEASURES",
-      "D": 19217,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "Prematures/Min",
-      "D": 288,
-      "O": "RI",
-      "T": "/MIN"
-    },
-    {
-      "A": 3,
-      "B": "Signal Averaged EKG",
-      "D": 16512,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "Cardiac Stress Test Report",
-      "D": 27704,
-      "O": "RI"
-    },
-    {
-      "A": 2,
-      "B": "CARDIAC ECHO MEASURES",
-      "D": 8627,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "LV Mass TE SAX L",
-      "D": 26773,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "LV Stroke Volume TE",
-      "D": 26774,
-      "I": "60.0-100.0",
-      "J": 60,
-      "K": 100,
-      "O": "RI",
-      "T": "CC",
-      "U": "cm3",
-      "V": "cm3"
-    },
-    {
-      "A": 3,
-      "B": "Regional Wall Peak Dose %FM",
-      "D": 26787,
-      "O": "RI",
-      "T": "%"
-    },
-    {
-      "A": 3,
-      "B": "Regional Wall Peak Dose LAD",
-      "D": 26789,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "Aorta at Sinuses Diameter",
-      "D": 26980,
-      "I": "2.4-4.0",
-      "J": 2.4,
-      "K": 4,
-      "O": "RI",
-      "T": "CM"
-    },
-    {
-      "A": 3,
-      "B": "Aortic Tube Diam",
-      "D": 27011,
-      "I": ">4",
-      "J": 4,
-      "O": "RI",
-      "T": "CM"
-    },
-    {
-      "A": 3,
-      "B": "AoV Area Cont Eq pk",
-      "D": 26796,
-      "O": "RI",
-      "T": "cm2"
-    },
-    {
-      "A": 3,
-      "B": "AoV Stroke Vol",
-      "D": 27013,
-      "O": "RI",
-      "T": "CC",
-      "U": "cm3",
-      "V": "cm3"
-    },
-    {
-      "A": 3,
-      "B": "AoV Velocity Ejection Time",
-      "D": 26799,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "CSE (2D) Aorta",
-      "D": 5746,
-      "O": "RI",
-      "T": "CM"
-    },
-    {
-      "A": 3,
-      "B": "CSE (2D) Mitral",
-      "D": 5749,
-      "O": "RI",
-      "T": "sq cm"
-    },
-    {
-      "A": 3,
-      "B": "Diastolic Slope",
-      "D": 26976,
-      "O": "RI",
-      "T": "cm/sec2"
-    },
-    {
-      "A": 3,
-      "B": "LV Outflow Tract AoV Vel Ratio",
-      "D": 26704,
-      "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "Mitral Valve C to D Interval",
-      "D": 29994,
-      "O": "RI",
-      "T": "MS"
-    },
-    {
-      "A": 3,
-      "B": "Mitral Valve D to C Interval",
-      "D": 26983,
-      "O": "RI",
-      "T": "MS"
     },
     {
       "A": 3,
@@ -29418,6 +27745,97 @@ export default [
       "O": "RI"
     },
     {
+      "A": 3,
+      "B": "Right Atrial Press(Enterd Value)",
+      "D": 26992,
+      "E": "60996-6",
+      "F": "Right atrial pressure",
+      "N": "RA pressure",
+      "O": "LN",
+      "T": "mm Hg",
+      "U": "mmHg",
+      "V": "mm[Hg]"
+    },
+    {
+      "A": 3,
+      "B": "Right Ventricle Systolic Press",
+      "D": 26995,
+      "E": "8432-7",
+      "F": "Right ventricular Intrachamber systolic pressure",
+      "H": "mm Hg",
+      "I": "17 - 35",
+      "J": 17,
+      "K": 35,
+      "L": 51,
+      "N": "RV Intrachamber sys pres",
+      "O": "LN",
+      "T": "mm Hg",
+      "U": "mmHg",
+      "V": "mm[Hg]"
+    },
+    {
+      "A": 3,
+      "B": "TricuspidV Peak Gradient",
+      "D": 26754,
+      "E": "18055-4",
+      "F": "Tricuspid valve Maximum gradient during diastole [Pressure] by US.doppler",
+      "I": "≥5",
+      "J": 5,
+      "N": "TV Max grad diastole DOP",
+      "O": "LN",
+      "T": "mm Hg",
+      "U": "mmHg",
+      "V": "mm[Hg]"
+    },
+    {
+      "A": 3,
+      "B": "TricuspidV Peak Velocity",
+      "D": 26755,
+      "E": "11712-7",
+      "F": "Tricuspid valve Peak systolic flow by US.doppler",
+      "N": "TV Vmax sys DOP",
+      "O": "LN",
+      "T": "cm/s",
+      "U": "cm/s",
+      "V": "m/s; cm/s"
+    },
+    {
+      "A": 3,
+      "B": "TricuspidV Mean Gradient DP",
+      "D": 29948,
+      "E": "18056-2",
+      "F": "Tricuspid valve Mean gradient during diastole [Pressure] by US.doppler",
+      "N": "TV Mean grad diastole DOP",
+      "O": "LN",
+      "T": "mm Hg",
+      "U": "mmHg",
+      "V": "mm[Hg]"
+    },
+    {
+      "A": 3,
+      "B": "TricuspidV Mean Velocity DP",
+      "D": 29947,
+      "E": "20350-5",
+      "F": "Tricuspid valve Mean blood flow by US.doppler",
+      "N": "TV Vmean DOP",
+      "O": "LN",
+      "T": "cm/s",
+      "U": "cm/s",
+      "V": "m/s; cm/s"
+    },
+    {
+      "A": 3,
+      "B": "TricuspidV Vel Time Integral DP",
+      "D": 29946,
+      "E": "18175-0",
+      "F": "Tricuspid valve Velocity-time integral during diastole by US.doppler",
+      "N": "TV VTI diastole DOP",
+      "O": "LN",
+      "T": "CM",
+      "U": "cm",
+      "V": "cm"
+    },
+    {
       "A": 2,
       "B": "CARDIAC CATHETERIZATION DATA",
       "D": 18612,
@@ -29425,10 +27843,142 @@ export default [
     },
     {
       "A": 3,
+      "B": "LMCA % Stenosis",
+      "D": 18561,
+      "E": "78902-4",
+      "F": "Percent stenosis of Left main coronary artery by Cardiac angiogram",
+      "N": "Percent sten of LM by Angiogram",
+      "O": "LN",
+      "T": "%",
+      "U": "%",
+      "V": "%"
+    },
+    {
+      "A": 3,
+      "B": "pLAD % Stenosis",
+      "D": 18562,
+      "E": "78903-2",
+      "F": "Percent stenosis of Proximal left anterior descending artery by Cardiac angiogram",
+      "N": "Percent sten of pLAD by Angiogram",
+      "O": "LN",
+      "T": "%",
+      "U": "%",
+      "V": "%"
+    },
+    {
+      "A": 3,
+      "B": "mLAD % Stenosis",
+      "D": 18563,
+      "E": "78904-0",
+      "F": "Percent stenosis of Mid left anterior descending artery by Cardiac angiogram",
+      "N": "Percent sten of mLAD by Angiogram",
+      "O": "LN",
+      "T": "%",
+      "U": "%",
+      "V": "%"
+    },
+    {
+      "A": 3,
+      "B": "Dlad % Stenosis",
+      "D": 18564,
+      "E": "78905-7",
+      "F": "Percent stenosis of Distal left anterior descending artery by Cardiac angiogram",
+      "N": "Percent sten of dLAD by Angiogram",
+      "O": "LN",
+      "T": "%",
+      "U": "%",
+      "V": "%"
+    },
+    {
+      "A": 3,
+      "B": "D1 % Stenosis",
+      "D": 18826,
+      "E": "78906-5",
+      "F": "Percent stenosis of First diagonal artery by Cardiac angiogram",
+      "N": "Percent sten of D1 by Angiogram",
+      "O": "LN",
+      "T": "%",
+      "U": "%",
+      "V": "%"
+    },
+    {
+      "A": 3,
+      "B": "pLCx % Stenosis",
+      "D": 18565,
+      "E": "78911-5",
+      "F": "Percent stenosis of Posterolateral branch from left circumflex artery by Cardiac angiogram",
+      "N": "Percent sten of L-PLB by Angiogram",
+      "O": "LN",
+      "T": "%",
+      "U": "%",
+      "V": "%"
+    },
+    {
+      "A": 3,
+      "B": "mLCx % Stenosis",
+      "D": 18825,
+      "E": "78910-7",
+      "F": "Percent stenosis of Mid and distal left circumflex artery by Cardiac angiogram",
+      "N": "Percent sten of LCx by Angiogram",
+      "O": "LN",
+      "T": "%",
+      "U": "%",
+      "V": "%"
+    },
+    {
+      "A": 3,
+      "B": "OM1 % Stenosis",
+      "D": 18567,
+      "E": "78909-9",
+      "F": "Percent stenosis of Obtuse marginal artery by Cardiac angiogram",
+      "N": "Percent sten of OM by Angiogram",
+      "O": "LN",
+      "T": "%",
+      "U": "%",
+      "V": "%"
+    },
+    {
+      "A": 3,
       "B": "Intermediate % Stenosis",
       "D": 18569,
       "O": "RI",
       "T": "%"
+    },
+    {
+      "A": 3,
+      "B": "pRCA % Stenosis",
+      "D": 18570,
+      "E": "78897-6",
+      "F": "Percent stenosis of Proximal right coronary artery by Cardiac angiogram",
+      "N": "Percent sten of pRCA by Angiogram",
+      "O": "LN",
+      "T": "%",
+      "U": "%",
+      "V": "%"
+    },
+    {
+      "A": 3,
+      "B": "mRCA % Stenosis",
+      "D": 18571,
+      "E": "78898-4",
+      "F": "Percent stenosis of Mid right coronary artery by Cardiac angiogram",
+      "N": "Percent sten of mRCA by Angiogram",
+      "O": "LN",
+      "T": "%",
+      "U": "%",
+      "V": "%"
+    },
+    {
+      "A": 3,
+      "B": "dRCA % Stenosis",
+      "D": 18572,
+      "E": "78899-2",
+      "F": "Percent stenosis of Distal right coronary artery by Cardiac angiogram",
+      "N": "Percent sten of dRCA by Angiogram",
+      "O": "LN",
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 3,
@@ -29474,6 +28024,55 @@ export default [
     },
     {
       "A": 3,
+      "B": "Right Atrial MBP Cath",
+      "D": 18588,
+      "E": "8400-4",
+      "F": "Right atrial Intrachamber mean pressure",
+      "H": "mm Hg",
+      "I": "1 - 5",
+      "J": 1,
+      "K": 5,
+      "N": "RA Intrachamber mean pres",
+      "O": "LN",
+      "T": "mm Hg",
+      "U": "mmHg",
+      "V": "mm[Hg]"
+    },
+    {
+      "A": 3,
+      "B": "Right Ventricle DBP Cath",
+      "D": 18616,
+      "E": "8377-4",
+      "F": "Right ventricular Intrachamber diastolic pressure",
+      "H": "mm Hg",
+      "I": "1 - 7",
+      "J": 1,
+      "K": 7,
+      "L": 51,
+      "N": "RV Intrachamber dias pres",
+      "O": "LN",
+      "T": "mm Hg",
+      "U": "mmHg",
+      "V": "mm[Hg]"
+    },
+    {
+      "A": 3,
+      "B": "Pulmonary Artery MBP Cath",
+      "D": 18614,
+      "E": "8414-5",
+      "F": "Pulmonary artery Mean blood pressure",
+      "H": "mm Hg",
+      "I": "9 - 20",
+      "J": 9,
+      "K": 20,
+      "N": "PA BP mean",
+      "O": "LN",
+      "T": "mm Hg",
+      "U": "mmHg",
+      "V": "mm[Hg]"
+    },
+    {
+      "A": 3,
       "B": "Continuous Cardiac Output",
       "D": 18827,
       "O": "RI",
@@ -29492,6 +28091,30 @@ export default [
       "D": 18595,
       "O": "RI",
       "T": "DSC-5"
+    },
+    {
+      "A": 3,
+      "B": "Aortic Valve Area(2D)",
+      "D": 18590,
+      "E": "29487-6",
+      "F": "Aortic valve Orifice [Area] by US.2D+Measured by planimetry",
+      "N": "AV Orifice Area US.2D.PLN",
+      "O": "LN",
+      "T": "CM",
+      "U": "cm2",
+      "V": "cm2"
+    },
+    {
+      "A": 3,
+      "B": "Mitral Valve Area(2D)",
+      "D": 18596,
+      "E": "20273-9",
+      "F": "Mitral valve Diameter 2 by US",
+      "N": "MV Diam 2 US",
+      "O": "LN",
+      "T": "CM",
+      "U": "cm",
+      "V": "cm"
     },
     {
       "A": 2,
@@ -29524,11 +28147,33 @@ export default [
       "O": "RI"
     },
     {
+      "A": 2,
+      "B": "Colonoscopy",
+      "D": 5009,
+      "E": "28022-2",
+      "F": "Colonoscopy Study observation Narrative",
+      "N": "Colonoscopy Study",
+      "O": "LN"
+    },
+    {
       "A": 3,
       "B": "Colon Polyp #",
       "D": 6943,
       "O": "RI",
       "T": "# OF"
+    },
+    {
+      "A": 3,
+      "B": "Colon Polyp Size",
+      "D": 6942,
+      "E": "33756-8",
+      "F": "Polyp size greatest dimension",
+      "G": "Polyp size greatest dimension length (Spec)",
+      "N": "Polyp size greatest dim",
+      "O": "LN",
+      "T": "CM",
+      "U": "cm",
+      "V": "cm"
     },
     {
       "A": 2,
@@ -29598,6 +28243,15 @@ export default [
     },
     {
       "A": 2,
+      "B": "Endoscopy",
+      "D": 3713,
+      "E": "19776-4",
+      "F": "Relevant Hx and Px for procedure Endoscopy",
+      "N": "Relevant H&P Endoscopy",
+      "O": "LN"
+    },
+    {
+      "A": 2,
       "B": "Video Capsule Endoscopy",
       "D": 30090,
       "O": "RI"
@@ -29619,6 +28273,15 @@ export default [
       "B": "ERCP",
       "D": 6573,
       "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "Sigmoidoscopy",
+      "D": 3761,
+      "E": "28027-1",
+      "F": "Flexible sigmoidoscopy Study observation",
+      "N": "FSIG Study",
+      "O": "LN"
     },
     {
       "A": 2,
@@ -29701,10 +28364,142 @@ export default [
       "O": "RI"
     },
     {
+      "A": 3,
+      "B": "FVC Pre BD",
+      "D": 870,
+      "E": "19877-0",
+      "F": "Forced vital capacity [Volume] Respiratory system --pre bronchodilation",
+      "N": "FVC pre BD Vol Respiratory",
+      "O": "LN",
+      "T": "LITERS",
+      "U": "L",
+      "V": "L"
+    },
+    {
+      "A": 3,
+      "B": "FVC %Pred",
+      "D": 4908,
+      "E": "19869-7",
+      "F": "Forced vital capacity [Volume] Respiratory system Predicted",
+      "N": "FVC Vol Respiratory Predicted",
+      "O": "LN",
+      "T": "%",
+      "U": "L",
+      "V": "L"
+    },
+    {
+      "A": 3,
+      "B": "FVC Post BD",
+      "D": 4301,
+      "E": "19875-4",
+      "F": "Forced vital capacity [Volume] Respiratory system --post bronchodilation",
+      "N": "FVC p BD Vol Respiratory",
+      "O": "LN",
+      "T": "LITERS",
+      "U": "L",
+      "V": "L"
+    },
+    {
+      "A": 3,
+      "B": "FEV1 Pre BD",
+      "D": 871,
+      "E": "20157-4",
+      "F": "FEV1 --pre bronchodilation",
+      "N": "FEV1 pre BD",
+      "O": "LN",
+      "T": "LITERS",
+      "U": "L",
+      "V": "L"
+    },
+    {
+      "A": 3,
+      "B": "FEV1 %Pred",
+      "D": 4909,
+      "E": "20152-5",
+      "F": "FEV1/Predicted",
+      "N": "FEV1/Predicted",
+      "O": "LN",
+      "T": "%",
+      "U": "%",
+      "V": "%"
+    },
+    {
+      "A": 3,
+      "B": "FEV1 Post BD",
+      "D": 4910,
+      "E": "20155-8",
+      "F": "FEV1 --post bronchodilation",
+      "N": "FEV1 p BD",
+      "O": "LN",
+      "T": "LITERS",
+      "U": "L",
+      "V": "L"
+    },
+    {
+      "A": 3,
+      "B": "FEF25-75 Pre BD",
+      "D": 4911,
+      "E": "69972-8",
+      "F": "FEF 25-75% --pre bronchodilation",
+      "N": "FEF 25-75% pre BD",
+      "O": "LN",
+      "T": "LITERS/SEC",
+      "U": "L/s",
+      "V": "L/s"
+    },
+    {
+      "A": 3,
+      "B": "FEF25-75 Aft Dil",
+      "D": 4913,
+      "E": "69973-6",
+      "F": "FEF 25-75% --post bronchodilation",
+      "N": "FEF 25-75% p BD",
+      "O": "LN",
+      "T": "LITERS/SEC",
+      "U": "L/s",
+      "V": "L/s"
+    },
+    {
+      "A": 3,
+      "B": "FEF25-75 %Pre BD%Predicted",
+      "D": 4912,
+      "E": "69971-0",
+      "F": "FEF 25-75% Predicted",
+      "N": "FEF 25-75% Predicted",
+      "O": "LN",
+      "T": "%",
+      "U": "L/s",
+      "V": "L/s"
+    },
+    {
       "A": 2,
       "B": "HOME OXYGEN EVAL",
       "D": 8606,
       "O": "RI"
+    },
+    {
+      "A": 3,
+      "B": "O2 Rest",
+      "D": 9507,
+      "E": "59417-6",
+      "F": "Oxygen saturation in Arterial blood by Pulse oximetry --resting",
+      "N": "SaO2 Resting % BldA PulseOx",
+      "O": "LN",
+      "T": "LITERS",
+      "U": "%",
+      "V": "%"
+    },
+    {
+      "A": 3,
+      "B": "O2 Exercise",
+      "D": 9508,
+      "E": "59412-7",
+      "F": "Oxygen saturation in Arterial blood by Pulse oximetry --post exercise",
+      "N": "SaO2 p Exc % BldA PulseOx",
+      "O": "LN",
+      "T": "LITERS",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 2,
@@ -29714,16 +28509,50 @@ export default [
     },
     {
       "A": 3,
+      "B": "Asthma Exacerbations",
+      "D": 897,
+      "E": "55404-8",
+      "F": "Asthma spells per week",
+      "N": "Asthma spells 1W nRate",
+      "O": "LN",
+      "T": "#/MO",
+      "U": "/wk",
+      "V": "{#}/wk"
+    },
+    {
+      "A": 3,
       "B": "Flu Syndrome?",
       "D": 2867,
       "O": "RI",
       "T": "(-1)"
     },
     {
+      "A": 3,
+      "B": "Sputm Oz/Dy",
+      "D": 869,
+      "E": "3161-7",
+      "F": "Volume [Flow] of 24 hour Sputum",
+      "G": "Specimen volume 24H Flow (Sput)",
+      "N": "Specimen vol 24h Spt-vRate",
+      "O": "LN",
+      "T": "OZ(FL)",
+      "U": "mL/24hr",
+      "V": "mL/(24.h)"
+    },
+    {
       "A": 1,
       "B": "RADIOLOGY&NUCLEAR MEDICINE",
       "D": 26135,
       "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "NUCLEAR MEDICINE",
+      "D": 3597,
+      "E": "18757-5",
+      "F": "Deprecated Nuclear medicine study",
+      "N": "Deprecated",
+      "O": "LN"
     },
     {
       "A": 3,
@@ -29758,6 +28587,15 @@ export default [
       "B": "RADIOLOGY:",
       "D": 16552,
       "O": "RI"
+    },
+    {
+      "A": 3,
+      "B": "Bone Densitometry",
+      "D": 23059,
+      "E": "38268-9",
+      "F": "DXA Skeletal system Views for bone density",
+      "N": "DXA Skeletal Sys Views for BMD",
+      "O": "LN"
     },
     {
       "A": 3,
@@ -43585,6 +42423,16 @@ export default [
       "O": "RI"
     },
     {
+      "A": 3,
+      "B": "Hospitalizations",
+      "D": 8,
+      "E": "11337-3",
+      "F": "History of Hospitalization",
+      "N": "Hx of Hospitalization",
+      "O": "LN",
+      "T": "# OF"
+    },
+    {
       "A": 2,
       "B": "PHYSICAL EXAM",
       "D": 9212,
@@ -43601,6 +42449,18 @@ export default [
       "B": "HOSP ABSTRACT",
       "D": 7916,
       "O": "RI"
+    },
+    {
+      "A": 3,
+      "B": "Length of Stay",
+      "D": 7836,
+      "E": "78033-8",
+      "F": "Hospital stay duration",
+      "N": "Hosp stay duration",
+      "O": "LN",
+      "T": "DAYS",
+      "U": "d",
+      "V": "d"
     },
     {
       "A": 2,
@@ -43667,6 +42527,18 @@ export default [
     },
     {
       "A": 3,
+      "B": "Headaches/Mo",
+      "D": 899,
+      "E": "65376-6",
+      "F": "About how often do your severe headaches occur [PhenX]",
+      "N": "Severe headaches avg freq nRate PhenX",
+      "O": "LN",
+      "T": "#/MO",
+      "U": "/mo",
+      "V": "{#}/wk;{#}/mo;{#}/a"
+    },
+    {
+      "A": 3,
       "B": "Lues Rx'd?",
       "D": 2708,
       "O": "RI"
@@ -43676,6 +42548,18 @@ export default [
       "B": "Nystgmus 1=Y",
       "D": 4967,
       "O": "RI"
+    },
+    {
+      "A": 3,
+      "B": "Seizures/Mo",
+      "D": 900,
+      "E": "55414-7",
+      "F": "Seizures per month",
+      "N": "Seizures/month nRate",
+      "O": "LN",
+      "T": "#/MO",
+      "U": "/mo",
+      "V": "/mo"
     },
     {
       "A": 3,
@@ -43745,16 +42629,172 @@ export default [
       "O": "RI"
     },
     {
+      "A": 3,
+      "B": "Cervical Dilatation",
+      "D": 6620,
+      "E": "11961-0",
+      "F": "Cervix [Length] US",
+      "N": "Cervix Length US.meas",
+      "O": "LN",
+      "T": "CM",
+      "U": "cm",
+      "V": "cm"
+    },
+    {
+      "A": 3,
+      "B": "Effacement",
+      "D": 6621,
+      "E": "11867-9",
+      "F": "Effacement Cervix",
+      "N": "Effacement Cervix",
+      "O": "LN",
+      "T": "%"
+    },
+    {
+      "A": 3,
+      "B": "Fundus Height",
+      "D": 6525,
+      "E": "11881-0",
+      "F": "Uterus Fundal height Tape measure",
+      "N": "Uterus Fundal height Tape measure",
+      "O": "LN",
+      "T": "CM",
+      "U": "cm",
+      "V": "cm"
+    },
+    {
+      "A": 3,
+      "B": "Fetal Heart Rate",
+      "D": 6547,
+      "E": "11948-7",
+      "F": "Fetal Heart rate US",
+      "N": "Fet Heart rate US.meas",
+      "O": "LN",
+      "T": "/MIN",
+      "U": "beats/min",
+      "V": "{beats}/min"
+    },
+    {
       "A": 2,
       "B": "FEMALE HX-OB/GYN",
       "D": 7729,
       "O": "RI"
     },
     {
+      "A": 3,
+      "B": "Abortions",
+      "D": 8994,
+      "E": "11612-9",
+      "F": "[#] Abortions",
+      "H": "# OF",
+      "I": "0 - 25",
+      "J": 0,
+      "K": 25,
+      "L": 25,
+      "N": "Abortions",
+      "O": "LN",
+      "T": "# OF",
+      "V": "{#}"
+    },
+    {
+      "A": 3,
+      "B": "Gravida",
+      "D": 8991,
+      "E": "64708-1",
+      "F": "Including live births, stillbirths, miscarriages, abortions, and tubal and other ectopic pregnancies, how many times have you been pregnant [PhenX]",
+      "N": "Number pregnancy PhenX",
+      "O": "LN",
+      "V": "{#}"
+    },
+    {
+      "A": 3,
+      "B": "Living Children",
+      "D": 18203,
+      "E": "11638-4",
+      "F": "[#] Births.still living",
+      "N": "Births.still living",
+      "O": "LN",
+      "V": "{#}"
+    },
+    {
+      "A": 3,
+      "B": "Menarche",
+      "D": 13559,
+      "E": "42798-9",
+      "F": "Age at menarche",
+      "G": "Age at menarche",
+      "N": "Age @ Menarche Time Patient",
+      "O": "LN",
+      "U": "a",
+      "V": "a"
+    },
+    {
+      "A": 3,
+      "B": "Pre Pregnant Weight",
+      "D": 13564,
+      "E": "8348-5",
+      "F": "Body weight Measured --pre pregnancy",
+      "G": "Weight lbs pre-pregnancy",
+      "N": "Weight pre pregnancy Measured",
+      "O": "LN",
+      "T": "LBS",
+      "U": "lbs",
+      "V": "[lb_av]"
+    },
+    {
+      "A": 3,
+      "B": "Preterm",
+      "D": 17854,
+      "E": "11637-6",
+      "F": "[#] Births.preterm",
+      "N": "Births.preterm",
+      "O": "LN",
+      "V": "{#}"
+    },
+    {
+      "A": 3,
+      "B": "Stillborns",
+      "D": 13563,
+      "E": "57062-2",
+      "F": "[#] Births.stillborn",
+      "N": "Births.stillborn",
+      "O": "LN",
+      "T": "# OF",
+      "V": "{#}"
+    },
+    {
+      "A": 3,
+      "B": "Term",
+      "D": 17855,
+      "E": "11639-2",
+      "F": "[#] Births.term",
+      "N": "Births.term",
+      "O": "LN",
+      "V": "{#}"
+    },
+    {
       "A": 2,
       "B": "PREGNANCY-HX OB/GYN",
       "D": 13555,
       "O": "RI"
+    },
+    {
+      "A": 3,
+      "B": "Birth Weight Hx Baby A",
+      "D": 13558,
+      "E": "8339-4",
+      "F": "Birth weight Measured",
+      "H": "pounds",
+      "I": "5 - 10",
+      "J": 5,
+      "K": 10,
+      "L": 12,
+      "M": 3,
+      "N": "Birth weight Measured",
+      "O": "LN",
+      "T": "LBS",
+      "U": "g",
+      "V": "g"
     },
     {
       "A": 3,
@@ -43774,6 +42814,39 @@ export default [
       "B": "SOCIAL HX-OB",
       "D": 7682,
       "O": "RI"
+    },
+    {
+      "A": 3,
+      "B": "Monthly Income",
+      "D": 13512,
+      "E": "63586-2",
+      "F": "What was your best estimate of the total income of all family members from all sources, before taxes, in last year [PhenX]",
+      "N": "Annual family income nRate PhenX",
+      "O": "LN",
+      "T": "DOLLARS",
+      "U": "dollars",
+      "V": "/a"
+    },
+    {
+      "A": 3,
+      "B": "People In Household",
+      "D": 13515,
+      "E": "86639-2",
+      "F": "Household size [#]",
+      "N": "Household size",
+      "O": "LN",
+      "V": "{#}"
+    },
+    {
+      "A": 3,
+      "B": "Yrs Attnd School",
+      "D": 7678,
+      "E": "82590-1",
+      "F": "Years of education [#] - Reported",
+      "N": "Y of education Reported",
+      "O": "LN",
+      "U": "a",
+      "V": "a"
     },
     {
       "A": 2,
@@ -43796,9 +42869,48 @@ export default [
     },
     {
       "A": 3,
+      "B": "Cig Amount/Day",
+      "D": 13554,
+      "E": "64218-1",
+      "F": "How many cigarettes do you smoke per day now [PhenX]",
+      "N": "Cigarettes quant D now nRate PhenX",
+      "O": "LN",
+      "T": "cigs/day",
+      "U": "/day",
+      "V": "/d"
+    },
+    {
+      "A": 3,
       "B": "Cigaret #/Day 1ST Tri",
       "D": 14347,
       "O": "RI"
+    },
+    {
+      "A": 3,
+      "B": "Cigaret #/Day Pre-Preg",
+      "D": 14350,
+      "E": "64794-1",
+      "F": "In the 3 months before you got pregnant, how many cigarettes did you smoke on an average day [PhenX]",
+      "N": "Cigarettes before preg per D PhenX",
+      "O": "LN",
+      "U": "/day",
+      "V": "{#}/d"
+    },
+    {
+      "A": 3,
+      "B": "ETOH Amount/Day",
+      "D": 13553,
+      "E": "11287-0",
+      "F": "Alcoholic drinks per drinking day - Reported",
+      "H": "#drinks/day",
+      "I": "0 - 2",
+      "J": 0,
+      "K": 2,
+      "N": "Alcoholic drinks/drinking D Reported",
+      "O": "LN",
+      "T": "#drinks/day",
+      "U": "/day",
+      "V": "/d"
     },
     {
       "A": 3,
@@ -43808,9 +42920,29 @@ export default [
     },
     {
       "A": 3,
+      "B": "ETOH Days/Mo Pre-Preg",
+      "D": 14352,
+      "E": "64796-6",
+      "F": "During the 3 months before you got pregnant, how many alcoholic drinks did you have in an average week [PhenX]",
+      "N": "Alc drinks per W 3Mo before preg PhenX",
+      "O": "LN",
+      "U": "/wk",
+      "V": "{#}/wk"
+    },
+    {
+      "A": 3,
       "B": "ETOH Drinks/Day 1ST Tri",
       "D": 14349,
       "O": "RI"
+    },
+    {
+      "A": 3,
+      "B": "Smoker 0-1",
+      "D": 5424,
+      "E": "64234-8",
+      "F": "Current smoker",
+      "N": "Current smoker",
+      "O": "LN"
     },
     {
       "A": 2,
@@ -43836,6 +42968,18 @@ export default [
       "D": 13687,
       "O": "RI",
       "T": "SERVINGS/DAY"
+    },
+    {
+      "A": 4,
+      "B": "Diet Kcal/Dy",
+      "D": 419,
+      "E": "75302-0",
+      "F": "Calorie intake 24 hour",
+      "N": "Calorie intake 24h",
+      "O": "LN",
+      "T": "CAL",
+      "U": "Kcal/24hr",
+      "V": "Kcal/(24.h)"
     },
     {
       "A": 4,
@@ -43890,10 +43034,37 @@ export default [
       "O": "RI"
     },
     {
+      "A": 3,
+      "B": "Age Baby's Father",
+      "D": 13521,
+      "E": "87296-0",
+      "F": "Age--at delivery Father",
+      "O": "LN",
+      "U": "a",
+      "V": "a"
+    },
+    {
+      "A": 3,
+      "B": "Yrs School Baby's Father",
+      "D": 13522,
+      "E": "87300-0",
+      "F": "Highest level of education Father",
+      "O": "LN"
+    },
+    {
       "A": 2,
       "B": "MOTHERS HISTORY (OB)",
       "D": 15010,
       "O": "RI"
+    },
+    {
+      "A": 3,
+      "B": "Yrs School Mom",
+      "D": 15047,
+      "E": "57712-2",
+      "F": "Highest level of education Mother",
+      "N": "Highest level of education Mother",
+      "O": "LN"
     },
     {
       "A": 2,
@@ -43915,9 +43086,142 @@ export default [
     },
     {
       "A": 4,
+      "B": "Abd Circum Fetus A",
+      "D": 14036,
+      "E": "11979-2",
+      "F": "Fetal Abdomen Circumference US",
+      "H": "centimeters",
+      "I": "0 - 40",
+      "J": 0,
+      "K": 40,
+      "L": 40,
+      "N": "Fet Abd Circum US.meas",
+      "O": "LN",
+      "T": "CM",
+      "U": "cm",
+      "V": "cm"
+    },
+    {
+      "A": 4,
+      "B": "Abd Dia AP A",
+      "D": 16719,
+      "E": "11818-2",
+      "F": "Fetal Abdomen Diameter.anterior-posterior US",
+      "N": "Fet Abd Diam AP US.meas",
+      "O": "LN",
+      "T": "CM",
+      "U": "cm",
+      "V": "cm"
+    },
+    {
+      "A": 4,
+      "B": "Abd Dia Trans A",
+      "D": 16721,
+      "E": "11862-0",
+      "F": "Fetal Abdomen Diameter transverse US",
+      "N": "Fetal TAD US.meas",
+      "O": "LN",
+      "T": "CM",
+      "U": "cm",
+      "V": "cm"
+    },
+    {
+      "A": 4,
+      "B": "AF Index A",
+      "D": 16722,
+      "E": "11623-6",
+      "F": "Fetal Quadrant four Amniotic fluid index derived by US",
+      "N": "Fet Q4 AFI der US",
+      "O": "LN",
+      "T": "CM",
+      "U": "cm",
+      "V": "cm"
+    },
+    {
+      "A": 4,
+      "B": "Crown Rump Len A",
+      "D": 16723,
+      "E": "11957-8",
+      "F": "Fetal Crown Rump length US",
+      "N": "Fet CRL US.meas",
+      "O": "LN",
+      "T": "CM",
+      "U": "cm",
+      "V": "cm"
+    },
+    {
+      "A": 4,
+      "B": "EFW By US A",
+      "D": 14040,
+      "E": "11727-5",
+      "F": "Fetal Body weight estimated by US",
+      "H": "gm",
+      "I": "0 - 3000",
+      "J": 0,
+      "K": 3000,
+      "L": 3000,
+      "N": "Fet Weight US+est",
+      "O": "LN",
+      "T": "gm",
+      "U": "g",
+      "V": "g"
+    },
+    {
+      "A": 4,
+      "B": "Femur Len A",
+      "D": 14035,
+      "E": "11963-6",
+      "F": "Fetal Femur diaphysis [Length] US",
+      "H": "centimeters",
+      "I": "0 - 40",
+      "J": 0,
+      "K": 40,
+      "L": 40,
+      "N": "Fet Femur Length US.meas",
+      "O": "LN",
+      "T": "CM",
+      "U": "cm",
+      "V": "cm"
+    },
+    {
+      "A": 4,
       "B": "Fetal Order",
       "D": 16688,
       "O": "RI"
+    },
+    {
+      "A": 4,
+      "B": "GA By LMP A",
+      "D": 14042,
+      "E": "11885-1",
+      "F": "Gestational age Estimated from last menstrual period",
+      "H": "week",
+      "I": "0 - 40",
+      "J": 0,
+      "K": 40,
+      "L": 40,
+      "N": "GA Est from LMP",
+      "O": "LN",
+      "T": "week",
+      "U": "wk",
+      "V": "wk"
+    },
+    {
+      "A": 4,
+      "B": "GA By US A",
+      "D": 14038,
+      "E": "11888-5",
+      "F": "Gestational age US composite estimate",
+      "H": "week",
+      "I": "0 - 40",
+      "J": 0,
+      "K": 40,
+      "L": 40,
+      "N": "GA US.composite.est",
+      "O": "LN",
+      "T": "week",
+      "U": "wk",
+      "V": "wk"
     },
     {
       "A": 4,
@@ -43925,6 +43229,127 @@ export default [
       "D": 14039,
       "O": "RI",
       "T": "week"
+    },
+    {
+      "A": 4,
+      "B": "Head Abd Circ Ratio US Fetus A",
+      "D": 18786,
+      "E": "11947-9",
+      "F": "Head circumference/Abdominal circumference derived by US",
+      "N": "HC/AC der US",
+      "O": "LN",
+      "U": "ratio",
+      "V": "{ratio}"
+    },
+    {
+      "A": 4,
+      "B": "Head Circum Fetus A",
+      "D": 14037,
+      "E": "11984-2",
+      "F": "Fetal Head Circumference US",
+      "H": "centimeters",
+      "I": "0 - 40",
+      "J": 0,
+      "K": 40,
+      "L": 40,
+      "N": "Fet Head Circum US.meas",
+      "O": "LN",
+      "T": "CM",
+      "U": "cm",
+      "V": "cm"
+    },
+    {
+      "A": 4,
+      "B": "Head Dia Bipar A",
+      "D": 14033,
+      "E": "11820-8",
+      "F": "Fetal Head Diameter.biparietal US",
+      "H": "centimeters",
+      "I": "0 - 40",
+      "J": 0,
+      "K": 40,
+      "L": 40,
+      "N": "Fet BPD US.meas",
+      "O": "LN",
+      "T": "CM",
+      "U": "cm",
+      "V": "cm"
+    },
+    {
+      "A": 4,
+      "B": "Head Dia Ofd A",
+      "D": 14034,
+      "E": "11851-3",
+      "F": "Fetal Head Diameter.occipito-frontal US",
+      "H": "centimeters",
+      "I": "0 - 40",
+      "J": 0,
+      "K": 40,
+      "L": 40,
+      "N": "Fet Head OFD US.meas",
+      "O": "LN",
+      "T": "CM",
+      "U": "cm",
+      "V": "cm"
+    },
+    {
+      "A": 4,
+      "B": "Head Dia Ood A",
+      "D": 16720,
+      "E": "11852-1",
+      "F": "Fetal Head Diameter.outer to outer US",
+      "N": "Fet Head Diam.O-O US.meas",
+      "O": "LN",
+      "T": "CM",
+      "U": "cm",
+      "V": "cm"
+    },
+    {
+      "A": 4,
+      "B": "Humerus Len A",
+      "D": 19205,
+      "E": "11966-9",
+      "F": "Fetal Humerus diaphysis [Length] US",
+      "N": "Fet Humerus Length US.meas",
+      "O": "LN",
+      "T": "CM",
+      "U": "cm",
+      "V": "cm"
+    },
+    {
+      "A": 4,
+      "B": "Tibia Len A",
+      "D": 19201,
+      "E": "11968-5",
+      "F": "Fetal Tibia diaphysis [Length] US",
+      "N": "Fet Tibia Length US.meas",
+      "O": "LN",
+      "T": "CM",
+      "U": "cm",
+      "V": "cm"
+    },
+    {
+      "A": 4,
+      "B": "Ulna Len A",
+      "D": 19209,
+      "E": "11969-3",
+      "F": "Fetal Ulna diaphysis [Length] US",
+      "N": "Fet Ulna Length US.meas",
+      "O": "LN",
+      "T": "CM",
+      "U": "cm",
+      "V": "cm"
+    },
+    {
+      "A": 4,
+      "B": "Weight % Fetus A",
+      "D": 17624,
+      "E": "11766-3",
+      "F": "Fetal Body weight percentile Comparison of estimated fetal weight with standard population distribution at same estimated gestational age",
+      "N": "Fet Bdy weight Prctl Comp of EFW est GA",
+      "O": "LN",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 3,
@@ -43937,6 +43362,32 @@ export default [
       "B": "Actvty Noted Fetus B",
       "D": 18974,
       "O": "RI"
+    },
+    {
+      "A": 4,
+      "B": "AF Vol B",
+      "D": 16784,
+      "E": "12167-3",
+      "F": "Fetal Amniotic fluid space [Interpretation] Volume.amniotic fluid US",
+      "N": "Fet AF space Imp Vol amnio fld US",
+      "O": "LN"
+    },
+    {
+      "A": 4,
+      "B": "GA Select B",
+      "D": 14611,
+      "E": "11884-4",
+      "F": "Gestational age Estimated",
+      "H": "week",
+      "I": "0 - 4.1",
+      "J": 0,
+      "K": 4.1,
+      "L": 4.4,
+      "N": "GA Clin est",
+      "O": "LN",
+      "T": "week",
+      "U": "wk",
+      "V": "wk"
     },
     {
       "A": 4,
@@ -44000,6 +43451,30 @@ export default [
     },
     {
       "A": 3,
+      "B": "Weight Admission",
+      "D": 14172,
+      "E": "3141-9",
+      "F": "Body weight Measured",
+      "G": "Weight lbs",
+      "N": "Weight Measured",
+      "O": "LN",
+      "T": "LBS",
+      "U": "lbs",
+      "V": "[lb_av]"
+    },
+    {
+      "A": 3,
+      "B": "Fhts Admission",
+      "D": 14186,
+      "E": "55283-6",
+      "F": "Fetal Heart rate",
+      "N": "Fet Heart rate",
+      "O": "LN",
+      "U": "beats/min",
+      "V": "{beats}/min"
+    },
+    {
+      "A": 3,
       "B": "Dilatation Admission",
       "D": 14188,
       "O": "RI",
@@ -44046,6 +43521,28 @@ export default [
       "T": "CC",
       "U": "cm3",
       "V": "cm3"
+    },
+    {
+      "A": 3,
+      "B": "Apgar 1 Min Delivery Record",
+      "D": 14242,
+      "E": "9272-6",
+      "F": "1 minute Apgar Score",
+      "N": "1M Apgar Score",
+      "O": "LN",
+      "U": "score",
+      "V": "{score}"
+    },
+    {
+      "A": 3,
+      "B": "Apgar 5 Min Delivery Record",
+      "D": 14243,
+      "E": "9274-2",
+      "F": "5 minute Apgar Score",
+      "N": "5M Apgar Score",
+      "O": "LN",
+      "U": "score",
+      "V": "{score}"
     },
     {
       "A": 3,
@@ -44219,6 +43716,50 @@ export default [
     },
     {
       "A": 3,
+      "B": "Acuity L Far 20/",
+      "D": 448,
+      "E": "28710-2",
+      "F": "Visual acuity distance Left eye Phoropter",
+      "N": "DVA Eye-L Phoropter",
+      "O": "LN",
+      "U": "ft/ft",
+      "V": "[ft_us]/[ft_us]"
+    },
+    {
+      "A": 3,
+      "B": "Acuity L Near20/",
+      "D": 447,
+      "E": "55987-2",
+      "F": "Visual acuity near Left eye Phoropter",
+      "N": "Visual acuity N Eye-L Phoropter",
+      "O": "LN",
+      "U": "ft/ft",
+      "V": "[ft_us]/[ft_us]"
+    },
+    {
+      "A": 3,
+      "B": "Acuity R Far 20/",
+      "D": 446,
+      "E": "28667-4",
+      "F": "Visual acuity distance Right eye Phoropter",
+      "N": "DVA Eye-R Phoropter",
+      "O": "LN",
+      "U": "ft/ft",
+      "V": "[ft_us]/[ft_us]"
+    },
+    {
+      "A": 3,
+      "B": "Acuity R Near20/",
+      "D": 445,
+      "E": "28719-3",
+      "F": "Visual acuity near Right eye Phoropter",
+      "N": "Visual acuity N Eye-R Phoropter",
+      "O": "LN",
+      "U": "ft/ft",
+      "V": "[ft_us]/[ft_us]"
+    },
+    {
+      "A": 3,
       "B": "Add L",
       "D": 11379,
       "O": "RI",
@@ -44258,6 +43799,39 @@ export default [
       "D": 11370,
       "O": "RI",
       "T": "DIOPTER"
+    },
+    {
+      "A": 3,
+      "B": "Tono Time(Hhmm)",
+      "D": 11380,
+      "E": "28672-4",
+      "F": "Tonometry time Eye",
+      "N": "Tonometry time Eye",
+      "O": "LN"
+    },
+    {
+      "A": 3,
+      "B": "Tonometry L",
+      "D": 450,
+      "E": "79893-4",
+      "F": "Intraocular pressure Left eye",
+      "N": "Intraocular pressure Eye-L Tono",
+      "O": "LN",
+      "T": "mm Hg",
+      "U": "mmHg",
+      "V": "mm[Hg]"
+    },
+    {
+      "A": 3,
+      "B": "Tonometry R",
+      "D": 449,
+      "E": "79892-6",
+      "F": "Intraocular pressure Right eye",
+      "N": "Intraocular pressure Eye-R Tono",
+      "O": "LN",
+      "T": "mm Hg",
+      "U": "mmHg",
+      "V": "mm[Hg]"
     },
     {
       "A": 3,
@@ -44343,6 +43917,15 @@ export default [
     },
     {
       "A": 3,
+      "B": "# Ft Lesions",
+      "D": 452,
+      "E": "58125-6",
+      "F": "Other open lesion(s) on the foot [MDSv3]",
+      "O": "LN",
+      "T": "# OF"
+    },
+    {
+      "A": 3,
       "B": "Dextrostix",
       "D": 362,
       "O": "RI",
@@ -44377,6 +43960,23 @@ export default [
     },
     {
       "A": 3,
+      "B": "AVE Bg",
+      "D": 17740,
+      "E": "27353-2",
+      "F": "Glucose mean value [Mass/volume] in Blood Estimated from glycated hemoglobin",
+      "G": "Average glucose Estimated from glycated hemoglobin mass conc (Bld)",
+      "H": "mg/dL",
+      "I": "74-106",
+      "J": 74,
+      "K": 106,
+      "N": "Est. average glucose Bld gHb Est-mCnc",
+      "O": "LN",
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
+    },
+    {
+      "A": 3,
       "B": "AVE Bg Sd",
       "D": 17741,
       "O": "RI",
@@ -44401,6 +44001,28 @@ export default [
       "O": "RI"
     },
     {
+      "A": 3,
+      "B": "Eye Exam Date",
+      "D": 17746,
+      "E": "55400-6",
+      "F": "Date of last eye examination",
+      "N": "Date of last eye exam",
+      "O": "LN"
+    },
+    {
+      "A": 3,
+      "B": "FBG - Glucofact",
+      "D": 17748,
+      "E": "41604-0",
+      "F": "Fasting glucose [Mass/volume] in Capillary blood by Glucometer",
+      "G": "Glucose fasting Glucometer mass conc (BldC)",
+      "N": "Glucose p fast BldC Glucomtr-mCnc",
+      "O": "LN",
+      "T": "mg/dL",
+      "U": "mg/dL",
+      "V": "mg/dL"
+    },
+    {
       "A": 2,
       "B": "PEDIATRIC CLINIC DATA",
       "D": 8995,
@@ -44411,6 +44033,92 @@ export default [
       "B": "APGARS",
       "D": 5077,
       "O": "RI"
+    },
+    {
+      "A": 3,
+      "B": "Head Circ % Ile",
+      "D": 1285,
+      "E": "8289-1",
+      "F": "Head Occipital-frontal circumference Percentile",
+      "N": "Head Circumf OFC Prctl",
+      "O": "LN",
+      "T": "%",
+      "U": "%",
+      "V": "%"
+    },
+    {
+      "A": 3,
+      "B": "Head Circumf",
+      "D": 1284,
+      "E": "9843-4",
+      "F": "Head Occipital-frontal circumference",
+      "N": "Head Circumf OFC",
+      "O": "LN",
+      "T": "CM",
+      "U": "cm",
+      "V": "cm"
+    },
+    {
+      "A": 3,
+      "B": "Height % Ile",
+      "D": 1283,
+      "E": "8303-0",
+      "F": "Body height [Percentile]",
+      "N": "Body height Prctl",
+      "O": "LN",
+      "T": "%",
+      "U": "%",
+      "V": "%"
+    },
+    {
+      "A": 3,
+      "B": "Height Peds",
+      "D": 6493,
+      "E": "8302-2",
+      "F": "Body height",
+      "N": "Body height",
+      "O": "LN",
+      "T": "INCH(S)",
+      "U": "in",
+      "V": "[in_i]"
+    },
+    {
+      "A": 3,
+      "B": "Temp Axillary",
+      "D": 11401,
+      "E": "8328-7",
+      "F": "Axillary temperature",
+      "G": "Axiliary temp F",
+      "N": "Axil temp",
+      "O": "LN",
+      "T": "DEG F",
+      "U": "F",
+      "V": "[degF]"
+    },
+    {
+      "A": 3,
+      "B": "Temp Rectal",
+      "D": 7187,
+      "E": "8332-9",
+      "F": "Rectal temperature",
+      "G": "Rectal temp F",
+      "N": "Rectal temp",
+      "O": "LN",
+      "T": "DEG F",
+      "U": "F",
+      "V": "[degF]"
+    },
+    {
+      "A": 3,
+      "B": "Wt % Ile",
+      "D": 1281,
+      "E": "8336-0",
+      "F": "Body weight [Percentile] Per age",
+      "N": "Bdy weight Prctl Per Age",
+      "O": "LN",
+      "T": "%",
+      "U": "%",
+      "V": "%"
     },
     {
       "A": 2,
@@ -44430,6 +44138,15 @@ export default [
       "B": "CLINICIAN NOTES",
       "D": 23172,
       "O": "RI"
+    },
+    {
+      "A": 3,
+      "B": "Progress Notes",
+      "D": 1052,
+      "E": "11506-3",
+      "F": "Progress note",
+      "N": "Progress note",
+      "O": "LN"
     },
     {
       "A": 2,
@@ -44623,10 +44340,31 @@ export default [
       "O": "RI"
     },
     {
+      "A": 3,
+      "B": "GERIATRIC DEPRESSION SCALE SCORE",
+      "D": 23421,
+      "E": "48544-1",
+      "F": "Geriatric depression scale (GDS) total",
+      "O": "LN",
+      "U": "score",
+      "V": "{score}"
+    },
+    {
       "A": 2,
       "B": "Medical Assistant Rooming Form",
       "D": 42475,
       "O": "RI"
+    },
+    {
+      "A": 3,
+      "B": "Pain Scale (0-10)",
+      "D": 27159,
+      "E": "72514-3",
+      "F": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "N": "Pain severity 0-10 Score Reported",
+      "O": "LN",
+      "U": "score",
+      "V": "{score}"
     },
     {
       "A": 2,
@@ -44677,6 +44415,16 @@ export default [
       "O": "RI"
     },
     {
+      "A": 3,
+      "B": "MINI MENTAL STATUS SCORE",
+      "D": 23420,
+      "E": "72106-8",
+      "F": "Total score [MMSE]",
+      "O": "LN",
+      "U": "score",
+      "V": "{score}"
+    },
+    {
       "A": 2,
       "B": "Minimum Data Set",
       "D": 39459,
@@ -44713,6 +44461,57 @@ export default [
       "O": "RI"
     },
     {
+      "A": 3,
+      "B": "Tumor Record Number",
+      "D": 27211,
+      "E": "21831-3",
+      "F": "Unique tumor case ID Cancer",
+      "N": "Unique tumor case ID Cancer",
+      "O": "LN"
+    },
+    {
+      "A": 3,
+      "B": "HIPPA truncated Age at Cancer Dx",
+      "D": 27217,
+      "E": "21841-2",
+      "F": "Age at cancer diagnosis",
+      "N": "Cancer diagnosis age",
+      "O": "LN",
+      "U": "a",
+      "V": "a"
+    },
+    {
+      "A": 3,
+      "B": "Year Ca First Seen by Hospital",
+      "D": 27243,
+      "E": "21873-5",
+      "F": "Year first seen at this hospital for [Date] Cancer",
+      "N": "Y first seen this hospital for Cancer",
+      "O": "LN",
+      "V": "{yyyy}"
+    },
+    {
+      "A": 3,
+      "B": "Patient Tumor Registry ID",
+      "D": 27209,
+      "E": "21829-7",
+      "F": "Institution data source Registry message",
+      "N": "Inst data source Registry Message",
+      "O": "LN"
+    },
+    {
+      "A": 3,
+      "B": "NAACCR Survival To Last Contact",
+      "D": 30263,
+      "E": "35350-8",
+      "F": "NAACCR survival to last contact (in months) [Time]",
+      "N": "NAACCR survi to last contact (in months)",
+      "O": "LN",
+      "T": "months",
+      "U": "mo",
+      "V": "mo"
+    },
+    {
       "A": 2,
       "B": "NURSING ADMISSION ASSESSMENT",
       "D": 20471,
@@ -44729,6 +44528,14 @@ export default [
       "B": "PRIME MD SCN",
       "D": 21513,
       "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "Patient Reported Quality of Life",
+      "D": 42693,
+      "E": "72355-1",
+      "F": "Patient Reported Outcome Quality of Life tool",
+      "O": "LN"
     },
     {
       "A": 2,
@@ -44788,6 +44595,105 @@ export default [
       "O": "RI"
     },
     {
+      "A": 3,
+      "B": "Little interest or pleasure in doing things in last 2W",
+      "D": "phq9-1",
+      "E": "44250-9",
+      "F": "Little interest or pleasure in doing things in last 2 weeks [Reported.PHQ]",
+      "G": "Little interest or pleasure in doing things in last 2W",
+      "O": "LN"
+    },
+    {
+      "A": 3,
+      "B": "Feeling down, depressed, or hopeless in last 2W",
+      "D": "phq9-2",
+      "E": "44255-8",
+      "F": "Feeling down, depressed, or hopeless in last 2 weeks [Reported.PHQ]",
+      "G": "Feeling down, depressed, or hopeless in last 2W",
+      "O": "LN"
+    },
+    {
+      "A": 3,
+      "B": "Trouble falling or staying asleep, or sleeping too much in last 2W",
+      "D": "phq9-3",
+      "E": "44259-0",
+      "F": "Trouble falling or staying asleep, or sleeping too much in last 2 weeks [Reported.PHQ]",
+      "G": "Trouble falling or staying asleep, or sleeping too much in last 2W",
+      "O": "LN"
+    },
+    {
+      "A": 3,
+      "B": "Feeling tired or having little energy in last 2W",
+      "D": "phq9-4",
+      "E": "44254-1",
+      "F": "Feeling tired or having little energy in last 2 weeks [Reported.PHQ]",
+      "G": "Feeling tired or having little energy in last 2W",
+      "O": "LN"
+    },
+    {
+      "A": 3,
+      "B": "Poor appetite or overeating in last 2W",
+      "D": "phq9-5",
+      "E": "44251-7",
+      "F": "Poor appetite or overeating in last 2 weeks [Reported.PHQ]",
+      "G": "Poor appetite or overeating in last 2W",
+      "O": "LN"
+    },
+    {
+      "A": 3,
+      "B": "Feeling bad about yourself - or that you are a failure or have let yourself or your family down in last 2W",
+      "D": "phq9-6",
+      "E": "44258-2",
+      "F": "Feeling bad about yourself - or that you are a failure or have let yourself or your family down in last 2 weeks [Reported.PHQ]",
+      "G": "Feeling bad about yourself - or that you are a failure or have let yourself or your family down in last 2W",
+      "O": "LN"
+    },
+    {
+      "A": 3,
+      "B": "Trouble concentrating on things, such as reading the newspaper or watching television in last 2W",
+      "D": "phq9-7",
+      "E": "44252-5",
+      "F": "Trouble concentrating on things, such as reading the newspaper or watching television in last 2 weeks [Reported.PHQ]",
+      "G": "Trouble concentrating on things, such as reading the newspaper or watching television in last 2W",
+      "O": "LN"
+    },
+    {
+      "A": 3,
+      "B": "Moving or speaking so slowly that other people could have noticed. Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual in last 2W",
+      "D": "phq-8",
+      "E": "44253-3",
+      "F": "Moving or speaking so slowly that other people could have noticed. Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual in last 2 weeks [Reported.PHQ]",
+      "G": "Moving or speaking so slowly that other people could have noticed. Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual in last 2W",
+      "O": "LN"
+    },
+    {
+      "A": 3,
+      "B": "Thoughts that you would be better off dead, or of hurting yourself in some way in last 2W",
+      "D": "phq9-9",
+      "E": "44260-8",
+      "F": "Thoughts that you would be better off dead, or of hurting yourself in some way in last 2 weeks [Reported.PHQ]",
+      "G": "Thoughts that you would be better off dead, or of hurting yourself in some way in last 2W",
+      "O": "LN"
+    },
+    {
+      "A": 3,
+      "B": "Patient health questionnaire 9 item total score",
+      "D": "phq9-10",
+      "E": "44261-6",
+      "F": "Patient Health Questionnaire 9 item (PHQ-9) total score [Reported]",
+      "G": "Patient health questionnaire 9 item total score",
+      "O": "LN"
+    },
+    {
+      "A": 3,
+      "B": "How difficult have these made it for you to do your work, take care of things at home, or get along with other people",
+      "D": "phq9-11",
+      "E": "69722-7",
+      "F": "How difficult have these made it for you to do your work, take care of things at home, or get along with other people [Reported.PHQ]",
+      "G": "How difficult have these made it for you to do your work, take care of things at home, or get along with other people",
+      "O": "LN"
+    },
+    {
       "A": 2,
       "B": "Generalized anxiety disorder 7 item (GAD-7)",
       "D": "gad7-0",
@@ -44795,6 +44701,78 @@ export default [
       "F": "Generalized anxiety disorder 7 item",
       "G": "Generalized anxiety disorder 7 item",
       "O": "RI"
+    },
+    {
+      "A": 3,
+      "B": "Feeling nervous, anxious or on edge in last 2W",
+      "D": "gad7-1",
+      "E": "69725-0",
+      "F": "Feeling nervous, anxious or on edge in last 2 weeks [Reported.PHQ]",
+      "G": "Feeling nervous, anxious or on edge in last 2W",
+      "O": "LN"
+    },
+    {
+      "A": 3,
+      "B": "Not able to stop or control worrying in the last 2W",
+      "D": "gad7-2",
+      "E": "68509-9",
+      "F": "Not able to stop or control worrying in the last 2 weeks [SAMHSA]",
+      "G": "Not able to stop or control worrying in the last 2W",
+      "O": "LN"
+    },
+    {
+      "A": 3,
+      "B": "Worrying too much about different things in last 2W",
+      "D": "gad7-3",
+      "E": "69733-4",
+      "F": "Worrying too much about different things in last 2 weeks [Reported.PHQ]",
+      "G": "Worrying too much about different things in last 2W",
+      "O": "LN"
+    },
+    {
+      "A": 3,
+      "B": "Trouble relaxing in last 2W",
+      "D": "gad7-4",
+      "E": "69734-2",
+      "F": "Trouble relaxing in last 2 weeks [Reported.PHQ]",
+      "G": "Trouble relaxing in last 2W",
+      "O": "LN"
+    },
+    {
+      "A": 3,
+      "B": "Being so restless that it is hard to sit still in last 2W",
+      "D": "gad7-5",
+      "E": "69735-9",
+      "F": "Being so restless that it is hard to sit still in last 2 weeks [Reported.PHQ]",
+      "G": "Being so restless that it is hard to sit still in last 2W",
+      "O": "LN"
+    },
+    {
+      "A": 3,
+      "B": "Becoming easily annoyed or irritable in last 4W",
+      "D": "gad7-6",
+      "E": "69689-8",
+      "F": "Becoming easily annoyed or irritable in last 4 weeks [Reported.PHQ]",
+      "G": "Becoming easily annoyed or irritable in last 4W",
+      "O": "LN"
+    },
+    {
+      "A": 3,
+      "B": "Feeling afraid as if something awful might happen in last 2W",
+      "D": "gad7-7",
+      "E": "69736-7",
+      "F": "Feeling afraid as if something awful might happen in last 2 weeks [Reported.PHQ]",
+      "G": "Feeling afraid as if something awful might happen in last 2W",
+      "O": "LN"
+    },
+    {
+      "A": 3,
+      "B": "Generalized anxiety disorder 7 item total score",
+      "D": "gad7-8",
+      "E": "70274-6",
+      "F": "Generalized anxiety disorder 7 item (GAD-7) total score [Reported.PHQ]",
+      "G": "Generalized anxiety disorder 7 item total score",
+      "O": "LN"
     },
     {
       "A": 1,
@@ -44815,6 +44793,17 @@ export default [
       "O": "RI"
     },
     {
+      "A": 3,
+      "B": "Braden Score",
+      "D": 31708,
+      "E": "38227-5",
+      "F": "Braden scale total score",
+      "N": "Braden Scale Total Score",
+      "O": "LN",
+      "U": "score",
+      "V": "{score}"
+    },
+    {
       "A": 2,
       "B": "FALL RISK ASSESSMENT",
       "D": 24104,
@@ -44825,6 +44814,17 @@ export default [
       "B": "Hendrich II Fall Risk Model",
       "D": 32441,
       "O": "RI"
+    },
+    {
+      "A": 2,
+      "B": "Glasgow Coma Scale Data",
+      "D": 31768,
+      "E": "9269-2",
+      "F": "Glasgow coma score total",
+      "N": "GCS total",
+      "O": "LN",
+      "U": "score",
+      "V": "{score}"
     },
     {
       "A": 2,

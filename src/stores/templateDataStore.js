@@ -87,6 +87,8 @@ class TemplateDataStore {
       year: templateInfo.yearList
     };
 
+//    console.log(tableData);
+//    console.log(templateInfo.templateTree)
     return [tableData, columnInfo]
   }
 
@@ -106,6 +108,7 @@ class TemplateDataStore {
       }
     }
 //    console.log(tableData)
+//    console.log(templateInfo.templateTree)
     return tableData
   }
 
@@ -758,8 +761,8 @@ class TemplateDataStore {
     itemValues.forEach((val, index) => {
 
       if (commonUCUM && val.unit && val.unit.code !== commonUCUM) {
-        // special handling for mass unit conversion
-        if (node.R && node.S === 'x') {
+        //if (node.R && node.S === 'x') {
+        if (node.R) {
           let result = this._msUnitConvert(node.D, val.value, val.unit.code, commonUCUM, node.R);
           if (result && !isNaN(result)) {
             let toVal = Math.round(result * 100) / 100;
