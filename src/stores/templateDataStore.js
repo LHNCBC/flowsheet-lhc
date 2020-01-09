@@ -1216,7 +1216,9 @@ class TemplateDataStore {
       }
     }
     if(! convFunc || isNaN(value)) {
-      throw Error(`msUnitConvert - unable convert: (${value}, ${serviceCode}, ${fromUnit}, ${toUnit}`);
+      //throw Error(`msUnitConvert - unable convert: (${value}, ${serviceCode}, ${fromUnit}, ${toUnit}`);
+      console.log(`msUnitConvert - unable convert: (${value}, ${serviceCode}, ${fromUnit}, ${toUnit}`);
+      return null;
     }
 
     return this._toPrecision(convFunc(value, moleWeight), 2, 2);
@@ -1236,7 +1238,9 @@ class TemplateDataStore {
       }
     }
     if(! convFunc || isNaN(value)) {
-      throw Error(`valueMC2SC - unable convert: (${value}, ${serviceCode}, ${mcUnit}, ${scUnit}`);
+      //throw Error(`valueMC2SC - unable convert: (${value}, ${serviceCode}, ${mcUnit}, ${scUnit}`);
+      console.log(`valueMC2SC - unable convert: (${value}, ${serviceCode}, ${mcUnit}, ${scUnit}`);
+      return null;
     }
 
     return this._toPrecision(convFunc(value, moleWeight), 2, 2);
@@ -1256,7 +1260,9 @@ class TemplateDataStore {
       }
     }
     if(! convFunc || isNaN(value)) {
-      throw Error(`valueSC2MC - unable convert: (${value}, ${serviceCode}, ${scUnit}, ${mcUnit}`);
+      //throw Error(`valueSC2MC - unable convert: (${value}, ${serviceCode}, ${scUnit}, ${mcUnit}`);
+      console.log(`valueSC2MC - unable convert: (${value}, ${serviceCode}, ${scUnit}, ${mcUnit}`);
+      return null;
     }
 
     return this._toPrecision(convFunc(value, moleWeight), 2, 2);

@@ -300,8 +300,8 @@ class App extends Component {
           that._processChartData(columns, data.flowsheetTableData);
         }
 
-//        console.log("App: loadData: getFirstPageFlowsheetData: 1:")
-//        console.log(data)
+        console.log("App: loadData: getFirstPageFlowsheetData: 1:")
+        console.log(data)
 
       })
       .catch(function(error) {
@@ -358,8 +358,8 @@ class App extends Component {
           that._processChartData(columns, data.flowsheetTableData);
         }
 
-//        console.log("App: appendData: getNextPageFlowsheetData: 1:")
-//        console.log(data)
+        console.log("App: appendData: getNextPageFlowsheetData: 1:")
+        console.log(data)
 
       })
       .catch(function(error) {
