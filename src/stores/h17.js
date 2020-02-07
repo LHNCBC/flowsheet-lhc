@@ -1,28 +1,28 @@
 export default [
-    // {
-    //   "A": "LVL",
-    //   "B": "INDENTEDNAME",
-    //   "C": "EquivalenceClass20191113",
-    //   "D": "CODE",
-    //   "E": "LOINC_MERGED",
-    //   "F": "LONG_COMMON_NAME_LOINC",
-    //   "G": "LOINC_DISPLAY",
-    //   "H": "units_normRange",
-    //   "I": "norm_range",
-    //   "J": "norm_low",
-    //   "K": "norm_high",
-    //   "L": "danger_high",
-    //   "M": "danger_low",
-    //   "N": "LOINC_ShortName",
-    //   "O": "Code_indicator",
-    //   "P": "EquivalenceClass_UOM",
-    //   "Q": "EquivalenceClass_UCUM",
-    //   "R": "Molecular_weight",
-    //   "S": "Convert_indicator",
-    //   "T": "UNITS_RI",
-    //   "U": "UNITS_DISPLAY",
-    //   "V": "UCUM_EX"
-    // },
+    {
+      "A": "LVL",
+      "B": "INDENTEDNAME",
+      "C": "EquivalenceClass20200117",
+      "D": "CODE",
+      "E": "LOINC_MERGED",
+      "F": "LONG_COMMON_NAME_LOINC",
+      "G": "LOINC_DISPLAY",
+      "H": "units_normRange",
+      "I": "norm_range",
+      "J": "norm_low",
+      "K": "norm_high",
+      "L": "danger_high",
+      "M": "danger_low",
+      "N": "LOINC_ShortName",
+      "O": "Code_indicator",
+      "P": "EquivalenceClass_UOM",
+      "Q": "EquivalenceClass_UCUM",
+      "R": "Molecular_weight",
+      "S": "Convert_indicator",
+      "T": "UNITS_RI",
+      "U": "UNITS_DISPLAY",
+      "V": "UCUM_EX"
+    },
     {
       "A": 1,
       "B": "VITALS",
@@ -51,26 +51,6 @@ export default [
       "T": "DEG F",
       "U": "F",
       "V": "[degF]"
-    },
-    {
-      "A": 2,
-      "B": "Temp",
-      "C": "Temp F->C",
-      "D": "65z",
-      "E": "8310-5",
-      "F": "Body temperature",
-      "G": "Body Temp C",
-      "H": "Cel",
-      "I": "36.1 - 37.2",
-      "J": 36.1,
-      "K": 37.2,
-      "N": "Body temperature",
-      "O": "RI",
-      "P": "Cel",
-      "Q": "Cel",
-      "T": "Cel",
-      "U": "C",
-      "V": "Cel"
     },
     {
       "A": 2,
@@ -115,28 +95,6 @@ export default [
       "T": "DEG F",
       "U": "F",
       "V": "[degF]"
-    },
-    {
-      "A": 2,
-      "B": "Temp Auto Oral",
-      "C": "Temp F->C",
-      "D": "12984z",
-      "E": "8331-1",
-      "F": "Oral temperature",
-      "G": "Oral temp C",
-      "H": "Cel",
-      "I": "36.4 - 37.2",
-      "J": 36.4,
-      "K": 37.2,
-      "L": 39.2,
-      "M": 35.3,
-      "N": "Oral temp",
-      "O": "RI",
-      "P": "Cel",
-      "Q": "Cel",
-      "T": "C",
-      "U": "C",
-      "V": "Cel"
     },
     {
       "A": 2,
@@ -185,48 +143,6 @@ export default [
       "B": "Heart Rate",
       "C": "Heart rate merged",
       "D": 66,
-      "E": "8867-4",
-      "F": "Heart rate",
-      "H": "/min",
-      "I": "60-100",
-      "J": 60,
-      "K": 100,
-      "L": 130,
-      "M": 40,
-      "N": "Heart rate",
-      "O": "RI",
-      "P": "{beats}/min",
-      "Q": "{beats}/min",
-      "T": "/MIN",
-      "U": "beats/min",
-      "V": "{beats}/min"
-    },
-    {
-      "A": 2,
-      "B": "Heart Rate #2",
-      "C": "Heart rate merged",
-      "D": 31686,
-      "E": "8867-4",
-      "F": "Heart rate",
-      "H": "/min",
-      "I": "60-100",
-      "J": 60,
-      "K": 100,
-      "L": 130,
-      "M": 40,
-      "N": "Heart rate",
-      "O": "RI",
-      "P": "{beats}/min",
-      "Q": "{beats}/min",
-      "T": "/MIN",
-      "U": "beats/min",
-      "V": "{beats}/min"
-    },
-    {
-      "A": 2,
-      "B": "Pulse Auto",
-      "C": "Heart rate merged",
-      "D": 12989,
       "E": "8867-4",
       "F": "Heart rate",
       "H": "/min",
@@ -434,45 +350,6 @@ export default [
     },
     {
       "A": 2,
-      "B": "Mean Arterial Pressure",
-      "C": "Mean Arterial Pressure merged",
-      "D": 31692,
-      "E": "8478-0",
-      "F": "Mean blood pressure",
-      "H": "mmHg",
-      "I": "70 - 100",
-      "J": 70,
-      "K": 100,
-      "N": "BP mean",
-      "O": "RI",
-      "P": "mm[Hg]",
-      "Q": "mm[Hg]",
-      "T": "mm Hg",
-      "U": "mmHg",
-      "V": "mm[Hg]"
-    },
-    {
-      "A": 2,
-      "B": "MAP Auto",
-      "C": "Mean Arterial Pressure merged",
-      "D": 12987,
-      "E": "8478-0",
-      "F": "Mean blood pressure",
-      "H": "mm Hg",
-      "I": "70 - 100",
-      "J": 70,
-      "K": 100,
-      "L": 102,
-      "N": "BP mean",
-      "O": "RI",
-      "P": "mm[Hg]",
-      "Q": "mm[Hg]",
-      "T": "mm Hg",
-      "U": "mmHg",
-      "V": "mm[Hg]"
-    },
-    {
-      "A": 2,
       "B": "BP Dias Recumbnt",
       "D": 2991,
       "E": "8455-8",
@@ -600,38 +477,6 @@ export default [
     },
     {
       "A": 2,
-      "B": "Height(In)",
-      "C": "Height in->cm",
-      "D": 497,
-      "E": "3137-7",
-      "F": "Body height Measured",
-      "G": "Height cm",
-      "N": "Body height Measured",
-      "O": "RI",
-      "P": "cm",
-      "Q": "cm",
-      "T": "CM",
-      "U": "cm",
-      "V": "cm"
-    },
-    {
-      "A": 2,
-      "B": "Height Metric",
-      "C": "Height in->cm",
-      "D": 3897,
-      "E": "3137-7",
-      "F": "Body height Measured",
-      "G": "Height cm",
-      "N": "Body height Measured",
-      "O": "RI",
-      "P": "cm",
-      "Q": "cm",
-      "T": "CM",
-      "U": "cm",
-      "V": "cm"
-    },
-    {
-      "A": 2,
       "B": "Weight Lbs",
       "C": "Weight lbs->kg",
       "D": 202,
@@ -639,57 +484,6 @@ export default [
       "F": "Body weight Measured",
       "G": "Weight lbs",
       "H": "lbs",
-      "N": "Weight Measured",
-      "O": "RI",
-      "P": "kg",
-      "Q": "kg",
-      "S": "x",
-      "T": "LBS",
-      "U": "lbs",
-      "V": "[lb_av]"
-    },
-    {
-      "A": 2,
-      "B": "Weight Lbs",
-      "C": "Weight lbs->kg",
-      "D": "202z",
-      "E": "3141-9",
-      "F": "Body weight Measured",
-      "G": "Weight kg",
-      "H": "kg",
-      "N": "Weight Measured",
-      "O": "RI",
-      "P": "kg",
-      "Q": "kg",
-      "T": "KG",
-      "U": "kg",
-      "V": "kg"
-    },
-    {
-      "A": 2,
-      "B": "Weight Metric",
-      "C": "Weight lbs->kg",
-      "D": 2996,
-      "E": "3141-9",
-      "F": "Body weight Measured",
-      "G": "Weight kg",
-      "N": "Weight Measured",
-      "O": "RI",
-      "P": "kg",
-      "Q": "kg",
-      "T": "KG",
-      "U": "kg",
-      "V": "kg"
-    },
-    {
-      "A": 2,
-      "B": "Weight Auto",
-      "C": "Weight lbs->kg",
-      "D": 14343,
-      "E": "3141-9",
-      "F": "Body weight Measured",
-      "G": "Weight lbs",
-      "H": "pounds",
       "N": "Weight Measured",
       "O": "RI",
       "P": "kg",
@@ -1046,7 +840,7 @@ export default [
     {
       "A": 4,
       "B": "Sodium Bld Qn",
-      "C": "Sodium|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Sodium|SCnc|Pt|Intravascular-any|Method-Other",
       "D": 22599,
       "E": "2947-0",
       "F": "Sodium [Moles/volume] in Blood",
@@ -1068,7 +862,7 @@ export default [
     {
       "A": 4,
       "B": "Sodium (CSH)",
-      "C": "Sodium|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Sodium|SCnc|Pt|Intravascular-any|Method-Other",
       "D": 11428,
       "E": "2951-2",
       "F": "Sodium [Moles/volume] in Serum or Plasma",
@@ -1088,7 +882,7 @@ export default [
     {
       "A": 4,
       "B": "Potass(ER-IS)",
-      "C": "Potassium|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Potassium|SCnc|Pt|Intravascular-any|Method-Other",
       "D": 20030,
       "E": "6298-4",
       "F": "Potassium [Moles/volume] in Blood",
@@ -1110,7 +904,7 @@ export default [
     {
       "A": 4,
       "B": "Potassium (CSH)",
-      "C": "Potassium|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Potassium|SCnc|Pt|Intravascular-any|Method-Other",
       "D": 11429,
       "E": "2823-3",
       "F": "Potassium [Moles/volume] in Serum or Plasma",
@@ -1130,7 +924,7 @@ export default [
     {
       "A": 4,
       "B": "CO2 (CSH)",
-      "C": "Carbon dioxide|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Carbon dioxide|SCnc|Pt|Intravascular-any|Method-Other",
       "D": 11431,
       "E": "2028-9",
       "F": "Carbon dioxide, total [Moles/volume] in Serum or Plasma",
@@ -1151,7 +945,7 @@ export default [
     {
       "A": 4,
       "B": "CO2-Calc(ER-IS)",
-      "C": "Carbon dioxide|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Carbon dioxide|SCnc|Pt|Intravascular-any|Method-Other",
       "D": 20032,
       "E": "20565-8",
       "F": "Carbon dioxide, total [Moles/volume] in Blood",
@@ -1172,7 +966,7 @@ export default [
     {
       "A": 4,
       "B": "Chloride Bld Qn (ISTAT)'",
-      "C": "Chloride|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Chloride|SCnc|Pt|Intravascular-any|Method-Other",
       "D": 18997,
       "E": "2069-3",
       "F": "Chloride [Moles/volume] in Blood",
@@ -1195,7 +989,7 @@ export default [
     {
       "A": 4,
       "B": "Chloride (CSH)",
-      "C": "Chloride|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Chloride|SCnc|Pt|Intravascular-any|Method-Other",
       "D": 11430,
       "E": "2075-0",
       "F": "Chloride [Moles/volume] in Serum or Plasma",
@@ -1216,7 +1010,7 @@ export default [
     {
       "A": 4,
       "B": "HCO3 Bld Qn Calc (ER-IS)",
-      "C": "Bicarbonate|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Bicarbonate|SCnc|Pt|Intravascular-any|Method-Other",
       "D": 20044,
       "E": "1959-6",
       "F": "Bicarbonate [Moles/volume] in Blood",
@@ -1257,7 +1051,7 @@ export default [
     {
       "A": 4,
       "B": "Anion Gap 4 Bld Qn (POC)",
-      "C": "Anion gap 4|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Anion gap 4|SCnc|Pt|Intravascular-any|Method-Other",
       "D": 20028,
       "E": "1863-0",
       "F": "Anion gap 4 in Serum or Plasma",
@@ -1275,7 +1069,7 @@ export default [
     {
       "A": 4,
       "B": "Lactate BldA Qn (POC)",
-      "C": "Lactate|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Lactate|SCnc|Pt|Intravascular-any|Method-Other",
       "D": 29654,
       "E": "2518-9",
       "F": "Lactate [Moles/volume] in Arterial blood",
@@ -1352,48 +1146,8 @@ export default [
     },
     {
       "A": 5,
-      "B": "BUN (CSH)",
-      "C": "Urea nitrogen MSCNC demo",
-      "D": 11433,
-      "E": "3094-0",
-      "F": "Urea nitrogen [Mass/volume] in Serum or Plasma",
-      "G": "Urea nitrogen mass conc",
-      "H": "mg/dL",
-      "I": "10 - 26",
-      "J": 10,
-      "K": 26,
-      "N": "BUN SerPl-mCnc",
-      "O": "RI",
-      "P": "mg/dL",
-      "Q": "mg/dL",
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 5,
-      "B": "BUN (SMA)",
-      "C": "Urea nitrogen MSCNC demo",
-      "D": 34,
-      "E": "3094-0",
-      "F": "Urea nitrogen [Mass/volume] in Serum or Plasma",
-      "G": "Urea nitrogen mass conc",
-      "H": "mg/dL",
-      "I": "10 - 26",
-      "J": 10,
-      "K": 26,
-      "N": "BUN SerPl-mCnc",
-      "O": "RI",
-      "P": "mg/dL",
-      "Q": "mg/dL",
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 5,
       "B": "BUN Bld Qn (POC)",
-      "C": "Urea nitrogen|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Urea nitrogen|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 18989,
       "E": "6299-2",
       "F": "Urea nitrogen [Mass/volume] in Blood",
@@ -1404,26 +1158,6 @@ export default [
       "K": 22,
       "N": "BUN Bld-mCnc",
       "O": "RI",
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 5,
-      "B": "BUN(ER-IS)",
-      "C": "Urea nitrogen MSCNC demo",
-      "D": 20034,
-      "E": "3094-0",
-      "F": "Urea nitrogen [Mass/volume] in Serum or Plasma",
-      "G": "Urea nitrogen mass conc",
-      "H": "mg/dL",
-      "I": "8 - 26",
-      "J": 8,
-      "K": 26,
-      "N": "BUN SerPl-mCnc",
-      "O": "RI",
-      "P": "mg/dL",
-      "Q": "mg/dL",
       "T": "mg/dL",
       "U": "mg/dL",
       "V": "mg/dL"
@@ -1478,27 +1212,6 @@ export default [
       "A": 5,
       "B": "Creatinine SerPl Qn",
       "C": "Creatinine serum moles->mass",
-      "D": 256,
-      "E": "2160-0",
-      "F": "Creatinine [Mass/volume] in Serum or Plasma",
-      "G": "Creatinine mass conc",
-      "H": "mg/dL",
-      "I": "0.5 - 1.0",
-      "J": 0.5,
-      "K": 1,
-      "N": "Creat SerPl-mCnc",
-      "O": "RI",
-      "P": "mg/dL",
-      "Q": "mg/dL",
-      "R": 113.1179,
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 5,
-      "B": "Creatinine SerPl Qn",
-      "C": "Creatinine serum moles->mass",
       "D": "256z",
       "E": "14682-9",
       "F": "Creatinine [Moles/volume] in Serum or Plasma",
@@ -1518,51 +1231,9 @@ export default [
       "V": "umol/l"
     },
     {
-      "A": 5,
-      "B": "Creatinine (CSH)",
-      "C": "Creatinine serum moles->mass",
-      "D": 11434,
-      "E": "2160-0",
-      "F": "Creatinine [Mass/volume] in Serum or Plasma",
-      "G": "Creatinine mass conc",
-      "H": "mg/dL",
-      "I": "0.4 - 1.5",
-      "J": 0.4,
-      "K": 1.5,
-      "N": "Creat SerPl-mCnc",
-      "O": "RI",
-      "P": "mg/dL",
-      "Q": "mg/dL",
-      "R": 113.1179,
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 5,
-      "B": "Creatinine (SMA)",
-      "C": "Creatinine serum moles->mass",
-      "D": 6513,
-      "E": "2160-0",
-      "F": "Creatinine [Mass/volume] in Serum or Plasma",
-      "G": "Creatinine mass conc",
-      "H": "mg/dL",
-      "I": "0.4 - 1.5",
-      "J": 0.4,
-      "K": 1.5,
-      "N": "Creat SerPl-mCnc",
-      "O": "RI",
-      "P": "mg/dL",
-      "Q": "mg/dL",
-      "R": 113.1179,
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
       "A": 4,
       "B": "GFR Est MDRD Afric American",
-      "C": "Glomerular filtration rate/1.73 sq M.predicted.black|ArVRat|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Glomerular filtration rate/1.73 sq M.predicted.black|ArVRat|Pt|Intravascular-any|Method-Other",
       "D": 31001,
       "E": "48643-1",
       "F": "Glomerular filtration rate/1.73 sq M predicted among blacks [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (MDRD)",
@@ -1581,7 +1252,7 @@ export default [
     {
       "A": 4,
       "B": "GFR Est MDRD Non Afric American",
-      "C": "Glomerular filtration rate/1.73 sq M.predicted.non black|ArVRat|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Glomerular filtration rate/1.73 sq M.predicted.non black|ArVRat|Pt|Intravascular-any|Method-Other",
       "D": 31002,
       "E": "48642-3",
       "F": "Glomerular filtration rate/1.73 sq M predicted among non-blacks [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (MDRD)",
@@ -1600,7 +1271,7 @@ export default [
     {
       "A": 4,
       "B": "GFR Estimated MDRD",
-      "C": "Glomerular filtration rate/1.73 sq M.predicted|ArVRat|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Glomerular filtration rate/1.73 sq M.predicted|ArVRat|Pt|Intravascular-any|Method-Other",
       "D": 32543,
       "E": "33914-3",
       "F": "Glomerular filtration rate/1.73 sq M.predicted [Volume Rate/Area] in Serum or Plasma by Creatinine-based formula (MDRD)",
@@ -1662,69 +1333,6 @@ export default [
     },
     {
       "A": 4,
-      "B": "Glucose (ACA)",
-      "C": "Glucose Serum moles->mass",
-      "D": 4035,
-      "E": "2345-7",
-      "F": "Glucose [Mass/volume] in Serum or Plasma",
-      "G": "Glucose mass conc",
-      "H": "mg/dL",
-      "I": "70 -115",
-      "J": 70,
-      "K": 115,
-      "N": "Glucose SerPl-mCnc",
-      "O": "RI",
-      "P": "mg/dL",
-      "Q": "mg/dL",
-      "R": 180.156,
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 4,
-      "B": "Glucose (CSH)",
-      "C": "Glucose Serum moles->mass",
-      "D": 11432,
-      "E": "2345-7",
-      "F": "Glucose [Mass/volume] in Serum or Plasma",
-      "G": "Glucose mass conc",
-      "H": "mg/dL",
-      "I": "70 -115",
-      "J": 70,
-      "K": 115,
-      "N": "Glucose SerPl-mCnc",
-      "O": "RI",
-      "P": "mg/dL",
-      "Q": "mg/dL",
-      "R": 180.156,
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 4,
-      "B": "Glu (SMA)",
-      "C": "Glucose Serum moles->mass",
-      "D": 33,
-      "E": "2345-7",
-      "F": "Glucose [Mass/volume] in Serum or Plasma",
-      "G": "Glucose mass conc",
-      "H": "mg/dL",
-      "I": "70 -115",
-      "J": 70,
-      "K": 115,
-      "N": "Glucose SerPl-mCnc",
-      "O": "RI",
-      "P": "mg/dL",
-      "Q": "mg/dL",
-      "R": 180.156,
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 4,
       "B": "Glucose Fast SerPl Qn",
       "C": "Glucose Serum moles->mass",
       "D": 11500,
@@ -1758,29 +1366,6 @@ export default [
       "K": 109,
       "L": 500,
       "M": 39,
-      "N": "Glucose Bld-mCnc",
-      "O": "RI",
-      "P": "mg/dL",
-      "Q": "mg/dL",
-      "R": 180.156,
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 4,
-      "B": "Glucose Bld Qn (POC)",
-      "C": "Glucose Bld moles->mass",
-      "D": 22414,
-      "E": "2339-0",
-      "F": "Glucose [Mass/volume] in Blood",
-      "G": "Glucose mass conc (Bld)",
-      "H": "mg/dL",
-      "I": "70 - 109",
-      "J": 70,
-      "K": 105,
-      "L": 400,
-      "M": 45,
       "N": "Glucose Bld-mCnc",
       "O": "RI",
       "P": "mg/dL",
@@ -1836,52 +1421,6 @@ export default [
       "V": "mg/dL"
     },
     {
-      "A": 4,
-      "B": "Glucose Bld Qn (ISTAT)'",
-      "C": "Glucose Bld moles->mass",
-      "D": 18991,
-      "E": "2339-0",
-      "F": "Glucose [Mass/volume] in Blood",
-      "G": "Glucose mass conc (Bld)",
-      "H": "mg/dL",
-      "I": "70 - 109",
-      "J": 70,
-      "K": 105,
-      "L": 400,
-      "M": 45,
-      "N": "Glucose Bld-mCnc",
-      "O": "RI",
-      "P": "mg/dL",
-      "Q": "mg/dL",
-      "R": 180.156,
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 4,
-      "B": "Glucose(ER-IS)",
-      "C": "Glucose Bld moles->mass",
-      "D": 20029,
-      "E": "2339-0",
-      "F": "Glucose [Mass/volume] in Blood",
-      "G": "Glucose mass conc (Bld)",
-      "H": "mg/dL",
-      "I": "70 - 109",
-      "J": 70,
-      "K": 105,
-      "L": 400,
-      "M": 45,
-      "N": "Glucose Bld-mCnc",
-      "O": "RI",
-      "P": "mg/dL",
-      "Q": "mg/dL",
-      "R": 180.156,
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
       "A": 3,
       "B": "CALCIUM TESTS",
       "D": 4096,
@@ -1892,27 +1431,6 @@ export default [
       "B": "Calcium Ser",
       "C": "Calcium moles->mass",
       "D": 15346,
-      "E": "17861-6",
-      "F": "Calcium [Mass/volume] in Serum or Plasma",
-      "G": "Calcium mass conc",
-      "H": "mg/dL",
-      "I": "8.6 - 10.2",
-      "J": 8.6,
-      "K": 10.2,
-      "N": "Calcium SerPl-mCnc",
-      "O": "RI",
-      "P": "mg/dL",
-      "Q": "mg/dL",
-      "R": 40.078,
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 4,
-      "B": "Calcium SerPl Qn",
-      "C": "Calcium moles->mass",
-      "D": 4053,
       "E": "17861-6",
       "F": "Calcium [Mass/volume] in Serum or Plasma",
       "G": "Calcium mass conc",
@@ -1950,48 +1468,6 @@ export default [
       "T": "mmol/L",
       "U": "mmol/L",
       "V": "mmol/L"
-    },
-    {
-      "A": 4,
-      "B": "Calcium (CSH) mg/dL",
-      "C": "Calcium moles->mass",
-      "D": 11445,
-      "E": "17861-6",
-      "F": "Calcium [Mass/volume] in Serum or Plasma",
-      "G": "Calcium mass conc",
-      "H": "mg/dL",
-      "I": "8.6 - 10.2",
-      "J": 8.6,
-      "K": 10.2,
-      "N": "Calcium SerPl-mCnc",
-      "O": "RI",
-      "P": "mg/dL",
-      "Q": "mg/dL",
-      "R": 40.078,
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 4,
-      "B": "Calcium (SMA)-mg/ddL",
-      "C": "Calcium moles->mass",
-      "D": 31,
-      "E": "17861-6",
-      "F": "Calcium [Mass/volume] in Serum or Plasma",
-      "G": "Calcium mass conc",
-      "H": "mg/dL",
-      "I": "8.6 - 10.2",
-      "J": 8.6,
-      "K": 10.2,
-      "N": "Calcium SerPl-mCnc",
-      "O": "RI",
-      "P": "mg/dL",
-      "Q": "mg/dL",
-      "R": 40.078,
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
     },
     {
       "A": 4,
@@ -2037,7 +1513,7 @@ export default [
     {
       "A": 4,
       "B": "Calcium-Ion Bld mmol/L (POC)",
-      "C": "Calcium.ionized|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Calcium.ionized|SCnc|Pt|Intravascular-any|Method-Other",
       "D": 21233,
       "E": "1994-3",
       "F": "Calcium.ionized [Moles/volume] in Blood",
@@ -2058,7 +1534,6 @@ export default [
     {
       "A": 4,
       "B": "Calcium-Corrected",
-      "C": "Calcium|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 29457,
       "E": "29265-6",
       "F": "Calcium [Moles/volume] corrected for albumin in Serum or Plasma",
@@ -2072,7 +1547,7 @@ export default [
     {
       "A": 4,
       "B": "pH (Ion Ca)",
-      "C": "pH|LsCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "pH|LsCnc|Pt|Intravascular-any|Method-Other",
       "D": 25262,
       "E": "2753-2",
       "F": "pH of Serum or Plasma",
@@ -2132,69 +1607,6 @@ export default [
       "V": "umol/l"
     },
     {
-      "A": 4,
-      "B": "Albumin Ser Neph",
-      "C": "Albumin moles->mass",
-      "D": 25166,
-      "E": "1751-7",
-      "F": "Albumin [Mass/volume] in Serum or Plasma",
-      "G": "Albumin mass conc",
-      "H": "g/dL",
-      "I": "3.5-5.5",
-      "J": 3.5,
-      "K": 5.5,
-      "N": "Albumin SerPl-mCnc",
-      "O": "RI",
-      "P": "g/dL",
-      "Q": "g/dL",
-      "R": 66000,
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 4,
-      "B": "Albumin (CSH)",
-      "C": "Albumin moles->mass",
-      "D": 11448,
-      "E": "1751-7",
-      "F": "Albumin [Mass/volume] in Serum or Plasma",
-      "G": "Albumin mass conc",
-      "H": "g/dL",
-      "I": "3.5-5.5",
-      "J": 3.5,
-      "K": 5.5,
-      "N": "Albumin SerPl-mCnc",
-      "O": "RI",
-      "P": "g/dL",
-      "Q": "g/dL",
-      "R": 66000,
-      "T": "g/dL",
-      "U": "g/dL",
-      "V": "g/dL"
-    },
-    {
-      "A": 4,
-      "B": "Albumin (SMA)",
-      "C": "Albumin moles->mass",
-      "D": 38,
-      "E": "1751-7",
-      "F": "Albumin [Mass/volume] in Serum or Plasma",
-      "G": "Albumin mass conc",
-      "H": "g/dL",
-      "I": "3.5-5.5",
-      "J": 3.5,
-      "K": 5.5,
-      "N": "Albumin SerPl-mCnc",
-      "O": "RI",
-      "P": "g/dL",
-      "Q": "g/dL",
-      "R": 66000,
-      "T": "g/dL",
-      "U": "g/dL",
-      "V": "g/dL"
-    },
-    {
       "A": 3,
       "B": "BILIRUBINS (CSH)",
       "D": 11453,
@@ -2203,7 +1615,7 @@ export default [
     {
       "A": 4,
       "B": "Bilirubin Indir",
-      "C": "Bilirubin.non-glucuronidated|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Bilirubin.non-glucuronidated|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 733,
       "E": "1971-1",
       "F": "Bilirubin.indirect [Mass/volume] in Serum or Plasma",
@@ -2223,7 +1635,7 @@ export default [
     {
       "A": 4,
       "B": "Bilirubin Dir Ser",
-      "C": "Bilirubin.glucuronidated+Bilirubin.albumin bound|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Bilirubin.glucuronidated+Bilirubin.albumin bound|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 11437,
       "E": "1968-7",
       "F": "Bilirubin.direct [Mass/volume] in Serum or Plasma",
@@ -2263,48 +1675,6 @@ export default [
     },
     {
       "A": 4,
-      "B": "Bilirubin Tot Ser",
-      "C": "Bilirubin moles->mass",
-      "D": 11438,
-      "E": "1975-2",
-      "F": "Bilirubin.total [Mass/volume] in Serum or Plasma",
-      "G": "Bilirubin mass conc",
-      "H": "mg/dL",
-      "I": "0.2 - 1.2",
-      "J": 0.2,
-      "K": 1.2,
-      "N": "Bilirub SerPl-mCnc",
-      "O": "RI",
-      "P": "mg/dL",
-      "Q": "mg/dL",
-      "R": 584.6621,
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 4,
-      "B": "Bilirubin SerPl Qn",
-      "C": "Bilirubin moles->mass",
-      "D": 39,
-      "E": "1975-2",
-      "F": "Bilirubin.total [Mass/volume] in Serum or Plasma",
-      "G": "Bilirubin mass conc",
-      "H": "mg/dL",
-      "I": "0.1 - 1.2",
-      "J": 0.1,
-      "K": 1.2,
-      "N": "Bilirub SerPl-mCnc",
-      "O": "RI",
-      "P": "mg/dL",
-      "Q": "mg/dL",
-      "R": 584.6621,
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 4,
       "B": "Bilirubin SerPl Qn Molar",
       "C": "Bilirubin moles->mass",
       "D": "39z",
@@ -2326,27 +1696,6 @@ export default [
       "V": "umol/l"
     },
     {
-      "A": 4,
-      "B": "Bilirubin SerPl Qn Calc",
-      "C": "Bilirubin moles->mass",
-      "D": 16459,
-      "E": "1975-2",
-      "F": "Bilirubin.total [Mass/volume] in Serum or Plasma",
-      "G": "Bilirubin mass conc",
-      "H": "mg/dL",
-      "I": "0.2 - 1.2",
-      "J": 0.2,
-      "K": 1.2,
-      "N": "Bilirub SerPl-mCnc",
-      "O": "RI",
-      "P": "mg/dL",
-      "Q": "mg/dL",
-      "R": 584.6621,
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
       "A": 3,
       "B": "ALK PHOS TESTS",
       "D": 4937,
@@ -2355,7 +1704,7 @@ export default [
     {
       "A": 4,
       "B": "Alk Phos SerPl Qn",
-      "C": "Alkaline phosphatase|CCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Alkaline phosphatase|CCnc|Pt|Intravascular-any|Method-Other",
       "D": 4032,
       "E": "6768-6",
       "F": "Alkaline phosphatase [Enzymatic activity/volume] in Serum or Plasma",
@@ -2381,7 +1730,7 @@ export default [
     {
       "A": 4,
       "B": "AST SerPl Qn",
-      "C": "Aspartate aminotransferase|CCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Aspartate aminotransferase|CCnc|Pt|Intravascular-any|Method-Other",
       "D": 42,
       "E": "1920-8",
       "F": "Aspartate aminotransferase [Enzymatic activity/volume] in Serum or Plasma",
@@ -2424,7 +1773,7 @@ export default [
     {
       "A": 4,
       "B": "ALT SerPl Qn",
-      "C": "Alanine aminotransferase|CCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Alanine aminotransferase|CCnc|Pt|Intravascular-any|Method-Other",
       "D": 262,
       "E": "1742-6",
       "F": "Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma",
@@ -2444,7 +1793,7 @@ export default [
     {
       "A": 4,
       "B": "ALT Bld Qn (POC)",
-      "C": "Alanine aminotransferase|CCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Alanine aminotransferase|CCnc|Pt|Intravascular-any|Method-Other",
       "D": 31158,
       "E": "76625-3",
       "F": "Alanine aminotransferase [Enzymatic activity/volume] in Blood",
@@ -2485,7 +1834,7 @@ export default [
     {
       "A": 4,
       "B": "Ammonia SerPl Qn",
-      "C": "Ammonia|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Ammonia|SCnc|Pt|Intravascular-any|Method-Other",
       "D": 4720,
       "E": "16362-6",
       "F": "Ammonia [Moles/volume] in Plasma",
@@ -2504,7 +1853,7 @@ export default [
     {
       "A": 4,
       "B": "Ammonia' SerPl Qn'",
-      "C": "Ammonia|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Ammonia|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 609,
       "E": "20684-7",
       "F": "Ammonia [Mass/volume] in Serum",
@@ -2549,7 +1898,7 @@ export default [
     {
       "A": 3,
       "B": "Ketones Ser' QL",
-      "C": "Ketones|PrThr|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Ketones|PrThr|Pt|Intravascular-any|Method-Other",
       "D": 757,
       "E": "2513-0",
       "F": "Ketones [Presence] in Serum or Plasma",
@@ -2582,7 +1931,7 @@ export default [
     {
       "A": 3,
       "B": "Lactate SerPl",
-      "C": "Lactate|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Lactate|SCnc|Pt|Intravascular-any|Method-Other",
       "D": 613,
       "E": "2524-7",
       "F": "Lactate [Moles/volume] in Serum or Plasma",
@@ -2601,7 +1950,7 @@ export default [
     {
       "A": 3,
       "B": "Pyruvate Bld Qn",
-      "C": "Pyruvate|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Pyruvate|SCnc|Pt|Intravascular-any|Method-Other",
       "D": 29795,
       "E": "14121-8",
       "F": "Pyruvate [Moles/volume] in Blood",
@@ -2620,7 +1969,7 @@ export default [
     {
       "A": 3,
       "B": "Amylase SerPl Qn",
-      "C": "Amylase|CCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Amylase|CCnc|Pt|Intravascular-any|Method-Other",
       "D": 4601,
       "E": "1798-8",
       "F": "Amylase [Enzymatic activity/volume] in Serum or Plasma",
@@ -2665,7 +2014,7 @@ export default [
     {
       "A": 3,
       "B": "Magnesium SerPl Qn",
-      "C": "Magnesium|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Magnesium|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 617,
       "E": "19123-9",
       "F": "Magnesium [Mass/volume] in Serum or Plasma",
@@ -2705,7 +2054,7 @@ export default [
     {
       "A": 3,
       "B": "Osmolality SerPl Qn",
-      "C": "Osmolality|Osmol|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Osmolality|Osmol|Pt|Intravascular-any|Method-Other",
       "D": 758,
       "E": "2692-2",
       "F": "Osmolality of Serum or Plasma",
@@ -2772,48 +2121,6 @@ export default [
       "V": "mmol/L"
     },
     {
-      "A": 4,
-      "B": "Phos (CSH)",
-      "C": "Phosphate moles->mass",
-      "D": 11446,
-      "E": "2777-1",
-      "F": "Phosphate [Mass/volume] in Serum or Plasma",
-      "G": "Phosphate mass conc",
-      "H": "mg/dL",
-      "I": "2.5-4.5",
-      "J": 2.5,
-      "K": 4.5,
-      "N": "Phosphate SerPl-mCnc",
-      "O": "RI",
-      "P": "mg/dL",
-      "Q": "mg/dL",
-      "R": 30.974,
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 4,
-      "B": "Phos (SMA)",
-      "C": "Phosphate moles->mass",
-      "D": 32,
-      "E": "2777-1",
-      "F": "Phosphate [Mass/volume] in Serum or Plasma",
-      "G": "Phosphate mass conc",
-      "H": "mg/dL",
-      "I": "2.5-4.5",
-      "J": 2.5,
-      "K": 4.5,
-      "N": "Phosphate SerPl-mCnc",
-      "O": "RI",
-      "P": "mg/dL",
-      "Q": "mg/dL",
-      "R": 30.974,
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
       "A": 3,
       "B": "TOTAL PROTEIN TESTS",
       "D": 26588,
@@ -2822,7 +2129,7 @@ export default [
     {
       "A": 4,
       "B": "Protein SerPl Qn",
-      "C": "Protein|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Protein|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 4037,
       "E": "2885-2",
       "F": "Protein [Mass/volume] in Serum or Plasma",
@@ -2842,7 +2149,7 @@ export default [
     {
       "A": 4,
       "B": "Globulin Ser",
-      "C": "Globulin|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Globulin|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 11449,
       "E": "13536-8",
       "F": "Globulin [Mass/volume] in Plasma",
@@ -2860,7 +2167,7 @@ export default [
     {
       "A": 4,
       "B": "Alb/Glob Ratio",
-      "C": "Albumin/Globulin|MRtoSRto|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Albumin/Globulin|MRtoSRto|Pt|Intravascular-any|Method-Other",
       "D": 11495,
       "E": "1759-0",
       "F": "Albumin/Globulin [Mass Ratio] in Serum or Plasma",
@@ -2903,7 +2210,7 @@ export default [
     {
       "A": 3,
       "B": "Cholesterol Bld Qn (POC)",
-      "C": "Cholesterol|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Cholesterol|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 31105,
       "E": "2093-3",
       "F": "Cholesterol [Mass/volume] in Serum or Plasma",
@@ -2924,7 +2231,7 @@ export default [
     {
       "A": 3,
       "B": "HDL Cholesterol Bld Qn (POC)",
-      "C": "Cholesterol.in HDL|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Cholesterol.in HDL|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 31106,
       "E": "2085-9",
       "F": "Cholesterol in HDL [Mass/volume] in Serum or Plasma",
@@ -2945,7 +2252,7 @@ export default [
     {
       "A": 3,
       "B": "LDL Calc Bld Qn (POC)",
-      "C": "Cholesterol.in LDL|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Cholesterol.in LDL|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 31109,
       "E": "13457-7",
       "F": "Cholesterol in LDL [Mass/volume] in Serum or Plasma by calculation",
@@ -2966,7 +2273,7 @@ export default [
     {
       "A": 3,
       "B": "LDL Direct SerPl Qn",
-      "C": "Cholesterol.in LDL|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Cholesterol.in LDL|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 22757,
       "E": "18262-6",
       "F": "Cholesterol in LDL [Mass/volume] in Serum or Plasma by Direct assay",
@@ -3003,7 +2310,7 @@ export default [
     {
       "A": 3,
       "B": "Cholesterol/HDL Bld Qn (POC)",
-      "C": "Cholesterol.total/Cholesterol.in HDL|MRtoSRto|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Cholesterol.total/Cholesterol.in HDL|MRtoSRto|Pt|Intravascular-any|Method-Other",
       "D": 31108,
       "E": "9830-1",
       "F": "Cholesterol.total/Cholesterol in HDL [Mass Ratio] in Serum or Plasma",
@@ -3022,7 +2329,7 @@ export default [
     {
       "A": 3,
       "B": "Triglycerides Bld Qn (POC)",
-      "C": "Triglyceride|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Triglyceride|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 31107,
       "E": "3043-7",
       "F": "Triglyceride [Mass/volume] in Blood",
@@ -3042,7 +2349,7 @@ export default [
     {
       "A": 3,
       "B": "Triglyceride SerPl Qn",
-      "C": "Triglyceride|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Triglyceride|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 553,
       "E": "2571-8",
       "F": "Triglyceride [Mass/volume] in Serum or Plasma",
@@ -3085,7 +2392,7 @@ export default [
     {
       "A": 3,
       "B": "pH Bld",
-      "C": "pH|LsCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "pH|LsCnc|Pt|Intravascular-any|Method-Other",
       "D": 6131,
       "E": "11558-4",
       "F": "pH of Blood",
@@ -3104,7 +2411,7 @@ export default [
     {
       "A": 3,
       "B": "pH Corrected",
-      "C": "pH|LsCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "pH^^adjusted to patient's actual temperature|LsCnc|Pt|Intravascular-any|Method-Other",
       "D": 6132,
       "E": "33254-4",
       "F": "pH of Arterial blood adjusted to patient's actual temperature",
@@ -3121,7 +2428,7 @@ export default [
     {
       "A": 3,
       "B": "PCO2 Bld",
-      "C": "Carbon dioxide|PPres|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Carbon dioxide|PPres|Pt|Intravascular-any|Method-Other",
       "D": 6139,
       "E": "11557-6",
       "F": "Carbon dioxide [Partial pressure] in Blood",
@@ -3144,7 +2451,7 @@ export default [
     {
       "A": 3,
       "B": "PCO2 Corrected",
-      "C": "Carbon dioxide|PPres|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Carbon dioxide^^adjusted to patient's actual temperature|PPres|Pt|Intravascular-any|Method-Other",
       "D": 6133,
       "E": "34705-4",
       "F": "Carbon dioxide [Partial pressure] adjusted to patient's actual temperature in Blood",
@@ -3164,7 +2471,6 @@ export default [
     {
       "A": 3,
       "B": "PO2",
-      "C": "Oxygen|PPres|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 6140,
       "E": "11556-8",
       "F": "Oxygen [Partial pressure] in Blood",
@@ -3185,7 +2491,6 @@ export default [
     {
       "A": 3,
       "B": "PO2 Corrected",
-      "C": "Oxygen|PPres|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 6134,
       "E": "19254-2",
       "F": "Oxygen [Partial pressure] adjusted to patient's actual temperature in Blood",
@@ -3254,7 +2559,7 @@ export default [
     {
       "A": 3,
       "B": "O2 Sat Bld Qn (POC)",
-      "C": "Oxygen saturation|MFrSFr|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Oxygen saturation|MFrSFr|Pt|Bld|Method-Other",
       "D": 21226,
       "E": "2713-6",
       "F": "Oxygen saturation Calculated from oxygen partial pressure in Blood",
@@ -3274,7 +2579,6 @@ export default [
     {
       "A": 3,
       "B": "O2 Content Bld",
-      "C": "Oxygen content|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 5864,
       "E": "34163-6",
       "F": "Oxygen content in Blood",
@@ -3293,7 +2597,7 @@ export default [
     {
       "A": 3,
       "B": "Carboxyhemoglob",
-      "C": "Carboxyhemoglobin/Hemoglobin.total|MFrSFr|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Carboxyhemoglobin/Hemoglobin.total|MFrSFr|Pt|Intravascular-any|Method-Other",
       "D": 5381,
       "E": "20563-3",
       "F": "Carboxyhemoglobin/Hemoglobin.total in Blood",
@@ -3346,7 +2650,7 @@ export default [
     {
       "A": 3,
       "B": "Base Excess Bld Qn Calc",
-      "C": "Base excess|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Base excess|SCnc|Pt|Intravascular-any|Method-Other",
       "D": 5870,
       "E": "11555-0",
       "F": "Base excess in Blood by calculation",
@@ -3365,24 +2669,8 @@ export default [
     },
     {
       "A": 3,
-      "B": "Temperature",
-      "D": 6135,
-      "E": "8310-5",
-      "F": "Body temperature",
-      "H": "F",
-      "I": "97.8 - 99",
-      "J": 97.8,
-      "K": 99,
-      "N": "Body temperature",
-      "O": "LN",
-      "T": "DEG F",
-      "U": "F",
-      "V": "[degF]"
-    },
-    {
-      "A": 3,
       "B": "Methemoglobin Bld Qn",
-      "C": "Methemoglobin/Hemoglobin.total|MFrSFr|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Methemoglobin/Hemoglobin.total|MFrSFr|Pt|Intravascular-any|Method-Other",
       "D": 5382,
       "E": "2614-6",
       "F": "Methemoglobin/Hemoglobin.total in Blood",
@@ -3400,7 +2688,7 @@ export default [
     {
       "A": 3,
       "B": "Oxyhemoglobin % Bld Qn",
-      "C": "Oxyhemoglobin/Hemoglobin.total|MFrSFr|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Oxyhemoglobin/Hemoglobin.total|MFrSFr|Pt|Bld|Method-Other",
       "D": 27821,
       "E": "11559-2",
       "F": "Fractional oxyhemoglobin in Blood",
@@ -3420,7 +2708,7 @@ export default [
     {
       "A": 4,
       "B": "pH Scalp",
-      "C": "pH|LsCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "pH|LsCnc|Pt|Intravascular-any|Method-Other",
       "D": 6130,
       "E": "2746-6",
       "F": "pH of Venous blood",
@@ -3440,7 +2728,6 @@ export default [
     {
       "A": 4,
       "B": "pH Cord Bld",
-      "C": "pH|LsCnc|Pt|BldCo|NarDocOrdQn|Method-Other",
       "D": 6459,
       "E": "14873-4",
       "F": "pH of Cord blood",
@@ -3466,7 +2753,7 @@ export default [
     {
       "A": 4,
       "B": "pH BldA",
-      "C": "pH|LsCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "pH|LsCnc|Pt|Intravascular-any|Method-Other",
       "D": 6128,
       "E": "2744-1",
       "F": "pH of Arterial blood",
@@ -3485,7 +2772,7 @@ export default [
     {
       "A": 4,
       "B": "PCO2 BldA",
-      "C": "Carbon dioxide|PPres|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Carbon dioxide|PPres|Pt|Intravascular-any|Method-Other",
       "D": 7869,
       "E": "2019-8",
       "F": "Carbon dioxide [Partial pressure] in Arterial blood",
@@ -3506,7 +2793,7 @@ export default [
     {
       "A": 4,
       "B": "PO2-BldA",
-      "C": "Oxygen|PPres|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Oxygen|PPres|Pt|Arterial*|Method-Other",
       "D": 7872,
       "E": "2703-7",
       "F": "Oxygen [Partial pressure] in Arterial blood",
@@ -3526,7 +2813,7 @@ export default [
     {
       "A": 4,
       "B": "HCO3 BldA Qn Calc",
-      "C": "Bicarbonate|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Bicarbonate|SCnc|Pt|Intravascular-any|Method-Other",
       "D": 29681,
       "E": "1960-4",
       "F": "Bicarbonate [Moles/volume] in Arterial blood",
@@ -3547,7 +2834,7 @@ export default [
     {
       "A": 4,
       "B": "Base Excess BldA Qn",
-      "C": "Base excess|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Base excess|SCnc|Pt|Intravascular-any|Method-Other",
       "D": 22608,
       "E": "1925-7",
       "F": "Base excess in Arterial blood by calculation",
@@ -3567,7 +2854,7 @@ export default [
     {
       "A": 4,
       "B": "MO2 Sat BldA",
-      "C": "Oxygen saturation|MFrSFr|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Oxygen saturation|MFrSFr|Pt|Arterial*|Method-Other",
       "D": 7874,
       "E": "2708-6",
       "F": "Oxygen saturation in Arterial blood",
@@ -3594,7 +2881,7 @@ export default [
     {
       "A": 4,
       "B": "PO2 BldV",
-      "C": "Oxygen|PPres|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Oxygen|PPres|Pt|Venous*|Method-Other",
       "D": 7878,
       "E": "2705-2",
       "F": "Oxygen [Partial pressure] in Venous blood",
@@ -3777,6 +3064,7 @@ export default [
     {
       "A": 4,
       "B": "HGB Swan",
+      "C": "Hemoglobin|MCnc|Bld-any",
       "D": 7880,
       "E": "718-7",
       "F": "Hemoglobin [Mass/volume] in Blood",
@@ -3806,24 +3094,6 @@ export default [
       "T": "m2",
       "U": "m2",
       "V": "m2"
-    },
-    {
-      "A": 4,
-      "B": "Heart Rate (Bld Gases)",
-      "D": 8900,
-      "E": "8867-4",
-      "F": "Heart rate",
-      "H": "/min",
-      "I": "60-100",
-      "J": 60,
-      "K": 100,
-      "L": 130,
-      "M": 40,
-      "N": "Heart rate",
-      "O": "LN",
-      "T": "/MIN",
-      "U": "beats/min",
-      "V": "{beats}/min"
     },
     {
       "A": 4,
@@ -3933,7 +3203,7 @@ export default [
     {
       "A": 3,
       "B": "Troponin I SerPl Qn",
-      "C": "Troponin I.cardiac|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Troponin I.cardiac|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 21945,
       "E": "10839-9",
       "F": "Troponin I.cardiac [Mass/volume] in Serum or Plasma",
@@ -3951,7 +3221,7 @@ export default [
     {
       "A": 3,
       "B": "Troponin I Bld Qn (POC)",
-      "C": "Troponin I.cardiac|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Troponin I.cardiac|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 36928,
       "E": "42757-5",
       "F": "Troponin I.cardiac [Mass/volume] in Blood",
@@ -3969,7 +3239,7 @@ export default [
     {
       "A": 3,
       "B": "CK-MB (Ekt)",
-      "C": "Creatine kinase.MB|CCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Creatine kinase.MB|CCnc|Pt|Intravascular-any|Method-Other",
       "D": 17245,
       "E": "32673-6",
       "F": "Creatine kinase.MB [Enzymatic activity/volume] in Serum or Plasma",
@@ -3988,7 +3258,7 @@ export default [
     {
       "A": 3,
       "B": "CKMB Mass SerPl Qn",
-      "C": "Creatine kinase.MB|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Creatine kinase.MB|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 21275,
       "E": "13969-1",
       "F": "Creatine kinase.MB [Mass/volume] in Serum or Plasma",
@@ -4006,7 +3276,7 @@ export default [
     {
       "A": 3,
       "B": "CK Index SerPl Qn",
-      "C": "Creatine kinase.total/Creatine kinase.MB|CRto|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Creatine kinase.total/Creatine kinase.MB|CRto|Pt|Intravascular-any|Method-Other",
       "D": 15288,
       "E": "2158-4",
       "F": "Creatine kinase.total/Creatine kinase.MB [Enzymatic activity ratio] in Serum or Plasma",
@@ -4033,7 +3303,7 @@ export default [
     {
       "A": 4,
       "B": "CK MB % Tot",
-      "C": "Creatine kinase.MB/Creatine kinase.total|CFr|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Creatine kinase.MB/Creatine kinase.total|CFr|Pt|Intravascular-any|Method-Other",
       "D": 15598,
       "E": "20569-0",
       "F": "Creatine kinase.MB/Creatine kinase.total in Serum or Plasma",
@@ -4053,7 +3323,7 @@ export default [
     {
       "A": 4,
       "B": "CK MM % Ser",
-      "C": "Creatine kinase.MM/Creatine kinase.total|CFr|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Creatine kinase.MM/Creatine kinase.total|CFr|Pt|Intravascular-any|Method-Other",
       "D": 6122,
       "E": "9643-8",
       "F": "Creatine kinase.MM/Creatine kinase.total in Serum or Plasma",
@@ -4071,7 +3341,7 @@ export default [
     {
       "A": 4,
       "B": "CK BB % Ser",
-      "C": "Creatine kinase.BB/Creatine kinase.total|CFr|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Creatine kinase.BB/Creatine kinase.total|CFr|Pt|Intravascular-any|Method-Other",
       "D": 6124,
       "E": "9642-0",
       "F": "Creatine kinase.BB/Creatine kinase.total in Serum or Plasma",
@@ -4089,7 +3359,7 @@ export default [
     {
       "A": 3,
       "B": "CRP Ser Qn High Sensitive mg/dL",
-      "C": "C reactive protein|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "C reactive protein|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 30216,
       "E": "30522-7",
       "F": "C reactive protein [Mass/volume] in Serum or Plasma by High sensitivity method",
@@ -4108,7 +3378,7 @@ export default [
     {
       "A": 3,
       "B": "CRP SerPl Qn",
-      "C": "C reactive protein|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "C reactive protein|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 18550,
       "E": "1988-5",
       "F": "C reactive protein [Mass/volume] in Serum or Plasma",
@@ -4127,7 +3397,7 @@ export default [
     {
       "A": 3,
       "B": "B-Natriuretic Peptide Pl Qn",
-      "C": "Natriuretic peptide.B|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Natriuretic peptide.B|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 26886,
       "E": "30934-4",
       "F": "Natriuretic peptide B [Mass/volume] in Serum or Plasma",
@@ -4145,7 +3415,7 @@ export default [
     {
       "A": 3,
       "B": "Myoglobin SerPl Qn",
-      "C": "Myoglobin|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Myoglobin|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 13714,
       "E": "2639-3",
       "F": "Myoglobin [Mass/volume] in Serum or Plasma",
@@ -4183,6 +3453,7 @@ export default [
     {
       "A": 3,
       "B": "Glycos Hgb A-1%",
+      "C": "Hemoglobin A1/Hemoglobin.total|MFr|Bld-any",
       "D": 6155,
       "E": "4547-6",
       "F": "Hemoglobin A1/Hemoglobin.total in Blood",
@@ -4200,6 +3471,7 @@ export default [
     {
       "A": 3,
       "B": "Glycated Hgb %",
+      "C": "Hemoglobin A1c/Hemoglobin.total|MFr|Bld-any",
       "D": 18091,
       "E": "4548-4",
       "F": "Hemoglobin A1c/Hemoglobin.total in Blood",
@@ -4219,6 +3491,7 @@ export default [
     {
       "A": 3,
       "B": "Glycated Hb-Total (Hplc)",
+      "C": "Hemoglobin A1c/Hemoglobin.total|MFr|Bld-any",
       "D": 21844,
       "E": "17856-6",
       "F": "Hemoglobin A1c/Hemoglobin.total in Blood by HPLC",
@@ -4238,6 +3511,7 @@ export default [
     {
       "A": 3,
       "B": "Hb A1C Calculated",
+      "C": "Hemoglobin A1c/Hemoglobin.total|MFr|Bld-any",
       "D": 21845,
       "E": "17855-8",
       "F": "Hemoglobin A1c/Hemoglobin.total in Blood by calculation",
@@ -4384,25 +3658,6 @@ export default [
       "K": 180,
       "N": "Glucose 1.5h p Glc SerPl-mCnc",
       "O": "RI",
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 3,
-      "B": "GTT-75Gm-Fast",
-      "D": 17024,
-      "E": "1558-6",
-      "F": "Fasting glucose [Mass/volume] in Serum or Plasma",
-      "G": "Glucose fasting mass conc",
-      "H": "mg/dL",
-      "I": "65 - 94",
-      "J": 65,
-      "K": 94,
-      "L": 700,
-      "M": 30,
-      "N": "Glucose p fast SerPl-mCnc",
-      "O": "LN",
       "T": "mg/dL",
       "U": "mg/dL",
       "V": "mg/dL"
@@ -4651,7 +3906,7 @@ export default [
     {
       "A": 3,
       "B": "C Peptide SerPl Qn",
-      "C": "C peptide|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "C peptide|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 5293,
       "E": "1986-9",
       "F": "C peptide [Mass/volume] in Serum or Plasma",
@@ -4669,6 +3924,7 @@ export default [
     {
       "A": 3,
       "B": "Glutamic Acid Decarbox Ab Ser Qn",
+      "C": "Glutamate decarboxylase 65 Ab|PrThrTitrACnc|Intravascular-any|IA-IF-Null*",
       "D": 25895,
       "E": "13926-1",
       "F": "Glutamate decarboxylase 65 Ab [Units/volume] in Serum",
@@ -4695,6 +3951,7 @@ export default [
     {
       "A": 4,
       "B": "Insulin Bovine Ab Ser Titre",
+      "C": "Insulin bovine Ab|PrThrTitrACnc|Intravascular-any|IA-IF-Null*",
       "D": 6821,
       "E": "38489-1",
       "F": "Insulin bovine Ab [Titer] in Serum",
@@ -4712,6 +3969,7 @@ export default [
     {
       "A": 4,
       "B": "Insulin Porcine Ab Ser Titr",
+      "C": "Insulin porcine Ab|PrThrTitrACnc|Intravascular-any|IA-IF-Null*",
       "D": 6822,
       "E": "38490-9",
       "F": "Insulin porcine Ab [Titer] in Serum",
@@ -4757,7 +4015,7 @@ export default [
     {
       "A": 4,
       "B": "3OH Dodecanoylcarnit Plas C12OH",
-      "C": "3-Hydroxydodecanoylcarnitine (C12-OH)|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "3-Hydroxydodecanoylcarnitine (C12-OH)|SCnc|Pt|Intravascular-any|Method-Other",
       "D": 30069,
       "E": "30233-1",
       "F": "3-Hydroxydodecanoylcarnitine (C12-OH) [Moles/volume] in Serum or Plasma",
@@ -4776,7 +4034,7 @@ export default [
     {
       "A": 4,
       "B": "3OH Hexadecanolylcarn Plas C16OH",
-      "C": "3-Hydroxypalmitoylcarnitine (C16-OH)|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "3-Hydroxypalmitoylcarnitine (C16-OH)|SCnc|Pt|Intravascular-any|Method-Other",
       "D": 30076,
       "E": "30234-9",
       "F": "3-Hydroxypalmitoylcarnitine (C16-OH) [Moles/volume] in Serum or Plasma",
@@ -4794,7 +4052,7 @@ export default [
     {
       "A": 4,
       "B": "3OH Hexadecenoylcar Plas C16:1OH",
-      "C": "3-Hydroxypalmitoleylcarnitine (C16:1-OH)|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "3-Hydroxypalmitoleylcarnitine (C16:1-OH)|SCnc|Pt|Intravascular-any|Method-Other",
       "D": 30075,
       "E": "30235-6",
       "F": "3-Hydroxypalmitoleylcarnitine (C16:1-OH) [Moles/volume] in Serum or Plasma",
@@ -4812,7 +4070,7 @@ export default [
     {
       "A": 4,
       "B": "3OH Linoleylcarnit Plas C18:2-OH",
-      "C": "3-Hydroxylinoleoylcarnitine (C18:2-OH)|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "3-Hydroxylinoleoylcarnitine (C18:2-OH)|SCnc|Pt|Intravascular-any|Method-Other",
       "D": 30080,
       "E": "30237-2",
       "F": "3-Hydroxylinoleoylcarnitine (C18:2-OH) [Moles/volume] in Serum or Plasma",
@@ -4831,7 +4089,7 @@ export default [
     {
       "A": 4,
       "B": "3OH Oleylcarnitine Plas C18:1-OH",
-      "C": "3-Hydroxyoleoylcarnitine (C18:1-OH)|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "3-Hydroxyoleoylcarnitine (C18:1-OH)|SCnc|Pt|Intravascular-any|Method-Other",
       "D": 30081,
       "E": "30312-3",
       "F": "3-Hydroxyoleoylcarnitine (C18:1-OH) [Moles/volume] in Serum or Plasma",
@@ -4850,7 +4108,7 @@ export default [
     {
       "A": 4,
       "B": "3OH Tetradecanolycar Plas C14-OH",
-      "C": "3-Hydroxytetradecanoylcarnitine (C14-OH)|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "3-Hydroxytetradecanoylcarnitine (C14-OH)|SCnc|Pt|Intravascular-any|Method-Other",
       "D": 30072,
       "E": "30238-0",
       "F": "3-Hydroxytetradecanoylcarnitine (C14-OH) [Moles/volume] in Serum or Plasma",
@@ -4869,7 +4127,7 @@ export default [
     {
       "A": 4,
       "B": "3OH Stearoylcarnitine Plas C18OH",
-      "C": "3-Hydroxystearoylcarnitine (C18-OH)|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "3-Hydroxystearoylcarnitine (C18-OH)|SCnc|Pt|Intravascular-any|Method-Other",
       "D": 32366,
       "E": "35656-8",
       "F": "3-Hydroxystearoylcarnitine (C18-OH) [Moles/volume] in Serum or Plasma",
@@ -4888,7 +4146,7 @@ export default [
     {
       "A": 4,
       "B": "Acetylcarnitine Plas C2",
-      "C": "Acetylcarnitine (C2)|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Acetylcarnitine (C2)|SCnc|Pt|Intravascular-any|Method-Other",
       "D": 30047,
       "E": "30191-1",
       "F": "Acetylcarnitine (C2) [Moles/volume] in Serum or Plasma",
@@ -4906,7 +4164,7 @@ export default [
     {
       "A": 4,
       "B": "3OH Tetradecenoycar Plas C14:1OH",
-      "C": "3-Hydroxytetradecenoylcarnitine (C14:1-OH)|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "3-Hydroxytetradecenoylcarnitine (C14:1-OH)|SCnc|Pt|Intravascular-any|Method-Other",
       "D": 30071,
       "E": "30190-3",
       "F": "3-Hydroxytetradecenoylcarnitine (C14:1-OH) [Moles/volume] in Serum or Plasma",
@@ -4925,7 +4183,7 @@ export default [
     {
       "A": 4,
       "B": "Decenoylcarnitine Plas C10:1",
-      "C": "Decenoylcarnitine (C10:1)|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Decenoylcarnitine (C10:1)|SCnc|Pt|Intravascular-any|Method-Other",
       "D": 30064,
       "E": "30328-9",
       "F": "Decenoylcarnitine (C10:1) [Moles/volume] in Serum or Plasma",
@@ -4943,7 +4201,7 @@ export default [
     {
       "A": 4,
       "B": "Decanoylcarnitine Plas C10",
-      "C": "Decanoylcarnitine (C10)|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Decanoylcarnitine (C10)|SCnc|Pt|Intravascular-any|Method-Other",
       "D": 30065,
       "E": "30327-1",
       "F": "Decanoylcarnitine (C10) [Moles/volume] in Serum or Plasma",
@@ -4961,7 +4219,7 @@ export default [
     {
       "A": 4,
       "B": "Dodecenoylcarnitine Plas C12:1",
-      "C": "Dodecenoylcarnitine (C12:1)|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Dodecenoylcarnitine (C12:1)|SCnc|Pt|Intravascular-any|Method-Other",
       "D": 30067,
       "E": "30332-1",
       "F": "Dodecenoylcarnitine (C12:1) [Moles/volume] in Serum or Plasma",
@@ -4980,7 +4238,7 @@ export default [
     {
       "A": 4,
       "B": "Dodecanoylcarnitine Plas C12",
-      "C": "Dodecanoylcarnitine (C12)|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Dodecanoylcarnitine (C12)|SCnc|Pt|Intravascular-any|Method-Other",
       "D": 30068,
       "E": "30331-3",
       "F": "Dodecanoylcarnitine (C12) [Moles/volume] in Serum or Plasma",
@@ -4999,7 +4257,7 @@ export default [
     {
       "A": 4,
       "B": "Glutarylcarnitine Plas C5 DC",
-      "C": "Glutarylcarnitine (C5-DC)|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Glutarylcarnitine (C5-DC)|SCnc|Pt|Intravascular-any|Method-Other",
       "D": 30066,
       "E": "30349-5",
       "F": "Glutarylcarnitine (C5-DC) [Moles/volume] in Serum or Plasma",
@@ -5017,7 +4275,7 @@ export default [
     {
       "A": 4,
       "B": "Hexadecanoylcarnitine Plas C16",
-      "C": "Palmitoylcarnitine (C16)|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Palmitoylcarnitine (C16)|SCnc|Pt|Intravascular-any|Method-Other",
       "D": 30074,
       "E": "30356-0",
       "F": "Palmitoylcarnitine (C16) [Moles/volume] in Serum or Plasma",
@@ -5036,7 +4294,7 @@ export default [
     {
       "A": 4,
       "B": "Hexanoylcarnitine Plas C6",
-      "C": "Hexanoylcarnitine (C6)|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Hexanoylcarnitine (C6)|SCnc|Pt|Intravascular-any|Method-Other",
       "D": 30059,
       "E": "30358-6",
       "F": "Hexanoylcarnitine (C6) [Moles/volume] in Serum or Plasma",
@@ -5055,7 +4313,7 @@ export default [
     {
       "A": 4,
       "B": "Hexadecenoylcarnitine Plas C16:1",
-      "C": "Palmitoleylcarnitine (C16:1)|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Palmitoleylcarnitine (C16:1)|SCnc|Pt|Intravascular-any|Method-Other",
       "D": 30073,
       "E": "30357-8",
       "F": "Palmitoleylcarnitine (C16:1) [Moles/volume] in Serum or Plasma",
@@ -5073,7 +4331,7 @@ export default [
     {
       "A": 4,
       "B": "Isobutyrylcarnitine Plas C4",
-      "C": "Isobutyrylcarnitine (C4)|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Isobutyrylcarnitine (C4)|SCnc|Pt|Intravascular-any|Method-Other",
       "D": 30055,
       "E": "43243-5",
       "F": "Isobutyrylcarnitine (C4) [Moles/volume] in Serum or Plasma",
@@ -5092,7 +4350,7 @@ export default [
     {
       "A": 4,
       "B": "Isovaleryl 2 Carn Plas C5",
-      "C": "Isovalerylcarnitine+Methylbutyrylcarnitine (C5)|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Isovalerylcarnitine+Methylbutyrylcarnitine (C5)|SCnc|Pt|Intravascular-any|Method-Other",
       "D": 30056,
       "E": "30531-8",
       "F": "Isovalerylcarnitine+Methylbutyrylcarnitine (C5) [Moles/volume] in Serum or Plasma",
@@ -5110,7 +4368,7 @@ export default [
     {
       "A": 4,
       "B": "Octanoylcarnitine Plas C8",
-      "C": "Octanoylcarnitine (C8)|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Octanoylcarnitine (C8)|SCnc|Pt|Intravascular-any|Method-Other",
       "D": 30063,
       "E": "30540-9",
       "F": "Octanoylcarnitine (C8) [Moles/volume] in Serum or Plasma",
@@ -5128,7 +4386,7 @@ export default [
     {
       "A": 4,
       "B": "Linoleylcarnitine Plas C18:2",
-      "C": "Linoleoylcarnitine (C18:2)|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Linoleoylcarnitine (C18:2)|SCnc|Pt|Intravascular-any|Method-Other",
       "D": 30077,
       "E": "30534-2",
       "F": "Linoleoylcarnitine (C18:2) [Moles/volume] in Serum or Plasma",
@@ -5147,7 +4405,7 @@ export default [
     {
       "A": 4,
       "B": "OH-Isovalerylcarnitine Plas C5OH",
-      "C": "3-Hydroxyisovalerylcarnitine (C5-OH)|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "3-Hydroxyisovalerylcarnitine (C5-OH)|SCnc|Pt|Intravascular-any|Method-Other",
       "D": 34079,
       "E": "39001-3",
       "F": "3-Hydroxyisovalerylcarnitine (C5-OH) [Moles/volume] in Serum or Plasma",
@@ -5166,7 +4424,7 @@ export default [
     {
       "A": 4,
       "B": "Octenoylcarnitine Plas C8:1",
-      "C": "Octenoylcarnitine (C8:1)|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Octenoylcarnitine (C8:1)|SCnc|Pt|Intravascular-any|Method-Other",
       "D": 30062,
       "E": "30541-7",
       "F": "Octenoylcarnitine (C8:1) [Moles/volume] in Serum or Plasma",
@@ -5184,7 +4442,7 @@ export default [
     {
       "A": 4,
       "B": "Oleylcarnitine Plas C18:1",
-      "C": "Oleoylcarnitine (C18:1)|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Oleoylcarnitine (C18:1)|SCnc|Pt|Intravascular-any|Method-Other",
       "D": 30078,
       "E": "30542-5",
       "F": "Oleoylcarnitine (C18:1) [Moles/volume] in Serum or Plasma",
@@ -5202,7 +4460,7 @@ export default [
     {
       "A": 4,
       "B": "Propionylcarnitine Plas C3",
-      "C": "Propionylcarnitine (C3)|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Propionylcarnitine (C3)|SCnc|Pt|Intravascular-any|Method-Other",
       "D": 30048,
       "E": "30551-6",
       "F": "Propionylcarnitine (C3) [Moles/volume] in Serum or Plasma",
@@ -5221,7 +4479,7 @@ export default [
     {
       "A": 4,
       "B": "Stearoylcarnitine Plas C18",
-      "C": "Stearoylcarnitine (C18)|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Stearoylcarnitine (C18)|SCnc|Pt|Intravascular-any|Method-Other",
       "D": 30079,
       "E": "30560-7",
       "F": "Stearoylcarnitine (C18) [Moles/volume] in Serum or Plasma",
@@ -5240,7 +4498,7 @@ export default [
     {
       "A": 4,
       "B": "Tetradecadienoylcarn Plas C14:2",
-      "C": "Tetradecadienoylcarnitine (C14:2)|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Tetradecadienoylcarnitine (C14:2)|SCnc|Pt|Intravascular-any|Method-Other",
       "D": 30057,
       "E": "30564-9",
       "F": "Tetradecadienoylcarnitine (C14:2) [Moles/volume] in Serum or Plasma",
@@ -5258,7 +4516,7 @@ export default [
     {
       "A": 4,
       "B": "Tetradecanoylcarnitine Plas C14",
-      "C": "Tetradecanoylcarnitine (C14)|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Tetradecanoylcarnitine (C14)|SCnc|Pt|Intravascular-any|Method-Other",
       "D": 30070,
       "E": "30565-6",
       "F": "Tetradecanoylcarnitine (C14) [Moles/volume] in Serum or Plasma",
@@ -5276,7 +4534,7 @@ export default [
     {
       "A": 4,
       "B": "Tetradecenoylcarnitne Plas C14:1",
-      "C": "Tetradecenoylcarnitine (C14:1)|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Tetradecenoylcarnitine (C14:1)|SCnc|Pt|Intravascular-any|Method-Other",
       "D": 30061,
       "E": "30566-4",
       "F": "Tetradecenoylcarnitine (C14:1) [Moles/volume] in Serum or Plasma",
@@ -5294,7 +4552,7 @@ export default [
     {
       "A": 3,
       "B": "Carnitine SerPl Qn",
-      "C": "Carnitine|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Carnitine|SCnc|Pt|Intravascular-any|Method-Other",
       "D": 13830,
       "E": "14288-5",
       "F": "Carnitine [Moles/volume] in Serum or Plasma",
@@ -5313,7 +4571,7 @@ export default [
     {
       "A": 3,
       "B": "Carnitine Ester SerPl Qn",
-      "C": "Carnitine esters|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Carnitine esters|SCnc|Pt|Intravascular-any|Method-Other",
       "D": 15286,
       "E": "19074-4",
       "F": "Carnitine esters [Moles/volume] in Serum or Plasma",
@@ -5331,7 +4589,7 @@ export default [
     {
       "A": 3,
       "B": "Carnitine Free SerPl Qn",
-      "C": "Carnitine.free (C0)|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Carnitine.free (C0)|SCnc|Pt|Intravascular-any|Method-Other",
       "D": 13709,
       "E": "14286-9",
       "F": "Carnitine free (C0) [Moles/volume] in Serum or Plasma",
@@ -5350,7 +4608,7 @@ export default [
     {
       "A": 3,
       "B": "Carnitine Ester/Free SerPl",
-      "C": "Carnitine esters/Carnitine.free (C0)|MRtoSRto|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Carnitine esters/Carnitine.free (C0)|MRtoSRto|Pt|Intravascular-any|Method-Other",
       "D": 30966,
       "E": "40869-0",
       "F": "Carnitine esters/Carnitine.free (C0) [Molar ratio] in Serum or Plasma",
@@ -5384,7 +4642,7 @@ export default [
     {
       "A": 3,
       "B": "Apolipoprot B SerPl Qn",
-      "C": "Apolipoprotein B|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Apolipoprotein B|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 15960,
       "E": "1884-6",
       "F": "Apolipoprotein B [Mass/volume] in Serum or Plasma",
@@ -5421,7 +4679,7 @@ export default [
     {
       "A": 3,
       "B": "Fatty Acids Free Ser",
-      "C": "Fatty acids.nonesterified|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Fatty acids.nonesterified|SCnc|Pt|Intravascular-any|Method-Other",
       "D": 5047,
       "E": "15066-4",
       "F": "Fatty acids.nonesterified [Moles/volume] in Serum or Plasma",
@@ -5543,7 +4801,7 @@ export default [
     {
       "A": 3,
       "B": "A 1 Antitrypsin SerPl Qn",
-      "C": "Alpha 1 antitrypsin|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Alpha 1 antitrypsin|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 5662,
       "E": "1825-9",
       "F": "Alpha 1 antitrypsin [Mass/volume] in Serum or Plasma",
@@ -5562,7 +4820,7 @@ export default [
     {
       "A": 3,
       "B": "B 2 Microglobulin SerPl Qn",
-      "C": "Beta-2-Microglobulin|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Beta-2-Microglobulin|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 14474,
       "E": "1952-1",
       "F": "Beta-2-Microglobulin [Mass/volume] in Serum or Plasma",
@@ -5587,6 +4845,7 @@ export default [
     {
       "A": 4,
       "B": "Protein (Ur Elp)",
+      "C": "Protein|MCnc|UrUrnS",
       "D": 18275,
       "E": "2888-6",
       "F": "Protein [Mass/volume] in Urine",
@@ -5606,7 +4865,7 @@ export default [
     {
       "A": 4,
       "B": "Protein 24H Ur Qn Elp",
-      "C": "Protein|MRatSRat|TimedSpecimen|Urine|NarDocOrdQn|Method-Other",
+      "C": "Protein|MRatSRat|TimedSpecimen|Urine|Method-Other",
       "D": 35249,
       "E": "2889-4",
       "F": "Protein [Mass/time] in 24 hour Urine",
@@ -5626,7 +4885,7 @@ export default [
     {
       "A": 4,
       "B": "Albumin SerPl Qn Elp",
-      "C": "Albumin|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Albumin|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 6038,
       "E": "2862-1",
       "F": "Albumin [Mass/volume] in Serum or Plasma by Electrophoresis",
@@ -5730,7 +4989,7 @@ export default [
     {
       "A": 4,
       "B": "Gamma Glob% Ur Elp",
-      "C": "Gamma globulin/Protein.total|MFrSFr|Pt|Urine|NarDocOrdQn|Method-Other",
+      "C": "Gamma globulin/Protein.total|MFrSFr|Pt|Urine|Method-Other",
       "D": 6054,
       "E": "13995-6",
       "F": "Gamma globulin/Protein.total in Urine by Electrophoresis",
@@ -5765,7 +5024,7 @@ export default [
     {
       "A": 4,
       "B": "UPE Albumin",
-      "C": "Albumin/Protein.total|MFrSFr|Pt|Urine|NarDocOrdQn|Method-Other",
+      "C": "Albumin/Protein.total|MFrSFr|Pt|Urine|Method-Other",
       "D": 6050,
       "E": "13992-3",
       "F": "Albumin/Protein.total in Urine by Electrophoresis",
@@ -5783,7 +5042,7 @@ export default [
     {
       "A": 4,
       "B": "UPE Alpha 1%",
-      "C": "Alpha 1 globulin/Protein.total|MFrSFr|Pt|Urine|NarDocOrdQn|Method-Other",
+      "C": "Alpha 1 globulin/Protein.total|MFrSFr|Pt|Urine|Method-Other",
       "D": 6051,
       "E": "13990-7",
       "F": "Alpha 1 globulin/Protein.total in Urine by Electrophoresis",
@@ -5801,7 +5060,7 @@ export default [
     {
       "A": 4,
       "B": "UPE Alpha 2%",
-      "C": "Alpha 2 globulin/Protein.total|MFrSFr|Pt|Urine|NarDocOrdQn|Method-Other",
+      "C": "Alpha 2 globulin/Protein.total|MFrSFr|Pt|Urine|Method-Other",
       "D": 6052,
       "E": "13993-1",
       "F": "Alpha 2 globulin/Protein.total in Urine by Electrophoresis",
@@ -5819,7 +5078,7 @@ export default [
     {
       "A": 4,
       "B": "UPE Beta",
-      "C": "Beta globulin/Protein.total|MFrSFr|Pt|Urine|NarDocOrdQn|Method-Other",
+      "C": "Beta globulin/Protein.total|MFrSFr|Pt|Urine|Method-Other",
       "D": 6053,
       "E": "13994-9",
       "F": "Beta globulin/Protein.total in Urine by Electrophoresis",
@@ -5854,7 +5113,7 @@ export default [
     {
       "A": 3,
       "B": "Ceruloplasmin SerPl Qn",
-      "C": "Ceruloplasmin|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Ceruloplasmin|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 9864,
       "E": "2064-4",
       "F": "Ceruloplasmin [Mass/volume] in Serum or Plasma",
@@ -5874,7 +5133,7 @@ export default [
     {
       "A": 3,
       "B": "Gastrin SerPl Qn",
-      "C": "Gastrin|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Gastrin|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 5048,
       "E": "2333-3",
       "F": "Gastrin [Mass/volume] in Serum or Plasma",
@@ -5927,7 +5186,7 @@ export default [
     {
       "A": 3,
       "B": "Prealbumin SerPl Qn",
-      "C": "Prealbumin|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Prealbumin|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 13813,
       "E": "14338-8",
       "F": "Prealbumin [Mass/volume] in Serum or Plasma",
@@ -5968,7 +5227,7 @@ export default [
     {
       "A": 3,
       "B": "ACE SerPl Qn",
-      "C": "Angiotensin converting enzyme|CCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Angiotensin converting enzyme|CCnc|Pt|Intravascular-any|Method-Other",
       "D": 5769,
       "E": "2742-5",
       "F": "Angiotensin converting enzyme [Enzymatic activity/volume] in Serum or Plasma",
@@ -5987,7 +5246,7 @@ export default [
     {
       "A": 3,
       "B": "Acid Phos SerPl Qn",
-      "C": "Acid phosphatase|CCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Acid phosphatase|CCnc|Pt|Intravascular-any|Method-Other",
       "D": 255,
       "E": "1715-2",
       "F": "Acid phosphatase [Enzymatic activity/volume] in Serum or Plasma",
@@ -6024,7 +5283,7 @@ export default [
     {
       "A": 3,
       "B": "Aldolase'",
-      "C": "Aldolase|CCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Aldolase|CCnc|Pt|Intravascular-any|Method-Other",
       "D": 608,
       "E": "1761-6",
       "F": "Aldolase [Enzymatic activity/volume] in Serum or Plasma",
@@ -6118,7 +5377,7 @@ export default [
     {
       "A": 4,
       "B": "Alk Phos Liver SerPl Qn",
-      "C": "Alkaline phosphatase.liver|CCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Alkaline phosphatase.liver|CCnc|Pt|Intravascular-any|Method-Other",
       "D": 6112,
       "E": "1779-8",
       "F": "Alkaline phosphatase.liver [Enzymatic activity/volume] in Serum or Plasma",
@@ -6170,7 +5429,7 @@ export default [
     {
       "A": 4,
       "B": "Alk Phos Placenta SerPl Qn",
-      "C": "Alkaline phosphatase.placental|CCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Alkaline phosphatase.placental|CCnc|Pt|Intravascular-any|Method-Other",
       "D": 6108,
       "E": "1780-6",
       "F": "Alkaline phosphatase.placental [Enzymatic activity/volume] in Serum or Plasma",
@@ -6300,7 +5559,7 @@ export default [
     {
       "A": 4,
       "B": "LDH SerPl Qn",
-      "C": "Lactate dehydrogenase|CCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Lactate dehydrogenase|CCnc|Pt|Intravascular-any|Method-Other",
       "D": 16594,
       "E": "2532-0",
       "F": "Lactate dehydrogenase [Enzymatic activity/volume] in Serum or Plasma",
@@ -6436,7 +5695,7 @@ export default [
     {
       "A": 3,
       "B": "Cholinesterase SerPl Qn",
-      "C": "Cholinesterase|CCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Cholinesterase|CCnc|Pt|Intravascular-any|Method-Other",
       "D": 5547,
       "E": "2098-2",
       "F": "Cholinesterase [Enzymatic activity/volume] in Serum or Plasma",
@@ -6574,7 +5833,7 @@ export default [
     {
       "A": 3,
       "B": "Pbg 24H Ur Qn",
-      "C": "Porphobilinogen|MRatSRat|TimedSpecimen|Urine|NarDocOrdQn|Method-Other",
+      "C": "Porphobilinogen|MRatSRat|TimedSpecimen|Urine|Method-Other",
       "D": 756,
       "E": "2810-0",
       "F": "Porphobilinogen [Mass/time] in 24 hour Urine",
@@ -6593,7 +5852,7 @@ export default [
     {
       "A": 3,
       "B": "Coproporphyrin 24H Ur Qn",
-      "C": "Coproporphyrin/Creatinine|MRtoSRto|TimedSpecimen|Urine|NarDocOrdQn|Method-Other",
+      "C": "Coproporphyrin/Creatinine|MRtoSRto|TimedSpecimen|Urine|Method-Other",
       "D": 27977,
       "E": "32008-5",
       "F": "Coproporphyrin/Creatinine [Molar ratio] in 24 hour Urine",
@@ -6612,7 +5871,7 @@ export default [
     {
       "A": 3,
       "B": "Coproporph TV Ur-QN",
-      "C": "Coproporphyrin|MRatSRat|TimedSpecimen|Urine|NarDocOrdQn|Method-Other",
+      "C": "Coproporphyrin|MRatSRat|TimedSpecimen|Urine|Method-Other",
       "D": 5039,
       "E": "2137-8",
       "F": "Coproporphyrin [Mass/time] in 24 hour Urine",
@@ -6649,7 +5908,7 @@ export default [
     {
       "A": 3,
       "B": "Uroporph TV-Ur QN",
-      "C": "Uroporphyrin|MRatSRat|TimedSpecimen|Urine|NarDocOrdQn|Method-Other",
+      "C": "Uroporphyrin|MRatSRat|TimedSpecimen|Urine|Method-Other",
       "D": 5228,
       "E": "3113-8",
       "F": "Uroporphyrin [Mass/time] in 24 hour Urine",
@@ -6668,7 +5927,7 @@ export default [
     {
       "A": 3,
       "B": "Uroporphyrin Ur Mcmol/Mol Creat",
-      "C": "Uroporphyrin/Creatinine|MRtoSRto|TimedSpecimen|Urine|NarDocOrdQn|Method-Other",
+      "C": "Uroporphyrin/Creatinine|MRtoSRto|TimedSpecimen|Urine|Method-Other",
       "D": 25886,
       "E": "32043-2",
       "F": "Uroporphyrin/Creatinine [Molar ratio] in 24 hour Urine",
@@ -6706,7 +5965,7 @@ export default [
     {
       "A": 3,
       "B": "Creatinine Ur mg/24H-Porphyrin",
-      "C": "Creatinine|MRatSRat|TimedSpecimen|Urine|NarDocOrdQn|Method-Other",
+      "C": "Creatinine|MRatSRat|TimedSpecimen|Urine|Method-Other",
       "D": 29859,
       "E": "2162-6",
       "F": "Creatinine [Mass/time] in 24 hour Urine",
@@ -6780,7 +6039,7 @@ export default [
     {
       "A": 3,
       "B": "B HCG (2nd IS) SerPl Qn",
-      "C": "Choriogonadotropin.beta subunit|ACnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Choriogonadotropin.beta subunit|ACnc|Pt|Intravascular-any|Method-Other",
       "D": 13009,
       "E": "21198-7",
       "F": "Choriogonadotropin.beta subunit [Units/volume] in Serum or Plasma",
@@ -6800,7 +6059,7 @@ export default [
     {
       "A": 3,
       "B": "B HCG SerPl Qn MEIA",
-      "C": "Choriogonadotropin.beta subunit|ACnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Choriogonadotropin.beta subunit|ACnc|Pt|Intravascular-any|Method-Other",
       "D": 18520,
       "E": "20415-6",
       "F": "Choriogonadotropin.beta subunit [Units/volume] in Serum or Plasma by Immunoassay (EIA) 3rd IS",
@@ -6835,7 +6094,7 @@ export default [
     {
       "A": 3,
       "B": "Cancer Ag 125 (MEIA)",
-      "C": "Cancer Ag 125|ACnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Cancer Ag 125|ACnc|Pt|Intravascular-any|Method-Other",
       "D": 11126,
       "E": "10334-1",
       "F": "Cancer Ag 125 [Units/volume] in Serum or Plasma",
@@ -6872,7 +6131,7 @@ export default [
     {
       "A": 3,
       "B": "Cancer Ag 19-9 SerPl Qn",
-      "C": "Cancer Ag 19-9|ACnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Cancer Ag 19-9|ACnc|Pt|Intravascular-any|Method-Other",
       "D": 14473,
       "E": "24108-3",
       "F": "Cancer Ag 19-9 [Units/volume] in Serum or Plasma",
@@ -6890,7 +6149,7 @@ export default [
     {
       "A": 3,
       "B": "Cancer Ag 15 3 SerPl Qn",
-      "C": "Cancer Ag 15-3|ACnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Cancer Ag 15-3|ACnc|Pt|Intravascular-any|Method-Other",
       "D": 16058,
       "E": "6875-9",
       "F": "Cancer Ag 15-3 [Units/volume] in Serum or Plasma",
@@ -6908,7 +6167,7 @@ export default [
     {
       "A": 3,
       "B": "CEA Ag SerPl Qn",
-      "C": "Carcinoembryonic Ag|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Carcinoembryonic Ag|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 5185,
       "E": "2039-6",
       "F": "Carcinoembryonic Ag [Mass/volume] in Serum or Plasma",
@@ -6926,7 +6185,7 @@ export default [
     {
       "A": 3,
       "B": "PSA SerPl Qn",
-      "C": "Prostate specific Ag|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Prostate specific Ag|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 13056,
       "E": "2857-1",
       "F": "Prostate specific Ag [Mass/volume] in Serum or Plasma",
@@ -6961,7 +6220,7 @@ export default [
     {
       "A": 3,
       "B": "PSA Free SerPl Qn",
-      "C": "Prostate specific Ag.free|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Prostate specific Ag.free|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 24604,
       "E": "10886-0",
       "F": "Prostate Specific Ag Free [Mass/volume] in Serum or Plasma",
@@ -6975,7 +6234,7 @@ export default [
     {
       "A": 3,
       "B": "PSA % Free SerPl",
-      "C": "Prostate specific Ag.free/Prostate specific Ag.total|MFrSFr|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Prostate specific Ag.free/Prostate specific Ag.total|MFrSFr|Pt|Intravascular-any|Method-Other",
       "D": 24603,
       "E": "12841-3",
       "F": "Prostate Specific Ag Free/Prostate specific Ag.total in Serum or Plasma",
@@ -7004,7 +6263,7 @@ export default [
     {
       "A": 4,
       "B": "Homocysteine SerPl Qn",
-      "C": "Homocysteine|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Homocysteine|SCnc|Pt|Intravascular-any|Method-Other",
       "D": 23057,
       "E": "13965-9",
       "F": "Homocysteine [Moles/volume] in Serum or Plasma",
@@ -7022,7 +6281,7 @@ export default [
     {
       "A": 4,
       "B": "Methylmalonate Ser nmol/L Qn",
-      "C": "Methylmalonate|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Methylmalonate|SCnc|Pt|Intravascular-any|Method-Other",
       "D": 23056,
       "E": "13964-2",
       "F": "Methylmalonate [Moles/volume] in Serum or Plasma",
@@ -7066,7 +6325,7 @@ export default [
     {
       "A": 4,
       "B": "Cystine 24H-Ur Qn",
-      "C": "Cystine|MRatSRat|TimedSpecimen|Urine|NarDocOrdQn|Method-Other",
+      "C": "Cystine|MRatSRat|TimedSpecimen|Urine|Method-Other",
       "D": 25171,
       "E": "2179-0",
       "F": "Cystine [Mass/time] in 24 hour Urine",
@@ -7098,7 +6357,7 @@ export default [
     {
       "A": 4,
       "B": "Cysteine 24H Ur Qn",
-      "C": "Cysteine|MRatSRat|TimedSpecimen|Urine|NarDocOrdQn|Method-Other",
+      "C": "Cysteine|MRatSRat|TimedSpecimen|Urine|Method-Other",
       "D": 5041,
       "E": "38484-2",
       "F": "Cysteine [Mass/time] in 24 hour Urine",
@@ -7116,7 +6375,7 @@ export default [
     {
       "A": 4,
       "B": "OH-Proline 24H Ur",
-      "C": "Hydroxyproline|MRatSRat|TimedSpecimen|Urine|NarDocOrdQn|Method-Other",
+      "C": "Hydroxyproline|MRatSRat|TimedSpecimen|Urine|Method-Other",
       "D": 5262,
       "E": "2447-1",
       "F": "Hydroxyproline [Mass/time] in 24 hour Urine",
@@ -7135,7 +6394,7 @@ export default [
     {
       "A": 4,
       "B": "OH-Proline Free 24H Ur Qn",
-      "C": "Hydroxyproline.free|MRatSRat|TimedSpecimen|Urine|NarDocOrdQn|Method-Other",
+      "C": "Hydroxyproline.free|MRatSRat|TimedSpecimen|Urine|Method-Other",
       "D": 5261,
       "E": "2450-5",
       "F": "Hydroxyproline Free [Mass/time] in 24 hour Urine",
@@ -7154,7 +6413,7 @@ export default [
     {
       "A": 4,
       "B": "Creatinine R-Ur Qn-AA",
-      "C": "Creatinine|MCnc|Pt|Urine|NarDocOrdQn|Method-Other",
+      "C": "Creatinine|MCnc|Pt|Urine|Method-Other",
       "D": 31509,
       "E": "2161-8",
       "F": "Creatinine [Mass/volume] in Urine",
@@ -7281,6 +6540,7 @@ export default [
     {
       "A": 4,
       "B": "Spermatozoa CT",
+      "C": "Spermatozoa|Qn",
       "D": 10992,
       "E": "9780-8",
       "F": "Spermatozoa [#/volume] in Semen",
@@ -7415,7 +6675,7 @@ export default [
     {
       "A": 4,
       "B": "110H-Androst 24H Ur",
-      "C": "11-Hydroxyandrosterone|MRatSRat|TimedSpecimen|Urine|NarDocOrdQn|Method-Other",
+      "C": "11-Hydroxyandrosterone|MRatSRat|TimedSpecimen|Urine|Method-Other",
       "D": 15797,
       "E": "6701-7",
       "F": "11-Hydroxyandrosterone [Mass/time] in 24 hour Urine",
@@ -7434,7 +6694,7 @@ export default [
     {
       "A": 4,
       "B": "Androstenedione SerPl Qn",
-      "C": "Androstenedione|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Androstenedione|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 18476,
       "E": "1854-9",
       "F": "Androstenedione [Mass/volume] in Serum or Plasma",
@@ -7471,7 +6731,7 @@ export default [
     {
       "A": 4,
       "B": "Testosterone SerPl Qn*",
-      "C": "Testosterone|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Testosterone|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 645,
       "E": "2986-8",
       "F": "Testosterone [Mass/volume] in Serum or Plasma",
@@ -7510,7 +6770,7 @@ export default [
     {
       "A": 4,
       "B": "Testosterone Free SerPl Qn",
-      "C": "Testosterone.free|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Testosterone.free|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 14704,
       "E": "2991-8",
       "F": "Testosterone Free [Mass/volume] in Serum or Plasma",
@@ -7571,7 +6831,7 @@ export default [
     {
       "A": 4,
       "B": "Estradiol Ser Qn",
-      "C": "Estradiol|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Estradiol|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 29747,
       "E": "2243-4",
       "F": "Estradiol (E2) [Mass/volume] in Serum or Plasma",
@@ -7609,7 +6869,7 @@ export default [
     {
       "A": 4,
       "B": "Estrogen SerPl Qn",
-      "C": "Estrogen|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Estrogen|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 15977,
       "E": "2254-1",
       "F": "Estrogen [Mass/volume] in Serum or Plasma",
@@ -7660,7 +6920,7 @@ export default [
     {
       "A": 4,
       "B": "Progest Ser Lvl",
-      "C": "Progesterone|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Progesterone|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 5204,
       "E": "2839-9",
       "F": "Progesterone [Mass/volume] in Serum or Plasma",
@@ -7694,7 +6954,7 @@ export default [
     {
       "A": 4,
       "B": "Tot Preg Estroge",
-      "C": "Estrogen|MRatSRat|TimedSpecimen|Urine|NarDocOrdQn|Method-Other",
+      "C": "Estrogen|MRatSRat|TimedSpecimen|Urine|Method-Other",
       "D": 1037,
       "E": "2256-6",
       "F": "Estrogen [Mass/time] in 24 hour Urine",
@@ -7718,7 +6978,7 @@ export default [
     {
       "A": 4,
       "B": "ACTH Plas Qn",
-      "C": "Corticotropin|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Corticotropin|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 5265,
       "E": "2141-0",
       "F": "Corticotropin [Mass/volume] in Plasma",
@@ -7754,7 +7014,7 @@ export default [
     {
       "A": 4,
       "B": "FSH SerPl Qn (2nd Irp)",
-      "C": "Follitropin|ACnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Follitropin|ACnc|Pt|Intravascular-any|Method-Other",
       "D": 818,
       "E": "20433-9",
       "F": "Follitropin [Units/volume] in Serum or Plasma by 2nd IRP",
@@ -7790,7 +7050,6 @@ export default [
     {
       "A": 4,
       "B": "Growth Hormone Ser Qn",
-      "C": "Somatotropin|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 13309,
       "E": "2963-7",
       "F": "Somatotropin [Mass/volume] in Serum or Plasma",
@@ -7811,7 +7070,7 @@ export default [
     {
       "A": 4,
       "B": "IGF 1 Ser (RIA) Qn",
-      "C": "Insulin-like growth factor-I|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Insulin-like growth factor-I|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 18055,
       "E": "2484-4",
       "F": "Insulin-like growth factor-I [Mass/volume] in Serum or Plasma",
@@ -7848,7 +7107,7 @@ export default [
     {
       "A": 4,
       "B": "LH SerPl Qn",
-      "C": "Lutropin|ACnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Lutropin|ACnc|Pt|Intravascular-any|Method-Other",
       "D": 640,
       "E": "10501-5",
       "F": "Lutropin [Units/volume] in Serum or Plasma",
@@ -7867,7 +7126,7 @@ export default [
     {
       "A": 4,
       "B": "Prolactin Ser Qn",
-      "C": "Prolactin|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Prolactin|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 5632,
       "E": "2842-3",
       "F": "Prolactin [Mass/volume] in Serum or Plasma",
@@ -7887,7 +7146,7 @@ export default [
     {
       "A": 4,
       "B": "Prolactin SerPl Qn (3rdIS)",
-      "C": "Prolactin|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Prolactin|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 21080,
       "E": "49220-7",
       "F": "Prolactin [Mass/volume] in Serum or Plasma by 3rd IS",
@@ -7908,7 +7167,7 @@ export default [
     {
       "A": 4,
       "B": "Prolactin-MEIA",
-      "C": "Prolactin|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Prolactin|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 15515,
       "E": "20568-2",
       "F": "Prolactin [Mass/volume] in Serum or Plasma by Immunoassay",
@@ -7935,7 +7194,7 @@ export default [
     {
       "A": 4,
       "B": "Catechol T-Ur",
-      "C": "Catecholamines|MRatSRat|TimedSpecimen|Urine|NarDocOrdQn|Method-Other",
+      "C": "Catecholamines|MRatSRat|TimedSpecimen|Urine|Method-Other",
       "D": 761,
       "E": "2058-6",
       "F": "Catecholamines [Mass/time] in 24 hour Urine",
@@ -7953,7 +7212,7 @@ export default [
     {
       "A": 4,
       "B": "Catecholamine Plas Qn",
-      "C": "Catecholamines|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Catecholamines|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 22360,
       "E": "2056-0",
       "F": "Catecholamines [Mass/volume] in Plasma",
@@ -7967,7 +7226,7 @@ export default [
     {
       "A": 4,
       "B": "Dopamine 24H Ur Qn",
-      "C": "Dopamine|MRatSRat|TimedSpecimen|Urine|NarDocOrdQn|Method-Other",
+      "C": "DOPamine|MRatSRat|TimedSpecimen|Urine|Method-Other",
       "D": 26111,
       "E": "2218-6",
       "F": "Dopamine [Mass/time] in 24 hour Urine",
@@ -8002,7 +7261,7 @@ export default [
     {
       "A": 4,
       "B": "Dopamine/Creat Ur Qn",
-      "C": "Dopamine/Creatinine|MRtoSRto|Pt|Urine|NarDocOrdQn|Method-Other",
+      "C": "DOPamine/Creatinine|MRtoSRto|Pt|Urine|Method-Other",
       "D": 17897,
       "E": "13733-1",
       "F": "Dopamine/Creatinine [Mass Ratio] in Urine",
@@ -8021,7 +7280,7 @@ export default [
     {
       "A": 4,
       "B": "Epineph 24H Ur Qn",
-      "C": "EPINEPHrine|MRatSRat|TimedSpecimen|Urine|NarDocOrdQn|Method-Other",
+      "C": "EPINEPHrine|MRatSRat|TimedSpecimen|Urine|Method-Other",
       "D": 26112,
       "E": "2232-7",
       "F": "Epinephrine [Mass/time] in 24 hour Urine",
@@ -8042,7 +7301,7 @@ export default [
     {
       "A": 4,
       "B": "Epineph Plas Qn",
-      "C": "EPINEPHrine|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "EPINEPHrine|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 22361,
       "E": "2230-1",
       "F": "Epinephrine [Mass/volume] in Plasma",
@@ -8061,7 +7320,7 @@ export default [
     {
       "A": 4,
       "B": "Epineph/Creat Ur Qn",
-      "C": "EPINEPHrine/Creatinine|MRtoSRto|Pt|Urine|NarDocOrdQn|Method-Other",
+      "C": "EPINEPHrine/Creatinine|MRtoSRto|Pt|Urine|Method-Other",
       "D": 17895,
       "E": "13734-9",
       "F": "Epinephrine/Creatinine [Mass Ratio] in Urine",
@@ -8076,7 +7335,7 @@ export default [
     {
       "A": 4,
       "B": "HVA 24H Ur Qn",
-      "C": "Homovanillate|MRatSRat|TimedSpecimen|Urine|NarDocOrdQn|Method-Other",
+      "C": "Homovanillate|MRatSRat|TimedSpecimen|Urine|Method-Other",
       "D": 5049,
       "E": "2436-4",
       "F": "Homovanillate [Mass/time] in 24 hour Urine",
@@ -8094,7 +7353,7 @@ export default [
     {
       "A": 4,
       "B": "Metaneph 24H Ur Qn",
-      "C": "Metanephrine|MRatSRat|TimedSpecimen|Urine|NarDocOrdQn|Method-Other",
+      "C": "Metanephrine|MRatSRat|TimedSpecimen|Urine|Method-Other",
       "D": 8041,
       "E": "19049-6",
       "F": "Metanephrine [Mass/time] in 24 hour Urine",
@@ -8114,7 +7373,7 @@ export default [
     {
       "A": 4,
       "B": "Metaneph Ur MCG/Gm Cr",
-      "C": "Metanephrine/Creatinine|MRtoSRto|Pt|Urine|NarDocOrdQn|Method-Other",
+      "C": "Metanephrine/Creatinine|MRtoSRto|Pt|Urine|Method-Other",
       "D": 26019,
       "E": "9645-3",
       "F": "Metanephrine/Creatinine [Mass Ratio] in Urine",
@@ -8128,7 +7387,7 @@ export default [
     {
       "A": 4,
       "B": "Metaneph MCG/24H",
-      "C": "Metanephrines|MRatSRat|TimedSpecimen|Urine|NarDocOrdQn|Method-Other",
+      "C": "Metanephrines|MRatSRat|TimedSpecimen|Urine|Method-Other",
       "D": 26020,
       "E": "2609-6",
       "F": "Metanephrines [Mass/time] in 24 hour Urine",
@@ -8142,7 +7401,7 @@ export default [
     {
       "A": 4,
       "B": "Normetaneph Ur mcg/gm Creat",
-      "C": "Normetanephrine/Creatinine|MRtoSRto|Pt|Urine|NarDocOrdQn|Method-Other",
+      "C": "Normetanephrine/Creatinine|MRtoSRto|Pt|Urine|Method-Other",
       "D": 25928,
       "E": "13783-6",
       "F": "Normetanephrine/Creatinine [Mass Ratio] in Urine",
@@ -8157,7 +7416,7 @@ export default [
     {
       "A": 4,
       "B": "Normetanephrine 24H Ur Qn",
-      "C": "Normetanephrine|MRatSRat|TimedSpecimen|Urine|NarDocOrdQn|Method-Other",
+      "C": "Normetanephrine|MRatSRat|TimedSpecimen|Urine|Method-Other",
       "D": 24595,
       "E": "2671-6",
       "F": "Normetanephrine [Mass/time] in 24 hour Urine",
@@ -8221,7 +7480,7 @@ export default [
     {
       "A": 4,
       "B": "Norepi T-Ur",
-      "C": "Norepinephrine|MRatSRat|TimedSpecimen|Urine|NarDocOrdQn|Method-Other",
+      "C": "Norepinephrine|MRatSRat|TimedSpecimen|Urine|Method-Other",
       "D": 626,
       "E": "2668-2",
       "F": "Norepinephrine [Mass/time] in 24 hour Urine",
@@ -8243,7 +7502,7 @@ export default [
     {
       "A": 4,
       "B": "Norepinephrin/Creat Ur Qn",
-      "C": "Norepinephrine/Creatinine|MRtoSRto|Pt|Urine|NarDocOrdQn|Method-Other",
+      "C": "Norepinephrine/Creatinine|MRtoSRto|Pt|Urine|Method-Other",
       "D": 17893,
       "E": "13782-8",
       "F": "Norepinephrine/Creatinine [Mass Ratio] in Urine",
@@ -8258,7 +7517,7 @@ export default [
     {
       "A": 4,
       "B": "Serotonin Ser Qn",
-      "C": "Serotonin|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Serotonin|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 30700,
       "E": "27057-9",
       "F": "Serotonin [Mass/volume] in Serum",
@@ -8273,7 +7532,7 @@ export default [
     {
       "A": 4,
       "B": "VMA 24H Ur Qn",
-      "C": "Vanillylmandelate|MRatSRat|TimedSpecimen|Urine|NarDocOrdQn|Method-Other",
+      "C": "Vanillylmandelate|MRatSRat|TimedSpecimen|Urine|Method-Other",
       "D": 638,
       "E": "3122-9",
       "F": "Vanillylmandelate [Mass/time] in 24 hour Urine",
@@ -8291,7 +7550,7 @@ export default [
     {
       "A": 4,
       "B": "VMA/Creat Ur",
-      "C": "Vanillylmandelate/Creatinine|MRtoSRto|Pt|Urine|NarDocOrdQn|Method-Other",
+      "C": "Vanillylmandelate/Creatinine|MRtoSRto|Pt|Urine|Method-Other",
       "D": 13919,
       "E": "3124-5",
       "F": "Vanillylmandelate/Creatinine [Mass Ratio] in Urine",
@@ -8336,7 +7595,7 @@ export default [
     {
       "A": 4,
       "B": "11-Deoxycortisol'",
-      "C": "11-Deoxycortisol|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "11-Deoxycortisol|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 5196,
       "E": "1657-6",
       "F": "11-Deoxycortisol [Mass/volume] in Serum or Plasma",
@@ -8355,7 +7614,7 @@ export default [
     {
       "A": 4,
       "B": "17-Ketosteroid 24H Ur Qn",
-      "C": "17-Ketosteroids|MRatSRat|TimedSpecimen|Urine|NarDocOrdQn|Method-Other",
+      "C": "17-Ketosteroids|MRatSRat|TimedSpecimen|Urine|Method-Other",
       "D": 763,
       "E": "6766-0",
       "F": "17-Ketosteroids [Mass/time] in 24 hour Urine",
@@ -8373,7 +7632,7 @@ export default [
     {
       "A": 4,
       "B": "17-OH 24H Ur",
-      "C": "17-Hydroxyprogesterone|MRatSRat|TimedSpecimen|Urine|NarDocOrdQn|Method-Other",
+      "C": "17-Hydroxyprogesterone|MRatSRat|TimedSpecimen|Urine|Method-Other",
       "D": 636,
       "E": "9616-4",
       "F": "17-Hydroxyprogesterone [Mass/time] in 24 hour Urine",
@@ -8392,7 +7651,7 @@ export default [
     {
       "A": 4,
       "B": "17 OH Progest SerPl Qn",
-      "C": "17-Hydroxyprogesterone|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "17-Hydroxyprogesterone|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 15438,
       "E": "1668-3",
       "F": "17-Hydroxyprogesterone [Mass/volume] in Serum or Plasma",
@@ -8411,7 +7670,7 @@ export default [
     {
       "A": 4,
       "B": "Aldosterone SerPl Qn",
-      "C": "Aldosterone|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Aldosterone|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 19325,
       "E": "1763-2",
       "F": "Aldosterone [Mass/volume] in Serum or Plasma",
@@ -8473,7 +7732,7 @@ export default [
     {
       "A": 4,
       "B": "Aldosterone Ur",
-      "C": "Aldosterone|MRatSRat|TimedSpecimen|Urine|NarDocOrdQn|Method-Other",
+      "C": "Aldosterone|MRatSRat|TimedSpecimen|Urine|Method-Other",
       "D": 5033,
       "E": "1765-7",
       "F": "Aldosterone [Mass/time] in 24 hour Urine",
@@ -8492,7 +7751,6 @@ export default [
     {
       "A": 4,
       "B": "Cortisol AM SerPl Qn",
-      "C": "Cortisol|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 23417,
       "E": "9813-7",
       "F": "Cortisol [Mass/volume] in Serum or Plasma --AM peak specimen",
@@ -8513,7 +7771,7 @@ export default [
     {
       "A": 4,
       "B": "Cortisol SerPl Qn",
-      "C": "Cortisol|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Cortisol|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 15404,
       "E": "2143-6",
       "F": "Cortisol [Mass/volume] in Serum or Plasma",
@@ -8534,7 +7792,7 @@ export default [
     {
       "A": 4,
       "B": "Cortisol Free Ser Qn",
-      "C": "Cortisol.free|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Cortisol.free|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 27738,
       "E": "2145-1",
       "F": "Cortisol Free [Mass/volume] in Serum or Plasma",
@@ -8562,7 +7820,7 @@ export default [
     {
       "A": 4,
       "B": "Cortisol-Free TV Ur Qn",
-      "C": "Cortisol.free|MRatSRat|TimedSpecimen|Urine|NarDocOrdQn|Method-Other",
+      "C": "Cortisol.free|MRatSRat|TimedSpecimen|Urine|Method-Other",
       "D": 5040,
       "E": "2147-7",
       "F": "Cortisol Free [Mass/time] in 24 hour Urine",
@@ -8583,7 +7841,7 @@ export default [
     {
       "A": 4,
       "B": "Cortisol Free Ur mcg/gm Creat",
-      "C": "Cortisol.free/Creatinine|MRtoSRto|Pt|Urine|NarDocOrdQn|Method-Other",
+      "C": "Cortisol.free/Creatinine|MRtoSRto|Pt|Urine|Method-Other",
       "D": 34193,
       "E": "44309-3",
       "F": "Cortisol Free/Creatinine [Mass Ratio] in Urine",
@@ -8597,7 +7855,7 @@ export default [
     {
       "A": 4,
       "B": "Cortisol 24H Ur Qn",
-      "C": "Cortisol|MRatSRat|TimedSpecimen|Urine|NarDocOrdQn|Method-Other",
+      "C": "Cortisol|MRatSRat|TimedSpecimen|Urine|Method-Other",
       "D": 17456,
       "E": "14158-0",
       "F": "Cortisol [Mass/time] in 24 hour Urine",
@@ -8634,7 +7892,6 @@ export default [
     {
       "A": 4,
       "B": "Cortisol PM (RIA)",
-      "C": "Cortisol|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 17455,
       "E": "9812-9",
       "F": "Cortisol [Mass/volume] in Serum or Plasma --PM trough specimen",
@@ -8693,7 +7950,6 @@ export default [
     {
       "A": 4,
       "B": "Renin Actvty Plas",
-      "C": "Renin|CCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 19824,
       "E": "2915-7",
       "F": "Renin [Enzymatic activity/volume] in Plasma",
@@ -8712,7 +7968,6 @@ export default [
     {
       "A": 4,
       "B": "Renin Ser Qn",
-      "C": "Renin|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 642,
       "E": "35570-1",
       "F": "Renin [Mass/volume] in Plasma",
@@ -8737,7 +7992,6 @@ export default [
     {
       "A": 4,
       "B": "Calcitonin SerPl Qn",
-      "C": "Calcitonin|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 13866,
       "E": "1992-7",
       "F": "Calcitonin [Mass/volume] in Serum or Plasma",
@@ -8752,48 +8006,6 @@ export default [
       "T": "pg/mL",
       "U": "ng/L",
       "V": "ng/L"
-    },
-    {
-      "A": 4,
-      "B": "Calcium SerPl Qn (PTH)",
-      "C": "Calcium|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
-      "D": 10045,
-      "E": "17861-6",
-      "F": "Calcium [Mass/volume] in Serum or Plasma",
-      "G": "Calcium mass conc",
-      "H": "mg/dL",
-      "I": "8.6 - 10.2",
-      "J": 8.6,
-      "K": 10.2,
-      "N": "Calcium SerPl-mCnc",
-      "O": "LN",
-      "P": "mg/dL",
-      "Q": "mg/dL",
-      "R": 40.078,
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 4,
-      "B": "Creatinine(PTH)",
-      "C": "Creatinine|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
-      "D": 10047,
-      "E": "2160-0",
-      "F": "Creatinine [Mass/volume] in Serum or Plasma",
-      "G": "Creatinine mass conc",
-      "H": "mg/dL",
-      "I": "0.4 - 1.5",
-      "J": 0.4,
-      "K": 1.5,
-      "N": "Creat SerPl-mCnc",
-      "O": "LN",
-      "P": "mg/dL",
-      "Q": "mg/dL",
-      "R": 113.1179,
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
     },
     {
       "A": 4,
@@ -8815,28 +8027,8 @@ export default [
     },
     {
       "A": 4,
-      "B": "Phos(PTH)",
-      "C": "Phosphate|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
-      "D": 10046,
-      "E": "2777-1",
-      "F": "Phosphate [Mass/volume] in Serum or Plasma",
-      "G": "Phosphate mass conc",
-      "H": "mg/dL",
-      "I": "2.5-4.5",
-      "J": 2.5,
-      "K": 4.5,
-      "N": "Phosphate SerPl-mCnc",
-      "O": "LN",
-      "P": "mg/dL",
-      "Q": "mg/dL",
-      "R": 94.973,
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
-    },
-    {
-      "A": 4,
       "B": "PTH'",
+      "C": "Parathyrin|Imp|Pt|Intravascular-any|Method-Other",
       "D": 641,
       "E": "14865-0",
       "F": "Parathyrin [Interpretation] in Serum or Plasma",
@@ -8958,6 +8150,7 @@ export default [
     {
       "A": 4,
       "B": "Antithyroglb IFA Titr",
+      "C": "Thyroglobulin Ab|PrThrTitrACnc|Intravascular-any|IA-IF-Null*",
       "D": 5296,
       "E": "38504-7",
       "F": "Thyroglobulin Ab [Titer] in Serum by Immunofluorescence",
@@ -9013,7 +8206,7 @@ export default [
     {
       "A": 4,
       "B": "FTI [Nichols]",
-      "C": "Thyroxine free index|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Thyroxine free index|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 22165,
       "E": "32215-6",
       "F": "Thyroxine (T4) free index in Serum or Plasma by calculation",
@@ -9030,7 +8223,7 @@ export default [
     {
       "A": 4,
       "B": "TBG Assess [Nichols]",
-      "C": "Thyroxine binding globulin|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Thyroxine binding globulin|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 22167,
       "E": "3021-3",
       "F": "Thyroxine binding globulin [Mass/volume] in Serum or Plasma",
@@ -9049,7 +8242,7 @@ export default [
     {
       "A": 4,
       "B": "T3 RIA'",
-      "C": "Triiodothyronine|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Triiodothyronine|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 3652,
       "E": "3053-6",
       "F": "Triiodothyronine (T3) [Mass/volume] in Serum or Plasma",
@@ -9069,7 +8262,7 @@ export default [
     {
       "A": 4,
       "B": "T3 Free SerPl Qn",
-      "C": "Triiodothyronine.free|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Triiodothyronine.free|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 23332,
       "E": "3051-0",
       "F": "Triiodothyronine (T3) Free [Mass/volume] in Serum or Plasma",
@@ -9143,7 +8336,7 @@ export default [
     {
       "A": 4,
       "B": "T4 Total",
-      "C": "Thyroxine|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Thyroxine|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 17338,
       "E": "3026-2",
       "F": "Thyroxine (T4) [Mass/volume] in Serum or Plasma",
@@ -9164,6 +8357,7 @@ export default [
     {
       "A": 4,
       "B": "T4 Column'",
+      "C": "Thyroxine Ab|PrThrTitrACnc|Intravascular-any|IA-IF-Null*",
       "D": 413,
       "E": "9580-2",
       "F": "Thyroxine (T4) Ab [Units/volume] in Serum",
@@ -9175,7 +8369,7 @@ export default [
     {
       "A": 4,
       "B": "T4 Free SerPl Qn",
-      "C": "Thyroxine.free|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Thyroxine.free|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 23333,
       "E": "3024-7",
       "F": "Thyroxine (T4) free [Mass/volume] in Serum or Plasma",
@@ -9196,7 +8390,7 @@ export default [
     {
       "A": 4,
       "B": "T4 Free SerPl Qn Eq/HPLC-MS/MS",
-      "C": "Thyroxine.free|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Thyroxine.free|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 32832,
       "E": "6892-4",
       "F": "Thyroxine (T4) free [Mass/volume] in Serum or Plasma by Dialysis",
@@ -9211,7 +8405,7 @@ export default [
     {
       "A": 4,
       "B": "TSH SerPl Qn",
-      "C": "Thyrotropin|ACnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Thyrotropin|ACnc|Pt|Intravascular-any|Method-Other",
       "D": 5294,
       "E": "3016-3",
       "F": "Thyrotropin [Units/volume] in Serum or Plasma",
@@ -9302,6 +8496,7 @@ export default [
     {
       "A": 4,
       "B": "TSH Receptor Ab Ser U/L",
+      "C": "Thyrotropin receptor Ab|PrThrTitrACnc|Intravascular-any|IA-IF-Null*",
       "D": 35098,
       "E": "5385-0",
       "F": "Thyrotropin receptor Ab [Units/volume] in Serum",
@@ -9351,6 +8546,7 @@ export default [
     {
       "A": 4,
       "B": "Thyroglob Ab Ser Qn",
+      "C": "Thyroglobulin Ab|PrThrTitrACnc|Intravascular-any|IA-IF-Null*",
       "D": 16190,
       "E": "8098-6",
       "F": "Thyroglobulin Ab [Units/volume] in Serum or Plasma",
@@ -9406,7 +8602,7 @@ export default [
     {
       "A": 3,
       "B": "HCG SerPl Qn*",
-      "C": "Choriogonadotropin|ACnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Choriogonadotropin|ACnc|Pt|Intravascular-any|Method-Other",
       "D": 10023,
       "E": "19080-1",
       "F": "Choriogonadotropin [Units/volume] in Serum or Plasma",
@@ -9507,7 +8703,7 @@ export default [
     {
       "A": 4,
       "B": "AFP Ser-QN",
-      "C": "Alpha-1-Fetoprotein|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Alpha-1-Fetoprotein|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 23085,
       "E": "1834-1",
       "F": "Alpha-1-Fetoprotein [Mass/volume] in Serum or Plasma",
@@ -9535,7 +8731,6 @@ export default [
     {
       "A": 4,
       "B": "AFP Adj M.O.M. (MS)",
-      "C": "Alpha-1-Fetoprotein|MoM|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 19005,
       "E": "23811-3",
       "F": "Alpha-1-Fetoprotein [Multiple of the median] adjusted in Serum or Plasma",
@@ -9551,7 +8746,6 @@ export default [
     {
       "A": 4,
       "B": "M.O.M. Value (MS)",
-      "C": "Alpha-1-Fetoprotein|MoM|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 11152,
       "E": "20450-3",
       "F": "Alpha-1-Fetoprotein [Multiple of the median] in Serum or Plasma",
@@ -9577,7 +8771,6 @@ export default [
     {
       "A": 4,
       "B": "HCG Adj M.O.M. Ser Qn (MS)",
-      "C": "Choriogonadotropin.beta subunit|MoM|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 19007,
       "E": "23841-0",
       "F": "Choriogonadotropin.beta subunit [Multiple of the median] adjusted in Serum or Plasma",
@@ -9606,7 +8799,6 @@ export default [
     {
       "A": 4,
       "B": "Estriol Unconj MoM SerPl Qn(MS)",
-      "C": "Estriol.unconjugated|MoM|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 19006,
       "E": "21264-7",
       "F": "Estriol (E3).unconjugated [Multiple of the median] adjusted in Serum or Plasma",
@@ -9620,7 +8812,7 @@ export default [
     {
       "A": 4,
       "B": "Down Syndrome Fetal Risk (MS)",
-      "C": "Fetal trisomy 21 risk|Likelihood|Pt|^Fetus|NarDocOrdQn|Method-Other",
+      "C": "Fetal trisomy 21 risk|Likelihood|Pt|^Fetus|Method-Other",
       "D": 24205,
       "E": "43995-0",
       "F": "Trisomy 21 risk [Likelihood] in Fetus",
@@ -9633,7 +8825,7 @@ export default [
     {
       "A": 4,
       "B": "Down Synd Ave Risk Mat Age (MS)",
-      "C": "Fetal trisomy 21 risk|Likelihood|Pt|^Fetus|NarDocOrdQn|Method-Other",
+      "C": "Fetal trisomy 21 risk|Likelihood|Pt|^Fetus|Method-Other",
       "D": 29517,
       "E": "49090-4",
       "F": "Fetal Trisomy 21 risk [Likelihood] Based on maternal age",
@@ -9662,7 +8854,7 @@ export default [
     {
       "A": 4,
       "B": "OSB Risk Patient (MS)",
-      "C": "Neural tube defect risk|Likelihood|Pt|^Fetus|NarDocOrdQn|Method-Other",
+      "C": "Neural tube defect risk|Likelihood|Pt|^Fetus|Method-Other",
       "D": 19008,
       "E": "48803-1",
       "F": "Neural tube defect risk [Likelihood] in Fetus",
@@ -9689,7 +8881,7 @@ export default [
     {
       "A": 4,
       "B": "Trisomy 18 Fetal Risk (MS)",
-      "C": "Fetal trisomy 18 risk|Likelihood|Pt|^Fetus|NarDocOrdQn|Method-Other",
+      "C": "Fetal trisomy 18 risk|Likelihood|Pt|^Fetus|Method-Other",
       "D": 24487,
       "E": "43994-3",
       "F": "Trisomy 18 risk [Likelihood] in Fetus",
@@ -9702,7 +8894,7 @@ export default [
     {
       "A": 4,
       "B": "Trisomy 18 Avg Risk Mat Age (MS)",
-      "C": "Fetal trisomy 18 risk|Likelihood|Pt|^Fetus|NarDocOrdQn|Method-Other",
+      "C": "Fetal trisomy 18 risk|Likelihood|Pt|^Fetus|Method-Other",
       "D": 29458,
       "E": "47223-3",
       "F": "Fetal Trisomy 18 risk [Likelihood] Based on maternal age",
@@ -9769,7 +8961,6 @@ export default [
     {
       "A": 4,
       "B": "HCG MoM (TMS)",
-      "C": "Choriogonadotropin|MoM|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 31247,
       "E": "20465-1",
       "F": "Choriogonadotropin [Multiple of the median] in Serum or Plasma",
@@ -9784,7 +8975,6 @@ export default [
     {
       "A": 4,
       "B": "E3-unconj MoM (TMS)",
-      "C": "Estriol.unconjugated|MoM|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 31249,
       "E": "20466-9",
       "F": "Estriol (E3).unconjugated [Multiple of the median] in Serum or Plasma",
@@ -9971,7 +9161,7 @@ export default [
     {
       "A": 5,
       "B": "IgG Ser Qn",
-      "C": "IgG|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "IgG|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 9055,
       "E": "2465-3",
       "F": "IgG [Mass/volume] in Serum or Plasma",
@@ -10091,7 +9281,7 @@ export default [
     {
       "A": 5,
       "B": "IgA Ser Qn",
-      "C": "IgA|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "IgA|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 9054,
       "E": "2458-8",
       "F": "IgA [Mass/volume] in Serum or Plasma",
@@ -10134,7 +9324,7 @@ export default [
     {
       "A": 5,
       "B": "IgM Ser Qn",
-      "C": "IgM|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "IgM|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 9056,
       "E": "2472-9",
       "F": "IgM [Mass/volume] in Serum or Plasma",
@@ -10170,7 +9360,7 @@ export default [
     {
       "A": 4,
       "B": "IgE Ser Qn",
-      "C": "IgE|ACnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "IgE|ACnc|Pt|Intravascular-any|Method-Other",
       "D": 5194,
       "E": "19113-0",
       "F": "IgE [Units/volume] in Serum or Plasma",
@@ -10233,7 +9423,7 @@ export default [
     {
       "A": 3,
       "B": "Vit A SerPl Qn",
-      "C": "Retinol|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Retinol|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 15301,
       "E": "2923-1",
       "F": "Retinol [Mass/volume] in Serum or Plasma",
@@ -10268,7 +9458,7 @@ export default [
     {
       "A": 3,
       "B": "Vit B1 Bld Qn",
-      "C": "Thiamine|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Thiamine|SCnc|Pt|Intravascular-any|Method-Other",
       "D": 19754,
       "E": "32554-8",
       "F": "Thiamine [Moles/volume] in Blood",
@@ -10286,7 +9476,7 @@ export default [
     {
       "A": 3,
       "B": "Vit B1 Bld mcg/dL",
-      "C": "Thiamine|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Thiamine|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 29486,
       "E": "2998-3",
       "F": "Thiamine [Mass/volume] in Blood",
@@ -10304,7 +9494,7 @@ export default [
     {
       "A": 3,
       "B": "Vit B1 SerPl Qn (nmol/L)",
-      "C": "Thiamine|SCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Thiamine|SCnc|Pt|Intravascular-any|Method-Other",
       "D": 15731,
       "E": "20468-5",
       "F": "Thiamine [Moles/volume] in Serum or Plasma",
@@ -10342,7 +9532,7 @@ export default [
     {
       "A": 3,
       "B": "Vit C SerPl Qn",
-      "C": "Ascorbate|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Ascorbate|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 5274,
       "E": "1903-4",
       "F": "Ascorbate [Mass/volume] in Serum or Plasma",
@@ -10397,7 +9587,7 @@ export default [
     {
       "A": 3,
       "B": "Carotene SerPl Qn",
-      "C": "Carotene|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Carotene|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 752,
       "E": "2053-7",
       "F": "Carotene [Mass/volume] in Serum",
@@ -10416,7 +9606,7 @@ export default [
     {
       "A": 3,
       "B": "Thiopurine Methyl Trans RBC Qn",
-      "C": "Thiopurine methyltransferase|CCnc|Pt|RBC|NarDocOrdQn|Method-Other",
+      "C": "Thiopurine methyltransferase|CCnc|Pt|RBC|Method-Other",
       "D": 27775,
       "E": "21563-2",
       "F": "Thiopurine methyltransferase [Enzymatic activity/volume] in Red Blood Cells",
@@ -10445,6 +9635,7 @@ export default [
     {
       "A": 3,
       "B": "WBC #",
+      "C": "Leukocytes|PrThrTitrNCnc|Bld-any",
       "D": 62,
       "E": "26464-8",
       "F": "Leukocytes [#/volume] in Blood",
@@ -10464,6 +9655,7 @@ export default [
     {
       "A": 3,
       "B": "WBC Corrected # Bld",
+      "C": "Leukocytes^^corrected for nucleated erythrocytes|PrThrTitrNCnc|Bld-any",
       "D": 1184,
       "E": "12227-5",
       "F": "Leukocytes [#/volume] corrected for nucleated erythrocytes in Blood",
@@ -10477,6 +9669,7 @@ export default [
     {
       "A": 3,
       "B": "RBC #",
+      "C": "Erythrocytes|PrThrTitrNCnc|Bld-any",
       "D": 63,
       "E": "789-8",
       "F": "Erythrocytes [#/volume] in Blood by Automated count",
@@ -10498,6 +9691,7 @@ export default [
     {
       "A": 3,
       "B": "RBC-Hb",
+      "C": "Erythrocytes|PrThrTitrNCnc|Bld-any",
       "D": 18117,
       "E": "26453-1",
       "F": "Erythrocytes [#/volume] in Blood",
@@ -10515,27 +9709,6 @@ export default [
     },
     {
       "A": 3,
-      "B": "Hemoglobin-Hb",
-      "C": "Hemoglobin Bld moles->mass",
-      "D": 16342,
-      "E": "718-7",
-      "F": "Hemoglobin [Mass/volume] in Blood",
-      "G": "Hemoglobin mass conc (Bld)",
-      "H": "g/dL",
-      "I": "12 - 17.5",
-      "J": 12,
-      "K": 17.5,
-      "N": "Hgb Bld-mCnc",
-      "O": "RI",
-      "P": "g/dL",
-      "Q": "g/dL",
-      "R": 64458,
-      "T": "g/dL",
-      "U": "g/dL",
-      "V": "g/dL"
-    },
-    {
-      "A": 3,
       "B": "Hgb Bld",
       "C": "Hemoglobin Bld moles->mass",
       "D": 22594,
@@ -10547,90 +9720,6 @@ export default [
       "J": 12,
       "K": 17.5,
       "N": "Hgb Bld Calc-mCnc",
-      "O": "RI",
-      "P": "g/dL",
-      "Q": "g/dL",
-      "R": 64458,
-      "T": "g/dL",
-      "U": "g/dL",
-      "V": "g/dL"
-    },
-    {
-      "A": 3,
-      "B": "Hgb Bld Qn (POC)",
-      "C": "Hemoglobin Bld moles->mass",
-      "D": 22410,
-      "E": "20509-6",
-      "F": "Hemoglobin [Mass/volume] in Blood by calculation",
-      "G": "Hemoglobin Calculated mass conc (Bld)",
-      "H": "g/dL",
-      "I": "12 - 17.5",
-      "J": 12,
-      "K": 17.5,
-      "N": "Hgb Bld Calc-mCnc",
-      "O": "RI",
-      "P": "g/dL",
-      "Q": "g/dL",
-      "R": 64458,
-      "T": "g/dL",
-      "U": "g/dL",
-      "V": "g/dL"
-    },
-    {
-      "A": 3,
-      "B": "Hgb Bld Qn Calc (ER-IS)",
-      "C": "Hemoglobin Bld moles->mass",
-      "D": 20027,
-      "E": "20509-6",
-      "F": "Hemoglobin [Mass/volume] in Blood by calculation",
-      "G": "Hemoglobin Calculated mass conc (Bld)",
-      "H": "g/dL",
-      "I": "12 - 17.5",
-      "J": 12,
-      "K": 17.5,
-      "N": "Hgb Bld Calc-mCnc",
-      "O": "RI",
-      "P": "g/dL",
-      "Q": "g/dL",
-      "R": 64458,
-      "T": "g/dL",
-      "U": "g/dL",
-      "V": "g/dL"
-    },
-    {
-      "A": 3,
-      "B": "Hgb Bld Qn (ISTAT)'",
-      "C": "Hemoglobin Bld moles->mass",
-      "D": 18992,
-      "E": "20509-6",
-      "F": "Hemoglobin [Mass/volume] in Blood by calculation",
-      "G": "Hemoglobin Calculated mass conc (Bld)",
-      "H": "g/dL",
-      "I": "12 - 17.5",
-      "J": 12,
-      "K": 17.5,
-      "N": "Hgb Bld Calc-mCnc",
-      "O": "RI",
-      "P": "g/dL",
-      "Q": "g/dL",
-      "R": 64458,
-      "T": "g/dL",
-      "U": "g/dL",
-      "V": "g/dL"
-    },
-    {
-      "A": 3,
-      "B": "Hgb",
-      "C": "Hemoglobin Bld moles->mass",
-      "D": 60,
-      "E": "718-7",
-      "F": "Hemoglobin [Mass/volume] in Blood",
-      "G": "Hemoglobin mass conc (Bld)",
-      "H": "g/dL",
-      "I": "12 - 17.5",
-      "J": 12,
-      "K": 17.5,
-      "N": "Hgb Bld-mCnc",
       "O": "RI",
       "P": "g/dL",
       "Q": "g/dL",
@@ -10664,6 +9753,7 @@ export default [
     {
       "A": 3,
       "B": "Hematocrit-Hb",
+      "C": "Hematocrit|VFr|Bld-any",
       "D": 16344,
       "E": "4545-0",
       "F": "Hematocrit [Volume Fraction] of Blood by Centrifugation",
@@ -10685,6 +9775,7 @@ export default [
     {
       "A": 3,
       "B": "Hct",
+      "C": "Hematocrit|VFr|Bld-any",
       "D": 61,
       "E": "20570-8",
       "F": "Hematocrit [Volume Fraction] of Blood",
@@ -10704,6 +9795,7 @@ export default [
     {
       "A": 3,
       "B": "Hct Bld Qn (ISTAT)'",
+      "C": "Hematocrit|VFr|Bld-any",
       "D": 18993,
       "E": "4544-3",
       "F": "Hematocrit [Volume Fraction] of Blood by Automated count",
@@ -10731,6 +9823,7 @@ export default [
     {
       "A": 3,
       "B": "MCV",
+      "C": "Erythrocyte mean corpuscular volume|EntVol|RBC",
       "D": 875,
       "E": "787-2",
       "F": "MCV [Entitic volume] by Automated count",
@@ -10750,6 +9843,7 @@ export default [
     {
       "A": 3,
       "B": "MCV-Hb",
+      "C": "Erythrocyte mean corpuscular volume|EntVol|RBC",
       "D": 18118,
       "E": "30428-7",
       "F": "MCV [Entitic volume]",
@@ -10771,7 +9865,7 @@ export default [
     {
       "A": 3,
       "B": "MCH",
-      "C": "Erythrocyte mean corpuscular hemoglobin MSCNC demo",
+      "C": "Erythrocyte mean corpuscular hemoglobin|EntMass|RBC",
       "D": 876,
       "E": "785-6",
       "F": "MCH [Entitic mass] by Automated count",
@@ -10792,7 +9886,6 @@ export default [
     {
       "A": 3,
       "B": "MCH",
-      "C": "Erythrocyte mean corpuscular hemoglobin MSCNC demo",
       "D": "876z",
       "E": "59468-9",
       "F": "MCH [Entitic mass]",
@@ -10853,6 +9946,7 @@ export default [
     {
       "A": 3,
       "B": "MCH-Hb",
+      "C": "Erythrocyte mean corpuscular hemoglobin|EntMass|RBC",
       "D": 18119,
       "E": "28539-5",
       "F": "MCH [Entitic mass]",
@@ -10872,6 +9966,7 @@ export default [
     {
       "A": 3,
       "B": "MCHC-Hb",
+      "C": "Erythrocyte mean corpuscular hemoglobin concentration|MCnc|RBC",
       "D": 18120,
       "E": "28540-3",
       "F": "MCHC [Mass/volume]",
@@ -10893,6 +9988,7 @@ export default [
     {
       "A": 3,
       "B": "RDW",
+      "C": "Erythrocyte distribution width|Ratio|RBC",
       "D": 11516,
       "E": "30385-9",
       "F": "Erythrocyte distribution width [Ratio]",
@@ -10910,6 +10006,7 @@ export default [
     {
       "A": 4,
       "B": "Platelet #",
+      "C": "Platelets|PrThrTitrNCnc|Bld-any",
       "D": 213,
       "E": "26515-7",
       "F": "Platelets [#/volume] in Blood",
@@ -10931,6 +10028,7 @@ export default [
     {
       "A": 4,
       "B": "MPV",
+      "C": "Platelet mean volume|EntVol|Bld-any",
       "D": 11236,
       "E": "28542-9",
       "F": "Platelet mean volume [Entitic volume] in Blood",
@@ -10957,7 +10055,7 @@ export default [
     {
       "A": 3,
       "B": "Granulocytes %",
-      "C": "Granulocytes/100 WBCs merged",
+      "C": "Granulocytes/100 leukocytes|NFr|Bld-any",
       "D": 11899,
       "E": "19023-1",
       "F": "Granulocytes/100 leukocytes in Blood by Automated count",
@@ -10977,7 +10075,7 @@ export default [
     {
       "A": 3,
       "B": "Granulocytes % Bld (CSH)",
-      "C": "Granulocytes/100 WBCs merged",
+      "C": "Granulocytes/100 leukocytes|NFr|Bld-any",
       "D": 11519,
       "E": "30395-8",
       "F": "Granulocytes/100 leukocytes in Blood",
@@ -10996,7 +10094,7 @@ export default [
     {
       "A": 3,
       "B": "Polys %",
-      "C": "Neutrophils/100 WBCs merged",
+      "C": "Neutrophils/100 leukocytes|NFr|Bld-any",
       "D": 54,
       "E": "26511-6",
       "F": "Neutrophils/100 leukocytes in Blood",
@@ -11016,7 +10114,7 @@ export default [
     {
       "A": 3,
       "B": "Neutrophils %",
-      "C": "Neutrophils/100 WBCs merged",
+      "C": "Neutrophils/100 leukocytes|NFr|Bld-any",
       "D": 19167,
       "E": "770-8",
       "F": "Neutrophils/100 leukocytes in Blood by Automated count",
@@ -11036,6 +10134,7 @@ export default [
     {
       "A": 3,
       "B": "Hyperseg Polys %",
+      "C": "Neutrophils.hypersegmented/100 leukocytes|NFr|Bld-any",
       "D": 5999,
       "E": "767-4",
       "F": "Neutrophils.hypersegmented/100 leukocytes in Blood by Manual count",
@@ -11053,6 +10152,7 @@ export default [
     {
       "A": 3,
       "B": "Bands %",
+      "C": "Neutrophils.band form/100 leukocytes|NFr|Bld-any",
       "D": 53,
       "E": "26508-2",
       "F": "Band form neutrophils/100 leukocytes in Blood",
@@ -11069,6 +10169,7 @@ export default [
     {
       "A": 3,
       "B": "Lymphocytes %",
+      "C": "Lymphocytes/100 leukocytes|NFr|Bld-any",
       "D": 55,
       "E": "26478-8",
       "F": "Lymphocytes/100 leukocytes in Blood",
@@ -11088,6 +10189,7 @@ export default [
     {
       "A": 3,
       "B": "Monocytes %",
+      "C": "Monocytes/100 leukocytes|NFr|Bld-any",
       "D": 56,
       "E": "26485-3",
       "F": "Monocytes/100 leukocytes in Blood",
@@ -11107,6 +10209,7 @@ export default [
     {
       "A": 3,
       "B": "Eosinophil-Hb",
+      "C": "Eosinophils/100 leukocytes|NFr|Bld-any",
       "D": 18123,
       "E": "26450-7",
       "F": "Eosinophils/100 leukocytes in Blood",
@@ -11126,7 +10229,7 @@ export default [
     {
       "A": 3,
       "B": "Basophils %",
-      "C": "Basophils/100 WBCs merged",
+      "C": "Basophils/100 leukocytes|NFr|Bld-any",
       "D": 58,
       "E": "30180-4",
       "F": "Basophils/100 leukocytes in Blood",
@@ -11146,6 +10249,7 @@ export default [
     {
       "A": 3,
       "B": "Lymphocytes Reactive %",
+      "C": "Lymphocytes.variant/100 leukocytes|NFr|Bld-any",
       "D": 6024,
       "E": "735-1",
       "F": "Variant lymphocytes/100 leukocytes in Blood by Manual count",
@@ -11163,6 +10267,7 @@ export default [
     {
       "A": 3,
       "B": "Plasma Cells %",
+      "C": "Plasma cells/100 leukocytes|NFr|Bld-any",
       "D": 1399,
       "E": "13047-6",
       "F": "Plasma cells/100 leukocytes in Blood",
@@ -11180,6 +10285,7 @@ export default [
     {
       "A": 3,
       "B": "Metamyelocytes %",
+      "C": "Metamyelocytes/100 leukocytes|NFr|Bld-any",
       "D": 51,
       "E": "28541-1",
       "F": "Metamyelocytes/100 leukocytes in Blood",
@@ -11196,6 +10302,7 @@ export default [
     {
       "A": 3,
       "B": "Myelocytes %",
+      "C": "Myelocytes/100 leukocytes|NFr|Bld-any",
       "D": 50,
       "E": "26498-6",
       "F": "Myelocytes/100 leukocytes in Blood",
@@ -11212,6 +10319,7 @@ export default [
     {
       "A": 3,
       "B": "Promyelocytes %",
+      "C": "Promyelocytes/100 leukocytes|NFr|Bld-any",
       "D": 1177,
       "E": "26524-9",
       "F": "Promyelocytes/100 leukocytes in Blood",
@@ -11228,6 +10336,7 @@ export default [
     {
       "A": 3,
       "B": "Blasts %",
+      "C": "Blasts/100 leukocytes|NFr|Bld-any",
       "D": 49,
       "E": "26446-5",
       "F": "Blasts/100 leukocytes in Blood",
@@ -11244,7 +10353,7 @@ export default [
     {
       "A": 3,
       "B": "Lymphocytes % Bld Man",
-      "C": "Lymphocytes/100 WBCs merged",
+      "C": "Lymphocytes/100 leukocytes|NFr|Bld-any",
       "D": 34471,
       "E": "737-7",
       "F": "Lymphocytes/100 leukocytes in Blood by Manual count",
@@ -11263,7 +10372,7 @@ export default [
     {
       "A": 3,
       "B": "Eosinophils % Bld Man",
-      "C": "Eosinophils/100 WBCs merged+E707",
+      "C": "Eosinophils/100 leukocytes|NFr|Bld-any",
       "D": 34470,
       "E": "714-6",
       "F": "Eosinophils/100 leukocytes in Blood by Manual count",
@@ -11279,6 +10388,7 @@ export default [
     {
       "A": 3,
       "B": "Eosinophil # Tot",
+      "C": "Eosinophils|PrThrTitrNCnc|Bld-any",
       "D": 4871,
       "E": "26449-9",
       "F": "Eosinophils [#/volume] in Blood",
@@ -11296,6 +10406,7 @@ export default [
     {
       "A": 3,
       "B": "Retics #",
+      "C": "Reticulocytes|PrThrTitrNCnc|Bld-any",
       "D": 13965,
       "E": "14196-0",
       "F": "Reticulocytes [#/volume] in Blood",
@@ -11320,6 +10431,7 @@ export default [
     {
       "A": 3,
       "B": "Nuc RBCs/100 WBCs",
+      "C": "Erythrocytes.nucleated/100 leukocytes|Ratio|Bld-any",
       "D": 1179,
       "E": "19048-8",
       "F": "Nucleated erythrocytes/100 leukocytes [Ratio] in Blood",
@@ -11337,6 +10449,7 @@ export default [
     {
       "A": 3,
       "B": "Reticulocyte count %",
+      "C": "Reticulocytes/100 erythrocytes|NFr|Bld-any",
       "D": 655,
       "E": "4679-7",
       "F": "Reticulocytes/100 erythrocytes in Blood",
@@ -11362,7 +10475,6 @@ export default [
     {
       "A": 3,
       "B": "Iron SerPl Qn",
-      "C": "Iron|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
       "D": 259,
       "E": "2498-4",
       "F": "Iron [Mass/volume] in Serum or Plasma",
@@ -11383,7 +10495,7 @@ export default [
     {
       "A": 3,
       "B": "Iron Liver Tiss Qn",
-      "C": "Iron|MCntSCnt|Pt|Tiss|NarDocOrdQn|Method-Other",
+      "C": "Iron|MCntSCnt|Pt|Tiss|Method-Other",
       "D": 18549,
       "E": "15357-7",
       "F": "Iron [Mass/mass] in Tissue",
@@ -11421,7 +10533,7 @@ export default [
     {
       "A": 3,
       "B": "Iron %Sat",
-      "C": "Iron saturation|MFrSFr|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Iron saturation|MFrSFr|Pt|Intravascular-any|Method-Other",
       "D": 5203,
       "E": "2502-3",
       "F": "Iron saturation [Mass Fraction] in Serum or Plasma",
@@ -11441,7 +10553,7 @@ export default [
     {
       "A": 3,
       "B": "Ferritin SerPl Qn",
-      "C": "Ferritin|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Ferritin|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 5187,
       "E": "2276-4",
       "F": "Ferritin [Mass/volume] in Serum or Plasma",
@@ -11461,7 +10573,7 @@ export default [
     {
       "A": 3,
       "B": "Ferritin SerPl Qn EIA",
-      "C": "Ferritin|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Ferritin|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 8102,
       "E": "20567-4",
       "F": "Ferritin [Mass/volume] in Serum or Plasma by Immunoassay",
@@ -11520,7 +10632,7 @@ export default [
     {
       "A": 3,
       "B": "Folate Ser Qn'",
-      "C": "Folate|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Folate|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 649,
       "E": "2284-8",
       "F": "Folate [Mass/volume] in Serum or Plasma",
@@ -11558,7 +10670,7 @@ export default [
     {
       "A": 3,
       "B": "Vit B12 Ser Qn",
-      "C": "Cobalamins|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
+      "C": "Cobalamins|MCnc|Pt|Intravascular-any|Method-Other",
       "D": 23721,
       "E": "2132-9",
       "F": "Cobalamin (Vitamin B12) [Mass/volume] in Serum or Plasma",
@@ -11653,7 +10765,7 @@ export default [
     {
       "A": 3,
       "B": "G6PD-RBC Qn",
-      "C": "Glucose-6-Phosphate dehydrogenase|CCnt|Pt|RBC|NarDocOrdQn|Method-Other",
+      "C": "Glucose-6-Phosphate dehydrogenase|CCnt|Pt|RBC|Method-Other",
       "D": 648,
       "E": "32546-4",
       "F": "Glucose-6-Phosphate dehydrogenase [Enzymatic activity/mass] in Red Blood Cells",
@@ -11672,6 +10784,7 @@ export default [
     {
       "A": 3,
       "B": "Haptoglob Ser",
+      "C": "Haptoglobin|MCnc|Ser/Plas",
       "D": 651,
       "E": "4542-7",
       "F": "Haptoglobin [Mass/volume] in Serum or Plasma",
@@ -11691,6 +10804,7 @@ export default [
     {
       "A": 3,
       "B": "Hgb Free SerPl Qn",
+      "C": "Hemoglobin.free|MCnc|Ser",
       "D": 650,
       "E": "4635-9",
       "F": "Free Hemoglobin [Mass/volume] in Serum",
@@ -11721,6 +10835,7 @@ export default [
     {
       "A": 3,
       "B": "RBC Osmotic Fragility",
+      "C": "Osmotic fragility|NFr|RBC",
       "D": 4429,
       "E": "4667-2",
       "F": "Osmotic fragility of Red Blood Cells",
@@ -11761,6 +10876,7 @@ export default [
     {
       "A": 3,
       "B": "Hgb A2 % Alk pH Elp",
+      "C": "Hemoglobin A2/Hemoglobin.total|MFr|Bld-any",
       "D": 6845,
       "E": "4554-2",
       "F": "Hemoglobin A2/Hemoglobin.total in Blood by Electrophoresis alkaline (pH 8.9)",
@@ -11780,6 +10896,7 @@ export default [
     {
       "A": 3,
       "B": "Hgb F % Alk pH Elp",
+      "C": "Hemoglobin F/Hemoglobin.total|MFr|Bld-any",
       "D": 6846,
       "E": "38524-5",
       "F": "Hemoglobin F/Hemoglobin.total in Blood by Electrophoresis alkaline (pH 8.9)",
@@ -11800,6 +10917,7 @@ export default [
     {
       "A": 3,
       "B": "Hgb A% Elp",
+      "C": "Hemoglobin A/Hemoglobin.total|MFr|Bld-any",
       "D": 6803,
       "E": "4546-8",
       "F": "Hemoglobin A/Hemoglobin.total in Blood",
@@ -11818,6 +10936,7 @@ export default [
     {
       "A": 3,
       "B": "Hgb F % Bld",
+      "C": "Hemoglobin F/Hemoglobin.total|MFr|Bld-any",
       "D": 5685,
       "E": "4576-5",
       "F": "Hemoglobin F/Hemoglobin.total in Blood",
@@ -11838,6 +10957,7 @@ export default [
     {
       "A": 3,
       "B": "Hgb S % Elp",
+      "C": "Hemoglobin S/Hemoglobin.total|MFr|Bld-any",
       "D": 6804,
       "E": "4625-0",
       "F": "Hemoglobin S/Hemoglobin.total in Blood",
@@ -11855,6 +10975,7 @@ export default [
     {
       "A": 3,
       "B": "Hgb C% Elp",
+      "C": "Hemoglobin C/Hemoglobin.total|MFr|Bld-any",
       "D": 6805,
       "E": "4561-7",
       "F": "Hemoglobin C/Hemoglobin.total in Blood by Electrophoresis acid (pH 6.3)",
@@ -11872,6 +10993,7 @@ export default [
     {
       "A": 3,
       "B": "Hgb A2 % Bld",
+      "C": "Hemoglobin A2/Hemoglobin.total|MFr|Bld-any",
       "D": 5684,
       "E": "4551-8",
       "F": "Hemoglobin A2/Hemoglobin.total in Blood",
@@ -11923,6 +11045,7 @@ export default [
     {
       "A": 3,
       "B": "HGB F Kleih-Betke RBC %",
+      "C": "Hemoglobin F/Hemoglobin.total|MFr|Bld-any",
       "D": 16005,
       "E": "4633-4",
       "F": "Hemoglobin F/Hemoglobin.total in Blood by Kleihauer-Betke method",
@@ -12134,6 +11257,7 @@ export default [
     {
       "A": 4,
       "B": "CD14 Myelo/Monos %",
+      "C": "Cells.CD14/100 cells|Intravascular-any|Qn",
       "D": 17034,
       "E": "8111-7",
       "F": "CD14 cells/100 cells in Blood",
@@ -12632,6 +11756,7 @@ export default [
     {
       "A": 4,
       "B": "TDT/Cells %",
+      "C": "Cells.terminal deoxyribonucleotidyl transferase/100 cells|XXX|Qn",
       "D": 15722,
       "E": "30117-6",
       "F": "Terminal deoxyribonucleotidyl transferase cells/100 cells in Unspecified specimen by Immunoperoxidase stain",
@@ -12650,6 +11775,7 @@ export default [
     {
       "A": 4,
       "B": "RBC Glycophorin A %",
+      "C": "Cells.CD235a/100 cells|Intravascular-any|Qn",
       "D": 17027,
       "E": "17221-3",
       "F": "CD235a cells/100 cells in Blood",
@@ -12688,6 +11814,7 @@ export default [
     {
       "A": 4,
       "B": "TOT. Lymphocyte #",
+      "C": "Lymphocytes|PrThrTitrNCnc|Bld-any",
       "D": 13797,
       "E": "26474-7",
       "F": "Lymphocytes [#/volume] in Blood",
@@ -12822,6 +11949,7 @@ export default [
     {
       "A": 4,
       "B": "Protime (POC)",
+      "C": "Coagulation tissue factor induced|Time|Intravascular-any|Method-Other",
       "D": 22102,
       "E": "5964-2",
       "F": "Prothrombin time (PT) in Blood by Coagulation assay",
@@ -12842,6 +11970,7 @@ export default [
     {
       "A": 4,
       "B": "PT Patient",
+      "C": "Coagulation tissue factor induced|Time|Intravascular-any|Method-Other",
       "D": 214,
       "E": "5902-2",
       "F": "Prothrombin time (PT)",
@@ -12879,6 +12008,7 @@ export default [
     {
       "A": 4,
       "B": "INR",
+      "C": "Coagulation tissue factor induced.INR|RelTime|Intravascular-any|Method-Other",
       "D": 18239,
       "E": "6301-6",
       "F": "INR in Platelet poor plasma by Coagulation assay",
@@ -12898,6 +12028,7 @@ export default [
     {
       "A": 4,
       "B": "INR POC",
+      "C": "Coagulation tissue factor induced.INR|RelTime|Intravascular-any|Method-Other",
       "D": 30871,
       "E": "34714-6",
       "F": "INR in Blood by Coagulation assay",
@@ -12916,6 +12047,7 @@ export default [
     {
       "A": 3,
       "B": "aPtt",
+      "C": "Coagulation surface induced|Time|Intravascular-any|Method-Other",
       "D": 1775,
       "E": "14979-9",
       "F": "aPTT in Platelet poor plasma by Coagulation assay",
@@ -12927,6 +12059,7 @@ export default [
     {
       "A": 4,
       "B": "aPTT Control",
+      "C": "Coagulation surface induced|Time|Intravascular-any^Control|Method-Other",
       "D": 1776,
       "E": "13488-2",
       "F": "aPTT in Control Platelet poor plasma by Coagulation assay",
@@ -12944,6 +12077,7 @@ export default [
     {
       "A": 3,
       "B": "TCT",
+      "C": "Coagulation thrombin induced|Time|Intravascular-any|Method-Other",
       "D": 4512,
       "E": "3243-3",
       "F": "Thrombin time",
@@ -12961,6 +12095,7 @@ export default [
     {
       "A": 3,
       "B": "Fibrinogen",
+      "C": "Fibrinogen|MCnc|Intravascular-any|Method-Other",
       "D": 216,
       "E": "3255-7",
       "F": "Fibrinogen [Mass/volume] in Platelet poor plasma by Coagulation assay",
@@ -12979,6 +12114,7 @@ export default [
     {
       "A": 3,
       "B": "D-Dimer Plas Qn",
+      "C": "Fibrin D-dimer|MCnc|Intravascular-any|Method-Other",
       "D": 29727,
       "E": "30240-6",
       "F": "Deprecated Fibrin D-dimer",
@@ -12997,6 +12133,7 @@ export default [
     {
       "A": 3,
       "B": "ACT Bld Qn (POC)",
+      "C": "Activated clotting time|Time|Intravascular-any|Method-Other",
       "D": 22107,
       "E": "3184-9",
       "F": "Activated clotting time (ACT) of Blood by Coagulation assay",
@@ -13023,6 +12160,7 @@ export default [
     {
       "A": 3,
       "B": "Heparin Ser Qn",
+      "C": "Heparin|PrTitrACnc|Intravascular-any|Method-Other",
       "D": 5219,
       "E": "13055-9",
       "F": "Heparin [Units/volume] in Platelet poor plasma",
@@ -13040,6 +12178,7 @@ export default [
     {
       "A": 3,
       "B": "Heparin LMW Plas Qn",
+      "C": "Heparin.low molecular weight|PrTitrACnc|Intravascular-any|Method-Other",
       "D": 28090,
       "E": "32684-3",
       "F": "LMW Heparin [Units/volume] in Platelet poor plasma",
@@ -13053,6 +12192,7 @@ export default [
     {
       "A": 3,
       "B": "Reptilase Clot Tm",
+      "C": "Coagulation reptilase induced|Time|Intravascular-any|Method-Other",
       "D": 4444,
       "E": "6683-7",
       "F": "Reptilase time",
@@ -13070,6 +12210,7 @@ export default [
     {
       "A": 3,
       "B": "B2 Glycoprotein IgG Ser Qn",
+      "C": "Beta 2 glycoprotein 1 Ab.IgG|PrTitrACnc|Intravascular-any|Method-Other",
       "D": 26096,
       "E": "16135-6",
       "F": "Beta 2 glycoprotein 1 IgG Ab [Units/volume] in Serum",
@@ -13085,6 +12226,7 @@ export default [
     {
       "A": 3,
       "B": "B2 Glycoprotein IgM Ser Qn",
+      "C": "Beta 2 glycoprotein 1 Ab.IgM|PrTitrACnc|Intravascular-any|Method-Other",
       "D": 26097,
       "E": "16136-4",
       "F": "Beta 2 glycoprotein 1 IgM Ab [Units/volume] in Serum",
@@ -13302,6 +12444,7 @@ export default [
     {
       "A": 3,
       "B": "aPTT W/Norm Pl (Lupus Anticoag)",
+      "C": "Coagulation surface induced.factor substitution^immediately after addition of normal plasma|Time|Intravascular-any|Method-Other",
       "D": 31826,
       "E": "5946-9",
       "F": "aPTT.factor substitution in Platelet poor plasma by Coagulation assay --immediately after addition of normal plasma",
@@ -13354,6 +12497,7 @@ export default [
     {
       "A": 3,
       "B": "DRVVT (Lupus Anticoag)",
+      "C": "Coagulation dilute Russell viper venom induced|Time|Intravascular-any|Method-Other",
       "D": 21421,
       "E": "6303-2",
       "F": "dRVVT (LA screen)",
@@ -13371,6 +12515,7 @@ export default [
     {
       "A": 3,
       "B": "DRVVT W/Norm Pl (Lupus Anticoag)",
+      "C": "Coagulation dilute Russell viper venom induced.factor substitution^immediately after addition of normal plasma|Time|Intravascular-any|Method-Other",
       "D": 31828,
       "E": "43397-9",
       "F": "dRVVT factor substitution in Platelet poor plasma by Coagulation assay --immediately after addition of normal plasma",
@@ -13485,6 +12630,7 @@ export default [
     {
       "A": 3,
       "B": "Factor VIII-C Actvty %",
+      "C": "Coagulation factor VIII activity actual/Normal|RelTime|Intravascular-any|Method-Other",
       "D": 4404,
       "E": "3209-4",
       "F": "Coagulation factor VIII activity actual/normal in Platelet poor plasma by Coagulation assay",
@@ -13625,6 +12771,7 @@ export default [
     {
       "A": 3,
       "B": "Bleed Tm-Simplate",
+      "C": "Bleeding time|Time|^Patient|Method-Other",
       "D": 5182,
       "E": "11067-6",
       "F": "Bleeding time",
@@ -13792,6 +12939,7 @@ export default [
     {
       "A": 4,
       "B": "Cardiolipin IgG Ab",
+      "C": "Cardiolipin Ab.IgG|PrTitrACnc|Intravascular-any|Method-Other",
       "D": 22048,
       "E": "8065-5",
       "F": "Cardiolipin IgG Ab [Units/volume] in Serum or Plasma",
@@ -13811,6 +12959,7 @@ export default [
     {
       "A": 4,
       "B": "Cardiolipin IgM Ab",
+      "C": "Cardiolipin Ab.IgM|PrTitrACnc|Intravascular-any|Method-Other",
       "D": 22049,
       "E": "8067-1",
       "F": "Cardiolipin IgM Ab [Units/volume] in Serum or Plasma",
@@ -13830,6 +12979,7 @@ export default [
     {
       "A": 4,
       "B": "Cardiolipin IgA Qn",
+      "C": "Cardiolipin Ab.IgA|PrTitrACnc|Intravascular-any|Method-Other",
       "D": 24881,
       "E": "8063-0",
       "F": "Cardiolipin IgA Ab [Units/volume] in Serum or Plasma",
@@ -13848,6 +12998,7 @@ export default [
     {
       "A": 4,
       "B": "Cardiolipin IgM Ser Qn",
+      "C": "Cardiolipin Ab.IgM|PrTitrACnc|Intravascular-any|Method-Other",
       "D": 18488,
       "E": "3182-3",
       "F": "Cardiolipin IgM Ab [Units/volume] in Serum by Immunoassay",
@@ -14133,6 +13284,7 @@ export default [
     {
       "A": 3,
       "B": "ESR Bld Qn",
+      "C": "Erythrocyte sedimentation rate|Vel|Bld-any",
       "D": 27630,
       "E": "30341-2",
       "F": "Erythrocyte sedimentation rate",
@@ -14151,6 +13303,7 @@ export default [
     {
       "A": 3,
       "B": "ESR-Wintr",
+      "C": "Erythrocyte sedimentation rate|Vel|Bld-any",
       "D": 219,
       "E": "4538-5",
       "F": "Erythrocyte sedimentation rate by Wintrobe method",
@@ -14171,6 +13324,7 @@ export default [
     {
       "A": 3,
       "B": "ESR-Westerg",
+      "C": "Erythrocyte sedimentation rate|Vel|Bld-any",
       "D": 4425,
       "E": "4537-7",
       "F": "Erythrocyte sedimentation rate by Westergren method",
@@ -14219,7 +13373,7 @@ export default [
     {
       "A": 3,
       "B": "Sodium 24H Ur Qn",
-      "C": "Sodium|MRatSRat|TimedSpecimen|Urine|NarDocOrdQn|Method-Other",
+      "C": "Sodium|MRatSRat|TimedSpecimen|Urine|Method-Other",
       "D": 1026,
       "E": "2956-1",
       "F": "Sodium [Moles/time] in 24 hour Urine",
@@ -14254,7 +13408,7 @@ export default [
     {
       "A": 3,
       "B": "Potassium 24H Ur Qn",
-      "C": "Potassium|MRatSRat|TimedSpecimen|Urine|NarDocOrdQn|Method-Other",
+      "C": "Potassium|MRatSRat|TimedSpecimen|Urine|Method-Other",
       "D": 1028,
       "E": "2829-0",
       "F": "Potassium [Moles/time] in 24 hour Urine",
@@ -14290,7 +13444,7 @@ export default [
     {
       "A": 3,
       "B": "Chloride 24H Ur Qn",
-      "C": "Chloride|MRatSRat|TimedSpecimen|Urine|NarDocOrdQn|Method-Other",
+      "C": "Chloride|MRatSRat|TimedSpecimen|Urine|Method-Other",
       "D": 1030,
       "E": "2079-2",
       "F": "Chloride [Moles/time] in 24 hour Urine",
@@ -14309,7 +13463,7 @@ export default [
     {
       "A": 3,
       "B": "Calcium 24H Ur Qn mg/24H",
-      "C": "Calcium|MRatSRat|TimedSpecimen|Urine|NarDocOrdQn|Method-Other",
+      "C": "Calcium|MRatSRat|TimedSpecimen|Urine|Method-Other",
       "D": 5277,
       "E": "6874-2",
       "F": "Calcium [Mass/time] in 24 hour Urine",
@@ -14343,7 +13497,7 @@ export default [
     {
       "A": 3,
       "B": "Calcium 24H Ur Cnc",
-      "C": "Calcium|MCnc|TimedSpecimen|Urine|NarDocOrdQn|Method-Other",
+      "C": "Calcium|MCnc|TimedSpecimen|Urine|Method-Other",
       "D": 15413,
       "E": "18488-7",
       "F": "Calcium [Mass/volume] in 24 hour Urine",
@@ -14368,7 +13522,7 @@ export default [
     {
       "A": 3,
       "B": "Creatinine Clr Rate",
-      "C": "Creatinine renal clearance|VRat|TimedSpecimen|Urine+Ser/Plas|NarDocOrdQn|Method-Other",
+      "C": "Creatinine renal clearance|VRat|TimedSpecimen|Urine+Ser/Plas|Method-Other",
       "D": 630,
       "E": "2164-2",
       "F": "Creatinine renal clearance in 24 hour",
@@ -14407,7 +13561,7 @@ export default [
     {
       "A": 4,
       "B": "5HIAA 24H Ur Qn",
-      "C": "5-Hydroxyindoleacetate|MRatSRat|TimedSpecimen|Urine|NarDocOrdQn|Method-Other",
+      "C": "5-Hydroxyindoleacetate|MRatSRat|TimedSpecimen|Urine|Method-Other",
       "D": 17391,
       "E": "1695-6",
       "F": "5-Hydroxyindoleacetate [Mass/time] in 24 hour Urine",
@@ -14428,7 +13582,7 @@ export default [
     {
       "A": 4,
       "B": "5HIAA Ur mg/gm Cr",
-      "C": "5-Hydroxyindoleacetate/Creatinine|MRtoSRto|Pt|Urine|NarDocOrdQn|Method-Other",
+      "C": "5-Hydroxyindoleacetate/Creatinine|MRtoSRto|Pt|Urine|Method-Other",
       "D": 30428,
       "E": "11145-0",
       "F": "5-Hydroxyindoleacetate/Creatinine [Mass Ratio] in Urine",
@@ -14456,7 +13610,7 @@ export default [
     {
       "A": 3,
       "B": "Albumin R-Ur",
-      "C": "Albumin|MCnc|Pt|Urine|NarDocOrdQn|Method-Other",
+      "C": "Albumin|MCnc|Pt|Urine|Method-Other",
       "D": 4018,
       "E": "1754-1",
       "F": "Albumin [Mass/volume] in Urine",
@@ -14475,7 +13629,7 @@ export default [
     {
       "A": 3,
       "B": "Albumin 24H Ur Qn",
-      "C": "Albumin|MRatSRat|TimedSpecimen|Urine|NarDocOrdQn|Method-Other",
+      "C": "Albumin|MRatSRat|TimedSpecimen|Urine|Method-Other",
       "D": 22643,
       "E": "1755-8",
       "F": "Albumin [Mass/time] in 24 hour Urine",
@@ -14490,7 +13644,7 @@ export default [
     {
       "A": 3,
       "B": "Albumin/Min Ur",
-      "C": "Albumin|MRatSRat|TimedSpecimen|Urine|NarDocOrdQn|Detection limit <= 20 mg/L",
+      "C": "Albumin|MRatSRat|TimedSpecimen|Urine|Detection limit <= 20 mg/L",
       "D": 15298,
       "E": "14956-7",
       "F": "Microalbumin [Mass/time] in 24 hour Urine",
@@ -14543,6 +13697,7 @@ export default [
     {
       "A": 3,
       "B": "AMYLASE 24H UR",
+      "C": "Amoxicillin|Scale-Other|Method-Other",
       "D": 1007,
       "E": "18-2",
       "F": "Amoxicillin [Susceptibility] by Serum bactericidal titer",
@@ -14572,7 +13727,7 @@ export default [
     {
       "A": 3,
       "B": "Amylase 24H Ur Qn",
-      "C": "Amylase|CRat|TimedSpecimen|Urine|NarDocOrdQn|Method-Other",
+      "C": "Amylase|CRat|TimedSpecimen|Urine|Method-Other",
       "D": 4602,
       "E": "1800-2",
       "F": "Amylase [Enzymatic activity/time] in 24 hour Urine",
@@ -14590,7 +13745,7 @@ export default [
     {
       "A": 3,
       "B": "Citrate 24H Ur Qn",
-      "C": "Citrate|MRatSRat|TimedSpecimen|Urine|NarDocOrdQn|Method-Other",
+      "C": "Citrate|MRatSRat|TimedSpecimen|Urine|Method-Other",
       "D": 21114,
       "E": "6687-8",
       "F": "Citrate [Mass/time] in 24 hour Urine",
@@ -14660,7 +13815,7 @@ export default [
     {
       "A": 3,
       "B": "Glucose 24Hr Ur g/24H",
-      "C": "Glucose|MRatSRat|TimedSpecimen|Urine|NarDocOrdQn|Method-Other",
+      "C": "Glucose|MRatSRat|TimedSpecimen|Urine|Method-Other",
       "D": 1013,
       "E": "2351-5",
       "F": "Glucose [Mass/time] in 24 hour Urine",
@@ -14703,7 +13858,7 @@ export default [
     {
       "A": 4,
       "B": "Magnesium Ur Tm Cnc",
-      "C": "Magnesium|MCnc|TimedSpecimen|Urine|NarDocOrdQn|Method-Other",
+      "C": "Magnesium|MCnc|TimedSpecimen|Urine|Method-Other",
       "D": 15705,
       "E": "32024-2",
       "F": "Magnesium [Mass/volume] in 24 hour Urine",
@@ -14731,7 +13886,7 @@ export default [
     {
       "A": 4,
       "B": "Magnesium 24H Ur Qn",
-      "C": "Magnesium|MRatSRat|TimedSpecimen|Urine|NarDocOrdQn|Method-Other",
+      "C": "Magnesium|MRatSRat|TimedSpecimen|Urine|Method-Other",
       "D": 8421,
       "E": "24447-5",
       "F": "Magnesium [Mass/time] in 24 hour Urine",
@@ -14795,7 +13950,7 @@ export default [
     {
       "A": 3,
       "B": "N-Telopeptide Crosslink Ur Qn",
-      "C": "Collagen crosslinked N-telopeptide/Creatinine|MRtoSRto|Pt|Urine|NarDocOrdQn|Method-Other",
+      "C": "Collagen crosslinked N-telopeptide/Creatinine|MRtoSRto|Pt|Urine|Method-Other",
       "D": 28541,
       "E": "14115-0",
       "F": "Collagen crosslinked N-telopeptide/Creatinine [Molar ratio] in Urine",
@@ -14809,7 +13964,7 @@ export default [
     {
       "A": 3,
       "B": "Osmolality Ur Random Qn",
-      "C": "Osmolality|Osmol|Pt|Urine|NarDocOrdQn|Method-Other",
+      "C": "Osmolality|Osmol|Pt|Urine|Method-Other",
       "D": 1041,
       "E": "2695-5",
       "F": "Osmolality of Urine",
@@ -14829,7 +13984,7 @@ export default [
     {
       "A": 3,
       "B": "Osmolality Ur Tm-Qn",
-      "C": "Osmolality|Osmol|TimedSpecimen|Urine|NarDocOrdQn|Method-Other",
+      "C": "Osmolality|Osmol|TimedSpecimen|Urine|Method-Other",
       "D": 1017,
       "E": "2694-8",
       "F": "Osmolality of 24 hour Urine",
@@ -14853,7 +14008,7 @@ export default [
     {
       "A": 4,
       "B": "Oxalate 24H Ur Qn",
-      "C": "Oxalate|MRatSRat|TimedSpecimen|Urine|NarDocOrdQn|Method-Other",
+      "C": "Oxalate|MRatSRat|TimedSpecimen|Urine|Method-Other",
       "D": 5056,
       "E": "2701-1",
       "F": "Oxalate [Mass/time] in 24 hour Urine",
@@ -14872,7 +14027,7 @@ export default [
     {
       "A": 3,
       "B": "pH Timed Ur",
-      "C": "pH|LsCnc|TimedSpecimen|Urine|NarDocOrdQn|Method-Other",
+      "C": "pH|LsCnc|TimedSpecimen|Urine|Method-Other",
       "D": 6433,
       "E": "27378-9",
       "F": "pH of 24 hour Urine",
@@ -14895,7 +14050,7 @@ export default [
     {
       "A": 4,
       "B": "Phosphorus Ur Qn",
-      "C": "Phosphate|MCnc|Pt|Urine|NarDocOrdQn|Method-Other",
+      "C": "Phosphate|MCnc|Pt|Urine|Method-Other",
       "D": 21113,
       "E": "2778-9",
       "F": "Phosphate [Mass/volume] in Urine",
@@ -14910,7 +14065,7 @@ export default [
     {
       "A": 4,
       "B": "Phosphorus 24H Ur Qn",
-      "C": "Phosphate|MRatSRat|TimedSpecimen|Urine|NarDocOrdQn|Method-Other",
+      "C": "Phosphate|MRatSRat|TimedSpecimen|Urine|Method-Other",
       "D": 1019,
       "E": "2779-7",
       "F": "Phosphate [Mass/time] in 24 hour Urine",
@@ -14929,7 +14084,7 @@ export default [
     {
       "A": 4,
       "B": "Phosphorus Ur Tm Cnc",
-      "C": "Phosphate|MCnc|TimedSpecimen|Urine|NarDocOrdQn|Method-Other",
+      "C": "Phosphate|MCnc|TimedSpecimen|Urine|Method-Other",
       "D": 15412,
       "E": "21458-5",
       "F": "Phosphate [Mass/volume] in 24 hour Urine",
@@ -14944,7 +14099,7 @@ export default [
     {
       "A": 3,
       "B": "R-UR ALBUMIN/CREAT",
-      "C": "Albumin/Creatinine|MRtoSRto|Pt|Urine|NarDocOrdQn|Method-Other",
+      "C": "Albumin/Creatinine|MRtoSRto|Pt|Urine|Method-Other",
       "D": 4039,
       "E": "9318-7",
       "F": "Albumin/Creatinine [Mass Ratio] in Urine",
@@ -14980,7 +14135,7 @@ export default [
     {
       "A": 3,
       "B": "Urea Nit 24H Ur Qn",
-      "C": "Urea nitrogen|MRatSRat|TimedSpecimen|Urine|NarDocOrdQn|Method-Other",
+      "C": "Urea nitrogen|MRatSRat|TimedSpecimen|Urine|Method-Other",
       "D": 1022,
       "E": "3096-5",
       "F": "Urea nitrogen [Mass/time] in 24 hour Urine",
@@ -15019,7 +14174,7 @@ export default [
     {
       "A": 4,
       "B": "Uric Acid Ur Tm Cnc",
-      "C": "Urate|MCnc|TimedSpecimen|Urine|NarDocOrdQn|Method-Other",
+      "C": "Urate|MCnc|TimedSpecimen|Urine|Method-Other",
       "D": 14979,
       "E": "21587-1",
       "F": "Urate [Mass/volume] in 24 hour Urine",
@@ -15034,7 +14189,7 @@ export default [
     {
       "A": 4,
       "B": "Uric Acid Tot Vol Ur Gms",
-      "C": "Urate|MRatSRat|TimedSpecimen|Urine|NarDocOrdQn|Method-Other",
+      "C": "Urate|MRatSRat|TimedSpecimen|Urine|Method-Other",
       "D": 1049,
       "E": "3087-4",
       "F": "Urate [Mass/time] in 24 hour Urine",
@@ -15081,7 +14236,7 @@ export default [
     {
       "A": 3,
       "B": "ALA Ur 24H",
-      "C": "Delta aminolevulinate|MRatSRat|TimedSpecimen|Urine|NarDocOrdQn|Method-Other",
+      "C": "Delta aminolevulinate|MRatSRat|TimedSpecimen|Urine|Method-Other",
       "D": 7996,
       "E": "2200-4",
       "F": "Delta aminolevulinate [Mass/time] in 24 hour Urine",
@@ -15159,6 +14314,7 @@ export default [
     {
       "A": 4,
       "B": "Sp Grav UA",
+      "C": "Specific gravity|Rden|UrUrnS",
       "D": 168,
       "E": "5811-5",
       "F": "Specific gravity of Urine by Test strip",
@@ -15173,6 +14329,7 @@ export default [
     {
       "A": 4,
       "B": "pH-UA",
+      "C": "pH|LsCnc|UrUrnS",
       "D": 169,
       "E": "5803-2",
       "F": "pH of Urine by Test strip",
@@ -15191,6 +14348,7 @@ export default [
     {
       "A": 4,
       "B": "Ur Gluc,%",
+      "C": "Glucose|MCnc|UrUrnS",
       "D": 360,
       "E": "5792-7",
       "F": "Glucose [Mass/volume] in Urine by Test strip",
@@ -15207,6 +14365,7 @@ export default [
     {
       "A": 4,
       "B": "Ur Keto 0-3",
+      "C": "Ketones|MCnc|UrUrnS",
       "D": 361,
       "E": "5797-6",
       "F": "Ketones [Mass/volume] in Urine by Test strip",
@@ -15226,7 +14385,7 @@ export default [
     {
       "A": 4,
       "B": "Urobilinogen Ur",
-      "C": "Urobilinogen|MRatSRat|TimedSpecimen|Urine|NarDocOrdQn|Method-Other",
+      "C": "Urobilinogen|MRatSRat|TimedSpecimen|Urine|Method-Other",
       "D": 5233,
       "E": "3108-8",
       "F": "Urobilinogen [Mass/time] in 24 hour Urine",
@@ -15272,6 +14431,7 @@ export default [
     {
       "A": 4,
       "B": "RBC:UA",
+      "C": "Erythrocytes|PrThrNaric|UrUrnS",
       "D": 26690,
       "E": "13945-1",
       "F": "Erythrocytes [#/area] in Urine sediment by Microscopy high power field",
@@ -15288,6 +14448,7 @@ export default [
     {
       "A": 4,
       "B": "WBC:UA",
+      "C": "Leukocytes|PrThrNaric|UrUrnS",
       "D": 26691,
       "E": "5821-4",
       "F": "Leukocytes [#/area] in Urine sediment by Microscopy high power field",
@@ -15307,6 +14468,7 @@ export default [
     {
       "A": 4,
       "B": "Squamous Epi Cells Ur QN",
+      "C": "Epithelial cells.squamous|PrThrNaric|UrUrnS",
       "D": 26685,
       "E": "11277-1",
       "F": "Epithelial cells.squamous [#/area] in Urine sediment by Microscopy high power field",
@@ -15324,6 +14486,7 @@ export default [
     {
       "A": 4,
       "B": "Renal Epi Cells UA",
+      "C": "Epithelial cells.renal|PrThrNaric|UrUrnS",
       "D": 26545,
       "E": "26052-1",
       "F": "Epithelial cells.renal [#/area] in Urine sediment by Microscopy high power field",
@@ -15337,6 +14500,7 @@ export default [
     {
       "A": 4,
       "B": "Transitional Epi Cells UA",
+      "C": "Transitional cells|PrThrNaric|UrUrnS",
       "D": 26544,
       "E": "30089-7",
       "F": "Transitional cells [#/area] in Urine sediment by Microscopy high power field",
@@ -15350,6 +14514,7 @@ export default [
     {
       "A": 4,
       "B": "Casts UA/LPF",
+      "C": "Casts|PrThrNaric|UrUrnS",
       "D": 1394,
       "E": "9842-6",
       "F": "Casts [#/area] in Urine sediment by Microscopy low power field",
@@ -15361,6 +14526,7 @@ export default [
     {
       "A": 5,
       "B": "Cellular Casts",
+      "C": "Mixed cellular casts|PrThrNaric|UrUrnS",
       "D": 26556,
       "E": "38995-7",
       "F": "Mixed cellular casts [#/area] in Urine sediment by Microscopy low power field",
@@ -15378,6 +14544,7 @@ export default [
     {
       "A": 5,
       "B": "Coarse Gran Casts Ur QN",
+      "C": "Granular casts.coarse|PrThrNaric|UrUrnS",
       "D": 26683,
       "E": "33393-0",
       "F": "Coarse Granular Casts [#/area] in Urine sediment by Microscopy low power field",
@@ -15392,6 +14559,7 @@ export default [
     {
       "A": 5,
       "B": "Epithelial Casts UA",
+      "C": "Epithelial casts|PrThrNaric|UrUrnS",
       "D": 19826,
       "E": "5786-9",
       "F": "Epithelial casts [#/area] in Urine sediment by Microscopy low power field",
@@ -15408,6 +14576,7 @@ export default [
     {
       "A": 5,
       "B": "Fatty Casts UA",
+      "C": "Fatty casts|PrThrNaric|UrUrnS",
       "D": 1215,
       "E": "5789-3",
       "F": "Fatty casts [#/area] in Urine sediment by Microscopy low power field",
@@ -15421,6 +14590,7 @@ export default [
     {
       "A": 5,
       "B": "Fine Gran Casts Ur QN",
+      "C": "Granular casts.fine|PrThrNaric|UrUrnS",
       "D": 26684,
       "E": "32680-1",
       "F": "Fine Granular Casts [#/area] in Urine sediment by Microscopy low power field",
@@ -15435,6 +14605,7 @@ export default [
     {
       "A": 5,
       "B": "Granular Casts UA Qn",
+      "C": "Granular casts|PrThrNaric|UrUrnS",
       "D": 19831,
       "E": "5793-5",
       "F": "Granular casts [#/area] in Urine sediment by Microscopy low power field",
@@ -15448,6 +14619,7 @@ export default [
     {
       "A": 5,
       "B": "Hyaline Casts UA'",
+      "C": "Hyaline casts|PrThrNaric|UrUrnS",
       "D": 175,
       "E": "5796-8",
       "F": "Hyaline casts [#/area] in Urine sediment by Microscopy low power field",
@@ -15467,6 +14639,7 @@ export default [
     {
       "A": 5,
       "B": "RBC Casts UA Qn",
+      "C": "Erythrocyte casts|PrThrNaric|UrUrnS",
       "D": 19829,
       "E": "5807-3",
       "F": "RBC casts [#/area] in Urine sediment by Microscopy low power field",
@@ -15486,6 +14659,7 @@ export default [
     {
       "A": 5,
       "B": "Waxy Casts UA",
+      "C": "Waxy casts|PrThrNaric|UrUrnS",
       "D": 1218,
       "E": "5819-8",
       "F": "Waxy casts [#/area] in Urine sediment by Microscopy low power field",
@@ -15502,6 +14676,7 @@ export default [
     {
       "A": 5,
       "B": "WBC Casts UA",
+      "C": "Leukocyte casts|PrThrNaric|UrUrnS",
       "D": 3575,
       "E": "5820-6",
       "F": "WBC casts [#/area] in Urine sediment by Microscopy low power field",
@@ -15591,6 +14766,7 @@ export default [
     {
       "A": 4,
       "B": "Lamellar Body Cnt",
+      "C": "Lamellar bodies|PrThrTitrNCnc|Amnio fld",
       "D": 22731,
       "E": "19114-8",
       "F": "Lamellar bodies [#/volume] in Amniotic fluid",
@@ -15604,7 +14780,7 @@ export default [
     {
       "A": 3,
       "B": "Bilirubin Amn Qn",
-      "C": "Bilirubin|MCnc|Pt|Amnio fld|NarDocOrdQn|Method-Other",
+      "C": "Bilirubin|MCnc|Pt|Amnio fld|Method-Other",
       "D": 6274,
       "E": "1972-9",
       "F": "Bilirubin.total [Mass/volume] in Amniotic fluid",
@@ -15678,6 +14854,7 @@ export default [
     {
       "A": 3,
       "B": "WBC # CSF:",
+      "C": "Leukocytes|PrThrTitrNCnc|CSF",
       "D": 4896,
       "E": "806-0",
       "F": "Leukocytes [#/volume] in Cerebral spinal fluid by Manual count",
@@ -15712,6 +14889,7 @@ export default [
     {
       "A": 3,
       "B": "RBC # CSF:",
+      "C": "Erythrocytes|PrThrTitrNCnc|CSF",
       "D": 4898,
       "E": "26454-9",
       "F": "Erythrocytes [#/volume] in Cerebral spinal fluid",
@@ -15729,6 +14907,7 @@ export default [
     {
       "A": 3,
       "B": "Polys % CSF",
+      "C": "Polymorphonuclear cells/100 leukocytes|NFr|CSF",
       "D": 4901,
       "E": "26517-3",
       "F": "Polymorphonuclear cells/100 leukocytes in Cerebral spinal fluid",
@@ -15746,6 +14925,7 @@ export default [
     {
       "A": 3,
       "B": "Lymphocytes % CSF",
+      "C": "Lymphocytes/100 leukocytes|NFr|CSF",
       "D": 4900,
       "E": "10328-3",
       "F": "Lymphocytes/100 leukocytes in Cerebral spinal fluid by Manual count",
@@ -15763,6 +14943,7 @@ export default [
     {
       "A": 3,
       "B": "Monocytes % CSF",
+      "C": "Monocytes/100 leukocytes|NFr|CSF",
       "D": 5812,
       "E": "26486-1",
       "F": "Monocytes/100 leukocytes in Cerebral spinal fluid",
@@ -15780,6 +14961,7 @@ export default [
     {
       "A": 3,
       "B": "Mesothl Cell % CSF",
+      "C": "Mesothelial cells/100 leukocytes|NFr|CSF",
       "D": 6150,
       "E": "12233-3",
       "F": "Mesothelial cells/100 leukocytes in Cerebral spinal fluid by Manual count",
@@ -15816,7 +14998,7 @@ export default [
     {
       "A": 3,
       "B": "Albumin % CSF Elp",
-      "C": "Albumin/Protein.total|MFrSFr|Pt|CSF|NarDocOrdQn|Method-Other",
+      "C": "Albumin/Protein.total|MFrSFr|Pt|CSF|Method-Other",
       "D": 6045,
       "E": "13974-1",
       "F": "Albumin/Protein.total in Cerebral spinal fluid by Electrophoresis",
@@ -15962,7 +15144,6 @@ export default [
     {
       "A": 4,
       "B": "Protein CSF Qn",
-      "C": "Protein|MCnc|Pt|CSF|NarDocOrdQn|Method-Other",
       "D": 658,
       "E": "2880-3",
       "F": "Protein [Mass/volume] in Cerebral spinal fluid",
@@ -15982,7 +15163,7 @@ export default [
     {
       "A": 4,
       "B": "Prealbumin % CSF Elp",
-      "C": "Prealbumin/Protein.total|MFrSFr|Pt|CSF|NarDocOrdQn|Method-Other",
+      "C": "Prealbumin/Protein.total|MFrSFr|Pt|CSF|Method-Other",
       "D": 6044,
       "E": "13973-3",
       "F": "Prealbumin/Protein.total in Cerebral spinal fluid by Electrophoresis",
@@ -16000,7 +15181,7 @@ export default [
     {
       "A": 4,
       "B": "A1 Glob % CSF Qn Elp",
-      "C": "Alpha 1 globulin/Protein.total|MFrSFr|Pt|CSF|NarDocOrdQn|Method-Other",
+      "C": "Alpha 1 globulin/Protein.total|MFrSFr|Pt|CSF|Method-Other",
       "D": 6046,
       "E": "13972-5",
       "F": "Alpha 1 globulin/Protein.total in Cerebral spinal fluid by Electrophoresis",
@@ -16018,7 +15199,7 @@ export default [
     {
       "A": 4,
       "B": "A2 Glob CSF % Elp",
-      "C": "Alpha 2 globulin/Protein.total|MFrSFr|Pt|CSF|NarDocOrdQn|Method-Other",
+      "C": "Alpha 2 globulin/Protein.total|MFrSFr|Pt|CSF|Method-Other",
       "D": 6047,
       "E": "13975-8",
       "F": "Alpha 2 globulin/Protein.total in Cerebral spinal fluid by Electrophoresis",
@@ -16036,7 +15217,7 @@ export default [
     {
       "A": 4,
       "B": "Beta Glob % CSF Elp",
-      "C": "Beta globulin/Protein.total|MFrSFr|Pt|CSF|NarDocOrdQn|Method-Other",
+      "C": "Beta globulin/Protein.total|MFrSFr|Pt|CSF|Method-Other",
       "D": 6048,
       "E": "13976-6",
       "F": "Beta globulin/Protein.total in Cerebral spinal fluid by Electrophoresis",
@@ -16054,7 +15235,7 @@ export default [
     {
       "A": 4,
       "B": "Gamma Glob % CSF Elp",
-      "C": "Gamma globulin/Protein.total|MFrSFr|Pt|CSF|NarDocOrdQn|Method-Other",
+      "C": "Gamma globulin/Protein.total|MFrSFr|Pt|CSF|Method-Other",
       "D": 6049,
       "E": "13977-4",
       "F": "Gamma globulin/Protein.total in Cerebral spinal fluid by Electrophoresis",
@@ -16135,7 +15316,7 @@ export default [
     {
       "A": 3,
       "B": "Fat (Feces)",
-      "C": "Fat|MRatSRat|TimedSpecimen|Stool|NarDocOrdQn|Method-Other",
+      "C": "Fat|MRatSRat|TimedSpecimen|Stool|Method-Other",
       "D": 15340,
       "E": "16142-2",
       "F": "Fat [Mass/time] in 24 hour Stool",
@@ -16168,7 +15349,6 @@ export default [
     {
       "A": 4,
       "B": "Hemoccult(0-4)",
-      "C": "Hemoglobin.gastrointestinal.lower|PrThr|Pt|Stool|NarDocOrdQn|Method-Other",
       "D": 166,
       "E": "29771-3",
       "F": "Hemoglobin.gastrointestinal.lower [Presence] in Stool by Immunoassay",
@@ -16321,6 +15501,7 @@ export default [
     {
       "A": 4,
       "B": "WBC # Fld",
+      "C": "Leukocytes|PrThrTitrNCnc|Body fld",
       "D": 4438,
       "E": "26466-3",
       "F": "Leukocytes [#/volume] in Body fluid",
@@ -16349,6 +15530,7 @@ export default [
     {
       "A": 4,
       "B": "RBC # Fld",
+      "C": "Erythrocytes|PrThrTitrNCnc|Body fld",
       "D": 4439,
       "E": "6741-3",
       "F": "Erythrocytes [#/volume] in Body fluid by Manual count",
@@ -16362,6 +15544,7 @@ export default [
     {
       "A": 4,
       "B": "Polys % Fld",
+      "C": "Polymorphonuclear cells/100 leukocytes|NFr|Body fld",
       "D": 4435,
       "E": "26518-1",
       "F": "Polymorphonuclear cells/100 leukocytes in Body fluid",
@@ -16375,6 +15558,7 @@ export default [
     {
       "A": 4,
       "B": "Lymphocytes % Fld",
+      "C": "Lymphocytes/100 leukocytes|NFr|Body fld",
       "D": 4436,
       "E": "11031-2",
       "F": "Lymphocytes/100 leukocytes in Body fluid",
@@ -16388,6 +15572,7 @@ export default [
     {
       "A": 4,
       "B": "Monocytes % Fld",
+      "C": "Monocytes/100 leukocytes|NFr|Body fld",
       "D": 4461,
       "E": "26487-9",
       "F": "Monocytes/100 leukocytes in Body fluid",
@@ -16406,6 +15591,7 @@ export default [
     {
       "A": 4,
       "B": "Eosinophils % Fld",
+      "C": "Eosinophils/100 leukocytes|NFr|Body fld",
       "D": 14394,
       "E": "26452-3",
       "F": "Eosinophils/100 leukocytes in Body fluid",
@@ -16424,6 +15610,7 @@ export default [
     {
       "A": 4,
       "B": "Basophils % Fld",
+      "C": "Basophils/100 leukocytes|NFr|Body fld",
       "D": 25727,
       "E": "28543-7",
       "F": "Basophils/100 leukocytes in Body fluid",
@@ -16437,6 +15624,7 @@ export default [
     {
       "A": 4,
       "B": "Mesothl Cell % Fld",
+      "C": "Mesothelial cells/100 leukocytes|NFr|Body fld",
       "D": 5776,
       "E": "12234-1",
       "F": "Mesothelial cells/100 leukocytes in Body fluid by Manual count",
@@ -16556,7 +15744,7 @@ export default [
     {
       "A": 4,
       "B": "Creatinine Fld Qn",
-      "C": "Creatinine|MCnc|Pt|Body fld|NarDocOrdQn|Method-Other",
+      "C": "Creatinine|MCnc|Pt|Body fld|Method-Other",
       "D": 4977,
       "E": "12190-5",
       "F": "Creatinine [Mass/volume] in Body fluid",
@@ -16592,7 +15780,7 @@ export default [
     {
       "A": 4,
       "B": "Albumin Fld Qn (gm)",
-      "C": "Albumin|MCnc|Pt|Body fld|NarDocOrdQn|Method-Other",
+      "C": "Albumin|MCnc|Pt|Body fld|Method-Other",
       "D": 14475,
       "E": "1747-5",
       "F": "Albumin [Mass/volume] in Body fluid",
@@ -16624,7 +15812,7 @@ export default [
     {
       "A": 4,
       "B": "Bilirubin Fld Qn",
-      "C": "Bilirubin|MCnc|Pt|Body fld|NarDocOrdQn|Method-Other",
+      "C": "Bilirubin|MCnc|Pt|Body fld|Method-Other",
       "D": 16436,
       "E": "1974-5",
       "F": "Bilirubin.total [Mass/volume] in Body fluid",
@@ -16639,7 +15827,7 @@ export default [
     {
       "A": 4,
       "B": "Cholesterol Fld Qn",
-      "C": "Cholesterol|MCnc|Pt|Body fld|NarDocOrdQn|Method-Other",
+      "C": "Cholesterol|MCnc|Pt|Body fld|Method-Other",
       "D": 13700,
       "E": "12183-0",
       "F": "Cholesterol [Mass/volume] in Body fluid",
@@ -16657,7 +15845,7 @@ export default [
     {
       "A": 4,
       "B": "LDH Fld Qn",
-      "C": "Lactate dehydrogenase|CCnc|Pt|Body fld|NarDocOrdQn|Method-Other",
+      "C": "Lactate dehydrogenase|CCnc|Pt|Body fld|Method-Other",
       "D": 4978,
       "E": "2529-6",
       "F": "Lactate dehydrogenase [Enzymatic activity/volume] in Body fluid",
@@ -16707,7 +15895,7 @@ export default [
     {
       "A": 4,
       "B": "pH Fld",
-      "C": "pH|LsCnc|Pt|Body fld|NarDocOrdQn|Method-Other",
+      "C": "pH|LsCnc|Pt|Body fld|Method-Other",
       "D": 4058,
       "E": "2748-2",
       "F": "pH of Body fluid",
@@ -16724,7 +15912,7 @@ export default [
     {
       "A": 4,
       "B": "pH Pleural Fld",
-      "C": "pH|LsCnc|Pt|Plr fld|NarDocOrdQn|Method-Other",
+      "C": "pH|LsCnc|Pt|Plr fld|Method-Other",
       "D": 7661,
       "E": "2750-8",
       "F": "pH of Pleural fluid",
@@ -16741,6 +15929,7 @@ export default [
     {
       "A": 4,
       "B": "pH Vag Fld",
+      "C": "pH|Qn",
       "D": 16728,
       "E": "48037-6",
       "F": "pH of Vaginal fluid",
@@ -16772,7 +15961,7 @@ export default [
     {
       "A": 4,
       "B": "Sp Grav Fld",
-      "C": "Specific gravity|Rden|Pt|Body fld|NarDocOrdQn|Method-Other",
+      "C": "Specific gravity|Rden|Pt|Body fld|Method-Other",
       "D": 4057,
       "E": "2964-5",
       "F": "Specific gravity of Body fluid",
@@ -16783,7 +15972,7 @@ export default [
     {
       "A": 4,
       "B": "Triglyceride Fld Qn",
-      "C": "Triglyceride|MCnc|Pt|Body fld|NarDocOrdQn|Method-Other",
+      "C": "Triglyceride|MCnc|Pt|Body fld|Method-Other",
       "D": 14482,
       "E": "12228-3",
       "F": "Triglyceride [Mass/volume] in Body fluid",
@@ -16851,6 +16040,7 @@ export default [
     {
       "A": 2,
       "B": "Neutrophils % BAL",
+      "C": "Neutrophils/100 leukocytes|NFr|Bronchial",
       "D": 39340,
       "E": "27930-7",
       "F": "Neutrophils/100 leukocytes in Bronchial specimen",
@@ -16864,6 +16054,7 @@ export default [
     {
       "A": 2,
       "B": "Lymphocytes % BAL",
+      "C": "Lymphocytes/100 leukocytes|NFr|Bronchial",
       "D": 41752,
       "E": "30421-2",
       "F": "Lymphocytes/100 leukocytes in Bronchial specimen",
@@ -16877,6 +16068,7 @@ export default [
     {
       "A": 2,
       "B": "Mono+Macro % BAL",
+      "C": "Monocytes+Macrophages/100 leukocytes|NFr|Bronchial",
       "D": 39341,
       "E": "32833-6",
       "F": "Monocytes+Macrophages/100 leukocytes in Bronchial specimen",
@@ -16923,6 +16115,7 @@ export default [
     {
       "A": 2,
       "B": "Neutrophils % Pericard Fld",
+      "C": "Neutrophils/100 leukocytes|NFr|Pericard fld",
       "D": 39617,
       "E": "30454-3",
       "F": "Neutrophils/100 leukocytes in Pericardial fluid",
@@ -16936,6 +16129,7 @@ export default [
     {
       "A": 2,
       "B": "Lymphocytes % Pericard Fld",
+      "C": "Lymphocytes/100 leukocytes|NFr|Pericard fld",
       "D": 39618,
       "E": "26480-4",
       "F": "Lymphocytes/100 leukocytes in Pericardial fluid",
@@ -17076,6 +16270,7 @@ export default [
     {
       "A": 2,
       "B": "TNC Peritoneal Fld Qn",
+      "C": "Nucleated cells|PrThrTitrNCnc|Periton fld",
       "D": 39355,
       "E": "51926-4",
       "F": "Nucleated cells [#/volume] in Peritoneal fluid by Manual count",
@@ -17089,6 +16284,7 @@ export default [
     {
       "A": 2,
       "B": "WBC# Peritoneal Fld",
+      "C": "Leukocytes|PrThrTitrNCnc|Periton fld",
       "D": 34143,
       "E": "26468-9",
       "F": "Leukocytes [#/volume] in Peritoneal fluid",
@@ -17102,6 +16298,7 @@ export default [
     {
       "A": 2,
       "B": "RBC# Peritoneal Fld",
+      "C": "Erythrocytes|PrThrTitrNCnc|Periton fld",
       "D": 34144,
       "E": "26457-2",
       "F": "Erythrocytes [#/volume] in Peritoneal fluid",
@@ -17122,6 +16319,7 @@ export default [
     {
       "A": 2,
       "B": "Neutrophil% Peritoneal Fld",
+      "C": "Neutrophils/100 leukocytes|NFr|Periton fld",
       "D": 34140,
       "E": "26514-0",
       "F": "Neutrophils/100 leukocytes in Peritoneal fluid",
@@ -17135,6 +16333,7 @@ export default [
     {
       "A": 2,
       "B": "Lymphocyte % Peritoneal Fld",
+      "C": "Lymphocytes/100 leukocytes|NFr|Periton fld",
       "D": 34164,
       "E": "26482-0",
       "F": "Lymphocytes/100 leukocytes in Peritoneal fluid",
@@ -17148,6 +16347,7 @@ export default [
     {
       "A": 2,
       "B": "Mono+Macro % Peritoneal Fld",
+      "C": "Monocytes+Macrophages/100 leukocytes|NFr|Periton fld",
       "D": 39608,
       "E": "35020-7",
       "F": "Monocytes+Macrophages/100 leukocytes in Peritoneal fluid",
@@ -17161,6 +16361,7 @@ export default [
     {
       "A": 2,
       "B": "Monocytes % Peritoneal Fld",
+      "C": "Monocytes/100 leukocytes|NFr|Periton fld",
       "D": 34165,
       "E": "26488-7",
       "F": "Monocytes/100 leukocytes in Peritoneal fluid",
@@ -17174,6 +16375,7 @@ export default [
     {
       "A": 2,
       "B": "Eosinophil % Peritoneal Fld",
+      "C": "Eosinophils/100 leukocytes|NFr|Periton fld",
       "D": 34161,
       "E": "30380-0",
       "F": "Eosinophils/100 leukocytes in Peritoneal fluid",
@@ -17187,6 +16389,7 @@ export default [
     {
       "A": 2,
       "B": "Basophil % Peritoneal Fld Qn",
+      "C": "Basophils/100 leukocytes|NFr|Periton fld",
       "D": 37495,
       "E": "35069-4",
       "F": "Basophils/100 leukocytes in Peritoneal fluid",
@@ -17207,6 +16410,7 @@ export default [
     {
       "A": 2,
       "B": "Mesothelial Cells % Periton Fld",
+      "C": "Mesothelial cells/100 leukocytes|NFr|Periton fld",
       "D": 39609,
       "E": "30432-9",
       "F": "Mesothelial cells/100 leukocytes in Peritoneal fluid",
@@ -17259,7 +16463,6 @@ export default [
     {
       "A": 2,
       "B": "Albumin Peritoneal Fld Qn",
-      "C": "Albumin|MCnc|Pt|Periton fld|NarDocOrdQn|Method-Other",
       "D": 34149,
       "E": "1749-1",
       "F": "Albumin [Mass/volume] in Peritoneal fluid",
@@ -17314,7 +16517,6 @@ export default [
     {
       "A": 2,
       "B": "Glucose Peritoneal Fld Qn",
-      "C": "Glucose|MCnc|Pt|Periton fld|NarDocOrdQn|Method-Other",
       "D": 34145,
       "E": "2347-3",
       "F": "Glucose [Mass/volume] in Peritoneal fluid",
@@ -17329,7 +16531,7 @@ export default [
     {
       "A": 2,
       "B": "LDH Peritoneal Fld Qn",
-      "C": "Lactate dehydrogenase|CCnc|Pt|Periton fld|NarDocOrdQn|Method-Other",
+      "C": "Lactate dehydrogenase|CCnc|Pt|Periton fld|Method-Other",
       "D": 34146,
       "E": "2531-2",
       "F": "Lactate dehydrogenase [Enzymatic activity/volume] in Peritoneal fluid",
@@ -17549,6 +16751,7 @@ export default [
     {
       "A": 2,
       "B": "TNC Pleural Fld Qn",
+      "C": "Nucleated cells|PrThrTitrNCnc|Plr fld",
       "D": 39352,
       "E": "52819-0",
       "F": "Nucleated cells [#/volume] in Pleural fluid by Automated count",
@@ -17562,6 +16765,7 @@ export default [
     {
       "A": 2,
       "B": "WBC # Pleural Fld",
+      "C": "Leukocytes|PrThrTitrNCnc|Plr fld",
       "D": 33934,
       "E": "26467-1",
       "F": "Leukocytes [#/volume] in Pleural fluid",
@@ -17588,6 +16792,7 @@ export default [
     {
       "A": 2,
       "B": "RBC # Pleural Fld",
+      "C": "Erythrocytes|PrThrTitrNCnc|Plr fld",
       "D": 33933,
       "E": "26456-4",
       "F": "Erythrocytes [#/volume] in Pleural fluid",
@@ -17601,6 +16806,7 @@ export default [
     {
       "A": 2,
       "B": "Neutrophil % Pleural Fld",
+      "C": "Neutrophils/100 leukocytes|NFr|Plr fld",
       "D": 33976,
       "E": "14848-6",
       "F": "Neutrophils/100 leukocytes in Pleural fluid by Manual count",
@@ -17621,6 +16827,7 @@ export default [
     {
       "A": 2,
       "B": "Lymphocyte % Pleural Fld",
+      "C": "Lymphocytes/100 leukocytes|NFr|Plr fld",
       "D": 33978,
       "E": "14820-5",
       "F": "Lymphocytes/100 leukocytes in Pleural fluid by Manual count",
@@ -17634,6 +16841,7 @@ export default [
     {
       "A": 2,
       "B": "Mono+Macro % Pleural Fld",
+      "C": "Monocytes+Macrophages/100 leukocytes|NFr|Plr fld",
       "D": 39353,
       "E": "35021-5",
       "F": "Monocytes+Macrophages/100 leukocytes in Pleural fluid",
@@ -17647,6 +16855,7 @@ export default [
     {
       "A": 2,
       "B": "Monocyte % Pleural Fld",
+      "C": "Monocytes/100 leukocytes|NFr|Plr fld",
       "D": 33979,
       "E": "40521-7",
       "F": "Monocytes/100 leukocytes in Pleural fluid by Manual count",
@@ -17660,6 +16869,7 @@ export default [
     {
       "A": 2,
       "B": "Eosinophil % Pleural Fld",
+      "C": "Eosinophils/100 leukocytes|NFr|Plr fld",
       "D": 34224,
       "E": "30379-2",
       "F": "Eosinophils/100 leukocytes in Pleural fluid",
@@ -17673,6 +16883,7 @@ export default [
     {
       "A": 2,
       "B": "Basophil % Pleural Fld",
+      "C": "Basophils/100 leukocytes|NFr|Plr fld",
       "D": 34463,
       "E": "35070-2",
       "F": "Basophils/100 leukocytes in Pleural fluid",
@@ -17693,6 +16904,7 @@ export default [
     {
       "A": 2,
       "B": "Mesothelial Cells % Pleural Fld",
+      "C": "Mesothelial cells/100 leukocytes|NFr|Plr fld",
       "D": 39605,
       "E": "30431-1",
       "F": "Mesothelial cells/100 leukocytes in Pleural fluid",
@@ -17764,7 +16976,7 @@ export default [
     {
       "A": 2,
       "B": "Cholesterol Pleural Fld Qn",
-      "C": "Cholesterol|MCnc|Pt|Plr fld|NarDocOrdQn|Method-Other",
+      "C": "Cholesterol|MCnc|Pt|Plr fld|Method-Other",
       "D": 34443,
       "E": "9618-0",
       "F": "Cholesterol [Mass/volume] in Pleural fluid",
@@ -17792,7 +17004,7 @@ export default [
     {
       "A": 2,
       "B": "LDH Pleural Fluid Qn",
-      "C": "Lactate dehydrogenase|CCnc|Pt|Plr fld|NarDocOrdQn|Method-Other",
+      "C": "Lactate dehydrogenase|CCnc|Pt|Plr fld|Method-Other",
       "D": 36233,
       "E": "2530-4",
       "F": "Lactate dehydrogenase [Enzymatic activity/volume] in Pleural fluid",
@@ -18092,6 +17304,7 @@ export default [
     {
       "A": 4,
       "B": "Suscept Ur 1",
+      "C": "Antibiotic XXX|Scale-Other|Method-Other",
       "D": 6415,
       "E": "23658-8",
       "F": "Other Antibiotic [Susceptibility]",
@@ -18162,6 +17375,7 @@ export default [
     {
       "A": 5,
       "B": "Furacin Top Susc",
+      "C": "Nitrofurazone|Scale-Other|Method-Other",
       "D": 7940,
       "E": "20388-5",
       "F": "Nitrofurazone [Susceptibility]",
@@ -18175,6 +17389,7 @@ export default [
     {
       "A": 5,
       "B": "Gentamicin Top Susc",
+      "C": "Gentamicin|Scale-Other|Method-Other",
       "D": 24676,
       "E": "268-3",
       "F": "Gentamicin [Susceptibility] by Disk diffusion (KB)",
@@ -18190,6 +17405,7 @@ export default [
     {
       "A": 4,
       "B": "MIC Ampicillin",
+      "C": "Ampicillin|Scale-Other|Method-Other",
       "D": 6369,
       "E": "28-1",
       "F": "Ampicillin [Susceptibility] by Minimum inhibitory concentration (MIC)",
@@ -18207,6 +17423,7 @@ export default [
     {
       "A": 4,
       "B": "MIC Cephalothin",
+      "C": "Cephalothin|Scale-Other|Method-Other",
       "D": 6362,
       "E": "161-0",
       "F": "Cephalothin [Susceptibility] by Minimum inhibitory concentration (MIC)",
@@ -18223,6 +17440,7 @@ export default [
     {
       "A": 4,
       "B": "MIC Chloramphen",
+      "C": "Chloramphenicol|Scale-Other|Method-Other",
       "D": 6367,
       "E": "173-5",
       "F": "Chloramphenicol [Susceptibility] by Minimum inhibitory concentration (MIC)",
@@ -18239,6 +17457,7 @@ export default [
     {
       "A": 4,
       "B": "MIC Clindamycin",
+      "C": "Clindamycin|Scale-Other|Method-Other",
       "D": 6363,
       "E": "193-3",
       "F": "Clindamycin [Susceptibility] by Minimum inhibitory concentration (MIC)",
@@ -18253,6 +17472,7 @@ export default [
     {
       "A": 4,
       "B": "MIC Gentamicin",
+      "C": "Gentamicin|Scale-Other|Method-Other",
       "D": 6364,
       "E": "267-5",
       "F": "Gentamicin [Susceptibility] by Minimum inhibitory concentration (MIC)",
@@ -18270,6 +17490,7 @@ export default [
     {
       "A": 4,
       "B": "MIC Methicillin",
+      "C": "Methicillin|Scale-Other|Method-Other",
       "D": 6365,
       "E": "323-6",
       "F": "Methicillin [Susceptibility] by Minimum inhibitory concentration (MIC)",
@@ -18285,6 +17506,7 @@ export default [
     {
       "A": 4,
       "B": "MIC Penicillin",
+      "C": "Penicillin|Scale-Other|Method-Other",
       "D": 6368,
       "E": "6932-8",
       "F": "Penicillin [Susceptibility] by Minimum inhibitory concentration (MIC)",
@@ -18302,6 +17524,7 @@ export default [
     {
       "A": 4,
       "B": "MIC Tetracyclin",
+      "C": "Tetracycline|Scale-Other|Method-Other",
       "D": 6366,
       "E": "496-0",
       "F": "Tetracycline [Susceptibility] by Minimum inhibitory concentration (MIC)",
@@ -18313,6 +17536,7 @@ export default [
     {
       "A": 4,
       "B": "Sulfa MIC",
+      "C": "Sulfamethoxazole|Scale-Other|Method-Other",
       "D": 7224,
       "E": "468-9",
       "F": "Sulfamethoxazole [Susceptibility] by Minimum inhibitory concentration (MIC)",
@@ -18324,6 +17548,7 @@ export default [
     {
       "A": 4,
       "B": "Thienamycin MIC",
+      "C": "Imipenem|Scale-Other|Method-Other",
       "D": 9025,
       "E": "18932-4",
       "F": "Imipenem [Susceptibility]",
@@ -18351,6 +17576,7 @@ export default [
     {
       "A": 5,
       "B": "Azlocillin MIC",
+      "C": "Azlocillin|Scale-Other|Method-Other",
       "D": 9033,
       "E": "40-6",
       "F": "Azlocillin [Susceptibility] by Minimum inhibitory concentration (MIC)",
@@ -18362,6 +17588,7 @@ export default [
     {
       "A": 5,
       "B": "Mezlocillin MIC",
+      "C": "Mezlocillin|Scale-Other|Method-Other",
       "D": 7540,
       "E": "331-9",
       "F": "Mezlocillin [Susceptibility] by Minimum inhibitory concentration (MIC)",
@@ -18373,6 +17600,7 @@ export default [
     {
       "A": 5,
       "B": "Piperacillin MIC",
+      "C": "Piperacillin|Scale-Other|Method-Other",
       "D": 7539,
       "E": "408-5",
       "F": "Piperacillin [Susceptibility] by Minimum inhibitory concentration (MIC)",
@@ -18387,6 +17615,7 @@ export default [
     {
       "A": 5,
       "B": "Piperacillin-Ur Susc",
+      "C": "Piperacillin|Scale-Other|Method-Other",
       "D": 9471,
       "E": "18969-6",
       "F": "Piperacillin [Susceptibility]",
@@ -18398,6 +17627,7 @@ export default [
     {
       "A": 5,
       "B": "Carbenicill MIC",
+      "C": "Carbenicillin|Scale-Other|Method-Other",
       "D": 7225,
       "E": "60-4",
       "F": "Carbenicillin [Susceptibility] by Minimum inhibitory concentration (MIC)",
@@ -18411,6 +17641,7 @@ export default [
     {
       "A": 5,
       "B": "Carbenicill-Ur Susc",
+      "C": "Carbenicillin|Scale-Other|Method-Other",
       "D": 9472,
       "E": "18873-0",
       "F": "Carbenicillin [Susceptibility]",
@@ -18421,6 +17652,7 @@ export default [
     {
       "A": 5,
       "B": "Ticarcillin MIC",
+      "C": "Ticarcillin|Scale-Other|Method-Other",
       "D": 13398,
       "E": "500-9",
       "F": "Ticarcillin [Susceptibility] by Minimum inhibitory concentration (MIC)",
@@ -18432,6 +17664,7 @@ export default [
     {
       "A": 5,
       "B": "Oxacillin MIC",
+      "C": "Oxacillin|Scale-Other|Method-Other",
       "D": 7215,
       "E": "383-0",
       "F": "Oxacillin [Susceptibility] by Minimum inhibitory concentration (MIC)",
@@ -18453,6 +17686,7 @@ export default [
     {
       "A": 5,
       "B": "Augmentin GNR",
+      "C": "Amoxicillin+Clavulanate|Scale-Other|Method-Other",
       "D": 9036,
       "E": "18862-3",
       "F": "Amoxicillin+Clavulanate [Susceptibility]",
@@ -18466,6 +17700,7 @@ export default [
     {
       "A": 5,
       "B": "PIP\\TAZOBACTAM MIC",
+      "C": "Piperacillin+Tazobactam|Scale-Other|Method-Other",
       "D": 24546,
       "E": "18970-4",
       "F": "Piperacillin+Tazobactam [Susceptibility]",
@@ -18479,6 +17714,7 @@ export default [
     {
       "A": 5,
       "B": "Ticar K Clav MIC",
+      "C": "Ticarcillin+Clavulanate|Scale-Other|Method-Other",
       "D": 13397,
       "E": "504-1",
       "F": "Ticarcillin+Clavulanate [Susceptibility] by Minimum inhibitory concentration (MIC)",
@@ -18495,6 +17731,7 @@ export default [
     {
       "A": 6,
       "B": "Cefazolin MIC",
+      "C": "ceFAZolin|Scale-Other|Method-Other",
       "D": 9030,
       "E": "76-0",
       "F": "Cefazolin [Susceptibility] by Minimum inhibitory concentration (MIC)",
@@ -18506,6 +17743,7 @@ export default [
     {
       "A": 6,
       "B": "Cefazolin-Ur Susc",
+      "C": "ceFAZolin|Scale-Other|Method-Other",
       "D": 9462,
       "E": "18878-9",
       "F": "Cefazolin [Susceptibility]",
@@ -18519,6 +17757,7 @@ export default [
     {
       "A": 6,
       "B": "Cephalothin-Ur Susc",
+      "C": "Cephalothin|Scale-Other|Method-Other",
       "D": 9469,
       "E": "18900-1",
       "F": "Cephalothin [Susceptibility]",
@@ -18539,6 +17778,7 @@ export default [
     {
       "A": 6,
       "B": "Cefamandole MIC",
+      "C": "Cefamandole|Scale-Other|Method-Other",
       "D": 7213,
       "E": "68-7",
       "F": "Cefamandole [Susceptibility] by Minimum inhibitory concentration (MIC)",
@@ -18549,6 +17789,7 @@ export default [
     {
       "A": 6,
       "B": "Cefamandole-Ur Susc",
+      "C": "Cefamandole|Scale-Other|Method-Other",
       "D": 9460,
       "E": "18876-3",
       "F": "Cefamandole [Susceptibility]",
@@ -18562,6 +17803,7 @@ export default [
     {
       "A": 6,
       "B": "Cefonocid MIC",
+      "C": "Cefonicid|Scale-Other|Method-Other",
       "D": 9031,
       "E": "96-8",
       "F": "Cefonicid [Susceptibility] by Minimum inhibitory concentration (MIC)",
@@ -18573,6 +17815,7 @@ export default [
     {
       "A": 6,
       "B": "Cefonocid-Ur Susc",
+      "C": "Cefonicid|Scale-Other|Method-Other",
       "D": 9457,
       "E": "18883-9",
       "F": "Cefonicid [Susceptibility]",
@@ -18584,6 +17827,7 @@ export default [
     {
       "A": 6,
       "B": "Cefuroxime MIC",
+      "C": "Cefuroxime.parenteral|Scale-Other|Method-Other",
       "D": 9476,
       "E": "145-3",
       "F": "Cefuroxime Parenteral [Susceptibility] by Minimum inhibitory concentration (MIC)",
@@ -18594,6 +17838,7 @@ export default [
     {
       "A": 6,
       "B": "Cefuroxime-Ur Susc",
+      "C": "Cefuroxime|Scale-Other|Method-Other",
       "D": 9470,
       "E": "51724-3",
       "F": "Cefuroxime [Susceptibility]",
@@ -18607,6 +17852,7 @@ export default [
     {
       "A": 6,
       "B": "ORAL CEFUROXIME MIC",
+      "C": "Cefuroxime.oral|Scale-Other|Method-Other",
       "D": 20993,
       "E": "20460-2",
       "F": "Cefuroxime Oral [Susceptibility] by Minimum inhibitory concentration (MIC)",
@@ -18617,6 +17863,7 @@ export default [
     {
       "A": 6,
       "B": "Cefotetan MIC",
+      "C": "cefoTEtan|Scale-Other|Method-Other",
       "D": 11027,
       "E": "112-3",
       "F": "Cefotetan [Susceptibility] by Minimum inhibitory concentration (MIC)",
@@ -18628,6 +17875,7 @@ export default [
     {
       "A": 6,
       "B": "Cefotetan-Ur Susc",
+      "C": "cefoTEtan|Scale-Other|Method-Other",
       "D": 11028,
       "E": "18887-0",
       "F": "Cefotetan [Susceptibility]",
@@ -18639,6 +17887,7 @@ export default [
     {
       "A": 6,
       "B": "Cefoxitin MIC",
+      "C": "cefOXitin|Scale-Other|Method-Other",
       "D": 7227,
       "E": "116-4",
       "F": "Cefoxitin [Susceptibility] by Minimum inhibitory concentration (MIC)",
@@ -18650,6 +17899,7 @@ export default [
     {
       "A": 6,
       "B": "Cefoxitin-Ur Susc",
+      "C": "cefOXitin|Scale-Other|Method-Other",
       "D": 9461,
       "E": "18888-8",
       "F": "Cefoxitin [Susceptibility]",
@@ -18670,6 +17920,7 @@ export default [
     {
       "A": 6,
       "B": "Cefoperazone MIC",
+      "C": "Cefoperazone|Scale-Other|Method-Other",
       "D": 7543,
       "E": "100-8",
       "F": "Cefoperazone [Susceptibility] by Minimum inhibitory concentration (MIC)",
@@ -18684,6 +17935,7 @@ export default [
     {
       "A": 6,
       "B": "Ceftazidime MIC",
+      "C": "cefTAZidime|Scale-Other|Method-Other",
       "D": 9026,
       "E": "133-9",
       "F": "Ceftazidime [Susceptibility] by Minimum inhibitory concentration (MIC)",
@@ -18698,6 +17950,7 @@ export default [
     {
       "A": 6,
       "B": "Ceftizoxime MIC",
+      "C": "Ceftizoxime|Scale-Other|Method-Other",
       "D": 9027,
       "E": "137-0",
       "F": "Ceftizoxime [Susceptibility] by Minimum inhibitory concentration (MIC)",
@@ -18709,6 +17962,7 @@ export default [
     {
       "A": 6,
       "B": "Cefoperazone-Ur Susc",
+      "C": "Cefoperazone|Scale-Other|Method-Other",
       "D": 9453,
       "E": "18884-7",
       "F": "Cefoperazone [Susceptibility]",
@@ -18723,6 +17977,7 @@ export default [
     {
       "A": 6,
       "B": "Cefotaxime MIC",
+      "C": "Cefotaxime|Scale-Other|Method-Other",
       "D": 7541,
       "E": "108-1",
       "F": "Cefotaxime [Susceptibility] by Minimum inhibitory concentration (MIC)",
@@ -18733,6 +17988,7 @@ export default [
     {
       "A": 6,
       "B": "Ceftazidime-Ur Susc",
+      "C": "cefTAZidime|Scale-Other|Method-Other",
       "D": 9458,
       "E": "18893-8",
       "F": "Ceftazidime [Susceptibility]",
@@ -18747,6 +18003,7 @@ export default [
     {
       "A": 6,
       "B": "Cefotaxime-Ur Susc",
+      "C": "Cefotaxime|Scale-Other|Method-Other",
       "D": 9466,
       "E": "18886-2",
       "F": "Cefotaxime [Susceptibility]",
@@ -18760,6 +18017,7 @@ export default [
     {
       "A": 6,
       "B": "Ceftriaxone MIC",
+      "C": "cefTRIAXone|Scale-Other|Method-Other",
       "D": 9032,
       "E": "141-2",
       "F": "Ceftriaxone [Susceptibility] by Minimum inhibitory concentration (MIC)",
@@ -18771,6 +18029,7 @@ export default [
     {
       "A": 6,
       "B": "Ceftriaxone-Ur Susc",
+      "C": "cefTRIAXone|Scale-Other|Method-Other",
       "D": 9459,
       "E": "18895-3",
       "F": "Ceftriaxone [Susceptibility]",
@@ -18785,6 +18044,7 @@ export default [
     {
       "A": 6,
       "B": "Ceftizoxime-Ur Susc",
+      "C": "Ceftizoxime|Scale-Other|Method-Other",
       "D": 9456,
       "E": "18894-6",
       "F": "Ceftizoxime [Susceptibility]",
@@ -18796,6 +18056,7 @@ export default [
     {
       "A": 6,
       "B": "Moxalactam MIC",
+      "C": "Moxalactam|Scale-Other|Method-Other",
       "D": 7542,
       "E": "343-4",
       "F": "Moxalactam [Susceptibility] by Minimum inhibitory concentration (MIC)",
@@ -18807,6 +18068,7 @@ export default [
     {
       "A": 6,
       "B": "Moxalactam-Ur Susc",
+      "C": "Moxalactam|Scale-Other|Method-Other",
       "D": 9465,
       "E": "18950-6",
       "F": "Moxalactam [Susceptibility]",
@@ -18833,6 +18095,7 @@ export default [
     {
       "A": 5,
       "B": "Aztreonam MIC",
+      "C": "Aztreonam|Scale-Other|Method-Other",
       "D": 11031,
       "E": "44-8",
       "F": "Aztreonam [Susceptibility] by Minimum inhibitory concentration (MIC)",
@@ -18852,6 +18115,7 @@ export default [
     {
       "A": 5,
       "B": "Imipenem MIC",
+      "C": "Imipenem|Scale-Other|Method-Other",
       "D": 13396,
       "E": "279-0",
       "F": "Imipenem [Susceptibility] by Minimum inhibitory concentration (MIC)",
@@ -18863,6 +18127,7 @@ export default [
     {
       "A": 5,
       "B": "Meropenem MIC",
+      "C": "Meropenem|Scale-Other|Method-Other",
       "D": 29711,
       "E": "6652-2",
       "F": "Meropenem [Susceptibility] by Minimum inhibitory concentration (MIC)",
@@ -18880,6 +18145,7 @@ export default [
     {
       "A": 5,
       "B": "Amikacin MIC",
+      "C": "Amikacin|Scale-Other|Method-Other",
       "D": 7226,
       "E": "12-5",
       "F": "Amikacin [Susceptibility] by Minimum inhibitory concentration (MIC)",
@@ -18892,6 +18158,7 @@ export default [
     {
       "A": 5,
       "B": "Kanamycin MIC",
+      "C": "Kanamycin|Scale-Other|Method-Other",
       "D": 7232,
       "E": "291-5",
       "F": "Kanamycin [Susceptibility] by Minimum inhibitory concentration (MIC)",
@@ -18903,6 +18170,7 @@ export default [
     {
       "A": 5,
       "B": "Netilmicin MIC",
+      "C": "Netilmicin|Scale-Other|Method-Other",
       "D": 7544,
       "E": "359-0",
       "F": "Netilmicin [Susceptibility] by Minimum inhibitory concentration (MIC)",
@@ -18914,6 +18182,7 @@ export default [
     {
       "A": 5,
       "B": "Tobramycin MIC",
+      "C": "Tobramycin|Scale-Other|Method-Other",
       "D": 7218,
       "E": "508-2",
       "F": "Tobramycin [Susceptibility] by Minimum inhibitory concentration (MIC)",
@@ -18931,6 +18200,7 @@ export default [
     {
       "A": 5,
       "B": "Erythromycin MIC",
+      "C": "Erythromycin|Scale-Other|Method-Other",
       "D": 7214,
       "E": "233-7",
       "F": "Erythromycin [Susceptibility] by Minimum inhibitory concentration (MIC)",
@@ -18950,6 +18220,7 @@ export default [
     {
       "A": 5,
       "B": "Minocycline MIC1",
+      "C": "Minocycline|Scale-Other|Method-Other",
       "D": 7548,
       "E": "335-0",
       "F": "Minocycline [Susceptibility] by Minimum inhibitory concentration (MIC)",
@@ -18961,6 +18232,7 @@ export default [
     {
       "A": 5,
       "B": "Tetracycline-Ur Susc",
+      "C": "Tetracycline|Scale-Other|Method-Other",
       "D": 9463,
       "E": "18993-6",
       "F": "Tetracycline [Susceptibility]",
@@ -18980,6 +18252,7 @@ export default [
     {
       "A": 5,
       "B": "Ciprofloxacn-MIC",
+      "C": "Ciprofloxacin|Scale-Other|Method-Other",
       "D": 11030,
       "E": "185-9",
       "F": "Ciprofloxacin [Susceptibility] by Minimum inhibitory concentration (MIC)",
@@ -18994,6 +18267,7 @@ export default [
     {
       "A": 5,
       "B": "Norfloxacin MIC",
+      "C": "Norfloxacin|Scale-Other|Method-Other",
       "D": 11029,
       "E": "367-3",
       "F": "Norfloxacin [Susceptibility] by Minimum inhibitory concentration (MIC)",
@@ -19005,6 +18279,7 @@ export default [
     {
       "A": 5,
       "B": "Ofloxacin MIC",
+      "C": "Ofloxacin|Scale-Other|Method-Other",
       "D": 15980,
       "E": "375-6",
       "F": "Ofloxacin [Susceptibility] by Minimum inhibitory concentration (MIC)",
@@ -19022,6 +18297,7 @@ export default [
     {
       "A": 5,
       "B": "Vancomycin MIC",
+      "C": "Vancomycin|Scale-Other|Method-Other",
       "D": 7217,
       "E": "524-9",
       "F": "Vancomycin [Susceptibility] by Minimum inhibitory concentration (MIC)",
@@ -19043,6 +18319,7 @@ export default [
     {
       "A": 5,
       "B": "Mupirocin Susc",
+      "C": "Mupirocin|Scale-Other|Method-Other",
       "D": 19449,
       "E": "20389-3",
       "F": "Mupirocin [Susceptibility]",
@@ -19056,6 +18333,7 @@ export default [
     {
       "A": 5,
       "B": "Nitrofurant MIC",
+      "C": "Nitrofurantoin|Scale-Other|Method-Other",
       "D": 7221,
       "E": "363-2",
       "F": "Nitrofurantoin [Susceptibility] by Minimum inhibitory concentration (MIC)",
@@ -19070,6 +18348,7 @@ export default [
     {
       "A": 5,
       "B": "Nitrofurant-Ur Susc",
+      "C": "Nitrofurantoin|Scale-Other|Method-Other",
       "D": 9464,
       "E": "18955-5",
       "F": "Nitrofurantoin [Susceptibility]",
@@ -19083,6 +18362,7 @@ export default [
     {
       "A": 5,
       "B": "Rifampin MIC",
+      "C": "rifAMPin|Scale-Other|Method-Other",
       "D": 7555,
       "E": "428-3",
       "F": "Rifampin [Susceptibility] by Minimum inhibitory concentration (MIC)",
@@ -19094,6 +18374,7 @@ export default [
     {
       "A": 5,
       "B": "Sulfamethox-Ur Susc",
+      "C": "Sulfamethoxazole|Scale-Other|Method-Other",
       "D": 9468,
       "E": "18985-2",
       "F": "Sulfamethoxazole [Susceptibility]",
@@ -19107,6 +18388,7 @@ export default [
     {
       "A": 5,
       "B": "Trimethoprim MIC",
+      "C": "Trimethoprim|Scale-Other|Method-Other",
       "D": 13407,
       "E": "512-4",
       "F": "Trimethoprim [Susceptibility] by Minimum inhibitory concentration (MIC)",
@@ -19118,6 +18400,7 @@ export default [
     {
       "A": 5,
       "B": "Trimethoprim+Sulfameth MIC",
+      "C": "Trimethoprim+Sulfamethoxazole|Scale-Other|Method-Other",
       "D": 7222,
       "E": "516-5",
       "F": "Trimethoprim+Sulfamethoxazole [Susceptibility] by Minimum inhibitory concentration (MIC)",
@@ -19164,7 +18447,7 @@ export default [
     {
       "A": 4,
       "B": "B burgdorf EIA Index Titr",
-      "C": "Borrelia burgdorferi Ab|PrTitrACnc|Intravascular - any|IA_IF_Null*",
+      "C": "Borrelia burgdorferi Ab|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 17901,
       "E": "5060-9",
       "F": "Borrelia burgdorferi Ab [Units/volume] in Serum by Immunoassay",
@@ -19175,7 +18458,7 @@ export default [
     {
       "A": 4,
       "B": "B burgdorferi Ab CSF Qn EIA",
-      "C": "Borrelia burgdorferi Ab|PrTitrACnc|CSF|IA_IF_Null*",
+      "C": "Borrelia burgdorferi Ab|ACncTitr|CSF|IA-IF-Null*",
       "D": 29408,
       "E": "6318-0",
       "F": "Borrelia burgdorferi Ab [Units/volume] in Cerebral spinal fluid by Immunoassay",
@@ -19192,7 +18475,7 @@ export default [
     {
       "A": 4,
       "B": "B abortus Ab Aggl Ser Titr",
-      "C": "Brucella abortus Ab|PrTitrACnc|Intravascular - any|Aggl",
+      "C": "Brucella abortus Ab|ACncTitr|Intravascular-any|Aggl",
       "D": 5135,
       "E": "6324-8",
       "F": "Brucella abortus Ab [Titer] in Serum by Agglutination",
@@ -19210,7 +18493,7 @@ export default [
     {
       "A": 4,
       "B": "B melitensis Ab Ser Titr",
-      "C": "Brucella melitensis Ab|PrTitrACnc|Intravascular - any|IA_IF_Null*",
+      "C": "Brucella melitensis Ab|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 6245,
       "E": "22157-2",
       "F": "Brucella melitensis Ab [Titer] in Serum",
@@ -19229,7 +18512,7 @@ export default [
     {
       "A": 4,
       "B": "B suis Ab Ser Aggl Titr",
-      "C": "Brucella suis Ab|PrTitrACnc|Intravascular - any|Aggl",
+      "C": "Brucella suis Ab|ACncTitr|Intravascular-any|Aggl",
       "D": 6244,
       "E": "5071-6",
       "F": "Brucella suis Ab [Titer] in Serum by Latex agglutination",
@@ -19254,7 +18537,7 @@ export default [
     {
       "A": 4,
       "B": "Chlamydia Sp IgG Ser Titr",
-      "C": "Chlamydia sp Ab.IgG|PrTitrACnc|Intravascular - any|IA_IF_Null*",
+      "C": "Chlamydia sp Ab.IgG|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 11014,
       "E": "22184-6",
       "F": "Chlamydia sp IgG Ab [Titer] in Serum",
@@ -19272,7 +18555,7 @@ export default [
     {
       "A": 4,
       "B": "Chlamydia Sp IgM Ser Titr",
-      "C": "Chlamydia sp Ab.IgM|PrTitrACnc|Intravascular - any|IA_IF_Null*",
+      "C": "Chlamydia sp Ab.IgM|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 11015,
       "E": "22186-1",
       "F": "Chlamydia sp IgM Ab [Titer] in Serum",
@@ -19308,7 +18591,7 @@ export default [
     {
       "A": 4,
       "B": "H Pylori IgM Ser Qn EIA",
-      "C": "Helicobacter pylori Ab.IgM|PrTitrACnc|Intravascular - any|IA_IF_Null*",
+      "C": "Helicobacter pylori Ab.IgM|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 30975,
       "E": "5177-1",
       "F": "Helicobacter pylori IgM Ab [Units/volume] in Serum by Immunoassay",
@@ -19322,7 +18605,7 @@ export default [
     {
       "A": 4,
       "B": "H pylori IgG Ser Qn EIA",
-      "C": "Helicobacter pylori Ab.IgG|PrTitrACnc|Intravascular - any|IA_IF_Null*",
+      "C": "Helicobacter pylori Ab.IgG|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 21125,
       "E": "5176-3",
       "F": "Helicobacter pylori IgG Ab [Units/volume] in Serum by Immunoassay",
@@ -19346,7 +18629,7 @@ export default [
     {
       "A": 4,
       "B": "L pneumophila Ab Ser Titr",
-      "C": "Legionella pneumophila Ab|PrTitrACnc|Intravascular - any|IA_IF_Null*",
+      "C": "Legionella pneumophila Ab|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 8695,
       "E": "22396-6",
       "F": "Legionella pneumophila Ab [Titer] in Serum",
@@ -19366,7 +18649,7 @@ export default [
     {
       "A": 4,
       "B": "L pneumophilia Ab Titr IF",
-      "C": "Legionella pneumophila Ab|PrTitrACnc|Intravascular - any|IA_IF_Null*",
+      "C": "Legionella pneumophila Ab|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 5930,
       "E": "5237-3",
       "F": "Legionella pneumophila Ab [Titer] in Serum by Immunofluorescence",
@@ -19392,7 +18675,7 @@ export default [
     {
       "A": 4,
       "B": "M pneumoniae IgG Ser Qn EIA",
-      "C": "Mycoplasma pneumoniae Ab.IgG|PrTitrACnc|Intravascular - any|IA_IF_Null*",
+      "C": "Mycoplasma pneumoniae Ab.IgG|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 24851,
       "E": "5255-5",
       "F": "Mycoplasma pneumoniae IgG Ab [Units/volume] in Serum by Immunoassay",
@@ -19405,7 +18688,7 @@ export default [
     {
       "A": 4,
       "B": "M pneumoniae IgM Ser Qn EIA",
-      "C": "Mycoplasma pneumoniae Ab.IgM|PrTitrACnc|Intravascular - any|IA_IF_Null*",
+      "C": "Mycoplasma pneumoniae Ab.IgM|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 24852,
       "E": "5256-3",
       "F": "Mycoplasma pneumoniae IgM Ab [Units/volume] in Serum by Immunoassay",
@@ -19418,7 +18701,7 @@ export default [
     {
       "A": 4,
       "B": "M pneumoniae Ab Ser Titr CF",
-      "C": "Mycoplasma pneumoniae Ab|PrTitrACnc|Intravascular - any|Comp fix",
+      "C": "Mycoplasma pneumoniae Ab|ACncTitr|Intravascular-any|Comp fix",
       "D": 6231,
       "E": "5254-8",
       "F": "Mycoplasma pneumoniae Ab [Titer] in Serum by Complement fixation",
@@ -19436,7 +18719,7 @@ export default [
     {
       "A": 4,
       "B": "M pneumoniae-IFA Titr",
-      "C": "Mycoplasma pneumoniae Ab|PrTitrACnc|Intravascular - any|IA_IF_Null*",
+      "C": "Mycoplasma pneumoniae Ab|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 9142,
       "E": "31202-5",
       "F": "Mycoplasma pneumoniae Ab [Titer] in Serum by Immunofluorescence",
@@ -19476,7 +18759,7 @@ export default [
     {
       "A": 4,
       "B": "C burnetii Phs 1 IgM Ser Titr",
-      "C": "Coxiella burnetii phase 1 Ab.IgM|PrTitrACnc|Intravascular - any|IA_IF_Null*",
+      "C": "Coxiella burnetii phase 1 Ab.IgM|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 19734,
       "E": "9710-5",
       "F": "Coxiella burnetii phase 1 IgM Ab [Titer] in Serum",
@@ -19489,7 +18772,7 @@ export default [
     {
       "A": 4,
       "B": "C burnetii Phs 2 IgM Ser Titr",
-      "C": "Coxiella burnetii phase 2 Ab.IgM|PrTitrACnc|Intravascular - any|IA_IF_Null*",
+      "C": "Coxiella burnetii phase 2 Ab.IgM|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 19736,
       "E": "9711-3",
       "F": "Coxiella burnetii phase 2 IgM Ab [Titer] in Serum",
@@ -19511,7 +18794,7 @@ export default [
     {
       "A": 5,
       "B": "Proteus OX19 Ab Ser Titr",
-      "C": "Rickettsia (Proteus OX19) Ab|PrTitrACnc|Intravascular - any|IA_IF_Null*",
+      "C": "Rickettsia (Proteus OX19) Ab|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 5147,
       "E": "22469-1",
       "F": "Rickettsia (Proteus OX19) Ab [Titer] in Serum",
@@ -19582,7 +18865,7 @@ export default [
     {
       "A": 4,
       "B": "S typhi D(H) Ab Ser Titr",
-      "C": "Salmonella typhi H D Ab|PrTitrACnc|Intravascular - any|IA_IF_Null*",
+      "C": "Salmonella typhi H D Ab|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 5142,
       "E": "14227-3",
       "F": "Salmonella typhi H D Ab [Titer] in Serum",
@@ -19601,7 +18884,7 @@ export default [
     {
       "A": 4,
       "B": "Salmonel Typh D(O) Ab Ser Titr",
-      "C": "Salmonella typhi O D Ab|PrTitrACnc|Intravascular - any|IA_IF_Null*",
+      "C": "Salmonella typhi O D Ab|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 5143,
       "E": "46204-4",
       "F": "Salmonella typhi O D Ab [Titer] in Serum",
@@ -19626,7 +18909,7 @@ export default [
     {
       "A": 4,
       "B": "ASO Titr",
-      "C": "Streptolysin O Ab|PrTitrACnc|Intravascular - any|IA_IF_Null*",
+      "C": "Streptolysin O Ab|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 402,
       "E": "5370-2",
       "F": "Streptolysin O Ab [Units/volume] in Serum or Plasma",
@@ -19646,7 +18929,7 @@ export default [
     {
       "A": 4,
       "B": "Strep Dnase-B Ab Ser Titr",
-      "C": "DNAse B Ab.Streptococcal|PrTitrACnc|Intravascular - any|IA_IF_Null*",
+      "C": "DNAse B Ab.Streptococcal|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 5156,
       "E": "5133-4",
       "F": "Streptococcal DNAse B [Units/volume] in Serum",
@@ -19664,7 +18947,7 @@ export default [
     {
       "A": 4,
       "B": "Strep pneumoniae 1 IgG Ser Qn",
-      "C": "Streptococcus pneumoniae 1 Ab.IgG|MCnc|Intravascular - any|IA_IF_Null*",
+      "C": "Streptococcus pneumoniae 1 Ab.IgG|MCnc|Intravascular-any|IA-IF-Null*",
       "D": 27000,
       "E": "27092-6",
       "F": "Deprecated Streptococcus pneumoniae 1 IgG Ab [Mass/volume] in Serum",
@@ -19678,7 +18961,7 @@ export default [
     {
       "A": 4,
       "B": "Strep pneumoniae 3 IgG Ser Qn",
-      "C": "Streptococcus pneumoniae 3 Ab.IgG|MCnc|Intravascular - any|IA_IF_Null*",
+      "C": "Streptococcus pneumoniae 3 Ab.IgG|MCnc|Intravascular-any|IA-IF-Null*",
       "D": 24433,
       "E": "27096-7",
       "F": "Deprecated Streptococcus pneumoniae 3 IgG Ab [Mass/volume] in Serum",
@@ -19692,7 +18975,7 @@ export default [
     {
       "A": 4,
       "B": "Strep pneumoniae 4 IgG Ser Qn",
-      "C": "Streptococcus pneumoniae 4 Ab.IgG|MCnc|Intravascular - any|IA_IF_Null*",
+      "C": "Streptococcus pneumoniae 4 Ab.IgG|MCnc|Intravascular-any|IA-IF-Null*",
       "D": 27001,
       "E": "27094-2",
       "F": "Deprecated Streptococcus pneumoniae 4 IgG Ab [Mass/volume] in Serum",
@@ -19706,7 +18989,7 @@ export default [
     {
       "A": 4,
       "B": "Strep pneumoniae 5 IgG Ser Qn",
-      "C": "Streptococcus pneumoniae 5 Ab.IgG|MCnc|Intravascular - any|IA_IF_Null*",
+      "C": "Streptococcus pneumoniae 5 Ab.IgG|MCnc|Intravascular-any|IA-IF-Null*",
       "D": 27002,
       "E": "31183-7",
       "F": "Deprecated Streptococcus pneumoniae 5 IgG Ab [Mass/volume] in Serum",
@@ -19720,7 +19003,7 @@ export default [
     {
       "A": 4,
       "B": "Strep pneumoniae 6B IgG Ser Qn",
-      "C": "Streptococcus pneumoniae Danish serotype 6B Ab.IgG|MCnc|Intravascular - any|IA_IF_Null*",
+      "C": "Streptococcus pneumoniae Danish serotype 6B Ab.IgG|MCnc|Intravascular-any|IA-IF-Null*",
       "D": 27003,
       "E": "27118-9",
       "F": "Streptococcus pneumoniae Danish serotype 6B IgG Ab [Mass/volume] in Serum",
@@ -19734,7 +19017,7 @@ export default [
     {
       "A": 4,
       "B": "Strep pneumoniae 7F IgG Ser Qn",
-      "C": "Streptococcus pneumoniae Danish serotype 7F Ab.IgG|MCnc|Intravascular - any|IA_IF_Null*",
+      "C": "Streptococcus pneumoniae Danish serotype 7F Ab.IgG|MCnc|Intravascular-any|IA-IF-Null*",
       "D": 25869,
       "E": "25296-5",
       "F": "Streptococcus pneumoniae Danish serotype 7F IgG Ab [Mass/volume] in Serum",
@@ -19748,7 +19031,7 @@ export default [
     {
       "A": 4,
       "B": "Strep pneumoniae 8 IgG Ser Qn",
-      "C": "Streptococcus pneumoniae 8 Ab.IgG|MCnc|Intravascular - any|IA_IF_Null*",
+      "C": "Streptococcus pneumoniae 8 Ab.IgG|MCnc|Intravascular-any|IA-IF-Null*",
       "D": 24434,
       "E": "27113-0",
       "F": "Deprecated Streptococcus pneumoniae 8 IgG Ab [Mass/volume] in Serum",
@@ -19762,7 +19045,7 @@ export default [
     {
       "A": 4,
       "B": "Strep pneumoniae 9N IgG Ser Qn",
-      "C": "Streptococcus pneumoniae 9 Ab.IgG|MCnc|Intravascular - any|IA_IF_Null*",
+      "C": "Streptococcus pneumoniae 9 Ab.IgG|MCnc|Intravascular-any|IA-IF-Null*",
       "D": 25870,
       "E": "27392-0",
       "F": "Deprecated Streptococcus pneumoniae 9 IgG Ab [Mass/volume] in Serum",
@@ -19776,7 +19059,7 @@ export default [
     {
       "A": 4,
       "B": "Strep pneumoniae 9V IgG Ser Qn",
-      "C": "Streptococcus pneumoniae Danish serotype 9V Ab.IgG|MCnc|Intravascular - any|IA_IF_Null*",
+      "C": "Streptococcus pneumoniae Danish serotype 9V Ab.IgG|MCnc|Intravascular-any|IA-IF-Null*",
       "D": 27004,
       "E": "30153-1",
       "F": "Streptococcus pneumoniae Danish serotype 9V IgG Ab [Mass/volume] in Serum",
@@ -19790,7 +19073,7 @@ export default [
     {
       "A": 4,
       "B": "Strep pneumoniae 12F IgG Ser Qn",
-      "C": "Streptococcus pneumoniae 12 Ab.IgG|MCnc|Intravascular - any|IA_IF_Null*",
+      "C": "Streptococcus pneumoniae 12 Ab.IgG|MCnc|Intravascular-any|IA-IF-Null*",
       "D": 27005,
       "E": "27374-8",
       "F": "Deprecated Streptococcus pneumoniae 12 IgG Ab [Mass/volume] in Serum",
@@ -19804,7 +19087,7 @@ export default [
     {
       "A": 4,
       "B": "Strep pneumoniae 14 IgG Ser Qn",
-      "C": "Streptococcus pneumoniae 14 Ab.IgG|MCnc|Intravascular - any|IA_IF_Null*",
+      "C": "Streptococcus pneumoniae 14 Ab.IgG|MCnc|Intravascular-any|IA-IF-Null*",
       "D": 24436,
       "E": "27387-0",
       "F": "Deprecated Streptococcus pneumoniae 14 IgG Ab [Mass/volume] in Serum",
@@ -19818,7 +19101,7 @@ export default [
     {
       "A": 4,
       "B": "Strep pneumoniae 18C IgG Ser Qn",
-      "C": "Streptococcus pneumoniae Danish serotype 18C Ab.IgG|MCnc|Intravascular - any|IA_IF_Null*",
+      "C": "Streptococcus pneumoniae Danish serotype 18C Ab.IgG|MCnc|Intravascular-any|IA-IF-Null*",
       "D": 27006,
       "E": "27395-3",
       "F": "Streptococcus pneumoniae Danish serotype 18C IgG Ab [Mass/volume] in Serum",
@@ -19832,7 +19115,7 @@ export default [
     {
       "A": 4,
       "B": "Strep pneumoniae 19F IgG Ser Qn",
-      "C": "Streptococcus pneumoniae 19 Ab.IgG|MCnc|Intravascular - any|IA_IF_Null*",
+      "C": "Streptococcus pneumoniae 19 Ab.IgG|MCnc|Intravascular-any|IA-IF-Null*",
       "D": 27007,
       "E": "27390-4",
       "F": "Deprecated Streptococcus pneumoniae 19 IgG Ab [Mass/volume] in Serum",
@@ -19846,7 +19129,7 @@ export default [
     {
       "A": 4,
       "B": "Strep pneumoniae 23F IgG Ser Qn",
-      "C": "Streptococcus pneumoniae 23 Ab.IgG|MCnc|Intravascular - any|IA_IF_Null*",
+      "C": "Streptococcus pneumoniae 23 Ab.IgG|MCnc|Intravascular-any|IA-IF-Null*",
       "D": 27008,
       "E": "27389-6",
       "F": "Deprecated Streptococcus pneumoniae 23 IgG Ab [Mass/volume] in Serum",
@@ -19866,7 +19149,7 @@ export default [
     {
       "A": 4,
       "B": "VDRL CSF Qn",
-      "C": "Reagin Ab|PrTitrACnc|CSF|VDRL",
+      "C": "Reagin Ab|ACncTitr|CSF|VDRL",
       "D": 5616,
       "E": "5289-4",
       "F": "Reagin Ab [Units/volume] in Cerebral spinal fluid by VDRL",
@@ -19882,7 +19165,7 @@ export default [
     {
       "A": 4,
       "B": "VDRL Ser Qn",
-      "C": "Reagin Ab|PrTitrACnc|Intravascular - any|IA_IF_Null*",
+      "C": "Reagin Ab|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 1098,
       "E": "11084-1",
       "F": "Reagin Ab [Titer] in Serum",
@@ -19915,7 +19198,7 @@ export default [
     {
       "A": 4,
       "B": "B quintana IgG Ser Titr",
-      "C": "Bartonella quintana Ab.IgG|PrTitrACnc|Intravascular - any|IA_IF_Null*",
+      "C": "Bartonella quintana Ab.IgG|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 23299,
       "E": "9360-9",
       "F": "Bartonella quintana IgG Ab [Titer] in Serum",
@@ -19933,7 +19216,7 @@ export default [
     {
       "A": 4,
       "B": "B quintana IgM Ser Titr",
-      "C": "Bartonella quintana Ab.IgM|PrTitrACnc|Intravascular - any|IA_IF_Null*",
+      "C": "Bartonella quintana Ab.IgM|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 23300,
       "E": "9361-7",
       "F": "Bartonella quintana IgM Ab [Titer] in Serum",
@@ -19973,7 +19256,7 @@ export default [
     {
       "A": 4,
       "B": "B henselae IgG Ser Titr",
-      "C": "Bartonella henselae Ab.IgG|PrTitrACnc|Intravascular - any|IA_IF_Null*",
+      "C": "Bartonella henselae Ab.IgG|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 23297,
       "E": "22110-1",
       "F": "Bartonella henselae IgG Ab [Titer] in Serum",
@@ -19991,7 +19274,7 @@ export default [
     {
       "A": 4,
       "B": "B henselae IgM Ser Titr",
-      "C": "Bartonella henselae Ab.IgM|PrTitrACnc|Intravascular - any|IA_IF_Null*",
+      "C": "Bartonella henselae Ab.IgM|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 23298,
       "E": "22111-9",
       "F": "Bartonella henselae IgM Ab [Titer] in Serum",
@@ -20089,6 +19372,7 @@ export default [
     {
       "A": 3,
       "B": "FUNGUS STAINS & SMEARS",
+      "C": "cycloSERINE|Scale-Other|Method-Other",
       "D": 25200,
       "E": "213-9",
       "F": "Cycloserine [Susceptibility] by Minimum inhibitory concentration (MIC)",
@@ -20133,7 +19417,7 @@ export default [
     {
       "A": 4,
       "B": "Aspergillus Galactoman Ag Ser Qn",
-      "C": "Galactomannan Ag|PrTitrACnc|Intravascular - any|IA_IF_Null*",
+      "C": "Galactomannan Ag|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 31154,
       "E": "35383-9",
       "F": "Galactomannan Ag [Units/volume] in Serum or Plasma",
@@ -20158,7 +19442,7 @@ export default [
     {
       "A": 4,
       "B": "Blastomyces sp Ab Titr CF",
-      "C": "Blastomyces dermatitidis Ab|PrTitrACnc|Intravascular - any|Comp fix",
+      "C": "Blastomyces dermatitidis Ab|ACncTitr|Intravascular-any|Comp fix",
       "D": 6267,
       "E": "5057-5",
       "F": "Blastomyces dermatitidis Ab [Titer] in Serum by Complement fixation",
@@ -20183,6 +19467,7 @@ export default [
     {
       "A": 4,
       "B": "Coccidioides CSF or Ser IgG IV",
+      "C": "Coccidioides sp Ab.IgG|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 32091,
       "E": "27009-0",
       "F": "Coccidioides sp IgG Ab [Units/volume] in Serum",
@@ -20232,7 +19517,7 @@ export default [
     {
       "A": 4,
       "B": "H Capsulatum (RIA Units)",
-      "C": "Histoplasma capsulatum Ag|PrTitrACnc|Intravascular - any|IA_IF_Null*",
+      "C": "Histoplasma capsulatum Ag|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 18490,
       "E": "19107-2",
       "F": "Histoplasma capsulatum Ag [Units/volume] in Serum by Radioimmunoassay (RIA)",
@@ -20259,7 +19544,7 @@ export default [
     {
       "A": 4,
       "B": "Histo capsulatum Ag Qn EIA",
-      "C": "Histoplasma capsulatum Ag|PrTitrACnc|XXX|IA_IF_Null*",
+      "C": "Histoplasma capsulatum Ag|ACncTitr|XXX|IA-IF-Null*",
       "D": 36968,
       "E": "42916-7",
       "F": "Histoplasma capsulatum Ag [Units/volume] in Unspecified specimen by Immunoassay",
@@ -20271,7 +19556,7 @@ export default [
     {
       "A": 4,
       "B": "Histo Mycel Ab Titr CF",
-      "C": "Histoplasma capsulatum mycelial phase Ab|PrTitrACnc|Intravascular - any|Comp fix",
+      "C": "Histoplasma capsulatum mycelial phase Ab|ACncTitr|Intravascular-any|Comp fix",
       "D": 6270,
       "E": "20573-2",
       "F": "Histoplasma capsulatum mycelial phase Ab [Titer] in Serum by Complement fixation",
@@ -20289,7 +19574,7 @@ export default [
     {
       "A": 4,
       "B": "Histo cap Yst Ab Titr CF",
-      "C": "Histoplasma capsulatum yeast phase Ab|PrTitrACnc|Intravascular - any|Comp fix",
+      "C": "Histoplasma capsulatum yeast phase Ab|ACncTitr|Intravascular-any|Comp fix",
       "D": 6268,
       "E": "20574-0",
       "F": "Histoplasma capsulatum yeast phase Ab [Titer] in Serum by Complement fixation",
@@ -20313,7 +19598,7 @@ export default [
     {
       "A": 3,
       "B": "E histolytica Ab Ser Titr HA",
-      "C": "Entamoeba histolytica Ab|PrTitrACnc|Intravascular - any|Aggl",
+      "C": "Entamoeba histolytica Ab|ACncTitr|Intravascular-any|Aggl",
       "D": 5120,
       "E": "21259-7",
       "F": "Entamoeba histolytica Ab [Titer] in Serum by Hemagglutination",
@@ -20331,7 +19616,7 @@ export default [
     {
       "A": 3,
       "B": "E histolytica IgG Ser Qn EIA",
-      "C": "Entamoeba histolytica Ab.IgG|PrTitrACnc|Intravascular - any|IA_IF_Null*",
+      "C": "Entamoeba histolytica Ab.IgG|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 27741,
       "E": "9522-4",
       "F": "Entamoeba histolytica IgG Ab [Units/volume] in Serum by Immunoassay",
@@ -20348,7 +19633,7 @@ export default [
     {
       "A": 4,
       "B": "Toxoplasma IgG Ser-Qn-EIA",
-      "C": "Toxoplasma gondii Ab.IgG|PrTitrACnc|Intravascular - any|IA_IF_Null*",
+      "C": "Toxoplasma gondii Ab.IgG|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 18268,
       "E": "5388-4",
       "F": "Toxoplasma gondii IgG Ab [Units/volume] in Serum or Plasma by Immunoassay",
@@ -20368,7 +19653,7 @@ export default [
     {
       "A": 4,
       "B": "Toxoplasma IgG Titr IF",
-      "C": "Toxoplasma gondii Ab.IgG|PrTitrACnc|Intravascular - any|IA_IF_Null*",
+      "C": "Toxoplasma gondii Ab.IgG|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 5150,
       "E": "5389-2",
       "F": "Toxoplasma gondii IgG Ab [Titer] in Serum by Immunofluorescence",
@@ -20388,7 +19673,7 @@ export default [
     {
       "A": 3,
       "B": "Toxoplasma IgM Ser Index",
-      "C": "Toxoplasma gondii Ab.IgM|PrTitrACnc|Intravascular - any|IA_IF_Null*",
+      "C": "Toxoplasma gondii Ab.IgM|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 32971,
       "E": "8040-8",
       "F": "Toxoplasma gondii IgM Ab [Units/volume] in Serum",
@@ -20399,7 +19684,7 @@ export default [
     {
       "A": 3,
       "B": "Toxoplasma IgM Ser Titr IF",
-      "C": "Toxoplasma gondii Ab.IgM|PrTitrACnc|Intravascular - any|IA_IF_Null*",
+      "C": "Toxoplasma gondii Ab.IgM|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 13814,
       "E": "5391-8",
       "F": "Toxoplasma gondii IgM Ab [Titer] in Serum or Plasma by Immunofluorescence",
@@ -20444,7 +19729,7 @@ export default [
     {
       "A": 4,
       "B": "CMV Ab IFA",
-      "C": "Cytomegalovirus Ab|PrTitrACnc|Intravascular - any|IA_IF_Null*",
+      "C": "Cytomegalovirus Ab|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 6005,
       "E": "32170-3",
       "F": "Cytomegalovirus Ab [Titer] in Serum or Plasma by Immunofluorescence",
@@ -20462,7 +19747,7 @@ export default [
     {
       "A": 4,
       "B": "CMV IgG Ser Qn EIA (D)",
-      "C": "Cytomegalovirus Ab.IgG|PrTitrACnc|Intravascular - any|IA_IF_Null*",
+      "C": "Cytomegalovirus Ab.IgG|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 18269,
       "E": "5124-3",
       "F": "Cytomegalovirus IgG Ab [Units/volume] in Serum or Plasma by Immunoassay",
@@ -20482,7 +19767,7 @@ export default [
     {
       "A": 4,
       "B": "CMV IgM Ser Titr IF",
-      "C": "Cytomegalovirus Ab.IgM|PrTitrACnc|Intravascular - any|IA_IF_Null*",
+      "C": "Cytomegalovirus Ab.IgM|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 13926,
       "E": "5127-6",
       "F": "Cytomegalovirus IgM Ab [Titer] in Serum or Plasma by Immunofluorescence",
@@ -20497,7 +19782,7 @@ export default [
     {
       "A": 4,
       "B": "CMV IgM Ser EIA",
-      "C": "Cytomegalovirus Ab.IgM|PrTitrACnc|Intravascular - any|IA_IF_Null*",
+      "C": "Cytomegalovirus Ab.IgM|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 24520,
       "E": "5126-8",
       "F": "Cytomegalovirus IgM Ab [Units/volume] in Serum or Plasma by Immunoassay",
@@ -20792,7 +20077,7 @@ export default [
     {
       "A": 4,
       "B": "E Equin Enceph Ab Titr",
-      "C": "Eastern equine encephalitis virus Ab|PrTitrACnc|Intravascular - any|IA_IF_Null*",
+      "C": "Eastern equine encephalitis virus Ab|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 5360,
       "E": "22257-0",
       "F": "Eastern equine encephalitis virus Ab [Titer] in Serum",
@@ -20810,7 +20095,7 @@ export default [
     {
       "A": 4,
       "B": "Lacrosse Enc Ab Titr",
-      "C": "La Crosse virus Ab|PrTitrACnc|Intravascular - any|IA_IF_Null*",
+      "C": "La Crosse virus Ab|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 5361,
       "E": "17036-5",
       "F": "La Crosse virus Ab [Titer] in Serum",
@@ -20827,7 +20112,7 @@ export default [
     {
       "A": 4,
       "B": "St Louis Enceph Ab Titr",
-      "C": "Saint Louis encephalitis virus Ab|PrTitrACnc|Intravascular - any|IA_IF_Null*",
+      "C": "Saint Louis encephalitis virus Ab|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 5358,
       "E": "22510-2",
       "F": "Saint Louis encephalitis virus Ab [Titer] in Serum",
@@ -20845,7 +20130,7 @@ export default [
     {
       "A": 4,
       "B": "W Equin Enceph Ab Titr",
-      "C": "Western equine encephalitis virus Ab|PrTitrACnc|Intravascular - any|IA_IF_Null*",
+      "C": "Western equine encephalitis virus Ab|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 5359,
       "E": "17770-9",
       "F": "Western equine encephalitis virus Ab [Titer] in Serum",
@@ -20868,7 +20153,7 @@ export default [
     {
       "A": 4,
       "B": "EBV IFA' Titr",
-      "C": "Epstein Barr virus capsid Ab.IgG|PrTitrACnc|Intravascular - any|IA_IF_Null*",
+      "C": "Epstein Barr virus capsid Ab.IgG|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 5364,
       "E": "5158-1",
       "F": "Epstein Barr virus capsid IgG Ab [Titer] in Serum by Immunofluorescence",
@@ -20902,7 +20187,7 @@ export default [
     {
       "A": 4,
       "B": "EBV VCA IgM Titr IF",
-      "C": "Epstein Barr virus capsid Ab.IgM|PrTitrACnc|Intravascular - any|IA_IF_Null*",
+      "C": "Epstein Barr virus capsid Ab.IgM|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 13765,
       "E": "5160-7",
       "F": "Epstein Barr virus capsid IgM Ab [Titer] in Serum by Immunofluorescence",
@@ -20963,7 +20248,7 @@ export default [
     {
       "A": 4,
       "B": "Hep B DNA (QN-Bdna)",
-      "C": "Hepatitis B virus DNA|NCnc|Intravascular - any|Molecular genetics",
+      "C": "Hepatitis B virus DNA|NCnc|Intravascular-any|Molecular genetics",
       "D": 21119,
       "E": "20442-0",
       "F": "Hepatitis B virus DNA [#/volume] (viral load) in Serum by Probe with signal amplification",
@@ -21007,7 +20292,7 @@ export default [
     {
       "A": 4,
       "B": "HCV Quant PCR",
-      "C": "Hepatitis C virus RNA|PrTitrACnc|Intravascular - any|Molecular genetics",
+      "C": "Hepatitis C virus RNA|ACncTitr|Intravascular-any|Molecular genetics",
       "D": 25695,
       "E": "11011-4",
       "F": "Hepatitis C virus RNA [Units/volume] (viral load) in Serum or Plasma by NAA with probe detection",
@@ -21023,7 +20308,7 @@ export default [
     {
       "A": 4,
       "B": "HCV Quant PCR-Real Time",
-      "C": "Hepatitis C virus RNA|LaCnc|Intravascular - any|Molecular genetics",
+      "C": "Hepatitis C virus RNA|LaCnc|Intravascular-any|Molecular genetics",
       "D": 32192,
       "E": "38180-6",
       "F": "Hepatitis C virus RNA [log units/volume] (viral load) in Serum or Plasma by NAA with probe detection",
@@ -21039,7 +20324,7 @@ export default [
     {
       "A": 4,
       "B": "Hep C RNA (Qn bDNA)",
-      "C": "Hepatitis C virus RNA|PrTitrACnc|Intravascular - any|Molecular genetics",
+      "C": "Hepatitis C virus RNA|ACncTitr|Intravascular-any|Molecular genetics",
       "D": 30585,
       "E": "29609-5",
       "F": "Hepatitis C virus RNA [Units/volume] (viral load) in Serum or Plasma by Probe with signal amplification",
@@ -21055,7 +20340,7 @@ export default [
     {
       "A": 4,
       "B": "Hep C RNA Ser Qn PCR (Copies)",
-      "C": "Hepatitis C virus RNA|NCnc|Intravascular - any|Molecular genetics",
+      "C": "Hepatitis C virus RNA|NCnc|Intravascular-any|Molecular genetics",
       "D": 22987,
       "E": "20416-4",
       "F": "Hepatitis C virus RNA [#/volume] (viral load) in Serum or Plasma by NAA with probe detection",
@@ -21072,7 +20357,7 @@ export default [
     {
       "A": 4,
       "B": "Hep C RNA (QN-Bdna)",
-      "C": "Hepatitis C virus RNA|NCnc|Intravascular - any|Molecular genetics",
+      "C": "Hepatitis C virus RNA|NCnc|Intravascular-any|Molecular genetics",
       "D": 22992,
       "E": "20571-6",
       "F": "Hepatitis C virus RNA [#/volume] (viral load) in Serum or Plasma by Probe with signal amplification",
@@ -21089,7 +20374,7 @@ export default [
     {
       "A": 4,
       "B": "Hep C RNA (Qn bDNA) log IU/mL",
-      "C": "Hepatitis C virus RNA|LaCnc|Intravascular - any|Molecular genetics",
+      "C": "Hepatitis C virus RNA|LaCnc|Intravascular-any|Molecular genetics",
       "D": 31760,
       "E": "42617-1",
       "F": "Hepatitis C virus RNA [log units/volume] (viral load) in Serum or Plasma by Probe with signal amplification",
@@ -21105,7 +20390,7 @@ export default [
     {
       "A": 4,
       "B": "Hep C Genotype Tests",
-      "C": "Hepatitis C virus genotype|Prid|Intravascular - any|Molecular genetics",
+      "C": "Hepatitis C virus genotype|Prid|Intravascular-any|Molecular genetics",
       "D": 26937,
       "E": "32286-7",
       "F": "Hepatitis C virus genotype [Identifier] in Serum or Plasma by NAA with probe detection",
@@ -21160,7 +20445,7 @@ export default [
     {
       "A": 4,
       "B": "HSV 1+2 IgM CSF Qn",
-      "C": "Herpes simplex virus 1+2 Ab.IgM|PrTitrACnc|CSF|IA_IF_Null*",
+      "C": "Herpes simplex virus 1+2 Ab.IgM|ACncTitr|CSF|IA-IF-Null*",
       "D": 32820,
       "E": "63432-9",
       "F": "Herpes simplex virus 1+2 IgM Ab [Units/volume] in Cerebral spinal fluid",
@@ -21199,7 +20484,7 @@ export default [
     {
       "A": 4,
       "B": "HSV Ab IFA Titr",
-      "C": "Herpes simplex virus 1 Ab|PrTitrACnc|Intravascular - any|IA_IF_Null*",
+      "C": "Herpes simplex virus 1 Ab|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 5151,
       "E": "25837-6",
       "F": "Herpes simplex virus 1 Ab [Titer] in Serum by Immunofluorescence",
@@ -21217,7 +20502,7 @@ export default [
     {
       "A": 4,
       "B": "HSV IgG Ser Qn EIA",
-      "C": "Herpes simplex virus Ab|PrTitrACnc|Intravascular - any|IA_IF_Null*",
+      "C": "Herpes simplex virus Ab|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 17681,
       "E": "5202-7",
       "F": "Herpes simplex virus Ab [Units/volume] in Serum by Immunoassay",
@@ -21258,7 +20543,7 @@ export default [
     {
       "A": 4,
       "B": "HIV-1 RNA PCR Ultra Qn",
-      "C": "HIV 1 RNA|NCnc|Intravascular - any|Molecular genetics",
+      "C": "HIV 1 RNA|NCnc|Intravascular-any|Molecular genetics",
       "D": 23074,
       "E": "20447-9",
       "F": "HIV 1 RNA [#/volume] (viral load) in Serum or Plasma by NAA with probe detection",
@@ -21278,7 +20563,7 @@ export default [
     {
       "A": 4,
       "B": "HIV-1 RNA Pl Qn Real Time PCR",
-      "C": "HIV 1 RNA|LnCnc|Intravascular - any|Molecular genetics",
+      "C": "HIV 1 RNA|LnCnc|Intravascular-any|Molecular genetics",
       "D": 34438,
       "E": "29541-0",
       "F": "HIV 1 RNA [Log #/volume] (viral load) in Serum or Plasma by NAA with probe detection",
@@ -21323,7 +20608,7 @@ export default [
     {
       "A": 4,
       "B": "Influenza A IgG Ab Ser Qn",
-      "C": "Influenza virus A Ab.IgG|PrTitrACnc|Intravascular - any|IA_IF_Null*",
+      "C": "Influenza virus A Ab.IgG|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 30810,
       "E": "31437-7",
       "F": "Influenza virus A IgG Ab [Units/volume] in Serum",
@@ -21337,7 +20622,7 @@ export default [
     {
       "A": 4,
       "B": "Influenza A IgM Ab Ser Qn",
-      "C": "Influenza virus A Ab.IgM|PrTitrACnc|Intravascular - any|IA_IF_Null*",
+      "C": "Influenza virus A Ab.IgM|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 30782,
       "E": "31438-5",
       "F": "Influenza virus A IgM Ab [Units/volume] in Serum",
@@ -21351,7 +20636,7 @@ export default [
     {
       "A": 4,
       "B": "Influenza A Virus Ab Titr CF",
-      "C": "Influenza virus A Ab|PrTitrACnc|Intravascular - any|Comp fix",
+      "C": "Influenza virus A Ab|ACncTitr|Intravascular-any|Comp fix",
       "D": 5373,
       "E": "5229-0",
       "F": "Influenza virus A Ab [Titer] in Serum by Complement fixation",
@@ -21369,7 +20654,7 @@ export default [
     {
       "A": 4,
       "B": "Influenza B IgG Ab Ser Qn",
-      "C": "Influenza virus B Ab.IgG|PrTitrACnc|Intravascular - any|IA_IF_Null*",
+      "C": "Influenza virus B Ab.IgG|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 30742,
       "E": "17015-9",
       "F": "Influenza virus B IgG Ab [Units/volume] in Serum",
@@ -21383,7 +20668,7 @@ export default [
     {
       "A": 4,
       "B": "Influenza B IgM Ab Ser Qn",
-      "C": "Influenza virus B Ab.IgM|PrTitrACnc|Intravascular - any|IA_IF_Null*",
+      "C": "Influenza virus B Ab.IgM|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 30781,
       "E": "17016-7",
       "F": "Influenza virus B IgM Ab [Units/volume] in Serum",
@@ -21397,7 +20682,7 @@ export default [
     {
       "A": 4,
       "B": "Influenza B Virus Ab Titr CF",
-      "C": "Influenza virus B Ab|PrTitrACnc|Intravascular - any|Comp fix",
+      "C": "Influenza virus B Ab|ACncTitr|Intravascular-any|Comp fix",
       "D": 5374,
       "E": "5230-8",
       "F": "Influenza virus B Ab [Titer] in Serum by Complement fixation",
@@ -21472,7 +20757,7 @@ export default [
     {
       "A": 4,
       "B": "Measles IgG CSF Qn",
-      "C": "Measles virus Ab.IgG|PrTitrACnc|CSF|IA_IF_Null*",
+      "C": "Measles virus Ab.IgG|ACncTitr|CSF|IA-IF-Null*",
       "D": 32221,
       "E": "22500-3",
       "F": "Measles virus IgG Ab [Units/volume] in Cerebral spinal fluid",
@@ -21486,7 +20771,7 @@ export default [
     {
       "A": 4,
       "B": "Mumps HAI Titr",
-      "C": "Mumps virus Ab|PrTitrACnc|Intravascular - any|IA_IF_Null*",
+      "C": "Mumps virus Ab|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 5368,
       "E": "22414-7",
       "F": "Mumps virus Ab [Titer] in Serum",
@@ -21504,7 +20789,7 @@ export default [
     {
       "A": 4,
       "B": "Mumps IgG Ser Qn EIA",
-      "C": "Mumps virus Ab.IgG|PrTitrACnc|Intravascular - any|IA_IF_Null*",
+      "C": "Mumps virus Ab.IgG|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 26282,
       "E": "25418-5",
       "F": "Mumps virus IgG Ab [Units/volume] in Serum by Immunoassay",
@@ -21517,7 +20802,7 @@ export default [
     {
       "A": 4,
       "B": "Mumps IgM Ser Qn",
-      "C": "Mumps virus Ab.IgM|PrTitrACnc|Intravascular - any|IA_IF_Null*",
+      "C": "Mumps virus Ab.IgM|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 24853,
       "E": "7967-3",
       "F": "Mumps virus IgM Ab [Units/volume] in Serum",
@@ -21528,7 +20813,7 @@ export default [
     {
       "A": 4,
       "B": "Rubella Ab LA Ser Titr",
-      "C": "Rubella virus Ab|PrTitrACnc|Intravascular - any|Aggl",
+      "C": "Rubella virus Ab|ACncTitr|Intravascular-any|Aggl",
       "D": 8929,
       "E": "5333-0",
       "F": "Rubella virus Ab [Titer] in Serum by Latex agglutination",
@@ -21547,7 +20832,7 @@ export default [
     {
       "A": 4,
       "B": "Rubella HAI' Titr",
-      "C": "Rubella virus Ab|PrTitrACnc|Intravascular - any|Aggl",
+      "C": "Rubella virus Ab|ACncTitr|Intravascular-any|Aggl",
       "D": 4815,
       "E": "5330-6",
       "F": "Rubella virus Ab [Units/volume] in Serum by Hemagglutination inhibition",
@@ -21567,7 +20852,7 @@ export default [
     {
       "A": 4,
       "B": "Rubella IgG Ser Qn EIA (D)",
-      "C": "Rubella virus Ab.IgG|PrTitrACnc|Intravascular - any|IA_IF_Null*",
+      "C": "Rubella virus Ab.IgG|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 17582,
       "E": "5334-8",
       "F": "Rubella virus IgG Ab [Units/volume] in Serum or Plasma by Immunoassay",
@@ -21592,7 +20877,7 @@ export default [
     {
       "A": 4,
       "B": "Parvovir B19 IgG Ser Qn",
-      "C": "Parvovirus B19 Ab.IgG|PrTitrACnc|Intravascular - any|IA_IF_Null*",
+      "C": "Parvovirus B19 Ab.IgG|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 19732,
       "E": "5273-8",
       "F": "Parvovirus B19 IgG Ab [Units/volume] in Serum by Immunoassay",
@@ -21606,7 +20891,7 @@ export default [
     {
       "A": 4,
       "B": "Parvovir B19 IgM Ser Qn",
-      "C": "Parvovirus B19 Ab.IgM|PrTitrACnc|Intravascular - any|IA_IF_Null*",
+      "C": "Parvovirus B19 Ab.IgM|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 19731,
       "E": "5274-6",
       "F": "Parvovirus B19 IgM Ab [Units/volume] in Serum by Immunoassay",
@@ -21632,7 +20917,7 @@ export default [
     {
       "A": 4,
       "B": "Adenovirus Ab Titr CF",
-      "C": "Adenovirus Ab|PrTitrACnc|Intravascular - any|Comp fix",
+      "C": "Adenovirus Ab|ACncTitr|Intravascular-any|Comp fix",
       "D": 5362,
       "E": "5041-9",
       "F": "Adenovirus Ab [Titer] in Serum by Complement fixation",
@@ -21650,7 +20935,7 @@ export default [
     {
       "A": 4,
       "B": "Adenovirus Ab IgM Ser Qn",
-      "C": "Adenovirus Ab.IgM|PrTitrACnc|Intravascular - any|IA_IF_Null*",
+      "C": "Adenovirus Ab.IgM|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 30820,
       "E": "5042-7",
       "F": "Adenovirus IgM Ab [Units/volume] in Serum",
@@ -21664,7 +20949,7 @@ export default [
     {
       "A": 4,
       "B": "Adenovirus Ab IgG Ser Qn",
-      "C": "Adenovirus Ab.IgG|PrTitrACnc|Intravascular - any|IA_IF_Null*",
+      "C": "Adenovirus Ab.IgG|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 30821,
       "E": "13914-7",
       "F": "Adenovirus IgG Ab [Units/volume] in Serum",
@@ -21721,7 +21006,7 @@ export default [
     {
       "A": 4,
       "B": "RSV CF Titr",
-      "C": "Respiratory syncytial virus Ab|PrTitrACnc|Intravascular - any|Comp fix",
+      "C": "Respiratory syncytial virus Ab|ACncTitr|Intravascular-any|Comp fix",
       "D": 5411,
       "E": "5294-4",
       "F": "Respiratory syncytial virus Ab [Titer] in Serum by Complement fixation",
@@ -21739,7 +21024,7 @@ export default [
     {
       "A": 4,
       "B": "RSV IgM Ser Qn",
-      "C": "Respiratory syncytial virus Ab.IgM|PrTitrACnc|Intravascular - any|IA_IF_Null*",
+      "C": "Respiratory syncytial virus Ab.IgM|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 32095,
       "E": "7992-1",
       "F": "Respiratory syncytial virus IgM Ab [Units/volume] in Serum",
@@ -21753,7 +21038,7 @@ export default [
     {
       "A": 4,
       "B": "RSV IgG Ser Qn",
-      "C": "Respiratory syncytial virus Ab.IgG|PrTitrACnc|Intravascular - any|IA_IF_Null*",
+      "C": "Respiratory syncytial virus Ab.IgG|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 32096,
       "E": "7991-3",
       "F": "Respiratory syncytial virus IgG Ab [Units/volume] in Serum",
@@ -21767,7 +21052,7 @@ export default [
     {
       "A": 4,
       "B": "Varicella IgG Ser Qn EIA (D)",
-      "C": "Varicella zoster virus Ab.IgG|PrTitrACnc|Intravascular - any|IA_IF_Null*",
+      "C": "Varicella zoster virus Ab.IgG|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 17665,
       "E": "5403-1",
       "F": "Varicella zoster virus IgG Ab [Units/volume] in Serum by Immunoassay",
@@ -21781,7 +21066,7 @@ export default [
     {
       "A": 4,
       "B": "Varicella IgM Ser Qn",
-      "C": "Varicella zoster virus Ab.IgM|PrTitrACnc|Intravascular - any|IA_IF_Null*",
+      "C": "Varicella zoster virus Ab.IgM|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 29557,
       "E": "8048-1",
       "F": "Varicella zoster virus IgM Ab [Units/volume] in Serum",
@@ -21792,7 +21077,7 @@ export default [
     {
       "A": 4,
       "B": "Varicella Ab IgG CSF QN",
-      "C": "Varicella zoster virus Ab.IgG|PrTitrACnc|CSF|IA_IF_Null*",
+      "C": "Varicella zoster virus Ab.IgG|ACncTitr|CSF|IA-IF-Null*",
       "D": 30360,
       "E": "17764-2",
       "F": "Varicella zoster virus IgG Ab [Units/volume] in Cerebral spinal fluid",
@@ -21803,7 +21088,7 @@ export default [
     {
       "A": 4,
       "B": "Varicella Ab IgM CSF QN",
-      "C": "Varicella zoster virus Ab.IgM|PrTitrACnc|CSF|IA_IF_Null*",
+      "C": "Varicella zoster virus Ab.IgM|ACncTitr|CSF|IA-IF-Null*",
       "D": 30359,
       "E": "31695-0",
       "F": "Varicella zoster virus IgM Ab [Units/volume] in Cerebral spinal fluid",
@@ -21856,6 +21141,7 @@ export default [
     {
       "A": 3,
       "B": "A alternata IgE Ser Qn",
+      "C": "Alternaria alternata Ab.IgE|PrThrACnc|Intravascular-any|Qn",
       "D": 27315,
       "E": "6020-2",
       "F": "Alternaria alternata IgE Ab [Units/volume] in Serum",
@@ -21947,6 +21233,7 @@ export default [
     {
       "A": 3,
       "B": "Cockroach IgE Ser Qn",
+      "C": "Blatella germanica Ab.IgE|PrThrACnc|Intravascular-any|Qn",
       "D": 27364,
       "E": "6078-0",
       "F": "Cockroach IgE Ab [Units/volume] in Serum",
@@ -21960,6 +21247,7 @@ export default [
     {
       "A": 3,
       "B": "Common Ragweed IgE Ser Qn",
+      "C": "Ambrosia elatior Ab.IgE|PrThrACnc|Intravascular-any|Qn",
       "D": 27367,
       "E": "6085-5",
       "F": "Common Ragweed IgE Ab [Units/volume] in Serum",
@@ -22012,6 +21300,7 @@ export default [
     {
       "A": 3,
       "B": "Elm IgE Ser Qn",
+      "C": "Ulmus americana Ab.IgE|PrThrACnc|Intravascular-any|Qn",
       "D": 27389,
       "E": "6109-3",
       "F": "White Elm IgE Ab [Units/volume] in Serum",
@@ -22025,6 +21314,7 @@ export default [
     {
       "A": 3,
       "B": "Firebush IgE Ser RAST",
+      "C": "Kochia scoparia Ab.IgE|PrThrACnc|Intravascular-any|Qn",
       "D": 24229,
       "E": "6118-4",
       "F": "Firebush IgE Ab [Units/volume] in Serum",
@@ -22051,6 +21341,7 @@ export default [
     {
       "A": 3,
       "B": "Grass Meadow IgE Ser Qn",
+      "C": "Poa pratensis Ab.IgE|PrThrACnc|Intravascular-any|Qn",
       "D": 27407,
       "E": "6153-1",
       "F": "Kentucky blue grass IgE Ab [Units/volume] in Serum",
@@ -22064,6 +21355,7 @@ export default [
     {
       "A": 3,
       "B": "Grass Orchard IgE Ser Qn",
+      "C": "Dactylis glomerata Ab.IgE|PrThrACnc|Intravascular-any|Qn",
       "D": 27432,
       "E": "6195-2",
       "F": "Cocksfoot IgE Ab [Units/volume] in Serum",
@@ -22077,6 +21369,7 @@ export default [
     {
       "A": 3,
       "B": "Grass Red Top IgE Ser Qn",
+      "C": "Agrostis stolonifera Ab.IgE|PrThrACnc|Intravascular-any|Qn",
       "D": 27328,
       "E": "6228-1",
       "F": "Red top grass IgE Ab [Units/volume] in Serum",
@@ -22142,6 +21435,7 @@ export default [
     {
       "A": 3,
       "B": "Oak IgE Ser Qn",
+      "C": "Quercus alba Ab.IgE|PrThrACnc|Intravascular-any|Qn",
       "D": 27427,
       "E": "6189-5",
       "F": "White Oak IgE Ab [Units/volume] in Serum",
@@ -22304,6 +21598,7 @@ export default [
     {
       "A": 3,
       "B": "AChR Ab Ser Qn",
+      "C": "Acetylcholine receptor Ab|SCnc|Intravascular-any|IA-IF-Null*",
       "D": 11034,
       "E": "20427-1",
       "F": "Acetylcholine receptor Ab [Moles/volume] in Serum",
@@ -22337,6 +21632,7 @@ export default [
     {
       "A": 3,
       "B": "ANA TEST",
+      "C": "Nuclear Ab|PrThrTitrACnc|Intravascular-any|IA-IF-Null*",
       "D": 5863,
       "E": "13111-0",
       "F": "Deprecated Nuclear Ab by Immunofluorescence",
@@ -22346,6 +21642,7 @@ export default [
     {
       "A": 4,
       "B": "ANA Quan'",
+      "C": "Nuclear Ab|PrThrTitrACnc|Intravascular-any|IA-IF-Null*",
       "D": 4255,
       "E": "27200-5",
       "F": "Nuclear Ab [Units/volume] in Serum",
@@ -22371,6 +21668,7 @@ export default [
     {
       "A": 3,
       "B": "Cytoplasmic Ab Titr",
+      "C": "Neutrophil cytoplasmic Ab.classic|PrThrTitrACnc|Intravascular-any|IA-IF-Null*",
       "D": 18377,
       "E": "32708-0",
       "F": "Neutrophil cytoplasmic Ab.classic [Titer] in Serum",
@@ -22394,6 +21692,7 @@ export default [
     {
       "A": 3,
       "B": "DNA DS IgG Ser Qn Multi FIA",
+      "C": "DNA double strand Ab.IgG|PrThrTitrACnc|Intravascular-any|IA-IF-Null*",
       "D": 34525,
       "E": "33800-4",
       "F": "DNA double strand IgG Ab [Units/volume] in Serum",
@@ -22417,6 +21716,7 @@ export default [
     {
       "A": 4,
       "B": "DNA Ab Titr",
+      "C": "DNA double strand Ab|PrThrTitrACnc|Intravascular-any|IA-IF-Null*",
       "D": 5158,
       "E": "11013-0",
       "F": "DNA double strand Ab [Titer] in Serum",
@@ -22434,6 +21734,7 @@ export default [
     {
       "A": 3,
       "B": "ENA RNP IgG Ser Qn",
+      "C": "Ribonucleoprotein extractable nuclear Ab.IgG|PrThrTitrACnc|Intravascular-any|IA-IF-Null*",
       "D": 33161,
       "E": "31588-7",
       "F": "Ribonucleoprotein extractable nuclear IgG Ab [Units/volume] in Serum",
@@ -22445,6 +21746,7 @@ export default [
     {
       "A": 3,
       "B": "ENA SM IgG Ser Qn",
+      "C": "Smith extractable nuclear Ab.IgG|PrThrTitrACnc|Intravascular-any|IA-IF-Null*",
       "D": 33160,
       "E": "18323-6",
       "F": "Smith extractable nuclear IgG Ab [Units/volume] in Serum",
@@ -22456,6 +21758,7 @@ export default [
     {
       "A": 3,
       "B": "ENA SS A Ab Ser Qn",
+      "C": "Sjogrens syndrome-A extractable nuclear Ab|PrThrTitrACnc|Intravascular-any|IA-IF-Null*",
       "D": 24894,
       "E": "17792-3",
       "F": "Sjogrens syndrome-A extractable nuclear Ab [Units/volume] in Serum",
@@ -22469,6 +21772,7 @@ export default [
     {
       "A": 3,
       "B": "ENA SS B Ab Ser Qn",
+      "C": "Sjogrens syndrome-B extractable nuclear Ab|PrThrTitrACnc|Intravascular-any|IA-IF-Null*",
       "D": 24895,
       "E": "17791-5",
       "F": "Sjogrens syndrome-B extractable nuclear Ab [Units/volume] in Serum",
@@ -22488,6 +21792,7 @@ export default [
     {
       "A": 3,
       "B": "GM1 Ab IgG Qn",
+      "C": "Asialoganglioside GM1 Ab.IgG|PrThrTitrACnc|Intravascular-any|IA-IF-Null*",
       "D": 26529,
       "E": "31226-4",
       "F": "Asialoganglioside GM1 IgG Ab [Units/volume] in Serum",
@@ -22507,6 +21812,7 @@ export default [
     {
       "A": 3,
       "B": "GM1 Ab IgM Qn",
+      "C": "Asialoganglioside GM1 Ab.IgM|PrThrTitrACnc|Intravascular-any|IA-IF-Null*",
       "D": 26530,
       "E": "31227-2",
       "F": "Asialoganglioside GM1 IgM Ab [Units/volume] in Serum",
@@ -22526,6 +21832,7 @@ export default [
     {
       "A": 3,
       "B": "GBM IgG Ser Qn EIA",
+      "C": "Basement membrane Ab.IgG|PrThrTitrACnc|Intravascular-any|IA-IF-Null*",
       "D": 25682,
       "E": "29997-4",
       "F": "Basement membrane IgG Ab [Units/volume] in Serum by Immunoassay",
@@ -22538,6 +21845,7 @@ export default [
     {
       "A": 3,
       "B": "Histone Ab IgG Ser Qn EIA",
+      "C": "Histone Ab.IgG|PrThrTitrACnc|Intravascular-any|IA-IF-Null*",
       "D": 27764,
       "E": "29996-6",
       "F": "Histone IgG Ab [Units/volume] in Serum by Immunoassay",
@@ -22551,7 +21859,7 @@ export default [
     {
       "A": 3,
       "B": "Hyaluronidase Ab Ser Qn",
-      "C": "Hyaluronidase Ab|PrTitrACnc|Intravascular - any|IA_IF_Null*",
+      "C": "Hyaluronidase Ab|ACncTitr|Intravascular-any|IA-IF-Null*",
       "D": 5155,
       "E": "31435-1",
       "F": "Hyaluronidase Ab [Units/volume] in Serum",
@@ -22575,6 +21883,7 @@ export default [
     {
       "A": 4,
       "B": "Tiss Transglutami IgG Ser Qn EIA",
+      "C": "Tissue transglutaminase Ab.IgG|PrThrTitrACnc|Intravascular-any|IA-IF-Null*",
       "D": 30417,
       "E": "32998-7",
       "F": "Tissue transglutaminase IgG Ab [Units/volume] in Serum",
@@ -22592,6 +21901,7 @@ export default [
     {
       "A": 4,
       "B": "Tiss Transglutami IgA Ser Qn EIA",
+      "C": "Tissue transglutaminase Ab.IgA|PrThrTitrACnc|Intravascular-any|IA-IF-Null*",
       "D": 29173,
       "E": "46128-5",
       "F": "Tissue transglutaminase IgA Ab [Units/volume] in Serum by Immunoassay",
@@ -22602,6 +21912,7 @@ export default [
     {
       "A": 3,
       "B": "MAG IgM Ser Qn EIA",
+      "C": "Myelin associated glycoprotein Ab.IgM|PrThrTitrACnc|Intravascular-any|IA-IF-Null*",
       "D": 32597,
       "E": "39087-2",
       "F": "Myelin associated glycoprotein IgM Ab [Titer] in Serum by Immunoassay",
@@ -22622,6 +21933,7 @@ export default [
     {
       "A": 3,
       "B": "Microsomal Ab Ser Qn",
+      "C": "Liver kidney microsomal Ab|PrThrTitrACnc|Intravascular-any|IA-IF-Null*",
       "D": 16191,
       "E": "14272-9",
       "F": "Liver kidney microsomal Ab [Presence] in Serum",
@@ -22637,6 +21949,7 @@ export default [
     {
       "A": 3,
       "B": "Microsomal Ab Titr",
+      "C": "Thyroperoxidase Ab|PrThrTitrACnc|Intravascular-any|IA-IF-Null*",
       "D": 9150,
       "E": "32786-6",
       "F": "Thyroperoxidase Ab [Titer] in Serum or Plasma",
@@ -22656,6 +21969,7 @@ export default [
     {
       "A": 3,
       "B": "Mitochond Ab Ser Titr IF",
+      "C": "Mitochondria Ab|PrThrTitrACnc|Intravascular-any|IA-IF-Null*",
       "D": 9148,
       "E": "5247-2",
       "F": "Mitochondria Ab [Titer] in Serum by Immunofluorescence",
@@ -22675,6 +21989,7 @@ export default [
     {
       "A": 3,
       "B": "Anti Mitochon Ab",
+      "C": "Mitochondria Ab|PrThrTitrACnc|Intravascular-any|IA-IF-Null*",
       "D": 5223,
       "E": "20483-4",
       "F": "Mitochondria Ab [Titer] in Serum",
@@ -22694,6 +22009,7 @@ export default [
     {
       "A": 3,
       "B": "Myeloperoxidase Ab Qn EIA",
+      "C": "Myeloperoxidase Ab|PrThrTitrACnc|Intravascular-any|IA-IF-Null*",
       "D": 20630,
       "E": "6969-0",
       "F": "Myeloperoxidase Ab [Units/volume] in Serum",
@@ -22711,6 +22027,7 @@ export default [
     {
       "A": 3,
       "B": "Neutrophil Cyto Ab IgG Ser Titr",
+      "C": "Neutrophil cytoplasmic Ab.IgG|PrThrTitrACnc|Intravascular-any|IA-IF-Null*",
       "D": 29239,
       "E": "29967-7",
       "F": "Neutrophil cytoplasmic IgG Ab [Titer] in Serum by Immunofluorescence",
@@ -22730,6 +22047,7 @@ export default [
     {
       "A": 3,
       "B": "Parietal Cell Ab Ser Titr",
+      "C": "Parietal cell Ab|PrThrTitrACnc|Intravascular-any|IA-IF-Null*",
       "D": 9144,
       "E": "5271-2",
       "F": "Parietal cell Ab [Titer] in Serum by Immunofluorescence",
@@ -22747,6 +22065,7 @@ export default [
     {
       "A": 3,
       "B": "Perinuclear Ab Titr",
+      "C": "Neutrophil cytoplasmic Ab.perinuclear|PrThrTitrACnc|Intravascular-any|IA-IF-Null*",
       "D": 18378,
       "E": "32787-4",
       "F": "Neutrophil cytoplasmic Ab.perinuclear [Titer] in Serum",
@@ -22769,6 +22088,7 @@ export default [
     {
       "A": 3,
       "B": "Serine Proteinase 3 Ab Ser Qn",
+      "C": "Proteinase 3 Ab|PrThrTitrACnc|Intravascular-any|IA-IF-Null*",
       "D": 20631,
       "E": "6968-2",
       "F": "Proteinase 3 Ab [Units/volume] in Serum",
@@ -22793,6 +22113,7 @@ export default [
     {
       "A": 3,
       "B": "Smooth Muscl Ab Ser Titr IF",
+      "C": "Smooth muscle Ab|PrThrTitrACnc|Intravascular-any|IA-IF-Null*",
       "D": 5224,
       "E": "5358-7",
       "F": "Smooth muscle Ab [Titer] in Serum by Immunofluorescence",
@@ -22812,6 +22133,7 @@ export default [
     {
       "A": 3,
       "B": "Smooth Muscle Ab Ser Titr",
+      "C": "Smooth muscle Ab|PrThrTitrACnc|Intravascular-any|IA-IF-Null*",
       "D": 9149,
       "E": "8095-2",
       "F": "Smooth muscle Ab [Titer] in Serum",
@@ -22831,6 +22153,7 @@ export default [
     {
       "A": 3,
       "B": "Soluble Liver Ag Ab Ser Qn EIA",
+      "C": "Soluble liver Ab|PrThrTitrACnc|Intravascular-any|IA-IF-Null*",
       "D": 29364,
       "E": "12734-0",
       "F": "Soluble liver Ab [Units/volume] in Serum",
@@ -22844,6 +22167,7 @@ export default [
     {
       "A": 3,
       "B": "Thyroid Peroxidase Ab Ser Qn",
+      "C": "Thyroperoxidase Ab|PrThrTitrACnc|Intravascular-any|IA-IF-Null*",
       "D": 24896,
       "E": "8099-4",
       "F": "Thyroperoxidase Ab [Units/volume] in Serum or Plasma",
@@ -22995,7 +22319,7 @@ export default [
     {
       "A": 6,
       "B": "Albumin CSF Qn",
-      "C": "Albumin|MCnc|Pt|CSF|NarDocOrdQn|Method-Other",
+      "C": "Albumin|MCnc|Pt|CSF|Method-Other",
       "D": 19619,
       "E": "1746-7",
       "F": "Albumin [Mass/volume] in Cerebral spinal fluid",
@@ -23030,27 +22354,6 @@ export default [
       "T": "ng/mL",
       "U": "ng/mL",
       "V": "ng/mL"
-    },
-    {
-      "A": 6,
-      "B": "Albumin SerPl Qn (mg/dL)",
-      "C": "Albumin|MCnc|Pt|Intravascular - any|NarDocOrdQn|Method-Other",
-      "D": 19620,
-      "E": "1751-7",
-      "F": "Albumin [Mass/volume] in Serum or Plasma",
-      "G": "Albumin mass conc",
-      "H": "g/dL",
-      "I": "3.5-5.5",
-      "J": 3.5,
-      "K": 3,
-      "N": "Albumin SerPl-mCnc",
-      "O": "LN",
-      "P": "g/dL",
-      "Q": "g/dL",
-      "R": 66000,
-      "T": "mg/dL",
-      "U": "mg/dL",
-      "V": "mg/dL"
     },
     {
       "A": 1,
@@ -23123,7 +22426,6 @@ export default [
     {
       "A": 3,
       "B": "Alprazolam Ser Qn",
-      "C": "ALPRAZolam|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 16710,
       "E": "3312-6",
       "F": "Alprazolam [Mass/volume] in Serum or Plasma",
@@ -23138,7 +22440,6 @@ export default [
     {
       "A": 3,
       "B": "Acetaminophen SerPl Qn",
-      "C": "Acetaminophen|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 5206,
       "E": "3298-7",
       "F": "Acetaminophen [Mass/volume] in Serum or Plasma",
@@ -23239,7 +22540,6 @@ export default [
     {
       "A": 3,
       "B": "Chlordiazep SerPl Qn",
-      "C": "chlordiazePOXIDE|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 5212,
       "E": "3457-9",
       "F": "Chlordiazepoxide [Mass/volume] in Serum or Plasma",
@@ -23252,7 +22552,6 @@ export default [
     {
       "A": 3,
       "B": "Cyanide Bld Qn",
-      "C": "Cyanide|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 21116,
       "E": "5634-1",
       "F": "Cyanide [Mass/volume] in Blood",
@@ -23271,7 +22570,6 @@ export default [
     {
       "A": 3,
       "B": "Diazepam SerPl Qn (mcg/dL)",
-      "C": "diazePAM|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 17221,
       "E": "3548-5",
       "F": "Diazepam [Mass/volume] in Serum or Plasma",
@@ -23291,7 +22589,6 @@ export default [
     {
       "A": 3,
       "B": "Haloperidol SerPl Qn",
-      "C": "Haloperidol|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 11490,
       "E": "3669-9",
       "F": "Haloperidol [Mass/volume] in Serum or Plasma",
@@ -23310,7 +22607,6 @@ export default [
     {
       "A": 3,
       "B": "Meperidine SerPl Bld Qn",
-      "C": "Meperidine|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 23765,
       "E": "3745-7",
       "F": "Meperidine [Mass/volume] in Serum or Plasma",
@@ -23348,7 +22644,6 @@ export default [
     {
       "A": 3,
       "B": "Pentobarb SerPl Qn*",
-      "C": "PENTobarbital|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 7300,
       "E": "3924-8",
       "F": "Pentobarbital [Mass/volume] in Serum or Plasma",
@@ -23369,7 +22664,6 @@ export default [
     {
       "A": 3,
       "B": "Phenobarb SerPl Qn*",
-      "C": "PHENobarbital|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 7302,
       "E": "3948-7",
       "F": "Phenobarbital [Mass/volume] in Serum or Plasma",
@@ -23435,7 +22729,6 @@ export default [
     {
       "A": 3,
       "B": "Thiocyanate SerPl Qn",
-      "C": "Thiocyanate|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 17133,
       "E": "3002-3",
       "F": "Thiocyanate [Mass/volume] in Serum or Plasma",
@@ -23457,7 +22750,6 @@ export default [
     {
       "A": 3,
       "B": "Thioridazine Ser Qn",
-      "C": "Thioridazine|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 5307,
       "E": "4052-7",
       "F": "Thioridazine [Mass/volume] in Serum or Plasma",
@@ -23478,7 +22770,6 @@ export default [
     {
       "A": 3,
       "B": "Topiramate SerPl Qn",
-      "C": "Topiramate|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 24477,
       "E": "17713-9",
       "F": "Topiramate [Mass/volume] in Serum or Plasma",
@@ -23579,7 +22870,6 @@ export default [
     {
       "A": 3,
       "B": "Cocaine Ur Qn Scn",
-      "C": "Cocaine|MCnc|Pt|Urine|OrdQn|Method-Other",
       "D": 27828,
       "E": "3398-5",
       "F": "Cocaine [Mass/volume] in Urine",
@@ -23699,7 +22989,6 @@ export default [
     {
       "A": 3,
       "B": "Amikacin SerPl Qn",
-      "C": "Amikacin|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 5842,
       "E": "35669-1",
       "F": "Amikacin [Mass/volume] in Serum or Plasma",
@@ -23714,7 +23003,6 @@ export default [
     {
       "A": 3,
       "B": "Amikacin Level (Trough)",
-      "C": "Amikacin|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 24191,
       "E": "3321-7",
       "F": "Amikacin [Mass/volume] in Serum or Plasma --trough",
@@ -23734,7 +23022,6 @@ export default [
     {
       "A": 3,
       "B": "Amikacin Level (Peak)",
-      "C": "Amikacin|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 24190,
       "E": "3319-1",
       "F": "Amikacin [Mass/volume] in Serum or Plasma --peak",
@@ -23761,7 +23048,6 @@ export default [
     {
       "A": 3,
       "B": "Chloramphenicol SerPl Qn",
-      "C": "Chloramphenicol|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 10049,
       "E": "3455-3",
       "F": "Chloramphenicol [Mass/volume] in Serum or Plasma",
@@ -23781,7 +23067,6 @@ export default [
     {
       "A": 3,
       "B": "Gentamicin SerPl Qn",
-      "C": "Gentamicin|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 18176,
       "E": "35668-3",
       "F": "Gentamicin [Mass/volume] in Serum or Plasma",
@@ -23795,7 +23080,6 @@ export default [
     {
       "A": 3,
       "B": "Gentamicin SerPl Qn'",
-      "C": "Gentamicin|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 1678,
       "E": "3664-0",
       "F": "Gentamicin [Mass/volume] in Serum or Plasma --random",
@@ -23814,7 +23098,6 @@ export default [
     {
       "A": 3,
       "B": "Gentamicin Level (Trough)",
-      "C": "Gentamicin|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 24189,
       "E": "3665-7",
       "F": "Gentamicin [Mass/volume] in Serum or Plasma --trough",
@@ -23832,7 +23115,6 @@ export default [
     {
       "A": 3,
       "B": "Gentamicin Level (Peak)",
-      "C": "Gentamicin|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 24188,
       "E": "3663-2",
       "F": "Gentamicin [Mass/volume] in Serum or Plasma --peak",
@@ -23851,7 +23133,6 @@ export default [
     {
       "A": 3,
       "B": "Tobramycin Level (Random)",
-      "C": "Tobramycin|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 18177,
       "E": "35670-9",
       "F": "Tobramycin [Mass/volume] in Serum or Plasma",
@@ -23866,7 +23147,6 @@ export default [
     {
       "A": 3,
       "B": "Tobramycin SerPl Qn'",
-      "C": "Tobramycin|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 5446,
       "E": "4058-4",
       "F": "Tobramycin [Mass/volume] in Serum or Plasma --random",
@@ -23892,7 +23172,6 @@ export default [
     {
       "A": 3,
       "B": "Tobramycin Level (Trough)",
-      "C": "Tobramycin|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 24193,
       "E": "4059-2",
       "F": "Tobramycin [Mass/volume] in Serum or Plasma --trough",
@@ -23911,7 +23190,6 @@ export default [
     {
       "A": 3,
       "B": "Tobramycin Level (Peak)",
-      "C": "Tobramycin|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 24192,
       "E": "4057-6",
       "F": "Tobramycin [Mass/volume] in Serum or Plasma --peak",
@@ -23931,7 +23209,6 @@ export default [
     {
       "A": 3,
       "B": "Vancomycin Level (Random)",
-      "C": "Vancomycin|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 5844,
       "E": "20578-1",
       "F": "Vancomycin [Mass/volume] in Serum or Plasma",
@@ -23951,7 +23228,6 @@ export default [
     {
       "A": 3,
       "B": "Vancomycin Level (Trough)",
-      "C": "Vancomycin|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 24195,
       "E": "4092-3",
       "F": "Vancomycin [Mass/volume] in Serum or Plasma --trough",
@@ -23971,7 +23247,6 @@ export default [
     {
       "A": 3,
       "B": "Vancomycin Level (Peak)",
-      "C": "Vancomycin|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 24194,
       "E": "4090-7",
       "F": "Vancomycin [Mass/volume] in Serum or Plasma --peak",
@@ -23997,7 +23272,6 @@ export default [
     {
       "A": 3,
       "B": "5-F-Cytosine Ser Qn",
-      "C": "5-Fluorocytosine|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 15329,
       "E": "3639-2",
       "F": "5-Fluorocytosine [Mass/volume] in Serum or Plasma",
@@ -24030,7 +23304,6 @@ export default [
     {
       "A": 3,
       "B": "Itraconazole Ser Qn",
-      "C": "Itraconazole|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 22754,
       "E": "10989-2",
       "F": "Itraconazole [Mass/volume] in Serum or Plasma",
@@ -24062,7 +23335,6 @@ export default [
     {
       "A": 3,
       "B": "Amiodarone Ser Qn",
-      "C": "Amiodarone|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 17016,
       "E": "3330-8",
       "F": "Amiodarone [Mass/volume] in Serum or Plasma",
@@ -24103,7 +23375,6 @@ export default [
     {
       "A": 3,
       "B": "Theophylline SerPl Qn",
-      "C": "Theophylline|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 4570,
       "E": "4049-3",
       "F": "Theophylline [Mass/volume] in Serum or Plasma",
@@ -24160,7 +23431,6 @@ export default [
     {
       "A": 3,
       "B": "Digoxin SerPl Qn",
-      "C": "Digoxin|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 2969,
       "E": "10535-3",
       "F": "Digoxin [Mass/volume] in Serum or Plasma",
@@ -24207,7 +23477,6 @@ export default [
     {
       "A": 3,
       "B": "Flecainide SerPl Qn",
-      "C": "Flecainide|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 11241,
       "E": "3638-4",
       "F": "Flecainide [Mass/volume] in Serum or Plasma",
@@ -24226,7 +23495,6 @@ export default [
     {
       "A": 3,
       "B": "Lidocaine SerPl Qn",
-      "C": "Lidocaine|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 5643,
       "E": "3714-3",
       "F": "Lidocaine [Mass/volume] in Serum or Plasma",
@@ -24247,7 +23515,6 @@ export default [
     {
       "A": 3,
       "B": "Quinidine SerPl Qn",
-      "C": "quiNIDine|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 5202,
       "E": "6694-4",
       "F": "Quinidine [Mass/volume] in Serum or Plasma",
@@ -24285,7 +23552,6 @@ export default [
     {
       "A": 4,
       "B": "NAPA SerPl Qn",
-      "C": "N-acetylprocainamide|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 7112,
       "E": "3834-9",
       "F": "N-acetylprocainamide [Mass/volume] in Serum or Plasma",
@@ -24304,7 +23570,6 @@ export default [
     {
       "A": 4,
       "B": "Procainamid SerPl Qn",
-      "C": "Procainamide|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 7115,
       "E": "3982-6",
       "F": "Procainamide [Mass/volume] in Serum or Plasma",
@@ -24330,7 +23595,6 @@ export default [
     {
       "A": 3,
       "B": "Cyclosporin Bld Qn",
-      "C": "Cyclosporine|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 14006,
       "E": "3520-4",
       "F": "Cyclosporine [Mass/volume] in Blood",
@@ -24352,7 +23616,6 @@ export default [
     {
       "A": 3,
       "B": "Cyclosporine SerPl Qn",
-      "C": "Cyclosporine|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 21357,
       "E": "3521-2",
       "F": "Cyclosporine [Mass/volume] in Serum",
@@ -24374,7 +23637,6 @@ export default [
     {
       "A": 3,
       "B": "Tacrolimus Bld Qn",
-      "C": "Tacrolimus|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 21309,
       "E": "11253-2",
       "F": "Tacrolimus [Mass/volume] in Blood",
@@ -24388,7 +23650,6 @@ export default [
     {
       "A": 3,
       "B": "Methotrexate LVL",
-      "C": "Methotrexate|SCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 15312,
       "E": "14836-1",
       "F": "Methotrexate [Moles/volume] in Serum or Plasma",
@@ -24402,7 +23663,6 @@ export default [
     {
       "A": 3,
       "B": "Sirolimus Bld Qn",
-      "C": "Sirolimus|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 25698,
       "E": "29247-4",
       "F": "Sirolimus [Mass/volume] in Blood",
@@ -24426,7 +23686,6 @@ export default [
     {
       "A": 3,
       "B": "Amincaproate SerPl Qn",
-      "C": "Aminocaproate|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 4414,
       "E": "9312-0",
       "F": "Aminocaproate [Mass/volume] in Serum or Plasma",
@@ -24451,7 +23710,6 @@ export default [
     {
       "A": 3,
       "B": "Salicylate SerPl Qn",
-      "C": "Salicylates|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 618,
       "E": "4024-6",
       "F": "Salicylates [Mass/volume] in Serum or Plasma",
@@ -24514,7 +23772,6 @@ export default [
     {
       "A": 4,
       "B": "Nortriptyline SerPl Qn",
-      "C": "Nortriptyline|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 16395,
       "E": "3872-9",
       "F": "Nortriptyline [Mass/volume] in Serum or Plasma",
@@ -24536,7 +23793,6 @@ export default [
     {
       "A": 4,
       "B": "Amitriptyline SerPl Qn",
-      "C": "Amitriptyline|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 26627,
       "E": "3333-2",
       "F": "Amitriptyline [Mass/volume] in Serum or Plasma",
@@ -24571,7 +23827,6 @@ export default [
     {
       "A": 3,
       "B": "Carbamazepine Level (CSH)",
-      "C": "carBAMazepine|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 11477,
       "E": "3432-2",
       "F": "Carbamazepine [Mass/volume] in Serum or Plasma",
@@ -24592,7 +23847,6 @@ export default [
     {
       "A": 4,
       "B": "Clomipramine+Metab SePl Qn",
-      "C": "Clomipramine+Norclomipramine|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 25117,
       "E": "3493-4",
       "F": "Clomipramine+Norclomipramine [Mass/volume] in Serum or Plasma",
@@ -24604,7 +23858,6 @@ export default [
     {
       "A": 5,
       "B": "Clomipramine SerPl Qn",
-      "C": "Clomipramine|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 16738,
       "E": "3491-8",
       "F": "Clomipramine [Mass/volume] in Serum or Plasma",
@@ -24619,7 +23872,6 @@ export default [
     {
       "A": 5,
       "B": "N-Desmethylclomip SerPl Qn",
-      "C": "Norclomipramine|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 17256,
       "E": "3536-0",
       "F": "Norclomipramine [Mass/volume] in Serum or Plasma",
@@ -24638,7 +23890,6 @@ export default [
     {
       "A": 3,
       "B": "Clonazepam SerPl Qn",
-      "C": "clonazePAM|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 5321,
       "E": "3494-2",
       "F": "Clonazepam [Mass/volume] in Serum or Plasma",
@@ -24664,7 +23915,6 @@ export default [
     {
       "A": 4,
       "B": "Clozapine SerPl Qn",
-      "C": "cloZAPine|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 19850,
       "E": "6896-5",
       "F": "Clozapine [Mass/volume] in Serum or Plasma",
@@ -24690,7 +23940,6 @@ export default [
     {
       "A": 4,
       "B": "Doxepin SerPl Qn",
-      "C": "Doxepin|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 13824,
       "E": "3579-0",
       "F": "Doxepin [Mass/volume] in Serum or Plasma",
@@ -24719,7 +23968,6 @@ export default [
     {
       "A": 4,
       "B": "Doxepin+Nordoxepin SerPl Qn",
-      "C": "Doxepin+Nordoxepin|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 21122,
       "E": "3582-4",
       "F": "Doxepin+Nordoxepin [Mass/volume] in Serum or Plasma",
@@ -24738,7 +23986,6 @@ export default [
     {
       "A": 3,
       "B": "Ethosuximide SerPl Qn",
-      "C": "Ethosuximide|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 1407,
       "E": "3616-0",
       "F": "Ethosuximide [Mass/volume] in Serum or Plasma",
@@ -24758,7 +24005,6 @@ export default [
     {
       "A": 3,
       "B": "Gabapentin SerPl Qn",
-      "C": "Gabapentin|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 22755,
       "E": "9738-6",
       "F": "Gabapentin [Mass/volume] in Serum or Plasma",
@@ -24785,7 +24031,6 @@ export default [
     {
       "A": 4,
       "B": "Imipramine Ser Qn'",
-      "C": "Imipramine|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 5315,
       "E": "3690-5",
       "F": "Imipramine [Mass/volume] in Serum or Plasma",
@@ -24806,7 +24051,6 @@ export default [
     {
       "A": 3,
       "B": "Desipramine SerPl Qn",
-      "C": "Desipramine|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 16463,
       "E": "3531-1",
       "F": "Desipramine [Mass/volume] in Serum or Plasma",
@@ -24826,7 +24070,6 @@ export default [
     {
       "A": 3,
       "B": "Imipramine+Metab Ser Qn",
-      "C": "Imipramine+Desipramine|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 16396,
       "E": "9627-1",
       "F": "Imipramine+Desipramine [Mass/volume] in Serum or Plasma",
@@ -24863,7 +24106,6 @@ export default [
     {
       "A": 3,
       "B": "Lithium Levl",
-      "C": "Lithium|SCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 616,
       "E": "14334-7",
       "F": "Lithium [Moles/volume] in Serum or Plasma",
@@ -24883,7 +24125,6 @@ export default [
     {
       "A": 3,
       "B": "Lamotrigine SerPl Qn",
-      "C": "lamoTRIgine|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 23041,
       "E": "6948-4",
       "F": "Lamotrigine [Mass/volume] in Serum or Plasma",
@@ -24920,7 +24161,6 @@ export default [
     {
       "A": 3,
       "B": "Oxcarbazepine 10-OH Metab",
-      "C": "10-Hydroxycarbazepine|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 30720,
       "E": "31019-3",
       "F": "10-Hydroxycarbazepine [Mass/volume] in Serum or Plasma",
@@ -24939,7 +24179,6 @@ export default [
     {
       "A": 3,
       "B": "Phenytoin Ser'",
-      "C": "Phenytoin|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 1405,
       "E": "3968-5",
       "F": "Phenytoin [Mass/volume] in Serum or Plasma",
@@ -24960,7 +24199,6 @@ export default [
     {
       "A": 3,
       "B": "Phenytoin Free SerPl Qn",
-      "C": "Phenytoin.free|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 14766,
       "E": "3969-3",
       "F": "Phenytoin Free [Mass/volume] in Serum or Plasma",
@@ -24979,7 +24217,6 @@ export default [
     {
       "A": 3,
       "B": "Primidone SerPl Qn",
-      "C": "Primidone|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 5201,
       "E": "3978-4",
       "F": "Primidone [Mass/volume] in Serum or Plasma",
@@ -24998,7 +24235,6 @@ export default [
     {
       "A": 3,
       "B": "Prolixin Ser (CSH) Qn",
-      "C": "fluPHENAZine|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 11482,
       "E": "3650-9",
       "F": "Fluphenazine [Mass/volume] in Serum or Plasma",
@@ -25028,7 +24264,6 @@ export default [
     {
       "A": 3,
       "B": "Valproate Level (CSH)",
-      "C": "Valproate|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 11476,
       "E": "4086-5",
       "F": "Valproate [Mass/volume] in Serum or Plasma",
@@ -25074,7 +24309,6 @@ export default [
     {
       "A": 3,
       "B": "Ethanol Ser/P",
-      "C": "Ethanol|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 612,
       "E": "5643-2",
       "F": "Ethanol [Mass/volume] in Serum or Plasma",
@@ -25113,7 +24347,6 @@ export default [
     {
       "A": 3,
       "B": "Formic Acid SerPl Qn",
-      "C": "Formate|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 30974,
       "E": "2292-1",
       "F": "Formate [Mass/volume] in Serum or Plasma",
@@ -25193,7 +24426,6 @@ export default [
     {
       "A": 3,
       "B": "Aluminum Ser Qn",
-      "C": "Aluminum|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 13826,
       "E": "5574-9",
       "F": "Aluminum [Mass/volume] in Serum or Plasma",
@@ -25212,7 +24444,6 @@ export default [
     {
       "A": 3,
       "B": "Arsenic Bld Qn Ug/L",
-      "C": "Arsenic|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 25163,
       "E": "5583-0",
       "F": "Arsenic [Mass/volume] in Blood",
@@ -25231,7 +24462,6 @@ export default [
     {
       "A": 3,
       "B": "Copper SerPl Qn",
-      "C": "Copper|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 5037,
       "E": "5631-7",
       "F": "Copper [Mass/volume] in Serum or Plasma",
@@ -25250,7 +24480,6 @@ export default [
     {
       "A": 3,
       "B": "Lead Level-Peds",
-      "C": "Lead|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 9051,
       "E": "5671-3",
       "F": "Lead [Mass/volume] in Blood",
@@ -25271,7 +24500,6 @@ export default [
     {
       "A": 3,
       "B": "Lead Ser Qn'",
-      "C": "Lead|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 614,
       "E": "10912-4",
       "F": "Lead [Mass/volume] in Serum or Plasma",
@@ -25291,7 +24519,6 @@ export default [
     {
       "A": 3,
       "B": "Mercury Bld Qn ug/L",
-      "C": "Mercury|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 25162,
       "E": "5685-3",
       "F": "Mercury [Mass/volume] in Blood",
@@ -25310,7 +24537,7 @@ export default [
     {
       "A": 3,
       "B": "Zinc'",
-      "C": "Zinc|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
+      "C": "Zinc|MCnc|Pt|Intravascular-any|Qn|Method-Other",
       "D": 5065,
       "E": "5763-8",
       "F": "Zinc [Mass/volume] in Serum or Plasma",
@@ -25377,7 +24604,6 @@ export default [
     {
       "A": 3,
       "B": "Arsenic Ur MCG/24H",
-      "C": "Arsenic|MRatSRat|TimedSpecimen|Urine|OrdQn|Method-Other",
       "D": 25910,
       "E": "5587-1",
       "F": "Arsenic [Mass/time] in 24 hour Urine",
@@ -25392,7 +24618,6 @@ export default [
     {
       "A": 3,
       "B": "Arsenic Ur MCG/Gm Creat",
-      "C": "Arsenic/Creatinine|MRtoSRto|Pt|Urine|OrdQn|Method-Other",
       "D": 25880,
       "E": "13463-5",
       "F": "Arsenic/Creatinine [Mass Ratio] in Urine",
@@ -25421,7 +24646,6 @@ export default [
     {
       "A": 3,
       "B": "Bismuth 24H Rate Ur",
-      "C": "Bismuth|MRatSRat|TimedSpecimen|Urine|OrdQn|Method-Other",
       "D": 27592,
       "E": "29918-0",
       "F": "Bismuth [Mass/time] in 24 hour Urine",
@@ -25436,7 +24660,6 @@ export default [
     {
       "A": 3,
       "B": "Bismuth Ur mcg/gm Creat",
-      "C": "Bismuth/Creatinine|MRtoSRto|Pt|Urine|OrdQn|Method-Other",
       "D": 27735,
       "E": "16469-9",
       "F": "Bismuth/Creatinine [Mass Ratio] in Urine",
@@ -25451,7 +24674,6 @@ export default [
     {
       "A": 3,
       "B": "Cadmium 24H Rate Ur",
-      "C": "Cadmium|MRatSRat|TimedSpecimen|Urine|OrdQn|Method-Other",
       "D": 27629,
       "E": "5612-7",
       "F": "Cadmium [Mass/time] in 24 hour Urine",
@@ -25479,7 +24701,6 @@ export default [
     {
       "A": 3,
       "B": "Cadmium Ur mcg/gm Creat",
-      "C": "Cadmium/Creatinine|MRtoSRto|Pt|Urine|OrdQn|Method-Other",
       "D": 29264,
       "E": "13471-8",
       "F": "Cadmium/Creatinine [Mass Ratio] in Urine",
@@ -25493,7 +24714,6 @@ export default [
     {
       "A": 3,
       "B": "Copper/Creat Ur Qn",
-      "C": "Copper/Creatinine|MRtoSRto|Pt|Urine|OrdQn|Method-Other",
       "D": 31559,
       "E": "13829-7",
       "F": "Copper/Creatinine [Mass Ratio] in Urine",
@@ -25508,7 +24728,6 @@ export default [
     {
       "A": 3,
       "B": "Copper Ur 24H Qn",
-      "C": "Copper|MRatSRat|TimedSpecimen|Urine|OrdQn|Method-Other",
       "D": 25215,
       "E": "5633-3",
       "F": "Copper [Mass/time] in 24 hour Urine",
@@ -25582,7 +24801,6 @@ export default [
     {
       "A": 3,
       "B": "Lead Ur MCG/24H",
-      "C": "Lead|MRatSRat|TimedSpecimen|Urine|OrdQn|Method-Other",
       "D": 25909,
       "E": "5677-0",
       "F": "Lead [Mass/time] in 24 hour Urine",
@@ -25601,7 +24819,6 @@ export default [
     {
       "A": 3,
       "B": "Lead Ur MCG/Gm Creat",
-      "C": "Lead/Creatinine|MRtoSRto|Pt|Urine|OrdQn|Method-Other",
       "D": 25881,
       "E": "13466-8",
       "F": "Lead/Creatinine [Mass Ratio] in Urine",
@@ -25635,7 +24852,6 @@ export default [
     {
       "A": 3,
       "B": "Mercury Ur MCG/24H",
-      "C": "Mercury|MRatSRat|TimedSpecimen|Urine|OrdQn|Method-Other",
       "D": 25908,
       "E": "6693-6",
       "F": "Mercury [Mass/time] in 24 hour Urine",
@@ -25650,7 +24866,6 @@ export default [
     {
       "A": 3,
       "B": "Mercury Ur MCG/Gm Creat",
-      "C": "Mercury/Creatinine|MRtoSRto|Pt|Urine|OrdQn|Method-Other",
       "D": 25882,
       "E": "13465-0",
       "F": "Mercury/Creatinine [Mass Ratio] in Urine",
@@ -25697,7 +24912,6 @@ export default [
     {
       "A": 3,
       "B": "Thallium Ur 24H",
-      "C": "Thallium|MRatSRat|TimedSpecimen|Urine|OrdQn|Method-Other",
       "D": 25994,
       "E": "5746-3",
       "F": "Thallium [Mass/time] in 24 hour Urine",
@@ -25712,7 +24926,6 @@ export default [
     {
       "A": 3,
       "B": "Thallium Ur 24H Content",
-      "C": "Thallium/Creatinine|MRtoSRto|TimedSpecimen|Urine|OrdQn|Method-Other",
       "D": 25995,
       "E": "29938-8",
       "F": "Thallium/Creatinine [Mass Ratio] in 24 hour Urine",
@@ -25774,7 +24987,6 @@ export default [
     {
       "A": 3,
       "B": "Acetone SerPl Qn",
-      "C": "Acetone|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 5207,
       "E": "5568-1",
       "F": "Acetone [Mass/volume] in Serum or Plasma",
@@ -25793,7 +25005,6 @@ export default [
     {
       "A": 3,
       "B": "Isopropanol SerPl Qn",
-      "C": "Isopropanol|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 5221,
       "E": "5669-7",
       "F": "Isopropanol [Mass/volume] in Serum or Plasma",
@@ -25808,7 +25019,6 @@ export default [
     {
       "A": 3,
       "B": "Methanol SerPl Qn",
-      "C": "Methanol|MCnc|Pt|Intravascular - any|OrdQn|Method-Other",
       "D": 5240,
       "E": "5693-7",
       "F": "Methanol [Mass/volume] in Serum or Plasma",
@@ -25878,6 +25088,7 @@ export default [
     {
       "A": 3,
       "B": "Cold Aggl Ser Titr",
+      "C": "Cold agglutinin|PrThrTitrACnc|Intravascular-any|Method-Other",
       "D": 5136,
       "E": "14658-9",
       "F": "Cold agglutinin [Titer] in Serum or Plasma",
@@ -26389,23 +25600,6 @@ export default [
       "B": "SWAN DATA",
       "D": 7857,
       "O": "RI"
-    },
-    {
-      "A": 3,
-      "B": "MAP",
-      "D": 7860,
-      "E": "8478-0",
-      "F": "Mean blood pressure",
-      "H": "mm Hg",
-      "I": "82 - 102",
-      "J": 82,
-      "K": 102,
-      "L": 102,
-      "N": "BP mean",
-      "O": "LN",
-      "T": "mm Hg",
-      "U": "mmHg",
-      "V": "mm[Hg]"
     },
     {
       "A": 2,
@@ -28682,17 +27876,6 @@ export default [
       "D": 19462,
       "O": "RI",
       "T": "mL"
-    },
-    {
-      "A": 3,
-      "B": "Dtap Immun",
-      "D": 18886,
-      "E": "30936-9",
-      "F": "Corynebacterium diphtheriae+Clostridium tetani+Bordetella pertussis dose count in combination vaccine",
-      "N": "DTAP dose count in combo vaccine",
-      "O": "RI",
-      "T": "#",
-      "V": "{#}"
     },
     {
       "A": 3,
@@ -43451,19 +42634,6 @@ export default [
     },
     {
       "A": 3,
-      "B": "Weight Admission",
-      "D": 14172,
-      "E": "3141-9",
-      "F": "Body weight Measured",
-      "G": "Weight lbs",
-      "N": "Weight Measured",
-      "O": "LN",
-      "T": "LBS",
-      "U": "lbs",
-      "V": "[lb_av]"
-    },
-    {
-      "A": 3,
       "B": "Fhts Admission",
       "D": 14186,
       "E": "55283-6",
@@ -44081,32 +43251,6 @@ export default [
       "T": "INCH(S)",
       "U": "in",
       "V": "[in_i]"
-    },
-    {
-      "A": 3,
-      "B": "Temp Axillary",
-      "D": 11401,
-      "E": "8328-7",
-      "F": "Axillary temperature",
-      "G": "Axiliary temp F",
-      "N": "Axil temp",
-      "O": "LN",
-      "T": "DEG F",
-      "U": "F",
-      "V": "[degF]"
-    },
-    {
-      "A": 3,
-      "B": "Temp Rectal",
-      "D": 7187,
-      "E": "8332-9",
-      "F": "Rectal temperature",
-      "G": "Rectal temp F",
-      "N": "Rectal temp",
-      "O": "LN",
-      "T": "DEG F",
-      "U": "F",
-      "V": "[degF]"
     },
     {
       "A": 3,
