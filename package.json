@@ -24,8 +24,8 @@
     "raf-schd": "^3.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-sparklines": "git+https://lhc-git.nlm.nih.gov/LFOR/react-sparklines-lhc.git#fix-referenceline",
-    "react-window": "git+https://lhc-git.nlm.nih.gov/LFOR/react-window-lhc.git#add-fixed-columns-rows",
+    "react-sparklines": "git+ssh://git-scm.nlm.nih.gov:7999/lfor/react-sparklines-lhc.git#fix-referenceline",
+    "react-window": "git+ssh://git-scm.nlm.nih.gov:7999/lfor/react-window-lhc.git#add-fixed-columns-rows",
     "victory": "^31.2.0"
   },
   "scripts": {
