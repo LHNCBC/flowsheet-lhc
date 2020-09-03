@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import {render, fireEvent, cleanup, waitForElement} from 'react-testing-library';
+import {render, fireEvent, cleanup, waitForElement} from '@testing-library/react';
 //import axiosMock from 'axios';
 
 import renderer from 'react-test-renderer';

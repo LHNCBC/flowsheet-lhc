@@ -5,36 +5,47 @@
   "private": true,
   "author": "Ye Wang <wangye@nih.gov>",
   "devDependencies": {
-    "axios": "^0.18.0",
-    "convert-excel-to-json": "^1.4.1",
-    "custom-react-scripts": "^0.2.0",
-    "eslint": "^5.0.1",
-    "gh-pages": "^1.0.0",
-    "jshint": "^2.9.5",
-    "react-test-renderer": "^16.8.6",
-    "react-testing-library": "^7.0.0",
-    "source-map-explorer": "^2.0.1"
+    "axios": "~0.20.0",
+    "convert-excel-to-json": "~1.7.0",
+    "react-scripts": "3.4.3",
+    "gh-pages": "~3.1.0",
+    "jshint": "~2.12.0",
+    "react-test-renderer": "^16.13.1",
+    "@testing-library/react": "~11.0.0",
+    "source-map-explorer": "~2.5.0"
   },
   "dependencies": {
     "@lhncbc/ucum-lhc": "2.4.1",
     "antd": "^3.15.2",
     "deep-copy": "^1.4.2",
     "fhir.js": "git://github.com/akanduru/fhir.js",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.20",
     "moment": "^2.22.2",
     "raf-schd": "^3.0.1",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
-    "react-sparklines": "file:../react-sparklines",
-    "react-window": "file:../react-window",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-sparklines": "git+ssh://git-scm.nlm.nih.gov:7999/lfor/react-sparklines-lhc.git#fix-referenceline",
+    "react-window": "git+ssh://git-scm.nlm.nih.gov:7999/lfor/react-window-lhc.git#add-fixed-columns-rows",
     "victory": "^31.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "start2": "PORT=80 react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "react-scripts test --env=jsdom --watchAll=false",
     "eject": "react-scripts eject",
     "analyze": "source-map-explorer 'build/static/js/*.js'"
+  },
+  "browserslist": {
+    "production": [
+      "defaults",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "defaults",
+      "not dead",
+      "not op_mini all"
+    ]
   }
 }
