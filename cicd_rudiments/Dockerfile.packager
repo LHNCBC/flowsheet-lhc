@@ -1,0 +1,30 @@
+###################################
+######## packager #################
+ARG	NODE_VERSION
+FROM node:${NODE_VERSION}-alpine AS packager
+
+# Setting up project dir
+ARG	NODE_ENV
+ARG	HOST
+
+ENV	NODE_ENV=${NODE_ENV} 
+ENV	HOST=${HOST} 
+
+WORKDIR /proj/flowsheet-lhc
+
+# Copying build 
+COPY    --from=lforms/flowsheet-lhc_builder:latest /tmp/build .
+
+# Adding webserv user
+RUN     addgroup -g 1001 webserv && \
+        adduser --disabled-password --system -u 1001 -G webserv webserv && \
+	chown -R webserv:webserv /home/webserv && \
+	npm add serve -g 
+
+# Will run server with webserv
+USER	webserv 
+
+EXPOSE 5000 
+CMD [ "serve", "-s", "." ]
+
+

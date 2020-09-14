@@ -1,0 +1,20 @@
+# define the services
+version: "2"
+
+services:
+  flowsheet-lhc-nginx:
+    container_name: flowsheet-lhc-nginx 
+    image: lhc-nexus.nlm.nih.gov:8443/flowsheet-lhc-nginx:$NGINX_VERSION
+    ports:
+     - $PORT:443
+    networks:
+      - internal
+
+  flowsheet-lhc:
+    container_name: flowsheet-lhc 
+    image: lhc-nexus.nlm.nih.gov:8443/lforms/flowsheet-lhc:$VERSION 
+    networks:
+      - internal
+
+networks:
+  internal: {}
