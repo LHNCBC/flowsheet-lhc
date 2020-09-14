@@ -46,7 +46,6 @@ package:
   stage: package
   before_script:
     - export VERSION=$(/bin/jq -r '.version?' package.json)
-    - source $(pwd)/nodeVersion.sh
   script: /usr/bin/docker build -t "$NEXUS/lforms/$NAME:$VERSION" --build-arg NODE_VERSION=$NODE_VERSION --build-arg NODE_ENV=$NODE_ENV  --build-arg HOST=$HOST . -f $(pwd)/cicd_rudiments/Dockerfile.packager >> "$LOG"
   only:
     - cicd
