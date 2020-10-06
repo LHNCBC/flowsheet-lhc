@@ -1,0 +1,83 @@
+stages:
+  - build
+  - test
+  - package
+  - login
+  - push
+  - tag
+  - run
+
+workflow:
+  rules:
+    - if: $CI_COMMIT_TAG
+      when: always
+    - when: never
+
+default:
+  before_script:
+    - export VERSION=$(/bin/jq -r '.version?' package.json) 
+
+variables:
+  LOG: /tmp/flowsheet-lhc_build.log
+  NGINX_VERSION: 1.0.0
+  NAME: flowsheet-lhc
+  HOST: lhc-lforms-test.nlm.nih.gov
+  PORT: 8443 
+  NODE_ENV: production
+  NODE_VERSION: 10.22.0 
+ 
+build:
+  stage: build
+  before_script:
+    - /bin/cp $HOME/.ssh/id_rsa $(pwd)/cicd_rudiments/.ssh/
+  script: /usr/bin/docker build -t "lforms/flowsheet-lhc_builder:latest" --build-arg NODE_VERSION=$NODE_VERSION --build-arg NEXUS_USER=$NEXUS_USER --build-arg NEXUS_PASSWORD=$NEXUS_PASSWORD . -f $(pwd)/cicd_rudiments/Dockerfile.builder >> "$LOG"
+  only:
+    - cicd 
+    - tags
+
+test:
+  stage: test
+  script: /usr/bin/docker build -t "lforms/flowsheet-lhc_tester:latest" --build-arg NAME=$NAME . -f $(pwd)/cicd_rudiments/Dockerfile.tester >> "$LOG"
+  only:
+    - cicd
+    - tags
+
+package:
+  stage: package
+  before_script:
+    - export VERSION=$(/bin/jq -r '.version?' package.json)
+  script: /usr/bin/docker build -t "$NEXUS/lforms/$NAME:$VERSION" --build-arg NODE_VERSION=$NODE_VERSION --build-arg NODE_ENV=$NODE_ENV  --build-arg HOST=$HOST . -f $(pwd)/cicd_rudiments/Dockerfile.packager >> "$LOG"
+  only:
+    - cicd
+    - tags
+
+login:
+  stage: login 
+  script: /usr/bin/docker login $NEXUS -u $NEXUS_USER -p $NEXUS_PASSWORD >> "$LOG"
+  only:
+    - cicd
+    - tags
+
+push:
+  stage: push
+  script: /usr/bin/docker push $NEXUS/lforms/$NAME:$VERSION >> "$LOG"
+  only:
+    - cicd
+    - tags
+
+tag:
+  stage: tag
+  script: /usr/bin/docker tag $NEXUS/lforms/$NAME:$VERSION $NEXUS/lforms/$NAME:latest >> "$LOG"
+  only:
+    - cicd
+    - tags
+
+run:
+  stage: run
+  before_script:
+    - export VERSION=$(/bin/jq -r '.version?' package.json)
+    - /usr/bin/envsubst < $(pwd)/cicd_rudiments/docker-compose.yaml.template > $(pwd)/cicd_rudiments/docker-compose.yaml
+  script: $(pwd)/cicd_rudiments/deploy.sh $HOST  >> "$LOG"
+  only:
+    - cicd
+    - tags
