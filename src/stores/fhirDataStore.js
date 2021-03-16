@@ -8,22 +8,9 @@ const PAGE_SIZE = 1000;
 const LHC_FHIR_SERVER = {
   name: "LHC Internal FHIR Server #2", 
   desc: "Internal FHIR server at LHC, for dev/test only",
-  url: "https://lhcflowsheet.nlm.nih.gov/hapi-fhir-jpaserver/baseDstu3",
-
-  //url: "http://lhc-docker.nlm.nih.gov:8980/hapi-fhir-jpaserver/baseDstu3",
-
-  //url: "http://lforms-fhir.nlm.nih.gov:8780/baseR4",
-  //url: "https://lhc-docker.nlm.nih.gov:8343/fhir2/baseDstu3",
-  //url: "https://lforms-service-stage-rh7.nlm.nih.gov:8143/hapi-fhir-jpaserver-example/baseDstu3",
-  //url: "http://lhc-docker.nlm.nih.gov:8280/hapi-fhir-jpaserver/baseDstu3",
-//  url: "https://lforms-service-stage-rh7.nlm.nih.gov:8243/hapi-fhir-jpaserver-example/baseDstu3",
-//  url: "https://lforms-service-stage-rh7.nlm.nih.gov:8543/hapi-fhir-jpaserver-example/baseDstu3",
-//  url: "http://hapi.fhir.org/baseDstu3",  // no auth
-  //url: "https://syntheticmass.mitre.org/fhir/"
-  auth: {
-    user: 'fire',
-    pass: 'happy'
-  }
+  
+  url: "https://lforms-fhir.nlm.nih.gov/baseR4"
+  //url: "https://lforms-fhir.nlm.nih.gov/baseDstu3"
 };
 
 class FhirDataStore {
@@ -51,6 +38,7 @@ class FhirDataStore {
 
   _obxSearchSetCache = [];
 
+  _obxQueryDone = true;
 
   _addToCache(data) {
     this._obxSearchSetCache.unshift(data);
@@ -273,6 +261,7 @@ class FhirDataStore {
       }
 
     }
+    this._obxQueryDone = false;
     return this._fhirClient.search({
       type: 'Observation',
       query: queryOption
@@ -292,6 +281,7 @@ class FhirDataStore {
         availableNumOfRes: availableNumOfRes
       };
 
+      that._obxQueryDone = true;
       that._nextPageUrl = nextPageUrl;
 
       that._addToCache(obxData);
@@ -304,6 +294,7 @@ class FhirDataStore {
 
     })
     .catch(function(error) {
+      that._obxQueryDone = true;
       console.log(error);
     });
   };
@@ -370,6 +361,8 @@ class FhirDataStore {
       ]
     };
   
+    that._obxQueryDone = false;
+
     return this._fhirClient.nextPage({bundle: bundle})
       .then(function(response) {   // response.data is a searchset bundle
         //console.log(response);
@@ -387,6 +380,7 @@ class FhirDataStore {
           availableNumOfRes: availableNumOfRes
         }
 
+        that._obxQueryDone = true;
         that._nextPageUrl = nextPageUrl;
 
         that._addToCache(obxData);
@@ -405,6 +399,7 @@ class FhirDataStore {
 
       })
       .catch(function(error) {
+        that._obxQueryDone = true;
         console.log(error);
       });
   };
@@ -453,6 +448,11 @@ class FhirDataStore {
         // console.log(this._nextPageUrl)
         // console.log(this._obxSearchSetCache)
         return that._getNextPageDataFromFHIRServer(this._nextPageUrl, true);
+      }
+      else {
+        return new Promise(function(resolve, reject) {
+          return resolve(null)
+        })
       }
     }
 

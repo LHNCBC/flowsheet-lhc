@@ -270,13 +270,6 @@ class App extends Component {
 
     tableDataStore.getFirstPageFlowsheetData(patientId, this.state.showEqClass, this.state.batchSize, this.state.selectedRangeValue)
       .then(function(data) {
-            // flowsheetTableData: tableData,
-            // tableColumnInfo: columnInfo,
-            // dateList: columnInfo.date,
-            // //columnHeaders: null,
-            // hasMoreData: data.hasMoreData,
-            // retrievedNumOfRes: data.retrievedNumOfRes,
-            // availableNumOfRes: data.availableNumOfRes,
 
         // scroll to the anchor item
         that.anchorItemIndex = 0;
@@ -300,8 +293,8 @@ class App extends Component {
           that._processChartData(columns, data.flowsheetTableData);
         }
 
-        console.log("App: loadData: getFirstPageFlowsheetData: 1:")
-        console.log(data)
+        // console.log("App: loadData: getFirstPageFlowsheetData: 1:")
+        // console.log(data)
 
       })
       .catch(function(error) {
@@ -335,32 +328,39 @@ class App extends Component {
         // console.log("in appendData");
         // console.log("visibleRowStartIndex: " + that.visibleRowStartIndex);
         // console.log(itemKey);
+        if (data) {
+          // scroll to the anchor item
+          let newItemIndex = that._findItemIndexByKey(data.flowsheetTableData, itemKey);
+          // console.log("newItemIndex: " + newItemIndex);
 
-        // scroll to the anchor item
-        let newItemIndex = that._findItemIndexByKey(data.flowsheetTableData, itemKey);
-        // console.log("newItemIndex: " + newItemIndex);
+          that.anchorItemIndex = newItemIndex >= offsetRowNum  ? newItemIndex - offsetRowNum : 0;
+          // console.log("anchorItemIndex: " + that.anchorItemIndex);
 
-        that.anchorItemIndex = newItemIndex >= offsetRowNum  ? newItemIndex - offsetRowNum : 0;
-        // console.log("anchorItemIndex: " + that.anchorItemIndex);
+          that.needRepositionRow = true;
 
-        that.needRepositionRow = true;
+          let columns = tableDataStore.getColumnHeaders(that.state.zoomLevel, data);
+          that.setState({
+            data: data,
+            flowsheetData: data.flowsheetTableData,
+            hasMoreData: data.hasMoreData,
+            flowsheetColumns: columns,
+            isLoading: false,
+            retrievedNumOfRes: that.state.retrievedNumOfRes + data.retrievedNumOfRes
+          })
+          if (that.state.showOverviewMap) {
+            that._processChartData(columns, data.flowsheetTableData);
+          }
 
-        let columns = tableDataStore.getColumnHeaders(that.state.zoomLevel, data);
-        that.setState({
-          data: data,
-          flowsheetData: data.flowsheetTableData,
-          hasMoreData: data.hasMoreData,
-          flowsheetColumns: columns,
-          isLoading: false,
-          retrievedNumOfRes: that.state.retrievedNumOfRes + data.retrievedNumOfRes
-        })
-        if (that.state.showOverviewMap) {
-          that._processChartData(columns, data.flowsheetTableData);
+          // console.log("App: appendData: getNextPageFlowsheetData: 1:")
+          // console.log(data)
+
         }
-
-        console.log("App: appendData: getNextPageFlowsheetData: 1:")
-        console.log(data)
-
+        else {
+          that.setState({
+            hasMoreData: false,
+            isLoading: false
+          })
+        }
       })
       .catch(function(error) {
         console.log(error);
@@ -772,6 +772,8 @@ class App extends Component {
     let rowCount = this.state.flowsheetData ? this.state.flowsheetData.length +1 : 0;
     let colCount = this.state.flowsheetColumns ? this.state.flowsheetColumns.length : 0;
 
+    let enableMore = this.state.hasMoreData && !this.state.isLoading;
+
     return (
       <div>
         <div id={"lf-non-data-table"} ref={this.nonTableRef}>
@@ -820,7 +822,7 @@ class App extends Component {
                     <Button className='lf-button' size={"small"} type="primary" icon="reload" disabled={!this.state.selectedPatient} onClick={() => this.loadData()}>{reloadButtonLabel}</Button>
                   </div>
                   <div className={"lf-control-btn"}>
-                    <Button className='lf-button' size={"small"} type="primary" icon="swap" disabled={!this.state.hasMoreData} onClick={() => this.appendData()}>{this.state.moreButtonLabel}</Button>
+                    <Button className='lf-button' size={"small"} type="primary" icon="swap" disabled={!enableMore} onClick={() => this.appendData()}>{this.state.moreButtonLabel}</Button>
                   </div>
                   <div className={"lf-control-btn"}>
                     <ConditionListDialog selectedPatient={this.state.selectedPatient}/>

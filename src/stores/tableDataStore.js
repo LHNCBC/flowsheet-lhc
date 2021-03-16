@@ -215,7 +215,7 @@ class TableDataStore {
 
         that._addToCache(flowsheetTableData);
 
-        if (that._flowsheetTableDataCache.length < that._cacheSize) {
+        if (fhirStore._nextPageUrl && that._flowsheetTableDataCache.length < that._cacheSize) {
 //          console.log("tableDataStore: _getFirstPageDataFromFHIRStore: 3:" + that.count++)
 //          console.log(that._flowsheetTableDataCache)
           setTimeout(function() {
@@ -238,52 +238,45 @@ class TableDataStore {
 //    console.log(that._flowsheetTableDataCache)
     return fhirStore.getNextPageObxData()
       .then(function(data) {
-        //console.log(data);
-        let currentTemplateInfo = that._dcopyTemplateInfo(that._getCurrentFromCache().templateInfo);
-        let [tableData, columnInfo] = templateStore.getTableData(currentTemplateInfo, data.searchSet, showEqClass)
+        if (data) {
+          //console.log(data);
+          let currentTemplateInfo = that._dcopyTemplateInfo(that._getCurrentFromCache().templateInfo);
+          let [tableData, columnInfo] = templateStore.getTableData(currentTemplateInfo, data.searchSet, showEqClass)
 
-//        console.log("tableDataStore: _getNextPageDataFromFHIRStore: 2:"+ that.count++)
-//        console.log(that._flowsheetTableDataCache)
+          let flowsheetTableData = {
+            flowsheetTableData: tableData,
+            tableColumnInfo: columnInfo,
+            dateList: columnInfo.date,
+            //columnHeaders: null,
+            hasMoreData: data.hasMoreData,
+            retrievedNumOfRes: data.retrievedNumOfRes,
+            availableNumOfRes: data.availableNumOfRes,
+            templateInfo: currentTemplateInfo,
+            pageNumber: that._pageNumber++
+          };
 
-        // console.log(tableData);
-        // console.log(columnInfo);
+          that._addToCache(flowsheetTableData);
 
-        let flowsheetTableData = {
-          flowsheetTableData: tableData,
-          tableColumnInfo: columnInfo,
-          dateList: columnInfo.date,
-          //columnHeaders: null,
-          hasMoreData: data.hasMoreData,
-          retrievedNumOfRes: data.retrievedNumOfRes,
-          availableNumOfRes: data.availableNumOfRes,
-          templateInfo: currentTemplateInfo,
-          pageNumber: that._pageNumber++
-        };
-
-        that._addToCache(flowsheetTableData);
-
-        if (that._flowsheetTableDataCache.length < that._cacheSize) {
+          if (fhirStore._nextPageUrl && that._flowsheetTableDataCache.length < that._cacheSize) {
 //          console.log("tableDataStore: _getNextPageDataFromFHIRStore: 3:"+ that.count++)
 //          console.log(that._flowsheetTableDataCache)
-          setTimeout(function() {
-            that._getNextPageDataFromFHIRStore(showEqClass)
-          }, 10)
-        }
+            setTimeout(function() {
+              that._getNextPageDataFromFHIRStore(showEqClass)
+            }, 10)
+          }
 
-        if (returnImmediately) {
+          if (returnImmediately) {
 //          console.log("tableDataStore: _getNextPageDataFromFHIRStore: 4:"+ that.count++)
 //          console.log(that._flowsheetTableDataCache)
 
-          that._removeLastFromCache();
-          return that._getCurrentFromCache();
+            that._removeLastFromCache();
+            return that._getCurrentFromCache();
+          }
         }
-        // that.dateList = templateStore.dateList;
-        // that.tableColumnInfo = columnInfo;
-        // that.tableData = tableData;
-        // that.moreData = data.hasMoreData;
-        // that.retrievedNumOfRes += data.retrievedNumOfRes;
-        // that.availableNumOfRes = data.availableNumOfRes;
-        // return {tableData: tableData, moreData: that.moreData}
+        // no more data
+        else {
+          return null;
+        }
       })
       .catch(function(error) {
         console.log(error);
