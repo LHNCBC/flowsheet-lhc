@@ -469,7 +469,8 @@ class App extends Component {
     let that = this;
     // setTimeout(function(){
       let nonTableHeight = that.nonTableRef.current.offsetHeight;
-      let tableHeight = that.state.showControlPanel ? window.innerHeight -213 : window.innerHeight - 123; //nonTableHeight;
+      // let tableHeight = that.state.showControlPanel ? window.innerHeight -213 : window.innerHeight - 123; //nonTableHeight;
+      let tableHeight = that.state.showControlPanel ? window.innerHeight -254 : window.innerHeight - 164; //nonTableHeight;
 
       that.setState({
         // tableHeight: window.innerHeight - headerHeight - footerHeight -20, // not sure why there is a gap
