@@ -17,6 +17,7 @@ import BatchSizePicker from './components/batchSizePicker';
 import DateRangePicker from './components/dateRangePicker';
 import ConditionListDialog from './components/conditionListDialog';
 import OverviewMap from './components/overviewMap';
+import PageBanner from './components/pageBanner';
 
 import tableDataStore from './stores/tableDataStore';
 
@@ -778,6 +779,7 @@ class App extends Component {
       <div>
         <div id={"lf-non-data-table"} ref={this.nonTableRef}>
           <div className="lf-app-header" ref={this.refHeader}>
+          <PageBanner></PageBanner>
             <div className="lf-header">
               <div className="lf-logo">
                 <a href="http://lhncbc.nlm.nih.gov" title="Lister Hill National Center for Biomedical Communications (LHNCBC)" id="logo">
@@ -792,7 +794,6 @@ class App extends Component {
                   </span>
                 </a>
               </div>
-
               <div className={"lf-app-control"}>
 
                 <div className={"lf-patient"}>

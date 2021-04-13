@@ -9991,9 +9991,9 @@ react-slick@~0.25.2:
     lodash.debounce "^4.0.8"
     resize-observer-polyfill "^1.5.0"
 
-"react-sparklines@git+ssh://git-scm.nlm.nih.gov:7999/lfor/react-sparklines-lhc.git#fix-referenceline":
+"react-sparklines@git+ssh://git@lhc-git.nlm.nih.gov/LFOR/react-sparklines-lhc.git#fix-referenceline":
   version "1.7.1"
-  resolved "git+ssh://git-scm.nlm.nih.gov:7999/lfor/react-sparklines-lhc.git#f71b8b0e47af22882a312472e2052def809e3e56"
+  resolved "git+ssh://git@lhc-git.nlm.nih.gov/LFOR/react-sparklines-lhc.git#f71b8b0e47af22882a312472e2052def809e3e56"
   dependencies:
     prop-types "^15.5.10"
 
@@ -10007,9 +10007,9 @@ react-test-renderer@^16.13.1:
     react-is "^16.8.6"
     scheduler "^0.19.1"
 
-"react-window@git+ssh://git-scm.nlm.nih.gov:7999/lfor/react-window-lhc.git#add-fixed-columns-rows":
+"react-window@git+ssh://git@lhc-git.nlm.nih.gov/LFOR/react-window-lhc.git#add-fixed-columns-rows":
   version "1.2.4"
-  resolved "git+ssh://git-scm.nlm.nih.gov:7999/lfor/react-window-lhc.git#1f3b1100d715e5ac1eafb8e2dfc257faaed1151f"
+  resolved "git+ssh://git@lhc-git.nlm.nih.gov/LFOR/react-window-lhc.git#1f3b1100d715e5ac1eafb8e2dfc257faaed1151f"
   dependencies:
     "@babel/runtime" "^7.0.0"
     memoize-one "^3.1.1"
