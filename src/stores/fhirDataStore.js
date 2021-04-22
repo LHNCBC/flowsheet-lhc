@@ -312,7 +312,8 @@ class FhirDataStore {
       query: {
         subject: 'Patient/' + pId,
         'clinical-status': 'active',
-        _sort: '-asserted-date',
+        // _sort: '-asserted-date',  // STU3
+        _sort: '-recorded-date',  // R4, TODO: auto-detect FHIR server supported version.
         _count: pageSize,
         _total: 'accurate'
       }
