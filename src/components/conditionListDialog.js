@@ -42,7 +42,7 @@ class ConditionListDialog extends React.Component {
           name: this._getConditionName(item),
           code: this._getConditionCode(item),
           active: this._getConditionStatus(item),
-          date: this._getConidtionRecordedDate(item)
+          date: this._getConditionRecordedDate(item)
         })  
       });      
     }
@@ -91,7 +91,7 @@ class ConditionListDialog extends React.Component {
   }
 
   // "assertedDate": "2138-04-22T10:44:00Z" // STU3
-  _getConidtionAssertedDate(entry) {
+  _getConditionAssertedDate(entry) {
     let ret = "";
     let resource = entry.resource;
     if (resource && resource.assertedDate) {
@@ -101,7 +101,7 @@ class ConditionListDialog extends React.Component {
   }
 
   // "recordedDate": "2142-11-06T17:20:00Z"  // R4
-  _getConidtionRecordedDate(entry) {
+  _getConditionRecordedDate(entry) {
     let ret = "";
     let resource = entry.resource;
     if (resource && resource.recordedDate) {
