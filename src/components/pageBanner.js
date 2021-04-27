@@ -9,10 +9,10 @@ class PageBanner extends React.Component {
    */
   componentDidMount() {
     if (!sessionStorage.getItem('hideCovidBanner')) {
-      document.querySelector('#covid-banner').style.display = 'flex';
+      setTimeout(()=> {document.querySelector('#covid-banner').style.display = 'flex';}, 1)
     }
     else {
-      document.querySelector('#covid-banner').style.display = 'none';
+      setTimeout(()=> {document.querySelector('#covid-banner').style.display = 'none';}, 1)
     }    
   }
 
