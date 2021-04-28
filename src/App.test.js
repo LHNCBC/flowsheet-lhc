@@ -62,7 +62,6 @@ test('Page info displayed', () => {
       <App />
   );
   let tree = component.toJSON();
-  console.log(tree)
   expect(tree).toMatchSnapshot();
 
   // // manually trigger the callback
