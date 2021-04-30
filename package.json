@@ -5,18 +5,18 @@
   "private": true,
   "author": "Ye Wang <wangye@nih.gov>",
   "devDependencies": {
-    "axios": "~0.20.0",
+    "@testing-library/react": "~11.0.0",
+    "axios": "^0.21.1",
     "convert-excel-to-json": "~1.7.0",
-    "react-scripts": "3.4.3",
     "gh-pages": "~3.1.0",
     "jshint": "~2.12.0",
+    "react-scripts": "^4.0.3",
     "react-test-renderer": "^16.13.1",
-    "@testing-library/react": "~11.0.0",
     "source-map-explorer": "~2.5.0"
   },
   "dependencies": {
     "@lhncbc/ucum-lhc": "2.4.1",
-    "antd": "^3.15.2",
+    "antd": "^3.26.19",
     "deep-copy": "^1.4.2",
     "fhir.js": "git://github.com/akanduru/fhir.js",
     "lodash": "^4.17.20",
