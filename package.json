@@ -1,6 +1,6 @@
 {
   "name": "flowsheet-lhc",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A flowsheet app that connects to a FHIR server and display patient data in a flowsheet format.",
   "private": true,
   "author": "Ye Wang <wangye@nih.gov>",
@@ -18,7 +18,7 @@
     "@lhncbc/ucum-lhc": "2.4.1",
     "antd": "^3.26.19",
     "deep-copy": "^1.4.2",
-    "fhir.js": "git://github.com/akanduru/fhir.js",
+    "fhir.js": "git+https://github.com/akanduru/fhir.js.git",
     "lodash": "^4.17.20",
     "moment": "^2.22.2",
     "raf-schd": "^3.0.1",
