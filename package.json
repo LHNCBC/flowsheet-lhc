@@ -33,6 +33,7 @@
     "start2": "PORT=80 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom --watchAll=false",
+    "update-snapshot": "npm test -- -u",
     "eject": "react-scripts eject",
     "analyze": "source-map-explorer 'build/static/js/*.js'"
   },
