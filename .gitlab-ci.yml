@@ -24,7 +24,7 @@ build:
 tag:
   stage: tag
   before_script:
-    - export VERSION=$(shell jq -r '.version?' ./package.json)
+    - export VERSION=$(jq -r '.version?' ./package.json)
   script: /usr/bin/docker tag $NEXUS/lforms/flowsheet-lhc:$VERSION $NEXUS/lforms/flowsheet-lhc:latest 
   only:
     - cicd
