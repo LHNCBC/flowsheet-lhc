@@ -16,7 +16,7 @@ build:
     - mkdir -p .ssh && cp $GIT_CONFIG .ssh/config && cp  ~/.ssh/id_rsa .ssh/id_rsa
   script: /usr/bin/docker build -t "$NEXUS/lforms/flowsheet-lhc:$VERSION" --build-arg NODE_ENV=production . 
   only:
-    - cicd 
+    - master 
     - tags
   tags: [cmd]
 
@@ -27,7 +27,7 @@ tag:
     - export VERSION=$(jq -r '.version?' ./package.json)
   script: /usr/bin/docker tag $NEXUS/lforms/flowsheet-lhc:$VERSION $NEXUS/lforms/flowsheet-lhc:latest 
   only:
-    - cicd
+    - master
     - tags
   tags: [cmd]
 
@@ -39,6 +39,6 @@ push:
     - /usr/bin/docker login $NEXUS -u $NEXUS_USER -p $NEXUS_PASSWORD 
   script: /usr/bin/docker push $NEXUS/lforms/flowsheet-lhc:$VERSION 
   only:
-    - cicd
+    - master
     - tags
   tags: [cmd]
