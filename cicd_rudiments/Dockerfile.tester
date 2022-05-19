@@ -1,8 +1,0 @@
-###################################
-########### tester ################
-ARG	NAME 
-FROM lforms/${NAME}_builder:latest AS tester
-
-# Running tests
-RUN npm run test
-
