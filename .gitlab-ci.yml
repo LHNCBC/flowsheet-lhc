@@ -35,8 +35,9 @@ tag:
 push:
   stage: push
   before_script:
+    - export VERSION=$(jq -r '.version?' ./package.json)
     - /usr/bin/docker login $NEXUS -u $NEXUS_USER -p $NEXUS_PASSWORD 
-  script: /usr/bin/docker build push $NEXUS/lforms/flowsheet-lhc:$VERSION 
+  script: /usr/bin/docker push $NEXUS/lforms/flowsheet-lhc:$VERSION 
   only:
     - cicd
     - tags
