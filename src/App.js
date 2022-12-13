@@ -81,6 +81,7 @@ class App extends Component {
     this.expandCollapseAnEqClassRow = this.expandCollapseAnEqClassRow.bind(this);
     this.createAndShowOverViewMap = this.createAndShowOverViewMap.bind(this);
 
+    setTimeout(() => this.handleResize());
   }
 
   gridRef = React.createRef();
