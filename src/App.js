@@ -467,28 +467,21 @@ class App extends Component {
   getNonDataTableHeightAndBorder() {
     return document.getElementById('lf-data-table').parentElement.offsetHeight
       - document.getElementById('lf-data-table').offsetHeight
+      // Taking into account the height of the shared header.
+      // The shared footer is below the visible part of the page.
+      + document.getElementById('sharedHeader').offsetHeight
       + 2;
   };
 
   handleResize() {
-    // Small delta to avoid showing scrollbars
-    const delta = 30;
-    // The height of the shared header and footer
-    const sharedHeight = document.getElementById('sharedHeader').offsetHeight
-      + document.getElementById('sharedFooter').offsetHeight;
-
-    // Draw a slightly smaller table to avoid showing scrollbars
+    // Update the table height
     this.setState({
-      tableHeight: window.innerHeight - this.getNonDataTableHeightAndBorder() - sharedHeight - 30,
-      tableWidth: window.innerWidth - 8 - 30
+      tableHeight: window.innerHeight - this.getNonDataTableHeightAndBorder(),
     });
 
-    // Increase the size of the table to take up the remaining space
-    setTimeout(() => {
-      this.setState({
-        tableHeight: window.innerHeight - this.getNonDataTableHeightAndBorder() - sharedHeight,
-        tableWidth: window.innerWidth - 8
-      });
+    // Adjust the table width
+    this.setState({
+      tableWidth: document.getElementById('sharedHeader').offsetWidth - 4
     });
   }
 
@@ -496,7 +489,7 @@ class App extends Component {
     this.setState({
       showControlPanel: !this.state.showControlPanel,
     });
-    this.handleResize();
+    setTimeout(() => this.handleResize());
   };
 
 
