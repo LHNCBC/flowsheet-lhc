@@ -54,14 +54,11 @@
   color: black;
 }
 
-.lf-app-header {
-  border-top: 2px solid #0BACB6;
-}
-
 .lf-header {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  border-bottom: 5px solid #17b4e3
 }
 
 .lf-logo {
@@ -69,18 +66,23 @@
 }
 .lf-logo img {
   float: left;
-  margin: 6px 6px;
+  margin: 6px 5px 7px 5px;
   border-right: 1px solid #0BACB6;
-  padding-right: 6px;
-  width: 74px;
-  height: 64px;
+  padding-right: 5px;
+  width: 81px;
+  height: 81px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
 }
 .lf-app-title {
   flex-grow: 0;
-  margin: 10px;
+  margin-top: 23px;
+  font-size: 12px;
+  font-family: "Droid Sans", Arial, Helvetica, sans-serif;
 }
 .lf-app-title a {
-  font-size: 250%;
+  font-size: 300%;
   color: #1E4193;
 }
 

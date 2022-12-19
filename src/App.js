@@ -20,7 +20,7 @@ import OverviewMap from './components/overviewMap';
 
 import tableDataStore from './stores/tableDataStore';
 
-import LHCImage from './lhncbc.jpg';
+import ProjectLogoImage from './projectLogo.svg';
 
 class App extends Component {
   constructor(props) {
@@ -41,8 +41,8 @@ class App extends Component {
       appTitle: "LHC Flowsheet On FHIR",
       selectedTemplate: null,
       hasMoreData: false,
-      tableHeight: window.innerHeight - 213 -16,
-      tableWidth: window.innerWidth -10,
+      tableHeight: window.innerHeight - 403,
+      tableWidth: window.innerWidth -19,
       showAdditionalControls: false,
       showDebugInfo: false,
       chartData: null,
@@ -81,6 +81,7 @@ class App extends Component {
     this.expandCollapseAnEqClassRow = this.expandCollapseAnEqClassRow.bind(this);
     this.createAndShowOverViewMap = this.createAndShowOverViewMap.bind(this);
 
+    setTimeout(() => this.handleResize());
   }
 
   gridRef = React.createRef();
@@ -463,48 +464,32 @@ class App extends Component {
     window.removeEventListener('resize', this.handleResize);
   }
 
-  handleResize(e) {
+  getNonDataTableHeightAndBorder() {
+    return document.getElementById('lf-data-table').parentElement.offsetHeight
+      - document.getElementById('lf-data-table').offsetHeight
+      // Taking into account the height of the shared header.
+      // The shared footer is below the visible part of the page.
+      + document.getElementById('sharedHeader').offsetHeight
+      + 2;
+  };
 
-    let that = this;
-    // setTimeout(function(){
-      let nonTableHeight = that.nonTableRef.current.offsetHeight;
-      // let tableHeight = that.state.showControlPanel ? window.innerHeight -213 : window.innerHeight - 123; //nonTableHeight;
-      let tableHeight = that.state.showControlPanel ? window.innerHeight -254 : window.innerHeight - 164; //nonTableHeight;
+  handleResize() {
+    // Update the table height
+    this.setState({
+      tableHeight: window.innerHeight - this.getNonDataTableHeightAndBorder(),
+    });
 
-      that.setState({
-        // tableHeight: window.innerHeight - headerHeight - footerHeight -20, // not sure why there is a gap
-        tableHeight: tableHeight -16,
-        tableWidth: window.innerWidth - 8
-      })
-
-      // console.log("in resize");
-      // console.log(window.innerHeight);
-      // console.log(tableHeight)
-      // console.log(nonTableHeight)
-
-    // }, 150);
-
-
+    // Adjust the table width
+    this.setState({
+      tableWidth: document.getElementById('sharedHeader').offsetWidth - 4
+    });
   }
 
   hideShowControlPanel = () => {
-    let that = this;
-    // setTimeout(function(){
-      let nonTableHeight = that.nonTableRef.current.offsetHeight;
-      let tableHeight = that.state.showControlPanel ? window.innerHeight -123 : window.innerHeight - 213; //nonTableHeight;
-
-      that.setState({
-        showControlPanel: !that.state.showControlPanel,
-        tableHeight: tableHeight -16,
-        tableWidth: window.innerWidth -8
-      })
-
-      //console.log("in hide/show control panel");
-      //console.log(window.innerHeight);
-      //console.log(nonTableHeight)
-
-    // }, 150);
-
+    this.setState({
+      showControlPanel: !this.state.showControlPanel,
+    });
+    setTimeout(() => this.handleResize());
   };
 
 
@@ -781,8 +766,8 @@ class App extends Component {
           <div className="lf-app-header" ref={this.refHeader}>
             <div className="lf-header">
               <div className="lf-logo">
-                <a href="http://lhncbc.nlm.nih.gov" title="Lister Hill National Center for Biomedical Communications (LHNCBC)" id="logo">
-                  <img src={LHCImage} alt="Lister Hill National Center for Biomedical Communications (LHNCBC)"></img>
+                <a href="https://lhcforms.nlm.nih.gov" title="LHC FHIR Tools" id="logo">
+                  <img src={ProjectLogoImage} alt="LHC FHIR Tools" />
                 </a>
               </div>
 
