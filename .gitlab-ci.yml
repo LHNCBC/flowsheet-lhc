@@ -13,7 +13,7 @@ build:
   stage: build
   before_script:
     - export VERSION=$(jq -r '.version?' ./package.json)
-    - mkdir -p .ssh && cp $GIT_CONFIG .ssh/config && cp  ~/.ssh/id_rsa .ssh/id_rsa
+    - mkdir -p .ssh && cp $GIT_CUSTOM_CONFIG .ssh/config && cp  ~/.ssh/id_rsa .ssh/id_rsa
   script: /usr/bin/docker build -t "$NEXUS/lforms/flowsheet-lhc:$VERSION" --build-arg NODE_ENV=production . 
   only:
     - master 
