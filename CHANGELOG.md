@@ -3,6 +3,10 @@
 This log documents the significant changes for each release.
 This project follows [Semantic Versioning](http://semver.org/).
 
+## [0.1.5] - 2022-12-21
+### Fixed
+- Updated CSP to support font loading.
+
 ## [0.1.4] - 2022-12-21
 ### Fixed
 - Updated CSP.
