@@ -2,7 +2,7 @@
 # then the image should be started using the same port like:
 #    docker run -t -p 9009:80 -d smartonfhir/smart-launcher:latest
 
-FROM lhc-nexus.nlm.nih.gov:8443/lhc-ops/node14-alpine:latest as builder
+FROM lhc-nexus.nlm.nih.gov:8443/lhc-ops/build/node14-alpine-stage:latest as builder
 
 ENV NODE_ENV "development"
 
