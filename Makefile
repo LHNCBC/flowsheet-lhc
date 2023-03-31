@@ -1,7 +1,7 @@
-################################################
+###############################################
 export VERSION=$(shell jq -r '.version?' ./package.json)
 export APP_IMG=$(CI_PROJECT_NAME)
-################################################
+###############################################
 
 ifeq ($(CI_COMMIT_TAG),)
 CI_COMMIT_TAG := testingVersion
