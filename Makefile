@@ -1,7 +1,7 @@
-###############################################
+################################################
 export VERSION=$(shell jq -r '.version?' ./package.json)
 export APP_IMG=$(CI_PROJECT_NAME)
-###############################################
+################################################
 
 ifeq ($(CI_COMMIT_TAG),)
 CI_COMMIT_TAG := testingVersion
@@ -21,7 +21,7 @@ login:
 	docker login $(NEXUS) -u $(NEXUS_USER) -p $(NEXUS_PASSWORD)
 
 push:
-	$(DOCKER_CMD) push $(NEXUS)/$(APP_IMG):$(VERSION)
+	docker push $(NEXUS)/$(APP_IMG):$(VERSION)
 
 pull:
 	docker pull $(NEXUS)/$(APP_IMG):$(VERSION)
