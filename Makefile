@@ -31,7 +31,7 @@ tag:
 	docker tag $(NEXUS)/$(APP_IMG):$(VERSION) $(ECR)/$(APP_IMG):$(VERSION) 
 
 rollouthc:
-	$(shell pwd)/rollout-healthcheck.sh $(KUBE_NAMESPACE)
+	$(shell pwd)/cicd_harness/rollout-healthcheck.sh $(KUBE_NAMESPACE)
 
 kubedeploy:
 	envsubst < $(shell pwd)/cicd_harness/deployment.yaml > debug.yaml
