@@ -35,10 +35,10 @@ rollouthc:
 
 kubedeploy:
 	envsubst < $(shell pwd)/cicd_harness/deployment.yaml > debug.yaml
-	envsubst < $(shell pwd)/cicd_harness/deployment.yaml| $(KUBECTL) apply -f -
+	envsubst < $(shell pwd)/cicd_harness/deployment.yaml| kubectl apply -f -
 
 kubeclean:
-	envsubst < $(shell pwd)/cicd_harness/deployment.yaml| $(KUBECTL) delete -f -
+	envsubst < $(shell pwd)/cicd_harness/deployment.yaml| kubectl delete -f -
 
 ecrpush:
 	docker push $(ECR)/$(APP_IMG):$(VERSION)
