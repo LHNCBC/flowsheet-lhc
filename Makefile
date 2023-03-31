@@ -2,6 +2,7 @@
 export VERSION=$(shell jq -r '.version?' ./package.json)
 export APP_IMG=$(CI_PROJECT_NAME)
 ################################################
+ECR=627111370606.dkr.ecr.us-east-1.amazonaws.com
 
 ifeq ($(CI_COMMIT_TAG),)
 CI_COMMIT_TAG := testingVersion
