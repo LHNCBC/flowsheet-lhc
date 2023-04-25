@@ -24,14 +24,13 @@ RUN umask 0 && npm config set cache /tmp/.npm \
     && npm run test \
     && npm run build
 
-FROM lhc-nexus.nlm.nih.gov:8443/nginx_1.21.3:v1.0.1
+FROM lhc-nexus.nlm.nih.gov:8443/nginx_1.21.3:v2.0.1
 
 COPY --from=builder /home/app/build /usr/share/nginx/www
-RUN	chown -R nginx:nginx /usr/share/nginx/www && \
-	rm /etc/nginx/conf.d/default.conf 	
+RUN	chown -R nginx:nginx /usr/share/nginx/www 
 
 WORKDIR /etc/nginx/conf.d
-COPY ci/flowsheet-lhc.conf ./
+COPY cicd_harness/docker/nginx/default.conf ./
 
 EXPOSE 443
 
